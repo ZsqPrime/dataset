@@ -1,0 +1,12 @@
+This is a meta repository. It is the place for all issue tickets,
+data and information which are not specific to one of our soft-
+ware repositories.
+
+
+Project Description:
+Empty meta repository for issues that are not specific to a repo
+
+README:
+This is a meta repository. It is the place for all issue tickets,
+data and information which are not specific to one of our soft-
+ware repositories.

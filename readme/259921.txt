@@ -1,0 +1,8 @@
+about:telemetry is an extension that displays Telemetry data gathered in the current Firefox instance.
+
+
+Project Description:
+None
+
+README:
+about:telemetry is an extension that displays Telemetry data gathered in the current Firefox instance.

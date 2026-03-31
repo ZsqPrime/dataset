@@ -1,0 +1,7 @@
+This is the readme file for our repository. Hi.
+
+Project Description:
+CS247 Imagination Labs Project
+
+README:
+This is the readme file for our repository. Hi.

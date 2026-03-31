@@ -1,0 +1,13 @@
+To install:
+
+> go install github.com/eikeon/hu
+
+
+
+Project Description:
+a scheme interpreter aspiring to be a language optimized for humans ;)
+
+README:
+To install:
+
+> go install github.com/eikeon/hu

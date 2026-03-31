@@ -1,0 +1,7 @@
+Project Description:
+This will be the app that allows users to make posts in their news feed
+
+README:
+# Ruby on Rails: Newsfeed blog/posts
+
+This application is by John.

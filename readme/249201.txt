@@ -1,0 +1,8 @@
+Device configuration for HTC Amaze 4g (ruby)
+
+
+Project Description:
+Device overlay for the HTC Amaze 4G
+
+README:
+Device configuration for HTC Amaze 4g (ruby)

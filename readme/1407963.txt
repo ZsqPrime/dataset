@@ -1,0 +1,12 @@
+This project has moved to a new home:
+
+https://uninformativ.de/git/explain
+
+
+Project Description:
+Explain commands using ASCII art
+
+README:
+This project has moved to a new home:
+
+https://uninformativ.de/git/explain

@@ -1,0 +1,4 @@
+Project Description:
+Tool to automatically scale CPU frequency to avoid overheating
+
+README:

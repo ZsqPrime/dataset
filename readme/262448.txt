@@ -1,0 +1,126 @@
+= jasmine-jstd-conf
+
+Based on jasmine.yml, write a jsTestDriver config file to the supplied path.
+
+http://travis-ci.org/benjaminoakes/jasmine-jstd-conf.png
+
+== Installation
+
+Please see http://rubygems.org/gems/jasmine-jstd-conf
+
+== Tutorial
+
+    Usage: jasmine-jstd-conf path [--help]
+    
+      path        Path to write to.
+      --help      Show this help text.
+    
+    Based on jasmine.yml, write a JSTD config file to the supplied path.
+    
+    Example:
+    
+      $ jasmine-jstd-conf jsTestDriver.conf
+      $ cat jsTestDriver.conf
+      server: http://localhost:9876
+      
+      load:
+        - ../relative/path/to/jasmine.js
+        - spec/javascripts/support/JasmineAdapter.js
+        - spec/javascripts/helpers/jasmine-jquery-1.3.1.js
+        - spec/javascripts/FooSpec.js
+        - spec/javascripts/BarSpec.js
+        - spec/javascripts/BazSpec.js
+        - spec/javascripts/QuxSpec.js
+
+== Known Issues
+
+There is a bug in Jasmine (not this project) if your YAML parser happens to be +Psych+.  If you are affected by it, you will see an error message like:
+
+    lib/ruby/1.9.1/psych.rb:148:in `parse': couldn't parse YAML at line 56 column 5 (Psych::SyntaxError)
+
+The issue is that +Psych+ chokes on some YAML that other parsers do not.  In this case, the problem is the asterisk:
+
+    spec_files:
+      - **/*[sS]pec.js
+
+As a workaround, quote the string values:
+
+    spec_files:
+      - '**/*[sS]pec.js'
+
+== Contributing
+
+* Run <tt>./configure</tt> to set up your build environment
+* Run +rake+ to run specs
+* Please make a pull request with your changes.
+* Please add specs for any new functionality.
+
+See also:
+
+  rake --tasks
+
+
+Project Description:
+Based on jasmine.yml, write a jsTestDriver config file to the supplied path.
+
+README:
+= jasmine-jstd-conf
+
+Based on jasmine.yml, write a jsTestDriver config file to the supplied path.
+
+http://travis-ci.org/benjaminoakes/jasmine-jstd-conf.png
+
+== Installation
+
+Please see http://rubygems.org/gems/jasmine-jstd-conf
+
+== Tutorial
+
+    Usage: jasmine-jstd-conf path [--help]
+    
+      path        Path to write to.
+      --help      Show this help text.
+    
+    Based on jasmine.yml, write a JSTD config file to the supplied path.
+    
+    Example:
+    
+      $ jasmine-jstd-conf jsTestDriver.conf
+      $ cat jsTestDriver.conf
+      server: http://localhost:9876
+      
+      load:
+        - ../relative/path/to/jasmine.js
+        - spec/javascripts/support/JasmineAdapter.js
+        - spec/javascripts/helpers/jasmine-jquery-1.3.1.js
+        - spec/javascripts/FooSpec.js
+        - spec/javascripts/BarSpec.js
+        - spec/javascripts/BazSpec.js
+        - spec/javascripts/QuxSpec.js
+
+== Known Issues
+
+There is a bug in Jasmine (not this project) if your YAML parser happens to be +Psych+.  If you are affected by it, you will see an error message like:
+
+    lib/ruby/1.9.1/psych.rb:148:in `parse': couldn't parse YAML at line 56 column 5 (Psych::SyntaxError)
+
+The issue is that +Psych+ chokes on some YAML that other parsers do not.  In this case, the problem is the asterisk:
+
+    spec_files:
+      - **/*[sS]pec.js
+
+As a workaround, quote the string values:
+
+    spec_files:
+      - '**/*[sS]pec.js'
+
+== Contributing
+
+* Run <tt>./configure</tt> to set up your build environment
+* Run +rake+ to run specs
+* Please make a pull request with your changes.
+* Please add specs for any new functionality.
+
+See also:
+
+  rake --tasks

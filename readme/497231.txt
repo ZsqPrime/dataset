@@ -1,0 +1,48 @@
+Shiny Shaarli by Octplane <pierre@baillet.name>
+Released under the WTFPL <http://sam.zoy.org/wtfpl/>
+
+Google Chrome extension to add bookmarks in Shaarli <https://github.com/shaarli/Shaarli/>
+This extension is not endorsed nor supported by Seb Sauvage.
+
+
+TODO:
+
+- Link to Shaarli
+- Reduce memory footprint
+- Custom bookmarking interface
+- Interface with future Shaarli signature system
+- (Suggest tag ?)
+
+CONTRIBUTORS:
+
+- Pierre Baillet
+- Nicolas Morel
+- Adam Piontek
+- Anson VanDoren
+
+
+Project Description:
+Shiny Shaarli is a Shaarli Google Chrome Extension
+
+README:
+Shiny Shaarli by Octplane <pierre@baillet.name>
+Released under the WTFPL <http://sam.zoy.org/wtfpl/>
+
+Google Chrome extension to add bookmarks in Shaarli <https://github.com/shaarli/Shaarli/>
+This extension is not endorsed nor supported by Seb Sauvage.
+
+
+TODO:
+
+- Link to Shaarli
+- Reduce memory footprint
+- Custom bookmarking interface
+- Interface with future Shaarli signature system
+- (Suggest tag ?)
+
+CONTRIBUTORS:
+
+- Pierre Baillet
+- Nicolas Morel
+- Adam Piontek
+- Anson VanDoren

@@ -1,0 +1,12 @@
+Requires Leiningen
+> lein deps
+> lein test
+
+
+Project Description:
+
+
+README:
+Requires Leiningen
+> lein deps
+> lein test

@@ -1,0 +1,8 @@
+This project is a modified version of the publically released USAF aircraft datcom. The goal of the project is to update the code and make it more usable by the end user.
+
+
+Project Description:
+Modified USAF Aircraft DATCOM
+
+README:
+This project is a modified version of the publically released USAF aircraft datcom. The goal of the project is to update the code and make it more usable by the end user.

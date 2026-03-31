@@ -1,0 +1,11 @@
+This app is built using PhoneGap Build and jQuery Mobile 1.2
+
+The app lets you search California's employee's pay statistics since 2007.
+
+Project Description:
+A jQuery Mobile app to search California's employee's wages
+
+README:
+This app is built using PhoneGap Build and jQuery Mobile 1.2
+
+The app lets you search California's employee's pay statistics since 2007.

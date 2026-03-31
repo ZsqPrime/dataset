@@ -1,0 +1,9 @@
+Project Description:
+JavaScript and Node.js Framework for controlling Arduino with HTML and WebSockets
+
+README:
+# Noduino
+
+Welcome to the awesome Noduino project! All information is available at:
+
+[http://sbstjn.github.io/noduino/](http://sbstjn.github.io/noduino/)

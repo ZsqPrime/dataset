@@ -1,0 +1,5 @@
+Project Description:
+linking shapefiles to data markers
+
+README:
+detecting spatial outliers in coded data; lots of hard-coded figures...

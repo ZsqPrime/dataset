@@ -1,0 +1,5 @@
+Project Description:
+Generate chorales from the bach corale dataset
+
+README:
+Make chorales from the bach chorale dataset

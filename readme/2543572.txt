@@ -1,0 +1,5 @@
+Project Description:
+Creates isolated subpages within a webpage
+
+README:
+Try [http://sbp.so/paginator](http://sbp.so/paginator)

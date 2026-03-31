@@ -1,0 +1,9 @@
+Project Description:
+A plugin for Launchy that integrate SecureCRT sessions into the Launchy search.
+
+README:
+Launchy CRT
+
+This project is a plugin for Launchy that allows SecureCRT sessions to be integrated into Launchy's search.
+
+This is a side project for me, so updates may be slow going.

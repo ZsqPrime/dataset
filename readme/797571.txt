@@ -1,0 +1,23 @@
+palette
+=======
+
+color manipulation tool
+
+supported browsers
+------------------
+
+  * Firefox 11
+
+Project Description:
+useful color assistant
+
+README:
+palette
+=======
+
+color manipulation tool
+
+supported browsers
+------------------
+
+  * Firefox 11

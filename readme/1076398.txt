@@ -1,0 +1,18 @@
+Gem install:    gem install cast
+Gem uninstall:  gem uninstall cast
+Site install:   rake install
+Site uninstall: rake uninstall
+Documentation:  See doc/index.html.  Latest at http://cast.rubyforge.org .
+Licence:        Ruby's.
+
+
+Project Description:
+Make abstract syntax trees out of C code and save the world.
+
+README:
+Gem install:    gem install cast
+Gem uninstall:  gem uninstall cast
+Site install:   rake install
+Site uninstall: rake uninstall
+Documentation:  See doc/index.html.  Latest at http://cast.rubyforge.org .
+Licence:        Ruby's.

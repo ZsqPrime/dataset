@@ -1,0 +1,34 @@
+                                          oooo      .               
+                                          `888    .o8               
+oo.ooooo.   .ooooo.   .ooooo.  oo.ooooo.   888  .o888oo oooo    ooo 
+ 888' `88b d88' `88b d88' `88b  888' `88b  888    888    `88.  .8'  
+ 888   888 888ooo888 888ooo888  888   888  888    888     `88..8'   
+ 888   888 888    .o 888    .o  888   888  888    888 .    `888'    
+ 888bod8P' `Y8bod8P' `Y8bod8P'  888bod8P' o888o   "888"     `8'     
+ 888                            888                                 
+o888o                          o888o                                
+
+=============================================================
+
+Soon see it live at peepltv.org
+
+
+
+
+Project Description:
+map-based real-time streaming video aggregator
+
+README:
+                                          oooo      .               
+                                          `888    .o8               
+oo.ooooo.   .ooooo.   .ooooo.  oo.ooooo.   888  .o888oo oooo    ooo 
+ 888' `88b d88' `88b d88' `88b  888' `88b  888    888    `88.  .8'  
+ 888   888 888ooo888 888ooo888  888   888  888    888     `88..8'   
+ 888   888 888    .o 888    .o  888   888  888    888 .    `888'    
+ 888bod8P' `Y8bod8P' `Y8bod8P'  888bod8P' o888o   "888"     `8'     
+ 888                            888                                 
+o888o                          o888o                                
+
+=============================================================
+
+Soon see it live at peepltv.org

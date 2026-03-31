@@ -1,0 +1,7 @@
+This is the Top Ten Git Repo
+
+Project Description:
+Android App for Csce 4410
+
+README:
+This is the Top Ten Git Repo

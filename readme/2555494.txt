@@ -1,0 +1,20 @@
+Project Description:
+
+
+README:
+== TODO
+
+Multiple Twitter accounts per user account
+= Limit number of twitter accounts based on subscription
+= Separate queues for each twitter account
+== Each queue can have a different buffer time preference
+=== Each buffer has many time periods, or one fixed-length selection (5,10,15,20,25,30,45,60, etc minutes)
+=== Lower time rates are available at different pay tiers
+=== Set up certain days of the week to tweet on
+
+Tweets can be categorized
+= Suggest-a-tweet uses this category
+
+
+Associate Facebook account
+Option to add sent tweets back to buffer

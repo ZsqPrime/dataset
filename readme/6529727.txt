@@ -1,0 +1,14 @@
+Project Description:
+Form Validation modifications to allow a required if rule
+
+README:
+Required if - CodeIgniter (tested on version 2.1.0)
+=============================================
+
+Extension to the form_validation library to allow a required_if rule.
+
+Future expansion:
+----------------
+
+- Support for checkboxes, radio, select (might work has not been tested)
+- required if not rule

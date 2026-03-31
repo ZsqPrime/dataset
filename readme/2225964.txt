@@ -1,0 +1,11 @@
+Hosted at http://lostcities.herokuapp.com
+
+See http://en.wikipedia.org/wiki/Lost_Cities
+
+Project Description:
+An implementation of Reiner Knizia's Lost Cities using node.js and socket.io.
+
+README:
+Hosted at http://lostcities.herokuapp.com
+
+See http://en.wikipedia.org/wiki/Lost_Cities

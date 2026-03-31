@@ -1,0 +1,4 @@
+Project Description:
+Library to draw graphs with the help of cairo from data extracted from a mysql database
+
+README:

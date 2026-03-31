@@ -1,0 +1,6 @@
+
+
+Project Description:
+Library application for music, movies and games, programmed in RoR.
+
+README:

@@ -1,0 +1,5 @@
+Project Description:
+The OSGi technoshare sources
+
+README:
+This repository holds the sources of the Ekino OSGi technoshare.

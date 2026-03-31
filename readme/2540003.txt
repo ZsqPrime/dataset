@@ -1,0 +1,4 @@
+Project Description:
+Web service for hosting AMT based social networking experiments
+
+README:

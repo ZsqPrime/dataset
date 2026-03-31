@@ -1,0 +1,9 @@
+Project Description:
+PostGIS-SQL-kyselyjen visualisoija (java-ohjelmoinnin harjoitustyö)
+
+README:
+SQLxMAP
+
+Paikkatietoja sisältävien SQL-kyselyjen visualisointiohjelma.
+
+Ks. doc/käyttöohjeet.pdf.

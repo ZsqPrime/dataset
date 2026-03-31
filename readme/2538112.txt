@@ -1,0 +1,8 @@
+Project Description:
+
+
+README:
+Download latest Python
+get curl
+put curl files in same folder
+run Booter.py

@@ -1,0 +1,8 @@
+pyDM is a code that analyses N-body data.
+
+
+Project Description:
+A Python code for analyzing dark matter haloes.
+
+README:
+pyDM is a code that analyses N-body data.

@@ -1,0 +1,8 @@
+See <http://github.com/somia/debian-config-example> for documentation.
+
+
+Project Description:
+Debian/Ubuntu config package generation scripts
+
+README:
+See <http://github.com/somia/debian-config-example> for documentation.

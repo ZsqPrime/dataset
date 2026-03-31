@@ -1,0 +1,8 @@
+Symfony 2 integration for Filelib.
+
+
+Project Description:
+Symfony 2 integration for Filelib
+
+README:
+Symfony 2 integration for Filelib.

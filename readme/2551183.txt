@@ -1,0 +1,5 @@
+Project Description:
+Manage monthly bills between two people
+
+README:
+payday simplifies the money/transaction flow between 2 people.

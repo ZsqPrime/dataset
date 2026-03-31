@@ -1,0 +1,13 @@
+tinkerer provides panel icons for restarting Gnome Shell, reloading the current theme, and for displaying LookingGlass.
+
+Restart GNOME Shell ([Alt]+[F2], r)
+Fork this project as you like
+
+Project Description:
+Gnome shell theme and extension development tools
+
+README:
+tinkerer provides panel icons for restarting Gnome Shell, reloading the current theme, and for displaying LookingGlass.
+
+Restart GNOME Shell ([Alt]+[F2], r)
+Fork this project as you like

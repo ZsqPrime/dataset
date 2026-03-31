@@ -1,0 +1,14 @@
+Project Description:
+Code to perform full floor segmentation from images with partial (close range) depth informaion such as the Microsoft Kinect or the Asus Xtion Pro Live.
+
+README:
+Important General Notes:
+1. The matlab code is in relatively poor repair, while the c++ code is relatively well commented. A demo gui exists however.
+2. The c++ code is self-contained and is called via a system call from within the matlab code.  Therefore it can be extracted and used separately as required.
+3. The c++ code identifies the floor sections within the parts of the image which has depth information.
+4. The matlab code takes this label and applies the segmentation technique resulting in the full floor identification.  The matlab code is based on a modified version of the Geodesic Star Convexity code which is freely avaliable from: http://www.robots.ox.ac.uk/~vgg/software/iseg/
+
+Some notes on usage:
+1. Please build the code in the cpp directory following the readme in that directory first.  Note you require a number of external libraries and that this code has only been tested on Ubuntu 11.10.
+
+Launch the demo: cd to the folder and then run demoGUI.m

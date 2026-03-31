@@ -1,0 +1,4 @@
+Project Description:
+Maven and projectconfiguration to create bundles and build them with maven and tycho.
+
+README:

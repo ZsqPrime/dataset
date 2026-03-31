@@ -1,0 +1,12 @@
+My personal bash, vim, etc. configs and scripts.
+
+Feel free to copy, branch, modify or whatever you want do with it.
+
+
+Project Description:
+configurations and scripts for bash, vim and stuff like that
+
+README:
+My personal bash, vim, etc. configs and scripts.
+
+Feel free to copy, branch, modify or whatever you want do with it.

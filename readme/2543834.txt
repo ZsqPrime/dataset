@@ -1,0 +1,6 @@
+Project Description:
+Übungsaufgabe AWE12
+
+README:
+Übungsaufgabe 1 von Eugene und Tobias
+Das Programm wurde unter ruby 1.9.2 entwickelt.

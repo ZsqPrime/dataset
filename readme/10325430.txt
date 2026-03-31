@@ -1,0 +1,1 @@
+# This repository has been merged into AirFloat - and is therefore no longer actively maintained here. To get the latest updates of this library , please goto https://github.com/trenskow/AirFloat. Thanks.

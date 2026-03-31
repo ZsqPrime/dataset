@@ -1,0 +1,8 @@
+Project Description:
+Packaging tool for APS applications
+
+README:
+Usage:
+
+1. Clone aps-package repository
+2. Run ~/apsbuild.py -i /path-to-aps-package-repo/aps -o /path-to-aps-package-repo

@@ -1,0 +1,24 @@
+======
+README
+======
+
+License
+=======
+
+The application's license can be found in LICENSE.
+
+
+
+
+Project Description:
+The client for the CloudRAID server
+
+README:
+======
+README
+======
+
+License
+=======
+
+The application's license can be found in LICENSE.

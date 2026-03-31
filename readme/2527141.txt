@@ -1,0 +1,4 @@
+Project Description:
+ananim/thirdparty container for submodules to be added as a submodule
+
+README:

@@ -1,0 +1,16 @@
+Turf Widget
+
+Original code by Drayon.
+
+For more info: http://forum.turfgame.com/viewtopic.php?f=55&t=117
+
+
+Project Description:
+An Android widget for the game Turf.
+
+README:
+Turf Widget
+
+Original code by Drayon.
+
+For more info: http://forum.turfgame.com/viewtopic.php?f=55&t=117

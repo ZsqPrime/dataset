@@ -1,0 +1,22 @@
+Intelligence Computational
+
+Logica Difusa
+
+Para ver los ejercicio ver el archivo: gtp3_2010.pdf
+
+para correr el programa:
+  - correr el comando  > ruby -I lib/ bin/runner
+
+
+Project Description:
+
+
+README:
+Intelligence Computational
+
+Logica Difusa
+
+Para ver los ejercicio ver el archivo: gtp3_2010.pdf
+
+para correr el programa:
+  - correr el comando  > ruby -I lib/ bin/runner

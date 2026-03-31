@@ -1,0 +1,91 @@
+
+ _ _____              _ 
+(_)__  /___ _ __   __| |
+| | / // _ \ '_ \ / _` |
+| |/ /|  __/ | | | (_| |
+|_/____\___|_| |_|\__,_|
+
+
+iZend is a MVC engine in PHP for developing well structured web
+applications with a content manager. It's aimed at programmers who want
+full control on the code they use with maximum adaptability and
+reusability. It's simple to understand, easy to extend, open to other
+components in PHP or Javascript. The goal is to let it become your own
+very quickly while still keeping all the benefits of using a software
+program which is constantly enriched by an open source community.
+
+    Why choose my engine? Because it's simple - Rudolf Diesel
+
+iZend is built with a straightforward architecture designed for
+organizing publications in several languages and for different media
+with a responsive layout. It includes a content editor, a set of
+presentation models, a search engine with an input corrector, editable
+comments, file downloads, secure votes, RSS feeds, HTML newsletters, a
+payment system (PayPal), trafic analysis (Google Analytics) and more.
+It carefully interfaces social networks. It manages a community of
+users with configurable privileges.
+
+iZend is written in PHP for Apache on Linux or Windows. It can use a
+database managed by MySQL or PostgreSQL or no database and take very
+little space on disk.
+
+Put online in just a few minutes a multimedia website in several
+languages with an attractive home page and a contact form which can be
+shared on all social networks in one click!
+
+iZend has several variants. iZend Blog is a specialized version for
+editing a full featured blog. iZend Bootstrap is entirely written with
+the graphical environment of Bootstrap by Twitter.
+
+Start with the installation guide on www.izend.org.
+
+Thank you for your interest in iZend!
+
+
+
+Project Description:
+Specialized version of iZend for blogging.
+
+README:
+
+ _ _____              _ 
+(_)__  /___ _ __   __| |
+| | / // _ \ '_ \ / _` |
+| |/ /|  __/ | | | (_| |
+|_/____\___|_| |_|\__,_|
+
+
+iZend is a MVC engine in PHP for developing well structured web
+applications with a content manager. It's aimed at programmers who want
+full control on the code they use with maximum adaptability and
+reusability. It's simple to understand, easy to extend, open to other
+components in PHP or Javascript. The goal is to let it become your own
+very quickly while still keeping all the benefits of using a software
+program which is constantly enriched by an open source community.
+
+    Why choose my engine? Because it's simple - Rudolf Diesel
+
+iZend is built with a straightforward architecture designed for
+organizing publications in several languages and for different media
+with a responsive layout. It includes a content editor, a set of
+presentation models, a search engine with an input corrector, editable
+comments, file downloads, secure votes, RSS feeds, HTML newsletters, a
+payment system (PayPal), trafic analysis (Google Analytics) and more.
+It carefully interfaces social networks. It manages a community of
+users with configurable privileges.
+
+iZend is written in PHP for Apache on Linux or Windows. It can use a
+database managed by MySQL or PostgreSQL or no database and take very
+little space on disk.
+
+Put online in just a few minutes a multimedia website in several
+languages with an attractive home page and a contact form which can be
+shared on all social networks in one click!
+
+iZend has several variants. iZend Blog is a specialized version for
+editing a full featured blog. iZend Bootstrap is entirely written with
+the graphical environment of Bootstrap by Twitter.
+
+Start with the installation guide on www.izend.org.
+
+Thank you for your interest in iZend!

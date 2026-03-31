@@ -1,0 +1,86 @@
+[Projet de Wargame abandonné]
+
+Le projet, c'est un jeu assez basique.
+
+Un quadrillage.
+Chaque tour, tu peux pop une unité de ton armée (une liste selon ta faction) sur ton bord du plateau. Quand on a plus d'unité dans la liste, on a
+perdu.
+Quand on a plus d'unité sur le plateau, on est forcé d'en pop.
+
+Les unités (outre les variables qui servent au codage) ont des stats
+relativement simples. Ceux sont :
+-PV
+-def
+-atk
+-mvt
+-portée
+
+
+déplacement case par case, tir sans contre attaque. ATK de l'attaquant moins la def du défenseur est simplement déduit aux
+PV du défenseur 
+
+Pour le moment, j'utilise NBA qui est un multiplicateur pour avoir l'efficacité
+d'une attaque. Par exemple (chiffre arbitraires)un tank a 50pv 20def et un bonhomme a 100pv mais
+0def. Une attaque anti-char sera 60ATQ 1NBA donc 1*(60-20) soit 40 de degat sur
+le tank (80% de sa vie) et ne fera que 60% de dommages sur l'infanterie. Une
+attaque anti-infanterie (Lance flamme, soyons fous) sera 25ATQ 4NBA donc elle
+fera du 4*(25-20) sur le tank soit 20PV soit 40% de la vie du tank (lol) et fera
+du 4*25 contre le soldat qui finit en BBQ.
+Pourquoi se faire chier ? Je pense que c'est mieux que de foutre un "Si c'est
+un tank, dégat x2" Aussi parce que comme ça je peux générer différent niveau
+de blindage.
+
+Pour le moment il a été décidé pour simplifer qu'on ne gérera pas les collisions.
+Donc les unités se "téléportent" et les tirs passent à travers les unités non
+ciblées. Plus tard, on pourra ajouter la contrainte du champ de tir gêné par les
+alliés de dos et/ou celle des ennemis qui protègent l'arrière garde.
+
+Tout cela est temporaire et brouillon et pourra être modifié.
+
+Le langage Java est utilisé.
+
+
+Project Description:
+
+
+README:
+[Projet de Wargame abandonné]
+
+Le projet, c'est un jeu assez basique.
+
+Un quadrillage.
+Chaque tour, tu peux pop une unité de ton armée (une liste selon ta faction) sur ton bord du plateau. Quand on a plus d'unité dans la liste, on a
+perdu.
+Quand on a plus d'unité sur le plateau, on est forcé d'en pop.
+
+Les unités (outre les variables qui servent au codage) ont des stats
+relativement simples. Ceux sont :
+-PV
+-def
+-atk
+-mvt
+-portée
+
+
+déplacement case par case, tir sans contre attaque. ATK de l'attaquant moins la def du défenseur est simplement déduit aux
+PV du défenseur 
+
+Pour le moment, j'utilise NBA qui est un multiplicateur pour avoir l'efficacité
+d'une attaque. Par exemple (chiffre arbitraires)un tank a 50pv 20def et un bonhomme a 100pv mais
+0def. Une attaque anti-char sera 60ATQ 1NBA donc 1*(60-20) soit 40 de degat sur
+le tank (80% de sa vie) et ne fera que 60% de dommages sur l'infanterie. Une
+attaque anti-infanterie (Lance flamme, soyons fous) sera 25ATQ 4NBA donc elle
+fera du 4*(25-20) sur le tank soit 20PV soit 40% de la vie du tank (lol) et fera
+du 4*25 contre le soldat qui finit en BBQ.
+Pourquoi se faire chier ? Je pense que c'est mieux que de foutre un "Si c'est
+un tank, dégat x2" Aussi parce que comme ça je peux générer différent niveau
+de blindage.
+
+Pour le moment il a été décidé pour simplifer qu'on ne gérera pas les collisions.
+Donc les unités se "téléportent" et les tirs passent à travers les unités non
+ciblées. Plus tard, on pourra ajouter la contrainte du champ de tir gêné par les
+alliés de dos et/ou celle des ennemis qui protègent l'arrière garde.
+
+Tout cela est temporaire et brouillon et pourra être modifié.
+
+Le langage Java est utilisé.

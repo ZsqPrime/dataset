@@ -1,0 +1,7 @@
+Islandora HTML5 multi-file uploader for getting around the php server limitations.
+
+Project Description:
+None
+
+README:
+Islandora HTML5 multi-file uploader for getting around the php server limitations.

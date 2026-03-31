@@ -1,0 +1,9 @@
+The goal of this project is to create an open source alternative to 
+the AltME messaging tool.
+
+Project Description:
+Open Messaging Environment (a.k.a. Alt AltME)
+
+README:
+The goal of this project is to create an open source alternative to 
+the AltME messaging tool.

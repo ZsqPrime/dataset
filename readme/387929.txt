@@ -1,0 +1,7 @@
+http://mdiebolt.github.com/bone_tree
+
+Project Description:
+A backbone filetree widget.
+
+README:
+http://mdiebolt.github.com/bone_tree

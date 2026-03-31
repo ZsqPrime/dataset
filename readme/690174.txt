@@ -1,0 +1,12 @@
+RMAS Communications Bus
+=======================
+RMAS server
+
+
+Project Description:
+RMAS communications bus (server)
+
+README:
+RMAS Communications Bus
+=======================
+RMAS server

@@ -1,0 +1,8 @@
+Project Description:
+Web Bug
+
+README:
+Cicada
+======
+
+A simple web bug for logging

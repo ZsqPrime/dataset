@@ -1,0 +1,8 @@
+tractor - A Python library to manipulate Trac tickets programmatically.
+
+
+Project Description:
+A Python library to manipulate Trac tickets programmatically.
+
+README:
+tractor - A Python library to manipulate Trac tickets programmatically.

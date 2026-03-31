@@ -1,0 +1,28 @@
+Project Description:
+autohotkey shared library
+
+README:
+ahksandbox 
+==========
+
+ahksandbox is a modification to ahkdll to remove unsafe functions. 
+use with caution.
+in particular infinite loops are not protected from.
+
+let me know if you find any security flaws. 
+
+Disabled Funcionality: 
+- dllcall
+- com functions
+- hotkeys
+- clipboard
+- sound
+- filesystem
+- envget / set 
+- others (search sandbox in the source code)
+
+
+02.06.2015
+- merged with https://github.com/hotkeyit/ahkdll v1.1.19.02
+- removed clipboard functionality
+- removed timeidle

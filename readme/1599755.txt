@@ -1,0 +1,39 @@
+== Dave's Blogging Software
+
+It is a rite of passage for any coder to write
+their own blogging software. This is mine.
+
+Installation instructions: 
+
+* Creating an Administrative User:The first user created is automatically an administrator.
+This administrator can then promote other users to administrators.
+
+*Make sure to go into Account Settings/Site Settings when signed in as administrator
+to set defaults such as the site name and the time zone.
+
+*To use image attachments with Amazon S3, create a config/s3.yml file with the following contents:
+# config/s3.yml 
+access_key_id: 
+secret_access_key: 
+
+Project Description:
+None
+
+README:
+== Dave's Blogging Software
+
+It is a rite of passage for any coder to write
+their own blogging software. This is mine.
+
+Installation instructions: 
+
+* Creating an Administrative User:The first user created is automatically an administrator.
+This administrator can then promote other users to administrators.
+
+*Make sure to go into Account Settings/Site Settings when signed in as administrator
+to set defaults such as the site name and the time zone.
+
+*To use image attachments with Amazon S3, create a config/s3.yml file with the following contents:
+# config/s3.yml 
+access_key_id: 
+secret_access_key:

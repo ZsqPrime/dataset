@@ -1,0 +1,8 @@
+tiny logging framework for Emacs
+
+
+Project Description:
+tiny logging framework for Emacs
+
+README:
+tiny logging framework for Emacs

@@ -1,0 +1,17 @@
+encoding-rb
+
+Encoding.com ruby wrapper
+
+Copyright (c) 2012 Big Bang Technology Inc. Under the MIT License
+
+
+
+Project Description:
+Ruby Client Library for Encoding.com
+
+README:
+encoding-rb
+
+Encoding.com ruby wrapper
+
+Copyright (c) 2012 Big Bang Technology Inc. Under the MIT License

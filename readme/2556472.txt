@@ -1,0 +1,5 @@
+Project Description:
+RS40XCB's controller
+
+README:
+FutabaのRS405,RS406CB制御用ライブラリ

@@ -1,0 +1,5 @@
+Project Description:
+Confluence plugin that exposes all confluence pages as AtomPub
+
+README:
+Confluence plugin that exposes an AtomPub interface.

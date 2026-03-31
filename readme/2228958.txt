@@ -1,0 +1,7 @@
+The mobile app for Harvest Community Church (http://www.harvesttn.com).
+
+Project Description:
+A cross-platform mobile app for our mobile church that has no building.  Communication is key and this app aims to offer mobile updates to replace bulletins and notifications of different venues, happenings and events.  Built on PhoneGap and JQuery Mobile
+
+README:
+The mobile app for Harvest Community Church (http://www.harvesttn.com).

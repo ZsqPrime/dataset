@@ -1,0 +1,8 @@
+This configuration is deprecated. Please see my [dotfiles](/jmazzi/dotfiles) instead
+
+
+Project Description:
+None
+
+README:
+This configuration is deprecated. Please see my [dotfiles](/jmazzi/dotfiles) instead

@@ -1,0 +1,61 @@
+Project Description:
+Allows disabling methods at run-time
+
+README:
+= method_disabling
+
+Allows disabling methods at runtime. It can be used to raise an error whenever a certain method is
+called from within your test suite to ensure the developers on your team don't accidentally write
+fragile tests. For example, you might want to disable access to a shared resource.
+
+== Getting Started
+
+Add +method_disabling+ to your Gemfile (probably under the +test+ group):
+
+  group :test do
+    gem "method_disabling"
+  end
+
+Use <tt>Module#disable_method</tt> and <tt>Module#disable_class_method</tt> to disable methods that
+you don't want called during your test suite. For example, to disable access to <tt>Net::HTTP</tt>:
+
+  # spec/spec_helper.rb
+  config.before do
+    Net::HTTP.disable_method :initialize
+  end
+
+When developers inadvertantly write unit tests that access the disabled method, they will see an error message:
+
+  NoMethodError: Net::HTTP#initialize is disabled
+
+You can set a custom error message by adding a second parameter to +disable_method+:
+
+  # spec/spec_helper.rb
+  config.before do
+    Net::HTTP.disable_method :initialize, "You were about to access an external resource. Please mock or stub instead."
+  end
+
+A disabled method can be restored to its original behavior with +restore_method+:
+
+  Net::HTTP.restore_method :initialize
+
+The same can be done for class methods with +disable_class_method+ and +restore_class_method+.
+
+== Status {<img src="https://secure.travis-ci.org/dcuddeback/method_disabling.png" />}[http://travis-ci.org/dcuddeback/method_disabling]
+
++method_disabling+ is tested on Ruby 1.8.7, 1.9.2, 1.9.3, REE, Rubnius (1.8 and 1.9 mode), and JRuby (1.8 and 1.9 mode).
+
+== Contributing to method_disabling
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 David Cuddeback. See LICENSE.txt for
+further details.

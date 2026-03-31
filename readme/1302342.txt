@@ -1,0 +1,13 @@
+For compiling open MadCow2011.sln over VIsualStudio -> Press F5.
+
+For Proxy use:
+For changing the proxy configs set Proxy settings over \Tools\Madcow.ini file.
+
+Project Description:
+Mooege Wrapper/Compiler C#
+
+README:
+For compiling open MadCow2011.sln over VIsualStudio -> Press F5.
+
+For Proxy use:
+For changing the proxy configs set Proxy settings over \Tools\Madcow.ini file.

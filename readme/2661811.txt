@@ -1,0 +1,5 @@
+Project Description:
+django application to track runners and to get results from urls (mostly coolrunning.com)
+
+README:
+Track runners results using Django.

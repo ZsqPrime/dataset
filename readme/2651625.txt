@@ -1,0 +1,5 @@
+Project Description:
+written in C# to search and load snapshots
+
+README:
+project used by Sarah Jane John ganda for OpeniT

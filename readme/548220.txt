@@ -1,0 +1,7 @@
+Várias funções em php
+
+Project Description:
+None
+
+README:
+Várias funções em php

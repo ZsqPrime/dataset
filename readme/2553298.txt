@@ -1,0 +1,48 @@
+Project Description:
+
+
+README:
+$ make # simplified Makefile
+cc -Wall -std=c99 -MMD -MP   -c -o main.o main.c
+cc -Wall -std=c99 -MMD -MP   -c -o heat_3D.o heat_3D.c
+cc -Wall -std=c99 -MMD -MP   -c -o nrutil.o nrutil.c
+cc -Wall -std=c99 -MMD -MP   -c -o gauss_elim.o gauss_elim.c
+cc -Wall -std=c99 -MMD -MP   -c -o utilities.o utilities.c
+cc -lm  main.o heat_3D.o nrutil.o gauss_elim.o utilities.o   -o main
+$ ./main -h
+./main: invalid option -- h
+Usage: ./main [-X length in x dimension (in meters) ]
+              [-Y length in y dimension (in meters) ]
+              [-Z length in z dimension (in meters) ]
+              [-x number of internal points along x dimension ]
+              [-y number of internal points along y dimension ]
+              [-z number of internal points along z dimension ]
+              [-n number of time steps to calculate ]
+              [-s how many time steps between reports ]
+              [-p how long to pause reports (in seconds) ]
+              [-a diffusivity constant (in m/s^2) ]
+              [-t length of time step (in seconds) ]
+              [-r ratio of noise applied to initial condition (0=none) ]
+              [-b value of constant boundary condition (or p for periodic) ]
+              [-m method (FTCS BE CN BEj BEgs BEsor) ]
+              [-o filename for plottable solution data ]
+              [-O filename for plottable performance data ]
+              [-q suppress normal output ]
+              [-g use multigrid/BE technique ]
+Specify . as the filename to use a default value
+$ ./main -x30 -y30 -z30 -n640 -s80 -t.03 -r 1 -m BEgs -b 0 -q -oBEgs.dat
+$ ./soln_plot.py BEgs.dat
+
+The code is written in C99, using a variant of nrutil.{c,h} with double
+precision third order tensors. Output can be ANSI text, or a data file
+which can be plotted using soln_plot.py, a short script which shows 8
+timeslices, starting with the initial condition (with z fixed at L/2).
+
+There's a Multigrid option, which tries, but probably fails to really accomplish anything.
+
+$ ./main -x31 -y31 -z31 -r.4 -q -g -t.1 -n8 -s1 -osoln.dat
+$ ./soln_plot.py soln.dat
+
+Specifically, it doesn't seem to do *get* anywhere. Perhaps I'm starting from the same
+initial values for each timestep... In any case, there are probably many math errors,
+and lots of memory leaks yet to be ironed out.

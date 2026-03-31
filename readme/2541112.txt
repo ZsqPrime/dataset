@@ -1,0 +1,7 @@
+Project Description:
+Some LDAP Account Manager modules
+
+README:
+This is set of LdapAccountManager modules, that I store here jast for redudndancy impruvement.
+All of this modules are already in the LAM reliases or in the LAM CVS, so if you want
+more stable versions please use http://www.ldap-account-manager.org/.

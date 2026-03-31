@@ -1,0 +1,40 @@
+Twitter Demo
+http://railstwitterdemo.herokuapp.com/
+
+A Rails app where a user can mass follow and mass unfollow people on Twitter.
+
+ * A user logs into his/her Twitter account using the Twitter OAuth API. For
+   exercise, not relying on Twitter gem or any other Twitter-specific libraries.
+
+ * The user should be able to logout from their Twitter account.
+
+ * The app pulls back a paginated list of people the user is following, with 20
+   results per page – 'followees'
+
+ * Next to each followee is a checkbox saying 'unfollow'. At the bottom there
+   is a 'submit' button which performs the unfollow actions that the user has
+   requested.
+
+ * Additionally, at the top of the page there is a search box. Entering a
+   search term into the box pulls back Twitter profiles whose messages or
+   profile match the search term.
+
+ * Next to each of these search results is a 'follow' checkbox, with a 'submit'
+   button at the bottom.
+
+ * Any state changes should be reflected in the hash part of the current page's
+   URL.
+
+
+App depends on the following environment variables to be set correctly:
+
+ * TWITTER_CONSUMER_KEY
+ * TWITTER_CONSUMER_SECRET
+
+
+Interesting Design Decisions:
+
+ * A user is able to access any and all of twitter's API in our app's name,
+   but only with their access token.
+ 
+ * No dependency on database - everything is stored client side.

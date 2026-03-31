@@ -1,0 +1,11 @@
+Project Description:
+.swc tool for seamless haXe/AS3 properties and other.
+
+README:
+Note: when using flib with .swc's and on windows, you will need the 7-zip library installed.
+
+Compilation from source requires 'caxe' to be installed (another of my github repos)
+
+Alternatively, I keep unix/windows neko builds in the bin folder which can be compiled to binaries locally with:
+	
+	nekotools boot bin/flib_#.n

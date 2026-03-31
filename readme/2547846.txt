@@ -1,0 +1,20 @@
+Project Description:
+Ikke-offisiell reiseplanlegger for Kolumbus som API
+
+README:
+REISEPLANLEGGER FOR ROGALAND KOLLEKTIVTRAFIKK
+Av Steffen Martinsen - steffen@steffenmedia.no
+
+Twitter: @kverdagshelt
+Web: steffen.im
+
+Ved hjelp av frigitte rutedata, se next.kolumbus.no
+
+UAVHENGIG PROGRAMVARE, IKKE UTGITT AV KOLUMBUS
+
+Dersom du ønsker å bruke hele, eller deler av dette
+send meg en e-post og forklar om ditt prosjekt.
+
+-----------------------------------------------
+
+English:

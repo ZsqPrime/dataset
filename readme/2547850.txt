@@ -1,0 +1,5 @@
+Project Description:
+internationalization package for php
+
+README:
+see the example.php

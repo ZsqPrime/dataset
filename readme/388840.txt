@@ -1,0 +1,143 @@
+h1. rah_section_titles
+
+p. "Project page":http://rahforum.biz/plugins/rah_section_titles | "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_section_titles | "Support forum":http://forum.textpattern.com/viewtopic.php?id=27749 | "Donate":http://rahforum.biz/donate/rah_section_titles
+
+p. Rah_section_titles makes "Textpattern's":http://textpattern.com Write panel's _section_ drop-down list display section titles instead of names.
+
+h2. Requirements
+
+p. Rah_section_title's minimum requirements:
+
+* Textpattern v4.5.0 or newer.
+
+h2. Installing
+
+p. Rah_section_titles' installation follows the standard plugin installation steps.
+
+# Download the plugin installation code.
+# Copy and paste the installation code into the _Install plugin_ box of your Textpattern Plugin pane.
+# Run the automated setup.
+# After the setup is done, activate the plugin. Done.
+
+p. The plugin is now in use and the Write panel's sections list displays titles.
+
+h2. Changelog
+
+h3. Version 0.8 - upcoming
+
+* Clean up.
+
+h3. Version 0.7 - 2012/08/27
+
+* Load the plugin on async requests.
+* Now requires Textpattern v4.5.0.
+
+h3. Version 0.6 - 2012/07/30
+
+* Fixed: Reintroduced missing HTML @id@ attribute.
+
+h3. Version 0.5 - 2012/07/30
+
+* Fixed: Sorting. Sections are sorted by the title and not the name.
+* Changed: Now works server-side by using pluggable_ui instead of JavaScript.
+* Textpattern v4.5.0 compatibility.
+
+h3. Version 0.4 - 2011/11/25
+
+* Now uses Textpattern's @escape_js()@ to escape the strings used in JavaScript, and @script_js()@ to return the JavaScript wrapped in script tags.
+* As of version 0.4, requires Textpattern version 4.4.0 or newer.
+
+h3. Version 0.3 - 2011/06/28
+
+* Fixed: Don't throw up JavaScript when the browser has JavaScript disabled.
+* Changed: Escape HTML markup by using jQuery's text() method instead of html().
+* Changed: Plugin type to the newer admin-side only.
+
+h3. Version 0.2 - 2010/06/09
+
+* Better compatibility with other plugins that play with the same drop-down, and better integration with TXP. Now the plugin doesn't replace the entire dropdown, but only the labels within each item.
+* Generally improved code.
+* Moved the JavaScript to @<head>@.
+* Now requires Textpattern 4.0.7 or newer.
+
+h3. Version 0.1.2 - 2008/09/04
+
+* Added missing @<br />@.
+
+h3. Version 0.1 - 2008/07/12
+
+* Initial release.
+
+Project Description:
+Populate Textpattern's Write-tab's section field with titles instead of names
+
+README:
+h1. rah_section_titles
+
+p. "Project page":http://rahforum.biz/plugins/rah_section_titles | "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_section_titles | "Support forum":http://forum.textpattern.com/viewtopic.php?id=27749 | "Donate":http://rahforum.biz/donate/rah_section_titles
+
+p. Rah_section_titles makes "Textpattern's":http://textpattern.com Write panel's _section_ drop-down list display section titles instead of names.
+
+h2. Requirements
+
+p. Rah_section_title's minimum requirements:
+
+* Textpattern v4.5.0 or newer.
+
+h2. Installing
+
+p. Rah_section_titles' installation follows the standard plugin installation steps.
+
+# Download the plugin installation code.
+# Copy and paste the installation code into the _Install plugin_ box of your Textpattern Plugin pane.
+# Run the automated setup.
+# After the setup is done, activate the plugin. Done.
+
+p. The plugin is now in use and the Write panel's sections list displays titles.
+
+h2. Changelog
+
+h3. Version 0.8 - upcoming
+
+* Clean up.
+
+h3. Version 0.7 - 2012/08/27
+
+* Load the plugin on async requests.
+* Now requires Textpattern v4.5.0.
+
+h3. Version 0.6 - 2012/07/30
+
+* Fixed: Reintroduced missing HTML @id@ attribute.
+
+h3. Version 0.5 - 2012/07/30
+
+* Fixed: Sorting. Sections are sorted by the title and not the name.
+* Changed: Now works server-side by using pluggable_ui instead of JavaScript.
+* Textpattern v4.5.0 compatibility.
+
+h3. Version 0.4 - 2011/11/25
+
+* Now uses Textpattern's @escape_js()@ to escape the strings used in JavaScript, and @script_js()@ to return the JavaScript wrapped in script tags.
+* As of version 0.4, requires Textpattern version 4.4.0 or newer.
+
+h3. Version 0.3 - 2011/06/28
+
+* Fixed: Don't throw up JavaScript when the browser has JavaScript disabled.
+* Changed: Escape HTML markup by using jQuery's text() method instead of html().
+* Changed: Plugin type to the newer admin-side only.
+
+h3. Version 0.2 - 2010/06/09
+
+* Better compatibility with other plugins that play with the same drop-down, and better integration with TXP. Now the plugin doesn't replace the entire dropdown, but only the labels within each item.
+* Generally improved code.
+* Moved the JavaScript to @<head>@.
+* Now requires Textpattern 4.0.7 or newer.
+
+h3. Version 0.1.2 - 2008/09/04
+
+* Added missing @<br />@.
+
+h3. Version 0.1 - 2008/07/12
+
+* Initial release.

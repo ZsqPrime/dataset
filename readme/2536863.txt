@@ -1,0 +1,5 @@
+Project Description:
+omnigeist, but in node
+
+README:
+see http://omnigeist.com/

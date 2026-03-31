@@ -1,0 +1,10 @@
+Project Description:
+This will be a website for users to track their investments in the stock market.
+
+README:
+This application is a simple way to track stock performance.
+A user can create an account and track all of their stock
+purchases and sales. I may add simulated trading functionality
+to the application, but I haven't really decided yet.
+
+This application uses Yahoo Finance to get the stock data.

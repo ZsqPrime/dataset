@@ -1,0 +1,77 @@
+Project Description:
+
+
+README:
+Pais
+
+	nome : String
+
+	sigla : String
+
+
+
+UnidadeFederativa
+
+	nome : String
+
+	sigla : String
+
+	pais : Pais
+
+
+
+Municipio
+
+	nome
+
+	unidadeFederativa
+
+
+
+PessoaFisica
+
+	nome
+
+	apelido
+
+	cpf
+
+	documentoIdentidade
+
+	dataNascimento
+
+	municipioNaturalidade
+
+	enderecos
+
+	contatos
+
+	relacionamentos
+
+
+
+DocumentoIdentidade
+
+	numero
+
+	orgaoEmissorDocumento
+
+	unidadeFederativa
+
+	
+
+OrgaoEmissorDocumento
+
+	nome
+
+	sigla
+
+	
+
+Contato
+
+	tipoContato
+
+	descricaoTipoPersonalizado
+
+	descricao

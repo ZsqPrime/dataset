@@ -1,0 +1,4 @@
+Project Description:
+Android learning project - App that lets you enter nutritionional intake and calculates the calories and protien
+
+README:

@@ -1,0 +1,7 @@
+Project Description:
+convert & upload video | backend = django
+
+README:
+YTupload | convert & upload video to YouTube.com
+
+Documentation in Wiki section [[https://github.com/1vank1n/YTupload/wiki]]

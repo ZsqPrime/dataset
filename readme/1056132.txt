@@ -1,0 +1,7 @@
+This is a project for UNLV CS473 class of SOftware Engineering. It consists of a PC game based on the XNA framework.
+
+Project Description:
+CS473 Project
+
+README:
+This is a project for UNLV CS473 class of SOftware Engineering. It consists of a PC game based on the XNA framework.

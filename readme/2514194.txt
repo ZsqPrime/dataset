@@ -1,0 +1,24 @@
+# Swiff
+
+## Introduction
+
+Swiff is intending to be a efficient, portable SWF runtime library.
+
+## Status
+
+Far from completely. In slow progression.
+
+
+Project Description:
+Swiff is intending to be a efficient, portable SWF runtime library.
+
+README:
+# Swiff
+
+## Introduction
+
+Swiff is intending to be a efficient, portable SWF runtime library.
+
+## Status
+
+Far from completely. In slow progression.

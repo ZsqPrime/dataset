@@ -1,0 +1,60 @@
+                  _             _ _ _
+  ___  ___  _ __ | |_ _ __ ___ | (_) |__
+ / __|/ _ \| '_ \| __| '__/ _ \| | | '_ \
+| (__| (_) | | | | |_| | | (_) | | | |_) |
+ \___|\___/|_| |_|\__|_|  \___/|_|_|_.__/
+
+
+What is it?
+
+controlib-server is a JAVA library allowing developpers to connect Android
+devices with applications using controlib-client. It decodes messages sent with
+the device in order data can be used by jar plugins.
+Main goal is to control your computer, whatever is the OS, with your Android
+phone and let the developpers build specific remotes according to their needs.
+
+For the moment, the project has just begun and has not been released yet.
+
+
+Version:
+0.0a
+
+
+Authors:
+
+Mickaël "Mogmi" Bidon           <mogmi95@gmail.com>
+Julien "Roulyo" Fraisse         <roulyo.42@gmail.com>
+Benoit "KIDdAe" Vasseur         <benoit.vasr@gmail.com>
+
+
+Project Description:
+None
+
+README:
+                  _             _ _ _
+  ___  ___  _ __ | |_ _ __ ___ | (_) |__
+ / __|/ _ \| '_ \| __| '__/ _ \| | | '_ \
+| (__| (_) | | | | |_| | | (_) | | | |_) |
+ \___|\___/|_| |_|\__|_|  \___/|_|_|_.__/
+
+
+What is it?
+
+controlib-server is a JAVA library allowing developpers to connect Android
+devices with applications using controlib-client. It decodes messages sent with
+the device in order data can be used by jar plugins.
+Main goal is to control your computer, whatever is the OS, with your Android
+phone and let the developpers build specific remotes according to their needs.
+
+For the moment, the project has just begun and has not been released yet.
+
+
+Version:
+0.0a
+
+
+Authors:
+
+Mickaël "Mogmi" Bidon           <mogmi95@gmail.com>
+Julien "Roulyo" Fraisse         <roulyo.42@gmail.com>
+Benoit "KIDdAe" Vasseur         <benoit.vasr@gmail.com>

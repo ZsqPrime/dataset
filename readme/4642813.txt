@@ -1,0 +1,5 @@
+Project Description:
+On-screen keyboard extension for Opera browser.
+
+README:
+Virtual Keyboard

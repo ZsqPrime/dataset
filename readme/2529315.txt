@@ -1,0 +1,6 @@
+Project Description:
+Comic viewer for Milk for Dead Hamsters. Uses ComicViewer library.
+
+README:
+Uses ComicViewer library.
+http://github.com/tcoxon/ComicViewer

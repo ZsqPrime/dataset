@@ -1,0 +1,5 @@
+Project Description:
+ruby gem that synchronizes photo galleries organized into albums from/to different locations like amazon s3, dropbox, local file system.
+
+README:
+not usable yet

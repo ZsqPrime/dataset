@@ -1,0 +1,10 @@
+Dette er en test på NetBeans git
+Nå har jeg gjort en endring
+
+Project Description:
+Android kursapp for Høgskolen i Ålesund
+
+README:
+Dette er en test på NetBeans git
+
+Nå har jeg gjort en endring

@@ -1,0 +1,5 @@
+Project Description:
+Another Logger for Erlang
+
+README:
+Another Logger for Erlang

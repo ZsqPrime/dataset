@@ -1,0 +1,8 @@
+Project Description:
+Multi-threaded Video Transcoding script that utilized ffmpeg (h264+faac)
+
+README:
+Multi-threaded Video Transcoding script that utilized ffmpeg (h264+faac)
+ - To Use Call script with the name of folder with input video
+ eg.
+ h264-batch-encode.py recorded-videos

@@ -1,0 +1,6 @@
+Project Description:
+Conway's Game of Life
+
+README:
+
+Just a little toy. Maybe useful to show javascript patterns to use or avoid.

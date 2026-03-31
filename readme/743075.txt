@@ -1,0 +1,22 @@
+Team AudioFiles
+
+Project: Creating a real-time voice chat application using DCCP
+
+Team Members:
+Tim Biggs
+William McVicker
+...
+
+
+Project Description:
+Voice Chat application with DCCP
+
+README:
+Team AudioFiles
+
+Project: Creating a real-time voice chat application using DCCP
+
+Team Members:
+Tim Biggs
+William McVicker
+...

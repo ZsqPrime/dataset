@@ -1,0 +1,9 @@
+Project Description:
+lock free modified prefix B+tree append-only database 
+
+README:
+Building
+========
+autoreconf -i
+./configure
+make

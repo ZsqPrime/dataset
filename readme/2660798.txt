@@ -1,0 +1,27 @@
+Project Description:
+Efficient shuffling on Perl arrays in-place
+
+README:
+Array-Shuffle version 0.04
+==========================
+
+Shuffle arrays in place.
+
+You probably should be using List::Util shuffle instead!
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2012, 2021 by Salvador Fandino
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.14.2 or,
+at your option, any later version of Perl 5 you may have available.

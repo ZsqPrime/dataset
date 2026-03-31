@@ -1,0 +1,7 @@
+Project Description:
+Experiments in processing Cambridge Uni data for use in CARET
+
+README:
+# Cambridge Uni Data Munging
+
+Experiments with processing Cambridge Uni data.

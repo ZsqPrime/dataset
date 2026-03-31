@@ -1,0 +1,4 @@
+Project Description:
+Ricky's .vim directory
+
+README:

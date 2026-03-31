@@ -1,0 +1,14 @@
+A collection of tried-and-tested bioinformatics scripts built mainly to help in 
+TFBS PWM mapping and quantification.
+In addition, there are scripts to allow for every-day operations such as BLAST querying
+and manipulation of common file formats.
+
+
+Project Description:
+Bioinformatics analysis scripts such as: * RNA-Seq tag-counting and multiplex analysis, * Sequence / ORF analysis, * Uniprot, BLAST parsing, and general analysis scripts.
+
+README:
+A collection of tried-and-tested bioinformatics scripts built mainly to help in 
+TFBS PWM mapping and quantification.
+In addition, there are scripts to allow for every-day operations such as BLAST querying
+and manipulation of common file formats.

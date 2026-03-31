@@ -1,0 +1,5 @@
+Project Description:
+Rails demoapp from lesson 2
+
+README:
+Lesson 2 demo app!

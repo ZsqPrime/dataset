@@ -1,0 +1,6 @@
+
+
+Project Description:
+Checks the status of a list of domains and outputs in wiki bullet formatting.
+
+README:

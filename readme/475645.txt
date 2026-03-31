@@ -1,0 +1,215 @@
+
+--------------------------------------------------------------------------------
+::  Dependent JavaScript  ::  Ravi Chugh (rkc) (rchugh@cs.ucsd.edu)           ::
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Licenses
+
+  1) LICENSE.DJS   : System !D + DJS
+  2) LICENSE.LamJS : LambdaJS by Arjun Guha and Claudiu Saftoiu (in src/LamJS)
+  3) LICENSE.Z3    : Z3 by Microsoft Research
+  4) BNstats/      : BNstats.ml by Necula, McPeak, and Weimer
+
+--------------------------------------------------------------------------------
+Requirements
+
+  1) Microsoft Z3 Theorem Prover
+     http://research.microsoft.com/en-us/um/redmond/projects/z3/
+
+     Use any version v2.17 or later. We used v3.2 to run our benchmarks.
+     We've included a few versions for Linux and OSX in bin/.
+
+  2) ocamlbuild
+
+--------------------------------------------------------------------------------
+Building System D
+
+  1) make
+
+  2) export DJS_DIR=/path/to/djs/
+
+     Set and export this variable to the root of the DJS directory.
+     Use the absolute path, not the path relative from your home directory (~).
+     You'll probably want to add this to your shell startup script.
+
+  3) Add the z3 executable somewhere accessible by PATH, and call it "z3".
+
+     For example:
+       ln -s $DJS_DIR/bin/z3-osx-3.2 SOMEWHERE_IN_PATH/z3
+
+     Alternatively, add the following to your shell startup script:
+       alias z3=$DJS_DIR/bin/z3-osx-3.2
+
+--------------------------------------------------------------------------------
+Examples
+
+  The OOPSLA benchmarks (unannotated and annotated) are in:
+    tests/apr-benchmarks/un/
+    tests/djs/oopsla12/
+
+  To generate stats for line counts and type checking, cd to the src/ directory 
+  and run:
+
+    ../scripts/gen-benchmark-linecounts-sep2012.py
+    ../scripts/gen-benchmark-time-sep2012.py
+
+  Additional examples can be found in the tests/djs/ directory.
+
+--------------------------------------------------------------------------------
+Standard Prelude
+
+  A standard prelude of built-in System !D primitive functions and native
+  JavaScript functions are in:
+
+    prims/basics.dref
+    prims/objects.dref
+    prims/js_natvies.dref
+
+  These three files are loaded along with every program.
+
+--------------------------------------------------------------------------------
+Running DJS
+
+  # ./system-dref -djs ../tests/djs/objects/simple00.js
+  ...
+  OK! 24 queries.
+
+  Each DJS program is desugared to System !D and then converted into A-normal
+  form, stored in out/anfExp.dref. To run System !D on this file, which
+  already contains the standard prelude from the previous run, use the -raw
+  flag so that the file is processed directly.
+
+  # ./system-dref -raw out/anfExp.dref
+  ...
+  OK! 24 queries.
+
+  All of the queries dispatched to Z3 are saved in out/queries.smt2 in the
+  SMT-LIB2 format, and can be run directly through z3.
+
+  # z3 MBQI=false out/queries.smt2 | cat -n 
+
+  The line numbers help match up queries with the query numbers (in comments)
+  in queries.lisp.
+
+  Examples written directly in !D can be found in the tests/functional/ and
+  tests/imperative/ directories.
+
+  # ./system-dref ../tests/imperative/objects/test00.dref
+  ...
+  OK! 5 queries.
+
+  The following script runs all of the examples in a given directory:
+
+  # ../scripts/run-tests.py imperative/objects
+
+
+
+Project Description:
+Dependent JavaScript: A Typed Dialect
+
+README:
+
+--------------------------------------------------------------------------------
+::  Dependent JavaScript  ::  Ravi Chugh (rkc) (rchugh@cs.ucsd.edu)           ::
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Licenses
+
+  1) LICENSE.DJS   : System !D + DJS
+  2) LICENSE.LamJS : LambdaJS by Arjun Guha and Claudiu Saftoiu (in src/LamJS)
+  3) LICENSE.Z3    : Z3 by Microsoft Research
+  4) BNstats/      : BNstats.ml by Necula, McPeak, and Weimer
+
+--------------------------------------------------------------------------------
+Requirements
+
+  1) Microsoft Z3 Theorem Prover
+     http://research.microsoft.com/en-us/um/redmond/projects/z3/
+
+     Use any version v2.17 or later. We used v3.2 to run our benchmarks.
+     We've included a few versions for Linux and OSX in bin/.
+
+  2) ocamlbuild
+
+--------------------------------------------------------------------------------
+Building System D
+
+  1) make
+
+  2) export DJS_DIR=/path/to/djs/
+
+     Set and export this variable to the root of the DJS directory.
+     Use the absolute path, not the path relative from your home directory (~).
+     You'll probably want to add this to your shell startup script.
+
+  3) Add the z3 executable somewhere accessible by PATH, and call it "z3".
+
+     For example:
+       ln -s $DJS_DIR/bin/z3-osx-3.2 SOMEWHERE_IN_PATH/z3
+
+     Alternatively, add the following to your shell startup script:
+       alias z3=$DJS_DIR/bin/z3-osx-3.2
+
+--------------------------------------------------------------------------------
+Examples
+
+  The OOPSLA benchmarks (unannotated and annotated) are in:
+    tests/apr-benchmarks/un/
+    tests/djs/oopsla12/
+
+  To generate stats for line counts and type checking, cd to the src/ directory 
+  and run:
+
+    ../scripts/gen-benchmark-linecounts-sep2012.py
+    ../scripts/gen-benchmark-time-sep2012.py
+
+  Additional examples can be found in the tests/djs/ directory.
+
+--------------------------------------------------------------------------------
+Standard Prelude
+
+  A standard prelude of built-in System !D primitive functions and native
+  JavaScript functions are in:
+
+    prims/basics.dref
+    prims/objects.dref
+    prims/js_natvies.dref
+
+  These three files are loaded along with every program.
+
+--------------------------------------------------------------------------------
+Running DJS
+
+  # ./system-dref -djs ../tests/djs/objects/simple00.js
+  ...
+  OK! 24 queries.
+
+  Each DJS program is desugared to System !D and then converted into A-normal
+  form, stored in out/anfExp.dref. To run System !D on this file, which
+  already contains the standard prelude from the previous run, use the -raw
+  flag so that the file is processed directly.
+
+  # ./system-dref -raw out/anfExp.dref
+  ...
+  OK! 24 queries.
+
+  All of the queries dispatched to Z3 are saved in out/queries.smt2 in the
+  SMT-LIB2 format, and can be run directly through z3.
+
+  # z3 MBQI=false out/queries.smt2 | cat -n 
+
+  The line numbers help match up queries with the query numbers (in comments)
+  in queries.lisp.
+
+  Examples written directly in !D can be found in the tests/functional/ and
+  tests/imperative/ directories.
+
+  # ./system-dref ../tests/imperative/objects/test00.dref
+  ...
+  OK! 5 queries.
+
+  The following script runs all of the examples in a given directory:
+
+  # ../scripts/run-tests.py imperative/objects

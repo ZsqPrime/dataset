@@ -1,0 +1,34 @@
+File Dissect is a cross-platform framework and UI for analyzing
+various file formats. It is based on wxWidgets since it provides a
+native feel regardless of base OS. It has been designed with a tiered
+plug-in architecture to facilitate the quick and easy addition of new
+dissectors or sub-dissectors.
+
+It has been contructed using a custom wxHexView widget and
+automatically associates items within a wxTreeView with positions
+within the wxHexView. As such, it is possible to select all associated
+bytes in the wxHexView by clicking a node in the wxTreeView.
+
+It was originally developed during jduck's tenure at VeriSign's
+iDefense Labs from 2007 til 2009. It was subsequently released under
+a BSD License, the license which it holds today.
+
+
+Project Description:
+File Dissect is a cross-platform framework and UI for analyzing various file formats. It is based on wxWidgets since it provides a native feel regardless of base OS.
+
+README:
+File Dissect is a cross-platform framework and UI for analyzing
+various file formats. It is based on wxWidgets since it provides a
+native feel regardless of base OS. It has been designed with a tiered
+plug-in architecture to facilitate the quick and easy addition of new
+dissectors or sub-dissectors.
+
+It has been contructed using a custom wxHexView widget and
+automatically associates items within a wxTreeView with positions
+within the wxHexView. As such, it is possible to select all associated
+bytes in the wxHexView by clicking a node in the wxTreeView.
+
+It was originally developed during jduck's tenure at VeriSign's
+iDefense Labs from 2007 til 2009. It was subsequently released under
+a BSD License, the license which it holds today.

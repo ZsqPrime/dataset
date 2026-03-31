@@ -1,0 +1,23 @@
+#+TITLE: README
+#+AUTHOR: ned rihine
+#+LANGUAGE: ja
+#+EMAIL: ned.rihine@gmail.com
+
+* coreHezelnut
+
+** これは何？
+coreHezelnut は、Hezelnut を忠実に C 言語に移植したいバージョンです。
+
+** 必要なパッケージとか
+
+- gc
+
+** インストール
+
+#+BEGIN_SRC text
+    % ./configure
+    % make
+    % sudo make install
+#+END_SRC
+
+** 使い方

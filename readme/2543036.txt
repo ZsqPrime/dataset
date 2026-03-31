@@ -1,0 +1,10 @@
+Project Description:
+integration tests for the various bits of FB software
+
+README:
+See https://github.com/wurp/Friendly-Backup/wiki
+
+Example commands for diagnosing gpg ring issues:
+gpg --homedir test/integ/happy2/client2/gnupg/ --list-keys
+
+Note that when you run tests, you can ignore java.lang.UnsatisfiedLinkError: com.onionnetworks.fec.Native8Code.nativeNewFEC(II)J. Our FEC engine tries to use native code to generate FEC first, then falls back to a Java implementationyou can ignore java.lang.UnsatisfiedLinkError: com.onionnetworks.fec.Native8Code.nativeNewFEC(II)J. Our FEC engine tries to use native code to generate FEC first, then falls back to a Java implementation. If it doesn't find the native code, it dumps UnsatisfiedLinkError to stderr.

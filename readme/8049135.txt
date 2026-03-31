@@ -1,0 +1,63 @@
+## irc-log-viewer [![Build Status](https://secure.travis-ci.org/pangratz/irc-log-viewer.png)](http://travis-ci.org/pangratz/irc-log-viewer)
+
+This is a viewer for IRC logs which are stored in a CouchDB. It's basically a couchapp using Ember.js. Demo? Here you go: [http://emberjs.iriscouch.com/irc/_design/viewer/index.html](http://emberjs.iriscouch.com/irc/_design/viewer/index.html) (transcript of #emberjs channel)
+
+### Awesome stuff used
+
+- [sexy Ember.js](https://github.com/emberjs/ember.js)
+- [sexy interline/ember-skeleton](https://github.com/interline/ember-skeleton)
+- [sexy CouchDB](http://couchdb.apache.org/)
+- [sexy Couchapp](http://couchapp.org/)
+- [Twitter's sexy Bootstrap](http://twitter.github.com/bootstrap/)
+
+## Stored IRC messages
+
+The IRC messages saved in the CouchDB have the following format:
+
+```javascript
+{
+   "user": {
+       "id": "123",
+       "name": "GOB"
+   },
+   "text": "Come on!",
+   "date": "2012-12-21T12:34:56.789Z"
+}
+```
+
+One example of filling the CouchDB with the IRC messages would be a [Hubot](https://github.com/github/hubot) configured with the [store-messages-couchdb.coffee](https://github.com/github/hubot-scripts/blob/master/src/scripts/store-messages-couchdb.coffee) script and using an [IRC Adapter](https://github.com/nandub/hubot-irc)
+
+## CouchDB Views
+
+The `messages` view returns all messages, where the key is the date structured as an array with the year as first element, month as second and so forth. This allows you to get messages for a specific period.
+
+## Front end
+
+Inside the `app` folder is the basic application.
+
+## Development
+
+### Prerequisites:
+- installed Ruby
+- installed CouchDB where app can be deployed or use a free hosting service like the excellent [Iris Couch](http://www.iriscouch.com/)
+- installed `couchapp` command line tool for easy pushing of the app to a CouchDB, see [installation](http://couchapp.org/page/installing)
+
+### Developing
+
+- Clone this repo, obviously
+- execute `couchapp init` to create an empty `.couchapprc` file inside the project (See section `.couchapprc` on http://couchapp.org/page/couchapp-config)
+- execute `bundle install`
+- Tests are in located in the `tests` folder
+- Execute `bundle execute rackup` to start test server
+- Access [http://localhost:4020/tests.html](http://localhost:4020/tests.html) to execute the tests
+
+or
+
+- Execute `bundle execute rake test` to run the tests from command line
+
+### Deploy
+
+- execute `bundle exec rake build`
+- push the Couchapp to your CouchDB; if you have `couchapp` installed, do a `couchapp push http://localhost:5984/irc`
+- access the IRC log viewer at `http://localhost:5984/irc/_design/viewer/index.html`
+

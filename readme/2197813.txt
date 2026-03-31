@@ -1,0 +1,120 @@
+ELF3D - OpenSource Lightweight 3D Game Engine
+=============================================
+
+ELF3D is an Open Source Game Engine that has a main goal of being an all in Game Engine. ELF3D is not only is a Graphics, Window, Input, Physics, Sound, or Network System, it is all of those components combined into one simple, free, opensource, and lightweight Game Engine. To accomplish these goals we like to follow these principles: 
+-KISS(http://en.wikipedia.org/wiki/KISS_principle)
+-YAGNI(http://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it)
+-DRY(http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+
+ELF3D is written in C++ and uses OpenGL for 3D Graphics.
+
+Authors
+--------
+
+Brent Ritzema - Project Leader - (ritztro@gmail.com)
+Emil Sandstø - Lead Developer - (emilalexer@gmail.com)
+
+Liscense
+---------
+
+ELF3D is made available under the MIT License.
+
+Copyright (c) 2011 Ritztro
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+Contributions
+--------------
+
+There are 10 simple steps to contribute.
+
+1. Fork the repo.
+2. Read the Code Design Document: https://docs.google.com/document/d/1oaFiNuD3h069EJIEaeHNPiY2rpIKW7Bj9gzzvesqyjI/edit
+3. Pull your fork of the repo to your local machine.
+4. Add/Edit desired code.
+5. Commit your changes.
+6. Push your changes to your fork of the repo.
+7. Submit a Pull Request.
+8. Add any desired notes your would like to include for the admins in the Pull Request.
+9. Submit the finalized Pull Request.
+10. Wait till an admin accepts/denies/edits your Pull Request.
+
+
+Project Description:
+ELF3D is a Free and Open Source 3D game engine. Coded using C++ and OpenGL 3.3+
+
+README:
+ELF3D - OpenSource Lightweight 3D Game Engine
+=============================================
+
+ELF3D is an Open Source Game Engine that has a main goal of being an all in Game Engine. ELF3D is not only is a Graphics, Window, Input, Physics, Sound, or Network System, it is all of those components combined into one simple, free, opensource, and lightweight Game Engine. To accomplish these goals we like to follow these principles: 
+-KISS(http://en.wikipedia.org/wiki/KISS_principle)
+-YAGNI(http://en.wikipedia.org/wiki/You_ain%27t_gonna_need_it)
+-DRY(http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)
+
+ELF3D is written in C++ and uses OpenGL for 3D Graphics.
+
+Authors
+--------
+
+Brent Ritzema - Project Leader - (ritztro@gmail.com)
+Emil Sandstø - Lead Developer - (emilalexer@gmail.com)
+
+Liscense
+---------
+
+ELF3D is made available under the MIT License.
+
+Copyright (c) 2011 Ritztro
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+
+Contributions
+--------------
+
+There are 10 simple steps to contribute.
+
+1. Fork the repo.
+2. Read the Code Design Document: https://docs.google.com/document/d/1oaFiNuD3h069EJIEaeHNPiY2rpIKW7Bj9gzzvesqyjI/edit
+3. Pull your fork of the repo to your local machine.
+4. Add/Edit desired code.
+5. Commit your changes.
+6. Push your changes to your fork of the repo.
+7. Submit a Pull Request.
+8. Add any desired notes your would like to include for the admins in the Pull Request.
+9. Submit the finalized Pull Request.
+10. Wait till an admin accepts/denies/edits your Pull Request.

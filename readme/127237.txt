@@ -1,0 +1,7 @@
+This is a collection of modules and includes with commonly used functionality for SiLabs C8051 processors.
+
+Project Description:
+a library of code for SiLabs C8051 systems
+
+README:
+This is a collection of modules and includes with commonly used functionality for SiLabs C8051 processors.

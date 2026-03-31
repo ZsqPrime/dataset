@@ -1,0 +1,6 @@
+Project Description:
+Smtp Server for Ladoga Alerts Daemon
+
+README:
+SMTP Server for "Ladoga" Alerts [Daemon]
+Have a nice day!!

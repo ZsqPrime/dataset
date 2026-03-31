@@ -1,0 +1,14 @@
+Custom Toto
+=======
+
+This is an out of the box, completely customized Toto blog engine. It uses twitter Bootstrap for templating.
+
+
+Project Description:
+A completely customized toto blog
+
+README:
+Custom Toto
+=======
+
+This is an out of the box, completely customized Toto blog engine. It uses twitter Bootstrap for templating.

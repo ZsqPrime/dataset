@@ -1,0 +1,108 @@
+= Twitter Text Extraction
+
+A fast screen name, hashtag, url extraction and tokenizer for tweets.
+
+
+== API
+
+    Chipper
+      #users     => [Array]
+      #hashtags  => [Array]
+      #urls      => [Array]
+      #tokens    => [Array]
+
+      #skip_users
+      #skip_hashtags
+      #skip_tokens
+      #skip_token_pattern
+
+== Usage
+
+    require 'chipper'
+
+    Chipper.skip_users(%w(youtube msn))
+    Chipper.skip_hashtags(%w(abc24 cnn))
+    Chipper.skip_tokens(%w(story tv why that get from your))
+    Chipper.skip_token_pattern '^vimeo$'
+
+    tweet = "hi @youtube, could we get #cnn videos so i can #watch it on my @apple tv http://t.co/HM7XoimM"
+    Chipper.users(tweet)    #=> ["@apple"]
+    Chipper.hashtags(tweet) #=> ["#watch"]
+    Chipper.urls(tweet)     #=> ["http://t.co/HM7XoimM"]
+
+    # n-gram tokenizer, returns a list of tokens partitioned by stop words, punctuation, urls and hashtags.
+    Chipper.tokens(tweet)   #=> [["could"], ["get"], ["videos"], ["can"]]
+
+    # single method that does all of the above and returns a hash.
+    Chipper.entities(tweet)
+
+== Gotchas
+
+* skips tokens shorter than 3 characters
+* only handles t.co urls
+
+== Updating version
+
+* update ext/src/version.h
+* rake gemspec
+
+== License
+
+{Creative Commons Attribution - CC BY}[http://creativecommons.org/licenses/by/3.0]
+
+
+Project Description:
+twitter text extraction
+
+README:
+= Twitter Text Extraction
+
+A fast screen name, hashtag, url extraction and tokenizer for tweets.
+
+
+== API
+
+    Chipper
+      #users     => [Array]
+      #hashtags  => [Array]
+      #urls      => [Array]
+      #tokens    => [Array]
+
+      #skip_users
+      #skip_hashtags
+      #skip_tokens
+      #skip_token_pattern
+
+== Usage
+
+    require 'chipper'
+
+    Chipper.skip_users(%w(youtube msn))
+    Chipper.skip_hashtags(%w(abc24 cnn))
+    Chipper.skip_tokens(%w(story tv why that get from your))
+    Chipper.skip_token_pattern '^vimeo$'
+
+    tweet = "hi @youtube, could we get #cnn videos so i can #watch it on my @apple tv http://t.co/HM7XoimM"
+    Chipper.users(tweet)    #=> ["@apple"]
+    Chipper.hashtags(tweet) #=> ["#watch"]
+    Chipper.urls(tweet)     #=> ["http://t.co/HM7XoimM"]
+
+    # n-gram tokenizer, returns a list of tokens partitioned by stop words, punctuation, urls and hashtags.
+    Chipper.tokens(tweet)   #=> [["could"], ["get"], ["videos"], ["can"]]
+
+    # single method that does all of the above and returns a hash.
+    Chipper.entities(tweet)
+
+== Gotchas
+
+* skips tokens shorter than 3 characters
+* only handles t.co urls
+
+== Updating version
+
+* update ext/src/version.h
+* rake gemspec
+
+== License
+
+{Creative Commons Attribution - CC BY}[http://creativecommons.org/licenses/by/3.0]

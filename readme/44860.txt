@@ -1,0 +1,119 @@
+This is yet another programming language for general scripting.
+
+Platforms
+---------
+
+authors tested following parts.
+
+  * osx lion
+  * ubuntu linux latest
+  * windows
+
+Build Dependencies
+------------------
+
+ * gcc 4.4.3+ or clang++ 3.0+
+ * SConstruct
+ * Perl5
+ * libboost1.48-all-dev
+ * Python 2.6 or later(to generate config.json)
+   * patches welcome to generate config.json by hand
+
+Build Dependendies from git clone
+---------------------------------
+
+Distribution tar ball(not yet) have a compiled source.
+If you want to build from git, nededs more softwares.
+
+  * re2c
+
+How to Build
+------------
+
+### Install re2
+
+    hg clone https://re2.googlecode.com/hg re2
+    cd re2
+    sudo make install
+
+### Install deps on OSX
+
+    brew install re2c icu4c scons boost cmake
+    brew link icu4c
+
+### Install deps on ubuntu
+
+    sudo aptitude install libboost1.48-all-dev re2c libcurl4-dev libicu-dev cmake clang
+
+### Build
+
+    git clone git://github.com/tokuhirom/tora.git
+    cd tora
+    git submodule init
+    git submodule update
+    cmake .
+    make
+    sudo make install
+
+
+
+Project Description:
+Tora! Tora! Tora!
+
+README:
+This is yet another programming language for general scripting.
+
+Platforms
+---------
+
+authors tested following parts.
+
+  * osx lion
+  * ubuntu linux latest
+  * windows
+
+Build Dependencies
+------------------
+
+ * gcc 4.4.3+ or clang++ 3.0+
+ * SConstruct
+ * Perl5
+ * libboost1.48-all-dev
+ * Python 2.6 or later(to generate config.json)
+   * patches welcome to generate config.json by hand
+
+Build Dependendies from git clone
+---------------------------------
+
+Distribution tar ball(not yet) have a compiled source.
+If you want to build from git, nededs more softwares.
+
+  * re2c
+
+How to Build
+------------
+
+### Install re2
+
+    hg clone https://re2.googlecode.com/hg re2
+    cd re2
+    sudo make install
+
+### Install deps on OSX
+
+    brew install re2c icu4c scons boost cmake
+    brew link icu4c
+
+### Install deps on ubuntu
+
+    sudo aptitude install libboost1.48-all-dev re2c libcurl4-dev libicu-dev cmake clang
+
+### Build
+
+    git clone git://github.com/tokuhirom/tora.git
+    cd tora
+    git submodule init
+    git submodule update
+    cmake .
+    make
+    sudo make install

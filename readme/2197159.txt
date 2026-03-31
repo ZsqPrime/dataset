@@ -1,0 +1,8 @@
+This script is not maintained, and probably doesn't work.
+
+
+Project Description:
+Django plugin for Vim
+
+README:
+This script is not maintained, and probably doesn't work.

@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+# storm-pubsub
+
+A simple spout for reading messages off of a Redis PubSub.

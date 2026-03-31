@@ -1,0 +1,12 @@
+An Arduino bassed word clock using the DS1307 rtc IC
+
+contact me through pmck91@gmail.com
+
+
+Project Description:
+An Arduino based word clock using the DS1307 real time clock IC
+
+README:
+An Arduino bassed word clock using the DS1307 rtc IC
+
+contact me through pmck91@gmail.com

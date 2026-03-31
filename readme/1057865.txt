@@ -1,0 +1,7 @@
+Java editor for FTA (Fault tree analysis)
+
+Project Description:
+None
+
+README:
+Java editor for FTA (Fault tree analysis)

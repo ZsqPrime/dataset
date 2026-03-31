@@ -1,0 +1,10 @@
+This script is now part of the
+[Github Enhancement Suite](http://github.com/skratchdot/github-enhancement-suite)
+
+
+Project Description:
+A user script to "linkify" the to/from branches on Pull Request pages.
+
+README:
+This script is now part of the
+[Github Enhancement Suite](http://github.com/skratchdot/github-enhancement-suite)

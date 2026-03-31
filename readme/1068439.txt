@@ -1,0 +1,33 @@
+OPENSESAME QUESTIONNAIRE PLUG-INS
+
+These plug-ins add questionnaire functionality to the OpenSesame experiment
+builder. Extract the plug-in folders to the plug-in folder of OpenSesame.
+
+MORE INFORMATION
+
+- OpenSesame website <http://www.cogsci.nl/opensesame>
+- Plug-in installation instructions <http://osdoc.cogsci.nl/plug-ins/plug-in-installation>
+- These plug-ins use a customized version of PGU <http://code.google.com/p/pgu/>
+
+LICENSE
+
+See the file COPYING
+
+Project Description:
+Questionnaire plug-ins for OpenSesame
+
+README:
+OPENSESAME QUESTIONNAIRE PLUG-INS
+
+These plug-ins add questionnaire functionality to the OpenSesame experiment
+builder. Extract the plug-in folders to the plug-in folder of OpenSesame.
+
+MORE INFORMATION
+
+- OpenSesame website <http://www.cogsci.nl/opensesame>
+- Plug-in installation instructions <http://osdoc.cogsci.nl/plug-ins/plug-in-installation>
+- These plug-ins use a customized version of PGU <http://code.google.com/p/pgu/>
+
+LICENSE
+
+See the file COPYING

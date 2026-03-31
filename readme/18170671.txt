@@ -1,0 +1,31 @@
+Project Description:
+Web based Kerberos password change tool
+
+README:
+KPassWeb
+
+**
+While in test mode, the old password is 'password', and the new password
+must be over four characters long, otherwise, the regular errors will be
+returned.
+**
+
+Introduction:
+-------------
+KPassWeb is a ajax/php tool for changing your Kerberos password online.
+
+Installation:
+-------------
+For installation requirements, please see the INSTALL file.
+
+
+Licensing:
+----------
+KPassWeb is licensed under version 3 of the GNU General Public License. See
+the included LICENSE file for more information.
+
+
+Contact:
+--------
+Any bugs, feature requests, comments, criticism or other communication can
+be sent to author Edward Murrell: edward@murrell.co.nz

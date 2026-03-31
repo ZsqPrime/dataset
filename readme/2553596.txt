@@ -1,0 +1,6 @@
+Project Description:
+Fetch book comment from dangdang.com and douban.com
+
+README:
+V0.1 20120229
+fetch book comment from douban.com and dangdang.com

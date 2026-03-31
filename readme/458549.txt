@@ -1,0 +1,6 @@
+
+
+Project Description:
+RPM-package for mplayer2
+
+README:

@@ -1,0 +1,8 @@
+Adventures in learning haskell.
+
+
+Project Description:
+
+
+README:
+Adventures in learning haskell.

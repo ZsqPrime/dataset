@@ -1,0 +1,36 @@
+Welcome to JS Wallet, the web-based secure password safe.
+
+JS Wallet has two components. First, the server-side rails app than
+handles user authentication, persistence of the encrypted data, and
+sharing of the encrypted data. This is build using Rails 3.10. Second,
+the browser-side app that decrypts and allows interaction with the
+password collections. This uses AngularJS.
+
+JS Wallet is available to the public (with no guarantees) at
+http://wallet.kdpeterson.net, running on Heroku. If you want to run JS
+Wallet on your own server, you should be able to do so just as you
+would any other Rails app.
+
+Significant omissions: the backend supports sharing of collections,
+but there is no mechanism within the app to manage this.
+
+
+Project Description:
+Password safe with client-side encryption / decryption, using AngularJS in the browser and Rails as a backend.
+
+README:
+Welcome to JS Wallet, the web-based secure password safe.
+
+JS Wallet has two components. First, the server-side rails app than
+handles user authentication, persistence of the encrypted data, and
+sharing of the encrypted data. This is build using Rails 3.10. Second,
+the browser-side app that decrypts and allows interaction with the
+password collections. This uses AngularJS.
+
+JS Wallet is available to the public (with no guarantees) at
+http://wallet.kdpeterson.net, running on Heroku. If you want to run JS
+Wallet on your own server, you should be able to do so just as you
+would any other Rails app.
+
+Significant omissions: the backend supports sharing of collections,
+but there is no mechanism within the app to manage this.

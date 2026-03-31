@@ -1,0 +1,130 @@
+= kete_trackable_items
+
+A Rails engine gem that works in conjunction with kete_gets_trollied to track where an item (with a corresponding physical archive) is physically located.
+
+== Usage
+
+For role based permissions to work properly when a logged out user tries to access tracking pages, you'll need to add the following to config/environment.rb after the 'AUTHORIZATION_MIXIN = "object roles"' line:
+
+LOGIN_REQUIRED_REDIRECTION = { :controller => 'account', :action => 'login' }
+
+You'll need to add the following to your application's config/initializers/mime_types.rb
+
+Mime::Type.register "application/vnd.ms-excel", :xls
+
+You'll also need to create a config file in your application that looks something like this under config/trackable_item_scopes.yml:
+
+topic:
+  prerequisite_extensions:
+    - "extend ExtendedContentHelpers"
+    - "extend ExtendedContentScopeHelpers"
+  
+  search_scopes:
+    always_within_scopes:
+      type_item: "{ :conditions => { :topic_type_id => 8 } }"
+    text_searches:
+      - series_no_is: "lambda { |pattern|
+      { :conditions => field_condition_sql_for(pattern, 109, true) }
+      }"
+      - box_no_is: "lambda { |pattern|
+      { :conditions => field_condition_sql_for(pattern, 112, true) }
+      }"
+      - item_no_is: "lambda { |pattern|
+      { :conditions => field_condition_sql_for(pattern, 110, true) }
+      }"
+
+# use these instead of _is text_searches if want to pattern matching
+# that matches right hand side truncation
+# i.e. user search input of "10" will match "100" as well as "10", "101", etc.
+#       - series_no_matches: "lambda { |pattern|
+#      { :conditions => field_condition_sql_for(pattern, 109) }
+#      }"
+#      - box_no_matches: "lambda { |pattern|
+#      { :conditions => field_condition_sql_for(pattern, 112) }
+#      }"
+#      - item_no_matches: "lambda { |pattern|
+#       { :conditions => field_condition_sql_for(pattern, 110) }
+#      }"
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Open an issue for feature or bug fix.
+* Create a corresponding branch for the issue, similar to the way working for branches is outlined here (particularly in regards to naming of branch): http://kete.net.nz/documentation/topics/show/326-working-with-git-branches-on-github
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2012 Horowhenua Library Trust. See LICENSE for details.
+
+
+Project Description:
+A Rails engine gem that works in conjunction with kete_gets_trollied to track where an item (with a corresponding physical archive) is physically located.
+
+README:
+= kete_trackable_items
+
+A Rails engine gem that works in conjunction with kete_gets_trollied to track where an item (with a corresponding physical archive) is physically located.
+
+== Usage
+
+For role based permissions to work properly when a logged out user tries to access tracking pages, you'll need to add the following to config/environment.rb after the 'AUTHORIZATION_MIXIN = "object roles"' line:
+
+LOGIN_REQUIRED_REDIRECTION = { :controller => 'account', :action => 'login' }
+
+You'll need to add the following to your application's config/initializers/mime_types.rb
+
+Mime::Type.register "application/vnd.ms-excel", :xls
+
+You'll also need to create a config file in your application that looks something like this under config/trackable_item_scopes.yml:
+
+topic:
+  prerequisite_extensions:
+    - "extend ExtendedContentHelpers"
+    - "extend ExtendedContentScopeHelpers"
+  
+  search_scopes:
+    always_within_scopes:
+      type_item: "{ :conditions => { :topic_type_id => 8 } }"
+    text_searches:
+      - series_no_is: "lambda { |pattern|
+      { :conditions => field_condition_sql_for(pattern, 109, true) }
+      }"
+      - box_no_is: "lambda { |pattern|
+      { :conditions => field_condition_sql_for(pattern, 112, true) }
+      }"
+      - item_no_is: "lambda { |pattern|
+      { :conditions => field_condition_sql_for(pattern, 110, true) }
+      }"
+
+# use these instead of _is text_searches if want to pattern matching
+# that matches right hand side truncation
+# i.e. user search input of "10" will match "100" as well as "10", "101", etc.
+#       - series_no_matches: "lambda { |pattern|
+#      { :conditions => field_condition_sql_for(pattern, 109) }
+#      }"
+#      - box_no_matches: "lambda { |pattern|
+#      { :conditions => field_condition_sql_for(pattern, 112) }
+#      }"
+#      - item_no_matches: "lambda { |pattern|
+#       { :conditions => field_condition_sql_for(pattern, 110) }
+#      }"
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Open an issue for feature or bug fix.
+* Create a corresponding branch for the issue, similar to the way working for branches is outlined here (particularly in regards to naming of branch): http://kete.net.nz/documentation/topics/show/326-working-with-git-branches-on-github
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2012 Horowhenua Library Trust. See LICENSE for details.

@@ -1,0 +1,20 @@
+machine curated items
+
+Installation instructions
+=========================
+
+	$ pip install -r requirements.txt
+	$ python app.py
+
+
+Project Description:
+mailing list of machine curated interesting things in bay area
+
+README:
+machine curated items
+
+Installation instructions
+=========================
+
+	$ pip install -r requirements.txt
+	$ python app.py

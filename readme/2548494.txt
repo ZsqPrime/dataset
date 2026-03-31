@@ -1,0 +1,17 @@
+Project Description:
+Tools to assist in password hash checking.
+
+README:
+Collection of simple hand-written tools to assist in password
+hash checking (mainly John the Ripper and oclHashcat-plus).
+
+* gen_brute - Generate brute force masks for use with oclHashcat-plus.
+* pwgen_stat - Generate masks for use with oclHashcat-plus based on list of passwords.
+* move_mouse - Randomly move mouse pointer around to prevent screen to go blank. This prevents GPU to go into powersave mode and decrease hashcat performarce.
+
+EXAMPLES
+
+./gen_brute | awk '{print "./oclHashcat-plus32.bin --gpu-watchdog=89 -a 3 example.hash " $1}' > brute_lud_8.sh
+
+echo 'OCL="./oclHashcat-plus32.bin -m 0 -a 3 example.hash"' > rockyou_8.sh
+./pwgen_stat rockyou.txt | sort +1nr -2 | awk '{printf "$OCL ", $1}' >> rockyou_8.sh

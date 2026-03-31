@@ -1,0 +1,162 @@
+NOTE: This package is obsolete.  Try http://zil.ipipan.waw.pl/Concraft instead.
+
+Morpho-syntactic tagger for Polish based on Conditional Random Fields.
+
+
+ABOUT
+
+Morpho-syntactic tagger for Polish based on Conditional Random Fields.  For now, it lacks morphological analysis phase and provides only disambiguation functionality. 
+The tagger has been developed with Morfeusz tagset in mind (see http://sgjp.pl/morfeusz/), but it can be used with other, similar tagsets.
+
+
+COMPILATION
+
+To compile the program, the Glasgow Haskell Compiler (GHC) is required.  The easiest way to get the compiler is to download the latest stable release of Haskell Platform (http://hackage.haskell.org/platform/).  Any other Haskell library, which is not distributed with Haskell Platform and is needed to compile the tagger, can be downloaded using the cabal tool (which is bundled with the Platform).  Use the following command to compile 'tagger' program from within the root directory:
+
+$ ghc -O2 --make -isrc -o tagger -outputdir tmp Main
+
+Intermediate files will be put into 'tmp' directory.  To compile with concurrency support:
+
+$ ghc -O2 --make -isrc -o tagger -outputdir tmp -rtsopts -threaded Main
+
+
+CONFIGURATION
+
+Configuration consists of two files:
+* Tagset configuration,
+* Observations schema.
+Exemplary configuration -- tagset configuration consistent with NKJP and simple schema -- can be found in the 'config' directory.  More about configuration can be found in the manual.
+
+
+DATA PREPARATION
+
+Tagger works with data in LINC format, which is described in the manual with more details.  You can convert TEI NKJP corpus to a data set in LINC format using 'utils/tei2linc/tei2linc.py' script.  To use this script (and others in 'utils' directory), you will need python (version 2.7.* is required or 2.6.* with manually installed argparse library).  The data set should also be preprocessed with the 'utils/lincOpts/flatten.py' script, which removes additional, unnecessary from the tagger's point of view, information.
+
+$ mkdir data
+$ python utils/tei2linc/tei2linc.py NKJP-PodkorpusMilionowy-1.0.tgz -b > data/orig.linc
+$ python utils/lincOpts/flatten.py data/orig.linc > data/flat.linc
+
+Then you can manually or automatically divide the data set into training 'train.linc' part and evaluation 'eval.linc' part.  Use the 'break.py' script to divide a data file into a directory of separate files (this step is necessary to train a model).  If you want to perform cross-validation only, you don't have to divide the dataset into training and evaluation part, but the data still has to be preprocessed with the 'break.py' script.  
+
+$ python utils/lincOpts/break.py data/train.linc data/train
+$ python utils/lincOpts/break.py data/eval.linc data/eval
+
+
+TRAINING
+
+Once you have prepared data in accordance with the previous section, you can train the CRF model.  If you wish, you can modify schema ('config/schema.cfg') to use another set of observation types.  See the manual to get more information about observation schema.
+
+$ ./tagger train config/nkjp-tagset.cfg config/schema.cfg data/train -e data/eval -d -o data/model.crf
+
+If the tool has been compiled with concurrency support and you want to run it on multiple (say four) cores:
+
+$ ./tagger train config/nkjp-tagset.cfg config/schema.cfg data/train -e data/eval -d -o data/model.crf -w 4 +RTS -N4
+
+
+DISAMBIGUATION
+
+You can disambiguate new data in LINC format using the created CRF model:
+
+$ ./tagger tag data/model.crf < data/eval.linc > data/eval-tagged.linc
+
+If you want to get label probabilities instead:
+
+$ ./tagger tag -p data/model.crf < data/eval.linc > data/eval-probs.linc
+
+
+DOCUMENTATION
+
+Manual and algorithm description can be found in the 'docs/manual.pdf' file.  It is written in Polish.  In can be compiled using the following command:
+
+$ pdflatex manual.tex
+
+from within the 'docs' directory.
+
+
+AUTHORS
+
+This tool has been written by Jakub Waszczuk, waszczuk.kuba@gmail.com.
+
+
+Project Description:
+Morpho-syntactic tagger for Polish based on the Conditional Random Fields.
+
+README:
+NOTE: This package is obsolete.  Try http://zil.ipipan.waw.pl/Concraft instead.
+
+Morpho-syntactic tagger for Polish based on Conditional Random Fields.
+
+
+ABOUT
+
+Morpho-syntactic tagger for Polish based on Conditional Random Fields.  For now, it lacks morphological analysis phase and provides only disambiguation functionality. 
+The tagger has been developed with Morfeusz tagset in mind (see http://sgjp.pl/morfeusz/), but it can be used with other, similar tagsets.
+
+
+COMPILATION
+
+To compile the program, the Glasgow Haskell Compiler (GHC) is required.  The easiest way to get the compiler is to download the latest stable release of Haskell Platform (http://hackage.haskell.org/platform/).  Any other Haskell library, which is not distributed with Haskell Platform and is needed to compile the tagger, can be downloaded using the cabal tool (which is bundled with the Platform).  Use the following command to compile 'tagger' program from within the root directory:
+
+$ ghc -O2 --make -isrc -o tagger -outputdir tmp Main
+
+Intermediate files will be put into 'tmp' directory.  To compile with concurrency support:
+
+$ ghc -O2 --make -isrc -o tagger -outputdir tmp -rtsopts -threaded Main
+
+
+CONFIGURATION
+
+Configuration consists of two files:
+* Tagset configuration,
+* Observations schema.
+Exemplary configuration -- tagset configuration consistent with NKJP and simple schema -- can be found in the 'config' directory.  More about configuration can be found in the manual.
+
+
+DATA PREPARATION
+
+Tagger works with data in LINC format, which is described in the manual with more details.  You can convert TEI NKJP corpus to a data set in LINC format using 'utils/tei2linc/tei2linc.py' script.  To use this script (and others in 'utils' directory), you will need python (version 2.7.* is required or 2.6.* with manually installed argparse library).  The data set should also be preprocessed with the 'utils/lincOpts/flatten.py' script, which removes additional, unnecessary from the tagger's point of view, information.
+
+$ mkdir data
+$ python utils/tei2linc/tei2linc.py NKJP-PodkorpusMilionowy-1.0.tgz -b > data/orig.linc
+$ python utils/lincOpts/flatten.py data/orig.linc > data/flat.linc
+
+Then you can manually or automatically divide the data set into training 'train.linc' part and evaluation 'eval.linc' part.  Use the 'break.py' script to divide a data file into a directory of separate files (this step is necessary to train a model).  If you want to perform cross-validation only, you don't have to divide the dataset into training and evaluation part, but the data still has to be preprocessed with the 'break.py' script.  
+
+$ python utils/lincOpts/break.py data/train.linc data/train
+$ python utils/lincOpts/break.py data/eval.linc data/eval
+
+
+TRAINING
+
+Once you have prepared data in accordance with the previous section, you can train the CRF model.  If you wish, you can modify schema ('config/schema.cfg') to use another set of observation types.  See the manual to get more information about observation schema.
+
+$ ./tagger train config/nkjp-tagset.cfg config/schema.cfg data/train -e data/eval -d -o data/model.crf
+
+If the tool has been compiled with concurrency support and you want to run it on multiple (say four) cores:
+
+$ ./tagger train config/nkjp-tagset.cfg config/schema.cfg data/train -e data/eval -d -o data/model.crf -w 4 +RTS -N4
+
+
+DISAMBIGUATION
+
+You can disambiguate new data in LINC format using the created CRF model:
+
+$ ./tagger tag data/model.crf < data/eval.linc > data/eval-tagged.linc
+
+If you want to get label probabilities instead:
+
+$ ./tagger tag -p data/model.crf < data/eval.linc > data/eval-probs.linc
+
+
+DOCUMENTATION
+
+Manual and algorithm description can be found in the 'docs/manual.pdf' file.  It is written in Polish.  In can be compiled using the following command:
+
+$ pdflatex manual.tex
+
+from within the 'docs' directory.
+
+
+AUTHORS
+
+This tool has been written by Jakub Waszczuk, waszczuk.kuba@gmail.com.

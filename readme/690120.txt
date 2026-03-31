@@ -1,0 +1,15 @@
+Project Description:
+drop-in to abstract ui to select multiple posts and put ids into an input field
+
+README:
+## USE ##
+* include() the post-selection-ui.php
+* echo post_selection_ui() like below:
+
+```
+<?php echo post_selection_ui('input_name', array(
+	'post_type' => 'post',
+	'selected' => $current_selected_ids,
+	'limit' => $max_posts_to_select));
+?>
+```

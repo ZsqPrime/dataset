@@ -1,0 +1,7 @@
+Project Description:
+rails FAQ engine 
+
+README:
+= Dafaq
+
+This project rocks and uses MIT-LICENSE.

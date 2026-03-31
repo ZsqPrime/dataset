@@ -1,0 +1,208 @@
+= Indicator
+Display activity with ASCII spinners and progress indicators.
+
+= Description
+Sometimes you need to display activity on the text console to inform the user that the
+program is actually doing something. Be funny with a lot predefined sets or make you own
+widget to display an animation text during a long-running process in your console app.
+
+
+=Installation
+==From the command line.
+  gem install indicator
+
+==Using Gemfile.
+
+1 Add to your application Gemfile
+  gem 'indicator'
+
+2 Type
+  bundle install
+
+=Usage
+==Animated
+
+  Indicator::spin do
+    10.times do
+      sleep 0.5
+    end
+  end
+
+==On demand update
+
+  Indicator::spin(:ondemand => true) do |spinner|
+    10.times do
+      spinner.spinning
+      sleep 0.2
+    end
+  end
+
+==Manual control
+
+  spinner = Indicator.spinner
+  10.times do
+    spinner.spinning
+    sleep 0.2
+  end
+  spinner.clean
+
+==Predefined sets
+  Indicator::spin :set => :p do
+    10.times do
+      sleep 0.5
+    end
+  end
+
+Available sets: :x :< :> :V :dots :bars :p :bqpd :- :o :O
+
+UNICODE extra sets: :arrows :box :braile
+
+==Custom set
+  Indicator::spin :frames => %w{ * + } do
+    10.times do
+      sleep 0.5
+    end
+  end
+
+=Advanced usage
+===Using count
+Use int method to increment percent
+
+  Indicator::spin :count => 20 do |spin|
+    10.times do
+      spin.inc 2
+      sleep 0.2
+    end
+  end
+
+Default increment is 1.
+
+===Using count, pre-text and post-text
+  Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10, :post => ' in progress' do |spin|
+    10.times do
+      spin.inc
+      sleep 0.2
+    end
+    spin.clear
+  end
+
+:pre_percent and :post_percent is also available.
+
+===Change post-text
+  Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10 do |spin|
+    10.times do |i|
+      spin.inc
+      spin.post= " in progress #{i} of 10"
+      sleep 0.2
+    end
+  end
+
+= License
+Released under the MIT license: http://www.opensource.org/licenses/MIT
+
+
+Project Description:
+
+
+README:
+= Indicator
+Display activity with ASCII spinners and progress indicators.
+
+= Description
+Sometimes you need to display activity on the text console to inform the user that the
+program is actually doing something. Be funny with a lot predefined sets or make you own
+widget to display an animation text during a long-running process in your console app.
+
+
+=Installation
+==From the command line.
+  gem install indicator
+
+==Using Gemfile.
+
+1 Add to your application Gemfile
+  gem 'indicator'
+
+2 Type
+  bundle install
+
+=Usage
+==Animated
+
+  Indicator::spin do
+    10.times do
+      sleep 0.5
+    end
+  end
+
+==On demand update
+
+  Indicator::spin(:ondemand => true) do |spinner|
+    10.times do
+      spinner.spinning
+      sleep 0.2
+    end
+  end
+
+==Manual control
+
+  spinner = Indicator.spinner
+  10.times do
+    spinner.spinning
+    sleep 0.2
+  end
+  spinner.clean
+
+==Predefined sets
+  Indicator::spin :set => :p do
+    10.times do
+      sleep 0.5
+    end
+  end
+
+Available sets: :x :< :> :V :dots :bars :p :bqpd :- :o :O
+
+UNICODE extra sets: :arrows :box :braile
+
+==Custom set
+  Indicator::spin :frames => %w{ * + } do
+    10.times do
+      sleep 0.5
+    end
+  end
+
+=Advanced usage
+===Using count
+Use int method to increment percent
+
+  Indicator::spin :count => 20 do |spin|
+    10.times do
+      spin.inc 2
+      sleep 0.2
+    end
+  end
+
+Default increment is 1.
+
+===Using count, pre-text and post-text
+  Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10, :post => ' in progress' do |spin|
+    10.times do
+      spin.inc
+      sleep 0.2
+    end
+    spin.clear
+  end
+
+:pre_percent and :post_percent is also available.
+
+===Change post-text
+  Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10 do |spin|
+    10.times do |i|
+      spin.inc
+      spin.post= " in progress #{i} of 10"
+      sleep 0.2
+    end
+  end
+
+= License
+Released under the MIT license: http://www.opensource.org/licenses/MIT

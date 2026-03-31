@@ -1,0 +1,4 @@
+Project Description:
+Browser extension part of the Kinect@Home project
+
+README:

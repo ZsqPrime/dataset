@@ -1,0 +1,5 @@
+Project Description:
+Neume searching algorithms for MEI files
+
+README:
+mvn assembly:single

@@ -1,0 +1,5 @@
+Project Description:
+A prolog-based job scheduler
+
+README:
+quoll is a prolog-based job scheduler

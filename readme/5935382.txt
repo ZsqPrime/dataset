@@ -1,0 +1,13 @@
+Project Description:
+vim configuration
+
+README:
+Matthew O'Meara's configuration information
+
+To use:
+
+  git clone https://github.com/momeara/momeara-vim.git
+  cd momeara-vim
+  make setup_emacs
+  ln -s $(pwd)/.vimrc ~/
+  ln -s $(pwd)/.vim ~/

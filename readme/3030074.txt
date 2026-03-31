@@ -1,0 +1,9 @@
+Project Description:
+rippit is a no-nonsense CD ripper.
+
+README:
+rippit is a no-nonsense CD ripper.
+
+To build, just run cmake /path/to/sources && make
+
+afterwards, just cd to the directory you want the output saved in, and rippit!

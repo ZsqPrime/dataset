@@ -1,0 +1,8 @@
+New location: https://github.com/tig/mcec
+
+
+Project Description:
+MCE Controller lets you control a Windows HTPC (or any PC) over the network
+
+README:
+New location: https://github.com/tig/mcec

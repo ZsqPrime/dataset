@@ -1,0 +1,43 @@
+Project Description:
+download and upload of ftp. Using libcurl. C++
+
+README:
+Simple used libcurl.
+
+
+!!!Do działania jest potrzebna biblioteka libcurl dostępna ze strony curl.!!!
+Wkrótce zrobię porządek.
+
+1)README POLISH
+2)README ENGLISH.
+
+1)
+
+
+b) Założenia(Cele):
+
+-Stworzenie ładnie opisanej klasy/funkcji która by zajmowała się tylko pobieraniem/wysyłaniem pliku na/z ftp, za pomocą libcurl.
+-Przekazywanymi argumentami by była ścieżka źródłowa i docelowa. Tyle chyba by wystarczyło. No może jeszcze nazwa pod którą zapis.
+-Opisanie co i jak działa.
+
+
+
+d) Źródła i inne:
+
+-http://curl.haxx.se/libcurl/c/ftpupload.html
+-http://curl.haxx.se/libcurl/c/ftpget.html
+-http://curl.haxx.se/libcurl/
+-http://forum.warsztat.gd/index.php?topic=17358.0
+
+e)Uwagi.
+
+Korzystałem z przykladów i tutoriala. Jak coś trzeba zamieścić z tego powodu iż korzystałem z przykładów dajcie znać.
+
+2) English
+
+ Sources and others:
+
+-http://curl.haxx.se/libcurl/c/ftpupload.html
+-http://curl.haxx.se/libcurl/c/ftpget.html
+-http://curl.haxx.se/libcurl/
+-http://forum.warsztat.gd/index.php?topic=17358.0

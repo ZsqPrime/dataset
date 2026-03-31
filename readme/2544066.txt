@@ -1,0 +1,7 @@
+Project Description:
+All JS Plug-ins
+
+README:
+All js plugins or libraries.
+
+Collection of jQuery plugins

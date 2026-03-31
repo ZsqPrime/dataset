@@ -1,0 +1,5 @@
+Project Description:
+Yet another implementation of a notify system in Mootools
+
+README:
+ZweNotify

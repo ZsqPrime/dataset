@@ -1,0 +1,8 @@
+Project Description:
+Package dns implements the Domain Name System Protocol as defined in RFC 883.
+
+README:
+godns
+-----
+
+Package dns implements the Domain Name System Protocol as defined in RFC 883.

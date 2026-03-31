@@ -1,0 +1,6 @@
+
+
+Project Description:
+A new ban plugin for the bukkit api
+
+README:

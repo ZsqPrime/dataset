@@ -1,0 +1,35 @@
+
+Rhea Font Analyzer
+
+README
+
+**************************************************
+
+# Installation
+For Ubuntu:
+```shell
+sudo apt-get install libopencv-core-dev libopencv-highgui-dev libopencv-objdetect-dev liblpsolve55-dev libopencv-ml-dev
+```
+
+Don't even think about trying to make sense of this thing. It's 2017; better start over in Python instead.
+
+
+
+Project Description:
+None
+
+README:
+
+Rhea Font Analyzer
+
+README
+
+**************************************************
+
+# Installation
+For Ubuntu:
+```shell
+sudo apt-get install libopencv-core-dev libopencv-highgui-dev libopencv-objdetect-dev liblpsolve55-dev libopencv-ml-dev
+```
+
+Don't even think about trying to make sense of this thing. It's 2017; better start over in Python instead.

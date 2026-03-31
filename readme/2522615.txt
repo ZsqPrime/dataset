@@ -1,0 +1,151 @@
+Project Description:
+
+
+README:
+#############################################################################
+
+SUBI README
+  These notes are for developers. Users should visit our online documentation
+
+    http://janus.northwestern.edu/subi
+
+ABOUT SUBI
+  subi is made to make it easy to digitize a radiobiology archive and search
+  through the results.  Usage instructions are baked into the application.
+  This README shows how to update and test subi.
+
+Copyright
+  This work is licensed under the Creative Commons Attribution 3.0 Unported 
+  License. To view a copy of this license, visit 
+  http://creativecommons.org/licenses/by/3.0/ or send a letter to 
+  Creative Commons, 444 Castro Street, Suite 900, 
+  Mountain View, California, 94041, USA.
+
+  *(this basically means anyone can use this work for any purpose)
+
+Authors
+  Benjamin Haley (bmh) <benjamin.haley@gmail.com>
+  Dave Paunesku (dp) <daveponet@gmail.com>
+  Dec 2011 - March 2012
+
+
+#############################################################################
+
+Table of Contents
+  (* indicates not written)
+
+  1. Basic installation
+
+  2. Run from script
+
+  3. Build subi app
+
+
+#############################################################################
+
+Basic Installation
+
+  Installation instructions are useful for all users so they are kept online
+  at:
+
+    http://janus.northwestern.edu/subi
+
+  We will not repeat them here to avoid the maintenance overhead.
+
+#############################################################################
+
+Build 
+  If you are a developer you might want to build the working app after
+  changing code.  The following should help.
+
+  Dependencies
+    You will need the following tools to work on subi.
+
+    Python 2.7
+    setuptools          # for any build
+    py2exe              # to build windows exe
+    py2app              # to build mac app
+    git                 # to work with files
+    a computer
+      with no server    # an existing server disrupts our temp server
+      with admin access # to setup a server we need admin access
+
+  Build and Run Subi
+    Follow the following steps to build the subi app.
+
+    0. (optional) Update setup.py
+       If you have changed code you may need to update this file
+       open setup.py in a text browser and follow its code.
+
+    1. Start in subi directory
+       e.g. cd subi/
+
+    2. Remove previous build lines
+       rm -rf build/ dist/
+
+    3. Build the app
+
+       (for mac)
+       python setup.py py2app     # Add -A to use source files
+
+       (for windows)
+       python setup.py py2exe     # Add -A to use source files
+
+    4. Launch subi server
+
+       (for mac)
+       sudo dist/Subi.app/Contents/MacOS/Subi
+
+       (for windows)
+       dist/subi.exe
+
+#############################################################################
+
+Tests
+
+  Automated tests
+    A suite of tests is baked into the db layer.  These will kill the
+    existing database.  They can be run by calling the script directly
+    with python.
+
+      python scripts/subi_db.py
+
+  Manual tests
+    Testing the UI is a manual process that should be performed cross
+    browser.  Here is a list of the tests we like to run and their most
+    recent results.
+
+    last win update: 6 March 2012 bmh
+    last mac update: 27 January 2012 bmh
+
+    Key:
+      . = passed
+      x = failed
+      c = chrome
+      f = firefox
+      e = internet explorer
+      s = safari
+
+                                Mac           Windows
+                                c   s   f     c   f   e
+    russian translation         ?   ?   ?     .   .   .
+    Open about link             .   .   .     .   .   .
+    Home clears search          .   .   .     .   .   .
+    Find all works              .   .   .     .   .   .
+    Next/prev work              .   .   .     .   .   .
+    Download unicode csv        .   .   .     .   .   .
+      * only excel compatible
+
+    Change unicode feild name   .   .   .     .   .   x
+    Change unicode feild value  .   .   .     .   .   x
+    Add unicode field           .   .   .     .   .   x
+    Delete unicode field        .   .   .     .   .   x
+    Cancle field delete         .   .   .     .   .   x
+    Create new from 2nd result  .   .   .     .   .   x
+    Copy from 2nd result        .   .   .     .   .   x
+    Autocomplete unicode        .   .   .     .   .   ?
+    Delete animal               .   .   .     .   .   x
+    Cancel animal delete        .   .   .     .   .   ?
+    Backup and restore          .   .   .     .   .   .
+
+#############################################################################

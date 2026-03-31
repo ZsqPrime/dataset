@@ -1,0 +1,25 @@
+Infographic.ly connects with the Pocket (formerly read it later) API, takes the articles that users save and organizes the content in a visually appealing way.  This is a work in progress and the big picture vision is to help people makes sense of all the different articles they save on the web by parsing through each saved article, retrieving relevant content, and then displaying it as an infographic.  
+
+Current functionality includes:
+
+1. Successful implementation with Pocket (formerly read it later) API to display user article lists.
+2. User authentication and authorization (from scratch)
+3. Article Tags
+4. Article Tag Cloud
+5. Article Search functionality
+
+
+
+Project Description:
+Version 2 started over built from scratch
+
+README:
+Infographic.ly connects with the Pocket (formerly read it later) API, takes the articles that users save and organizes the content in a visually appealing way.  This is a work in progress and the big picture vision is to help people makes sense of all the different articles they save on the web by parsing through each saved article, retrieving relevant content, and then displaying it as an infographic.  
+
+Current functionality includes:
+
+1. Successful implementation with Pocket (formerly read it later) API to display user article lists.
+2. User authentication and authorization (from scratch)
+3. Article Tags
+4. Article Tag Cloud
+5. Article Search functionality

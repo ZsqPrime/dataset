@@ -1,0 +1,6 @@
+Project Description:
+This class can be used to get country of a given IP address looking up in a MySQL database.  It takes a given IP address and looks up a MySQL database to determine the geographic location of the P address.  The class returns the IP address country name an
+
+README:
+ip2country class
+http://z15.pl

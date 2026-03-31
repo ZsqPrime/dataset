@@ -1,0 +1,5 @@
+Project Description:
+An automated test environment inspired by TTCN-3 and Python
+
+README:
+For a quick start, please see INSTALL.

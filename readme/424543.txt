@@ -1,0 +1,5 @@
+Project Description:
+Silverlight 4 application with remote control support.
+
+README:
+This is a silverlight 4 application with remote control support. The application uses native extensions for silverlight to listen to windows messages and respond to them. It also shows how to add Windows 7 specific features such as taskbar buttons and progress.

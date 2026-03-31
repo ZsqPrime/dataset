@@ -1,0 +1,114 @@
+#+TITLE:     hackrec
+#+AUTHOR:    Lang Martin
+#+EMAIL:     lang.martin@gmail.com
+#+ARCHIVE:   doc/hackrec-1.org::
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+COLUMNS:   %20ITEM(Class) %12SCHEDULED(Date)
+
++ doc/hackrec-1.org :: Previous class notes (often updated after class
+     with more detail on the exercises).
++ in-class/*.scm :: Scheme files from our class discussions.
++ student/*/*.scm :: Scheme files from various student's work. I've
+     put my own homework responses in there as well.
+
+* Intermission and Review
+
+Simply Scheme
+
+* 15 SICP 2.2.2
+SCHEDULED: <2012-04-30 Mon>
+
+** Section 2.2.2
+*** Exercise 2.24
+
+We discussed this in class #14, and there are some notes in [[file:in-class/14.scm][14.scm]].
+We'll start with it again, though. Try tracing through a couple of
+lists by writing out the cons cells. If you can see a sublist, it's in
+the =car= of cell.
+
+*** Exercise 2.25
+*** Exercise 2.26
+*** Exercise 2.27
+
+Think recursive!
+
+*** Exercise 2.28
+
+This will be pretty similar to the last exercise.
+
+*** Exercise 2.29
+*** Exercise 2.30
+*** Exercise 2.31
+*** Exercise 2.32
+
+* Links
+
+See [[file:doc/hackrec-1.org][The Schedule]] for old classes and notes on the exercises.
+
++ SICP :: http://mitpress.mit.edu/sicp/full-text/book/book.html
++ SICP Solutions :: http://community.schemewiki.org/?sicp-solutions
++ CS61A :: http://webcast.berkeley.edu/playlist#c,s,Spring_2008,6879A8466C44A5D5
+
+A couple of comments/propaganda about CS61A (you don't need to read these):
+http://www.cs.berkeley.edu/~bh/61a.html
+http://wla.berkeley.edu/~cs61a/su11/CS61A_General_Info_Su2011.pdf
+
+
+Project Description:
+Code snippets for the HackRec SICP Class
+
+README:
+#+TITLE:     hackrec
+#+AUTHOR:    Lang Martin
+#+EMAIL:     lang.martin@gmail.com
+#+ARCHIVE:   doc/hackrec-1.org::
+#+OPTIONS:   H:3 num:nil toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+COLUMNS:   %20ITEM(Class) %12SCHEDULED(Date)
+
++ doc/hackrec-1.org :: Previous class notes (often updated after class
+     with more detail on the exercises).
++ in-class/*.scm :: Scheme files from our class discussions.
++ student/*/*.scm :: Scheme files from various student's work. I've
+     put my own homework responses in there as well.
+
+* Intermission and Review
+
+Simply Scheme
+
+* 15 SICP 2.2.2
+SCHEDULED: <2012-04-30 Mon>
+
+** Section 2.2.2
+*** Exercise 2.24
+
+We discussed this in class #14, and there are some notes in [[file:in-class/14.scm][14.scm]].
+We'll start with it again, though. Try tracing through a couple of
+lists by writing out the cons cells. If you can see a sublist, it's in
+the =car= of cell.
+
+*** Exercise 2.25
+*** Exercise 2.26
+*** Exercise 2.27
+
+Think recursive!
+
+*** Exercise 2.28
+
+This will be pretty similar to the last exercise.
+
+*** Exercise 2.29
+*** Exercise 2.30
+*** Exercise 2.31
+*** Exercise 2.32
+
+* Links
+
+See [[file:doc/hackrec-1.org][The Schedule]] for old classes and notes on the exercises.
+
++ SICP :: http://mitpress.mit.edu/sicp/full-text/book/book.html
++ SICP Solutions :: http://community.schemewiki.org/?sicp-solutions
++ CS61A :: http://webcast.berkeley.edu/playlist#c,s,Spring_2008,6879A8466C44A5D5
+
+A couple of comments/propaganda about CS61A (you don't need to read these):
+http://www.cs.berkeley.edu/~bh/61a.html
+http://wla.berkeley.edu/~cs61a/su11/CS61A_General_Info_Su2011.pdf

@@ -1,0 +1,36 @@
+Project Description:
+A tiny javascript page that is using the xkcd json API to find comics referring to cats.
+
+README:
+xkcd cat finder
+===============
+A tiny javascript page that searches xkcd for words referring to cats.
+It uses xkcds json api to get data via jquery getJSON httpRequests.
+
+It will browse through all xkcd comics from 1 to the latest and search
+for the words "cat", "cats", "kitten" and "kittens".
+
+It's a small piece of code that I just hacked for fun in < 1h.
+
+===============
+usage
+===============
+start chrome from comandline using
+
+chromium-browser --disable-web-security
+
+or
+
+google-chrome --disable-web-security
+
+This is necessary to allow chrome to get json files from 3rd party origins.
+I'm looking for a workaround.
+I didn't test it in other browsers, yet.
+
+
+===============
+TODO
+===============
+New versions might work in other browsers than chrome.
+A new version could draw a canvas graph,
+displaying the usage of cats in a timeline.

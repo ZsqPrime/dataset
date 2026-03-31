@@ -1,0 +1,9 @@
+Project Description:
+Track time spent on projects
+
+README:
+Track time spent on projects.
+
+Platform: Qt (Unix, Windows, Linux)
+
+Build: Qt Creator project.

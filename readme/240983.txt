@@ -1,0 +1,7 @@
+Mudbot I_Mapper for Aetolia.
+
+Project Description:
+None
+
+README:
+Mudbot I_Mapper for Aetolia.

@@ -1,0 +1,8 @@
+CakePHP2.0 SchemaDiffShell
+
+
+Project Description:
+None
+
+README:
+CakePHP2.0 SchemaDiffShell

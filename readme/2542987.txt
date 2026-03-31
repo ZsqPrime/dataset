@@ -1,0 +1,4 @@
+Project Description:
+An experiment in using BDD to implement a black jack console game in Ruby, using Cucumber and RSpec
+
+README:

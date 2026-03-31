@@ -1,0 +1,7 @@
+Project Description:
+Like wikipedia, for exercises. For fitness professionals and the like to create programs.
+
+README:
+Nothing much to report right now.
+
+This will be a system where people can put up exercises, generate programs based on exercises.

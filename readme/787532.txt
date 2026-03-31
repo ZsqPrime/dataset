@@ -1,0 +1,11 @@
+#README
+
+Detta arkivet underhålls inte längre. Se https://github.com/victorbjelkholm/Fullback_V2/ istället.
+
+Project Description:
+Skriptet för dig som önskar att Flashback var så mycket mera
+
+README:
+#README
+
+Detta arkivet underhålls inte längre. Se https://github.com/victorbjelkholm/Fullback_V2/ istället.

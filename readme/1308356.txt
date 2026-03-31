@@ -1,0 +1,14 @@
+Junjo.js
+==========
+
+### now writing... ###
+
+
+Project Description:
+Yet Another Way of Flow Control (JavaScript)
+
+README:
+Junjo.js
+==========
+
+### now writing... ###

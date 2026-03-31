@@ -1,0 +1,254 @@
+= libcdb-ruby - Ruby bindings for CDB Constant Databases.
+
+== VERSION
+
+This documentation refers to libcdb-ruby version 0.2.1
+
+
+== DESCRIPTION
+
+The libcdb-ruby library provides Ruby bindings for the
+TinyCDB[http://www.corpit.ru/mjt/tinycdb.html] package for
+creating and reading {constant databases}[http://cr.yp.to/cdb.html].
+
+  require 'libcdb'
+
+  # creating
+  LibCDB::CDB.open('foo.cdb', 'w') { |cdb|
+    cdb['a'] = 'one'
+    cdb['b'] = '123'
+  }
+
+  # reading
+  LibCDB::CDB.open('foo.cdb') { |cdb|
+    cdb['a']  #=> "one"
+    cdb['b']  #=> "123"
+    cdb['c']  #=> nil
+  }
+
+  # hybrid
+  LibCDB::CDB.open('foo.cdb', 'w+') { |cdb|
+    cdb['a'] = 'one'
+    cdb['b'] = '123'
+
+    cdb['a']  #=> "one"
+    cdb['b']  #=> "123"
+    cdb['c']  #=> nil
+
+    # database is truncated whenever
+    # a new writer is opened:
+    cdb['a'] = 'two'
+    cdb['c'] = 'xyz'
+
+    cdb['a']  #=> "two"
+    cdb['b']  #=> nil
+    cdb['c']  #=> "xyz"
+  }
+
+  # update existing database
+  LibCDB::CDB.open('foo.cdb', 'r+') { |cdb|
+    # store existing records
+    cdb << cdb.to_h
+
+    # and add a new one
+    cdb['d'] = '42'
+
+    cdb['a']  #=> "two"
+    cdb['b']  #=> nil
+    cdb['c']  #=> "xyz"
+    cdb['d']  #=> "42"
+  }
+
+
+== PREREQUISITES
+
+* Ruby 1.9+ (see {below}[rdoc-label:label-SUPPORTED+PLATFORMS] for details)
+* TinyCDB[http://www.corpit.ru/mjt/tinycdb.html] headers (not needed when
+  installing the fat binary gem on Windows)
+
+  Debian/Ubuntu:: +libcdb-dev+
+  Fedora/SuSE::   +tinycdb-devel+
+  Gentoo::        +dev-db/tinycdb+
+
+
+== SUPPORTED PLATFORMS
+
+Linux::   MRI 1.9.3, 2.0 & 2.1 (Tested on 64-bit Ubuntu GNU/Linux
+          with 1.9.3p550, 2.0.0p594 and 2.1.5p273)
+Windows:: MRI 1.9.3 (Tested on 32-bit Windows XP with 1.9.3p194)
+
+
+== LINKS
+
+CDB::           http://cr.yp.to/cdb.html
+TinyCDB::       http://www.corpit.ru/mjt/tinycdb.html
+Documentation:: https://blackwinter.github.com/libcdb-ruby
+Source code::   https://github.com/blackwinter/libcdb-ruby
+RubyGem::       https://rubygems.org/gems/libcdb-ruby
+Travis CI::     https://travis-ci.org/blackwinter/libcdb-ruby
+
+
+== AUTHORS
+
+* Jens Wille <mailto:jens.wille@gmail.com>
+
+
+== CREDITS
+
+This project was inspired by ruby-cdb[https://github.com/mbj/ruby-cdb] and
+cdb-full[https://rubygems.org/gems/cdb-full]. The code organization, especially the
+extension part, was modeled after libxml-ruby[https://github.com/xml4r/libxml-ruby].
+
+And props to the rake-compiler[http://github.com/luislavena/rake-compiler]
+team for making extension building such a breeze :)
+
+
+== LICENSE AND COPYRIGHT
+
+Copyright (C) 2012 University of Cologne,
+Albertus-Magnus-Platz, 50923 Cologne, Germany
+
+Copyright (C) 2013-2016 Jens Wille
+
+libcdb-ruby is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+libcdb-ruby is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public
+License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with libcdb-ruby. If not, see <http://www.gnu.org/licenses/>.
+
+
+Project Description:
+Ruby bindings for CDB Constant Databases.
+
+README:
+= libcdb-ruby - Ruby bindings for CDB Constant Databases.
+
+== VERSION
+
+This documentation refers to libcdb-ruby version 0.2.1
+
+
+== DESCRIPTION
+
+The libcdb-ruby library provides Ruby bindings for the
+TinyCDB[http://www.corpit.ru/mjt/tinycdb.html] package for
+creating and reading {constant databases}[http://cr.yp.to/cdb.html].
+
+  require 'libcdb'
+
+  # creating
+  LibCDB::CDB.open('foo.cdb', 'w') { |cdb|
+    cdb['a'] = 'one'
+    cdb['b'] = '123'
+  }
+
+  # reading
+  LibCDB::CDB.open('foo.cdb') { |cdb|
+    cdb['a']  #=> "one"
+    cdb['b']  #=> "123"
+    cdb['c']  #=> nil
+  }
+
+  # hybrid
+  LibCDB::CDB.open('foo.cdb', 'w+') { |cdb|
+    cdb['a'] = 'one'
+    cdb['b'] = '123'
+
+    cdb['a']  #=> "one"
+    cdb['b']  #=> "123"
+    cdb['c']  #=> nil
+
+    # database is truncated whenever
+    # a new writer is opened:
+    cdb['a'] = 'two'
+    cdb['c'] = 'xyz'
+
+    cdb['a']  #=> "two"
+    cdb['b']  #=> nil
+    cdb['c']  #=> "xyz"
+  }
+
+  # update existing database
+  LibCDB::CDB.open('foo.cdb', 'r+') { |cdb|
+    # store existing records
+    cdb << cdb.to_h
+
+    # and add a new one
+    cdb['d'] = '42'
+
+    cdb['a']  #=> "two"
+    cdb['b']  #=> nil
+    cdb['c']  #=> "xyz"
+    cdb['d']  #=> "42"
+  }
+
+
+== PREREQUISITES
+
+* Ruby 1.9+ (see {below}[rdoc-label:label-SUPPORTED+PLATFORMS] for details)
+* TinyCDB[http://www.corpit.ru/mjt/tinycdb.html] headers (not needed when
+  installing the fat binary gem on Windows)
+
+  Debian/Ubuntu:: +libcdb-dev+
+  Fedora/SuSE::   +tinycdb-devel+
+  Gentoo::        +dev-db/tinycdb+
+
+
+== SUPPORTED PLATFORMS
+
+Linux::   MRI 1.9.3, 2.0 & 2.1 (Tested on 64-bit Ubuntu GNU/Linux
+          with 1.9.3p550, 2.0.0p594 and 2.1.5p273)
+Windows:: MRI 1.9.3 (Tested on 32-bit Windows XP with 1.9.3p194)
+
+
+== LINKS
+
+CDB::           http://cr.yp.to/cdb.html
+TinyCDB::       http://www.corpit.ru/mjt/tinycdb.html
+Documentation:: https://blackwinter.github.com/libcdb-ruby
+Source code::   https://github.com/blackwinter/libcdb-ruby
+RubyGem::       https://rubygems.org/gems/libcdb-ruby
+Travis CI::     https://travis-ci.org/blackwinter/libcdb-ruby
+
+
+== AUTHORS
+
+* Jens Wille <mailto:jens.wille@gmail.com>
+
+
+== CREDITS
+
+This project was inspired by ruby-cdb[https://github.com/mbj/ruby-cdb] and
+cdb-full[https://rubygems.org/gems/cdb-full]. The code organization, especially the
+extension part, was modeled after libxml-ruby[https://github.com/xml4r/libxml-ruby].
+
+And props to the rake-compiler[http://github.com/luislavena/rake-compiler]
+team for making extension building such a breeze :)
+
+
+== LICENSE AND COPYRIGHT
+
+Copyright (C) 2012 University of Cologne,
+Albertus-Magnus-Platz, 50923 Cologne, Germany
+
+Copyright (C) 2013-2016 Jens Wille
+
+libcdb-ruby is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+libcdb-ruby is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public
+License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with libcdb-ruby. If not, see <http://www.gnu.org/licenses/>.

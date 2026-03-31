@@ -1,0 +1,23 @@
+Project Description:
+phased layer authenticated ssh tunnels
+
+README:
+== DESCRIPTION:
+
+Hobo Tunnel is set out to provide a secure and easy means to manage ssh tunnels.  Why consider such a project, when there are numerous ssh tunnel managers out there?  With this solution the ssh daemon runs inside of a chroot jail as the ssh user, reducing the need to privlege separation and the sshd builtin chroot capabilities.  This allows one to add a user to the jail that's not a system user for better management. 
+
+== REQUIREMENTS:
+
+* containerize_me
+* jailkit
+* ruby 1.9.3
+* Linux distro.  Tweaking may be required for the containerize_me templates for setting up sshd inside the chroot jail.  By default the templates for Ubuntu 10.04 work out of the box.
+
+== INSTALL:
+FIXME
+
+Additional setup and startup items will be added.
+
+== LICENSE:
+
+GPLv3: http://www.gnu.org/licenses/gpl.html

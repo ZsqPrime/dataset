@@ -1,0 +1,8 @@
+Project Description:
+
+
+README:
+#Ruby on Rails Tutorial: first app
+
+This is the first application I'm making on rails.
+by Jon-Erik Nissen

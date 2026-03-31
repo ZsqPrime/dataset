@@ -1,0 +1,167 @@
+* redshirts
+   
+** declaration
+   
+   Redshirts for the enterprise!  
+   
+   [[http://media.titanmagazines.com/filebrowser/startrek-posts/st-33-invincibles.jpg]]
+
+   Interns for the industry!
+
+   To boldly go!
+   
+   A simple, little web application to manage the requirements for completing student internships.
+   
+** foundation
+   In the course of "Managing Technical Teams" during Winter Quarter 2012 at the Univesity of Washington, Tacoma, a small group formed to automate the existing "paper" process followed by students, faculty advisors, industry sponsors and administrative staff to complete internships.
+   
+** considerations
+   This application is intended to be the [[http://www.artima.com/intv/simplest.html]["simplest thing that could possibly work"]]
+   
+** resources
+   - install [[http://nodejs.org/][node.js]], [[http://www.postgresql.org/download/][postgres]] and [[http://git-scm.com/download][git]]
+   - at a command prompt: 
+     #+begin_src sh
+     git clone https://github.com/spaceshipoperator/redshirts.git
+
+     cd redshirts
+
+     npm install
+
+     #+end_src
+   - build the database (with script that will be provided)
+   - start the app with `node app.js`
+
+** implementation
+   - [X] create repo on git hub
+   - [X] refactor participant requests to new page
+   - [X] send request to sponsor/advisor (nodemailer)
+   - [X] accept request (once sponsor and advisor accepted, internship "ready" for review
+   - [X] determine and set internship status
+   - [X] clean up code...get rid of damned tabs
+   - [X] refactor sql queries to sanitize...safeguard against sql-injection
+   - [X] edit internship should show student first and last name rather than logged in user
+   - [X] advisor/sponsor should not be able to remove participant
+   - [X] provide "cancel" button to student for active internships
+   - [X] admin workflow to review "ready" internships and mark "approved"
+   - [X] list activities and crud
+   - [X] datepicker for activity schedule
+   - [X] activity comments
+   - [X] delete associated comments on delete of activity
+   - [X] display most recent posted on and contributor in activity list
+   - [X] remove participant should clear approved_on
+   - [X] display employment begin date for approved internship
+   - [X] make sure user is associated with internship before edit/review display 
+   - [X] if activity "scheduled on" upcoming within two days, status should be "milestone due"
+   - [X] if "employment begin date" is today or earlier status should be "in progress"
+   - [X] html layout and css 
+   - [X] add clientside form validation for required fields and such
+   - [X] clean up background and fonts
+   - [X] password recovery..
+   - [X] content baby (home, faq, getting started)
+   - [X] include hints based on status, ie if pending "request an advisor and a sponsor...", 
+   - [X] email reminders for upcoming scheduled activities
+   - [ ] need to get message text included in participant request email, some sane defaults for activities too
+   - [ ] hash password clientside (and compare with confirmation) at registration
+   - [ ] require four scheduled activities before "ready" (design decision?)
+   - [ ] use ajax to migrate multiple separate forms to single page (include request participant and activity create/edit/review within intern edit)
+   - [ ] generate report (pdf?)
+   - [ ] refactor/reorganize code, modularize db/index.js, separate/consolidate clientside javascript from jade
+   - [ ] allow for program administrator to upload descriptions and contacts for available internships and student to select from "catalog"
+   - [ ] consider text box for submitting "entry code" on approve
+   - [ ] registration form should prolly have student number on it...rather than internship create (requires refactoring data model..next release of app?)
+   - [ ] allow "sponsor" to upload available positions
+   - [ ] allow "admin" to announce available positions, provide contact information
+   - [ ] allow student to browse/select from available positions and submit resume
+   - [ ] give the html/css some lovin' (replace tables with divs and better stylin')
+   - [ ] introduce chat (student can chat with any other online students, student can chat with assigned advisor/sponsor)
+   - [ ] admin is really advisor with superuser privs
+   - [ ] refactor check/set internship status to function within "next" chain
+     
+ 
+
+
+
+Project Description:
+redshirts for the landing party...to boldy go... 
+
+README:
+* redshirts
+   
+** declaration
+   
+   Redshirts for the enterprise!  
+   
+   [[http://media.titanmagazines.com/filebrowser/startrek-posts/st-33-invincibles.jpg]]
+
+   Interns for the industry!
+
+   To boldly go!
+   
+   A simple, little web application to manage the requirements for completing student internships.
+   
+** foundation
+   In the course of "Managing Technical Teams" during Winter Quarter 2012 at the Univesity of Washington, Tacoma, a small group formed to automate the existing "paper" process followed by students, faculty advisors, industry sponsors and administrative staff to complete internships.
+   
+** considerations
+   This application is intended to be the [[http://www.artima.com/intv/simplest.html]["simplest thing that could possibly work"]]
+   
+** resources
+   - install [[http://nodejs.org/][node.js]], [[http://www.postgresql.org/download/][postgres]] and [[http://git-scm.com/download][git]]
+   - at a command prompt: 
+     #+begin_src sh
+     git clone https://github.com/spaceshipoperator/redshirts.git
+
+     cd redshirts
+
+     npm install
+
+     #+end_src
+   - build the database (with script that will be provided)
+   - start the app with `node app.js`
+
+** implementation
+   - [X] create repo on git hub
+   - [X] refactor participant requests to new page
+   - [X] send request to sponsor/advisor (nodemailer)
+   - [X] accept request (once sponsor and advisor accepted, internship "ready" for review
+   - [X] determine and set internship status
+   - [X] clean up code...get rid of damned tabs
+   - [X] refactor sql queries to sanitize...safeguard against sql-injection
+   - [X] edit internship should show student first and last name rather than logged in user
+   - [X] advisor/sponsor should not be able to remove participant
+   - [X] provide "cancel" button to student for active internships
+   - [X] admin workflow to review "ready" internships and mark "approved"
+   - [X] list activities and crud
+   - [X] datepicker for activity schedule
+   - [X] activity comments
+   - [X] delete associated comments on delete of activity
+   - [X] display most recent posted on and contributor in activity list
+   - [X] remove participant should clear approved_on
+   - [X] display employment begin date for approved internship
+   - [X] make sure user is associated with internship before edit/review display 
+   - [X] if activity "scheduled on" upcoming within two days, status should be "milestone due"
+   - [X] if "employment begin date" is today or earlier status should be "in progress"
+   - [X] html layout and css 
+   - [X] add clientside form validation for required fields and such
+   - [X] clean up background and fonts
+   - [X] password recovery..
+   - [X] content baby (home, faq, getting started)
+   - [X] include hints based on status, ie if pending "request an advisor and a sponsor...", 
+   - [X] email reminders for upcoming scheduled activities
+   - [ ] need to get message text included in participant request email, some sane defaults for activities too
+   - [ ] hash password clientside (and compare with confirmation) at registration
+   - [ ] require four scheduled activities before "ready" (design decision?)
+   - [ ] use ajax to migrate multiple separate forms to single page (include request participant and activity create/edit/review within intern edit)
+   - [ ] generate report (pdf?)
+   - [ ] refactor/reorganize code, modularize db/index.js, separate/consolidate clientside javascript from jade
+   - [ ] allow for program administrator to upload descriptions and contacts for available internships and student to select from "catalog"
+   - [ ] consider text box for submitting "entry code" on approve
+   - [ ] registration form should prolly have student number on it...rather than internship create (requires refactoring data model..next release of app?)
+   - [ ] allow "sponsor" to upload available positions
+   - [ ] allow "admin" to announce available positions, provide contact information
+   - [ ] allow student to browse/select from available positions and submit resume
+   - [ ] give the html/css some lovin' (replace tables with divs and better stylin')
+   - [ ] introduce chat (student can chat with any other online students, student can chat with assigned advisor/sponsor)
+   - [ ] admin is really advisor with superuser privs
+   - [ ] refactor check/set internship status to function within "next" chain

@@ -1,0 +1,8 @@
+Project Description:
+Bitmap compression using the CONCISE algorithm
+
+README:
+CONCISE (COmpressed 'N' Composable Integer SEt) library
+This library was written by Alessandro Colantonio - http://ricerca.mat.uniroma3.it/users/colanton/docs/concise.pdf
+
+This repository extends the functionality of ConciseSet to use IntBuffers.

@@ -1,0 +1,12 @@
+# Design Patterns in Ruby
+
+You may be looking for https://github.com/newhavenrb/dpir/wiki instead.
+
+
+Project Description:
+Design Patterns in Ruby resources and discussion questions
+
+README:
+# Design Patterns in Ruby
+
+You may be looking for https://github.com/newhavenrb/dpir/wiki instead.

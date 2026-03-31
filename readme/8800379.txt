@@ -1,0 +1,7 @@
+Project Description:
+Just fun binary representation of calendar
+
+README:
+Binary representation of calendar. Only text output is available at the moment.
+
+Inspired by http://habrahabr.ru/blogs/design/135962/

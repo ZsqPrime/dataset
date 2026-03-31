@@ -1,0 +1,14 @@
+This project is no longer being maintained on GitHub.
+Look for it at one of
+* gitlab: https://gitlab.com/ldo/blendhack
+* bitbucket: https://bitbucket.org/ldo17/blendhack
+
+
+Project Description:
+experimental parser for Blender 3D files
+
+README:
+This project is no longer being maintained on GitHub.
+Look for it at one of
+* gitlab: https://gitlab.com/ldo/blendhack
+* bitbucket: https://bitbucket.org/ldo17/blendhack

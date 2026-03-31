@@ -1,0 +1,7 @@
+Project Description:
+This is an old ROM prototype that's no longer developed.
+
+README:
+# rom-relation
+
+This repo was merged into main [ROM](https://github.com/rom-rb/rom) repository.

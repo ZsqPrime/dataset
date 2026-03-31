@@ -1,0 +1,13 @@
+Beginnings of an ALAC decoder in ocaml.
+
+References: https://github.com/ofmlabs/alac.js & http://alac.macosforge.org/trac/browser/trunk/codec
+
+
+
+Project Description:
+
+
+README:
+Beginnings of an ALAC decoder in ocaml.
+
+References: https://github.com/ofmlabs/alac.js & http://alac.macosforge.org/trac/browser/trunk/codec

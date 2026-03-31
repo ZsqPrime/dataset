@@ -1,0 +1,4 @@
+Project Description:
+A lightweight expandable rich text editor for JQuery UI using the widget factory standards
+
+README:

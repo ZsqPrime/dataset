@@ -1,0 +1,12 @@
+Project Description:
+
+
+README:
+Rubics Cube
+
+Features:
+- complete virtual 3x3x3 cube mechanics
+
+Planned:
+- Solving randomized cubes in n steps
+- Main Goal is to control a Lego machine.

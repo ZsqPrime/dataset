@@ -1,0 +1,19 @@
+TipTools consists of two applications:
+- TipConv - a cross-platform (written in Java) converter with TIP and HIP
+  as target formats
+- TipView - a viewer for displaying various image formats on Atari XL/XE
+
+See http://epi.atari8.info/tiptools.php for more information.
+
+
+
+Project Description:
+A set of tools for manipulating TIP (Taquart Interlace Picture) images, including TipConv for conversion to TIP and HIP, and TipView for displaying images in various formats on Atari XL/XE computers.
+
+README:
+TipTools consists of two applications:
+- TipConv - a cross-platform (written in Java) converter with TIP and HIP
+  as target formats
+- TipView - a viewer for displaying various image formats on Atari XL/XE
+
+See http://epi.atari8.info/tiptools.php for more information.

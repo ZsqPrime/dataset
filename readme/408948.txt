@@ -1,0 +1,65 @@
+Implementation Progress
+
+BLISS
+-Theoretical
+
+-Simulation
+
+-GNURadio Implementation
+implementation with C++, didnt work
+implementation with python, segmentation fault barrier
+
+-Matlab Implementation
+matlab and gnuradio mixture
+UDP method
+initial bliss implementation problems, vandimon matrix
+different equalizer approaches (linear and feedback)
+single receiver
+multiple design with MRC
+
+-Testbed
+
+-Results
+
+-Summary
+
+
+
+
+SS
+
+
+
+Project Description:
+Spectral Subtraction
+
+README:
+Implementation Progress
+
+BLISS
+-Theoretical
+
+-Simulation
+
+-GNURadio Implementation
+implementation with C++, didnt work
+implementation with python, segmentation fault barrier
+
+-Matlab Implementation
+matlab and gnuradio mixture
+UDP method
+initial bliss implementation problems, vandimon matrix
+different equalizer approaches (linear and feedback)
+single receiver
+multiple design with MRC
+
+-Testbed
+
+-Results
+
+-Summary
+
+
+
+
+SS

@@ -1,0 +1,20 @@
+Masters Project for Brian Pappas
+
+Repository for Generation 2 Robots (Larry, Curly, Moe). Part of the Auburn University CRRLAB
+
+Goal: TODO
+
+Status: TODO
+
+
+Project Description:
+Generatioin 2 Platform Code Base
+
+README:
+Masters Project for Brian Pappas
+
+Repository for Generation 2 Robots (Larry, Curly, Moe). Part of the Auburn University CRRLAB
+
+Goal: TODO
+
+Status: TODO

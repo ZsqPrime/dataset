@@ -1,0 +1,12 @@
+Project Description:
+a rails app that generates Bootstrap color scheme from an image
+
+README:
+== What is this?
+
+A Rails app that generates Bootstrap color scheme from an image. Here's a demo
+link:http://www.lavishbootstrap.com
+
+The main component is the prizm gem that extracts colors from image link:http://github.com/mquan/prizm
+
+MIT License

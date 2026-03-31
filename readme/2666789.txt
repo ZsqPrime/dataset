@@ -1,0 +1,7 @@
+Project Description:
+Github widgets for the github v3 API.
+
+README:
+= GithubWidgets
+
+This project rocks and uses MIT-LICENSE.

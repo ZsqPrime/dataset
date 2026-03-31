@@ -1,0 +1,5 @@
+Project Description:
+An android app made for fun
+
+README:
+This is an android mobile solution for teamwiki web application.

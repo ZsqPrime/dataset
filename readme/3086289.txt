@@ -1,0 +1,5 @@
+Project Description:
+Mine branch of the FreePokerDataBase project
+
+README:
+Please visit http://fpdb.sourceforge.net for documentation, tips and help.

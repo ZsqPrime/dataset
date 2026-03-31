@@ -1,0 +1,5 @@
+Project Description:
+Loterry program for XingCloud annual meeting
+
+README:
+*Loterry Program for XingCloud*

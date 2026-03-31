@@ -1,0 +1,4 @@
+Project Description:
+RPM-package for qutim 0.3
+
+README:

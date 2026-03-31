@@ -1,0 +1,8 @@
+This repo was made to store all my novice ruby concoctions.
+
+
+Project Description:
+None
+
+README:
+This repo was made to store all my novice ruby concoctions.

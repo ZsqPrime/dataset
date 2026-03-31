@@ -1,0 +1,7 @@
+A BizTalk sample application. Supposed to orchestrate the purchase flow.
+
+Project Description:
+A sample BizTalk project
+
+README:
+A BizTalk sample application. Supposed to orchestrate the purchase flow.

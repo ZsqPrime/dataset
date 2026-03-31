@@ -1,0 +1,5 @@
+Project Description:
+Interactive Fiction Game using WebGL/JS, requires Foam library
+
+README:
+pavo is an interactive fiction game implemented in WebGL and Javascript.

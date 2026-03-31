@@ -1,0 +1,14 @@
+a family of minimal lisp variants implemented on ,,stack-machine'' DRCZ*;
+part of http://wacpawstb.blogspot.com project.
+
+nothing interesting, go away.
+
+
+Project Description:
+toy programming language for philosophical studies
+
+README:
+a family of minimal lisp variants implemented on ,,stack-machine'' DRCZ*;
+part of http://wacpawstb.blogspot.com project.
+
+nothing interesting, go away.

@@ -1,0 +1,31 @@
+Everyone has its own skeleton in the closet, mine is C.
+
+I still remember my first year at Uni when they gave me the K&R and told
+me to build a software that would count word occurrences and save the result in a
+text file... it seemed a mission impossible, so I decided to wait
+better times and retake the programming exam another semester. Since then I've never had
+the opportunity to redeem myself because the following semester the
+university, due to a Microsoft partnership, replaced C with C#... and the rest
+is history (I'm still a .NET developer).
+
+After 12 years it's time to learn C, it's time to write some serious stuff!
+
+These are all the examples in the K&R book
+
+Project Description:
+I know, I should have learned C before, but It's never too late.
+
+README:
+Everyone has its own skeleton in the closet, mine is C.
+
+I still remember my first year at Uni when they gave me the K&R and told
+me to build a software that would count word occurrences and save the result in a
+text file... it seemed a mission impossible, so I decided to wait
+better times and retake the programming exam another semester. Since then I've never had
+the opportunity to redeem myself because the following semester the
+university, due to a Microsoft partnership, replaced C with C#... and the rest
+is history (I'm still a .NET developer).
+
+After 12 years it's time to learn C, it's time to write some serious stuff!
+
+These are all the examples in the K&R book

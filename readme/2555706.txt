@@ -1,0 +1,8 @@
+Project Description:
+EEC277 Final Project (Winter 2012) on Ambient Occlusion with Voxels
+
+README:
+This is the repository for EEC277 final project on ambient occlusion using voxels.
+
+Authors: Afton Geil, Calina Copos
+Date: Feb 10 2012 - TBC

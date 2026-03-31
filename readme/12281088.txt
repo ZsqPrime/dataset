@@ -1,0 +1,5 @@
+Project Description:
+PyIRC Server and Web Client
+
+README:
+This file was created by PyCharm 2.0.1 for binding GitHub repository

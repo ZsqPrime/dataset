@@ -1,0 +1,206 @@
+Portable BBS
+
+  "Portable BBS" is very portable web application example in "Perl".
+  You can learn how to create portable web application.
+
+This application have the following features.
+
+  - Embedded preforking web Server, you can start web application in a minute.
+  - Version controll system by "Test::ModuleVersion".
+    you can use all of "CPAN" modules easily.
+  - Module installation is very easy.
+    This application use DBIx::Custom, Validator::Custom
+    DBI, and DBD::SQLite.
+  - Windows support. you can run this application on windows, not only linux/unix.
+    wperl.exe must be installed. Active Perl contains wperl.exe by default.
+
+Setup
+
+  Install some moudles.
+
+    perl cpanm -l extlib Module::CoreList
+    perl t/module.t list | perl -Iextlib/lib/perl5 cpanm -n -L extlib
+    
+  Note: If you install these modules in windows, portablebbs directory
+  should not contain space character
+  such as "C:\Documents and Settings\kimoto\desctop\portablebbs".
+
+  If you reinstall install-failed modules, the following command is useful and fast.
+  
+    perl t/module.t list --fail | perl -Iextlib/lib/perl5 cpanm -n -L extlib
+
+Test
+
+  Run test to check setup is ok.
+
+    prove t
+
+  If all test is passed, setup is ok.
+
+Application start/stop (Linux/Unix)
+
+  Start
+
+      ./portablebbs
+
+    Application start in back ground. Port is "10000" by default.
+    You can access appliaction on the following URL
+    
+      http://localhost:10000
+    
+    If you change port, edit "portablebbs.conf".
+    See also Mojolicious "hypnotoad" command.
+
+    You can also restart application by same command.
+
+  Stop
+
+      ./portablebbs --stop
+
+    You can stop application by "--stop" option.
+
+Application start/stop
+
+  Start
+
+      perl portablebbs_winstart.pl
+
+    Application start in back ground using "Mojo::Server::Daemon"
+    Port is "10000" by default.
+    You can access appliaction on the following URL
+    
+      http://localhost:10000
+
+    If you change port, pass some arguments.
+
+      perl portablebbs_winstart.pl --listen=http://*:10000
+
+    This is same as "Mojolicious::Command::daemon" command arguments.
+    
+    Note that portablebbs_winstart.pl need "tasklist" command
+    (tasklist is installed in Windows 7+ by default).
+    If "portablebbs_winstart.pl" fail, you can start application foreground
+
+      set MOJO_MODE=production
+      start perl script/portablebbs daemon --listen=http://*:10000
+
+  Stop
+
+      perl portablebbs_winstop.pl
+
+    Application stop.
+
+Application start on development mode (for developer)
+
+    ./morbo
+
+  Application is started in "development" mode. port is "3000" by default.
+  You can access appliaction on the following URL
+    
+    http://localhost:3000
+
+
+Project Description:
+Portable bbs which contain CPAN module and easy installation system.
+
+README:
+Portable BBS
+
+  "Portable BBS" is very portable web application example in "Perl".
+  You can learn how to create portable web application.
+
+This application have the following features.
+
+  - Embedded preforking web Server, you can start web application in a minute.
+  - Version controll system by "Test::ModuleVersion".
+    you can use all of "CPAN" modules easily.
+  - Module installation is very easy.
+    This application use DBIx::Custom, Validator::Custom
+    DBI, and DBD::SQLite.
+  - Windows support. you can run this application on windows, not only linux/unix.
+    wperl.exe must be installed. Active Perl contains wperl.exe by default.
+
+Setup
+
+  Install some moudles.
+
+    perl cpanm -l extlib Module::CoreList
+    perl t/module.t list | perl -Iextlib/lib/perl5 cpanm -n -L extlib
+    
+  Note: If you install these modules in windows, portablebbs directory
+  should not contain space character
+  such as "C:\Documents and Settings\kimoto\desctop\portablebbs".
+
+  If you reinstall install-failed modules, the following command is useful and fast.
+  
+    perl t/module.t list --fail | perl -Iextlib/lib/perl5 cpanm -n -L extlib
+
+Test
+
+  Run test to check setup is ok.
+
+    prove t
+
+  If all test is passed, setup is ok.
+
+Application start/stop (Linux/Unix)
+
+  Start
+
+      ./portablebbs
+
+    Application start in back ground. Port is "10000" by default.
+    You can access appliaction on the following URL
+    
+      http://localhost:10000
+    
+    If you change port, edit "portablebbs.conf".
+    See also Mojolicious "hypnotoad" command.
+
+    You can also restart application by same command.
+
+  Stop
+
+      ./portablebbs --stop
+
+    You can stop application by "--stop" option.
+
+Application start/stop
+
+  Start
+
+      perl portablebbs_winstart.pl
+
+    Application start in back ground using "Mojo::Server::Daemon"
+    Port is "10000" by default.
+    You can access appliaction on the following URL
+    
+      http://localhost:10000
+
+    If you change port, pass some arguments.
+
+      perl portablebbs_winstart.pl --listen=http://*:10000
+
+    This is same as "Mojolicious::Command::daemon" command arguments.
+    
+    Note that portablebbs_winstart.pl need "tasklist" command
+    (tasklist is installed in Windows 7+ by default).
+    If "portablebbs_winstart.pl" fail, you can start application foreground
+
+      set MOJO_MODE=production
+      start perl script/portablebbs daemon --listen=http://*:10000
+
+  Stop
+
+      perl portablebbs_winstop.pl
+
+    Application stop.
+
+Application start on development mode (for developer)
+
+    ./morbo
+
+  Application is started in "development" mode. port is "3000" by default.
+  You can access appliaction on the following URL
+    
+    http://localhost:3000

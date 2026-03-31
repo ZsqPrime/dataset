@@ -1,0 +1,6 @@
+Project Description:
+Common configuration and commands shared between linux machines
+
+README:
+Hello from b3
+no this is from b3

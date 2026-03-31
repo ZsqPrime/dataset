@@ -1,0 +1,7 @@
+Project Description:
+Track what models are important to users and why
+
+README:
+== ActsAsImportant
+
+Allows the you track what records are important to users and why.

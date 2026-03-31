@@ -1,0 +1,5 @@
+Project Description:
+JSON Schema loader in Java, based on Jackson
+
+README:
+This is code for using Jackson to read JSON Schema (draft 3).

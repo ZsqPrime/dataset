@@ -1,0 +1,6 @@
+
+
+Project Description:
+RSS Example, damn simple, just change the config.js and you have your own app
+
+README:

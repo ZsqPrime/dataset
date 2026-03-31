@@ -1,0 +1,124 @@
+ibus-fep -- IBus client for text terminals
+
+Install:
+
+If you compile ibus-fep from source, you will need to install the
+libfep library avaliable from: http://github.com/ueno/libfep
+
+Usage:
+
+ibus-fep is merely an IBus client like the GTK IM module (im-ibus.so),
+not a bus nor panel replacement.  So, before running ibus-fep, make
+sure that ibus-daemon is running:
+
+$ pgrep -lf ibus-daemon
+2201 /usr/bin/ibus-daemon -r --xim
+
+Otherwise, run it manually.  Please be aware that some of required
+IBus components (ibus-gconf, etc.) may fail to start when dbus-daemon
+is not running.  See the dbus-launch manual page to start dbus-daemon:
+
+$ eval `dbus-launch --sh-syntax --exit-with-session`
+$ ibus-daemon
+
+Then, start ibus-fep with:
+
+$ XMODIFIERS= xterm -e ibus-fep
+
+or:
+
+$ XMODIFIERS= xterm -e ibus-fep -- nano
+
+To switch between IMEs, use the same hotkey as IBus used under X
+window system, typically Control+Space.  The keybinding can be
+customized with ibus-setup command (or with <hotkeys> element in
+/usr/share/ibus/*.xml).
+
+Limitations:
+
+* IMEs which expect X keycodes (ibus-hangul, etc.) cannot be used
+
+* Some keys (Hiragana_Katakana, etc.) are not recognized because there
+  are no corresponding escape sequences.  If you use such a keys as IME
+  trigger, you will need to assign additional keys (Control+Space,
+  Control+\, etc.) to IME trigger.
+
+License:
+
+GPLv3+
+
+Copyright (C) 2012 Daiki Ueno <ueno@unixuser.org>
+Copyright (C) 2012 Red Hat, Inc.
+
+This file is free software; as a special exception the author gives
+unlimited permission to copy and/or distribute it, with or without
+modifications, as long as this notice is preserved.
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+Project Description:
+IBus client for text terminals (non frame buffer)
+
+README:
+ibus-fep -- IBus client for text terminals
+
+Install:
+
+If you compile ibus-fep from source, you will need to install the
+libfep library avaliable from: http://github.com/ueno/libfep
+
+Usage:
+
+ibus-fep is merely an IBus client like the GTK IM module (im-ibus.so),
+not a bus nor panel replacement.  So, before running ibus-fep, make
+sure that ibus-daemon is running:
+
+$ pgrep -lf ibus-daemon
+2201 /usr/bin/ibus-daemon -r --xim
+
+Otherwise, run it manually.  Please be aware that some of required
+IBus components (ibus-gconf, etc.) may fail to start when dbus-daemon
+is not running.  See the dbus-launch manual page to start dbus-daemon:
+
+$ eval `dbus-launch --sh-syntax --exit-with-session`
+$ ibus-daemon
+
+Then, start ibus-fep with:
+
+$ XMODIFIERS= xterm -e ibus-fep
+
+or:
+
+$ XMODIFIERS= xterm -e ibus-fep -- nano
+
+To switch between IMEs, use the same hotkey as IBus used under X
+window system, typically Control+Space.  The keybinding can be
+customized with ibus-setup command (or with <hotkeys> element in
+/usr/share/ibus/*.xml).
+
+Limitations:
+
+* IMEs which expect X keycodes (ibus-hangul, etc.) cannot be used
+
+* Some keys (Hiragana_Katakana, etc.) are not recognized because there
+  are no corresponding escape sequences.  If you use such a keys as IME
+  trigger, you will need to assign additional keys (Control+Space,
+  Control+\, etc.) to IME trigger.
+
+License:
+
+GPLv3+
+
+Copyright (C) 2012 Daiki Ueno <ueno@unixuser.org>
+Copyright (C) 2012 Red Hat, Inc.
+
+This file is free software; as a special exception the author gives
+unlimited permission to copy and/or distribute it, with or without
+modifications, as long as this notice is preserved.
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

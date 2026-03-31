@@ -1,0 +1,4 @@
+Project Description:
+Solutions to programming projects of COMP6360-[Wireless and Mobile Networks] in [2012Spring] in Auburn University
+
+README:

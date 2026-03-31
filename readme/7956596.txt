@@ -1,0 +1,4 @@
+Project Description:
+open source hardware board for the legendary MOS Technology SID
+
+README:

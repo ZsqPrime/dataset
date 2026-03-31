@@ -1,0 +1,84 @@
+Feature Based Alignment
+
+Some programs to roughly align two point clouds representing the same underlying geometry.
+The goal is to accurately register two point clouds created from different image spectrums 
+(e.g. visual to infrared), in different coordinate systems of different scales.  
+
+This depends on:
+- PCL (http://pointclouds.org/)
+- CMake and some c++ compiler
+Also used the pcl visualization library, which depends on some toolkit (I use QT4).
+
+Current approach is:
+- Take two point clouds 
+- Estimate normals for each point
+- Find FPFH Features for each point
+- Find likely correspondences between two models (based on FPFH)
+- Use top features to estimate scale, 
+- Run RANSAC to estimate transformation, and eliminate correspondences
+- Use remaining correspondences to run ICP for finer alignment
+
+
+Usage Example:
+#estimate correspondences - saves a corrs.txt file
+./corrs cloudA.ply cloudB.ply AtoBCorrs.txt
+
+#run rough alignment using corrs
+./align cloudA.ply cloudB.ply AtoBCorrs.txt
+
+#saves files:
+irRough.pcd - cloud A after RANSAC alignment
+eoRough.pcd - cloud B after RANSAC alignment
+irFinal.pcd - cloud A after ICP alignment
+eoFinal.pcd - cloud B after ICP alignment
+
+
+other tools include bbox and circular cropping
+./bbox cloud.pcd
+
+./crop cloud.pcd centerX centerY centerZ radius out.pcd
+
+
+Project Description:
+Registration for point clouds
+
+README:
+Feature Based Alignment
+
+Some programs to roughly align two point clouds representing the same underlying geometry.
+The goal is to accurately register two point clouds created from different image spectrums 
+(e.g. visual to infrared), in different coordinate systems of different scales.  
+
+This depends on:
+- PCL (http://pointclouds.org/)
+- CMake and some c++ compiler
+Also used the pcl visualization library, which depends on some toolkit (I use QT4).
+
+Current approach is:
+- Take two point clouds 
+- Estimate normals for each point
+- Find FPFH Features for each point
+- Find likely correspondences between two models (based on FPFH)
+- Use top features to estimate scale, 
+- Run RANSAC to estimate transformation, and eliminate correspondences
+- Use remaining correspondences to run ICP for finer alignment
+
+
+Usage Example:
+#estimate correspondences - saves a corrs.txt file
+./corrs cloudA.ply cloudB.ply AtoBCorrs.txt
+
+#run rough alignment using corrs
+./align cloudA.ply cloudB.ply AtoBCorrs.txt
+
+#saves files:
+irRough.pcd - cloud A after RANSAC alignment
+eoRough.pcd - cloud B after RANSAC alignment
+irFinal.pcd - cloud A after ICP alignment
+eoFinal.pcd - cloud B after ICP alignment
+
+
+other tools include bbox and circular cropping
+./bbox cloud.pcd
+
+./crop cloud.pcd centerX centerY centerZ radius out.pcd

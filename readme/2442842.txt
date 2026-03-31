@@ -1,0 +1,18 @@
+A "physical" raytracer written in python.
+
+No dependencies. To play with it, start the UI with "python server.py" 
+and then point a webgl capable browser to http://localhost:8080.
+
+Note: the stuff in the "examples" directory probably doesn't work anymore.
+
+
+Project Description:
+sequential physical raytracer
+
+README:
+A "physical" raytracer written in python.
+
+No dependencies. To play with it, start the UI with "python server.py" 
+and then point a webgl capable browser to http://localhost:8080.
+
+Note: the stuff in the "examples" directory probably doesn't work anymore.

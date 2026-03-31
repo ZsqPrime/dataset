@@ -1,0 +1,6 @@
+
+
+Project Description:
+an addon for moving cameras through space and ofxTimeline integration
+
+README:

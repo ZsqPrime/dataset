@@ -1,0 +1,8 @@
+This is a simple mineweeper game written in Javasript. 
+
+
+Project Description:
+Minesweeper game. 
+
+README:
+This is a simple mineweeper game written in Javasript.

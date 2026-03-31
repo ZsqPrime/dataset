@@ -1,0 +1,1304 @@
+#+TITLE: EmacsPortable.App
+#+AUTHOR: Matthew L. Fidler
+#+OPTIONS: LaTeX:t
+* Introduction
+EmacsPortable.App attempts to make a portable version of Emacs that
+runs off a USB drive under either Windows, Linux, or Mac OSX.
+
+The features of this distribution:
+- Automatic Registering of extensions (and org-protocol)
+  - Will use LiberKey when requested (Windows)
+  - Will generate an appropriate Info.plist for Mac OS X
+  - No support under Linux
+- Temporarily Install of fonts
+  - Temporarily install fonts on windows so you can always carry your
+    favorite mono-spaced font
+  - Copy the fonts to ~/Library/Fonts under Mac OSX
+    - The fonts you use should be free, so you are not copying fonts
+      that should not be copied
+  - Currently no support under Linux
+*Window Only Features:*
+- Psuedo-Daemon
+- Finding support applications and dictionaries
+- Starting gdb or attaching debugger
+- Updating and downloading the latest emacs, even if EmacsPortable.App
+  hasn't released a new launcher.
+
+In windows, this distribution also allows concurrent versions of emacs
+to be run, with different startup options. 
+* Download
+** Download for Emacs 24
+The following downloads are available:
+- [[http://code.google.com/p/emacs-portable-app/downloads/detail?name=EmacsInstall-24.3-ep13.03.22.exe][Emacs 24.3]]
+** Using Pre-releases
+Under windows, you can do a net-install by using EmacsOptions.  This
+net install can be performed in two ways:
+1. Select the option for a network-based install
+2. Move the =EmacsOptions.exe= outside of the EmacsPortableApp
+   directory and run it.  This allows you to distribute the network
+   install file anywhere and allow other people to download/build
+   their own EmacsPortable.App.
+* Options
+** Associations
+EmacsPortable.App handles file associations in the following ways:
+
+- Associations through LiberKey
+- PortableApps.com specifictaion (when PortableApps supports association)
+- Registering Associations when running.
+
+When changing associations under windows, the Mac =Info.plist= xml
+file is also updated.
+
+In addition to regular extensions, EmacsPortable.App can be registered
+to extensionless files.  Currently this is unsupported through
+liberkey.  Therefore, this is only in effect when EmacsPortableApp is
+running or installed locally.
+
+** Proxy
+This allows proxy settings to be dynamically determined based on your
+location.  Your password is encrypted based on the location as well.
+This works on windows only.
+
+EmacsPortable.App will setup the =HTTPS_PROXY=, =HTTP_PROXY= and
+=FTP_PROXY= based on the connection specific setup.
+To use a proxy, set it up with =EmacsOptions.exe=.
+
+This is sufficient for some packages, but not for =gnus=.
+
+The information is stored by the blowfish encryption algorithm.
+However the =HTTP_PROXY= environment variable will contain the
+password in clear text.
+
+When Putty Key is specified in this dialog, the putty key is loaded
+and Putty local or portable is started (depending on the options selected).
+** Behavior
+Under windows, launching options may be changed by running
+=EmacsOptions.exe=. Otherwise, ini files can be edited on Mac OSX.
+*** Launching Options 
+**** Emacs Version
+This selects the version of Emacs that EmacsPortable.App will be
+running.  This is useful if you run different versions of Emacs to
+test lisp code on multiple emacs versions.
+**** Startup Script
+Emacs allows you to select popular startup scripts for emacs startup.
+Once downloaded, you can use:
+- Prelude
+- Emacs 24 Starter Kit
+- Ergoemacs
+- Kicker
+
+You can also create  you own.  Just place an =init.el= or =.emacs= in
+a directory under =Data/startup/=
+
+**** Pseudo Daemon
+The Pseudo-Daemon Start-up script among other things:
+ - Opens Emacs
+ - Renames the current Frame
+ - Creates a New frame
+ - Calls an external program (ahk) that hides the frame & puts an
+   Emacs icon in the task bar to allow this frame to be shown or
+   closed
+ - Once Emacs has started up, subsequent calls to the Emacs start-up
+   script open a new frame.
+
+This allows you to "close" out of Emacs while maintaining a running Emacs.
+
+The startup script also sets the environment variable
+EMACS_SERVER_FILE to the temporary directory
+
+=$TEMP\ep\EmacsPortable.App-Server-$EMACS_VERSION\server=
+
+Subsequent calls to emacsclient.exe specify this server location.
+Therefore an emacs server can be run for each distinct emacs version
+
+More information about the startup is found in [[file:./App/site-lisp/site-start.org][site-start.org]]
+**** New frame on file open
+Create a new emacs "frame" on opening a new file.
+**** Debug startup
+Under windows, debug mode starts =gdb= if found.  Additionally, if
+=App/gdbinit= is found, gdb sources this before running emacs.  You
+can download an appropriate gdbinit for emacs [[http://bzr.savannah.gnu.org/lh/emacs/trunk/annotate/head:/src/.gdbinit][here]].
+
+This is equivalent to using =EmacsDebug.exe=
+**** Unzip binaries and run from temporary directory
+Emacs binaries can be zipped to save space.  This requires that the
+emacs binaries are extracted to the temporary directory before
+running.  I have found that running emacs in this manner is faster
+than running it on the USB stick alone.  If not selected the binaries
+will run from the usb drive.  If you are running EmacsPortable.App locally
+**** Clean residual files
+When running portably, the unzipped binaries are stored in the
+temporary directory.  To save time on startup, if the bare binaries
+needed to run emacs are still present, the launcher uses these files
+in the temporary directory.
+
+When the clean residual files option is selected, these binaries are
+removed after emacs stops, otherwise they are retained to improve
+startup time. 
+**** Home directory
+The =HOME= Directory is where Emacs stores the =.emacs= file;  Other
+emacs programs also store information here. EmacsPortable.App has a
+few options for home directories
+
+*EXEDIR Alias*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains an ini Home Entry 
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=EXEDIR:/Data/Home
+#+END_SRC
+The EXEDIR directory is changed for the base directory that
+EmacsPortable.App is run from.
+
+The advantage to this methodology is that you can drag and drop Emacs
+and all your customizations will be dragged with it.
+
+*USB Alias*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains an ini Home Entry 
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=USB:/Documents/
+#+END_SRC
+USB represents the USB directory. This setting uses the PortableApps Documents Directory
+as the home-directory.  
+
+The USB directory is determined as follows:
+ - /Under Windows/
+   - Checks each removable and hard drive for an =.emacs= or =_emacs=
+     file under the specified directory.  For example
+     EmacsPortable.App would check =e:\Documents\.emacs= and
+     =f:\Document\.emacs=.  If it found =f:\Document\.emacs=, If it
+     exists, it assumes that the USB drive is =f:\=
+   - Checks each drive for a =PortableApps= directory.  If found it
+     assumes that this is the usb drive
+   - Checks for =Apps=,=EmacsPortable.App= or =PortableApps=,
+     =LiberKey\Apps=, etc (the directories found in App/paths.ini
+     portable.dirs). When found, EmacsPortable.App assumes the drive
+     where the directory is found is the USB drive.
+   - If not found, it will set the USB directory to the installed directory.
+ - /Under Mac OS X/
+   - Assumes the usb directory is the =/Volumes/USB-NAME/= directory.
+
+The advantage of this methodology is that under windows, Emacs can be
+copied to the hard-drive to speed up the run-time, and the
+initialization from the hard drive. 
+
+*Home if Exists*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains a full path, then
+the home is set when that file exists.  For example:
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=c:\
+#+END_SRC
+
+will set the home directory to =c:\= on Windows computers.  Currently,
+this is supported only on windows.
+
+*System home*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains an ini Home Entry
+that doesn't start with either =EXEDIR:/= or =USB:/=, and doesn't
+exist then the
+original home directory is maintained.
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=Set as original
+#+END_SRC
+
+*Changing Home*
+ 
+When using EmacsOptions.exe, you do not have to worry about selecting
+which type of file is used.  If you select a directory on the USB
+drive, the EmacsPortableApp is updated accordingly.  If you select
+location within the portable app directory, the =EXEDIR= is replaced.
+Note that any where else may change depending on the computer you use.
+
+
+*** Integration Options
+**** Right-Click "Edit-With"
+This allows a right click to produce a "Edit with EmacsPortable.App"
+**** Org-protocol
+This registers Org-protocol and also associates org-protocol actions
+with adobe acrobat/adobe acrobat reader.
+**** Liberkey
+EmacsPortable.App will add LiberKey File associations when it locates
+LiberKey, and the LiberKey support is checked.  Note that you should
+restart LiberKey and make sure that the associations actually
+installed correctly.
+** Visual
+This allows the initial font/color and gemoetry options to be
+specified so that emacs will startup with these options enabled.
+
+
+These are called from the command line and do not affect the
+registry.
+
+In addition this tries to set an option to maximize new frames.
+** Download
+EmacsPortable.App can download and run the versions of Emacs from the
+mac repository and windows repository and package them so they work
+with the EmacsPortable.App launcher.
+
+If the EmacsOptions list of emacs versions is out of date, it can be
+updated by the following procedure:
+- Start EmacsPortable.App
+- Type =M-x official-emacs=
+
+This will update the emacs list of official binaries from [[http://emacsformacosx.com/][GNU Emacs
+For Mac OS X]] and [[http://www.gnu.org/software/emacs/][GNU Emacs]] websites.
+
+
+** Network Install
+** Build Launcher
+** Unix Components
+* Customizing
+** Startup Customization
+The =EmacsOptions.exe= allows you to set Emacs startup options via a
+GUI.  This is mirrored in the =Data/ini/EmacsPortable.ini= file. 
+
+** Setting Startup Environment variables
+By creating or editing an environment ini file at
+=Data/ini/Environment.ini=, startup environmental variables may be set.
+For example, if you use the =colemak= keyboard with the ergoemacs
+package, the following ini-file will set the
+=ERGOEMACS_KEYBOARD_LAYOUT= to the proper value
+
+#+BEGIN_SRC conf
+[Environment]
+ERGOEMACS_KEYBOARD_LAYOUT=colemak
+#+END_SRC
+
+** Load Path
+Load Path for source directory is in =Data/src=.
+** Literate Initialization
+When using EmacsPortable.App's startup mechanism, t
+1) Any =.org=, =.el= or =.elc= files in =Data/init= and loads them
+2) User-based =.org=, =.el=, or =.elc= files in =Data/init/user=.   
+3) System based =.org=, =.el= or =.elc= files in =Data/init/system=.
+   
+* Configuration
+Since EmacsPortable.App tries to run portably, there are a few things
+that are changed from a standard emacs distribution:
+
+1. Home directory is allowed to change based on different computers
+   (USB is e:, f:, etc)
+   
+2. Directories that change can become aliases for convenience and to
+   allow recent files to save correctly (for instance ~usb for the usb
+   drive).
+   
+3. Install fonts on different computers to allow a favorite font to be
+   used in emacs for all distributions.  In windows this is done by
+   making the font available to windows during the session.
+** Emacs aliases
+Emacs has a list of "home" directory aliases.  The absolute
+directories are:
+|-------------+------------------------------+-------------------------------------|
+| Alias       | True Directory               | Directory Purpose                   |
+|-------------+------------------------------+-------------------------------------|
+| ~ahk/       | Other/source/ahk             | AHK Sources Directory               |
+| ~app/       | App/                         | EmacsPortable.App Application Files |
+| ~doc/       | USB Drive Documents          | Documents Directory                 |
+| ~ep/        | .                            | EmacsPortable.App Directory         |
+| ~h/         | System Home Directory        | System Home Directory               |
+| ~ini/       | Data/ini                     | EmacsPortable.App ini files         |
+| ~nsi/       | Other/source/nsi             | NSIS Sources Directory              |
+| ~pa/        | USB Drive:/PortableApps      | Portable Apps                       |
+| ~shared/    | Data/start/shared            | Shared Customizations               |
+| ~site-lisp/ | App/site-lisp                | Site Lisp Directory                 |
+| ~src/       | Data/src                     | EmacsPortable.App lisp source files |
+| ~start/     | Data/start                   | EmacsPortable.App Customizations    |
+| ~system/    | Data/start/system            | System-based Customizations         |
+| ~usb/       | USB Drive                    | USB Drive                           |
+| ~user/      | Data/start/user              | User-based Customizations           |
+|-------------+------------------------------+-------------------------------------|
+
+
+Other aliases are added =~el-get/package/elpa= is changed to =~elpa=, as
+if it were a symbolic link.  Since symbolic links are not supported in
+windows, this is handled by emacs only.  This was implemented to allow
+files to remain the same between file systems.  =~usb/= will be the
+same on every system.
+
+In addition to these aliases, the following aliases are also defined:
+
+- =~el-get=, is an alias for the el-get package directory
+- =~elpa=, is an alias for the user elpa package directory
+- =~theme= or =~themes=, is an alias for the emacs24 themes directory,
+  (as long as the themes directory is /not/ the =user-emacs-directory=).
+- =~snip=, =~snips=, =~snippets=, =~snippet=, is an alias for
+  yasnippets snippets.
+- All the startup scripts in =Data/start= have an alias created for them.
+
+Custom aliases may be added by customizing =EmacsPortable-aliases=.
+
+** Font installation
+Will install specific fonts, if needed.
+** Updating mirrors to the latest version of emacs
+You can update the current list of supported emacs versions by
+running =emacs-portable-update-offical-emacs-releases=.
+* How It Works
+** Fonts
+*** Windows
+Under windows the fonts in the =App/fonts/= directory are temporarily
+installed/registered. Once Emacs Exits, the fonts are unregistered.
+*** Mac OS X
+Copies fonts in the =App/fonts/= directory to =~/Library/Fonts/=
+** DOS Version
+The dos version starts up emacs in a dos command prompt window. When
+trying to do anything with the =EmacsPortableDOS= command, it will
+attempt to do that command in the initial =DOS= box.  This is just a
+test environment, and is likely not very reasonable to use.
+** Icons
+Icons came from various places:
+- [[http://findicons.com/icon/93514/new_go_down?id=344599#][Download Icon]]
+- USB Icon
+  - http://www.clker.com/clipart-10031.html
+- Modified Lady Bug http://www.clker.com/clipart-23283.html
+- Modified Uninstall Icon (original at
+  http://findicons.com/icon/127390/trash_empty)
+- Dos Box/Terminal http://www.clker.com/clipart-3716.html
+- Wrench http://www.clker.com/clipart-3716.html
+- Screw Driver http://www.clker.com/clipart-14895.html
+** NSIS Configuration
+EmacsPortable.App is built with NSIS with the following options:
+- NSIS 2.46
+- Large String Support http://nsis.sourceforge.net/Special_Builds#Large_strings
+- EnumINI http://nsis.sourceforge.net/EnumINI_plug-in
+- Inetc http://nsis.sourceforge.net/Inetc_plug-in
+- Execdos http://nsis.sourceforge.net/ExecDos_plug-in
+- Blowfish++ http://nsis.sourceforge.net/mediawiki/images/a/a7/BlowfishDLL.7z
+- MD5 http://nsis.sourceforge.net/MD5_plugin
+- XML http://nsis.sourceforge.net/XML_plug-in
+- FindProcDLL http://nsis.sourceforge.net/FindProcDLL_plug-in
+- LoadingBar UI http://nsis.sourceforge.net/LoadingBar_UI
+* Applications Support
+** Adding Paths (Windows Only)
+Most of the specific applications work by adding paths and changing
+environmental variables.  This is controlled by =App/ini/paths.ini=.
+EmacsPortableApp looks at the following sections
+*** General Paths
+**** Local Paths [local]
+Local paths are paths that emacs checks that are locally available.
+They are specified by NAME=Local Path Snippet.  An example of this is:
+#+BEGIN_SRC conf
+[local]
+git=msysgit\msysgit\bin
+git2=msysgit\bin
+gitmsys=msysgit\msysgit\mingw\bin
+gitmsys2=msysgit\mingw\bin
+#+END_SRC
+
+In this example =git= The following paths are checked:
+1) =c:\msysgit\msysgit\bin=
+   - The root is set to =c:\=
+2) =%ProgramFiles%\msysgit\msysgit\bin=
+   - The root is set to =%ProgramFiles%=
+
+If they exist they are added to the path environment before starting
+emacs.  If the directory in fact /exists/, then two additional ini
+sections are checked, =[local.git.path]= and =[local.git.set]=.  
+
+For the =git= local setup, there are two sections.  The first
+=local.git.path= is specified as follows:
+
+#+BEGIN_SRC conf
+[local.git.path]
+git_install_root=msysgit\msysgit
+#+END_SRC
+
+Then each key is added to the environment putting the root location
+before the right handed value.  In this case, the environmental
+variable is set to =c:\msysgit\msysgit= or
+=%ProgramFiles%\msysgit\msysgit= depending on which path was found.   
+
+The other type of section that is used is the =[local.git.set]=.  In
+the case of =git= this section is defined as:
+
+#+BEGIN_SRC conf
+  [local.git.set]
+  PLINK_PROTOCOL=ssh
+#+END_SRC
+
+Therefore, if =git= is found then the environmental variable
+=PLINK_PROTOCOL= is set to =ssh=.
+
+**** Portable Paths [portable]
+The portable paths are set in the same way as the local paths with the
+exception of the places they check for the existence of paths.  The
+=portable= section checks for paths in =USB:\=, and =USB:\PortableApps\=.
+**** Relative Paths [exedir]
+The =exedir= section checks for paths relative to the portable
+application. 
+*** Info Paths
+Emacs uses Info for most everything.  You can add =info= paths that
+Emacs doesn't know about by a similar manner as the general paths,
+above. 
+*** Unix Manual Paths
+** Java-based Apps
+EmacsPortable supports [[http://plantuml.sourceforge.net/download.html][PlantUML]], [[http://www.mathtoweb.com/cgi-bin/mathtoweb_home.pl][MathToWeb]] and [[http://ditaa.sourceforge.net/][ditaa]] for [[http://orgmode.org][org-mode]] assuming that
+[[http://portableapps.com/apps/utilities/java_portable_launcher][JavaPortable]] is installed.
+
+
+[[http://plantuml.sourceforge.net/download.html][PlantUML]] requires =dot= from GraphViz.  Therefore, GraphVizPortable
+would need to be installed for [[http://plantuml.sourceforge.net/download.html][PlantUML]] to work. 
+
+** Imagemagick
+Imagemagick is used for many Emacs Applications.  EmacsPortableApp
+attempts to detect a portable version of EmacsPortableApp or see if
+Imagemagick is installed on the computer.
+
+A portable version of Imagemagic is found [[ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-6.7.9-3-Q16-windows.zip][at ftp.imagemagick.org]]
+By extracting the portable version in the =PortableApps= or
+=LiberKey\MyApps= EmacsPortable.App will add this to the path.  This
+assumes the Imagemagick directory is =ImageMagick-6.7.9-3=
+** Python based Apps
+By installing [[http://www.portablepython.com][Python Portable]] into your =PortableApps= Directory,
+python is available to Emacs.  This is useful for installing Bazaar,
+which Emacs uses as its version control.
+** Version control Software
+*** Bazaar
+I have created a portable Bazaar.  EmacsPortable.App will recognize
+bazaar version
+*** Subversion in Windows
+Not quite portable, but you can get the binaries [[http://www.visualsvn.com/downloads/][here]].
+
+Running in subversion from within EmacsPortable.App /is/ portable,
+though.  Emacs will set the =%AppData%= Environment variable to
+=Data/AppData= and set =%ALLUSERSPROFILE%= to =Data/AppData=
+
+*** Git
+EmacsPortable.App picks up both Git portable and locally installed
+installations.  Because of emacs version control, if Git is not
+installed locally, Emacs is slowed down substantially.
+** SumatraPDF Portable
+Using AUCTeX inverse-search and forward search is supported with
+[[http://portableapps.com/apps/office/sumatra_pdf_portable][SumatraPDFPortable]].  There should be no set-up, EmacsPortable.App with
+setup both Emacs and [[http://portableapps.com/apps/office/sumatra_pdf_portable][SumatraPDFPortable]].  
+** GPG for encryption
+EmacsPortableApp looks for the gpg package that is installed with
+Mozilla Thunderbird.  First install Thunderbird Portable:
+
+http://portableapps.com/support/thunderbird_portable
+
+Then install gpg from here
+
+http://portableapps.com/support/thunderbird_portable#encryption
+
+** MikTeX Portable
+If you extract MikTeX portable to =PortableApps/MikTexPortable/=,
+EmacsPortable.App will be recognized and used.
+** Unix Ports
+*** Cygwin
+*** MSYS
+Supports MSYS portable.
+*** GnuWin32
+*** EzWin
+** PuTTY
+*** PuTTY and magit
+Since magit and OpenSSH does not work correctly in windows, you can
+use PuTTY to connect to your host via plink.  Note that you must
+connect to the host first via PuTTY or you will get one of the
+following error messages:
+
+: The server's host key is not cached in the registry. You
+: have no guarantee that the server is the computer you
+: think it is.
+: The server's rsa2 key fingerprint is:
+: ssh-rsa 2048 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+: Connection abandoned.
+: fatal: The remote end hung up unexpectedly
+
+or
+
+: WARNING - POTENTIAL SECURITY BREACH!
+: The server's host key does not match the one PuTTY has
+: cached in the registry. This means that either the
+: server administrator has changed the host key, or you
+: have actually connected to another computer pretending
+: to be the server.
+: The new rsa2 key fingerprint is:
+: ssh-rsa 2048 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+: Connection abandoned.
+: fatal: The remote end hung up unexpectedly
+
+
+The information about setting up GIT to use putty are located here.
+
+http://sitaramc.github.com/gitolite/contrib_putty.html
+
+This is done automatically when running TRAMP.
+
+Therefore, if you want to use magit for github, you need open
+puttyportable and attempt to open =git@github.com= so it can cache the
+host id.
+*** PuTTY and Tramp
+From Jeremy Engilsh there is a tutorial on how to get TRAMP to work
+with windows 2K.  This is adapted from [[http://www.jeremyenglish.org/docs/tramp_ntmacs.pdf][that tutorial]].
+
+EmacsPortable.App will download and setup the appropriate files for
+PuTTY portable, if you need them.  In addition to putty.exe, you will
+need:
+- puttygen.exe
+- pageant.exe
+- plink.exe
+
+
+1. Generate a Key
+
+Use Puttygen to generate a key.  Puttygen should be in the
+PuttyPortable application.
+
+[[./Other/img/PuTTYKeyGenerator0.png]]
+[[./Other/img/PuTTYKeyGenerator1.png]]
+
+2. Save the public key
+   
+   This is under File->Save Private Key
+
+3. Export the key to an open ssh key.
+   
+   This is under Conversions->Export OpenSSH Key
+
+4. Copy the key to the server.
+
+   This can be done with a secure file transfer like FileZilla.
+
+   Or, if ssh is working for you, you can use the following shell
+   command
+
+#+BEGIN_SRC sh
+scp key user@host:~/
+#+END_SRC
+
+5. Log into the host and add to authorized keys
+
+#+BEGIN_SRC sh
+ssh example.server.com
+mkdir ~./ssh
+chmod 700 ~/.ssh
+cat ~/key >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+rm ~/key
+#+END_SRC
+
+6. Let EmacsPortable.App know about the key
+   
+   Use EmacsOptions.exe to select the PuTTy key.  If you want it to be
+   portable keep the key on the USB drive *OR* in the executable
+   directory.
+
+7.  Run EmacsPortable.App. 
+
+    EmacsPortable.App will start =pageant.exe= if it is not already
+    running and set up tramp to use plink.  This is done by the
+    site-start.
+
+
+*** PuTTYPortable
+To use the settings of PuTTYPortable, you have to have a PuTTYPortable
+session open.
+*** PuTTY and Proxy settings
+PuTTY currently stores proxy settings in the registry. If
+EmacsPortable.App is started up AND PuTTY Pageant has not started up,
+then:
+ - EmacsPortable.App will run Paegeant Portable
+ - Just after launching emacs, EmacsPortable.App will write the Proxy
+   settings to the registry
+ - When you exit PuttyPortable, these settings will be saved.
+
+Therefore, you do not need to always manually edit proxy settings, and
+plink should work most of the time.
+*** PuTTY and R
+R can connect to remote sessions using ssh.el.  When you use PuTTY to
+connect you will need to set the following option:
+
+#+BEGIN_SRC emacs-lisp
+  (setq ssh-program "plink")
+#+END_SRC
+
+** Bleeding edge emacs (Not supported yet)
+These are notes to use the bleeding edge emacs.
+
+Goto the App directory, and under a command prompt that has bzr
+installed, type
+
+#+BEGIN_SRC ntcmd 
+    bzr branch --stacked bzr://bzr.savannah.gnu.org/emacs/trunk emacs-bzr
+#+END_SRC
+
+
+If that has already been performed, to update just type:
+
+#+BEGIN_SRC ntcmd 
+  bzr pull
+#+END_SRC
+
+If you are behind a firewall you may wish to use git to get the latest
+sources.  Note that only the Bazaar repo is the official 
+
+
+#+BEGIN_SRC ntcmd 
+    git clone http://git.savannah.gnu.org/r/emacs.git emacs-git
+#+END_SRC
+
+
+* Building an installer
+You can build an installer with the command =build-nsi= inside emacs.
+
+
+Project Description:
+Emacs Portable App attempts to create a Mac/Windows portable application
+
+README:
+#+TITLE: EmacsPortable.App
+#+AUTHOR: Matthew L. Fidler
+#+OPTIONS: LaTeX:t
+* Introduction
+EmacsPortable.App attempts to make a portable version of Emacs that
+runs off a USB drive under either Windows, Linux, or Mac OSX.
+
+The features of this distribution:
+- Automatic Registering of extensions (and org-protocol)
+  - Will use LiberKey when requested (Windows)
+  - Will generate an appropriate Info.plist for Mac OS X
+  - No support under Linux
+- Temporarily Install of fonts
+  - Temporarily install fonts on windows so you can always carry your
+    favorite mono-spaced font
+  - Copy the fonts to ~/Library/Fonts under Mac OSX
+    - The fonts you use should be free, so you are not copying fonts
+      that should not be copied
+  - Currently no support under Linux
+*Window Only Features:*
+- Psuedo-Daemon
+- Finding support applications and dictionaries
+- Starting gdb or attaching debugger
+- Updating and downloading the latest emacs, even if EmacsPortable.App
+  hasn't released a new launcher.
+
+In windows, this distribution also allows concurrent versions of emacs
+to be run, with different startup options. 
+* Download
+** Download for Emacs 24
+The following downloads are available:
+- [[http://code.google.com/p/emacs-portable-app/downloads/detail?name=EmacsInstall-24.3-ep13.03.22.exe][Emacs 24.3]]
+** Using Pre-releases
+Under windows, you can do a net-install by using EmacsOptions.  This
+net install can be performed in two ways:
+1. Select the option for a network-based install
+2. Move the =EmacsOptions.exe= outside of the EmacsPortableApp
+   directory and run it.  This allows you to distribute the network
+   install file anywhere and allow other people to download/build
+   their own EmacsPortable.App.
+* Options
+** Associations
+EmacsPortable.App handles file associations in the following ways:
+
+- Associations through LiberKey
+- PortableApps.com specifictaion (when PortableApps supports association)
+- Registering Associations when running.
+
+When changing associations under windows, the Mac =Info.plist= xml
+file is also updated.
+
+In addition to regular extensions, EmacsPortable.App can be registered
+to extensionless files.  Currently this is unsupported through
+liberkey.  Therefore, this is only in effect when EmacsPortableApp is
+running or installed locally.
+
+** Proxy
+This allows proxy settings to be dynamically determined based on your
+location.  Your password is encrypted based on the location as well.
+This works on windows only.
+
+EmacsPortable.App will setup the =HTTPS_PROXY=, =HTTP_PROXY= and
+=FTP_PROXY= based on the connection specific setup.
+To use a proxy, set it up with =EmacsOptions.exe=.
+
+This is sufficient for some packages, but not for =gnus=.
+
+The information is stored by the blowfish encryption algorithm.
+However the =HTTP_PROXY= environment variable will contain the
+password in clear text.
+
+When Putty Key is specified in this dialog, the putty key is loaded
+and Putty local or portable is started (depending on the options selected).
+** Behavior
+Under windows, launching options may be changed by running
+=EmacsOptions.exe=. Otherwise, ini files can be edited on Mac OSX.
+*** Launching Options 
+**** Emacs Version
+This selects the version of Emacs that EmacsPortable.App will be
+running.  This is useful if you run different versions of Emacs to
+test lisp code on multiple emacs versions.
+**** Startup Script
+Emacs allows you to select popular startup scripts for emacs startup.
+Once downloaded, you can use:
+- Prelude
+- Emacs 24 Starter Kit
+- Ergoemacs
+- Kicker
+
+You can also create  you own.  Just place an =init.el= or =.emacs= in
+a directory under =Data/startup/=
+
+**** Pseudo Daemon
+The Pseudo-Daemon Start-up script among other things:
+ - Opens Emacs
+ - Renames the current Frame
+ - Creates a New frame
+ - Calls an external program (ahk) that hides the frame & puts an
+   Emacs icon in the task bar to allow this frame to be shown or
+   closed
+ - Once Emacs has started up, subsequent calls to the Emacs start-up
+   script open a new frame.
+
+This allows you to "close" out of Emacs while maintaining a running Emacs.
+
+The startup script also sets the environment variable
+EMACS_SERVER_FILE to the temporary directory
+
+=$TEMP\ep\EmacsPortable.App-Server-$EMACS_VERSION\server=
+
+Subsequent calls to emacsclient.exe specify this server location.
+Therefore an emacs server can be run for each distinct emacs version
+
+More information about the startup is found in [[file:./App/site-lisp/site-start.org][site-start.org]]
+**** New frame on file open
+Create a new emacs "frame" on opening a new file.
+**** Debug startup
+Under windows, debug mode starts =gdb= if found.  Additionally, if
+=App/gdbinit= is found, gdb sources this before running emacs.  You
+can download an appropriate gdbinit for emacs [[http://bzr.savannah.gnu.org/lh/emacs/trunk/annotate/head:/src/.gdbinit][here]].
+
+This is equivalent to using =EmacsDebug.exe=
+**** Unzip binaries and run from temporary directory
+Emacs binaries can be zipped to save space.  This requires that the
+emacs binaries are extracted to the temporary directory before
+running.  I have found that running emacs in this manner is faster
+than running it on the USB stick alone.  If not selected the binaries
+will run from the usb drive.  If you are running EmacsPortable.App locally
+**** Clean residual files
+When running portably, the unzipped binaries are stored in the
+temporary directory.  To save time on startup, if the bare binaries
+needed to run emacs are still present, the launcher uses these files
+in the temporary directory.
+
+When the clean residual files option is selected, these binaries are
+removed after emacs stops, otherwise they are retained to improve
+startup time. 
+**** Home directory
+The =HOME= Directory is where Emacs stores the =.emacs= file;  Other
+emacs programs also store information here. EmacsPortable.App has a
+few options for home directories
+
+*EXEDIR Alias*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains an ini Home Entry 
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=EXEDIR:/Data/Home
+#+END_SRC
+The EXEDIR directory is changed for the base directory that
+EmacsPortable.App is run from.
+
+The advantage to this methodology is that you can drag and drop Emacs
+and all your customizations will be dragged with it.
+
+*USB Alias*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains an ini Home Entry 
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=USB:/Documents/
+#+END_SRC
+USB represents the USB directory. This setting uses the PortableApps Documents Directory
+as the home-directory.  
+
+The USB directory is determined as follows:
+ - /Under Windows/
+   - Checks each removable and hard drive for an =.emacs= or =_emacs=
+     file under the specified directory.  For example
+     EmacsPortable.App would check =e:\Documents\.emacs= and
+     =f:\Document\.emacs=.  If it found =f:\Document\.emacs=, If it
+     exists, it assumes that the USB drive is =f:\=
+   - Checks each drive for a =PortableApps= directory.  If found it
+     assumes that this is the usb drive
+   - Checks for =Apps=,=EmacsPortable.App= or =PortableApps=,
+     =LiberKey\Apps=, etc (the directories found in App/paths.ini
+     portable.dirs). When found, EmacsPortable.App assumes the drive
+     where the directory is found is the USB drive.
+   - If not found, it will set the USB directory to the installed directory.
+ - /Under Mac OS X/
+   - Assumes the usb directory is the =/Volumes/USB-NAME/= directory.
+
+The advantage of this methodology is that under windows, Emacs can be
+copied to the hard-drive to speed up the run-time, and the
+initialization from the hard drive. 
+
+*Home if Exists*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains a full path, then
+the home is set when that file exists.  For example:
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=c:\
+#+END_SRC
+
+will set the home directory to =c:\= on Windows computers.  Currently,
+this is supported only on windows.
+
+*System home*
+
+If the =Data/ini/EmacsPortableApp.ini= file contains an ini Home Entry
+that doesn't start with either =EXEDIR:/= or =USB:/=, and doesn't
+exist then the
+original home directory is maintained.
+#+BEGIN_SRC conf
+  [EmacsPortableApp]
+  Home=Set as original
+#+END_SRC
+
+*Changing Home*
+ 
+When using EmacsOptions.exe, you do not have to worry about selecting
+which type of file is used.  If you select a directory on the USB
+drive, the EmacsPortableApp is updated accordingly.  If you select
+location within the portable app directory, the =EXEDIR= is replaced.
+Note that any where else may change depending on the computer you use.
+
+
+*** Integration Options
+**** Right-Click "Edit-With"
+This allows a right click to produce a "Edit with EmacsPortable.App"
+**** Org-protocol
+This registers Org-protocol and also associates org-protocol actions
+with adobe acrobat/adobe acrobat reader.
+**** Liberkey
+EmacsPortable.App will add LiberKey File associations when it locates
+LiberKey, and the LiberKey support is checked.  Note that you should
+restart LiberKey and make sure that the associations actually
+installed correctly.
+** Visual
+This allows the initial font/color and gemoetry options to be
+specified so that emacs will startup with these options enabled.
+
+
+These are called from the command line and do not affect the
+registry.
+
+In addition this tries to set an option to maximize new frames.
+** Download
+EmacsPortable.App can download and run the versions of Emacs from the
+mac repository and windows repository and package them so they work
+with the EmacsPortable.App launcher.
+
+If the EmacsOptions list of emacs versions is out of date, it can be
+updated by the following procedure:
+- Start EmacsPortable.App
+- Type =M-x official-emacs=
+
+This will update the emacs list of official binaries from [[http://emacsformacosx.com/][GNU Emacs
+For Mac OS X]] and [[http://www.gnu.org/software/emacs/][GNU Emacs]] websites.
+
+
+** Network Install
+** Build Launcher
+** Unix Components
+* Customizing
+** Startup Customization
+The =EmacsOptions.exe= allows you to set Emacs startup options via a
+GUI.  This is mirrored in the =Data/ini/EmacsPortable.ini= file. 
+
+** Setting Startup Environment variables
+By creating or editing an environment ini file at
+=Data/ini/Environment.ini=, startup environmental variables may be set.
+For example, if you use the =colemak= keyboard with the ergoemacs
+package, the following ini-file will set the
+=ERGOEMACS_KEYBOARD_LAYOUT= to the proper value
+
+#+BEGIN_SRC conf
+[Environment]
+ERGOEMACS_KEYBOARD_LAYOUT=colemak
+#+END_SRC
+
+** Load Path
+Load Path for source directory is in =Data/src=.
+** Literate Initialization
+When using EmacsPortable.App's startup mechanism, t
+1) Any =.org=, =.el= or =.elc= files in =Data/init= and loads them
+2) User-based =.org=, =.el=, or =.elc= files in =Data/init/user=.   
+3) System based =.org=, =.el= or =.elc= files in =Data/init/system=.
+   
+* Configuration
+Since EmacsPortable.App tries to run portably, there are a few things
+that are changed from a standard emacs distribution:
+
+1. Home directory is allowed to change based on different computers
+   (USB is e:, f:, etc)
+   
+2. Directories that change can become aliases for convenience and to
+   allow recent files to save correctly (for instance ~usb for the usb
+   drive).
+   
+3. Install fonts on different computers to allow a favorite font to be
+   used in emacs for all distributions.  In windows this is done by
+   making the font available to windows during the session.
+** Emacs aliases
+Emacs has a list of "home" directory aliases.  The absolute
+directories are:
+|-------------+------------------------------+-------------------------------------|
+| Alias       | True Directory               | Directory Purpose                   |
+|-------------+------------------------------+-------------------------------------|
+| ~ahk/       | Other/source/ahk             | AHK Sources Directory               |
+| ~app/       | App/                         | EmacsPortable.App Application Files |
+| ~doc/       | USB Drive Documents          | Documents Directory                 |
+| ~ep/        | .                            | EmacsPortable.App Directory         |
+| ~h/         | System Home Directory        | System Home Directory               |
+| ~ini/       | Data/ini                     | EmacsPortable.App ini files         |
+| ~nsi/       | Other/source/nsi             | NSIS Sources Directory              |
+| ~pa/        | USB Drive:/PortableApps      | Portable Apps                       |
+| ~shared/    | Data/start/shared            | Shared Customizations               |
+| ~site-lisp/ | App/site-lisp                | Site Lisp Directory                 |
+| ~src/       | Data/src                     | EmacsPortable.App lisp source files |
+| ~start/     | Data/start                   | EmacsPortable.App Customizations    |
+| ~system/    | Data/start/system            | System-based Customizations         |
+| ~usb/       | USB Drive                    | USB Drive                           |
+| ~user/      | Data/start/user              | User-based Customizations           |
+|-------------+------------------------------+-------------------------------------|
+
+
+Other aliases are added =~el-get/package/elpa= is changed to =~elpa=, as
+if it were a symbolic link.  Since symbolic links are not supported in
+windows, this is handled by emacs only.  This was implemented to allow
+files to remain the same between file systems.  =~usb/= will be the
+same on every system.
+
+In addition to these aliases, the following aliases are also defined:
+
+- =~el-get=, is an alias for the el-get package directory
+- =~elpa=, is an alias for the user elpa package directory
+- =~theme= or =~themes=, is an alias for the emacs24 themes directory,
+  (as long as the themes directory is /not/ the =user-emacs-directory=).
+- =~snip=, =~snips=, =~snippets=, =~snippet=, is an alias for
+  yasnippets snippets.
+- All the startup scripts in =Data/start= have an alias created for them.
+
+Custom aliases may be added by customizing =EmacsPortable-aliases=.
+
+** Font installation
+Will install specific fonts, if needed.
+** Updating mirrors to the latest version of emacs
+You can update the current list of supported emacs versions by
+running =emacs-portable-update-offical-emacs-releases=.
+* How It Works
+** Fonts
+*** Windows
+Under windows the fonts in the =App/fonts/= directory are temporarily
+installed/registered. Once Emacs Exits, the fonts are unregistered.
+*** Mac OS X
+Copies fonts in the =App/fonts/= directory to =~/Library/Fonts/=
+** DOS Version
+The dos version starts up emacs in a dos command prompt window. When
+trying to do anything with the =EmacsPortableDOS= command, it will
+attempt to do that command in the initial =DOS= box.  This is just a
+test environment, and is likely not very reasonable to use.
+** Icons
+Icons came from various places:
+- [[http://findicons.com/icon/93514/new_go_down?id=344599#][Download Icon]]
+- USB Icon
+  - http://www.clker.com/clipart-10031.html
+- Modified Lady Bug http://www.clker.com/clipart-23283.html
+- Modified Uninstall Icon (original at
+  http://findicons.com/icon/127390/trash_empty)
+- Dos Box/Terminal http://www.clker.com/clipart-3716.html
+- Wrench http://www.clker.com/clipart-3716.html
+- Screw Driver http://www.clker.com/clipart-14895.html
+** NSIS Configuration
+EmacsPortable.App is built with NSIS with the following options:
+- NSIS 2.46
+- Large String Support http://nsis.sourceforge.net/Special_Builds#Large_strings
+- EnumINI http://nsis.sourceforge.net/EnumINI_plug-in
+- Inetc http://nsis.sourceforge.net/Inetc_plug-in
+- Execdos http://nsis.sourceforge.net/ExecDos_plug-in
+- Blowfish++ http://nsis.sourceforge.net/mediawiki/images/a/a7/BlowfishDLL.7z
+- MD5 http://nsis.sourceforge.net/MD5_plugin
+- XML http://nsis.sourceforge.net/XML_plug-in
+- FindProcDLL http://nsis.sourceforge.net/FindProcDLL_plug-in
+- LoadingBar UI http://nsis.sourceforge.net/LoadingBar_UI
+* Applications Support
+** Adding Paths (Windows Only)
+Most of the specific applications work by adding paths and changing
+environmental variables.  This is controlled by =App/ini/paths.ini=.
+EmacsPortableApp looks at the following sections
+*** General Paths
+**** Local Paths [local]
+Local paths are paths that emacs checks that are locally available.
+They are specified by NAME=Local Path Snippet.  An example of this is:
+#+BEGIN_SRC conf
+[local]
+git=msysgit\msysgit\bin
+git2=msysgit\bin
+gitmsys=msysgit\msysgit\mingw\bin
+gitmsys2=msysgit\mingw\bin
+#+END_SRC
+
+In this example =git= The following paths are checked:
+1) =c:\msysgit\msysgit\bin=
+   - The root is set to =c:\=
+2) =%ProgramFiles%\msysgit\msysgit\bin=
+   - The root is set to =%ProgramFiles%=
+
+If they exist they are added to the path environment before starting
+emacs.  If the directory in fact /exists/, then two additional ini
+sections are checked, =[local.git.path]= and =[local.git.set]=.  
+
+For the =git= local setup, there are two sections.  The first
+=local.git.path= is specified as follows:
+
+#+BEGIN_SRC conf
+[local.git.path]
+git_install_root=msysgit\msysgit
+#+END_SRC
+
+Then each key is added to the environment putting the root location
+before the right handed value.  In this case, the environmental
+variable is set to =c:\msysgit\msysgit= or
+=%ProgramFiles%\msysgit\msysgit= depending on which path was found.   
+
+The other type of section that is used is the =[local.git.set]=.  In
+the case of =git= this section is defined as:
+
+#+BEGIN_SRC conf
+  [local.git.set]
+  PLINK_PROTOCOL=ssh
+#+END_SRC
+
+Therefore, if =git= is found then the environmental variable
+=PLINK_PROTOCOL= is set to =ssh=.
+
+**** Portable Paths [portable]
+The portable paths are set in the same way as the local paths with the
+exception of the places they check for the existence of paths.  The
+=portable= section checks for paths in =USB:\=, and =USB:\PortableApps\=.
+**** Relative Paths [exedir]
+The =exedir= section checks for paths relative to the portable
+application. 
+*** Info Paths
+Emacs uses Info for most everything.  You can add =info= paths that
+Emacs doesn't know about by a similar manner as the general paths,
+above. 
+*** Unix Manual Paths
+** Java-based Apps
+EmacsPortable supports [[http://plantuml.sourceforge.net/download.html][PlantUML]], [[http://www.mathtoweb.com/cgi-bin/mathtoweb_home.pl][MathToWeb]] and [[http://ditaa.sourceforge.net/][ditaa]] for [[http://orgmode.org][org-mode]] assuming that
+[[http://portableapps.com/apps/utilities/java_portable_launcher][JavaPortable]] is installed.
+
+
+[[http://plantuml.sourceforge.net/download.html][PlantUML]] requires =dot= from GraphViz.  Therefore, GraphVizPortable
+would need to be installed for [[http://plantuml.sourceforge.net/download.html][PlantUML]] to work. 
+
+** Imagemagick
+Imagemagick is used for many Emacs Applications.  EmacsPortableApp
+attempts to detect a portable version of EmacsPortableApp or see if
+Imagemagick is installed on the computer.
+
+A portable version of Imagemagic is found [[ftp://ftp.imagemagick.org/pub/ImageMagick/binaries/ImageMagick-6.7.9-3-Q16-windows.zip][at ftp.imagemagick.org]]
+By extracting the portable version in the =PortableApps= or
+=LiberKey\MyApps= EmacsPortable.App will add this to the path.  This
+assumes the Imagemagick directory is =ImageMagick-6.7.9-3=
+** Python based Apps
+By installing [[http://www.portablepython.com][Python Portable]] into your =PortableApps= Directory,
+python is available to Emacs.  This is useful for installing Bazaar,
+which Emacs uses as its version control.
+** Version control Software
+*** Bazaar
+I have created a portable Bazaar.  EmacsPortable.App will recognize
+bazaar version
+*** Subversion in Windows
+Not quite portable, but you can get the binaries [[http://www.visualsvn.com/downloads/][here]].
+
+Running in subversion from within EmacsPortable.App /is/ portable,
+though.  Emacs will set the =%AppData%= Environment variable to
+=Data/AppData= and set =%ALLUSERSPROFILE%= to =Data/AppData=
+
+*** Git
+EmacsPortable.App picks up both Git portable and locally installed
+installations.  Because of emacs version control, if Git is not
+installed locally, Emacs is slowed down substantially.
+** SumatraPDF Portable
+Using AUCTeX inverse-search and forward search is supported with
+[[http://portableapps.com/apps/office/sumatra_pdf_portable][SumatraPDFPortable]].  There should be no set-up, EmacsPortable.App with
+setup both Emacs and [[http://portableapps.com/apps/office/sumatra_pdf_portable][SumatraPDFPortable]].  
+** GPG for encryption
+EmacsPortableApp looks for the gpg package that is installed with
+Mozilla Thunderbird.  First install Thunderbird Portable:
+
+http://portableapps.com/support/thunderbird_portable
+
+Then install gpg from here
+
+http://portableapps.com/support/thunderbird_portable#encryption
+
+** MikTeX Portable
+If you extract MikTeX portable to =PortableApps/MikTexPortable/=,
+EmacsPortable.App will be recognized and used.
+** Unix Ports
+*** Cygwin
+*** MSYS
+Supports MSYS portable.
+*** GnuWin32
+*** EzWin
+** PuTTY
+*** PuTTY and magit
+Since magit and OpenSSH does not work correctly in windows, you can
+use PuTTY to connect to your host via plink.  Note that you must
+connect to the host first via PuTTY or you will get one of the
+following error messages:
+
+: The server's host key is not cached in the registry. You
+: have no guarantee that the server is the computer you
+: think it is.
+: The server's rsa2 key fingerprint is:
+: ssh-rsa 2048 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+: Connection abandoned.
+: fatal: The remote end hung up unexpectedly
+
+or
+
+: WARNING - POTENTIAL SECURITY BREACH!
+: The server's host key does not match the one PuTTY has
+: cached in the registry. This means that either the
+: server administrator has changed the host key, or you
+: have actually connected to another computer pretending
+: to be the server.
+: The new rsa2 key fingerprint is:
+: ssh-rsa 2048 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+: Connection abandoned.
+: fatal: The remote end hung up unexpectedly
+
+
+The information about setting up GIT to use putty are located here.
+
+http://sitaramc.github.com/gitolite/contrib_putty.html
+
+This is done automatically when running TRAMP.
+
+Therefore, if you want to use magit for github, you need open
+puttyportable and attempt to open =git@github.com= so it can cache the
+host id.
+*** PuTTY and Tramp
+From Jeremy Engilsh there is a tutorial on how to get TRAMP to work
+with windows 2K.  This is adapted from [[http://www.jeremyenglish.org/docs/tramp_ntmacs.pdf][that tutorial]].
+
+EmacsPortable.App will download and setup the appropriate files for
+PuTTY portable, if you need them.  In addition to putty.exe, you will
+need:
+- puttygen.exe
+- pageant.exe
+- plink.exe
+
+
+1. Generate a Key
+
+Use Puttygen to generate a key.  Puttygen should be in the
+PuttyPortable application.
+
+[[./Other/img/PuTTYKeyGenerator0.png]]
+[[./Other/img/PuTTYKeyGenerator1.png]]
+
+2. Save the public key
+   
+   This is under File->Save Private Key
+
+3. Export the key to an open ssh key.
+   
+   This is under Conversions->Export OpenSSH Key
+
+4. Copy the key to the server.
+
+   This can be done with a secure file transfer like FileZilla.
+
+   Or, if ssh is working for you, you can use the following shell
+   command
+
+#+BEGIN_SRC sh
+scp key user@host:~/
+#+END_SRC
+
+5. Log into the host and add to authorized keys
+
+#+BEGIN_SRC sh
+ssh example.server.com
+mkdir ~./ssh
+chmod 700 ~/.ssh
+cat ~/key >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+rm ~/key
+#+END_SRC
+
+6. Let EmacsPortable.App know about the key
+   
+   Use EmacsOptions.exe to select the PuTTy key.  If you want it to be
+   portable keep the key on the USB drive *OR* in the executable
+   directory.
+
+7.  Run EmacsPortable.App. 
+
+    EmacsPortable.App will start =pageant.exe= if it is not already
+    running and set up tramp to use plink.  This is done by the
+    site-start.
+
+
+*** PuTTYPortable
+To use the settings of PuTTYPortable, you have to have a PuTTYPortable
+session open.
+*** PuTTY and Proxy settings
+PuTTY currently stores proxy settings in the registry. If
+EmacsPortable.App is started up AND PuTTY Pageant has not started up,
+then:
+ - EmacsPortable.App will run Paegeant Portable
+ - Just after launching emacs, EmacsPortable.App will write the Proxy
+   settings to the registry
+ - When you exit PuttyPortable, these settings will be saved.
+
+Therefore, you do not need to always manually edit proxy settings, and
+plink should work most of the time.
+*** PuTTY and R
+R can connect to remote sessions using ssh.el.  When you use PuTTY to
+connect you will need to set the following option:
+
+#+BEGIN_SRC emacs-lisp
+  (setq ssh-program "plink")
+#+END_SRC
+
+** Bleeding edge emacs (Not supported yet)
+These are notes to use the bleeding edge emacs.
+
+Goto the App directory, and under a command prompt that has bzr
+installed, type
+
+#+BEGIN_SRC ntcmd 
+    bzr branch --stacked bzr://bzr.savannah.gnu.org/emacs/trunk emacs-bzr
+#+END_SRC
+
+
+If that has already been performed, to update just type:
+
+#+BEGIN_SRC ntcmd 
+  bzr pull
+#+END_SRC
+
+If you are behind a firewall you may wish to use git to get the latest
+sources.  Note that only the Bazaar repo is the official 
+
+
+#+BEGIN_SRC ntcmd 
+    git clone http://git.savannah.gnu.org/r/emacs.git emacs-git
+#+END_SRC
+
+
+* Building an installer
+You can build an installer with the command =build-nsi= inside emacs.

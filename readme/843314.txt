@@ -1,0 +1,16 @@
+These build scripts will bootstrap a build environment from which packages
+for the LightCube OS base system can be built.
+
+To begin building modify 'Makefile' to meet your specific needs and then issue
+'make'.
+
+
+Project Description:
+Scripts to bootstrap a build environment for LightCube OS using musl libc
+
+README:
+These build scripts will bootstrap a build environment from which packages
+for the LightCube OS base system can be built.
+
+To begin building modify 'Makefile' to meet your specific needs and then issue
+'make'.

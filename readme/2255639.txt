@@ -1,0 +1,15 @@
+##########################
+Django на кончиках пальцев
+##########################
+
+Наш ответ DjangoBook.
+
+Project Description:
+The book about Django that is written by our experience.
+
+README:
+##########################
+Django на кончиках пальцев
+##########################
+
+Наш ответ DjangoBook.

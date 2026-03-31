@@ -1,0 +1,5 @@
+Project Description:
+IMDb Pro Safari Extension
+
+README:
+http://www.kevinashworth.com/imdbpro/safariextension.html

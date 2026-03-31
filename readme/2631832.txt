@@ -1,0 +1,7 @@
+Project Description:
+Various card games: Poker, Black Jack
+
+README:
+Card Game Base Implementation
+
+Will add support for Poker, Black Jack, etc

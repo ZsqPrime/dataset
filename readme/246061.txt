@@ -1,0 +1,75 @@
+= rack-superfeedr
+
+A gem that provides a rack middleware to interact with {Superfeedr}[http://superfeedr.com/]'s PubSubHubbub API. It let you *subscribe*, *unsubscribe* and *receive* incoming feed notifications.
+This should work with any Rack-compatible framework, as well as fully managed platforms like {Heroku}[http://www.heroku.com/].
+
+If you're looking to integrate into a Rails application, we suggest you check this {Rails Engine}[https://rubygems.org/gems/superfeedr_engine], which is more suited and will handle a lot more things on your behalf!
+
+== Installing
+
+    gem install rack-superfeedr
+    
+== Using
+
+You first need a {subscriber account}[http://superfeedr.com/subscriber] with Superfeedr.
+
+*Warning* : your web application needs to be accessible for Superfeedr to send notifications. If you want to test it locally, we suggest you use it with a tool like {Passsageway}[https://www.runscope.com/docs/passageway] which will make your local port accessible from the outside world.
+
+=== Sinatra
+
+See the {example}[https://github.com/superfeedr/rack-superfeedr/blob/master/examples/sinatra_app.rb]... and {check the docs}[http://rubydoc.info/github/superfeedr/rack-superfeedr/master/Rack/Superfeedr] for more details. 
+
+
+== Contributing
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+
+== Copyright
+
+Copyright (c) 2015 Superfeedr. See LICENSE.txt for further details.
+
+
+
+Project Description:
+A gem that provides a rack middleware to interract with Superfeedr's API.
+
+README:
+= rack-superfeedr
+
+A gem that provides a rack middleware to interact with {Superfeedr}[http://superfeedr.com/]'s PubSubHubbub API. It let you *subscribe*, *unsubscribe* and *receive* incoming feed notifications.
+This should work with any Rack-compatible framework, as well as fully managed platforms like {Heroku}[http://www.heroku.com/].
+
+If you're looking to integrate into a Rails application, we suggest you check this {Rails Engine}[https://rubygems.org/gems/superfeedr_engine], which is more suited and will handle a lot more things on your behalf!
+
+== Installing
+
+    gem install rack-superfeedr
+    
+== Using
+
+You first need a {subscriber account}[http://superfeedr.com/subscriber] with Superfeedr.
+
+*Warning* : your web application needs to be accessible for Superfeedr to send notifications. If you want to test it locally, we suggest you use it with a tool like {Passsageway}[https://www.runscope.com/docs/passageway] which will make your local port accessible from the outside world.
+
+=== Sinatra
+
+See the {example}[https://github.com/superfeedr/rack-superfeedr/blob/master/examples/sinatra_app.rb]... and {check the docs}[http://rubydoc.info/github/superfeedr/rack-superfeedr/master/Rack/Superfeedr] for more details. 
+
+
+== Contributing
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+
+== Copyright
+
+Copyright (c) 2015 Superfeedr. See LICENSE.txt for further details.

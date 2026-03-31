@@ -1,0 +1,126 @@
+1.Install rvm
+  - curl -L get.rvm.io | bash -s stable
+  - source /etc/profile.d/rvm.sh
+
+Find the requirements;
+
+        rvm requirements
+
+install the additional dependencies as mentioned. 
+
+2. Install ruby
+   - rvm install 1.9.3
+
+3. Install
+  3.1 Install from gem
+  ======================
+    1. gem install ispunity
+   
+
+  3.2 Install from source
+  =======================
+    1. cd /opt
+
+    2. Install IspUnity ( make sure you have git installed)
+      -  git clone git://github.com/aruntomar/isp_unity.git
+
+    3. cd /opt/isp_unity
+
+    4. bundle install
+
+4. Using configuration file
+   - We have provided with sample configuration file under config folder with the name configuration.json.example that must be copied under /etc folder.
+   - cp -v config/configuration.json.example /etc/ispunity.json
+
+5. modify the json file to suit your network. 
+
+6. How to execute
+   - As user root execute the following command 
+   - ispunity
+
+7. Usage
+  ispunity clear_rules  # Clear the rules setup by the routing policy
+  ispunity help [TASK]  # Describe available tasks or one specific task
+  ispunity license      # Displays the license
+  ispunity monitor      # Start monitoring the isp connections.
+  ispunity setup        # Setup the application
+  ispunity version      # Displays the version of Ispunity
+
+      
+8. Starting with Ispunity
+   - Follow the following process after successful installation of ispunity
+    
+    i.  ispunity setup       : This will setup your load balancing using the ispunity configuration file.
+        Whenever you will change the configuration file, you need to run this command to take effect.
+    
+    ii. ispunity monitor     : This will check for the availability of isp connections. If any connection any network connection is down then it will load balance the network traffic on available connections.
+ 
+
+Note : We recommend to add cron job for checking the available network connections. Add following into the crontab : 
+    */5 * * * * bash -c 'source /etc/profile.d/rvm.sh && /usr/bin/env ruby /usr/local/rvm/gems/ruby-1.9.3-p125/bin/ispunity monitor'
+
+
+Project Description:
+Multiple Internet Load balancing application
+
+README:
+1.Install rvm
+  - curl -L get.rvm.io | bash -s stable
+  - source /etc/profile.d/rvm.sh
+
+Find the requirements;
+
+        rvm requirements
+
+install the additional dependencies as mentioned. 
+
+2. Install ruby
+   - rvm install 1.9.3
+
+3. Install
+  3.1 Install from gem
+  ======================
+    1. gem install ispunity
+   
+
+  3.2 Install from source
+  =======================
+    1. cd /opt
+
+    2. Install IspUnity ( make sure you have git installed)
+      -  git clone git://github.com/aruntomar/isp_unity.git
+
+    3. cd /opt/isp_unity
+
+    4. bundle install
+
+4. Using configuration file
+   - We have provided with sample configuration file under config folder with the name configuration.json.example that must be copied under /etc folder.
+   - cp -v config/configuration.json.example /etc/ispunity.json
+
+5. modify the json file to suit your network. 
+
+6. How to execute
+   - As user root execute the following command 
+   - ispunity
+
+7. Usage
+  ispunity clear_rules  # Clear the rules setup by the routing policy
+  ispunity help [TASK]  # Describe available tasks or one specific task
+  ispunity license      # Displays the license
+  ispunity monitor      # Start monitoring the isp connections.
+  ispunity setup        # Setup the application
+  ispunity version      # Displays the version of Ispunity
+
+      
+8. Starting with Ispunity
+   - Follow the following process after successful installation of ispunity
+    
+    i.  ispunity setup       : This will setup your load balancing using the ispunity configuration file.
+        Whenever you will change the configuration file, you need to run this command to take effect.
+    
+    ii. ispunity monitor     : This will check for the availability of isp connections. If any connection any network connection is down then it will load balance the network traffic on available connections.
+ 
+
+Note : We recommend to add cron job for checking the available network connections. Add following into the crontab : 
+    */5 * * * * bash -c 'source /etc/profile.d/rvm.sh && /usr/bin/env ruby /usr/local/rvm/gems/ruby-1.9.3-p125/bin/ispunity monitor'

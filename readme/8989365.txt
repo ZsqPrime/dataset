@@ -1,0 +1,5 @@
+Project Description:
+a RESTful blogging platform based on node.js
+
+README:
+# Edible

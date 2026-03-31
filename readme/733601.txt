@@ -1,0 +1,5 @@
+Project Description:
+an open, vendor-neutral, stand-alone, LAS-compatible full waveform LiDAR standard
+
+README:
+The online environment for designing the open and vendor-neutral PulseWaves.org standard for geo-referenced full waveform LiDAR. The format is LAS compatible but instead of storing discrete returns, it stores geo-referenced laser pulses and their waveforms. It is meant to cater both topo and bathy LiDAR.

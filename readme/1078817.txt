@@ -1,0 +1,8 @@
+Hello World!!
+
+
+Project Description:
+A theme for Drupal 7.x following the DPSG Corporate Design
+
+README:
+Hello World!!

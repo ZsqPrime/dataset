@@ -1,0 +1,16 @@
+Moved: https://oinam.github.io/entities/
+
+Source: https://github.com/oinam/entities
+
+Please contribute, send in your Pull Request to the above repository instead.
+
+
+Project Description:
+Character Entities for HTML, CSS (content) and Javascript.
+
+README:
+Moved: https://oinam.github.io/entities/
+
+Source: https://github.com/oinam/entities
+
+Please contribute, send in your Pull Request to the above repository instead.

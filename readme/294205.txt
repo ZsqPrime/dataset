@@ -1,0 +1,7 @@
+Simple blog software with code and math - very early version
+
+Project Description:
+None
+
+README:
+Simple blog software with code and math - very early version

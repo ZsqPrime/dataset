@@ -1,0 +1,6 @@
+
+
+Project Description:
+Computer moderated umpire for wargaming
+
+README:

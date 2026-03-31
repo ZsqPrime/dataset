@@ -1,0 +1,25 @@
+This is repository the RepRapPro Tricolour and Mono Mendel.
+
+Files for the latest extruder drive may be found here:
+
+https://github.com/reprappro/Extruder-drive
+
+Files for the original RepRapPro Mendel maybe found at the following address:
+
+https://github.com/reprappro/Mendel/archive/Mendel-V1.0.zip
+
+
+
+Project Description:
+RepRapPro's version of Prusa Mendel
+
+README:
+This is repository the RepRapPro Tricolour and Mono Mendel.
+
+Files for the latest extruder drive may be found here:
+
+https://github.com/reprappro/Extruder-drive
+
+Files for the original RepRapPro Mendel maybe found at the following address:
+
+https://github.com/reprappro/Mendel/archive/Mendel-V1.0.zip

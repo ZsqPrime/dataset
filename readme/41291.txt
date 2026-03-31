@@ -1,0 +1,6 @@
+
+
+Project Description:
+TroopJS extensions to jQuery
+
+README:

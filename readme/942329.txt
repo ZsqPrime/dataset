@@ -1,0 +1,11 @@
+# SilexPhpEngine
+
+Simple service provider for the PhpEngine of the [Symfony Templating Component](https://github.com/symfony/Templating).
+
+Project Description:
+Silex service provider for the Symfony PhpEngine template engine
+
+README:
+# SilexPhpEngine
+
+Simple service provider for the PhpEngine of the [Symfony Templating Component](https://github.com/symfony/Templating).

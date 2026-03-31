@@ -1,0 +1,12 @@
+Peepcode Chef Recipes. Requires VirtualBox, available at:
+
+https://www.virtualbox.org/wiki/Downloads
+
+
+Project Description:
+Chef recipes for Chef Peepcode
+
+README:
+Peepcode Chef Recipes. Requires VirtualBox, available at:
+
+https://www.virtualbox.org/wiki/Downloads

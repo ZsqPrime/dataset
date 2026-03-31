@@ -1,0 +1,87 @@
+Keep in View
+============
+
+Copyright &copy; 2011 - 2013, Lunatech Research B.V., C. Egor Kloos. All rights reserved.
+
+### GNU General Public License, version 3 (GPL-3.0)
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  
+If not, see http://www.opensource.org/licenses/gpl-3.0.html
+
+### New version
+I've created a new version of this script for my Front-end Patterns 2 project which is currently under development.
+This new version doesn't work in IE8 or lower and because of this it no longer requires jQuery to run.
+https://github.com/dutchcelt/FEP-KeepInView
+
+
+### Description
+Don't allow elements to scroll out of view by having them stick to the top or bottom of a window.
+
+### Dependencies
+
+- jQuery (tested with 2.0.1)
+
+
+### Usage
+`$("div").keepInView();`
+or
+`$("div").keepInView({
+   edgeOffset: 24,
+   zindex: 42    
+});`
+
+### Script options
+`fixed: false`
+
+- When set to true position will be fixed regardless of scroll position 
+
+`edgeOffset : 0`
+
+- Vertical offset that applies to BOTH top and bottom
+- Do not add units like px or mm. The script always assumes pixels.
+
+`zindex: 1`
+
+- Override z-index if you can't or don't want to set this with CSS
+- Note lowercase notation of the objectname
+
+`$("div").trigger('update')`
+
+- When you element need to change in dimension like in an accordion or a toggled view the you can tell Keep in View to update the state of the element.
+
+`$("div").trigger('unstick')`
+
+- If you no longer need the element to remain in view you can 'unstick' it via '.trigger('unstick')'.
+
+`scrollable: false`
+
+- Allow the element to have an scrollbar. This will automatically resize itself. See example 3.
+
+`cloned: false`
+
+- This will clone your element so that the content doesn't reflow causing the page scroll to jump. See example 3.
+
+
+Caution
+=======
+`customClass: false`
+
+- Omit all jQuery positions and use your own styles with a custom CSS classname
+- The set classname will be triggered when element scrolls out of view 
+- The Script will add a suffix of '-top' or '-bottom'
+
+`$("div").keepInView({
+   customClass: "sticky"
+});`
+
+Will render out either:
+    
+`<div class"sticky-top"> … </div>`
+
+or
+
+`<div class"sticky-bottom"> … </div>`

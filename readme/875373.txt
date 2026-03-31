@@ -1,0 +1,12 @@
+An HTML5 audio app to make sound collages.
+Will work in Chrome (webkit) only.
+Work-in-progress here: www.noizzze.com
+
+
+Project Description:
+HTML5 audio collage app
+
+README:
+An HTML5 audio app to make sound collages.
+Will work in Chrome (webkit) only.
+Work-in-progress here: www.noizzze.com

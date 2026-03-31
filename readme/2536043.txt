@@ -1,0 +1,4 @@
+Project Description:
+jquery plugin for default text over inputs
+
+README:

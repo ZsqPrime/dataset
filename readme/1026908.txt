@@ -1,0 +1,13 @@
+## OSX
+
+- Install [jackaudio](http://jackaudio.org/)
+- Append to OTHER_LDFLAGS `-L/usr/local/lib -ljack`
+
+Project Description:
+None
+
+README:
+## OSX
+
+- Install [jackaudio](http://jackaudio.org/)
+- Append to OTHER_LDFLAGS `-L/usr/local/lib -ljack`

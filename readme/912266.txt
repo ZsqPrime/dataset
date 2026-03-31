@@ -1,0 +1,17 @@
+
+Hey, it's a readme.
+
+poo.
+
+Hanselman
+
+Project Description:
+An attempt at making PowerShell get along with both PoshHg *and* PoshGit
+
+README:
+
+Hey, it's a readme.
+
+poo.
+
+Hanselman

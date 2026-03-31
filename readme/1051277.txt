@@ -1,0 +1,12 @@
+h1. advanced-authenticator
+
+The common authentication system for ACA applications
+
+
+Project Description:
+authenticator used in aca projects
+
+README:
+h1. advanced-authenticator
+
+The common authentication system for ACA applications

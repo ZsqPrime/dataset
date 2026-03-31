@@ -1,0 +1,8 @@
+Calculadora em java feita para fins de estudos e entendimento da parte gráfica da linguagem
+
+
+Project Description:
+Uma calculadora muito simples usando Java
+
+README:
+Calculadora em java feita para fins de estudos e entendimento da parte gráfica da linguagem

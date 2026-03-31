@@ -1,0 +1,5 @@
+Project Description:
+System of Textual Analysis Recognition and Tagging
+
+README:
+Not yet online, thank you ;-)

@@ -1,0 +1,5 @@
+Project Description:
+67-373 Project
+
+README:
+This is the code repository for Team 3's fitness app for Android.

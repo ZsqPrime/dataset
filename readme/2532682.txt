@@ -1,0 +1,4 @@
+Project Description:
+sending email using spring MVC 3 framework
+
+README:

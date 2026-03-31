@@ -1,0 +1,25 @@
+
+Tweets2wordpress - use Twitter streaming API to generate WordPress content
+
+Requirements:
+
+ Python 2.5+
+ Tweepy 1.8 - get patched version: https://github.com/nickloman/tweepy
+ sqlite3
+ Wordpress running MySQL
+
+
+
+Project Description:
+Stream Twitter search to a Wordpress page
+
+README:
+
+Tweets2wordpress - use Twitter streaming API to generate WordPress content
+
+Requirements:
+
+ Python 2.5+
+ Tweepy 1.8 - get patched version: https://github.com/nickloman/tweepy
+ sqlite3
+ Wordpress running MySQL

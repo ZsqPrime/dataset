@@ -1,0 +1,5 @@
+Project Description:
+A python music player using the Tracker indexer
+
+README:
+A music player for GNOME using the Tracker indexer

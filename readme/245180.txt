@@ -1,0 +1,51 @@
+== Welcome to TweetLead on Rails
+ * Extract Mentions: 
+ * Get All Timelines
+ * Send Scheduled Messages
+ * Process Searches (retrieve messages from search)
+ * Launch Seenders
+
+
+
+== Current status of work
+ * Last day we made more modular the mention extractor moving some code to Profile
+ * Make work the Account::get_timeline
+
+== Next work flow:
+ * Move the data structuration to a independent function at it will be used in get_timeline and get_mentions
+ * Make a Account's method named get_mentions and do the foreach inside the Tweets Controller, get_mentions shouldnt be a Tweets method
+_____
+ * Clean profiles with replied = 0 more than 5 days old
+ * Remove #FF tweets
+
+ @ToDo
+  * Add profiles starred functionality (star a profile, list starred profiles)
+  * Delete / ban / ignore a profile 
+
+Project Description:
+None
+
+README:
+== Welcome to TweetLead on Rails
+ * Extract Mentions: 
+ * Get All Timelines
+ * Send Scheduled Messages
+ * Process Searches (retrieve messages from search)
+ * Launch Seenders
+
+
+
+== Current status of work
+ * Last day we made more modular the mention extractor moving some code to Profile
+ * Make work the Account::get_timeline
+
+== Next work flow:
+ * Move the data structuration to a independent function at it will be used in get_timeline and get_mentions
+ * Make a Account's method named get_mentions and do the foreach inside the Tweets Controller, get_mentions shouldnt be a Tweets method
+_____
+ * Clean profiles with replied = 0 more than 5 days old
+ * Remove #FF tweets
+
+ @ToDo
+  * Add profiles starred functionality (star a profile, list starred profiles)
+  * Delete / ban / ignore a profile

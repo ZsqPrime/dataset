@@ -1,0 +1,4 @@
+Project Description:
+Generic Sms Sender API (For Turkish GSM Operators)
+
+README:

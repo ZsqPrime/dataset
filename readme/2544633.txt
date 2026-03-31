@@ -1,0 +1,5 @@
+Project Description:
+rss reader for Windows Phone 7
+
+README:
+*repository created on 29/1/2012

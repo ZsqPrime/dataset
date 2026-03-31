@@ -1,0 +1,10 @@
+A MongoDB Backend for ezcWorkflow based on Benjamin Eberlei his work ( https://github.com/beberlei/ZetaWorkflowCouchDB )
+
+
+
+
+Project Description:
+Zeta Components MongoDB Backend for Workflow
+
+README:
+A MongoDB Backend for ezcWorkflow based on Benjamin Eberlei his work ( https://github.com/beberlei/ZetaWorkflowCouchDB )

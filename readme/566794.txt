@@ -1,0 +1,7 @@
+Testing new sinatra app.
+
+Project Description:
+New landing page using Sinatra and Cedar
+
+README:
+Testing new sinatra app.

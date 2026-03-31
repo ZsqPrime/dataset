@@ -1,0 +1,5 @@
+Description:
+UI code shared in common between the Locker Project and Singly's hosted offering.
+
+README:
+README not available

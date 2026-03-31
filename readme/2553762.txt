@@ -1,0 +1,25 @@
+Project Description:
+Orik is a modular script management system that can be run from anywhere.
+
+README:
+Hi, I'm Orik!
+
+I am a modular script management utility. (it's not that complicated, honest!)
+
+You can run me from anywhere, and I will execute your chosen modules in your current directory.
+
+Think of me as your central, modular script system.
+
+I'm also a pretty cool dwarf :)
+
+-- Running a module --
+
+Ensure that your desired module is in the orik/modules directory.
+
+To run a module, simple type orik/orik run MODULENAME. It's that simple.
+
+-- Setting up automatic running of modules --
+
+You can edit config.txt's MODULES array to create a list of modules that should be automatically run. These are run when you enter the "orik/orik run all" command.
+
+I hope you like me! (please do, please do!)

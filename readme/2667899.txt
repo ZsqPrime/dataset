@@ -1,0 +1,5 @@
+Project Description:
+Functional Programming in perl
+
+README:
+This is code written to learn functional programming with perl.

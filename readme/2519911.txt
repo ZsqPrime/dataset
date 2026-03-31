@@ -1,0 +1,5 @@
+Project Description:
+agentidea node.js peer (presentation layer-agnostic)
+
+README:
+express.js agentidea-style: sample application, based on tj's original (http://expressjs.com/2x/screencasts.html) vids...

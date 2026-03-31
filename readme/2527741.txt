@@ -1,0 +1,7 @@
+Project Description:
+Wortopia.de Server Implementation for Google App Engine
+
+README:
+Wortopia server implementation for Google App Engine.
+
+See http://wortopia.de

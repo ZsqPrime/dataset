@@ -1,0 +1,8 @@
+Project Description:
+Spiritual successor to Skittles Dark
+
+README:
+Slightly higher contrast, brighter, friendlier, spiritual successor to my Skittles Dark vim colorscheme.
+Vivify screenshot
+
+![Screenshot](http://i.imgur.com/mRchA.png)

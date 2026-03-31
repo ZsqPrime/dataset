@@ -1,0 +1,16 @@
+Show all your work in progress in your git repositories.
+
+If you're in the root directory of a git repo, it shows a summary of the work
+in progress for that repo. If you're anywhere else, it shows the work in
+progress for all the git repos in your home directory.
+
+
+Project Description:
+Show work-in-progress across one or more Git repositories
+
+README:
+Show all your work in progress in your git repositories.
+
+If you're in the root directory of a git repo, it shows a summary of the work
+in progress for that repo. If you're anywhere else, it shows the work in
+progress for all the git repos in your home directory.

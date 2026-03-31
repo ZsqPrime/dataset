@@ -1,0 +1,7 @@
+Project Description:
+Mobile App for iPhone that allows you to check into taxis all around the world by plate number.
+
+README:
+TaxiTaxi is a social media app for users of Taxis the world over. "Check in" to your cab by providing your City and it's License number (plate number). This is the iPhone App repo.
+
+Created by Michael Wawra and Peter Duerden.

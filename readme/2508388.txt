@@ -1,0 +1,18 @@
+CakeOSM
+
+Helper para usar OpenStreetMap (OSM) con CakePHP
+
+Ejemplo uso:
+http://cakeosm.javiermaties.com/
+
+
+Project Description:
+A openstreetmaps integrated application built on CakePHP framework
+
+README:
+CakeOSM
+
+Helper para usar OpenStreetMap (OSM) con CakePHP
+
+Ejemplo uso:
+http://cakeosm.javiermaties.com/

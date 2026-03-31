@@ -1,0 +1,38 @@
+iTerm2 Getafe theme
+====================
+
+Description
+-----------
+This colorscheme was inspired by the Molokai color scheme. This is a dark theme for iTerm2.
+
+
+Install details
+===============
+Import the colorscheme (getafe.itemcolors) by going to iTerm -> Preferences -> choose Colors tab -> Load presets -> Import
+
+
+Credits
+-------
+2012 Lars Smit <larssmit@me.com>
+
+
+Project Description:
+iTerm2 Getafe color theme
+
+README:
+iTerm2 Getafe theme
+====================
+
+Description
+-----------
+This colorscheme was inspired by the Molokai color scheme. This is a dark theme for iTerm2.
+
+
+Install details
+===============
+Import the colorscheme (getafe.itemcolors) by going to iTerm -> Preferences -> choose Colors tab -> Load presets -> Import
+
+
+Credits
+-------
+2012 Lars Smit <larssmit@me.com>

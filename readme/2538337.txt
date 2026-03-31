@@ -1,0 +1,8 @@
+Project Description:
+Weboldalak validságának ellenőrzése. (Szakdolgozat)
+
+README:
+Az ide felkerülő anyagok a szokdolgozatom részei leszenk, bárki tanulmányozhatja, de a jogok engem illetnek, stb, stb... :)
+
+A szakdolgozat keretein belül létre fogok hozni egy almazást, amely a weboldalak teljes levalidálást fogja lehetővé tenni.
+Az alap koncepció szerint 2 részből fog állni, egy python kódból, ami az alap validálást teszi lehetővé, valamint egy php-ból ami az online kezelőfelületet fogja nyújtani.

@@ -1,0 +1,33 @@
+Project Description:
+Food Bank Management CRUD Application
+
+README:
+<<<<<<< HEAD
+== Welcome to the FoodBank Management System v.0.2
+=======
+== Welcome to the FoodBank Management System v.0.21
+>>>>>>> release-0.21
+
+The Foodbank Management System was created to manage key resources for day-to-day food bank operations.
+These operations include: Locales, communities, households, families, clients (family members), food hampers, donors, donees, referral agencies and referrals. 
+
+
+Changelog:
+0.1
+-Locales, communities
+-Households, families, clients (family members), food hampers
+-Donors, donees, incoming/outgoing donations
+-Referral agencies and referrals.
+
+0.2
+-User authentication (default user: admin@localhost.local, password=password)
+-Role-based access control
+-Email password resets
+-Volunteer coordination / timekeeping.
+-Cleaned up views with nested forms
+-Added notices for adding/updating records
+
+
+== Getting Started
+
+The installation instructions have not yet been finalized as this application is still in its infancy.

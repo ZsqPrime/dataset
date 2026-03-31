@@ -1,0 +1,21 @@
+Project Description:
+Clojure for Ableton Live with Max for Live
+
+README:
+# clj4l
+
+Clojure for Ableton Live with Max for Live
+
+## Usage
+
+FIXME: write
+
+## Installation
+
+FIXME: write
+
+## License
+
+Copyright (C) 2010-2011 Michael Wu
+
+Distributed under the Eclipse Public License, the same as Clojure.  See the file COPYING.

@@ -1,0 +1,5 @@
+Project Description:
+A lightweight http-client wrapper in Scala
+
+README:
+A lightweight http-client wrapper in Scala

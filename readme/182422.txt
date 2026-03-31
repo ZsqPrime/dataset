@@ -1,0 +1,7 @@
+James Cox has taken over maintenance of Geokit. Head over to https://github.com/imajes/geokit-gem for the latest and greatest!
+
+Project Description:
+Geokit has a new home
+
+README:
+James Cox has taken over maintenance of Geokit. Head over to https://github.com/imajes/geokit-gem for the latest and greatest!

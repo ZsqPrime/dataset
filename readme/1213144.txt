@@ -1,0 +1,8 @@
+LruSoftCache is a modified LruCache that uses SoftReference.
+
+
+Project Description:
+A modified version of Android LruCache that uses SoftReference
+
+README:
+LruSoftCache is a modified LruCache that uses SoftReference.

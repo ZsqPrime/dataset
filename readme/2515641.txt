@@ -1,0 +1,6 @@
+
+
+Project Description:
+Program układający graf na płaszczyźnie przy użyciu algorytmu ewolucyjnego.
+
+README:

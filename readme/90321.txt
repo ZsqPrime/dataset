@@ -1,0 +1,74 @@
+= Gandi - Ruby library for using the Gandi XML-RPC API
+
+A Ruby library for using the Gandi XML-RPC API.
+At the moment support is planned for the Domain, Contact and Operation APIs only, but Hosting and Catalog APIs support may be added in the future.
+Version 2.0.0 and upwards of this gem supports only the Gandi API version 2.0, use version 1.x of the gem if you need to the 1.0 API.
+
+== HOWTO
+
+See http://rpc.ote.gandi.net/doc/2.0/index.html for the full documentation about the API.
+Note that the apikey doesn't have to be explicitly provided when calling a method.
+
+Quick example:
+        Gandi.apikey = 'my 24-character API key'
+        Gandi.url # => "https://rpc.ote.gandi.net/xmlrpc/"
+        Gandi.url = Gandi::URL #Use the production URL instead of the default Operational Test and Evaluation URL
+        Gandi.call('version.info') #You do not have to provide the apikey for each call
+        contact = Gandi::Contact.new('FLN123-GANDI')
+        contact.country # => "FR"
+
+You can read more about the library in USAGE.rdoc.
+Detailed RDoc documentation for each method is available using `rake rdoc`.
+
+== TODO
+
+* Add missing methods and classes (packmail, webredir...)
+* Abstract the multiple fetches (with the 'pending' states) for Domain.available
+* Refactor the Operation object creation from the other classes
+* Refactor the object classes to ensure consistent behaviour (starting with the Contact class) : use hashes with class method and object with instance methods
+* Better handling of failures and server exceptions, and overall stricter params checking
+* More tests
+
+== Copyright
+
+Copyright (c) 2012 Pickabee. Released under the MIT licence, see LICENSE for details.
+
+
+Project Description:
+Ruby library for using the Gandi XML-RPC API
+
+README:
+= Gandi - Ruby library for using the Gandi XML-RPC API
+
+A Ruby library for using the Gandi XML-RPC API.
+At the moment support is planned for the Domain, Contact and Operation APIs only, but Hosting and Catalog APIs support may be added in the future.
+Version 2.0.0 and upwards of this gem supports only the Gandi API version 2.0, use version 1.x of the gem if you need to the 1.0 API.
+
+== HOWTO
+
+See http://rpc.ote.gandi.net/doc/2.0/index.html for the full documentation about the API.
+Note that the apikey doesn't have to be explicitly provided when calling a method.
+
+Quick example:
+        Gandi.apikey = 'my 24-character API key'
+        Gandi.url # => "https://rpc.ote.gandi.net/xmlrpc/"
+        Gandi.url = Gandi::URL #Use the production URL instead of the default Operational Test and Evaluation URL
+        Gandi.call('version.info') #You do not have to provide the apikey for each call
+        contact = Gandi::Contact.new('FLN123-GANDI')
+        contact.country # => "FR"
+
+You can read more about the library in USAGE.rdoc.
+Detailed RDoc documentation for each method is available using `rake rdoc`.
+
+== TODO
+
+* Add missing methods and classes (packmail, webredir...)
+* Abstract the multiple fetches (with the 'pending' states) for Domain.available
+* Refactor the Operation object creation from the other classes
+* Refactor the object classes to ensure consistent behaviour (starting with the Contact class) : use hashes with class method and object with instance methods
+* Better handling of failures and server exceptions, and overall stricter params checking
+* More tests
+
+== Copyright
+
+Copyright (c) 2012 Pickabee. Released under the MIT licence, see LICENSE for details.

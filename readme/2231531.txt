@@ -1,0 +1,12 @@
+Project Description:
+Sound routing utility for GTA04 gsm voice calls
+
+README:
+This program routes sound between UMTS modem and internal soundcard on GTA04 phone
+
+It's based on this [1] great tutorial and aplay source code.
+
+I don't care much about license as soon as your improvements to the source
+code are shared with comunity.
+
+[1] http://www.linuxjournal.com/article/6735

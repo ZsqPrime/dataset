@@ -1,0 +1,36 @@
+[![Dependency Status](https://david-dm.org/msysgit/msysgit.github.com.svg)](https://david-dm.org/msysgit/msysgit.github.com)
+
+The Git for Windows homepage
+
+http://msysgit.github.io/
+
+
+## Developing
+
+1. Install [Node.js](http://nodejs.org/)
+2. Install Grunt: `npm install -g grunt-cli`
+3. Install Node.js' dependencies: `cd msysgit.github.com && npm install`
+4. Run `grunt` to generate the files
+5. Run `grunt connect` and open http://localhost:4000
+   in your favorite browser to check the changes
+
+
+Project Description:
+msysGit-based Git for Windows 1.x is now superseded by Git for Windows 2.x
+
+README:
+[![Dependency Status](https://david-dm.org/msysgit/msysgit.github.com.svg)](https://david-dm.org/msysgit/msysgit.github.com)
+
+The Git for Windows homepage
+
+http://msysgit.github.io/
+
+
+## Developing
+
+1. Install [Node.js](http://nodejs.org/)
+2. Install Grunt: `npm install -g grunt-cli`
+3. Install Node.js' dependencies: `cd msysgit.github.com && npm install`
+4. Run `grunt` to generate the files
+5. Run `grunt connect` and open http://localhost:4000
+   in your favorite browser to check the changes

@@ -1,0 +1,15 @@
+Project Description:
+Open Source Taxi Management System using C# and MS SQL Server
+
+README:
+This is a System to manage cabs (Taxi).
+
+System will be developed using C# and SQL Server. 
+
+Will try to keep up with 3 layer architecture and OOP concepts.
+
+-- DEADLINE MISSED --- 
+Setting up the dead line for first release as April 2, 2012 (Since April 1st is not a good date ;))
+
+--- New DEAD Line ---
+End of May (hopefully yeah!!)

@@ -1,0 +1,9 @@
+Project Description:
+A website I created for a bar and restaurant in Haledon, NJ. This is a work in progress. By Aslan Varoqua
+
+README:
+A website I created for an establishment in Haledon, New Jersey. 
+
+This is still a work in progress. 
+
+Aslan Varoqua

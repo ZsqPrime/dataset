@@ -1,0 +1,10 @@
+Oishii,a simple online bookmark tool as an alternative to delicious.com.
+It's based on Yii Framework.
+
+
+Project Description:
+your own online bookmark
+
+README:
+Oishii,a simple online bookmark tool as an alternative to delicious.com.
+It's based on Yii Framework.

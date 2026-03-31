@@ -1,0 +1,26 @@
+vim
+===
+
+vim configs and plugins
+
+cd ~
+
+git clone git@github.com:jfstgermain/vim.git
+
+ln -s ./vim/.vimrc
+
+
+Project Description:
+vim configs and plugins
+
+README:
+vim
+===
+
+vim configs and plugins
+
+cd ~
+
+git clone git@github.com:jfstgermain/vim.git
+
+ln -s ./vim/.vimrc

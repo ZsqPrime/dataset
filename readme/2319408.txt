@@ -1,0 +1,12 @@
+Registry for the bot's triggers (commands)
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Registry for Erebot's commands
+
+README:
+Registry for the bot's triggers (commands)
+
+Package detailed description here (found in README)

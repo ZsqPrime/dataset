@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+HCI core interfaces
+===================
+
+Django application
+documentation comes soon.

@@ -1,0 +1,4 @@
+Project Description:
+Scouting project - Keeping track of our weekly activities (PHP)
+
+README:

@@ -1,0 +1,8 @@
+A package for analysis of catch curve data.
+
+
+Project Description:
+linear models for catch-curve analysis
+
+README:
+A package for analysis of catch curve data.

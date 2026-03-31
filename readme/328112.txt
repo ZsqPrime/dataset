@@ -1,0 +1,80 @@
+= IPGeoBase
+
+Архив с сайта http://ipgeobase.ru, содержащий базу местонахождений российских (с точностью до города), украинских (с точностью до города) и европейских (с точностью до страны) ip-адресов.
+
+== Installation
+  
+(1) Add to Gemfile:
+    gem 'ipgeobase', :git => 'git@github.com:vsevolod/ipgeobase.git'
+(2) Install required gems:
+    bundle install
+(3) Create models
+    rails g ipgeobase:models
+(4) Run migration
+    rake db:migrate
+
+== Upload new database
+
+* Update cities and regions from FILE or by URL(default)
+  rails g ipgeobase:upload:cities
+
+* Update geo ips from FILE or by URL(default)
+  rails g ipgeobase:upload:ips
+
+== Add relation for models
+
+  module User < ActiveRecord::Base
+    belongs_to_region
+  end
+
+По умолчанию цепляется к полю region_id:integer в модели. Можно кастомизировать следующим образом:
+  belongs_to_region :foreign_key => :reg_id
+
+== Methods
+
+После того, как выполнены все предыдущие шаги можно искать регион по IP адресу:
+  Ipgeobase::find_region_by_ip( '95.170.177.170' )
+  => #<Ipgeobase::Region id: 576, name: "Красноярск", ancestry: "1/296/485", names_depth_cache: "Россия/Сибирский федеральный округ/Красноярский кра...", region_id: 1428, ...>
+
+
+Project Description:
+загрузка регионов, районов и городов из http://ipgeobase.ru
+
+README:
+= IPGeoBase
+
+Архив с сайта http://ipgeobase.ru, содержащий базу местонахождений российских (с точностью до города), украинских (с точностью до города) и европейских (с точностью до страны) ip-адресов.
+
+== Installation
+  
+(1) Add to Gemfile:
+    gem 'ipgeobase', :git => 'git@github.com:vsevolod/ipgeobase.git'
+(2) Install required gems:
+    bundle install
+(3) Create models
+    rails g ipgeobase:models
+(4) Run migration
+    rake db:migrate
+
+== Upload new database
+
+* Update cities and regions from FILE or by URL(default)
+  rails g ipgeobase:upload:cities
+
+* Update geo ips from FILE or by URL(default)
+  rails g ipgeobase:upload:ips
+
+== Add relation for models
+
+  module User < ActiveRecord::Base
+    belongs_to_region
+  end
+
+По умолчанию цепляется к полю region_id:integer в модели. Можно кастомизировать следующим образом:
+  belongs_to_region :foreign_key => :reg_id
+
+== Methods
+
+После того, как выполнены все предыдущие шаги можно искать регион по IP адресу:
+  Ipgeobase::find_region_by_ip( '95.170.177.170' )
+  => #<Ipgeobase::Region id: 576, name: "Красноярск", ancestry: "1/296/485", names_depth_cache: "Россия/Сибирский федеральный округ/Красноярский кра...", region_id: 1428, ...>

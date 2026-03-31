@@ -1,0 +1,8 @@
+Please run your php script using this class (~/MySQLDump.class.php) with a cron (e.g. cPanel, Plesk, ...) and execute this script at a time periodic.
+
+
+Project Description:
+MySQLDump Backup PHP class
+
+README:
+Please run your php script using this class (~/MySQLDump.class.php) with a cron (e.g. cPanel, Plesk, ...) and execute this script at a time periodic.

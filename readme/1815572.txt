@@ -1,0 +1,8 @@
+Building games with Crafty presentation
+
+
+Project Description:
+Building videogames with Crafty for GULUC3M courses on March 2012
+
+README:
+Building games with Crafty presentation

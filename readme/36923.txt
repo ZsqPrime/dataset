@@ -1,0 +1,13 @@
+Project Description:
+lisp bytecode vm
+
+README:
+# What the hell is this thing?
+
+Move along. Nothing to see here.
+
+# Dependencies
+
+- libgmp >= ???
+
+Currently we do exactly zero checking that these dependencies are fulfilled.

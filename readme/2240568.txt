@@ -1,0 +1,21 @@
+"Repeat-After-Me" source code for MAKE:Projects
+
+Intended for use in the Arduino (MintDuino) platform 328 chip.
+
+No warranty implied or otherwise, use at your own risk.
+
+Steve Hobley February 2012
+www.stephenhobley.com
+
+Project Description:
+4 light "follow-on" game implementation for MAKE:Projects
+
+README:
+"Repeat-After-Me" source code for MAKE:Projects
+
+Intended for use in the Arduino (MintDuino) platform 328 chip.
+
+No warranty implied or otherwise, use at your own risk.
+
+Steve Hobley February 2012
+www.stephenhobley.com

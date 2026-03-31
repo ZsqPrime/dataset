@@ -1,0 +1,14 @@
+SimplePie_CodeIgniter
+=====================
+
+SimplePie+CodeIgniter is an integration of the latest SimplePie RSS parser with CodeIgniter.
+
+
+Project Description:
+The latest update to SimplePie integrating with CodeIgniter
+
+README:
+SimplePie_CodeIgniter
+=====================
+
+SimplePie+CodeIgniter is an integration of the latest SimplePie RSS parser with CodeIgniter.

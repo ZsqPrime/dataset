@@ -1,0 +1,8 @@
+This is a brief runthrough of rxjs (40 min talk) intended to introduce the concepts of functional programming and tha advantages to these abstractions.
+
+
+Project Description:
+examples of how to use rxjs for the LambdaLounge Indy meetup
+
+README:
+This is a brief runthrough of rxjs (40 min talk) intended to introduce the concepts of functional programming and tha advantages to these abstractions.

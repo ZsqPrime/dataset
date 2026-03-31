@@ -1,0 +1,8 @@
+The code is stolen from the totem's plugin.
+
+
+Project Description:
+Get subtitles from opensubtitles.org
+
+README:
+The code is stolen from the totem's plugin.

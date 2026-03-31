@@ -1,0 +1,91 @@
+Project Description:
+
+
+README:
+RedIC
+
+
+
+Collection of three ICs to change wool colors or wool blocks of multiple blocks with redstone events.
+
+
+
+
+
+Usage:
+
+
+
+Place a sign on a block and write the following lines for the different ICs (first line not necessary):
+
+
+
+
+
+TOGGLE
+
+[RC1000]
+
+0:0
+
+0:1:0:1:1:1
+
+
+
+Thrid line: Damage Value for wool color activeColor:inactiveColor.
+
+Fourth line: OffsetX:OffsetY:OffsetZ:width:length:height.
+
+
+
+
+
+COPY
+
+[RC1001]
+
+0:1:0:1:1:1
+
+0:0:0
+
+
+
+Thrid line: FromOffsetX:FromOffsetY:FromOffsetZ:width:length:height.
+
+Fourth line: ToOffsetX:ToOffsetY:ToOffsetZ
+
+
+
+
+
+SWITCH
+
+[RC1002]
+
+0:1:0:1:1:1
+
+0:0:0
+
+
+
+Thrid line: FromOffsetX:FromOffsetY:FromOffsetZ:width:length:height.
+
+Fourth line: ToOffsetX:ToOffsetY:ToOffsetZ
+
+
+
+
+
+RANDOM
+
+[RC1003]
+
+0:1:0:1:1:1
+
+0
+
+
+
+Thrid line: OffsetX:OffsetY:OffsetZ:width:length:height.
+
+Fourth line: 0 for one solid random color or 1 for all blocks individual random color

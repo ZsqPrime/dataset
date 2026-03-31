@@ -1,0 +1,8 @@
+Patched, cut-down build of http://code.google.com/p/odata4j/
+
+
+Project Description:
+
+
+README:
+Patched, cut-down build of http://code.google.com/p/odata4j/

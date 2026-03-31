@@ -1,0 +1,5 @@
+Project Description:
+Code for best constants in Lieb-Thirring inequalities
+
+README:
+Code not ready yet.

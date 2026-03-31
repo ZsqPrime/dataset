@@ -1,0 +1,41 @@
+Project Description:
+run nginx proxy server from perl
+
+README:
+=head1 NAME
+
+Nginx::Runner - run nginx proxy server
+
+=head1 SYNOPSIS
+
+    use Nginx::Runner;
+
+    my $nginx = Nginx::Runner->new;
+
+    $nginx->proxy("127.0.0.1:8080" => "127.0.0.1:3000");
+    
+    $nginx->proxy(
+        "https://127.0.0.1:8443" => "127.0.0.1:3000",
+        [ssl_certificate     => "/etc/ssl/nginx/nginx.pem"],
+        [ssl_certificate_key => "/etc/ssl/nginx/nginx.pem"]
+    );
+    
+    $nginx->run;
+
+    $SIG{INT} = sub { $nginx->stop };
+
+    print "Server available at ",
+      "http://127.0.0.1:8080 and https://127.0.0.1:8443\n";
+
+    sleep;
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2012, Sergey Zasenko.
+
+This program is free software, you can redistribute it and/or modify it under
+the same terms as Perl 5.14.
+
+=head1 SEE ALSO
+
+    L<http://nginx.org>

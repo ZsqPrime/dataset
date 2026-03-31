@@ -1,0 +1,5 @@
+Project Description:
+Rutgers Homegrown Nagios plugins and checks
+
+README:
+These are the Nagios tests and plugins written by Open System Solutions for use at Rutgers University.

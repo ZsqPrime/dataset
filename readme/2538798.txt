@@ -1,0 +1,10 @@
+Project Description:
+dotfiles
+
+README:
+My dotfiles.
+
+## Setup
+```
+$ bin/setup
+```

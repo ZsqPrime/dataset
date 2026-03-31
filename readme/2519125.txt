@@ -1,0 +1,4 @@
+Project Description:
+Hessian client for Javascript/CoffeeScript
+
+README:

@@ -1,0 +1,9 @@
+Project Description:
+Syntax highlighting for Mapserver files in Geany
+
+README:
+# Mapserver syntax highlighting for text editors
+
+Currently available:
+*	Geany (cross-platform)
+*	Notepad++ (Windows)

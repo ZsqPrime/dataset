@@ -1,0 +1,16 @@
+Project Description:
+tictactoe
+
+README:
+Tic Tac Toe -- Using RUBY and TDD!!
+
+Powered by the MiniMax algorithm. Allows for console play for human vs human, human vs computer, and computer vs computer (epic tie).
+
+Should never lose, and make choices that lead to higher winning likelyhood.
+
+Project requirements:
+Implements the MiniMax Algorithm, and never loses!
+
+by: Alex Stomp
+
+Tell me if you can beat it!

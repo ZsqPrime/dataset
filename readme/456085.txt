@@ -1,0 +1,7 @@
+Hey you! <a href="http://nwtjs.github.com/nwt/">Read the documentation.</a>
+
+Project Description:
+Node Web Toolkit - nwt is a modern javascript framework.
+
+README:
+Hey you! <a href="http://nwtjs.github.com/nwt/">Read the documentation.</a>

@@ -1,0 +1,10 @@
+Project Description:
+A bundle of classes and modules to give easy access to 2D OpenGL with Pike.
+
+README:
+A Pike module for writing games and other multimedia software using OpenGL.
+
+If you're using Linux, add this line to your .bashrc file to make the module 
+available to all of your projects:
+
+export PIKE_MODULE_PATH=/path/to/folder/EasyGL

@@ -1,0 +1,18 @@
+Project Description:
+Simplified javascript event handler (on/off/fire) cross browser, mousewheel support
+
+README:
+Required files:
+	hook.js - event handling dependencies
+	
+Information:
+'evnt' - the event to attach too.
+'elem' - the element to attach to - may be string input
+'func' - the function to execute when the event is called for the element
+
+Attach event:
+on: function(evnt, elem, func)
+Detach event:
+off: function(evnt, elem, func)
+Manually Fire/Activate event:
+fire: function(evnt, elem)

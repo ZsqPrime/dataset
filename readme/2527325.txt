@@ -1,0 +1,13 @@
+Project Description:
+Gist files
+
+README:
+git-scripts.sh      Git scripts
+sys-setup.sh        System setup scripts
+shell-scripts.sh    Shell scripts
+style.css           Custom styles
+keyfilter.html      Filter user input by regex
+vbs-scripts.vbs     Vbs scripts
+batch-scripts.bat   Windows batch scripts
+mac-shell-scripts.sh    Shell scripts for mac only
+hooks               Git hooks

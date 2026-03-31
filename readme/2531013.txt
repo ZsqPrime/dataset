@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+* Please refer to the INSTALL.html
+* http://foswiki.org/System/InstallationGuide

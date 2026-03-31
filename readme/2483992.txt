@@ -1,0 +1,7 @@
+Project Description:
+Route the user to the correct upload pages for the various content pages in Elgg
+
+README:
+= Content Redirector =
+
+Redirect users to the right content creation pages

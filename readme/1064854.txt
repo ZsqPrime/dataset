@@ -1,0 +1,7 @@
+This is sample readme for Uptrans.........
+
+Project Description:
+Site transfer utility from server to server
+
+README:
+This is sample readme for Uptrans.........

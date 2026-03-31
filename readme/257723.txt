@@ -1,0 +1,8 @@
+This plugin simplifies the package edit form it displays only 2 categories
+
+
+Project Description:
+Manages dataset forms in ckan
+
+README:
+This plugin simplifies the package edit form it displays only 2 categories

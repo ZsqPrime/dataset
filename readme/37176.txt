@@ -1,0 +1,14 @@
+Project Description:
+Integration Tests for Privly-type content
+
+README:
+This repository contains the test cases for Privly extensions. It is basically a series of static HTML pages with Privly links of various types. The test cases are intended to mimic the way that Privly links may be displayed across the web. This application is deployed to: http://test.privly.org.
+
+For more information on what Privly is, see https://priv.ly/pages/about.
+
+The development home of Privly is at http://www.privly.org/.
+
+Each test page should have:
+
+1. A header describing the purpose of the test page.
+2. A series of test case links with a description of the case. Links that should be injected (replaced with an iframe) are displayed in red. If the link is red, then there is a problem.

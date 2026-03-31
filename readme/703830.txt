@@ -1,0 +1,69 @@
+# Yomico - もう一つのMarkdownビューアー
+
+**Yomico（よみこ）はPerl製のMarkdownビューアー**です。
+手元にあるMarkdownファイルを素早くプレビューするために作られました。
+このREADMEファイルもMarkdownで記述されていますが、
+Yomicoでプレビューしつつ書いています。
+
+## インストール
+
+YomicoはPerlモジュールとスクリプトで成り立っています。
+また、[github上で公開](https://github.com/yusukebe/Yomico)をしています。
+インストールには以下のコマンドを参考にしてください。
+
+    $ git clone git://github.com/yusukebe/Yomico.git
+
+    $ cd Yomico
+
+    $ cpanm .
+
+## 使い方
+
+インストールが終わると「yomico」コマンドがシステム内で使えるようになります。
+yomicoコマンドでMarkdownファイル、もしくはディレクトリを指定すると起動します。
+
+    $ yomico README.mkdn
+
+お使いのブラウザで
+
+> http://localhost:5000
+
+にアクセスしてください。Markdownが整形されて見られているはずです。
+
+### 起動オプション
+
+ポートを変更するには「-p」オプションで指定してください。
+
+    $ yomico -p 8080 README.mkdn
+
+## TODO
+
+- <del>ディレクトリ対応</del>
+- ディレクトリ一覧でアイコンとか使う
+- カスタムCSS対応
+- google-prettyprintなどシンタックスハイライト対応
+
+## ネーミングについて
+
+Yomico（よみこ）というネーミングはアニメ・小説・コミックで展開している
+「**R.O.D -READ OR DIE-**」に登場する *読子・リードマン* に由来しています。
+読子はビブリオマニアと言われる大の読書好きです。
+彼女にMarkdownのテキストを快適に読んでもらえる事を目指して開発しています。
+
+## ライセンス
+
+This library is free software;
+
+you can redistribute it and/or modify it under the same terms as Perl itself.
+
+## 作者
+
+Yusuke Wada ( @yusukebe )
+
+- Blog: [ゆーすけべー日記](http://yusukebe.com/)
+- Mail: <yusuke@kamawada.com>
+- Twitter: [@yusukebe](http://twitter.com/yusukebe)
+
+---
+
+*Yomico - Yet Another Markdown Viewer*

@@ -1,0 +1,15 @@
+Project Description:
+
+
+README:
+
+A useful way to generate music from a locale as well as a time period.
+Should generate all the music you'll ever need (if you like techno)
+
+
+
+It works by taking all the Djs from a given club on resident advisor for the last year. 
+From there it writes the djs top 10 tracks to a file.
+After that it takes the tracks and finds them on youtube via the Google API.
+From there it plays them in youtube opening them firefox.
+it stores the url for fast look up later.

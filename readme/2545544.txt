@@ -1,0 +1,4 @@
+Project Description:
+kinectを利用するアプリ
+
+README:

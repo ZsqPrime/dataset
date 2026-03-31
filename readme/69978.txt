@@ -1,0 +1,8 @@
+FASTCUDA development: shared memory and scripting layer.
+
+
+Project Description:
+None
+
+README:
+FASTCUDA development: shared memory and scripting layer.

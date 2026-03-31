@@ -1,0 +1,8 @@
+copies origin file to target file after interruption after some checks
+
+
+Project Description:
+resume a copy
+
+README:
+copies origin file to target file after interruption after some checks

@@ -1,0 +1,19 @@
+This is a test simon.
+
+This microphone. It turns air. Into Music. 
+
+Need to follow this for static media: 
+
+http://docs.webfaction.com/software/django/getting-started.html
+
+Project Description:
+
+
+README:
+This is a test simon.
+
+This microphone. It turns air. Into Music. 
+
+Need to follow this for static media: 
+
+http://docs.webfaction.com/software/django/getting-started.html

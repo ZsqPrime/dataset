@@ -1,0 +1,15 @@
+Drools Multi Agent (Distributed) Agents Platform (Experimental)
+
+This project is an experiment to create an Autonomous set of Intelligent Agents.
+
+ 
+
+
+
+Project Description:
+Drools Multi Agent System (experimental)
+
+README:
+Drools Multi Agent (Distributed) Agents Platform (Experimental)
+
+This project is an experiment to create an Autonomous set of Intelligent Agents.

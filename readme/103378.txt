@@ -1,0 +1,45 @@
+Installation
+============
+
+1. Install Fabric v. 1.4.0
+    `sudo easy_install fabric==1.4.0`
+
+2. Clone repo
+    `git clone <url>`
+
+3. Deploy
+    `VIRTUAL_ENV="/wherever/you/want/virtualenv/to/be/installed/" fab activate:local deploy`
+
+
+Running backend tests
+=====================
+
+  To run functional tests, while in virtualenv, run
+
+    $ trial lyrics.grabbers.functional_tests
+
+
+
+Project Description:
+LastFM-powered lyrics search engine
+
+README:
+Installation
+============
+
+1. Install Fabric v. 1.4.0
+    `sudo easy_install fabric==1.4.0`
+
+2. Clone repo
+    `git clone <url>`
+
+3. Deploy
+    `VIRTUAL_ENV="/wherever/you/want/virtualenv/to/be/installed/" fab activate:local deploy`
+
+
+Running backend tests
+=====================
+
+  To run functional tests, while in virtualenv, run
+
+    $ trial lyrics.grabbers.functional_tests

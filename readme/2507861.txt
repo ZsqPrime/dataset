@@ -1,0 +1,4 @@
+Project Description:
+Research based permission manager for Bukkit
+
+README:

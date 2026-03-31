@@ -1,0 +1,13 @@
+Project Description:
+GameBoy Classic emulator (C++)
+
+README:
++Z80
++GPU
++MMU
++Timers
++Buttons
++Some Interrupts
++MBC1
+
+-No sound

@@ -1,0 +1,7 @@
+A repo for my bin scripts
+
+Project Description:
+None
+
+README:
+A repo for my bin scripts

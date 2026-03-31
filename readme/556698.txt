@@ -1,0 +1,27 @@
+Cosmofs is a new P2P filesystem written in Go.
+
+This project is developed for the "Sistemas Informáticos" course at Facultad de
+Informática - Universidad Politécnica de Madrid.
+
+Cosmofs is released as free software following a GPLv3 license as it is noticed
+in COPYING file.
+
+Author:
+	Roberto Costumero Moreno <roberto@costumero.es>
+
+
+
+Project Description:
+Customizable distributed P2P filesystem
+
+README:
+Cosmofs is a new P2P filesystem written in Go.
+
+This project is developed for the "Sistemas Informáticos" course at Facultad de
+Informática - Universidad Politécnica de Madrid.
+
+Cosmofs is released as free software following a GPLv3 license as it is noticed
+in COPYING file.
+
+Author:
+	Roberto Costumero Moreno <roberto@costumero.es>

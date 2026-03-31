@@ -1,0 +1,14 @@
+# What to Wear
+
+First implementation of the WtW site.
+Created by Raf Van Baelen
+
+
+Project Description:
+Helps you manage your wardrobe
+
+README:
+# What to Wear
+
+First implementation of the WtW site.
+Created by Raf Van Baelen

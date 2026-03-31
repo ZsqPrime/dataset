@@ -1,0 +1,41 @@
+# clj-validateurl
+
+
+
+What?
+_______
+
+A utility to identify broken links and record them.
+
+Usage
+_______
+
+Usage: -url <FQDN URL> e.g. -url \"http://www.slashdot.org\"
+
+Dependencies
+_______
+
+Requires a mongodb instance.
+
+Project Description:
+Clojure URL web crawler.
+
+README:
+# clj-validateurl
+
+
+
+What?
+_______
+
+A utility to identify broken links and record them.
+
+Usage
+_______
+
+Usage: -url <FQDN URL> e.g. -url \"http://www.slashdot.org\"
+
+Dependencies
+_______
+
+Requires a mongodb instance.

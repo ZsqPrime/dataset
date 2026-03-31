@@ -1,0 +1,4 @@
+Project Description:
+A program to solve the puzzle game Nurikabe, hopefully becoming less brute-force and more intelligent as time goes by
+
+README:

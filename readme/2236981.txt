@@ -1,0 +1,10 @@
+This is an initial proof of concept, implementing a simple content-type filter
+using the chrome.webRequest API.
+
+
+Project Description:
+Linked Data Browser for Google Chrome
+
+README:
+This is an initial proof of concept, implementing a simple content-type filter
+using the chrome.webRequest API.

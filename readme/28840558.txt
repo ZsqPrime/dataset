@@ -1,0 +1,5 @@
+Project Description:
+a memcached implementation in go
+
+README:
+An implementation of memcached in go, just for fun.

@@ -1,0 +1,5 @@
+Project Description:
+WordPressRecord implements an ActiveModel interface for talking to a WordPress site, using the WordPress JSON API
+
+README:
+WordPressRecord blah blah. ActiveModel blah blah. WordPress JSON API blah.

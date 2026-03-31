@@ -1,0 +1,8 @@
+The Wayfinder Server, called MC2.
+
+
+Project Description:
+The Wayfinder Server backend, "mc2"
+
+README:
+The Wayfinder Server, called MC2.

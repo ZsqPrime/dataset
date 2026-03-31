@@ -1,0 +1,5 @@
+Project Description:
+Place for code snips of various ilk.
+
+README:
+Dumping ground for small scripts and exercises that don't have another home.

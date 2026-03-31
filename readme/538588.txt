@@ -1,0 +1,78 @@
+DeepHash
+--------
+
+DeepHash is a tree data structure made up of nested hashes.  Items
+within the tree are located using a path, which is a list of keys.   
+DeepHash can compute values for non-leaf nodes based on their children.
+See tests for examples of use.
+
+Interface
+---------
+
+new()
+       create a new deep hash
+
+set(path :List<K>, newVal :V)
+        set a value at the specified path. create nodes as needed
+        path variable is modified!
+
+get(path :List<K>)
+        get the value at the specified path. return null if not found
+        path variable is modified!
+
+has(path :List<K>)
+        tell if the tree has a node at the given path
+
+getPathIterator()
+        pre-order traversal of paths, not lazy
+
+getValuesIterator()
+        pre-order traversal of values, not lazy
+
+accum :V->V->V
+        set a node's value by accumulating the values of its children
+
+cmp : K->K->Int
+        comparator function to sort keys during traversal
+
+
+Project Description:
+tree structure made up of nested hashes
+
+README:
+DeepHash
+--------
+
+DeepHash is a tree data structure made up of nested hashes.  Items
+within the tree are located using a path, which is a list of keys.   
+DeepHash can compute values for non-leaf nodes based on their children.
+See tests for examples of use.
+
+Interface
+---------
+
+new()
+       create a new deep hash
+
+set(path :List<K>, newVal :V)
+        set a value at the specified path. create nodes as needed
+        path variable is modified!
+
+get(path :List<K>)
+        get the value at the specified path. return null if not found
+        path variable is modified!
+
+has(path :List<K>)
+        tell if the tree has a node at the given path
+
+getPathIterator()
+        pre-order traversal of paths, not lazy
+
+getValuesIterator()
+        pre-order traversal of values, not lazy
+
+accum :V->V->V
+        set a node's value by accumulating the values of its children
+
+cmp : K->K->Int
+        comparator function to sort keys during traversal

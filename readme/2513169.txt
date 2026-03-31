@@ -1,0 +1,13 @@
+Project Description:
+SudokuApplication was developed by students attending Telemark University College, as a 6. semester project in the subject Object-oriented programming, spring 2011. Students participating in this project were: Christian Rasmussen, Erik Barsøe and Henrik H
+
+README:
+Features
+========
+
+- Five board sizes (4x4, 6x6, 9x9, 12x12 and 16x16)
+- Generator with four difficulties (Easy, Medium, Hard and Expert)
+- Solver
+- Import and export of game files
+- Error indication
+- Notes

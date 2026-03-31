@@ -1,0 +1,8 @@
+perl, bash, python and C++ code snippets.
+
+
+Project Description:
+Some perl and bash code snippets
+
+README:
+perl, bash, python and C++ code snippets.

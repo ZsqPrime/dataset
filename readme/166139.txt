@@ -1,0 +1,15 @@
+
+Built by following recommendations in CIS document:
+
+http://benchmarks.cisecurity.org/tools2/linux/CIS_RHEL_5.0-5.1_Benchmark_v1.1.2.pdf
+
+
+
+Project Description:
+Library of bash scripts that allow to harden security of Linux workstation and fingerprint essential files
+
+README:
+
+Built by following recommendations in CIS document:
+
+http://benchmarks.cisecurity.org/tools2/linux/CIS_RHEL_5.0-5.1_Benchmark_v1.1.2.pdf

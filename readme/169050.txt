@@ -1,0 +1,8 @@
+Build has moved to http://github.com/webos-internals/build
+
+
+Project Description:
+Preware Builds
+
+README:
+Build has moved to http://github.com/webos-internals/build

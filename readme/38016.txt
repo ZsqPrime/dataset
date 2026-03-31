@@ -1,0 +1,7 @@
+Project Description:
+Deprecated! Please see: https://github.com/getkirby
+
+README:
+#Kirby 1 Panel
+
+**Deprecated! Please visit http://github.com/getkirby**

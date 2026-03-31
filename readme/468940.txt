@@ -1,0 +1,6 @@
+
+
+Project Description:
+Python wrapper for Apache Tika, made to be easy_installed
+
+README:

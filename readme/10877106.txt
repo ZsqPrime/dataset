@@ -1,0 +1,6 @@
+Project Description:
+Unofficial, but fully-featured and free Dropbox client for iOS.
+
+README:
+Source code of my overly popular FullDrop iOS app.
+License: CC Non-Commercial Attribution-ShareAlike 3.0 Unported License

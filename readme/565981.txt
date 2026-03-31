@@ -1,0 +1,12 @@
+== Rails Store
+
+Experimenting with models, forms and gems
+
+
+Project Description:
+
+
+README:
+== Rails Store
+
+Experimenting with models, forms and gems

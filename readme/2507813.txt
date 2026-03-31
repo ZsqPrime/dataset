@@ -1,0 +1,6 @@
+
+
+Project Description:
+Alternate version of WageTracker using SQLite instead of XML
+
+README:

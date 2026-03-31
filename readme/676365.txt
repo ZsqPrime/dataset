@@ -1,0 +1,19 @@
+Project Description:
+Python bindings for PCRE
+
+README:
+morelia-pcre is a set of Python bindings for the Perl Compatible Regular Expressions (PCRE) library. It's created using Cython and it strives for completeness.
+
+Why 'morelia-pcre'? Because 'python-pcre' was taken :-)
+
+Testing:
+./setup.py build_ext -i
+./test_re.py # 2 tests are known to fail with "maximum recursion limit exceeded"
+./testsuite.py testdata/testinput1 testdata/testoutput1 | less
+# during development:
+./setup.py build_ext -i && { ./test_re.py; ./testsuite.py testdata/testinput1 testdata/testoutput1; }
+
+Code and issue tracker available at: https://github.com/stefantalpalaru/morelia-pcre
+Tested with pcre-8.35, cython-0.20.2 and python-2.7.8
+
+Sphinx docs: http://stefantalpalaru.github.com/morelia-pcre/index.html

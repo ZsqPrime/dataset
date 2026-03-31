@@ -1,0 +1,6 @@
+
+
+Project Description:
+Wordress plugin to make tabs and slides on the posts and pages
+
+README:

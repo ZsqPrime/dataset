@@ -1,0 +1,47 @@
+Just like construction workers, we sometimes have accidents.
+
+For that this powers: http://dataloss.herokuapp.com
+
+We also get sick, for that it powers: http://sicklysearls.herokuapp.com
+
+It abuses i18n to make it happen, so just create the proper locale files.
+
+It was built quickly and not very well, so Pull Requests are more than welcome! If you use this anywhere public, we'd love to add a link to it here, so let us know.
+
+You'll need at least one incident:
+  i = Incident.new :date => '2012-01-01'
+  i.twitter_id = 'yourname'
+  i.save
+
+To hook up oauth, you need these vars in a .env file:
+  TWITTER_CONSUMER_KEY=...
+  TWITTER_CONSUMER_SECRET=...
+
+Copyright © 2012-2013 Collective Idea. 
+Released under the MIT license: http://opensource.org/licenses/MIT
+
+Project Description:
+Tracking when things happened.
+
+README:
+Just like construction workers, we sometimes have accidents.
+
+For that this powers: http://dataloss.herokuapp.com
+
+We also get sick, for that it powers: http://sicklysearls.herokuapp.com
+
+It abuses i18n to make it happen, so just create the proper locale files.
+
+It was built quickly and not very well, so Pull Requests are more than welcome! If you use this anywhere public, we'd love to add a link to it here, so let us know.
+
+You'll need at least one incident:
+  i = Incident.new :date => '2012-01-01'
+  i.twitter_id = 'yourname'
+  i.save
+
+To hook up oauth, you need these vars in a .env file:
+  TWITTER_CONSUMER_KEY=...
+  TWITTER_CONSUMER_SECRET=...
+
+Copyright © 2012-2013 Collective Idea. 
+Released under the MIT license: http://opensource.org/licenses/MIT

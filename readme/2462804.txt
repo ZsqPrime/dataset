@@ -1,0 +1,24 @@
+# siesta
+
+Siesta makes it easy to prototype RESTful services
+
+# Install
+
+NPM
+
+    $ npm install siesta
+
+
+Project Description:
+Create RESTful services somewhat easily with an incomplete library
+
+README:
+# siesta
+
+Siesta makes it easy to prototype RESTful services
+
+# Install
+
+NPM
+
+    $ npm install siesta

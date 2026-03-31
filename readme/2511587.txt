@@ -1,0 +1,8 @@
+Este projeto é parte da dissertação de mestrado de Anderson Berg.
+
+
+Project Description:
+SOM algorithm for clustering multiple dissimilarity tables
+
+README:
+Este projeto é parte da dissertação de mestrado de Anderson Berg.

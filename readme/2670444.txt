@@ -1,0 +1,23 @@
+Project Description:
+RSA web pages, php5, used in conjuction with bash and bc
+
+README:
+On a LAMP server with bc and bash these web pages
+will let a user go through simple examples of the RSA public and private key
+process.
+
+The prime numbers used are much smaller than for a normal
+RSA key pair, but still have massive intermediate numbers
+in the calculations. These web pages also indicate the 
+prime number pairs effect on the size of encription key
+possible (i.e. the number of bits it could support).
+In fact you can try to RSA encrypt values too large
+for the keys you have made, and see the erronous results of doing this.
+
+This project was completed (in php4 originally) as part of a module
+on web encryption and security
+on my MSc in Software Engineering --- Brighton University UK --- way back in 2003.... I thought it was a
+good starting point for getting to grips with git-hub (where I had to create 
+proper rsa keys from linux, to get it all going).
+
+Robin Clark 26JAN2016: 08MAR2012

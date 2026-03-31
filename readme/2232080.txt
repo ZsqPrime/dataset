@@ -1,0 +1,13 @@
+WP-Bootstrap2 Theme
+===================
+
+WordPress theme based on Twitter Bootstrap 2.0.
+
+Project Description:
+Wordpress Theme based on Twitter Bootstrap 2
+
+README:
+WP-Bootstrap2 Theme
+===================
+
+WordPress theme based on Twitter Bootstrap 2.0.

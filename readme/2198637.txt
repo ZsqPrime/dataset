@@ -1,0 +1,7 @@
+This is my variant of django deploy. Supports multiple django projects on one nginx server.
+
+Project Description:
+Django deploy configuration template Nginx + uWSGI + Virtualenv + Virtualenvwrapper
+
+README:
+This is my variant of django deploy. Supports multiple django projects on one nginx server.

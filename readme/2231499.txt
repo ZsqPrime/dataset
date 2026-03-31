@@ -1,0 +1,9 @@
+Project Description:
+arktools: OpenSceneGraph Library
+
+README:
+Building
+=================
+
+./cmake/arkcmake/autobuild.py
+Then follow menu

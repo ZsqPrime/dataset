@@ -1,0 +1,8 @@
+Project Description:
+A collection of Eagle Libraries I've created and use in projects
+
+README:
+Eagle-Libraries
+===============
+
+A collection of Eagle Libraries I've created and use in projects

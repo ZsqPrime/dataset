@@ -1,0 +1,11 @@
+Project Description:
+Ext classes for handling openlayers panels and layers from gina
+
+README:
+Install
+---------
+TODO
+
+Usage
+---------
+TODO

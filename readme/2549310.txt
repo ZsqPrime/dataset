@@ -1,0 +1,4 @@
+Project Description:
+Python library for creating card games with multiplayer support
+
+README:

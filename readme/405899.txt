@@ -1,0 +1,10 @@
+    ln -s .bash_profile ../.bash_profile
+    ln -s .inputrc ../.inputrc
+
+
+Project Description:
+None
+
+README:
+    ln -s .bash_profile ../.bash_profile
+    ln -s .inputrc ../.inputrc

@@ -1,0 +1,11 @@
+ipconvertor.h/cpp is a stand alone class for use.
+
+The main of this project is a Qt GUI.  Project was built with qtcreator.
+
+Project Description:
+Subnet calculator
+
+README:
+ipconvertor.h/cpp is a stand alone class for use.
+
+The main of this project is a Qt GUI.  Project was built with qtcreator.

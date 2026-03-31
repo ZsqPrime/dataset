@@ -1,0 +1,14 @@
+misc
+====
+
+Miscellaneous code, configs and whatever mini-projects we have been to lazy to create a dedicated repository for.
+
+
+Project Description:
+Miscellaneous code, configs and nagios-plugins
+
+README:
+misc
+====
+
+Miscellaneous code, configs and whatever mini-projects we have been to lazy to create a dedicated repository for.

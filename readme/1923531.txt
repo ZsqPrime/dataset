@@ -1,0 +1,18 @@
+PhoneGap-Start
+---
+
+A starting point for PhoneGap apps.
+
+To get started: fork this repo, modify the config.xml to match your details, and get building!
+
+
+Project Description:
+Aplicación móvil para ver la cantidad de bicicletas en las distintas estaciones del programa Mejor en Bici de la Ciudad de Buenos Aires. Desarrollada utilizando PhoneGap y jQuery Mobile.
+
+README:
+PhoneGap-Start
+---
+
+A starting point for PhoneGap apps.
+
+To get started: fork this repo, modify the config.xml to match your details, and get building!

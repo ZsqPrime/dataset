@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+Rails4Me - My own tutorial application.
+Lots of modification....
+Simmmple app with extjs admin!

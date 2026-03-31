@@ -1,0 +1,7 @@
+complete implementation of "Plane Wave" effect over bitmap in Android
+
+Project Description:
+Plane Wave for Android
+
+README:
+complete implementation of "Plane Wave" effect over bitmap in Android

@@ -1,0 +1,77 @@
+Relationship Extender
+The {Girl,Boy}friend Management System
+Never sleep on the couch again!
+
+Built At: hackNYS12 by Jerry Reptak and Karina Ruzinov
+
+MongoDB: Store all the stuff (Karina)
+	User:
+		Partner - Old and Current
+			Likes
+			Dislikes
+			Recommendations
+
+
+Hunch: Recommendation Engine to find related likes/dislikes
+
+Anniversary:
+	Hunch: Find similar things you might like
+	Etsy: Find gifts based on recommendations
+
+Stay in:
+	*Ordr.in: Find a movie at home and order in food and spend the night at home.
+	*Netflix: Watch recommended movies.
+	*NYTimes: Movie Reviews
+	
+DuckDuckGo Zero Click Info
+	http://api.duckduckgo.com/?q=pomegranate&format=json&pretty=1
+	Get categories for likes and dislikes.
+		Food
+		Places
+		Film
+		Sport
+
+Etsy: (Jerry)
+	Get products based on keywords!
+	
+
+
+Project Description:
+Extends your relationship
+
+README:
+Relationship Extender
+The {Girl,Boy}friend Management System
+Never sleep on the couch again!
+
+Built At: hackNYS12 by Jerry Reptak and Karina Ruzinov
+
+MongoDB: Store all the stuff (Karina)
+	User:
+		Partner - Old and Current
+			Likes
+			Dislikes
+			Recommendations
+
+
+Hunch: Recommendation Engine to find related likes/dislikes
+
+Anniversary:
+	Hunch: Find similar things you might like
+	Etsy: Find gifts based on recommendations
+
+Stay in:
+	*Ordr.in: Find a movie at home and order in food and spend the night at home.
+	*Netflix: Watch recommended movies.
+	*NYTimes: Movie Reviews
+	
+DuckDuckGo Zero Click Info
+	http://api.duckduckgo.com/?q=pomegranate&format=json&pretty=1
+	Get categories for likes and dislikes.
+		Food
+		Places
+		Film
+		Sport
+
+Etsy: (Jerry)
+	Get products based on keywords!

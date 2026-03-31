@@ -1,0 +1,5 @@
+Description:
+1Channel.ch plugin for XBMC
+
+README:
+README not available

@@ -1,0 +1,50 @@
+Project Description:
+An extension to the OLPC sugar desktop environment
+
+README:
+GLYCOGEN for Sugar
+==================
+
+NOTE: This is a project was completed for university credit and submitted in July, 2011.
+      
+      Development has not continued since submission, but as I have time the aim
+      is to have glycogen or glycogen-inspired code incorporated into sugar.
+
+
+What is glycogen?
+-----------------
+
+Glycogen aims to add an extra interface screen to the Sugar desktop environment
+(see http://www.sugarlabs.org) which will allow activities to be combined into
+learning pathways.
+
+In addition, an API will be defined that activity developers can implement to
+allow finer-grained interaction with glycogen, so that learning pathways can
+include nodes with specific achievements in addition to the more general
+'do this activity' type nodes.
+
+
+Use with Sugar
+--------------
+
+This project's first aim is to develop a proof-of-concept custom release in the
+form of a customised 'sugar on a stick' that exists separately to the sugar
+project. This is mainly to fit into the time constraints of a university semester
+by bypassing (for now) the standard process for becoming involved officially as
+a contributor to the project.
+
+A later aim is to have the glycogen project incorporated into sugar's trunk and
+to be developed concurrently with sugar (rather than just working with a
+snapshot of sugar as the initial release will do).
+
+Installation
+------------
+
+To install glycogen in a copy of sugar, follow the installation instructions in 
+the README files in both extensions/ and site-packages/ (you have to drill down
+a few levels to find them).
+Glycogen can then be activated by logging in to sugar, opening "My Settings",
+clicking 'glycogen' and pressing the 'activate glycogen' button. This should add
+an extra view button to the home view, which will show the glycogen page.
+
+The activities work independently of glycogen so can be installed separately.

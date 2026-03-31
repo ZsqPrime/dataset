@@ -1,0 +1,42 @@
+Project Description:
+HW1, CS 445, Machine Learning, Winter 2012.  A perceptron to classify the handwritten number data at http://archive.ics.uci.edu/ml/datasets/Optical+Recognition+of+Handwritten+Digits . Generalizable to data with features encoded as integers, with minor var
+
+README:
+***Linear Discrimination With Perceptrons***
+
+AUTHOR: Karl Hiner
+INFO: HW1, CS 445, Machine Learning, Winter 2012.
+DESCRIPTION:
+A perceptron to classify the handwritten number data at
+http://archive.ics.uci.edu/ml/datasets/Optical+Recognition+of+Handwritten+Digits
+The perceptron trains on data in a user-specified training file
+(defaulting to 'data/optdigits.tra') until the average accuracy for all
+classes is no longer increasing, and then tests the trained weightings
+on a user-specified test file (defaulting to 'data/optdigits.tes').
+
+USAGE:
+To use default parameters and defualt train/test files, simply run
+> python perceptron.py
+
+OPTIONS:
+  -h, --help                            show help message and exit
+
+  -n TRAIN_FILE, --train=TRAIN_FILE     file with training data.
+                                        default: 'data/optdigits.tra'
+  -t TEST_FILE, --test=TEST_FILE        file with test data.
+                                        default: 'data/optdigits.tes'
+  -e MAX_EPOCHS, --epochs=MAX_EPOCHS    maximum number of epochs.
+                                        default: 10
+  -r RATE, --rate=RATE                  learning rate. default: 0.2
+
+  -o OVER_TRAIN, --over-train=OVER_TRAIN  if set to true, training will
+                                          go for twice as many epochs as
+                                          it takes to stop improving
+
+  -v VERBOSE, --verbose=VERBOSE         would you like to print more
+                                        detailed output?
+
+NOTES:
+The data is expected to be in CSV format, with one line per instance,
+where all integers in the line are features, except the last int in the
+line, which should be the class of the instance.

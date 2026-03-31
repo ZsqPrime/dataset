@@ -1,0 +1,5 @@
+Project Description:
+Price index for ecommerce.
+
+README:
+Calculate the CPI for ecommerce products. This project will scrape data from several Indian online stores.

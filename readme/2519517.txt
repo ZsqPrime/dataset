@@ -1,0 +1,4 @@
+Project Description:
+experimental and not working IRC bot in haskell
+
+README:

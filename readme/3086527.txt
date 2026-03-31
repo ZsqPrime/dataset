@@ -1,0 +1,7 @@
+Project Description:
+website for Open Advice
+
+README:
+This is the repository for the website of the Open Advice book. You can find the website at http://open-advice.org
+
+For questions about the book contact Lydia Pintscher at lydia@kde.org.

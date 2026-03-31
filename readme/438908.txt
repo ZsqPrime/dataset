@@ -1,0 +1,32 @@
+The Stratum 0 Open/Close Monitor shows whether the Stratum 0 hackerspace in
+Braunschweig, Germany is currently opened or closed.
+
+Currently the status can only be set by users on IRC. A plugin for the supybot
+IRC bot listens for !open and !close commands, and in this case writes an
+.htaccess configuration for the Apache web server, which then redirects queries
+of status.png to either open.png or closed.png, according to the hackerspace
+status. The supybot plugin also writes machine-readable information in JSON,
+XML and RFC822 format which can be used to build other applications to display
+the status (like @wansti's StratumsphereStatusWidget for Android)
+
+This repository includes the server part as well as some simple clients in the
+respective subdirectories. See there for more information.
+
+
+Project Description:
+The Stratum 0 Open/Close Monitor
+
+README:
+The Stratum 0 Open/Close Monitor shows whether the Stratum 0 hackerspace in
+Braunschweig, Germany is currently opened or closed.
+
+Currently the status can only be set by users on IRC. A plugin for the supybot
+IRC bot listens for !open and !close commands, and in this case writes an
+.htaccess configuration for the Apache web server, which then redirects queries
+of status.png to either open.png or closed.png, according to the hackerspace
+status. The supybot plugin also writes machine-readable information in JSON,
+XML and RFC822 format which can be used to build other applications to display
+the status (like @wansti's StratumsphereStatusWidget for Android)
+
+This repository includes the server part as well as some simple clients in the
+respective subdirectories. See there for more information.

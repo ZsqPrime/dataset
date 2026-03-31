@@ -1,0 +1,31 @@
+emerge layman (if you don't have it yet)
+
+Edit /etc/layman/layman.cfg and add this: (second line)
+
+overlays  : http://www.gentoo.org/proj/en/overlays/layman-global.txt
+	    http://github.com/castiel/gentoo-overlay/raw/master/overlay.xml
+
+Then:
+layman -L
+layman -a castiel
+
+then you can emerge anything from the castiel overlay
+
+
+
+Project Description:
+Different ebuilds I need for Gentoo
+
+README:
+emerge layman (if you don't have it yet)
+
+Edit /etc/layman/layman.cfg and add this: (second line)
+
+overlays  : http://www.gentoo.org/proj/en/overlays/layman-global.txt
+	    http://github.com/castiel/gentoo-overlay/raw/master/overlay.xml
+
+Then:
+layman -L
+layman -a castiel
+
+then you can emerge anything from the castiel overlay

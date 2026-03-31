@@ -1,0 +1,28 @@
+A Ruby Sinatra powered User-Pain dashboard for use with Jira.
+
+To configure:
+* Set up the following environmental variables: JIRA_USERNAME JIRA_PASSWORD JIRA_HOSTNAME JIRA_PORT
+* Edit $TYPE and $LIKELIHOOD in config.ru to reflect your custom fields names
+* Adjust $USERPAIN_THRESHOLD in config.ru to your needs. Default is 30.
+
+To launch:
+rackup -p 80
+
+Detailed information about User-Pain: http://www.lostgarden.com/2008/05/improving-bug-triage-with-user-pain.html
+
+
+Project Description:
+A userpain dashboard for Jira.
+
+README:
+A Ruby Sinatra powered User-Pain dashboard for use with Jira.
+
+To configure:
+* Set up the following environmental variables: JIRA_USERNAME JIRA_PASSWORD JIRA_HOSTNAME JIRA_PORT
+* Edit $TYPE and $LIKELIHOOD in config.ru to reflect your custom fields names
+* Adjust $USERPAIN_THRESHOLD in config.ru to your needs. Default is 30.
+
+To launch:
+rackup -p 80
+
+Detailed information about User-Pain: http://www.lostgarden.com/2008/05/improving-bug-triage-with-user-pain.html

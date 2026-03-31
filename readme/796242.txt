@@ -1,0 +1,10 @@
+Moved to http://github.com/monnetproject/lemon.api
+==================================================
+
+
+Project Description:
+lemon API core
+
+README:
+Moved to http://github.com/monnetproject/lemon.api
+==================================================

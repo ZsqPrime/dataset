@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+see following url for blog post of this example
+
+http://develoq.net/2012/custom-structuremap-lifecycle-management-for-quartz-net/

@@ -1,0 +1,22 @@
+* Emacs Club Page
+
+** misc/admin
+   Emacs Club administrative documents
+** org_publish.el
+   Automates the publishing process of org files to html.
+** [everything else]
+   Content for the emacs club website
+
+
+Project Description:
+None
+
+README:
+* Emacs Club Page
+
+** misc/admin
+   Emacs Club administrative documents
+** org_publish.el
+   Automates the publishing process of org files to html.
+** [everything else]
+   Content for the emacs club website

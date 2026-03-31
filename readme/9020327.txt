@@ -1,0 +1,5 @@
+Project Description:
+Visualisation of symmetrical components using Processing
+
+README:
+This is an interactive visualisation of symmetrical components, using Processing (and Processing.js).

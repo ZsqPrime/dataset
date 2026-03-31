@@ -1,0 +1,5 @@
+Project Description:
+obect-oriented javascript segments
+
+README:
+lh js

@@ -1,0 +1,10 @@
+String Scanner Utilities for C
+This is a simple, yet very powerful implementation of a "String Scanner" for C strings (char *). 
+
+
+Project Description:
+Acts as a scanner for C Strings
+
+README:
+String Scanner Utilities for C
+This is a simple, yet very powerful implementation of a "String Scanner" for C strings (char *).

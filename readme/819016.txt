@@ -1,0 +1,11 @@
+NUScope Processing
+
+Processing application to manage Northwestern University's in-house Scope.
+
+Project Description:
+Processing application to manage NUScope.
+
+README:
+NUScope Processing
+
+Processing application to manage Northwestern University's in-house Scope.

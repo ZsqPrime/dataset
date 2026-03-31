@@ -1,0 +1,221 @@
+==About Sadie
+
+Sadie is a general-purpose data server written in Ruby for other Rubyists.  It is designed to be fast, but also resource efficient, storing data in memory or, optionally and on a key-by-key basis, in disk-based storage.
+
+==Purpose
+Imagine you work in the IT department of a cell phone company and your boss asks you to design a system that will:
+* build a status page that shows a map with the operational status of all the cell towers and, for each one, the distance to the nearest field technician
+* generate a shapefile and a spreadsheet of the same data that will be available and up-to-date on the company's intranet, 24/7
+* when there's an outtage, send an SMS alert to the nearest field tech to the tower with the problem
+
+This is all inter-related data and, for a developer, it's not all that difficult to start thinking about how to approach these problems.
+
+With that said, if your boss a week later decides that he also needs to have google map imagery on the alert page and charts showing tower availability over time and average response time of technicians over the past several weeks, then things get a little more complicated.
+
+And if two weeks after that, he says he needs the technician availability data updated every ten minutes and the cell tower availability every five minutes, and, oh, the number of calls that come into customer care regarding a each tower's primary coverage area, it gets tough to imagine that the initial software engineering effort will have been robust enough to keep things sane.
+
+This is the sort of problem that Sadie is intended to address.
+
+==How it works
+Sadie is a key/value store that uses <em>primers</em>--which are really just ruby files written using Sadie's primer DSL--to set the key/value pairs.  These primers can be called on-demand (so no computational resources get expended until a request for a value is made) or they can be refreshed at certain intervals.
+
+For data that changes often, it's possible to expire data after a set amount of time or, if necessary, just after it's accessed for a just-in-time computation.
+
+Primers can reference other primers so it's easy to hide complexity, but a single primer can also be used to prime multiple keys.  In this way, it is easy to optimize for the case where several statistics depend upon the same database query or iteration over a set of records.  Rather than scanning a million records to find the average, then doing it again to find the minimum, then again for the maximum and again for the median, all of these statistics can easily be calculated during a single pass and, when a client requests the median, the average, minimum, and maximum will also be calculated and stored such that, if they are subsequently requested, no additional work will be necessary to fulfill the request.
+
+For large, less frequently accessed data, it is possible to specfiy that the value be stored to disk instead of memory.
+
+==How to use it
+Create a directory for sadie to operate in, say /var/sadie.
+
+Then create a directory in that called primers.  <em>So, now there's a /var/sadie/primers</em>
+
+In the primers directory, create files that end in .rb that look like:
+
+  require 'intersting_lib_that_does_neato_things'
+  require 'cool_notifier'
+  
+  prime ["test.expires.nsecs"] do
+  
+    expire :never
+    refresh 300       # generate this again every 5 minutes
+    store_in :memory  # optional, :memory is the default.  :file is also supported
+    after "test.expires.nsecs" do |key, val|
+      cool_notify 'ward@thecleavers.com', val
+    end
+    
+    assign do
+    
+      someothervar = session.get( "some.other.var" )
+      andanother = session.get( "yet.another.var" )
+      
+      neat_val = awesome_whatzit( someothervar, andanother )
+      
+      set neat_val
+    end
+  end
+
+Have a look at other primers in test/v2/test_installation/primers for more information.
+
+Now run the sadie server on whatever directory you set it up on:
+
+  bin/sadie_server.rb --framework-dirpath=/var/sadie
+
+When the server starts up, because this primer is set to refresh automatically, it will prime this key and it will do so again every 300 seconds as long as the server is running.
+  
+So now you can make GET requests on the keys,
+
+  wget http://localhost:4567/test.expires.nsecs -O /tmp/outputfile
+
+Or, you can use the sadie session in your Ruby code like this:
+
+  @sadie_session = SadieSession.new( :primers_dirpath => '/var/sadie/primers' )
+  puts "test.expires.nsecs: #{@sadie_session.get('test.expires.nsecs')}"
+ 
+That's it!
+
+==Caveat
+It's important to note that Sadie is going to be great for things like:
+* webscraping a pre-defined list of websites
+* digesting large datasets
+* log analysis
+
+but not so great for anything where you'd want to pass parameters to the querying function.
+
+So it'd be great for grabbing a list of all facebook users who've ever mentioned your name along with everything they've ever written, but it wouldn't be wonderful at grabbing everything some particular facebook user has ever written about you.
+
+Similarly, it'd be a wonderful tool for performing a statistical analysis on the game of baseball based on data from every baseball game ever played, but it's not well set up for you to ask it about a particular game (unless the game were of such interest that you took the time to write primers that were associated with that particular game).
+
+Of course, it is, at it's core, a key/value hash and, as such, you could use it to do such things as well as you could any other.  It is the primers that are limited, not the storage mechanism, so it'd be fine to build a web application that would depend upon Sadie to keep an updated version of all your chattering facebook friends and/or statistics about all the baseball games ever played and the same web app could easily mine this data for interesting things and use Sadie to cache the results of said mining for future use.  The important point here is that the primers exist to do the heavy lifting of data aggregation and transformation into usable forms and, beyond that, Sadie is a key/value store like many others.
+
+
+
+==Contribute
+Do it!  The github url for Sadie is at: [https://github.com/FredAtLandMetrics/sadie]
+ 
+==Future versions
+Future version of Sadie will:
+* index on key string patterns
+* make use of a redis storage mechanism to become scalable and distributed
+
+==Where to get it
+Sadie can be downloaded via its rubygems page[https://rubygems.org/gems/sadie] or from github[https://github.com/FredAtLandMetrics/sadie].
+
+==Support
+Feel free to email me at fred@landmetrics.com
+
+==How to say thanks
+I accept thanks via email at fred@landmetrics.com.  Beer from afar and lucrative consulting gigs are also welcomed.
+
+Project Description:
+Sadie is a data framework intended to ease the pain of managing related data.
+
+README:
+==About Sadie
+
+Sadie is a general-purpose data server written in Ruby for other Rubyists.  It is designed to be fast, but also resource efficient, storing data in memory or, optionally and on a key-by-key basis, in disk-based storage.
+
+==Purpose
+Imagine you work in the IT department of a cell phone company and your boss asks you to design a system that will:
+* build a status page that shows a map with the operational status of all the cell towers and, for each one, the distance to the nearest field technician
+* generate a shapefile and a spreadsheet of the same data that will be available and up-to-date on the company's intranet, 24/7
+* when there's an outtage, send an SMS alert to the nearest field tech to the tower with the problem
+
+This is all inter-related data and, for a developer, it's not all that difficult to start thinking about how to approach these problems.
+
+With that said, if your boss a week later decides that he also needs to have google map imagery on the alert page and charts showing tower availability over time and average response time of technicians over the past several weeks, then things get a little more complicated.
+
+And if two weeks after that, he says he needs the technician availability data updated every ten minutes and the cell tower availability every five minutes, and, oh, the number of calls that come into customer care regarding a each tower's primary coverage area, it gets tough to imagine that the initial software engineering effort will have been robust enough to keep things sane.
+
+This is the sort of problem that Sadie is intended to address.
+
+==How it works
+Sadie is a key/value store that uses <em>primers</em>--which are really just ruby files written using Sadie's primer DSL--to set the key/value pairs.  These primers can be called on-demand (so no computational resources get expended until a request for a value is made) or they can be refreshed at certain intervals.
+
+For data that changes often, it's possible to expire data after a set amount of time or, if necessary, just after it's accessed for a just-in-time computation.
+
+Primers can reference other primers so it's easy to hide complexity, but a single primer can also be used to prime multiple keys.  In this way, it is easy to optimize for the case where several statistics depend upon the same database query or iteration over a set of records.  Rather than scanning a million records to find the average, then doing it again to find the minimum, then again for the maximum and again for the median, all of these statistics can easily be calculated during a single pass and, when a client requests the median, the average, minimum, and maximum will also be calculated and stored such that, if they are subsequently requested, no additional work will be necessary to fulfill the request.
+
+For large, less frequently accessed data, it is possible to specfiy that the value be stored to disk instead of memory.
+
+==How to use it
+Create a directory for sadie to operate in, say /var/sadie.
+
+Then create a directory in that called primers.  <em>So, now there's a /var/sadie/primers</em>
+
+In the primers directory, create files that end in .rb that look like:
+
+  require 'intersting_lib_that_does_neato_things'
+  require 'cool_notifier'
+  
+  prime ["test.expires.nsecs"] do
+  
+    expire :never
+    refresh 300       # generate this again every 5 minutes
+    store_in :memory  # optional, :memory is the default.  :file is also supported
+    after "test.expires.nsecs" do |key, val|
+      cool_notify 'ward@thecleavers.com', val
+    end
+    
+    assign do
+    
+      someothervar = session.get( "some.other.var" )
+      andanother = session.get( "yet.another.var" )
+      
+      neat_val = awesome_whatzit( someothervar, andanother )
+      
+      set neat_val
+    end
+  end
+
+Have a look at other primers in test/v2/test_installation/primers for more information.
+
+Now run the sadie server on whatever directory you set it up on:
+
+  bin/sadie_server.rb --framework-dirpath=/var/sadie
+
+When the server starts up, because this primer is set to refresh automatically, it will prime this key and it will do so again every 300 seconds as long as the server is running.
+  
+So now you can make GET requests on the keys,
+
+  wget http://localhost:4567/test.expires.nsecs -O /tmp/outputfile
+
+Or, you can use the sadie session in your Ruby code like this:
+
+  @sadie_session = SadieSession.new( :primers_dirpath => '/var/sadie/primers' )
+  puts "test.expires.nsecs: #{@sadie_session.get('test.expires.nsecs')}"
+ 
+That's it!
+
+==Caveat
+It's important to note that Sadie is going to be great for things like:
+* webscraping a pre-defined list of websites
+* digesting large datasets
+* log analysis
+
+but not so great for anything where you'd want to pass parameters to the querying function.
+
+So it'd be great for grabbing a list of all facebook users who've ever mentioned your name along with everything they've ever written, but it wouldn't be wonderful at grabbing everything some particular facebook user has ever written about you.
+
+Similarly, it'd be a wonderful tool for performing a statistical analysis on the game of baseball based on data from every baseball game ever played, but it's not well set up for you to ask it about a particular game (unless the game were of such interest that you took the time to write primers that were associated with that particular game).
+
+Of course, it is, at it's core, a key/value hash and, as such, you could use it to do such things as well as you could any other.  It is the primers that are limited, not the storage mechanism, so it'd be fine to build a web application that would depend upon Sadie to keep an updated version of all your chattering facebook friends and/or statistics about all the baseball games ever played and the same web app could easily mine this data for interesting things and use Sadie to cache the results of said mining for future use.  The important point here is that the primers exist to do the heavy lifting of data aggregation and transformation into usable forms and, beyond that, Sadie is a key/value store like many others.
+
+
+
+==Contribute
+Do it!  The github url for Sadie is at: [https://github.com/FredAtLandMetrics/sadie]
+ 
+==Future versions
+Future version of Sadie will:
+* index on key string patterns
+* make use of a redis storage mechanism to become scalable and distributed
+
+==Where to get it
+Sadie can be downloaded via its rubygems page[https://rubygems.org/gems/sadie] or from github[https://github.com/FredAtLandMetrics/sadie].
+
+==Support
+Feel free to email me at fred@landmetrics.com
+
+==How to say thanks
+I accept thanks via email at fred@landmetrics.com.  Beer from afar and lucrative consulting gigs are also welcomed.

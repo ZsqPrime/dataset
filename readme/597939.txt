@@ -1,0 +1,8 @@
+Algorithms for JTS Geometries
+
+
+Project Description:
+Java library that extends JTS with additional geometric and graph algorithms
+
+README:
+Algorithms for JTS Geometries

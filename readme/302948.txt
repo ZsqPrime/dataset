@@ -1,0 +1,33 @@
+README? You don't need no stinkin' README.
+
+
+Asterisk::
+exten => _X.,n,TrySystem(/var/lib/asterisk/bin/cdr_gdocs/cdr2.php "${CALLERID(name)}" "${CALLERID(num)}")
+
+Daemon::
+Add /var/lib/asterisk/bin/cdr_gdocs/cdr_gdocs_daemon.php to /etc/rc.local
+Edit the cdr_gdocs_daemon.conf accordingly.
+
+
+TODO::
+Make the re-authentication more robust.
+Maybe move the initial login before the fork so we can error-out in front of the user.
+
+Project Description:
+Call logging script for Google Spreadsheets. Used internally for logging calls to a given hotline into a shared Google Spreadsheet.
+
+README:
+README? You don't need no stinkin' README.
+
+
+Asterisk::
+exten => _X.,n,TrySystem(/var/lib/asterisk/bin/cdr_gdocs/cdr2.php "${CALLERID(name)}" "${CALLERID(num)}")
+
+Daemon::
+Add /var/lib/asterisk/bin/cdr_gdocs/cdr_gdocs_daemon.php to /etc/rc.local
+Edit the cdr_gdocs_daemon.conf accordingly.
+
+
+TODO::
+Make the re-authentication more robust.
+Maybe move the initial login before the fork so we can error-out in front of the user.

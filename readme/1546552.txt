@@ -1,0 +1,5 @@
+Project Description:
+Instrumentation based Memory Profiler
+
+README:
+Full details available on the "InMemProfiler Site":http://mchr3k.github.com/org.inmemprofiler/

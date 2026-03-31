@@ -1,0 +1,15 @@
+Project Description:
+Apoio de projeto para o Desenvolvimento Enxuto no NSI
+
+README:
+== Projeto: 
+
+Desenvolvimento Enxuto
+
+== Objetivo:
+
+Reune arquivos, e ideias colhidas aleatoriamente, enquanto continuo buscando tempo para desenvolve-las
+
+== Estado:
+
+Intermitente

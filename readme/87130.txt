@@ -1,0 +1,5 @@
+Description:
+An elaborate statistics tracking system for League of Legends. It used to be a centralised PostgreSQL based system but now it's a stand-alone SQLite application. It was written in C# and makes use of the LibOfLegends RTMP library. It is licensed under the terms of the GPLv3. Unfortunately I stopped working on it in 2013-08. Check out the website for a longer explanation.
+
+README:
+README not available

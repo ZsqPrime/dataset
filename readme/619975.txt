@@ -1,0 +1,10 @@
+Waffle is a distributed graph processing framework based on Google's Pregel
+paper.  It's built on top of donut (github.com/dforsyth/donut).
+
+
+Project Description:
+A (work in progress) distributed graph processing framework for Go
+
+README:
+Waffle is a distributed graph processing framework based on Google's Pregel
+paper.  It's built on top of donut (github.com/dforsyth/donut).

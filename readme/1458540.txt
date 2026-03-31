@@ -1,0 +1,19 @@
+This is a ubuntu source package, containing the following binary packages:
+
+ * ohmage-server
+ * ohmage-viz
+ * ohmage-selfreg
+ * ohmage-standalone
+ 
+ 
+
+Project Description:
+ohmage-ubuntu
+
+README:
+This is a ubuntu source package, containing the following binary packages:
+
+ * ohmage-server
+ * ohmage-viz
+ * ohmage-selfreg
+ * ohmage-standalone

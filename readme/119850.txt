@@ -1,0 +1,9 @@
+jpmsi2stream
+============
+
+Project Description:
+Programme java pour insérer des fichiers PMSI (RSF et RSS) dans une base de données
+
+README:
+jpmsi2stream
+============

@@ -1,0 +1,9 @@
+Project Description:
+Harmattan Camerra Hack (Vol+ button as shutter)
+
+README:
+
+                             Harmattan Camerra Hack
+                             ----------------------
+
+See http://thp.io/2012/camerra/ for more information.

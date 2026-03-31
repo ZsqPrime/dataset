@@ -1,0 +1,5 @@
+Project Description:
+Estudos AJAX em Javascript puro, relembrando os velhos tempos sem frameworks Js
+
+README:
+Estudos AJAX em Javascript puro, usando PHP e MySQL

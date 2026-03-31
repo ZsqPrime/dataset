@@ -1,0 +1,9 @@
+SchoolStreet is an educational site providing E-management services to schools.
+
+
+
+Project Description:
+An educational portal providing e-management facility to schools.
+
+README:
+SchoolStreet is an educational site providing E-management services to schools.

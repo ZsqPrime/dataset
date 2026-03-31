@@ -1,0 +1,19 @@
+Project Description:
+
+
+README:
+UNIVERSIDAD CATOLICA ANDRES BELLO
+Facultad de Ingeniería
+Escuela de Ingeniería Informática
+Trabajo Especial de Grado
+
+Desarrollo de una Ontología y un Buscador Utilizando Tecnologías de Web Semántica
+
+Autor: Br. Israel Fermín Montilla
+Tutor: Ph.D. Wilmer Pereira
+Colaborador: Ing. Carlos Pérez
+
+Trabajo realizado para optar por el título de Ingeniero en Informática
+Inicio: enero 2011
+
+Repo creado el Martes 22 de Marzo de 2011

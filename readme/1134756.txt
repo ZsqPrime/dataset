@@ -1,0 +1,22 @@
+Project Description:
+yet another nosql storage system written in pure C
+
+README:
+ziack
+
+Yet another kv storage system for some particular needs, written in pure C, with php/python/ruby bindings.
+
+Key Feathers
+   - Ineternal version management support, can use diff to see the differences between supplied versions, just think it's a timeline
+   - Based on facebook haystack and bitcask model
+
+[Try to write beautiful C codes!]
+
+Demos
+.snippet-code.com
+  Using ziack to capture all the changes made by the user.
+2.PicStore
+  Using ziack to build a pic store.
+  version1->origin picture upload by the user
+  version2->the other format
+  ...

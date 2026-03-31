@@ -1,0 +1,22 @@
+This application requires MacOS X and a Wifi radio capable of running in 
+ad-hoc mode. This means any MacBook or iMac  will be able to run it.
+
+To run the application from the source just do:
+
+python unCloud.py
+
+To package the application into a .app install py2app ( http://pypi.python.org/pypi/py2app/ )
+
+
+Project Description:
+The internet has become an increasingly disputed space. Governments want to regulate it and internet providers want to restrict access to parts of it. To help us remember that the internet can exist without governments, we have created unCloud. unCloud is
+
+README:
+This application requires MacOS X and a Wifi radio capable of running in 
+ad-hoc mode. This means any MacBook or iMac  will be able to run it.
+
+To run the application from the source just do:
+
+python unCloud.py
+
+To package the application into a .app install py2app ( http://pypi.python.org/pypi/py2app/ )

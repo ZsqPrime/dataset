@@ -1,0 +1,5 @@
+Project Description:
+Powerful and lightweight MySQL database model for PHP
+
+README:
+http://slinq.com/software/dbsq

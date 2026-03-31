@@ -1,0 +1,45 @@
+Project Description:
+Yet another sittings symfony plugin
+
+README:
+Yet another alternative setting plugin
+
+* Installation
+
+$ git submodule add git://github.com/228vit/myConfigPlugin.git plugins/myConfigPlugin
+$ git submodule init
+$ git submodule update
+$ symfony doctrine:generate-migrations-diff
+$ symfony doctrine:generate-migrate
+
+* Enable plugin in config/ProjectConfiguration.class.php
+
+{{{
+class ProjectConfiguration extends sfProjectConfiguration
+{
+  public function setup()
+  {
+    $this->enablePlugin('myConfigPlugin');
+
+}}}
+
+
+* Usage
+{{{
+  myConfig::get(settingName, settingDefaultValue, settingNote);
+}}}
+
+Please note, if setting does not exists, new one will be created with default value. 
+
+* Manage settings in admin
+  
+  Enable admin module in setting.yml
+
+  $ symfony doctrine:generate-admin backend Config
+  backend.php/config
+
+* Dump all setting into sfConfig
+  
+Edit apps/appName/config/filters.yml
+myConfig:
+  class:    myConfigFilter

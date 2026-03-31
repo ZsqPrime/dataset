@@ -1,0 +1,5 @@
+Project Description:
+A pre-configured scripting client environment for the WISEBED experimentation facilities based on the BeanShell Java interpreter
+
+README:
+This will be the new home of the "Scripting Client" WISEBED client which is currently part of [Testbed Runtime](https://github.com/itm/testbed-runtime). Please stay tuned!

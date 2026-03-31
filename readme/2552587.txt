@@ -1,0 +1,9 @@
+Project Description:
+Laboratory work for computational geometry and computer graphics
+
+README:
+PBM format - http://netpbm.sourceforge.net/doc/pbm.html
+Convex hull source code - http://cm.bell-labs.com/who/clarkson/2dch.c
+
+Sample usage: 
+$ ./pbm2plist.pl < samples/map.pbm | ./2dch | java -jar rot_calipers/dist/rot_calipers.jar > report.html ; ./zipsvgs.pl; ./svg2png.pl

@@ -1,0 +1,97 @@
+Project Description:
+
+
+README:
+This is an app to present the podcasts of the British Tech Network (http://www.britishtechnews.com/).
+
+
+
+Demo site here:
+
+http://kimptoc.github.com/Smart-TV-BTTV-App/
+
+
+
+It just presents a menu of channels and then you can view/stream an episode from a selected channel.
+
+
+
+NOTES:
+
+- the mouse clicks seems to work, but dont - so dont use the mouse, use keyboard, eg like remote control
+
+
+
+TODO
+
+- consider using gridy to layout available podcasts - http://dailyjs.com/2012/12/10/extender-gridy-reduce/
+
+- enter on episode list goes to full screen, but when play is pressed, screen is not full screen
+
+- should return from station page exit app?
+
+- better format date/time in logging
+
+
+
+- fixed? esc/return key on website not returning
+
+- fixed? x / y selected episode, wrap issue when ep >9
+
+- rebrand to British Tech News, new logos/titles
+
+- fixed, i think: when go back to station page video bit still showing, sometimes :(
+
+- fixed, maybe: whole page is slightly off too high/low... video space is too high, but controls go off bottom of page
+
+
+
+TODO LATER
+
+- when no episodes returned, still can go up/down, selected episode num changes.. stop that
+
+- autostart first episode on selecting a channel
+
+- Load/structurce css so that its not cached...
+
+- get BTN page background
+
+- better "loading" animation/intro gifs/video
+
+- refactor layout - put top/bottom in layout, so that minimum in index.html
+
+- reload page now and then to ensure latest shown - https://developer.mozilla.org/en/DOM/window.setInterval
+
+- preload episode list for all channels to make channel page quicker
+
+- return when in full screen, switches to non-full screen (not station listing)
+
+- what does enter key do? disable it? seems to not do anything useful
+
+
+
+- only works on 2012 samsung, see if can make it work on 2011/2010 models?
+
+
+
+NOTES
+
+
+
+- win7 - try and use "Problem Steps Recorder" to record screenshots...
+
+
+
+- win7 screen/window capture on MBA
+
+Print Screen
+
+ F14
+
+ Fn-Shift-F11
+
+Print active window
+
+ Option-F14
+
+ Fn-Shift-Option-F11

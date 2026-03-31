@@ -1,0 +1,11 @@
+This is blog theme compatible with Jekyll-Bootstrap
+
+<http://jekyllbootstrap.com> for usage.
+
+Project Description:
+None
+
+README:
+This is blog theme compatible with Jekyll-Bootstrap
+
+<http://jekyllbootstrap.com> for usage.

@@ -1,0 +1,11 @@
+Project Description:
+Inventory website for the Agriculture and Natural Resources Department
+
+README:
+The Agriculture and Natural Resources department at Berea College runs a mid-sized farm that produces beef and pork products. The beef and pork products
+ are then sold to Berea College’s food service, bookstore and at the farmer’s market. The department currently uses a spreadsheet to inventory the 
+ products they sell. This has become cumbersome because they have to have too much repetitive information in the spreadsheet that has made it difficult 
+ to keep track of the inventory. Therefore, they want us to develop a web enable application that will make it easier for them to enter and update data about the
+ products they sell.Also, plans are in place to use barcodes to capture information about their products in the future. Thus, the application should have
+ this capability. At the moment, they are not interested in the database storing the information about products sold to food service or the farmer’s 
+ market. They want the application to be used primarily for products sold at the farmer’s market.

@@ -1,0 +1,18 @@
+iOS-Facebook-Authentication
+===========================
+
+iOS-Facebook-Authentication
+
+**Note: Use iOSFBAuth.xcworkspace instead of iOSFBAuth.xcodeproj**
+
+
+Project Description:
+Shows sample of SSO and Dialog authentication for IOS
+
+README:
+iOS-Facebook-Authentication
+===========================
+
+iOS-Facebook-Authentication
+
+**Note: Use iOSFBAuth.xcworkspace instead of iOSFBAuth.xcodeproj**

@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+-- Personal DVD Inventory System --
+
+This is my first attempt at using Ruby, Rails, Git, and more...

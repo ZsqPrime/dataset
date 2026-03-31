@@ -1,0 +1,10 @@
+Kocaeli Üniversitesi Yazılım Lab. 1 3.projesidir. GPL koşullarınca kullanılabilir.
+Kocaeli University Software Lab. 1 3th project. İt be used in terms of GPL
+
+
+Project Description:
+An python script that traslates PL/SQL code to Javascript code (YazLab 3)
+
+README:
+Kocaeli Üniversitesi Yazılım Lab. 1 3.projesidir. GPL koşullarınca kullanılabilir.
+Kocaeli University Software Lab. 1 3th project. İt be used in terms of GPL

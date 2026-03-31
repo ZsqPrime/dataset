@@ -1,0 +1,20 @@
+<del>Install the latest version:</del>
+
+<del>https://github.com/downloads/nosamanuel/irccloud_embed/irccloud_embed.crx</del>
+
+GO HOME EVERYONE, IRCCLOUD ADDED THIS FEATURE.
+
+Under "Options", click "Embed media links".
+
+
+Project Description:
+Chrome extension to automatically embed IRCCloud image links as images
+
+README:
+<del>Install the latest version:</del>
+
+<del>https://github.com/downloads/nosamanuel/irccloud_embed/irccloud_embed.crx</del>
+
+GO HOME EVERYONE, IRCCLOUD ADDED THIS FEATURE.
+
+Under "Options", click "Embed media links".

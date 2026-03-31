@@ -1,0 +1,53 @@
+Project Description:
+A minecraft server backup program, written in C#, to copy your world to a backup directory.
+
+README:
+﻿backup source V1.9, compiled: v1.6.1, ReadMe v 1.9
+
+Minecraft server backup utility, writtin in C#. Requires the .NET framework version 4
+
+
+
+1.6.1-
+
+
+
+Compression fixed, leaving it so the non-zip directory is left.
+
+
+
+ToDo:
+
+Allow custom locations to backup to,
+
+Configurable amount of time between backups (currently 20 between each)
+
+make compression better
+
+
+
+Finished:
+
+√save last used backup world location (ex 'C:\minecraft\server\world1\')
+
+√compression
+
+
+
+known bugs:
+
+none
+
+
+
+The DotNetZip library is used (in 1.5+). Licence available at http://dotnetzip.codeplex.com/license
+
+
+
+1.7-
+
+Added support for backing world up to any location
+
+1.9-
+
+Checkboxes for various options, and a textbox that says any errors that occur

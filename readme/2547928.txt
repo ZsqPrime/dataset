@@ -1,0 +1,5 @@
+Project Description:
+R codes, plots and others for exploratory data analysis
+
+README:
+For exploratory data analysis in Casebook2, and initial design documents for embedded metrics as the workshops are held.

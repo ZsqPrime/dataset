@@ -1,0 +1,13 @@
+Docs
+----
+
+This folder contains Heatbeat documentation files.
+
+Project Description:
+Time-series data logging/graphing framework top of RRDTool
+
+README:
+Docs
+----
+
+This folder contains Heatbeat documentation files.

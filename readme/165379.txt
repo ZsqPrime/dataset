@@ -1,0 +1,8 @@
+This is a simple custom Django ecommerce store currently in production at www.minrivertea.com
+
+
+Project Description:
+Webstore for www.minrivertea.com
+
+README:
+This is a simple custom Django ecommerce store currently in production at www.minrivertea.com

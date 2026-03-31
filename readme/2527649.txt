@@ -1,0 +1,6 @@
+Project Description:
+first_app
+
+README:
+This is a test Application just for learning
+Delete it as soon as the requirement is over

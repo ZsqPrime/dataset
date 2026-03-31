@@ -1,0 +1,7 @@
+Component to display Hitboxes of Entities in CraftyJS Framework 
+
+Project Description:
+Component to display Hitboxes of Entities in CraftyJS Framework
+
+README:
+Component to display Hitboxes of Entities in CraftyJS Framework

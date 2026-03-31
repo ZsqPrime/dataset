@@ -1,0 +1,8 @@
+This repo will contain DooMKernel sources for HTC JetStream
+
+
+Project Description:
+DooMKernel sources for HTC JetStream
+
+README:
+This repo will contain DooMKernel sources for HTC JetStream

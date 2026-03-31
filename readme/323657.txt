@@ -1,0 +1,7 @@
+README file for Apriori repository.
+
+Project Description:
+data mining
+
+README:
+README file for Apriori repository.

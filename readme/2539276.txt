@@ -1,0 +1,5 @@
+Project Description:
+Algoritmos diversos
+
+README:
+Algoritmos diversos para as aulas de Algoritmos e Estruturas de Dados.

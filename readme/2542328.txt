@@ -1,0 +1,5 @@
+Project Description:
+Connector to publish to a pugpig mobile app from umbraco V5+
+
+README:
+A plugin for Umbraco 5 which allows publishing to iBooks from your umbraco admin.

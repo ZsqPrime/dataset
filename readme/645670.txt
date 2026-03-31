@@ -1,0 +1,14 @@
+jRichTeQst
+==========
+
+This could become an in-place RichText editor based on jQuery. We will see.
+
+
+Project Description:
+One day, this shall be a jQuery based RichText editor.
+
+README:
+jRichTeQst
+==========
+
+This could become an in-place RichText editor based on jQuery. We will see.

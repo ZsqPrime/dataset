@@ -1,0 +1,14 @@
+h1. slabText &ndash; a jQuery plugin for producing big, bold &amp; responsive headlines
+
+All is explained on the "demo page":http://freqdec.github.io/slabText/.
+
+
+Project Description:
+A jQuery plugin for producing big, bold & responsive headlines
+
+README:
+h1. slabText &ndash; a jQuery plugin for producing big, bold &amp; responsive headlines
+
+
+
+All is explained on the "demo page":http://freqdec.github.io/slabText/.

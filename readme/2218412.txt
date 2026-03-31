@@ -1,0 +1,18 @@
+Project Description:
+Super easy, secure, offsite backup
+
+README:
+See https://github.com/wurp/Friendly-Backup/wiki
+
+Build consolidated jar with ./deploy.sh
+
+Run "./install.sh <your working directory>" to install Friendly-Backup.
+Edit var/BackupConfig.properties and set the values to those of your friends
+
+Once you've done so, you can start up the backup process with run.sh or run.cmd
+
+See src/main/java/com/geekcommune/friendlybackup/main/FBNodeApp.java for the main method -
+that's the class we start to run a Friendly Backup client.
+
+To update Friendly-Backup-poc for consumption by Friendly-Backup-integration-test, just run
+./deploy.sh

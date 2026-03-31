@@ -1,0 +1,11 @@
+Project Description:
+optiCents for T4G Geekfest 
+
+README:
+## Dropbox Gem
+
+*note*: include this line in gemfile
+
+         $ gem "dropbox", "~> 1.2.3"
+
+For reference go to [Tim Morgan](https://github.com/RISCfuture/dropbox)'s Dropbox API

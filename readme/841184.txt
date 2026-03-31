@@ -1,0 +1,6 @@
+
+
+Project Description:
+Functional Collections and  Lock Free DSTM -- Dynamic Software Transactional Memory after Herlihy, et. al.
+
+README:

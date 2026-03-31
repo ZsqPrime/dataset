@@ -1,0 +1,12 @@
+This is a project to control an Arduino microcontroller using a web interface and a ruby server.
+
+Uses Ruby serial port gem to communicate with the Arduino.
+
+
+Project Description:
+using ruby and an arduino to control the outside world using a web browser
+
+README:
+This is a project to control an Arduino microcontroller using a web interface and a ruby server.
+
+Uses Ruby serial port gem to communicate with the Arduino.

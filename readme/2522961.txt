@@ -1,0 +1,8 @@
+Project Description:
+Scripts for generation of source files (.c, .h, ...) to be used as templates
+
+README:
+Make-CodeFiles
+==============
+
+Simple perl scripts used for generating template code files

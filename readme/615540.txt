@@ -1,0 +1,9 @@
+# spring-data-services is no longer actively maintained by VMware, Inc.
+
+
+
+Project Description:
+The theme around Data Services are to expose existing Spring Data functionality to the web. The 'web' here is primarily focused on support to access data from traditional browsers as well as mobile clients. It also will explore the interaction of messagin
+
+README:
+# spring-data-services is no longer actively maintained by VMware, Inc.

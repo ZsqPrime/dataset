@@ -1,0 +1,26 @@
+Project Description:
+
+
+README:
+This repo is intended to contain solutions for <http://sortable.com/blog/coding-challenge/>.
+
+To build solutions, simply run "make".
+
+All solutions assume that the listings.txt and products.txt files are in the current directory.
+
+All solutions write the final JSON to stdout.  Run like this:
+
+./match > output.json
+scala -classpath .:jackson.jar Match > output.json
+
+== Requirements for the Haskell ==
+
+The Haskell solution requires Text.JSON to be installed.  On Debian derivatives the package name is libghc6-json-dev
+
+== Requirements for the Scala ==
+
+The Scala solution requires a JAR file for Jackson (the Java JSON parser) in the top level called jackson.jar.  It also requires all the source code or class files from <https://github.com/codahale/jerkson> be at the top level.
+
+== Status of Solutions ==
+
+A program is never really "complete", and that is especially true of this problem.  I will probably for quite some time wake up with things to try that might improve precision or recall.

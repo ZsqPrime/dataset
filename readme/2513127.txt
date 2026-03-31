@@ -1,0 +1,11 @@
+Combines the awesome powers of parser combinators and scalacheck to
+generate arbitrary strings based on regular expressions.
+
+
+
+Project Description:
+Generator of strings matching regular expressions
+
+README:
+Combines the awesome powers of parser combinators and scalacheck to
+generate arbitrary strings based on regular expressions.

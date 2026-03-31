@@ -1,0 +1,12 @@
+Pong... built with Sencha Touch!
+
+http://pong.senchafy.com
+
+
+Project Description:
+The original Pong... built with Sencha Touch!
+
+README:
+Pong... built with Sencha Touch!
+
+http://pong.senchafy.com

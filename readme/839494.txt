@@ -1,0 +1,4 @@
+Project Description:
+Konzepte der Programmiersprachen, Uni Marburg, SS 2012
+
+README:

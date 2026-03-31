@@ -1,0 +1,19 @@
+WildFox
+
+Light-weight, full-featured internet browser.
+
+See http://www.mayaposch.com/wildfox.php for details.
+
+Compile instructions: requires Qt 5+ libraries. No special platform requirements beyond the Qt ones.
+
+Project Description:
+Webkit-based, multi-platform and Firefox-compatible browser.
+
+README:
+WildFox
+
+Light-weight, full-featured internet browser.
+
+See http://www.mayaposch.com/wildfox.php for details.
+
+Compile instructions: requires Qt 5+ libraries. No special platform requirements beyond the Qt ones.

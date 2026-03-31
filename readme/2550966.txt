@@ -1,0 +1,5 @@
+Project Description:
+Sirf GPS chipset memory dumper
+
+README:
+Sirf GPS memory dumper

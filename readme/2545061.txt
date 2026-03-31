@@ -1,0 +1,7 @@
+Project Description:
+a rails engine with ready to use user, login, admin etc...
+
+README:
+= RailsBootstrap
+
+This project rocks and uses MIT-LICENSE.

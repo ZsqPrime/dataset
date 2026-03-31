@@ -1,0 +1,5 @@
+Project Description:
+analyze recurring byte sequences
+
+README:
+pattdown.py - This is a tool written to prototype a concept of analyzing recurring byte sequences in a file.

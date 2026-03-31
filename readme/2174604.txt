@@ -1,0 +1,4 @@
+Project Description:
+Extends boat functionality in bukkit - plane, hoverboat, sub, jumping boat.
+
+README:

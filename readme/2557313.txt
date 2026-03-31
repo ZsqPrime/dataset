@@ -1,0 +1,5 @@
+Project Description:
+A utility to distribute jobs to multiple servers
+
+README:
+Taskmaster is a utility to distribute a queue of jobs among multiple compute clients.

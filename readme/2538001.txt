@@ -1,0 +1,108 @@
+Project Description:
+
+
+README:
+My Vimfiles
+=============================
+
+To install my vim files easily, just type this command:
+
+    $ curl https://raw.github.com/lucassmagal/Vim-Files/master/install.sh | sh
+
+And that's all. Remember that you should have _git_ installed.
+
+
+Commands
+--------
+
+* F2  ~> Paste toggle
+* F4  ~> View TagList
+* F5  ~> View NERDTree
+* F12 ~> Toggle mouse
+* , ~> leader
+* ,w ~> fast save
+* ,yy ~> external copy
+* ,pp ~> external paste
+* w!! ~> force save without sudo
+* ,lf ~> LustyExplorer
+* ,lr ~> LustyExplorer at the directory of the current file.
+* ctrl+t t ~> open a new tab
+* ctrl+t w ~> close the tab
+* shift-right ~> next tab
+* shift-left ~> previous tab
+* ctrl+s s ~> save session
+* ctrl+s o ~> open session
+* ctrl+s c ~> close session
+* ctrl+s d ~> delete session
+
+[This link][7] has 100 Vim commands.
+
+
+Plugins
+-------
+
+* [Pathogen][Pathogen]
+* [Lusty Explorer][Lusty]
+* [NERDTree][Nerd]
+* [SnipMate][Snipmate]
+* [Vim-fugitive][Fugitive]
+* [Vim-taglist][Taglist]
+* [Vim-togglemouse][Toggle]
+* [Vim-Session][Session]
+* [FontZoom][fontzoom]
+* [Powerline][powerline]
+* [Surround][surround]
+* [Syntastic][syntastic]
+* [Vim-Sparkup][sparkup]
+
+### Also
+
+* [Django snippets for SnipMate][Django snippets]
+* [Mustang theme][Mustang]
+* [Solarized theme][Solarized]
+* [Markdown syntax highlighting][Markdown]
+* [txt.vim][TXT]
+
+
+References
+---------
+
+* [How I Boosted My Vim][1] 
+* [Vim sessions and map leader][2]
+* [Seven reasons why you should switch to Vim][3]
+* [Slackorama's Vim file][4]
+* [Vim IDE para programadores Python][5]
+* [Francisco Souza's Vim Files][6]
+* [Gilson Filho's Vim Files][8]
+
+[1]: http://nvie.com/posts/how-i-boosted-my-vim/
+[2]: http://feralchicken.wordpress.com/2011/01/03/vim-sessions-and-map-leader/
+[3]: http://agiliq.com/blog/2010/11/seven-reasons-why-you-should-switch-to-vim-for-dja/
+[4]: http://www.slackorama.com/projects/vim/vimrc.html
+[5]: http://avelino.us/2011/12/22/vim-ide-para-programadores-python/
+[6]: https://github.com/fsouza/vimfiles
+[7]: http://www.catswhocode.com/blog/100-vim-commands-every-programmer-should-know
+[8]: https://github.com/gilsondev/vimfiles
+
+[Pathogen]: https://github.com/tpope/vim-pathogen
+[Lusty]: https://github.com/vim-scripts/LustyExplorer
+[Nerd]: https://github.com/scrooloose/nerdtree
+[Flakes]: https://github.com/kevinw/pyflakes-vim
+[Snipmate]: https://github.com/msanders/snipmate.vim
+[Fugitive]: https://github.com/tpope/vim-fugitive
+[Rake]: https://github.com/tpope/vim-rake
+[Taglist]: https://github.com/vim-scripts/taglist.vim
+[Toggle]: https://github.com/nvie/vim-togglemouse
+[Zen]: https://github.com/mattn/zencoding-vim
+[Session]: https://github.com/xolox/vim-session
+[Juggler]: https://github.com/vim-scripts/LustyJuggler
+[fontzoom]: https://github.com/thinca/vim-fontzoom
+[powerline]: https://github.com/Lokaltog/vim-powerline
+[surround]: https://github.com/tpope/vim-surround
+[syntastic]: https://github.com/scrooloose/syntastic
+[Django snippets]: https://github.com/robhudson/snipmate_for_django
+[Mustang]: https://github.com/cschlueter/vim-mustang
+[Solarized]: https://github.com/altercation/vim-colors-solarized
+[Markdown]: https://github.com/plasticboy/vim-markdown
+[TXT]: http://aurelio.net/vim/txt.vim
+[sparkup]: https://github.com/kogakure/vim-sparkup

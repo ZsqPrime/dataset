@@ -1,0 +1,8 @@
+This is a package containing an upstart script to control the stopping and starting of Play framework apps.
+
+
+Project Description:
+A debian package that can startup and shutdown Play applications from initd.
+
+README:
+This is a package containing an upstart script to control the stopping and starting of Play framework apps.

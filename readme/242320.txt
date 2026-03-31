@@ -1,0 +1,10 @@
+Basic MS shell link file decoder class
+currently it can resolve local and share locations
+
+
+Project Description:
+MS Shell Link decode in PHP
+
+README:
+Basic MS shell link file decoder class
+currently it can resolve local and share locations

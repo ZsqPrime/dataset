@@ -1,0 +1,4 @@
+Project Description:
+KDE Plasma Ion data provider for retrieving weather information from Gismeteo
+
+README:

@@ -1,0 +1,69 @@
+Eric Finn and Hillary Fotino
+
+Instructions:
+	make
+	./assignment1 <filename>
+
+Assumptions/Design decisions:
+	The only valid transitions are:
+		Moving 2 people and the boat from southern shore to northern shore
+		Moving 1 person and the boat from the northern shore to southern shore.
+		If there is only 1 person on the southern shore, moving 1 person and the boat to the northern shore from the southern shore is valid.
+
+Pencil & Paper Questions:
+1)	Provide a problem definition for the above problem. Be sure to include the format of the states, the initial state, possible actions, a transition model, the goal state, and the cost function.
+
+Format: List of weights of people on each side and location of boat
+Initial state: All people on southern bank, boat on southern bank
+Possible actions: north(person1, person2), south(person)
+Transition model: Everyone's current location after boat (with passengers) is moved
+Goal state: All people on northern bank
+Cost function: maximum of weights of people in boat
+
+
+2)	If there are 4 men with weights 10, 20, 150, 200, how many possible states are reachable? What is the optimal time for this instance?
+
+Assuming possible actions are sending 2 people north when boat is on south shore and sending 1 person south when boat is on north shore:
+271 possible states
+Optimal time: 390
+
+3)	Describe your heuristic for A* search.  Justify the heuristic's admissibility.
+
+Heuristic is the minimum individual weight on the side that the boat is on. It is impossible to perform a single lower-cost transition than the heuristic, because the cost is the maximum of the weights of people on the boat, which will always be at least the weight of the lowest-weight person on the side with the boat.
+
+Project Description:
+
+
+README:
+Eric Finn and Hillary Fotino
+
+Instructions:
+	make
+	./assignment1 <filename>
+
+Assumptions/Design decisions:
+	The only valid transitions are:
+		Moving 2 people and the boat from southern shore to northern shore
+		Moving 1 person and the boat from the northern shore to southern shore.
+		If there is only 1 person on the southern shore, moving 1 person and the boat to the northern shore from the southern shore is valid.
+
+Pencil & Paper Questions:
+1)	Provide a problem definition for the above problem. Be sure to include the format of the states, the initial state, possible actions, a transition model, the goal state, and the cost function.
+
+Format: List of weights of people on each side and location of boat
+Initial state: All people on southern bank, boat on southern bank
+Possible actions: north(person1, person2), south(person)
+Transition model: Everyone's current location after boat (with passengers) is moved
+Goal state: All people on northern bank
+Cost function: maximum of weights of people in boat
+
+
+2)	If there are 4 men with weights 10, 20, 150, 200, how many possible states are reachable? What is the optimal time for this instance?
+
+Assuming possible actions are sending 2 people north when boat is on south shore and sending 1 person south when boat is on north shore:
+271 possible states
+Optimal time: 390
+
+3)	Describe your heuristic for A* search.  Justify the heuristic's admissibility.
+
+Heuristic is the minimum individual weight on the side that the boat is on. It is impossible to perform a single lower-cost transition than the heuristic, because the cost is the maximum of the weights of people on the boat, which will always be at least the weight of the lowest-weight person on the side with the boat.

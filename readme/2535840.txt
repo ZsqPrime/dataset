@@ -1,0 +1,7 @@
+Project Description:
+Cryptogram challenge from "The Best of Ruby Quiz"
+
+README:
+To run the samples:
+
+ruby -I. cryptogram_samples.rb

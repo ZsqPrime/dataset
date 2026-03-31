@@ -1,0 +1,18 @@
+Project Description:
+This is an old repository. See https://sourceforge.net/p/surfaceembedder for the current version. Tests for embedding of graphs into orientable and unorientable surfaces
+
+README:
+REQUIREMENTS
+* OGDF library (http://www.ogdf.net)
+* jsoncpp library (http://sourceforge.net/projects/jsoncpp)
+
+INSTALLATION
+./configure
+make
+make install
+
+VERBOSITY
+./configure --enable-verbose
+
+DEBUGGING
+./configure --enable-debug

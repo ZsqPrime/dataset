@@ -1,0 +1,9 @@
+Project Description:
+Web browser game, similar to dots and boxes
+
+README:
+Installed addons with npm:
+	socket.io
+	formidable// migglu: do we really need this?
+	db-mysql
+	node-static

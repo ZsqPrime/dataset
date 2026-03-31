@@ -1,0 +1,21 @@
+sexplorer2solarlog
+==================
+
+main focus is now [InverterData2SolarLog](InverterData2SolarLog)
+once more
+
+* lsite
+* bnoch 
+
+Project Description:
+None
+
+README:
+sexplorer2solarlog
+==================
+
+main focus is now [InverterData2SolarLog](InverterData2SolarLog)
+once more
+
+* lsite
+* bnoch

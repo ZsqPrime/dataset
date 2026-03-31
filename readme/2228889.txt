@@ -1,0 +1,8 @@
+Atlanta.PM Generic Perl Template
+
+
+Project Description:
+A generic template for starting a new perl script...
+
+README:
+Atlanta.PM Generic Perl Template

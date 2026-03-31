@@ -1,0 +1,7 @@
+A project to provide the integration required to expose JMX over Remoting 3 connections.
+
+Project Description:
+Making JMX accessible using Remoting 3
+
+README:
+A project to provide the integration required to expose JMX over Remoting 3 connections.

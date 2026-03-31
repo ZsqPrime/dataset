@@ -1,0 +1,20 @@
+On Chrome webstore at https://chrome.google.com/webstore/detail/gadbenpggeagjgnameagcpjnjdlckkpb
+
+==Test instructions==
+
+1) Clone this repository into a directory (Not a Git user? The download the ZIP - https://github.com/sajal/Cloudfront-Purge-Tool/zipball/master and unpack on your computer  )
+2) Load this directory as a chrome extension (Instructions: http://code.google.com/chrome/extensions/getstarted.html#load step 4 )
+3) Login using your AWS Access key ID and Secret Access Key
+
+
+Project Description:
+Easily purge (invalidate) files from Amazon Cloudfront, using an intuitive, secure interface.
+
+README:
+On Chrome webstore at https://chrome.google.com/webstore/detail/gadbenpggeagjgnameagcpjnjdlckkpb
+
+==Test instructions==
+
+1) Clone this repository into a directory (Not a Git user? The download the ZIP - https://github.com/sajal/Cloudfront-Purge-Tool/zipball/master and unpack on your computer  )
+2) Load this directory as a chrome extension (Instructions: http://code.google.com/chrome/extensions/getstarted.html#load step 4 )
+3) Login using your AWS Access key ID and Secret Access Key

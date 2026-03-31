@@ -1,0 +1,8 @@
+Project Description:
+The code is open; the content is (c) 2011-2014 Justin Voss.
+
+README:
+
+# justinvoss.com
+
+The oft-neglected homepage of Justin Voss.

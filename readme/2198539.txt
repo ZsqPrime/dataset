@@ -1,0 +1,28 @@
+Project will not be continued. I recommend Leaflet:
+
+https://github.com/Leaflet/Leaflet
+
+
+This is the new khtml.maplib with new API.
+
+API Documention:
+http://wiki.openstreetmap.org/wiki/Simple_map_API
+and
+http://wiki.openstreetmap.org/wiki/Simple_overlay_API
+
+
+Project Description:
+Javascript Slippy Map Library
+
+README:
+Project will not be continued. I recommend Leaflet:
+
+https://github.com/Leaflet/Leaflet
+
+
+This is the new khtml.maplib with new API.
+
+API Documention:
+http://wiki.openstreetmap.org/wiki/Simple_map_API
+and
+http://wiki.openstreetmap.org/wiki/Simple_overlay_API

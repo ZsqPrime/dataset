@@ -1,0 +1,7 @@
+Jonas & Erik fooling around with Arduinos!
+
+Project Description:
+Arduino sketches and stuff
+
+README:
+Jonas & Erik fooling around with Arduinos!

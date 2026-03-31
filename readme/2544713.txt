@@ -1,0 +1,4 @@
+Project Description:
+Spatial tests on Neo4j spatial based on OpenStreetMap data
+
+README:

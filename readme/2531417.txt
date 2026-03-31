@@ -1,0 +1,11 @@
+Project Description:
+Multi-ridge fitting method for obtaining helioseismic mode parameters.
+
+README:
+C-Multifit code.
+
+It's written in C, and it does multiple fits of things.
+
+Non-standard libraries used: cfitsio, mpfit, mkl
+
+Not really useful to the public (yet?)

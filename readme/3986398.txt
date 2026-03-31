@@ -1,0 +1,173 @@
+.. vim: ft=rst sts=2 sw=2 tw=77
+.. default-role:: literal
+
+=============================================================================
+                                  Logdemux
+=============================================================================
+-----------------------------------------------------------------------------
+                            Logfile demultiplexer
+-----------------------------------------------------------------------------
+
+:Author: Roman Neuhauser
+:Contact: neuhauser@sigpipe.cz
+:Copyright: This document is in the public domain.
+
+.. this file is marked up using reStructuredText
+   lines beginning with ".." are reST directives
+   "foo_" or "`foo bar`_" is a link, defined at ".. _foo" or ".. _foo bar"
+   "::" introduces a literal block (usually some form of code)
+   "`foo`" is some kind of identifier
+   suspicious backslashes in the text ("`std::string`\s") are required for
+   reST to recognize the preceding character as syntax
+
+.. contents::
+    :depth: 1
+
+Synopsis
+========
+
+::
+
+  logdemux rules prefix
+
+Description
+===========
+
+Logdemux stores lines read from `stdin` into different files based
+on matching those lines with user-specified regular expressions.
+
+Logdemux requires two arguments:
+
+rules
+  configuration file
+prefix
+  substituted into `sink` values (`%P`)
+
+Rules
+=====
+
+The filtering rules are given in an INI-formatted file, see Iniphile_
+for details on general syntax.
+
+Configuration must contain a `rules` section, with `order` property.
+Its value is expected to list rule section names in the order they
+should be used.
+
+Each rule section defines a rule with properties `match`, `sink`,
+and optionally `final`.
+
+`match`
+  Perl-compatible regular expression.
+`sink`
+  log file path.  `%P` is replaced with the `prefix` argument.
+  `%D` is replaced with current date in the `YYYY-MM-DD` format.
+`final`
+  boolean.  `true`, `yes`, `on`, `1` are true, anything else is false.
+
+If the present line does *not* match the pattern in `match`, logdemux
+moves on to the next rule as defined by `rules.order`.
+If the present line *does* match the regular expression from `match`,
+it is written into the filename given in `sink`.
+Then, if the `final` property is present and true, processing of this
+line ends.
+Otherwise, the next rule is tried.
+
+.. _Iniphile: http://codex.sigpipe.cz/iniphile/
+
+Example
+=======
+
+This configures the Apache web server to log requests into
+`logs/%D-access_log`, 404's are duplicated into `logs/%D-404_log`.
+ErrorLog is written into `logs/%D-error_log`, except mod_fcgid, which
+goes into `logs/%D-mod_fcgid_log`, *except* the FCGIWrapper's `stderr`,
+which goes into `logs/%D-php_log`.
+
+httpd.conf: ::
+
+  LogFormat "%{%Y-%m-%d %H:%M:%S}t D=%D h=%h u=%u s=%>s b=%b r=\"%r\""
+  TransferLog "|/usr/local/bin/logdemux conf/logdemux.access logs/"
+  ErrorLog "|/usr/local/bin/logdemux conf/logdemux.error logs/"
+
+logdemux.access: ::
+
+  [rules]
+  order = http-404 default
+
+  [http-404]
+  match = \<s=404\>
+  sink = %P%D-404_log
+
+  [default]
+  match = .
+  sink = %P%D-access_log
+
+logdemux.error: ::
+
+  [rules]
+  order = php mod_fcgid default
+
+  [php]
+  match = [ ]mod_fcgid: stderr:[ ]
+  sink = %P%D-php_log
+  final = 1
+
+  [mod_fcgid]
+  match = [ ]mod_fcgid:[ ]
+  sink = %P%D-mod_fcgid_log
+  final = 1
+
+  [default]
+  match = .
+  sink = %P%D-error_log
+
+
+Download
+========
+
+Source
+++++++
+
+Git_ repository: http://github.com/roman-neuhauser/logdemux
+
+.. _Git: http://git-scm.org/
+
+Binaries
+++++++++
+
+Packages for some GNU/Linux distributions are available
+in the `Build Service`_.
+
+.. _Build Service:
+    http://software.opensuse.org/package/logdemux?search_term=logdemux
+
+Build
+=====
+
+::
+
+  % make check && sudo make install
+
+Logdemux is written in a subset of C++11 (mostly C++03 with `auto`).
+As of writing this (logdemux-0.3), logdemux builds with gcc-4.7.2
+and clang-3.2.
+
+Logdemux uses Iniphile_ and several Boost_ libraries: Boost.Datetime,
+Boost.Foreach, Boost.Format, Boost.Regex.
+
+The provided Makefile requires GNU make, and supports the usual knobs
+including ``DESTDIR``, and assumes a GCC-compatible C++11 compiler.
+
+Windows
++++++++
+
+Logdemux builds out of the box in MSYS/MinGW on Windows 7 or higher.
+
+.. _Boost: http://boost.org/
+
+License
+=======
+
+MIT_.
+
+.. _MIT: LICENSE

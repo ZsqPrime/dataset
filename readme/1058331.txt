@@ -1,0 +1,6 @@
+
+
+Project Description:
+Fast, compact & accurate textarea autogrow plugin.
+
+README:

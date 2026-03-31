@@ -1,0 +1,6 @@
+Project Description:
+The Persistent Store for the Systems Biology Knowledgebase (KBASE)
+
+README:
+Complete documentation of this codebase should be found here:
+https://github.com/drachimera/persistent_store

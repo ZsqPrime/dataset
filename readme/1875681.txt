@@ -1,0 +1,25 @@
+= Issue Checklist Plugin
+
+This is a fork of the plugin written by Kirill Bezrukov - http://www.redmine.org/plugins/issue_checklist
+
+== What's modified
+
+I modified the plugin for it to allow duplication of checklist on issue duplication.
+
+== How to test
+rake test:plugins PLUGIN=redmine_issue_checklist RAILS_ENV=test_sqlite3
+
+Project Description:
+
+
+README:
+= Issue Checklist Plugin
+
+This is a fork of the plugin written by Kirill Bezrukov - http://www.redmine.org/plugins/issue_checklist
+
+== What's modified
+
+I modified the plugin for it to allow duplication of checklist on issue duplication.
+
+== How to test
+rake test:plugins PLUGIN=redmine_issue_checklist RAILS_ENV=test_sqlite3

@@ -1,0 +1,89 @@
+Project Description:
+A very crude shell implementation
+
+README:
+= SimpleShell
+
+A very simple, yet safe and sturdy wrapper around your shell.
+
+gives you stdout
+
+  shell = SimpleShell.new()
+  res = shell.ls
+  res.out
+  => a_file
+  b_file
+  c_file
+
+gives you stderr
+
+  res = shell.ls("/path/not/exists")
+  res.err
+  => "ls: cannot access /path/not/exists: No such file or directory"
+
+gives you exit value
+
+  res.S?
+  => #<Process::Status: pid 20743 exit 2>
+  shell.S?
+  => #<Process::Status: pid 20743 exit 2>
+
+gives you stdin
+
+  res = shell.sendmail("you@yourdomain.com") do |pipe|
+    pipe.puts message
+  end
+
+is tied to it's location
+
+  shell = SimpleShell.new("/tmp")
+  shell.ls
+  => # ... contents of tmp
+  shell.chdir "/home"
+  Errno::ENOENT:
+  Dir.chdir("/home")
+  shell.ls
+  => # ... still, contents of tmp
+
+provides you with a sub shell for location shifts
+
+  commands = shell.in("/home") do |sub|
+    sub.ls
+    sub.mkdir("joe")
+  end
+  commands.count
+  => 2
+  commands.last.S?
+  => #<Process::Status: pid 20760 exit 1>
+
+lets you specify the environment
+
+  shell = SimpleShell.new(Dir.pwd, { 'MY_ENV' => 'my env' })
+  shell.do "echo ${MY_ENV}"
+  => 'my env'
+
+Provides parameter escaping
+
+  shell = SimpleShell.new(Dir.pwd, { 'MY_ENV' => "You wont see me" })
+  shell.echo '${MY_ENV}'
+  => '${MY_ENV}'
+
+  shell.ls "-la", "/path/to/list"
+  => total 87694
+  => drwxr-xr-x 106 john   doe       45056 Jan 15 08:43 ./
+  => ...
+
+== Contributing to SimpleShell
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Hartog C. de Mik. See LICENSE.txt for
+further details.

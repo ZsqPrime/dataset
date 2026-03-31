@@ -1,0 +1,4 @@
+Project Description:
+Shell scripts to bootstrap-build various open source projects with C build tools + curl.
+
+README:

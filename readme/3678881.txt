@@ -1,0 +1,71 @@
+Project Description:
+[Android]Useful Tools
+
+README:
+Useful Tools for Android Development
+
+
+for Memory Statistics
+you can log on to Android shell with adb shell, and then execute these commands.
+
+1. procrank
+
+2. cat /proc/meminfo
+
+3. procmem pid
+the result from this cmd is not exactly, so do not use it.
+may be you can get the source code to fix it.
+
+
+
+
+
+for Pressure Test
+1. monkey
+adb shell
+monkey -p com.dropbox.android -v 500
+
+
+
+
+
+for Service Management
+
+1. service
+adb shell
+service list
+
+
+
+
+
+for Run Native Code on Android
+
+1. agcc
+you should modify the shell script to fit your real environment.
+such as the value of OS or ANDROIDSDK variables, you should check the script, it is very clear.
+
+
+
+
+
+other tools and tips
+
+1. make_cscope_indices
+usage:
+
+append 'make_cscope_indices' to your environment variable PATH, so you can access it anywhere.
+
+head to your source folder, just using cd command
+
+type "make_cscope_indices" in command line, and then hit the enter key
+
+if you want to force removing existing indices and then generate them again, just append an argument "f"
+
+strip the double quotation marks when you execute the command
+
+your_host_where_want_to_generate_indices$make_cscope_indices
+your_host_where_want_to_generate_indices$make_cscope_indices f
+
+2. Git, use diff and difftool
+use external visual diff tool(p4merge).

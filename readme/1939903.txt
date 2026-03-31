@@ -1,0 +1,24 @@
+SHAREPERLTOPUS!
+
+A perl library and command-line utility for gettting data out of SharePoint.
+
+If you're more a Python person, you might also want to try python-sharepoint https://github.com/ox-it/python-sharepoint/.
+
+The --where option accepts XML. For example :
+  --where "<Eq><FieldRef Name='Category' /><Value Type='Text'>Trumpet</Value></Eq>" 
+
+
+
+
+Project Description:
+Perl Library in Sharepoint
+
+README:
+SHAREPERLTOPUS!
+
+A perl library and command-line utility for gettting data out of SharePoint.
+
+If you're more a Python person, you might also want to try python-sharepoint https://github.com/ox-it/python-sharepoint/.
+
+The --where option accepts XML. For example :
+  --where "<Eq><FieldRef Name='Category' /><Value Type='Text'>Trumpet</Value></Eq>"

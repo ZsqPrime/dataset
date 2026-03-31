@@ -1,0 +1,33 @@
+Project Description:
+Generate installable binary distributions of Ruby programs for many platforms (many OS, with or without Ruby installed on clients...). Fit to distribute extensible (plugins) Ruby programs also. Handles also libraries and uploads on websites (SF.net...).
+
+README:
+= RubyPackager
+
+
+
+Packaging your Ruby applications on any platform.
+
+
+
+== Where is the documentation ?
+
+
+
+Check the website at http://rubypackager.sourceforge.net
+
+
+
+== Who wrote it ?
+
+
+
+Check the AUTHORS[link:AUTHORS.html] file.
+
+
+
+== What is the license ?
+
+
+
+You can find out in the LICENSE[link:LICENSE.html] file.

@@ -1,0 +1,59 @@
+Overview
+===========================
+
+The dns service listen for start/terminate instances and update dns 
+server accordingly.
+
+
+Configuration
+===========================
+
+Check config.html for details 
+
+RPM Building
+===========================
+
+Clone nova-dns git repository, rename the top dir to nova-dns-VERSION,
+and tar it to nova-dns-VERSION.tar.gz. Place it to rpmbuild/SOURCES
+directory and run::
+
+    $ rpmbuild -ba nova-dns.spec
+
+
+Quickstart
+===========================
+
+Check quickstart.html for details
+
+
+
+Project Description:
+None
+
+README:
+Overview
+===========================
+
+The dns service listen for start/terminate instances and update dns 
+server accordingly.
+
+
+Configuration
+===========================
+
+Check config.html for details 
+
+RPM Building
+===========================
+
+Clone nova-dns git repository, rename the top dir to nova-dns-VERSION,
+and tar it to nova-dns-VERSION.tar.gz. Place it to rpmbuild/SOURCES
+directory and run::
+
+    $ rpmbuild -ba nova-dns.spec
+
+
+Quickstart
+===========================
+
+Check quickstart.html for details

@@ -1,0 +1,18 @@
+Project Description:
+Use an Arduino as IRMP reciever and send it's keys to an uinput-device.
+
+README:
+serial2uinput by Alexander Grothe 2011 - 2012
+
+serial2uinput requires python-uinput V 0.6.1. or higher. Additional required packages are libudev0 and libudev-dev.
+
+### Fetch the code for python-uinput from it's git: ###
+#
+# git clone git://github.com/tuomasjjrasanen/python-uinput.git
+# cd python-uinput
+# git clone git://github.com/tuomasjjrasanen/libsuinput.git
+# sudo python setup.py install
+#
+###
+
+serial2uinput must be run as superuser or with sufficent rights to create an uinput device

@@ -1,0 +1,6 @@
+
+
+Project Description:
+Convolution computing using Hadoop MapReduce to clarify the integration of inputs within the hippocampus and their contribution to navigational decision making.
+
+README:

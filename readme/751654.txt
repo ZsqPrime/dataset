@@ -1,0 +1,33 @@
+Msg2Clip - 
+=======================
+
+Requirement
+-----------
+
+Windows XP SP3
+
+Install
+-------
+
+Usage
+-----
+
+
+
+Project Description:
+Msg2Clip plugin for Sylpheed enables you to copy message file by 1-click.
+
+README:
+Msg2Clip - 
+=======================
+
+Requirement
+-----------
+
+Windows XP SP3
+
+Install
+-------
+
+Usage
+-----

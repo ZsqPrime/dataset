@@ -1,0 +1,28 @@
+This code demonstrates a factorial function in three languages:
+- C
+- PHP
+- Python
+
+And three styles:
+- For loop
+- While loop
+- Recursion
+
+I did this to practice multiple ways to implement an algorithm in 3 important languages.
+
+
+Project Description:
+Factorials using different styles and languages
+
+README:
+This code demonstrates a factorial function in three languages:
+- C
+- PHP
+- Python
+
+And three styles:
+- For loop
+- While loop
+- Recursion
+
+I did this to practice multiple ways to implement an algorithm in 3 important languages.

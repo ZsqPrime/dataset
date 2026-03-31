@@ -1,0 +1,8 @@
+Project Description:
+Log Parser
+
+README:
+h1. Logger
+
+h3. Usage:
+<pre>ruby logger.rb fileToParse.log wordToLookFor anotherWordToLookFor</pre>

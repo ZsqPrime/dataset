@@ -1,0 +1,8 @@
+This tool allows you to explore the system identification results.
+
+
+Project Description:
+A GTK GUI tool for exploring data resulting from system identification of a bicycle.
+
+README:
+This tool allows you to explore the system identification results.

@@ -1,0 +1,8 @@
+Project Description:
+
+
+README:
+This app is ICPC Timer.
+
+sample URL: http://icpctimer.fluxflex.com
+Chrome app : https://chrome.google.com/webstore/detail/phnkeblemhpelbfhimpcjfmagdepcpdf

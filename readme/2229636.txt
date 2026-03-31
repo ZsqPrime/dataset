@@ -1,0 +1,86 @@
+##################################################################################
+##################################################################################
+                                UPDATE 2013-06-07
+##################################################################################
+##################################################################################
+
+This program no longer works. tvlinkseu stopped hosting links about a year ago. A few days before that, I re-wrote this program and added a few features. Unfortunately, it went to waste as I could no longer get any links from the website.
+
+##################################################################################
+##################################################################################
+
+
+Program Description:
+
+This program lets you watch almost any TV show from tv-links.eu. After entering the 
+season/episde/link, it will open up the show directly for you in your browser.
+
+
+To use program:
+
+Enter TV show when prompted. If TV show is not in database, it will search for the 
+tv show on the website and ask if it is correct then add to database.
+
+Pick season/episode
+
+When it asks for what host you want, you can choose hosts such as: "putlocker, 
+megavideo, sockshare, ovfile, zshare etc." or just leave it blank to show all of 
+them.
+
+It will then list out numbers on the very left, a code, percentage of how good users 
+rated the link, then the host.
+
+Type the number on the very left of whichever link you want. It will then open up 
+the hosts website and play the specified show.
+
+NOTE: If you enter a show and nothing shows up and it just asks you to enter a show 
+again, that means the show does not exist! Try using the full name of the show 
+(A very common mistake is forgetting to include "the")
+
+
+
+
+
+
+Project Description:
+A python script that uses regular expressions to grab data from tv.links-eu.
+
+README:
+##################################################################################
+##################################################################################
+                                UPDATE 2013-06-07
+##################################################################################
+##################################################################################
+
+This program no longer works. tvlinkseu stopped hosting links about a year ago. A few days before that, I re-wrote this program and added a few features. Unfortunately, it went to waste as I could no longer get any links from the website.
+
+##################################################################################
+##################################################################################
+
+
+Program Description:
+
+This program lets you watch almost any TV show from tv-links.eu. After entering the 
+season/episde/link, it will open up the show directly for you in your browser.
+
+
+To use program:
+
+Enter TV show when prompted. If TV show is not in database, it will search for the 
+tv show on the website and ask if it is correct then add to database.
+
+Pick season/episode
+
+When it asks for what host you want, you can choose hosts such as: "putlocker, 
+megavideo, sockshare, ovfile, zshare etc." or just leave it blank to show all of 
+them.
+
+It will then list out numbers on the very left, a code, percentage of how good users 
+rated the link, then the host.
+
+Type the number on the very left of whichever link you want. It will then open up 
+the hosts website and play the specified show.
+
+NOTE: If you enter a show and nothing shows up and it just asks you to enter a show 
+again, that means the show does not exist! Try using the full name of the show 
+(A very common mistake is forgetting to include "the")

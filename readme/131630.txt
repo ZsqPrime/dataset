@@ -1,0 +1,24 @@
+A Tool for lazy coders...
+==============
+
+Run it, code like a boss and enjoy free time...
+--------------
+	php codelikeaboss.php /path/to/your/phps/file/dir
+
+Works with Ruby and others script files... see the codelikeaboss.php file
+--------------
+
+
+Project Description:
+A lazy coder tool
+
+README:
+A Tool for lazy coders...
+==============
+
+Run it, code like a boss and enjoy free time...
+--------------
+	php codelikeaboss.php /path/to/your/phps/file/dir
+
+Works with Ruby and others script files... see the codelikeaboss.php file
+--------------

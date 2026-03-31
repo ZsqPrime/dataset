@@ -1,0 +1,6 @@
+Project Description:
+Providing web development framework, integrated Strus or Spring mvc, with valuelist paging and using java comments. 
+
+README:
+Providing web development framework, integrated Strus or Spring mvc, with valuelist paging and using java comments. Some basic modules can be wrapper(every single module or complexes module is with itselves' jar), it can automatic loading jar config files, and every module of jar containing jsp, css, js, emage & spring config file, automatic initialize database table, initialize the interlinkage of the menu, so as to simplify the config of developers. When adding modules, only putting yours.jar into the lib directory will be ok, without any other additional config. 
+https://secure.travis-ci.org/fqntxmqee/webframe.png?branch=hotfixes

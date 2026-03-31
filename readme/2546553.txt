@@ -1,0 +1,5 @@
+Project Description:
+Lightweight conventional mapper for NHibernate build upon new mapping by code API. 
+
+README:
+Lightweight zero-configuration framework that maps domain in a line of code.

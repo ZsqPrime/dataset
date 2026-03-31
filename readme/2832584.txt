@@ -1,0 +1,64 @@
+Project Description:
+
+
+README:
+= INFO
+
+The purpose of this project is to learn how original Linux kernel (0.01) was implemented.
+That would be great to understand kernel internal.
+Most of code was extracted from source code of Linux kernel 0.01 and rebuilt to run on a simulator. 
+
+
+= TODO
+
+1. Learn how to create a floppy image file formatted as FAT12 (or whatever file system) on Linux
+   - the boot loader & kernel will all stay on this floppy image
+
+   ===
+   - tools:
+     + mkdosfs
+     + dd: Linux command for copy and convert a file 
+     
+   - ref:
+     + man mkdosfs
+     + http://wiki.osdev.org/Loopback_Device
+     + http://www.dedoimedo.com/computers/grub.html (how to copy stage1 & stage2 boot loader to floppy.img)
+
+   ===
+   - create the floppy.img file using dd:
+     $ dd if=/dev/zero of=floppy.img bs=512 count=2880
+   - format floppy.img as FAT12
+     $ sudo mkdosfs -F12 floppy.img
+
+2. Copy 2-stage bootloader to correct places on floppy.img
+     $ dd if=stage1 of=floppy.img count=1
+     $ dd if=stage2 of=floppy.img seek=1
+
+3. Write a simple Makefile to compile and build bootloader
+   
+4. Build a 2-stage bootloader
+   - stage 1 binary is recorded on boot sector (first 512 bytes) of floppy image
+   - stage 2 binary is recorded as a file on floppy image and is loaded into memory by stage 1
+   - kernel will then be loaded by stage 2
+   
+5. Write the kernel 
+
+
+= TOOLS
+  dd
+  hexdump
+  objdump
+  od
+  mkdosfs
+  ld
+  gcc
+  
+
+= NOTES
+
+== Make
+   - rule
+     target: prerequisites
+           commands
+   - make with no arguments executes the first rule in the file
+   - there must be a tab at the beginning of any commands

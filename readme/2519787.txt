@@ -1,0 +1,7 @@
+Project Description:
+An educational application to gain a better understanding of 3d vectors and the way they are affected by transformation matrices.
+
+README:
+The purpose of this application is to help others gain a better understanding of 3-dimensional vectors and matrix transformations.
+
+You didn't really have to read this.  I apologize for suckering you in like that.

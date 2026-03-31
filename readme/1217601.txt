@@ -1,0 +1,14 @@
+Code from series 3 episode 6 dojo where the task was:
+
+Conway's Game of Life
+=====================
+
+
+Project Description:
+Code from series 3 episode 6 dojo: Conway's Game of Life
+
+README:
+Code from series 3 episode 6 dojo where the task was:
+
+Conway's Game of Life
+=====================

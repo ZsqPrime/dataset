@@ -1,0 +1,12 @@
+Copyright 2011 Naruse Motoki
+Licensed under the Apache License 2.0.
+
+This software uses the following libraries and icons.
+* ghapi
+    https://github.com/eddieringle/ghapi
+
+* Open Icon Library
+    http://openiconlibrary.sourceforge.net/
+
+* google-code-prettify
+    http://code.google.com/p/google-code-prettify/

@@ -1,0 +1,10 @@
+Project Description:
+Principles of Nucleic Acid Structure. Lecture on Secondary Structure and Rigid Body Parameters.
+
+README:
+# ki2430
+## A one day class on nucleic acid structure at Karolinska Institute
+
+A one day lecture and then workshop on RNA Structure analysis using 3DNA, and 
+secondary structure algorithms, mainly based on examples from the Nussinov
+algorithm.

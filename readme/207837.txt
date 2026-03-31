@@ -1,0 +1,21 @@
+
+# Torquebox-chef
+
+WARNING: work-in-progress.
+
+## TODO
+
+* add mod_cluster support
+
+Project Description:
+Chef recipes for torquebox 
+
+README:
+
+# Torquebox-chef
+
+WARNING: work-in-progress.
+
+## TODO
+
+* add mod_cluster support

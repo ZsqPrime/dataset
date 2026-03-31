@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+bundle
+
+bundle exec jekyll serve --watch

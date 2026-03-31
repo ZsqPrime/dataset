@@ -1,0 +1,5 @@
+Project Description:
+Authentication VIA Ajax
+
+README:
+Sample code to authenticate via ajax using Spring Security

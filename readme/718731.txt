@@ -1,0 +1,129 @@
+Healpix Viewer is a software for visualization of Healpix maps stored in FITS files relying on the data processing methods of the Healpix package. This software is written in C++, uses OpenGL for map visualization, and Qt library for the GUI, allowing cross-platform portability.
+
+Please consider this software as alfa. It mostly works but there are still a few bugs lying around and many other features are waiting to be added.
+
+== Features ==
+
+ - Support for high resolution sky maps in HEALPix format (until nside 4096)
+ - Multiple viewports with synchronization between them
+ - Mollweide and 3D sphere map projection
+ - Rotate and zoom maps when using 3D sphere projection
+ - Histogram and color map selector to control the colors used to display the sky maps
+ - Support for polarization vectors over the map
+ - Automatic resolution to balance between sky map detail and performance
+
+
+== Requirements ==
+
+To run HealpixViewer the following packages are necessary:
+ - libQGlViewer - For rendering the visualization of Healpix maps - http://www.libqglviewer.com/
+ - Healpix - For the manipulation of Healpix data - http://healpix.jpl.nasa.gov/index.shtml
+ - CFITSIO - For importing FITS files -  http://heasarc.gsfc.nasa.gov/fitsio/
+ - Qt 4.x - For rendering of the UI - http://qt.nokia.com/products/
+
+
+== Install Instructions ==
+
+Make sure you have all the requirements needed and then run:
+  ./autogen.sh
+  ./configure
+  make
+  make install (optional)
+
+If in OSX you can also do:
+  make app
+
+
+== About ==
+
+This work was initially developed by Diogo Pinheiro in partial fulfillment of the requirements for the degree of Master in Computers and Telematics Engineering, in the Department of Electronics, Telecommunications and Informatics, University of Aveiro, Portugal.
+
+The dissertation document can be found at http://ria.ua.pt/handle/10773/8617
+
+The following people contributed to this software by contributing code patches, providing supervision and guidance, or testing and packaging: Rui L. Aguiar, Domingos Barbosa, João Paulo Barraca, Graça Rocha, Krzysztof M. Gorski, and Bruno Santos.
+
+
+== License ==
+Copyright (C) 2011-2013 Diogo Pinheiro
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+
+
+Project Description:
+HealpixViewer is a software for visualization of Healpix maps stored in FITS files. This software is written in C++ and uses OpenGL for map visualization, and Qt library for the GUI, allowing cross-platform portability.
+
+README:
+Healpix Viewer is a software for visualization of Healpix maps stored in FITS files relying on the data processing methods of the Healpix package. This software is written in C++, uses OpenGL for map visualization, and Qt library for the GUI, allowing cross-platform portability.
+
+Please consider this software as alfa. It mostly works but there are still a few bugs lying around and many other features are waiting to be added.
+
+== Features ==
+
+ - Support for high resolution sky maps in HEALPix format (until nside 4096)
+ - Multiple viewports with synchronization between them
+ - Mollweide and 3D sphere map projection
+ - Rotate and zoom maps when using 3D sphere projection
+ - Histogram and color map selector to control the colors used to display the sky maps
+ - Support for polarization vectors over the map
+ - Automatic resolution to balance between sky map detail and performance
+
+
+== Requirements ==
+
+To run HealpixViewer the following packages are necessary:
+ - libQGlViewer - For rendering the visualization of Healpix maps - http://www.libqglviewer.com/
+ - Healpix - For the manipulation of Healpix data - http://healpix.jpl.nasa.gov/index.shtml
+ - CFITSIO - For importing FITS files -  http://heasarc.gsfc.nasa.gov/fitsio/
+ - Qt 4.x - For rendering of the UI - http://qt.nokia.com/products/
+
+
+== Install Instructions ==
+
+Make sure you have all the requirements needed and then run:
+  ./autogen.sh
+  ./configure
+  make
+  make install (optional)
+
+If in OSX you can also do:
+  make app
+
+
+== About ==
+
+This work was initially developed by Diogo Pinheiro in partial fulfillment of the requirements for the degree of Master in Computers and Telematics Engineering, in the Department of Electronics, Telecommunications and Informatics, University of Aveiro, Portugal.
+
+The dissertation document can be found at http://ria.ua.pt/handle/10773/8617
+
+The following people contributed to this software by contributing code patches, providing supervision and guidance, or testing and packaging: Rui L. Aguiar, Domingos Barbosa, João Paulo Barraca, Graça Rocha, Krzysztof M. Gorski, and Bruno Santos.
+
+
+== License ==
+Copyright (C) 2011-2013 Diogo Pinheiro
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.

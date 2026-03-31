@@ -1,0 +1,6 @@
+
+
+Project Description:
+An image gallery app for django projects.
+
+README:

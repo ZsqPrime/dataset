@@ -1,0 +1,14 @@
+Project Description:
+Connect the discs to win! Are you up for the challenge.
+
+README:
+Keyrsla forrits:
+
+Grafískt:
+	python gui.py
+
+Keyrt í skel:
+	python prompt.py
+
+Keyrsla á einingarprófun:
+	python test.py

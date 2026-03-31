@@ -1,0 +1,12 @@
+# elli - Erlang web server for HTTP APIs
+
+[Moved to elli-lib/elli](https://github.com/elli-lib/elli)
+
+
+Project Description:
+Simple, robust and performant Erlang web server
+
+README:
+# elli - Erlang web server for HTTP APIs
+
+[Moved to elli-lib/elli](https://github.com/elli-lib/elli)

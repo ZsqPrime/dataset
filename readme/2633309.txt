@@ -1,0 +1,11 @@
+Project Description:
+Log all minecraft commands
+
+README:
+LogShit
+
+=======
+
+
+
+Logs all minecraft commands that are run.

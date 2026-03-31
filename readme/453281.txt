@@ -1,0 +1,38 @@
+Description
+
+Various Python utilities that don't yet have a stable home.
+See imports for dependencies.
+
+quad_tree:  in-memory QuadTree class/functions for storing/finding points
+
+cluster:  Classes for clustering of point sets (sped up via quad_tree)
+
+rpy_cluster:  Sample that uses R clustering function from within Python
+
+pg_import:  Classes to load csv file stream as points into PostGIS table
+            (much faster than individually inserting rows)
+
+tests:  Only partially complete.  
+
+
+
+
+Project Description:
+None
+
+README:
+Description
+
+Various Python utilities that don't yet have a stable home.
+See imports for dependencies.
+
+quad_tree:  in-memory QuadTree class/functions for storing/finding points
+
+cluster:  Classes for clustering of point sets (sped up via quad_tree)
+
+rpy_cluster:  Sample that uses R clustering function from within Python
+
+pg_import:  Classes to load csv file stream as points into PostGIS table
+            (much faster than individually inserting rows)
+
+tests:  Only partially complete.

@@ -1,0 +1,16 @@
+lizard-reportgenerator
+==========================================
+
+Depends on lizard-security, lizard-area, 
+clint and PyRTF.
+
+
+Project Description:
+Generates RTF/PDF reports from configurable/programmable sources. Tightly coupled with the VSS project.
+
+README:
+lizard-reportgenerator
+==========================================
+
+Depends on lizard-security, lizard-area, 
+clint and PyRTF.

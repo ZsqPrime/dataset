@@ -1,0 +1,10 @@
+This version of gradsearch has been deprecated. It's since been rewritten in Scala! 
+[New repository](https://github.com/lalpert/gradsearch-scala)
+
+
+Project Description:
+gradsearch (re:search) is a website to connect students with professors who study their research interests.
+
+README:
+This version of gradsearch has been deprecated. It's since been rewritten in Scala! 
+[New repository](https://github.com/lalpert/gradsearch-scala)

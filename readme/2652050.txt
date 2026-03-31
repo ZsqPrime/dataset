@@ -1,0 +1,38 @@
+Project Description:
+Thoth SproutCore framework
+
+README:
+Thoth-SC
+
+a Sproutcore framework for connecting the Thoth server to a SproutCore application
+
+October 7th 2011:
+
+As of traffic issues others and I encountered lately between Thoth and ThothSC, I decided to no longer
+use my custom traffic specifications, but to replace them with socket.io (socket.io client included).
+This means the master branch no longer contains the custom specifications, but only a fake client
+(for testing purposes) and the socket.io client.
+I created a separate branch to keep the old version around (last-non-socket.io).
+I will try to update it with bug fixes, but the main development will be on the master branch.
+
+Thoth will also be updated in the same way.
+
+June 2011:
+
+Finishing a complete rewrite of Thoth-SC in order to keep most things out of the data source.
+
+While everything before this rewrite had to be done through the data source, it is now possible
+to use just ThothSC as main entry point for authentication and other function types.
+
+The way the interaction with Thoth is done has changed by introducing a few different handlers:
+
+specialMessageHandlers: 
+   handlers to handle certain messages that have nothing to do with data, but system requests
+   like authentication
+
+dataMessageHandlers: 
+   handlers to handle certain messages having to do with data replies. The data source registers 
+   all the needed messages itself when initialised.
+   
+A cryptographic library has been added (which can also be easily extracted from ThothSC for use in
+other projects) to encrypt passwords or other types of info.

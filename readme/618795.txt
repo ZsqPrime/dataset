@@ -1,0 +1,11 @@
+This is a public repository for tracking changes I have made to the AltTab.ahk script for AutoHotKey.
+
+See http://www.autohotkey.com/forum/topic6422.html for background on using AltTab.ahk.
+
+Project Description:
+ALT-TAB replacement with icons and window titles in ListView
+
+README:
+This is a public repository for tracking changes I have made to the AltTab.ahk script for AutoHotKey.
+
+See http://www.autohotkey.com/forum/topic6422.html for background on using AltTab.ahk.

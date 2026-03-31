@@ -1,0 +1,30 @@
+== Umi
+
+=== Use Umi
+
+Existing integrations:
+
+* [Github](https://github.com) (commits, not pull requests or issues. Would love to have these. Needs V3 API integration.)
+* [Stripe](https://stripe.com)
+* [Pivotal Tracker](https://www.pivotaltracker.com)
+* [Mailgun](https://mailgun.net)
+* [Jenkins](https://jenkins-ci.org/) (via the [notifications plugin](https://wiki.jenkins-ci.org/display/JENKINS/Notification+Plugin))
+
+
+
+
+Project Description:
+All the world's oceans
+
+README:
+== Umi
+
+=== Use Umi
+
+Existing integrations:
+
+* [Github](https://github.com) (commits, not pull requests or issues. Would love to have these. Needs V3 API integration.)
+* [Stripe](https://stripe.com)
+* [Pivotal Tracker](https://www.pivotaltracker.com)
+* [Mailgun](https://mailgun.net)
+* [Jenkins](https://jenkins-ci.org/) (via the [notifications plugin](https://wiki.jenkins-ci.org/display/JENKINS/Notification+Plugin))

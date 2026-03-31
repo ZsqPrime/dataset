@@ -1,0 +1,29 @@
+To contribute
+=============
+
+install dependencies
+--------------------
+
+**use pip is better than easy_install**
+
+pip install BeautifulSoup
+pip install lxml
+pip install webstore
+pip install webstore-client
+
+Project Description:
+Biografias dos deputados das legislaturas passadas do Brasil
+
+README:
+To contribute
+=============
+
+install dependencies
+--------------------
+
+**use pip is better than easy_install**
+
+pip install BeautifulSoup
+pip install lxml
+pip install webstore
+pip install webstore-client

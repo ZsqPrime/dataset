@@ -1,0 +1,6 @@
+Project Description:
+MOVED - see https://github.com/eventials/django-pjax
+
+README:
+MOVED: see https://github.com/eventials/django-pjax
+```````````````````````````````````````````````````

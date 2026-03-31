@@ -1,0 +1,6 @@
+Project Description:
+More manipulation of input files to the Radiative Transfer Model "MonoRTM"
+
+README:
+Solved problems in create_midfile()
+just some minor issues left and some "plastic surgery"

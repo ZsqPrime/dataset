@@ -1,0 +1,8 @@
+Tools to analyze sleep using fieldtrip tools. Use for slow wave detection, spindle detection.
+
+
+Project Description:
+Fieldtrip-based tools to read and analyze sleep
+
+README:
+Tools to analyze sleep using fieldtrip tools. Use for slow wave detection, spindle detection.

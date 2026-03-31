@@ -1,0 +1,13 @@
+Project Description:
+pretty-ish prints the cpus and cache information of the cpus of the machine
+
+README:
+This script will pretty print out 
+the information exported by the 
+sysfs file system. It mainly deals 
+with cache and cpu cores. 
+
+I Spose there should be a warning here 
+that this was my first attempt at ruby 
+so it is probably not as nicely written 
+as it could be.

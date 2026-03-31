@@ -1,0 +1,7 @@
+{<img src="https://travis-ci.org/elbartostrikesagain/Event-Coordinator.png" />}[https://travis-ci.org/elbartostrikesagain/Event-Coordinator]
+
+Project Description:
+None
+
+README:
+{<img src="https://travis-ci.org/elbartostrikesagain/Event-Coordinator.png" />}[https://travis-ci.org/elbartostrikesagain/Event-Coordinator]

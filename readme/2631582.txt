@@ -1,0 +1,22 @@
+Project Description:
+Parallel development of a slide generator, and German talk about Perl 6
+
+README:
+In this repository both a talk about Perl 6 is written, and a software is
+being developed that emits HTML slides.
+
+The talk will be held at the Erlangen.pm perl mongers group, possibly on May
+18th.
+
+The software is written out of an acute NIH syndrome, and for the lack of
+alternatives known to the author. It is by no means ready for general usage.
+
+To generate the slides, run
+
+    perl process.pl
+
+Currently two HTML versions are generated: in out/0000.html, out/0001.html
+etc. a version with one file per slide. A second version is generated in
+s5/index.html, which contain all slides in one file (and requires javascript).
+
+This latter version is based on s5 <http://meyerweb.com/eric/tools/s5/>.

@@ -1,0 +1,23 @@
+Warning: this code is janky as all hell until further notice. Considering we did it in one day (and that includes time spent learning how to set up/use Ruby/RoR, it's not terrible :)
+
+Runs in:
+    Safari 3+
+    Chrome Whatever+
+    IE 9+
+    Opera 10+ 
+    Firefox 3.6+
+
+
+
+Project Description:
+Our Wines of the World I final project. Chooses wines for you based on budget.
+
+README:
+Warning: this code is janky as all hell until further notice. Considering we did it in one day (and that includes time spent learning how to set up/use Ruby/RoR, it's not terrible :)
+
+Runs in:
+    Safari 3+
+    Chrome Whatever+
+    IE 9+
+    Opera 10+ 
+    Firefox 3.6+

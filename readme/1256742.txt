@@ -1,0 +1,39 @@
+==================================
+====== Stardust Collectors =======
+==================================
+
+Stardust collector is a module for aurora that will collect the many fees.
+* Classifieds - collects the fees monthly
+more to come
+
+--------------------------
+---- How to Install ------
+--------------------------
+Copy the "addon-modules" folder to your Aurora Directory
+copy the ini file to your "AuroraServerConfiguration\Modules" folder
+Edit the ini file.
+
+
+It does require stardust to work right now.
+
+Project Description:
+Collects currency fees from different services.
+
+README:
+==================================
+====== Stardust Collectors =======
+==================================
+
+Stardust collector is a module for aurora that will collect the many fees.
+* Classifieds - collects the fees monthly
+more to come
+
+--------------------------
+---- How to Install ------
+--------------------------
+Copy the "addon-modules" folder to your Aurora Directory
+copy the ini file to your "AuroraServerConfiguration\Modules" folder
+Edit the ini file.
+
+
+It does require stardust to work right now.

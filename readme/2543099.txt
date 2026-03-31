@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Program for my Batchelor thesis, contains web crawler in Python and parser in C.

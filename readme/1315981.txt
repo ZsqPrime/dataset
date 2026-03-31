@@ -1,0 +1,48 @@
+firespark
+	jQuery Smart UI Engine
+
+Vibhaj Rajan <vibhaj8@gmail.com>
+	2013 iospace opensource
+
+
+Licensed under The MIT License 
+	http://www.opensource.org/licenses/mit-license.php
+
+REQUIREMENTS
+	-jquery
+	-sortable (optional)
+	-datetimepicker (optional)
+	-wysiwyg editor (optional)
+	-fancybox (optional)
+
+HISTORY	
+	Google Summer of Code 2011
+	DSpace RESTClient
+	https://wiki.duraspace.org/display/GSOC/DSpace+ClientUI+built+on+RESTful+API+-+GSoC+2011
+
+
+Project Description:
+2011 -- jQuery Smart UI Engine
+
+README:
+firespark
+	jQuery Smart UI Engine
+
+Vibhaj Rajan <vibhaj8@gmail.com>
+	2013 iospace opensource
+
+
+Licensed under The MIT License 
+	http://www.opensource.org/licenses/mit-license.php
+
+REQUIREMENTS
+	-jquery
+	-sortable (optional)
+	-datetimepicker (optional)
+	-wysiwyg editor (optional)
+	-fancybox (optional)
+
+HISTORY	
+	Google Summer of Code 2011
+	DSpace RESTClient
+	https://wiki.duraspace.org/display/GSOC/DSpace+ClientUI+built+on+RESTful+API+-+GSoC+2011

@@ -1,0 +1,14 @@
+CrossLinkingBundle
+==================
+
+Make easily cross linking for an entity
+
+
+Project Description:
+Pull Cross Linking for an object.
+
+README:
+CrossLinkingBundle
+==================
+
+Make easily cross linking for an entity

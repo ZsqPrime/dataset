@@ -1,0 +1,125 @@
+Project Description:
+Snogray renderer
+
+README:
+Snogray renderer
+
+   Snogray is a program for rendering 3d scenes, using monte-carlo
+   ray-tracing.  It is "physically based", meaning that it tries to
+   calculate light transport in a physically plausible way when that
+   is practical.  For instance, all light-falloff is inherently 1 / r2
+   (unlike some older ray-tracers) and reflection/refraction are
+   calculated using Fresnel's formulas).
+
+   For more information, see the documentation located in the "doc/"
+   subdirectory of the source directory:
+
+   * For information on how to build snogray, see the file "doc/building.txt"
+
+   * For information on how to run snogray, see the file "doc/usage.txt"
+
+   * For discussion of some snogray usage issues, see the file "doc/issues.txt"
+
+   * For information on other tools included with snogray, see the file
+     "doc/tools.txt"
+
+
+Snogray development goals:
+
+   Snogray's goals include:
+
+   1. A "rich" scene description language which is easy and practical
+      for humans (and especially programmers) to write, in the style
+      of POVray.  This is in contrast to many other modern renderers
+      that use human-unfriendly scene description formats, and
+      essentially require scenes to be created using a separate GUI
+      modelling program.
+
+      To do this, snogray uses the Lua* language as its main scene
+      description language.  Lua is elegant, efficient, and very
+      friendly (for both beginners and experts).
+
+   2. A wide variety of input and output formats, so the user can use
+      input files directly without converting them.  In addition to
+      scenes defined in Lua, one may directly load PBRT*, 3DS, and NFF
+      scene files, PLY* and other mesh formats, and many image formats
+      (including HDR formats such as OpenEXR* and RGBE/.hdr/.pic).
+
+   3. Modern rendering features.  Currently snogray supports such
+      features as object instancing, area-lights, global-illumination,
+      image-based lighting, depth-of-field, and both image-based and
+      procedural texturing (including bump-mapping and
+      opacity-mapping).
+
+      Currently the only supported mechanisms for global illumination
+      are path-tracing and photon-mapping (however the photon-mapping
+      implementation is still not very robust or easy to use).  It is
+      planned to add many other features, most importantly better
+      global illumination methods such as improved photon-mapping,
+      instant-radiosity, and metropolis light-transport.
+
+   Further information on topics marked with an asterisk (*) above:
+
+      Lua:     http://www.lua.org
+      PBRT:    http://pbrt.org
+      PLY:     http://en.wikipedia.org/wiki/PLY_%28file_format%29
+      OpenEXR: http://www.openexr.org
+
+
+Current status
+
+   Snogray currently works reasonably well, but is still a bit rough.
+
+
+Authors
+
+   Most of snogray was written by Miles Bader.
+
+   There are a few files written by other people included with the
+   distribution (in general, these are not modified from their original
+   source):
+
+     * Diego Nehab:
+          RPly: load/mesh/rply.c and load/mesh/rply.h
+
+     * Roberto Ierusalimschy:
+	  LPeg: All C source and HTML files in the "liblpeg/" subdirectory.
+
+     * Lua (if Lua is included in the distribution):  see http://www.lua.org
+
+
+Licensing
+
+   Most of source files in snogray are licensed under the GNU GPL
+   license, version 3 or greater; see the COPYING file for details.
+
+   Some files from external sources have different licenses:
+
+    * RPly source files use the "MIT" license
+
+    * LPeg source files use a "BSD-like" license
+
+    * If the Lua sources are included with this distribution, they use a
+      "BSD-like" license
+
+   All licenses are compatible with the GNU GPL v3 (and because most of
+   the non-GPL licenses are more liberal than the GNU GPL, snogray as a
+   whole may be considered to use the GNU GPL v3).
+
+   NOTE ON COPYRIGHT YEARS:  In copyright notices where the copyright
+   holder is "Miles Bader", then where a range of years appears, this
+   is an inclusive range that applies to every year in the range.  For
+   example: 2005-2008 represents the years 2005, 2006, 2007, and 2008.
+
+
+Download / Sources
+
+   Homepage:		   http://snogray.nongnu.org
+
+   Savannah project page:  http://savannah.nongnu.org/projects/snogray
+
+   Browse source code:     https://github.com/snogglethorpe/snogray
+                   or:     http://git.savannah.gnu.org/cgit/snogray.git
+
+   Clone source with Git:  https://github.com/snogglethorpe/snogray.git
+                      or:  http://git.savannah.gnu.org/cgit/snogray.git

@@ -1,0 +1,7 @@
+This is a webapp for travellers. Share the stories the have with pics.
+
+Project Description:
+A website for travellers.
+
+README:
+This is a webapp for travellers. Share the stories the have with pics.

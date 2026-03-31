@@ -1,0 +1,7 @@
+Powershell modules to facilitate usage of AWS functions
+
+Project Description:
+None
+
+README:
+Powershell modules to facilitate usage of AWS functions

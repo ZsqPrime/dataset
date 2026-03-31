@@ -1,0 +1,7 @@
+Welcome to the card game "No Tricks".
+
+Project Description:
+This is a card game with the aim of doing no tricks in various rounds.
+
+README:
+Welcome to the card game "No Tricks".

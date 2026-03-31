@@ -1,0 +1,6 @@
+
+
+Project Description:
+Gradle multi-module project that has a fully functional service and client implementation
+
+README:

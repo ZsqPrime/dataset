@@ -1,0 +1,16 @@
+Vim RNG
+
+Beginnings of a Random Number Generator in Vim
+
+Also provides a very rudimentary RandomString(prefix, length, suffix).
+
+
+Project Description:
+Random Number Generator for Vim
+
+README:
+Vim RNG
+
+Beginnings of a Random Number Generator in Vim
+
+Also provides a very rudimentary RandomString(prefix, length, suffix).

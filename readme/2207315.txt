@@ -1,0 +1,40 @@
+Installation
+------------
+1 - From pypi:
+
+    pip install snmpdesk
+
+2 - From source:
+
+    python setup.py install
+
+Use
+------------
+python fdb.py <ip> <commynity>
+
+python traffic.py <ip> <community>
+
+python portstatus <ip> <community>
+
+
+Project Description:
+get snmp data with python
+
+README:
+Installation
+------------
+1 - From pypi:
+
+    pip install snmpdesk
+
+2 - From source:
+
+    python setup.py install
+
+Use
+------------
+python fdb.py <ip> <commynity>
+
+python traffic.py <ip> <community>
+
+python portstatus <ip> <community>

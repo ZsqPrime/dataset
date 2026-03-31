@@ -1,0 +1,6 @@
+Project Description:
+Here are some shared tips and notes.
+
+README:
+This repository contains some shared tips for Vim, Ubuntu, Linux, Git,
+Java, Shell etc.

@@ -1,0 +1,7 @@
+Solely to please npm for now
+
+Project Description:
+Le Textopoly est un outil d’écriture en ligne, sur lequel chacun peut publier des textes et des images, en les agençant librement dans un espace virtuel infini. Ce paysage d’écriture est destiné à la création artistique et littéraire.
+
+README:
+Solely to please npm for now

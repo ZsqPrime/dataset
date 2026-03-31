@@ -1,0 +1,8 @@
+This no loger works (http://nikmed.spb.ru seems down) and app engine is [no longer supported](https://cloud.google.com/appengine/docs/standard/go112/go-differences?hl=en_US&_ga=2.85317913.-1414923778.1569093679)
+
+
+Project Description:
+It's me testing Go (golang.org) as google app engine language :)
+
+README:
+This no loger works (http://nikmed.spb.ru seems down) and app engine is [no longer supported](https://cloud.google.com/appengine/docs/standard/go112/go-differences?hl=en_US&_ga=2.85317913.-1414923778.1569093679)

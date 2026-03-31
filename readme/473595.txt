@@ -1,0 +1,12 @@
+#cl-simu
+
+This C++ code simulates the contact-line formed by the fluid-solid-air interaction.
+
+
+Project Description:
+contact line simulation
+
+README:
+#cl-simu
+
+This C++ code simulates the contact-line formed by the fluid-solid-air interaction.

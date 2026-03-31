@@ -1,0 +1,7 @@
+Fork of some of divip's packages used for ActiveHs.
+
+Project Description:
+Additional Cabal packages for ActiveHs
+
+README:
+Fork of some of divip's packages used for ActiveHs.

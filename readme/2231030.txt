@@ -1,0 +1,11 @@
+This is the kernel project for the Samsung Epic 4G ROM "CleanGB2"
+
+Based on "EL30" release by Samsung
+
+Project Description:
+Kernel for the EL30 based ROM, "CleanGB" for the Samsung Epic 4G
+
+README:
+This is the kernel project for the Samsung Epic 4G ROM "CleanGB2"
+
+Based on "EL30" release by Samsung

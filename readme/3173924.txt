@@ -1,0 +1,140 @@
+Project Description:
+implementation of x3d specification with cl-opengl (using opengles 2.0 API)
+
+README:
+#+SEQ_TODO: [_] [x]
+* cl-3d (Rendering X3D in Common Lisp)
+
+  - This work is ongoing and not yet ready for production. My goal is
+    to develop a scenegraph in common-lisp based on the X3D
+    specification. Currently I autogenerate an X3D (XML) parser from
+    one of my other projects called cl-3d-creator.
+
+  - The autogenerator simply reads X3D's schema definitions and
+    generates a parser based on XMlisp to read XML directly into lisp
+    objects. The idea is to autogenerate as much as the boiler plate
+    code as possible and fill in the rest of the stuff manually.
+
+  - Ideally I would like to keep the manual code as minimal and as
+    organized as possible in order to enable me to make sweeping
+    designing changes if needed. However the first priority is to get
+    things working and worry about organization at a later stage.
+
+  - My plan for now is to execute the project in two phases i.e create
+    first optimize second. Phase II (optimization) starts midway of
+    Phase I (creation) and we will slowly and smoothly transistion to
+    more optimized implementation.
+
+* Phase I (Create)
+  All boiler plate code should be generated. Use opengl 1.1 or whatever
+  is fastest to just make things work. This from a user perspective
+  should be reasonably complete with basic rendering and interaction
+  facilities working (non optimized).
+
+  This will be test driven development and the goal will be make the
+  tests work. Our tests are basically X3D scripts taken from the
+  following site.
+
+  http://x3dgraphics.com/examples/X3dForWebAuthors/
+
+** [*] 1. Basic
+*** [x] make XMLisp accessable with asdf
+*** [x] Parse X3d using xmlisp
+*** [x] Implement run method and basic windowing
+**** [x] Implement GLUT windowing mechanism as scene
+*** [x] Add NOTICE.txt
+*** [x] Implement NavigationInfo
+*** [_] Try using the x3dForWebAuthors examples as-is
+   - The examples are in X3D.
+   - Figure out a way to directly load XML files.
+   - This will bring down the development time since we will have all
+     the examples already present and will help getting rid of the
+     boilerplate code in examples.
+
+** [*] 2. GeometricPrimitives
+*** [x] Box.lisp example
+#    NOTE: http://x3dgraphics.com/examples/X3dForWebAuthors/Chapter02-GeometryPrimitives/_pages/page01.html
+# **** [x] Background class
+# **** [x] Viewpoint class
+# **** [x] Shape class
+# **** [x] Box class
+# **** [x] Appearance class
+# **** [x] Material class
+# **** [x] Implement parsing function for each
+
+*** [x] Cone.lisp
+*** [x] Cylinder.lisp
+*** [x] GeometryPrimitiveNodes.lisp
+*** [x] GeometryPrimitiveNodesWhiteBackground.lisp
+*** [x] Sphere.lisp
+*** [x] Text.lisp
+*** [_] TextLengthMaxExtent.lisp
+*** [_] TextSpecialCharacters.lisp
+
+** [_] 3. Grouping
+# *** [_] BoundingBoxIllustration.lisp
+# *** [_] CoordinateAxes.lisp
+# *** [_] CoordinateAxesInlineExample.lisp
+# *** [_] CoordinateAxesInlineNSEW.lisp
+# *** [_] Group.lisp
+# *** [_] GroupAnimated.lisp
+# *** [_] Inline.lisp
+# *** [_] LOD.lisp
+# *** [_] LodWithDifferentShapes.lisp
+# *** [_] OrderOfOperations1.lisp
+# *** [_] OrderOfOperations2.lisp
+# *** [_] StaticGroup.lisp
+# *** [_] Switch.lisp
+# *** [_] Transform.lisp
+# *** [_] TransformCenterOffsetForRotation.lisp
+** [_] 4. Viewing Navigation
+# *** [_] AliasingExample.lisp
+# *** [_] Anchor.lisp
+# *** [_] AnchorComparison.lisp
+# *** [_] Bilboard.lisp
+# *** [_] BindingsOperations.lisp
+# *** [_] Collision
+# *** [_] NavigationInfo
+# *** [_] Viewpoint.x3d
+** [_] 5. Appearence Material Textures
+** [_] 6. Geometry Points Lines and Polygons
+** [_] 7. Event Animation Interpolation
+** [_] 8. Interactivity
+** [_] 9. Event Utilities Scripting
+** [_] 10. Geometry 2D
+** [_] 11. Lighting Environment Effects
+** [_] 12. Environment Sensor Sound
+** [_] 13. Geometry Triangles Quadrilaterals.
+** [_] 14. Prototypes
+** [_] 15. MetaData
+
+* Phase II (Optimize)
+# ** [_] Use reactive programming / asynchronous programming using cl-async.
+# ** [_] Implement the basic logic of operation
+# ** [_] Implement default shader
+# *** [_] Add genertic function to initialize Shader and Program
+# *** [_] Initialize VAO and VBO
+# *** [_] Implement initialization pass
+
+* General notes and ideas
+# ** [_] Check if all docmentation has note to NOTICE.txt
+#    Notes:
+#    - It looks like windowing and gl are sort of implementation details
+#      and come at lower level.
+#    - Do we need the concept of a window? Things are going to be full
+#      screen anywayso no.
+# ** [x] Shader object
+# ** [x] Program object
+# ** [x] Optionally use SDL example to set opengl context
+# ** [_] (defuniform) macro
+# *** [_] Extend support for Matrix, integer and vector
+# ** [_] (defattribute) macro
+# ** [_] Write small sample shader for 3d.
+# ** [_] Render box example using this sample shader
+# ** [_] Implement Sphere source
+# ** [_] Redo molecule application using custom spheres
+# ** [_] Projection and model view calculations for VR
+# ** [_] Send inputs form mouse
+# ** [_] Handle events from gamepad
+# ** [_] Figure out how to render onto another display
+# - Start a common lisp server of that session and let it go

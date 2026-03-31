@@ -1,0 +1,6 @@
+
+
+Project Description:
+Prevents teleporting and logging out during combat on Bukkit servers.
+
+README:

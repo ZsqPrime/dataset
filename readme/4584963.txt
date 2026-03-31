@@ -1,0 +1,7 @@
+Project Description:
+its for the ymca sponsor project
+
+README:
+== Welcome to YMCA
+
+this web application is designed to let anyone post their personal profile then request sponsorship for a YMCA individual trainer program.  Then anyone else can decide to sponsor them.

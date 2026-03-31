@@ -1,0 +1,4 @@
+Project Description:
+An RCOS project to analyze the public sentiment of companies in the stock market
+
+README:

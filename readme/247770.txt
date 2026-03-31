@@ -1,0 +1,8 @@
+An Enhanced Image Gallery plugin for WordPress created by a bunch of dudes (and a lady) at an Atlanta WordPress meetup.
+
+
+Project Description:
+An enhanced Image gallery for WordPress
+
+README:
+An Enhanced Image Gallery plugin for WordPress created by a bunch of dudes (and a lady) at an Atlanta WordPress meetup.

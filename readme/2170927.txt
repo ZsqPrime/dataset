@@ -1,0 +1,12 @@
+Project Description:
+An RSS-monitoring/displaying Chrome Extension
+
+README:
+'What's For Lunch?' Totally Official Readme File
+
+Hi there. This was my first chrome extension. It's based heavily on this LifeHacker how-to article: 
+http://lifehacker.com/5857721/how-to-build-a-chrome-extension
+and uses bootstrap for styling. It's not really finished yet,
+but I'll add as I go. Hope you like it.
+
+@omarmung - Jan. 2012 #hackweek

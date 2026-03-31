@@ -1,0 +1,35 @@
+Project Description:
+This project is a test system developed in PHP & a bit of Ajax (NUR)
+
+README:
+Project name: Test System
+Build date  : 2012-01-11
+
+This simple project has been developed as a test.
+
+Developer informations:
+
+Names: BARAKA Patient
+Email: webmaster@imali.biz
+Phone: 0788215324/0728215324
+
+Others projects:
+
+I, BARAKA, confirm that the following projects have been developed by myself:
+
+
+1. www.imali.biz (A first rwandan classified web application)
+
+
+Project developed in SPIP
+
+  	1. www.cebudema.com
+	2. www.etpnyarurema.net
+	3. www.igihe.tv
+	4. www.hotelrwandasurvivors.org
+	5. www.irebero.com 
+	6. www.ruhagoyacu.com
+
+Some of these projects have been developed when I was working at IGIHE Ltd and PROGRAMAGE Ltd.
+
+And others projects developed in a team at Igihe Ltd.

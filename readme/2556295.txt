@@ -1,0 +1,29 @@
+Project Description:
+Passwordmanager
+
+README:
+pwsm is a password manager wich provides git-mergable datafiles and multiuser support. it uses gpg for encryption.
+
+Copyright (C) 2012 <Heinrich Schmidt>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+This program stores passwords as key-value pairs, where the key is in one line and the value is in the next line. The passwords are encrypt with gpg. This allows you to encrypt your passwords with multiple keys an share them with your employees.
+The program is written in perl and it needs the perl module "Clipboard".
+
+Example Usage:
+	pwsm.pl -k githubpassword   #to get the github password
+	pwsm.pl -k githubpassword -c -a #to change the githubpassword or to add it if its not exists right now.
+	pwsm.pl --def-user  #prompts for the gpg keys you want to use

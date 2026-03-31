@@ -1,0 +1,5 @@
+Project Description:
+R quantmod and python script plot data exported from mt4 stored in mysql
+
+README:
+Just store some R and python script I use to plot data exported from mt4

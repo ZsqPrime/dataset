@@ -1,0 +1,41 @@
+This is a node.js client for the http://memegenerator.net/ API.
+
+Example Usage:
+
+    MemeGenClient = require('memeGenClient.js');
+    var serverOptions = {
+        username:'username',
+        password:'password'
+    };
+
+
+    var memeGenClient = new MemeGenClient(serverOptions);
+
+    memeGenClient.instancesSelectByPopular({})
+        .on('data', function (data) {
+            console.log(data);
+        })
+        .exec()
+
+Project Description:
+A client for the www.memegenerator.com API
+
+README:
+This is a node.js client for the http://memegenerator.net/ API.
+
+Example Usage:
+
+    MemeGenClient = require('memeGenClient.js');
+    var serverOptions = {
+        username:'username',
+        password:'password'
+    };
+
+
+    var memeGenClient = new MemeGenClient(serverOptions);
+
+    memeGenClient.instancesSelectByPopular({})
+        .on('data', function (data) {
+            console.log(data);
+        })
+        .exec()

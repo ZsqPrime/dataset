@@ -1,0 +1,4 @@
+Project Description:
+Theme for Mason Votes website
+
+README:

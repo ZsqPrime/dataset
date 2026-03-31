@@ -1,0 +1,6 @@
+Project Description:
+Device will receive a DMX signal to control mechanical relays
+
+README:
+This project is based on a ATmega168A microcontroller and will recieve DMX communication to control standard mechanical
+relays. The project is build in AVR Studio 5.1 using the default compiler.

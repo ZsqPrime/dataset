@@ -1,0 +1,59 @@
+﻿===============================================================================
+Blocks プロジェクト
+===============================================================================
+
+[Framework]
+
+XNA 全般の開発で利用するライブラリです。
+
+[Framework.Content.Pipeline]
+
+XNA 全般の開発で利用する Content Pipile 用ライブラリです。
+
+[Framework.UI]
+
+XNA 上で稼働する Window システムのライブラリです。
+
+[Framework.UI.Demo]
+
+Framework.UI のテストのためのデモ アプリケーションです。
+※Windows XNA アプリケーション。
+
+[Blocks]
+
+Blocks プロジェクト開発で利用するライブラリです。
+
+[Blocks.Graphics.Demo]
+
+Blocks モデルの負荷テストのためのデモ アプリケーションです。
+※Windows XNA アプリケーション。
+
+[Blocks.Serialization.Demo]
+
+Blocks データ永続化のテストのためのデモ アプリケーションです。
+※Windows アプリケーション。
+
+[BlockViewer]
+
+Blocks モデルのビューワです。
+※Windows XNA アプリケーション。
+
+[BlockEditor]
+
+Blocks データのエディタです。
+
+[Net.Box]
+
+Box (http://www.box.com) の REST API を用いるためのライブラリです。
+※Windows ライブラリ。
+
+[Net.Box.BuildApiKey]
+
+Box の API Key を埋め込んだ DLL をビルドするコンソール アプリケーションです。
+※Windows アプリケーション。
+
+[Net.Box.Demo]
+
+Net.Box ライブラリのデモ アプリケーションです。
+※Windows アプリケーション。
+

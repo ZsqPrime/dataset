@@ -1,0 +1,7 @@
+Project Description:
+Algorithms i implemented
+
+README:
+Algorithm in C++/Java
+
+Author: sharad dixit <sharad.eminence@gmail.com>

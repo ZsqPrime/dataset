@@ -1,0 +1,6 @@
+Project Description:
+A minesweeper engine in clojure
+
+README:
+This project is to create a Minesweeper engine and eventually build a
+program that solves Minesweeper.

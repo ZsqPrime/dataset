@@ -1,0 +1,22 @@
+Clipboard
+========================
+
+What's inside?
+---------------
+Symfony 1.4
+
+Project Description:
+
+
+README:
+Clipboard
+
+========================
+
+
+
+What's inside?
+
+---------------
+
+Symfony 1.4

@@ -1,0 +1,4 @@
+Project Description:
+Battle calculator and odds simulator for Avalon Hill Axis & Allies board/computer games.
+
+README:

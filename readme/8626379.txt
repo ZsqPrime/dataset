@@ -1,0 +1,79 @@
+Project Description:
+
+
+README:
+To install a cookbook from https://github.com/opscode/cookbooks
+knife cookbook -c solo.rb site install apache2
+
+Amazon EC2 Ubuntu image
+https://cloud-images.ubuntu.com/server/releases/11.04/release-20110426/
+
+# Create EC2 10.04 on EC2 US-EAST  http://alestic.com/  ami-71dc0b18
+ec2-run-instances ami-71dc0b18 -k ec2-keypair
+export CHEF_SERVER=ec2-184-72-197-159.compute-1.amazonaws.com
+
+# Prepare remote server for ssh access
+rake prepare
+# Copy environment variables from 1Password
+rake bootstrap
+rake upload
+rake cook
+
+Use Vagrant+Ubuntu 10.04(Lucide) as local test environment
+http://vagrantup.com/docs/getting-started/index.html
+gem install vagrant
+vagrant box add lucid32 http://files.vagrantup.com/lucid32.box
+vagrant init lucid32
+vagrant up
+vagrant provision
+vagrant suspend/resume/halt/destroy
+vagrant package --vagrantfile Vagrantfile
+
+# This should be run only ONCE!
+vagrant ssh-config | sed 's/Host default/Host vagrant/' >> $HOME/.ssh/config
+ssh vagrant 'source /etc/profile ; echo PATH=$PATH > .ssh/environment'
+
+Data to backup and restore
+/var/lib/mysql/bbs
+/var/lib/mysql/gocool_production
+/var/lib/mysql/ucenter
+
+/data/apps/bbs/current/attachments
+/data/apps/bbs/current/images/avatars/bbsxp
+/data/apps/gocool/current/public/system
+
+ssh root@`ami_host` system/backup.sh
+scp root@`ami_host`:backup/* ~/proj/backup/
+
+Config files:
+bbs: config.inc.php
+gocool:
+  config/compass.config
+  config/database.yml
+  config/newrelic.yml
+  config/initializers/1_settings.rb
+  config/initializers/hoptoad.rb
+jsgameviewer:
+ucenter: data/config.inc.php
+
+To deploy bbs and other applications
+cd $HOME/proj/bbs && cap deploy:setup && cap deploy
+cd $HOME/proj/ucenter && cap deploy:setup && cap deploy
+cd $HOME/proj/jsgameviewer && cap deploy:setup && cap deploy
+cd $HOME/proj/bbs && cap deploy:setup && cap deploy
+cd $HOME/proj/server_extras && cap deploy:setup && cap deploy
+
+ln -s /data/apps/gocool/current gocool
+ln -s /data/apps/bbs/current bbs
+ln -s /data/apps/jsgameviewer/current jsgameviewer
+ln -s /data/apps/extras/current extras
+ln -s /data/apps/ucenter/current ucenter
+
+Vagrant+EC2
+https://github.com/mlinderm/vagrant-aws
+
+====================
+
+Bootstrap with rbenv
+https://gist.github.com/1323779
+TODO: remove unused stuff, upload cookbooks and dna.json etc

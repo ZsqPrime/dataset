@@ -1,0 +1,20 @@
+[qooxdoo-maven home page]: http://qxmaven.charless.org
+
+# Qooxdoo Maven Plugin
+
+Qooxdoo Maven Plugin is a maven plugin to help people developing Qooxdoo application within Maven.
+
+Visit the [qooxdoo-maven home page] page for more details.
+
+
+Project Description:
+A maven plugin to help in building qooxdoo application
+
+README:
+[qooxdoo-maven home page]: http://qxmaven.charless.org
+
+# Qooxdoo Maven Plugin
+
+Qooxdoo Maven Plugin is a maven plugin to help people developing Qooxdoo application within Maven.
+
+Visit the [qooxdoo-maven home page] page for more details.

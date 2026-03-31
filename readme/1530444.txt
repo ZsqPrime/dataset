@@ -1,0 +1,27 @@
+Embedded DSP
+============
+
+A collection of tools used in an embedded pulse oximeter. All techniques are targeted at microcontrollers.
+
+List of Modules
+---------------
+ * Lattice Wave Filter
+ * Generice Peak Detector
+ * Quadrature Delineator
+ * PPG Specific Delineator (including log conversion)
+
+Project Description:
+Signal processing tools used on 16/32 bit MCU. Specifically developed for photoplethysmography.
+
+README:
+Embedded DSP
+============
+
+A collection of tools used in an embedded pulse oximeter. All techniques are targeted at microcontrollers.
+
+List of Modules
+---------------
+ * Lattice Wave Filter
+ * Generice Peak Detector
+ * Quadrature Delineator
+ * PPG Specific Delineator (including log conversion)

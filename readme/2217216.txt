@@ -1,0 +1,6 @@
+
+
+Project Description:
+Backbone, ajax-solr, bootstrap, jquery and coffee based client for astroexplorer
+
+README:

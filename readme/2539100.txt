@@ -1,0 +1,18 @@
+Project Description:
+Javascript UI Components based on the popular backbone.js
+
+README:
+Backbone-UI is DEPRECATED . If you're interested in Javascript MVC-Frameworks, please check out **rAppid.js**
+
+Backbone-UI 
+======================
++ based on Backbone.js, Underscrore.js, jQuery, jQuery UI, SlickGrid and some other ...
++ Supported Componentes
+  - ListView
+  - ContainerView
+  - ScrollView
+  - SplitView
+  - WorkspaceView
+  - Dialogs
+  - InputViews
++ Supports Property Binding

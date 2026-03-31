@@ -1,0 +1,7 @@
+Project Description:
+IRC multiplexer, allowing several client programs to share a nick on IRC.
+
+README:
+This is silly and useless.
+
+Use znc instead: https://github.com/znc/znc

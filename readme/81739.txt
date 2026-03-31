@@ -1,0 +1,18 @@
+==========================================================================
+Project:   RssReader
+Copyright: @2012 My Company, Inc.
+==========================================================================
+
+TODO: Describe Your Project
+
+
+Project Description:
+SproutCore RSS Reader
+
+README:
+==========================================================================
+Project:   RssReader
+Copyright: @2012 My Company, Inc.
+==========================================================================
+
+TODO: Describe Your Project

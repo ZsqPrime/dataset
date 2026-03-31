@@ -1,0 +1,24 @@
+This project has moved!
+=======================
+The new name for EyeTVLive for PLEX is now EyeContact!   
+Please look [here](https://github.com/Shirk/EyeContact) for the new repository.
+
+The old code is still available in the 'legacy' branch.
+
+Cheers,
+Shirk
+
+
+Project Description:
+A plugin to enable EyeTV live3g streams and EPG in Plex Media Center.
+
+README:
+This project has moved!
+=======================
+The new name for EyeTVLive for PLEX is now EyeContact!   
+Please look [here](https://github.com/Shirk/EyeContact) for the new repository.
+
+The old code is still available in the 'legacy' branch.
+
+Cheers,
+Shirk

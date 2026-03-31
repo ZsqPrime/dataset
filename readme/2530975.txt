@@ -1,0 +1,5 @@
+Project Description:
+Compare descriptors of all points in a point cloud to a specified point
+
+README:
+Select a point and compare its descriptor to all other points. Color the points by their difference magnitude.

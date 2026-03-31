@@ -1,0 +1,6 @@
+
+
+Project Description:
+An implementation of django-taggit with moderation tools and relevance scoring.
+
+README:

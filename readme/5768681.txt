@@ -1,0 +1,5 @@
+Project Description:
+LinkedIn API binding and connect support
+
+README:
+# spring-net-social-linkedin is no longer actively maintained by VMware, Inc.

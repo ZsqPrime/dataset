@@ -1,0 +1,9 @@
+gr-modtool.py has been moved to GNU Radio.
+
+
+
+Project Description:
+A tool for editing GNU Radio out-of-tree modules
+
+README:
+gr-modtool.py has been moved to GNU Radio.

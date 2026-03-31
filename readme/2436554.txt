@@ -1,0 +1,24 @@
+Installation
+============
+Copy westerosVariants.zip into the variants folder of your jDip install.
+
+Tested with jDip 1.6.8 and 1.7.0 (preview 2)
+
+Updating the map
+================
+See src/README
+
+
+Project Description:
+A Westeros map variant for JDip
+
+README:
+Installation
+============
+Copy westerosVariants.zip into the variants folder of your jDip install.
+
+Tested with jDip 1.6.8 and 1.7.0 (preview 2)
+
+Updating the map
+================
+See src/README

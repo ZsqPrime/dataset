@@ -1,0 +1,14 @@
+Buffalo RemoteStation PC-OP-RS1 and its compatible arduino board
+controller command
+
+compiles / tested on Linux
+
+
+Project Description:
+Buffalo RemoteStation PC-OP-RS1 (PC-remocon) controller
+
+README:
+Buffalo RemoteStation PC-OP-RS1 and its compatible arduino board
+controller command
+
+compiles / tested on Linux

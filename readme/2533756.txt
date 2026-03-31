@@ -1,0 +1,5 @@
+Project Description:
+openFrameworks threaded video loading
+
+README:
+You also need goVideoPlayer to use this

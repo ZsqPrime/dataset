@@ -1,0 +1,4 @@
+Project Description:
+Der KalenderManager soll Termine aus verschiedenen Kalendern, Stundenplänen, Terminplanern etc. , welche in digitaler Form verfügbar sind, auslesen. Die Ausgelesenen Daten können anschließend angezeigt werden oder in einen anderen Kalender exportiert werd
+
+README:

@@ -1,0 +1,5 @@
+Project Description:
+ara_rss
+
+README:
+My sample program to learn Ruby with ermaker.

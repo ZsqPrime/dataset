@@ -1,0 +1,6 @@
+Project Description:
+Generic implementation of variants of the minimax algorithm
+
+README:
+Generic implementation of minimax with alpha beta prunning.
+Connect 4 serves as an example.

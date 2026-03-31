@@ -1,0 +1,5 @@
+Project Description:
+Building a Williams arcade machine from scratch
+
+README:
+Read about 8821 here: http://sowbug.com/tagged/8821

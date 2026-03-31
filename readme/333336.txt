@@ -1,0 +1,8 @@
+Initial Commit
+
+
+Project Description:
+A JRuby wrapper for the Apache OpenNLP library
+
+README:
+Initial Commit

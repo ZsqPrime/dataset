@@ -1,0 +1,101 @@
+Project Description:
+ActiveRecord Adapter for Neo4j Graph Database
+
+README:
+Note:
+-----
+Fetch tag 0.0.1 for Neo4j 1.6 support.
+Current development in progress with Neo4j 1.7M01. Some things may not work if you're on Neo4j 1.6.
+
+
+This adapter was tested with ActiveRecord 3.0.9 running with Rails 3.0.9
+Adapter uses Max De Marzi's Neography 0.0.22 internally to establish connection with a Neo4j REST server (tested with Neo4j 1.6)
+
+Sample configuration:
+---------------------
+
+config/database.yml
+
+development:
+  adapter: neo4j_rest
+  host: localhost
+  port: 7474
+
+Check connection:
+-----------------
+$ rails c
+Loading development environment (Rails 3.0.9)
+irb(main):001:0> c = ActiveRecord::Base.connection
+irb(main):002:0> c.neo_server.list_node_indexes
+=> {"model_index"=>{"type"=>"exact", "template"=>"http://localhost:7474/db/data/index/node/model_index/{key}/{value}", "provider"=>"lucene"}}
+
+For applications using multiple databases:
+------------------------------------------
+
+config/database.yml
+
+development:
+  adapter: mysql2
+  host: localhost
+  user: mysql
+  password: mysql
+
+graph_development:
+  adapter: neo4j_rest
+  host: localhost
+  port: 7474
+
+Some regular model:
+
+class AdapterTest < ActiveRecord::Base
+
+...
+
+end
+
+Model using neo4j_rest adapter (add establish_connection to corresponding entry in database.yml):
+
+class AdapterTest < ActiveRecord::Base
+  establish_connection "graph_#{Rails.env}"
+
+  ...
+
+end
+
+In case the primary connection is non-neo4j_rest, migrations need to be modified a bit.
+
+Sample migration:
+
+class CreateAdapterTests < ActiveRecord::HybridDatabaseConnector::Migration
+  connection_for AdapterTest
+
+  def self.up
+    create_table :adapter_tests, :class_name => AdapterTest.to_s do |t|
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :adapter_tests
+  end
+end
+
+  - connection_for takes a class which could guide ActiveRecord::Migrator to use a neo4j_rest connection. In the above case, AdapterTest has an establish_connection with neo4j_rest adapter, hence "connection_for AdapterTest"
+  - :class_name option in create_table ensures that model class name is stored on model super node. This would enable graph relationships across heterogenous data types.
+
+Instantiating a model object from Graph
+---------------------------------------
+# Get a node with id 48
+node = AdapterTest.connection.execute_gremlin 'g.v(48)'
+
+adapter_instance = AdapterTest.load_from_graph node
+
+# load_from_graph would accept a node hash or an array of hashes
+
+Most AREL syntaxes shall work:
+------------------------------
+
+AdapterTest.select(:name).where(:id => [1,2,3,4])
+AdapterTest.create(:name => 'Neo')
+AdapterTest.where(:name => 'Neo').update_all :alias => 'Anderson'
+AdapterTest.where(:name => 'Neo').destroy_all

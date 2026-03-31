@@ -1,0 +1,6 @@
+
+
+Project Description:
+Shows your Last.fm history as a graph of time of day so you can see patterns ie when you listened to the same set of songs in the same order such as playlist
+
+README:

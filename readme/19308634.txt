@@ -1,0 +1,7 @@
+Project Description:
+Functions that are useful for solving Project Euler problems with Common Lisp.
+
+README:
+A set of helper functions for solving Project Euler problems using Common Lisp
+
+Project Euler: http://projecteuler.net/

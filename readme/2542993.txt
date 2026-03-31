@@ -1,0 +1,13 @@
+Project Description:
+Gets the zip of a user
+
+README:
+I wrote a script that get the ip address of a user and then uses that ip with an ip to location api to get the zip code of that user.
+
+getzip.cgi can be run on a browser as well as the console.
+
+getzip.py is for the console.
+
+The scripts are documented so you can tell what each line of code does.
+
+Lastly but definitely not least, I want to recognize http://checkip.dyndns.org/ and http://freegeoip.net/ because without their data I wouldn't have been able to do this.

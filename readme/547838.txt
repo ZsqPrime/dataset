@@ -1,0 +1,8 @@
+Rodent Imaging Midas3 module
+
+
+Project Description:
+Midas Server module for rodent imaging
+
+README:
+Rodent Imaging Midas3 module

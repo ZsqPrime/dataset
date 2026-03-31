@@ -1,0 +1,5 @@
+Project Description:
+Source for Linux in Production
+
+README:
+This is the blog at http://linux-in-production.tedb.us... powered by Jekyll and Github Pages

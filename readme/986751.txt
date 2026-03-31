@@ -1,0 +1,14 @@
+django_cherrypy
+============================
+
+cherrypy written as a django management command.
+
+
+Project Description:
+A clean copy of django cherrypy without including the wsgiserver dependency 
+
+README:
+django_cherrypy
+============================
+
+cherrypy written as a django management command.

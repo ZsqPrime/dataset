@@ -1,0 +1,323 @@
+Project Description:
+Common shared deployment recipes.
+
+README:
+= ninja-deploy
+
+Common shared deployment recipes.
+
+
+== Assumptions
+
+* The user has local tasks to set up variables specfic to the deploying environment (ie. staging, production, etc.).
+
+
+== Database Recipes
+
+Require the database recipes in your deploy.rb file:
+
+  require 'ninja_deploy/recipes/database'
+
+=== dump
+
+Dependencies:
+
+* The user acting during the deployment must have permissions to dump the MySQL database.
+
+==== To Local File
+
+Dumps the contents of a remote database to a MySQL dump file, scp's the file to /tmp directory.
+
+  cap production db:dump:to_local_file
+
+==== To Local Database
+
+Dumps the contents of a remote database to a MySQL dump file, scp's the file to /tmp directory, loads the locally configured
+development database and deletes the local and remote dump files.
+
+  cap production db:dump:to_local_db
+
+Dependencies:
+
+* The configured local development user must have permission to load the database form a MySQL dump file.
+
+==== To Staging Database
+
+Dumps the contents of a remote database to a MySQL dump file, scp's the file to /tmp directory of the staging server, loads the locally configured
+staging database and deletes the local and remote dump files.
+
+  cap production db:dump:to_staging_db
+
+Dependencies:
+
+* The configured staging user must have permission to load the database form a MySQL dump file.
+* The staging machine must be able to ssh to the host that is configured in the recipe.
+
+
+== Deploy Recipes
+
+Require the deploy recipes in your deploy.rb file:
+
+  require 'ninja_deploy/recipes/deploy'
+
+=== web:disable
+
+Presents a maintenance page to visitors.
+
+As Callback:
+
+  after "deploy:update_code", "deploy:web:disable"
+
+From Command-Line:
+
+  cap production deploy:web:disable REASON="hardware upgrade" UNTIL="12pm Central Time"
+
+
+== Log Recipes
+
+Require the database recipes in your deploy.rb file:
+
+  require 'ninja_deploy/recipes/log'
+
+=== tail
+
+Tails the remote server's log for the current environment.
+
+  cap production log:tail
+
+
+== Passenger Recipes
+
+Require the passenger recipes in your deploy.rb file:
+
+  require 'ninja_deploy/recipes/passenger'
+
+=== restart
+
+Restarts Passenger.
+
+As Callback:
+
+  after "deploy:update_code", "passenger:restart"
+
+From Command-Line:
+
+  cap production passenger:restart
+
+=== sudo_restart
+
+Restarts Passenger using sudo.
+
+As Callback:
+
+  after "deploy:update_code", "passenger:sudo_restart"
+
+From Command-Line:
+
+  cap production passenger:sudo_restart
+
+
+== Sass Recipes
+
+Include the Sass Rake tasks in your deploy.rb:
+
+  NinjaDeploy do
+    mirror_rake_tasks :sass
+  end
+
+Run Rake via Bundler, locally and/or remotely, using a configuration:
+
+  NinjaDeploy.local_rake_executable  = '/usr/bin/env bundle exec rake'
+  NinjaDeploy.remote_rake_executable = '/usr/bin/env bundle exec rake'
+
+=== update
+
+Generates the CSS files from the Sass files.
+
+As Callback:
+
+  before "deploy:restart", "sass:update"
+
+From Command-Line:
+
+  cap production sass:update
+
+
+== Thinking Sphinx Recipes
+
+Require the thinking sphinx recipes in your deploy.rb file and include the Thinking Sphinx Rake tasks:
+
+  require 'ninja_deploy/recipes/thinking_sphinx'
+
+  NinjaDeploy do
+    mirror_rake_tasks :thinking_sphinx
+  end
+
+Run Rake via Bundler, locally and/or remotely, using a configuration:
+
+  NinjaDeploy.local_rake_executable  = '/usr/bin/env bundle exec rake'
+  NinjaDeploy.remote_rake_executable = '/usr/bin/env bundle exec rake'
+
+=== configure
+
+Generates the Thinking Sphinx configuration file from the sphinx.yml file.
+
+As Callback:
+
+  after "deploy:update_code", "thinking_sphinx:configure"
+
+From Command-Line:
+
+  cap production thinking_sphinx:configure
+
+=== index
+
+Builds the Sphinx index files.
+
+From Command-Line:
+
+  cap production thinking_sphinx:configure
+
+=== run
+
+Stops Sphinx, if running, then starts Sphinx.
+
+From Command-Line:
+
+  cap production thinking_sphinx:ts_run
+
+As Callback:
+
+  after "deploy:update_code", "thinking_sphinx:ts_run"
+
+=== start
+
+Start Sphinx searchd daemon.
+
+As Callback:
+
+  after "deploy:update_code", "thinking_sphinx:start"
+
+=== stop
+
+Stops Sphinx searchd daemon.
+
+As Callback:
+
+  after "deploy:update_code", "thinking_sphinx:stop"
+
+=== stop_using_previous_config
+
+Stops thinking sphinx using the config file in the previous release.  Useful when there is not a
+configuration file in the current release yet.
+
+As Callback:
+
+  after "deploy:update_code", "thinking_sphinx:stop_using_previous_config"
+
+=== restart
+
+Stops and starts the Sphinx searchd daemon.
+
+From Command-Line:
+
+  cap production thinking_sphinx:restart
+
+=== rebuild
+
+Stops the Sphinx searchd daemon, re-indexes and then starts the searchd daemon.
+
+From Command-Line:
+
+  cap production thinking_sphinx:rebuild
+
+=== shared_sphinx_folder
+
+Create the folder in the shared directory to store the Sphinx files.
+
+As Callback:
+
+  after "deploy:update_code", "thinking_sphinx:shared_sphinx_folder"
+
+=== symlink_sphinx_indexes
+
+symlink to the folder in the shared directory to store the Sphinx files.
+
+As Callback:
+
+  after "deploy:update_code", "thinking_sphinx:symlink_sphinx_indexes"
+
+
+== Version Recipes
+
+Require the version recipes in your deploy.rb file:
+
+  require 'ninja_deploy/recipes/version'
+
+=== write
+
+Writes a public/VERSION file to the remote server.
+
+As Callback:
+
+  after "deploy:update_code", "version:write"
+
+Dependencies:
+
+* branch_tag_or_sha_to_deploy variable
+
+
+== Whenever Recipes
+
+Require the whenever recipes in your deploy.rb file:
+
+  require 'ninja_deploy/recipes/whenever'
+
+=== update_crontab
+
+Updates the crontab file using whenever.
+
+As Callback:
+
+  after "deploy:update_code", "whenever:update_crontab"
+
+From Command-Line:
+
+  cap production whenever:update_crontab
+
+Dependencies:
+
+* application variable
+
+
+== RVM Recipes
+
+Require the RVM recipes in your deploy.rb file:
+
+  require 'ninja_deploy/recipes/rvm'
+
+=== trust_rvmrc
+
+As Callback:
+
+  after "deploy:update_code", "rvm:trust_rvmrc"
+
+From Command-Line:
+
+  cap production rvm:trust_rvmrc
+
+
+
+== Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== License
+
+Released under the MIT License.

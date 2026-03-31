@@ -1,0 +1,5 @@
+Project Description:
+Dr Mario clone in Python and wxPython, including AI
+
+README:
+Python + wxPython clone of Dr Mario, including AI

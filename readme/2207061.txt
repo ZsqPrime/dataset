@@ -1,0 +1,47 @@
+# Class: apt
+#   This module manages apt
+#
+# Definition:
+#   apt::url
+#
+# Parameters:
+#   $mirror_deb - specify the url
+#   $mirror_src - does the mirror contains the source files
+#
+# Actions:
+#   Installs the sources.list etc.
+#
+# Requires:
+#   Separate partition for /tmp
+#
+# Sample Usage:
+#   apt::url { '/etc/apt/sources.list':
+#     mirror_deb => $mirror_deb,
+#     mirror_src => $mirror_src,
+#   }
+
+Project Description:
+This module manages apt
+
+README:
+# Class: apt
+#   This module manages apt
+#
+# Definition:
+#   apt::url
+#
+# Parameters:
+#   $mirror_deb - specify the url
+#   $mirror_src - does the mirror contains the source files
+#
+# Actions:
+#   Installs the sources.list etc.
+#
+# Requires:
+#   Separate partition for /tmp
+#
+# Sample Usage:
+#   apt::url { '/etc/apt/sources.list':
+#     mirror_deb => $mirror_deb,
+#     mirror_src => $mirror_src,
+#   }

@@ -1,0 +1,14 @@
+Not Supported
+=============
+
+This was intended for the old HPHPc compiler. For HVVM there is no need for this repo.
+
+
+Project Description:
+CakePHP plugin to help you get you application running on the Facebook's HipHop compiler and interpreter
+
+README:
+Not Supported
+=============
+
+This was intended for the old HPHPc compiler. For HVVM there is no need for this repo.

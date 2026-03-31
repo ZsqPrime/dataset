@@ -1,0 +1,55 @@
+Copyright (C) 2011 Leon N. Maurer
+http://www.physics.wisc.edu/~lmaurer/
+Source code available under the GNU Public License.
+
+aaodds: An odds calculator for Axis and Allies
+
+This program calculates the exact odds for battles in the revised edition of
+the Axis and Allies board game; it does not estimate the results using
+randomness. There are two versions of the program: an offline program with a
+graphical user interface made with Tk, and an online version that is used
+through a web browser. All rules except special submarine rules (first strike,
+cannot attack aircraft) are implemented. I have a plan for how to implement
+sub rules -- I'll get around to it when I have time and if there's demand. The
+current version is quite speedy if Ruby/GSL is installed (otherwise, it's
+somewhat slower).
+
+I'm hosting the online version on my server. You can find it at
+http://leon-server.dyndns.org:88/ if my server is on (it usually is).
+
+Usage instructions for the offline version follow. The online version has usage
+instructions on its pages. A screenshot of the offline version is at:
+http://www.physics.wisc.edu/~lmaurer/code/aacalc/aacalc.html
+-------------------------------------------------------------------------------
+Controls:
+
+Technology and AA guns: click the appropriate check boxes.
+
+Adding units: either use the up and down arrows, or enter the text directly in
+to the boxes.
+
+Sorting units: this is the order the units will be lost in. The first unit to
+be lost is at the top. Clicking "value" or "power" will sort the units by that
+criteria. You can also put them in a custom order using the up and down
+buttons. They will move whatever units is currently selected in the list. After
+hitting 'Calculate', numbers will appear next to the units. See the next item
+for an explanation.
+
+Calculate: finds the odds for the battle. This will add numbers next to the
+units in the lists. The number is the probability that the unit (and all units
+lost after it) will survive the battle.
+
+Clear: clears the units for the associated side.
+
+Attacker wins: probability of attacker winning.
+
+Defender wins: probability of defender winning.
+
+Mutual annihilation: probability of no units surviving the battle.
+
+Sum: The sum of the previous three probabilities. This is shown as a debugging
+feature — it should always be very close to "1.0". If it is not, feel free to
+contact the author with details about the battle.
+
+Save Last Battle: saves the details of the calculated battle in a text file for
+future reference.

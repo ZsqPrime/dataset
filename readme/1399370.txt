@@ -1,0 +1,5 @@
+Project Description:
+German Ubuntu IRC Bot
+
+README:
+This is the repository for the German Ubuntu ICR channel bot.

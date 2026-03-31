@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+first_app is a light utility for daily tracking and management of the valuation of a software business.

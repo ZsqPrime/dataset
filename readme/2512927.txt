@@ -1,0 +1,7 @@
+This file was created by IntelliJ IDEA 11.0 for binding GitHub repository
+
+Project Description:
+Little project used to learn Scala. A association football management game.
+
+README:
+This file was created by IntelliJ IDEA 11.0 for binding GitHub repository

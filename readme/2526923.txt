@@ -1,0 +1,16 @@
+Project Description:
+A pinch-zoom image carousel for Sencha Touch
+
+README:
+Author: Chris Alfano <chris@jarv.us>
+License: GNU GPLv3
+
+Description:
+An extension of Ext.Carousel for Sencha Touch that adds pinch zooming for images.
+
+Usage:
+var pinchCarousel = new Jarvus.mobile.PinchCarousel({
+	images: ['http://placekitten.com/800/600', 'http://placekitten.com/1024/600']
+});
+
+See examples for full usage

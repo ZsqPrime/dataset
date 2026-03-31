@@ -1,0 +1,12 @@
+Remeber to replace <text:line-break/> with $ for Materia Medica
+
+Solve Bugs in Materia Medica
+
+
+Project Description:
+None
+
+README:
+Remeber to replace <text:line-break/> with $ for Materia Medica
+
+Solve Bugs in Materia Medica

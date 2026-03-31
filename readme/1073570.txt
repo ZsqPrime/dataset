@@ -1,0 +1,6 @@
+
+
+Project Description:
+This project is aimed at translating pulse files in a easy-to-use grammar to files which our homebuilt digital pattern generator can understand and execute.
+
+README:

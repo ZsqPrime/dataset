@@ -1,0 +1,272 @@
+DavidBaduraFixturesBundle
+=========================
+
+**The project is no longer supported. If you still want to create fixtures with yaml, then I recommend switching to [Alice](https://github.com/nelmio/alice).**
+
+
+[![Build Status](https://secure.travis-ci.org/DavidBadura/FixturesBundle.png)](http://travis-ci.org/DavidBadura/FixturesBundle)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DavidBadura/fixturesbundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+Features
+--------
+
+* [DavidBaduraFakerBundle](https://github.com/DavidBadura/FakerBundle) support ([documentation](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/faker.md))
+* Resolve object dependency (also bidirectional references)
+* Configurable default fixture converter (constructor, properties, set* and add* methods)
+* Easy to create your own converter
+* Extendable by events
+* Fixture filtering by tags
+* Object validation
+* Fixturemanager as a service
+* Fixture data validating and normalizing by symfony config component
+* MongoDB support
+* DefaultConverter: handle "setCreateDate(\DateTime $date)" methods
+* Security Encoder support
+
+Todos
+-----
+
+* Core components move in its own repository [DavidBadura\Fixtures](https://github.com/DavidBadura/Fixtures) 
+* XML Fixtures support
+
+Documentation
+-------------
+
+- [Configuration](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/configuration.md)
+- [Fixtures](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/fixtures.md)
+- [Converters](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/converter.md)
+- [Command](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/command.md)
+- [Service](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/service.md)
+- [Extend](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/extend.md)
+- [Faker intergration](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/faker.md)
+
+
+1. Installation
+---------------
+
+Add DavidBaduraFixtureBundle in your composer.json
+
+``` js
+
+{
+    "require": {
+        "davidbadura/fixtures-bundle": "1.0.*"
+    }
+}
+
+```
+
+Add the DavidBaduraFixturesBundle to your application kernel:
+
+``` php
+// app/AppKernel.php
+public function registerBundles()
+{
+    return array(
+        // ...
+        new DavidBadura\FixturesBundle\DavidBaduraFixturesBundle(),
+        // ...
+    );
+}
+```
+
+2. Configuration
+----------------
+
+Configure DavidBaduraFixturesBundle:
+
+``` yaml
+# app/config/config.yml
+david_badura_fixtures:
+  bundles: [YourBundle]
+```
+
+Activate support for MongoDB:
+
+``` yaml
+# app/config/config.yml
+david_badura_fixtures:
+  persister: odm
+```
+
+
+3. Create fixtures
+---------------
+
+Now you must create your fixture data:
+
+``` yaml
+# @YourBundle/Resource/fixtures/install.yml
+user:
+    properties:
+        class: "YourBundle\Entity\User"
+    data:
+        david:
+            name: David
+            email: "d.badura@gmx.de"
+            groups: ["@group:admin"] # <- reference to group.admin
+
+group:
+    properties:
+        class: "YourBundle\Entity\Group"
+    data:
+        admin:
+            name: Admin
+        member:
+            name: Member
+```
+The fixture files will be automatically loaded from the `Resources\fixtures` folder.
+
+4. Load fixtures
+----------------
+
+Command:
+
+``` shell
+php app/console davidbadura:fixtures:load
+```
+
+Service:
+``` php
+$fixtureManager = $container->get('davidbadura_fixtures.fixture_manager');
+$fixtureManager->load();
+```
+
+
+Project Description:
+A Symfony2 bundle to load yaml fixtures. Easy extendable, resolve object dependency and validate objects.
+
+README:
+DavidBaduraFixturesBundle
+=========================
+
+**The project is no longer supported. If you still want to create fixtures with yaml, then I recommend switching to [Alice](https://github.com/nelmio/alice).**
+
+
+[![Build Status](https://secure.travis-ci.org/DavidBadura/FixturesBundle.png)](http://travis-ci.org/DavidBadura/FixturesBundle)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/DavidBadura/fixturesbundle/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
+Features
+--------
+
+* [DavidBaduraFakerBundle](https://github.com/DavidBadura/FakerBundle) support ([documentation](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/faker.md))
+* Resolve object dependency (also bidirectional references)
+* Configurable default fixture converter (constructor, properties, set* and add* methods)
+* Easy to create your own converter
+* Extendable by events
+* Fixture filtering by tags
+* Object validation
+* Fixturemanager as a service
+* Fixture data validating and normalizing by symfony config component
+* MongoDB support
+* DefaultConverter: handle "setCreateDate(\DateTime $date)" methods
+* Security Encoder support
+
+Todos
+-----
+
+* Core components move in its own repository [DavidBadura\Fixtures](https://github.com/DavidBadura/Fixtures) 
+* XML Fixtures support
+
+Documentation
+-------------
+
+- [Configuration](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/configuration.md)
+- [Fixtures](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/fixtures.md)
+- [Converters](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/converter.md)
+- [Command](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/command.md)
+- [Service](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/service.md)
+- [Extend](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/extend.md)
+- [Faker intergration](https://github.com/DavidBadura/FixturesBundle/blob/master/Resources/doc/faker.md)
+
+
+1. Installation
+---------------
+
+Add DavidBaduraFixtureBundle in your composer.json
+
+``` js
+
+{
+    "require": {
+        "davidbadura/fixtures-bundle": "1.0.*"
+    }
+}
+
+```
+
+Add the DavidBaduraFixturesBundle to your application kernel:
+
+``` php
+// app/AppKernel.php
+public function registerBundles()
+{
+    return array(
+        // ...
+        new DavidBadura\FixturesBundle\DavidBaduraFixturesBundle(),
+        // ...
+    );
+}
+```
+
+2. Configuration
+----------------
+
+Configure DavidBaduraFixturesBundle:
+
+``` yaml
+# app/config/config.yml
+david_badura_fixtures:
+  bundles: [YourBundle]
+```
+
+Activate support for MongoDB:
+
+``` yaml
+# app/config/config.yml
+david_badura_fixtures:
+  persister: odm
+```
+
+
+3. Create fixtures
+---------------
+
+Now you must create your fixture data:
+
+``` yaml
+# @YourBundle/Resource/fixtures/install.yml
+user:
+    properties:
+        class: "YourBundle\Entity\User"
+    data:
+        david:
+            name: David
+            email: "d.badura@gmx.de"
+            groups: ["@group:admin"] # <- reference to group.admin
+
+group:
+    properties:
+        class: "YourBundle\Entity\Group"
+    data:
+        admin:
+            name: Admin
+        member:
+            name: Member
+```
+The fixture files will be automatically loaded from the `Resources\fixtures` folder.
+
+4. Load fixtures
+----------------
+
+Command:
+
+``` shell
+php app/console davidbadura:fixtures:load
+```
+
+Service:
+``` php
+$fixtureManager = $container->get('davidbadura_fixtures.fixture_manager');
+$fixtureManager->load();
+```

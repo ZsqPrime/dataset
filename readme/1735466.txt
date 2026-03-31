@@ -1,0 +1,6 @@
+Project Description:
+A logical/functional programming language based on sequent calculus
+
+README:
+sequent - A programming language based on sequent calculus and the Coq
+proof mode. See `design.mkd` for the design doc.

@@ -1,0 +1,26 @@
+Project Description:
+River simulation web application framework for selecting and preparing data for input into 1-D and 2-D river models
+
+README:
+## Custom SRID
+
+DWR LiDAR data comes in a slightly modified NAD83 projection, make sure this is loaded
+
+TODO: Automate this?
+
+  insert into spatial_ref_sys (srid, auth_name, auth_srid, proj4text, srtext) values (50000, 'DWR', 1, '+proj=utm +zone=10 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=ft +no_defs', '');
+
+Add to epsg file:
+
+# DWR Projection
+<50000> +proj=utm +zone=10 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=ft +no_defs <>
+
+## Loading new models
+
+Generate PostGIS data from SHP files with shp2pgsql:
+
+  shp2pgsql shapefile.shp -g the_geom [-s SRID] > shapefile.sql
+
+Generate Django-mappings and model using ogrinspect command:
+
+  ./manage.py ogrinspect shapefile.shp modelname --mapping

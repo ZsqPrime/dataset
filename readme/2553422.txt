@@ -1,0 +1,86 @@
+Project Description:
+ksf
+
+README:
+About: 
+My stab at finally getting Katawa Shoujo Fighter from the ground.
+
+Usage:
+If you manage to get this working, play around with the jkli keys
+for motion and the erty and dfgh keys for attacks. Although
+things are far from working correctly.
+
+
+
+License of the source code and program: the zlib license.
+
+  ksf -- Katawa Shoujo Fighter
+  
+  Version 0.1 29 Februari 2012
+  
+  Copyright (c) 2012 Beoran (beoran@rubyforge.org)
+
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+  
+  
+Credits:
+Idea from KS forums, by many, many people. I wouln't have started this 
+otherwise.
+Programmed by Beoran.
+Placeholder art comes from paintown, opensourcegameart.org, 
+and the KS forums. Ask about them and I'll credit you here however you like.
+ 
+
+
+Making new fighters:
+
+This program uses the "convention over configuration idea".
+The idea is that it's possible to make new fighters or stages, by just adding 
+images of the frames, in the right folders. The fighters, stages, etc can then 
+be further customized by creating editing an xml file in the corresponding 
+folder. But the xml file is optional and if missing, the engine will simply 
+fill in everything with default values based on the sizes of the images, etc.
+
+Every fighter goes in the data/fighter folder, and every move goes in a folder
+named after the move under that. Every frame of the move consists of a single
+file, of which the name  begins with the name of the character, and underscore, 
+the name of the move, and then either numbers or an underscore and numbers. 
+All file names are in lower case. 
+
+For example for a fighter names "Moe", with moves idle, walk and kick you'll 
+need the following data folder layout and files:
+
+data/fighter/moe/idle/moe_idle1.png 
+data/fighter/moe/idle/moe_idle2.png
+data/fighter/moe/idle/moe_idle3.png
+data/fighter/moe/idle/moe_idle4.png ...
+data/fighter/moe/walk/moe_walk1.png 
+data/fighter/moe/walk/moe_walk2.png
+data/fighter/moe/walk/moe_walk3.png
+data/fighter/moe/walk/moe_walk4.png ...
+data/fighter/moe/walk/moe_kick1.png 
+data/fighter/moe/walk/moe_kick2.png
+data/fighter/moe/walk/moe_kick3.png
+data/fighter/moe/walk/moe_kick4.png ...
+
+The xml, if any file goes here: 
+data/fighter/moe.xml
+
+For a stage name "outside" you'll only need: 
+data/stage/outside/outside.png OR data/stage/outside/outside.jpg
+The optional xml file goes here: 
+data/stage/outside/outside.xml

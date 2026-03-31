@@ -1,0 +1,7 @@
+Project Description:
+new spectral grid tool
+
+README:
+*********************************************
+specgrid - a python stellar grid interpolator
+*********************************************

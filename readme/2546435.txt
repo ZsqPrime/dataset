@@ -1,0 +1,60 @@
+Project Description:
+Twisted Hybrid Cluster API Client
+
+README:
+A simple Twisted client for interacting with the Hybrid Cluster API as
+documented at http://www.hybrid-cluster.com/api
+
+Requirements:
+
+Twisted 11+             http://twistedmatrix.com/
+lxml (recommended)      http://lxml.de/
+
+As per the txHybridCluster.Client docstring:
+
+Simple wrapper for the Control Panel XML API, returning responses using the
+ElementTree API.
+
+The following examples must be executed within a
+defer.inlineCallbacks-decorated function.
+
+Smallest working example:
+
+>>> from txHybridCluster import Client
+>>> api = Client("my.cluster.com", "resellername", "somepass")
+>>> xml = yield api.testSuccess()
+>>> print "Got a successful response from the API", utils.tostring(xml)
+
+Error case:
+
+>>> try:
+>>>     yield api.testFail()
+>>> except HybridClusterException, e:
+>>>     print "Got error:", e
+
+Should print "Got Error: Failed test command."
+
+Something more interesting, creating a website and watching it get created.
+
+>>> result = yield api.addExternalDomain(
+>>>                    Domain='mydomain.com',
+>>>                    Type='wordpress')
+>>> stepActionID = int(result.find('StepActionID').text)
+>>> yield txHybridCluster.pollStepAction(api, stepActionID)
+
+Locking website.........................FINISHED
+Creating filesystem.....................PENDING
+Applying new configuration..............PENDING
+Installing application..................PENDING
+Unlocking website.......................PENDING
+
+See the full API documentation at http://www.hybrid-cluster.com/api for
+complete details on what you can achieve with the API.
+
+To procure a Hybrid Cluster deployment, contact:
+
+Luke Marsden, CTO
+Hybrid Logic Ltd.
++1-415-449-1165 (US) / +44-203-384-6649 (UK)
+sales@hybrid-logic.co.uk
+http://www.hybrid-cluster.com/

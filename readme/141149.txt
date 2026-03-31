@@ -1,0 +1,217 @@
+Jedno "ale", Tlen afair jest napisany w BCB, który podczas zapisywania
+do pliku zaokrągla struktury śmieciami do Mod 4 rozmiaru. Stąd w tym co
+napiszę będą char[] nic nie znaczące.
+No więc najpierw sms'y i wiadomości - tam odczyt jest banalny. Dostajesz
+offset i długość co przeczytać [chociaż można też do \0]
+
+Struktura dla SMS:
+
+char[12] - #gsm
+char[4] - smieci
+date - [standardowy double]
+char[4] - nic
+int - offset
+int - dlugosc
+char[4] - nic
+
+Wiadomości:
+
+char[26] - ID [w Tlen'ie maksymalna długość loginu to 25 + miejsce \0]
+char[6] - nic
+date
+fromme - bool kto wysłał wiadomość
+char[3] - nic
+int - offset
+int - dlugosc
+char[4] - nic
+
+login jest bez @tlen.pl
+Dlatego był problem z pluginem jabber'a - nie mógł korzystać z archiwum
+bo gdzie zapamiętać server.
+
+
+W pliku indexowym rozmów jest:
+
+char[26] - ID
+char[6] - nic
+date
+char[4] - nic
+int - offset
+int - index, każda rozmowa ma swój numer [nie pamiętam czy od 0 czy od 1
+zaczyna liczyć, ale to nie ma znaczenia]
+Przez to że Tlen zapisuje na bieżąco każdą wypowiedź każdy msg w
+rozmowie też ma swój nagłówek, taki:
+
+date
+fromme - bool/char
+deleted - bool/char, jeśli != 0 wtedy wiadomość ma być pominięta przy
+czytaniu
+char[2] - nic
+int - length [tej pojedynczej wiadomości]
+int - index [rozmowy do której należy]
+char[4] - nic
+
+to jest struktura która jest przed każdą wypowiedzią.
+
+Struktura w indexie rozmów - 56 bajtów, każda wiadomość w rozmowie - 24,
+wiadomości pojedyncze - 56, sms - 40.
+
+co do smsów - właśnie sprawdziłem, są w archiwum, natomiast PowerArchiwe
+pokazuje je wszystkie jako wysłane - oryginalne archiwum rozróżnia
+wysłąne i odebrane
+Widocznie wykorzystali któryś z nieużywanych bajtów, będziesz musiał to
+już rozgryźć sam.
+
+W .idx wiadomości [pojedynczych] i sms'ów masz wszystkie oń informacje.
+Pliki .dat to tylko treści + /0
+
+Natomiast .idx rozmów zawiera ogólne informacje o rozmowie - datę, z
+kim, ile wypowiedzi, offset pierwszej wiadomości, etc. Dlatego Tlen
+kiedy otwiera archiwum nie dotyka na początek .dat tylko wyświetla listę
+na podstawie samej zawartości .idx
+
+Project Description:
+Importer archiwów Tlenu
+
+README:
+Jedno "ale", Tlen afair jest napisany w BCB, który podczas zapisywania
+
+do pliku zaokrągla struktury śmieciami do Mod 4 rozmiaru. Stąd w tym co
+
+napiszę będą char[] nic nie znaczące.
+
+No więc najpierw sms'y i wiadomości - tam odczyt jest banalny. Dostajesz
+
+offset i długość co przeczytać [chociaż można też do \0]
+
+
+
+Struktura dla SMS:
+
+
+
+char[12] - #gsm
+
+char[4] - smieci
+
+date - [standardowy double]
+
+char[4] - nic
+
+int - offset
+
+int - dlugosc
+
+char[4] - nic
+
+
+
+Wiadomości:
+
+
+
+char[26] - ID [w Tlen'ie maksymalna długość loginu to 25 + miejsce \0]
+
+char[6] - nic
+
+date
+
+fromme - bool kto wysłał wiadomość
+
+char[3] - nic
+
+int - offset
+
+int - dlugosc
+
+char[4] - nic
+
+
+
+login jest bez @tlen.pl
+
+Dlatego był problem z pluginem jabber'a - nie mógł korzystać z archiwum
+
+bo gdzie zapamiętać server.
+
+
+
+
+
+W pliku indexowym rozmów jest:
+
+
+
+char[26] - ID
+
+char[6] - nic
+
+date
+
+char[4] - nic
+
+int - offset
+
+int - index, każda rozmowa ma swój numer [nie pamiętam czy od 0 czy od 1
+
+zaczyna liczyć, ale to nie ma znaczenia]
+
+Przez to że Tlen zapisuje na bieżąco każdą wypowiedź każdy msg w
+
+rozmowie też ma swój nagłówek, taki:
+
+
+
+date
+
+fromme - bool/char
+
+deleted - bool/char, jeśli != 0 wtedy wiadomość ma być pominięta przy
+
+czytaniu
+
+char[2] - nic
+
+int - length [tej pojedynczej wiadomości]
+
+int - index [rozmowy do której należy]
+
+char[4] - nic
+
+
+
+to jest struktura która jest przed każdą wypowiedzią.
+
+
+
+Struktura w indexie rozmów - 56 bajtów, każda wiadomość w rozmowie - 24,
+
+wiadomości pojedyncze - 56, sms - 40.
+
+
+
+co do smsów - właśnie sprawdziłem, są w archiwum, natomiast PowerArchiwe
+
+pokazuje je wszystkie jako wysłane - oryginalne archiwum rozróżnia
+
+wysłąne i odebrane
+
+Widocznie wykorzystali któryś z nieużywanych bajtów, będziesz musiał to
+
+już rozgryźć sam.
+
+
+
+W .idx wiadomości [pojedynczych] i sms'ów masz wszystkie oń informacje.
+
+Pliki .dat to tylko treści + /0
+
+
+
+Natomiast .idx rozmów zawiera ogólne informacje o rozmowie - datę, z
+
+kim, ile wypowiedzi, offset pierwszej wiadomości, etc. Dlatego Tlen
+
+kiedy otwiera archiwum nie dotyka na początek .dat tylko wyświetla listę
+
+na podstawie samej zawartości .idx

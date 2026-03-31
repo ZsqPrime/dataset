@@ -1,0 +1,8 @@
+#Crafity's Client Side Modules
+
+
+Project Description:
+Client Side JavaScript modules by Crafity
+
+README:
+#Crafity's Client Side Modules

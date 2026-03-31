@@ -1,0 +1,13 @@
+iSafe - a plugin for bukkit.
+
+Visit iSafe' pages.
+http://dev.bukkit.org/server-mods/blockthattnt/
+
+Project Description:
+None
+
+README:
+iSafe - a plugin for bukkit.
+
+Visit iSafe' pages.
+http://dev.bukkit.org/server-mods/blockthattnt/

@@ -1,0 +1,8 @@
+Project Description:
+SANLab-CM is a tool for cognitive modelers to rapidly create CPM-GOMS models in order to predict how humans interact with external systems as well as construct models of existing human data as a measure of validity checking. SANLab-CM differs from existin
+
+README:
+SANLab-CM is a software package that allows individuals familiar with CPM-GOMS
+style modeling to produce stochastic critical paths for CPM-GOMS models. It 
+also provides a number of features to import data from other systems including
+ACT-R and CogTool.

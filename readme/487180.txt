@@ -1,0 +1,24 @@
+# Maven-Embedder
+
+Embed maven in your code.
+
+## License
+
+Copyright 2012 Hugo Duncan, Toni Batchelli.
+
+Distributed under the Eclipse Public License.
+
+
+Project Description:
+Embed maven
+
+README:
+# Maven-Embedder
+
+Embed maven in your code.
+
+## License
+
+Copyright 2012 Hugo Duncan, Toni Batchelli.
+
+Distributed under the Eclipse Public License.

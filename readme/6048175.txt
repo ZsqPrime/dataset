@@ -1,0 +1,5 @@
+Project Description:
+Distributed Actor Runtime Library for Perl
+
+README:
+DARLY library for event handling.

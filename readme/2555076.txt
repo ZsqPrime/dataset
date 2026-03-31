@@ -1,0 +1,5 @@
+Project Description:
+Sticky Particles - Project for EPFL MT-BA2 2012
+
+README:
+Sticky Particles

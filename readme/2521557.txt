@@ -1,0 +1,25 @@
+Project Description:
+Nasty little twitter client
+
+README:
+bleeter - Nasty little twitter client
+=====================================
+
+Update on 2024-02-23
+--------------------
+
+This repository has been removed for all the reasons you'd imagine.  The final
+straw being a support request from a user with the most abhorrent timeline I'd
+ever seen.  The original licence permits you to do largely what you want with
+the code, but I want no part of that.
+
+If we work together you can find the original code under
+``JNRowe/silhouette/bleeter`` or ``JNRowe/bleeter-full`` on GitHub.  I'd ask
+that you don't redistribute it, but the licence does permit it.
+
+.. note::
+
+    If you feel I've broken some licensing obligation to you in removing this
+    repository, then feel feel to drop me a email_ to discuss it.
+
+.. _email: jnrowe@gmail.com

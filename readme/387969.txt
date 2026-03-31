@@ -1,0 +1,13 @@
+# Ruby on Rails Tutorial: sample application
+
+This is a sample applicaiton for
+[*Ruby on Rails Tutorial: Learn Rails by Example*] (http://railstutorial.org/) by [Michael Hartl] (http://michaelhartl.com/).
+
+Project Description:
+A sample, fully functional Ruby on Rails application mimicking the functionality of Twitter using MVC and REST. As usual, it includes a decent CSS based site layout, a user data model, a full registration and authentication system, user-micropost associat
+
+README:
+# Ruby on Rails Tutorial: sample application
+
+This is a sample applicaiton for
+[*Ruby on Rails Tutorial: Learn Rails by Example*] (http://railstutorial.org/) by [Michael Hartl] (http://michaelhartl.com/).

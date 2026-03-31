@@ -1,0 +1,5 @@
+Project Description:
+End result of a TDD exercise in Ruby
+
+README:
+End result of a TDD with a simple problem.

@@ -1,0 +1,6 @@
+
+
+Project Description:
+Fully decentralized p2p communication network project
+
+README:

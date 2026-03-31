@@ -1,0 +1,5 @@
+Project Description:
+A Calendary using Python and Javascript on top of Flask
+
+README:
+This is a simple calendar app. It displays a calendar built using Javascript date functions as well as one using Python date functions. It is using the Flask micro-framework.

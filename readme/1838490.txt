@@ -1,0 +1,6 @@
+
+
+Project Description:
+This program use for kill someone that use netcut on your lan
+
+README:

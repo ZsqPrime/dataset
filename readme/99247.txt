@@ -1,0 +1,20 @@
+Note: this project has moved to
+http://github.com/davidbkemp/jsqubits
+
+You can find the old version of jsqbits by cloning this old jsqbits repository, or downloading the tagged versions:
+https://github.com/davidbkemp/jsqbits/tags
+
+
+Project Description:
+Quantum computation simulation library in JavaScript
+
+README:
+Note: this project has moved to
+
+http://github.com/davidbkemp/jsqubits
+
+
+
+You can find the old version of jsqbits by cloning this old jsqbits repository, or downloading the tagged versions:
+
+https://github.com/davidbkemp/jsqbits/tags

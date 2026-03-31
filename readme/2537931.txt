@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+NEEDS BACKGROUND CURL!
+
+API TOKEN SHOULD BE STORED IN CONFIG (flickr/key, flickr/user_id)

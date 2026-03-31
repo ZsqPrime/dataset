@@ -1,0 +1,191 @@
+This is the sourcecode for: http://marcelog.github.com/articles/swig_php_libpcap_module_c++.html
+
+It is a small C++ wrapper around libpcap, that comes with a SWIG interface file 
+for PHP. So this will in essence, give you access to libpcap from PHP.
+
+Currently, it can list all devices and sniff packets without using pcap_loop(). It
+uses pcap_next(). You can also inject packets, the wrapper will call pcap_inject().
+
+NOTE: It's very possible that you will need root or administrator privileges
+to sniff an interface. So, beware.
+
+CI
+==
+You can get a build for linux x86_64 at:
+http://ci.marcelog.name:8080/view/C%20C++/?
+
+USE EXAMPLE
+===========
+
+List all devices
+----------------
+foreach (SimplePcap::findAllDevs() as $name => $description) {
+    echo "$name => $description\n";
+}
+
+Getting packets
+---------------
+First, get an instance of the SimplePcap class:
+$simplePcap = new SimplePcap($interfaceName, $filter, $snapLen, $timeout);
+
+$interfaceName can be something like "any", or "eth0".
+$filter is a libpcap filter, like "port 80".
+$snapLen is the maximum amount of bytes to capture per packet.
+$timeout specifies the read timeout in milliseconds.
+
+Then, loop!
+while(true) {
+    // Get a packet
+    $packet = $simplePcap->get(); // Returns a 'Packet' Object.
+
+    // Get the data
+    $data = $packet->getData(); // Returns a string
+
+    // Get the packet information
+    $capturedLen = $packet->getCapturedLen();
+    $realLen = $packet->getRealLen();
+    $timeSeconds = $packet->getSecondsOffset();
+    $timeMicroSeconds = $packet->getMicroSecondsOffset();
+}
+
+That's it. Happy sniffing!
+
+Injecting Packets
+-----------------
+$totalBytesSent = $simplePcap->send($rawPacketData);
+
+Hint: If you want to try it quickly, you can sniff packets and save them to a file. Do
+a file_get_contents() on it when calling send(), to reinject it :) If not, you will have
+to forge your packet.
+
+Note: Since the SimplePcap constructor calls pcap_open_live(), even if you're opening the
+interface just to inject packets (.. wont comment anything on that.. ) you will still need
+to pass all the arguments.
+
+Compiling
+=========
+Edit the GNUmakefile. You will need to specify the SWIG binary location and
+the php include directory (for the .h files). Then, just:
+$ gmake
+
+The "build" directory will be generated, with the SimplePcap.so file. Include it in your
+php.ini file like:
+extension=SimplePcap.so
+
+See the example directory, that ships a sample php.ini file that you can use with the -c flag for php:
+
+$ cd example
+$ php -c php.ini list.php
+any => Pseudo-device that captures on all interfaces
+eth0 =>
+lo =>
+
+$ php -c php.ini sniff.php eth0 "port 80" 4096 0
+...
+00080   2e 31 0d 0a 48 6f 73 74    3a 20 77 77 77 2e 67 6f    .1..Host   : www.go
+00096   6f 67 6c 65 2e 63 6f 6d    0d 0a 55 73 65 72 2d 41    ogle.com   ..User-A
+00112   67 65 6e 74 3a 20 4c 69    6e 6b 73 20 28 32 2e 32    gent: Li   nks (2.2
+00128   3b 20 4c 69 6e 75 78 20    32 2e 36 2e 32 39 2d 67    ; Linux    2.6.29-g
+00144   65 6e 74 6f 6f 2d 72 31    20 78 38 36 5f 36 34 3b    entoo-r1    x86_64;
+00160   20 31 32 36 78 34 34 29    0d 0a 41 63 63 65 70 74     126x44)   ..Accept
+00176   3a 20 2a 2f 2a 0d 0a 41    63 63 65 70 74 2d 45 6e    : */*..A   ccept-En
+00192   63 6f 64 69 6e 67 3a 20    67 7a 69 70 2c 20 64 65    coding:    gzip, de
+
+
+
+Project Description:
+A mini libpcap adapter in C++, with a php module using SWIG
+
+README:
+This is the sourcecode for: http://marcelog.github.com/articles/swig_php_libpcap_module_c++.html
+
+It is a small C++ wrapper around libpcap, that comes with a SWIG interface file 
+for PHP. So this will in essence, give you access to libpcap from PHP.
+
+Currently, it can list all devices and sniff packets without using pcap_loop(). It
+uses pcap_next(). You can also inject packets, the wrapper will call pcap_inject().
+
+NOTE: It's very possible that you will need root or administrator privileges
+to sniff an interface. So, beware.
+
+CI
+==
+You can get a build for linux x86_64 at:
+http://ci.marcelog.name:8080/view/C%20C++/?
+
+USE EXAMPLE
+===========
+
+List all devices
+----------------
+foreach (SimplePcap::findAllDevs() as $name => $description) {
+    echo "$name => $description\n";
+}
+
+Getting packets
+---------------
+First, get an instance of the SimplePcap class:
+$simplePcap = new SimplePcap($interfaceName, $filter, $snapLen, $timeout);
+
+$interfaceName can be something like "any", or "eth0".
+$filter is a libpcap filter, like "port 80".
+$snapLen is the maximum amount of bytes to capture per packet.
+$timeout specifies the read timeout in milliseconds.
+
+Then, loop!
+while(true) {
+    // Get a packet
+    $packet = $simplePcap->get(); // Returns a 'Packet' Object.
+
+    // Get the data
+    $data = $packet->getData(); // Returns a string
+
+    // Get the packet information
+    $capturedLen = $packet->getCapturedLen();
+    $realLen = $packet->getRealLen();
+    $timeSeconds = $packet->getSecondsOffset();
+    $timeMicroSeconds = $packet->getMicroSecondsOffset();
+}
+
+That's it. Happy sniffing!
+
+Injecting Packets
+-----------------
+$totalBytesSent = $simplePcap->send($rawPacketData);
+
+Hint: If you want to try it quickly, you can sniff packets and save them to a file. Do
+a file_get_contents() on it when calling send(), to reinject it :) If not, you will have
+to forge your packet.
+
+Note: Since the SimplePcap constructor calls pcap_open_live(), even if you're opening the
+interface just to inject packets (.. wont comment anything on that.. ) you will still need
+to pass all the arguments.
+
+Compiling
+=========
+Edit the GNUmakefile. You will need to specify the SWIG binary location and
+the php include directory (for the .h files). Then, just:
+$ gmake
+
+The "build" directory will be generated, with the SimplePcap.so file. Include it in your
+php.ini file like:
+extension=SimplePcap.so
+
+See the example directory, that ships a sample php.ini file that you can use with the -c flag for php:
+
+$ cd example
+$ php -c php.ini list.php
+any => Pseudo-device that captures on all interfaces
+eth0 =>
+lo =>
+
+$ php -c php.ini sniff.php eth0 "port 80" 4096 0
+...
+00080   2e 31 0d 0a 48 6f 73 74    3a 20 77 77 77 2e 67 6f    .1..Host   : www.go
+00096   6f 67 6c 65 2e 63 6f 6d    0d 0a 55 73 65 72 2d 41    ogle.com   ..User-A
+00112   67 65 6e 74 3a 20 4c 69    6e 6b 73 20 28 32 2e 32    gent: Li   nks (2.2
+00128   3b 20 4c 69 6e 75 78 20    32 2e 36 2e 32 39 2d 67    ; Linux    2.6.29-g
+00144   65 6e 74 6f 6f 2d 72 31    20 78 38 36 5f 36 34 3b    entoo-r1    x86_64;
+00160   20 31 32 36 78 34 34 29    0d 0a 41 63 63 65 70 74     126x44)   ..Accept
+00176   3a 20 2a 2f 2a 0d 0a 41    63 63 65 70 74 2d 45 6e    : */*..A   ccept-En
+00192   63 6f 64 69 6e 67 3a 20    67 7a 69 70 2c 20 64 65    coding:    gzip, de

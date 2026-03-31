@@ -1,0 +1,26 @@
+Trident is a tool for generating feeds (such as RSS). It can use a
+variety of backend data sources, including MediaWiki pages.
+
+Trident requires PollProxy which may be obtained from
+
+https://github.com/EmbeddedLinuxGuy/proxyfun
+
+Clone this into the directory parallel with Trident. Also create an
+empty directory called proxydb/ at the same level.
+
+
+
+
+Project Description:
+Social message generation for calendar events and other notifications
+
+README:
+Trident is a tool for generating feeds (such as RSS). It can use a
+variety of backend data sources, including MediaWiki pages.
+
+Trident requires PollProxy which may be obtained from
+
+https://github.com/EmbeddedLinuxGuy/proxyfun
+
+Clone this into the directory parallel with Trident. Also create an
+empty directory called proxydb/ at the same level.

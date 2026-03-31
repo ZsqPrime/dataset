@@ -1,0 +1,44 @@
+Project Description:
+Arduino Library for 4DSystems Picaso SGC devices
+
+README:
+	PicasoSGC - Arduino Library for 4Dsystems.com.au SGC derived products including uVGA-II(SGC)
+	Copyright(c) February 2012  Tom Klenke
+	http://github.com/tklenke
+	
+	Derived from:
+	displayshield4d.h - Arduino Library for 4Display-Shield by 4d Systems
+	Copyright(c) December 2010 Oscar Gonzalez - www.BricoGeek.com
+	http://code.google.com/p/displayshield4d/
+
+	16bitColor from RGB by YAPAN.org's small utilities for Arduino
+	http://www.opensource.org/licenses/bsd-license.php	
+	
+	Licensed under GNU General Public License v3 
+	http://creativecommons.org/licenses/by/3.0/
+	
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+
+	Arduino PicasoSGC Library:
+	============================================================================
+	Download latest source of the library at:
+	https://github.com/tklenke/Picaso_SGM
+
+	Instalation
+	============================================================================
+	Install folder Picaso_SGC into Arduino Libraries folder 
+		(required files are picaso_sgc.h and picaso_sgc.cpp)	
+
+	Tested on the Arduino IDE 1.0, Arduino Uno and 4DSystems µVGA-II(SGC)
+
+	General information
+	============================================================================
+	Usage:  #include <picaso_sgc.h> in your project.  See included example.
+	
+*/

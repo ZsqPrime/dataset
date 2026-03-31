@@ -1,0 +1,7 @@
+http://help.github.com/fork-a-repo/
+
+Project Description:
+Mobile Map Magnifier
+
+README:
+http://help.github.com/fork-a-repo/

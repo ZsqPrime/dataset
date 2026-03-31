@@ -1,0 +1,74 @@
+= banorte_payworks
+
+Banorte payorks is a basic gem to abstract te banorte paywoks interaction
+
+example
+
+    require 'banorte_payworks'
+
+    tpv = BanortePayworks::SimpleTPV.new :username => 'tienda19',
+                                     :password => '2006',
+                                     :client_id=>'19',
+                                     :mode=>BanortePayworks::MODE[:accept]
+
+    result = tpv.do_payment(rand(100000), '41111111111111111', '12/15', '123', 1.0)
+
+    #this procedure is synchronous, so you will get the response as soon after the gateway respond
+
+    puts result.authnum
+
+{<img src="https://travis-ci.org/netmask/banorte_payworks.png" />}[https://travis-ci.org/netmask/banorte_payworks]
+
+== Contributing to banorte_payworks
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012-2016 Jonathan Garay. See LICENSE.txt for further details.
+
+
+Project Description:
+
+
+README:
+= banorte_payworks
+
+Banorte payorks is a basic gem to abstract te banorte paywoks interaction
+
+example
+
+    require 'banorte_payworks'
+
+    tpv = BanortePayworks::SimpleTPV.new :username => 'tienda19',
+                                     :password => '2006',
+                                     :client_id=>'19',
+                                     :mode=>BanortePayworks::MODE[:accept]
+
+    result = tpv.do_payment(rand(100000), '41111111111111111', '12/15', '123', 1.0)
+
+    #this procedure is synchronous, so you will get the response as soon after the gateway respond
+
+    puts result.authnum
+
+{<img src="https://travis-ci.org/netmask/banorte_payworks.png" />}[https://travis-ci.org/netmask/banorte_payworks]
+
+== Contributing to banorte_payworks
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012-2016 Jonathan Garay. See LICENSE.txt for further details.

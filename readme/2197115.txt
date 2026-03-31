@@ -1,0 +1,12 @@
+Social Cheesecake is a Javascript based library for managing contacts
+
+Try the demo at http://ging.github.com/SocialCheesecake/
+
+
+Project Description:
+Distribution of contacts in social networks
+
+README:
+Social Cheesecake is a Javascript based library for managing contacts
+
+Try the demo at http://ging.github.com/SocialCheesecake/

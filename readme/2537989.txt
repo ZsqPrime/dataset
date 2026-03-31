@@ -1,0 +1,7 @@
+Project Description:
+Revamp of Northwestern University's NUScope
+
+README:
+NUScope v3.0
+
+This is the PIC32 code for the next version of Northwestern University's in-house scope.

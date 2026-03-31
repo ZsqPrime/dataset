@@ -1,0 +1,8 @@
+First try with clojure and memcached
+
+
+Project Description:
+Provides Memcached & Membase Connections through spymemcached
+
+README:
+First try with clojure and memcached

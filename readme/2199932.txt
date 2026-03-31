@@ -1,0 +1,7 @@
+This file was created by IntelliJ IDEA 10.0.3 for binding GitHub repository
+
+Project Description:
+Inspired by EJB3 and Spring, Beanlet delivers an (embeddable) IOC container offering the best of both worlds. The Beanlet architecture supports JTA transactions, JMX, the Java Persistence API and Spring integration.
+
+README:
+This file was created by IntelliJ IDEA 10.0.3 for binding GitHub repository

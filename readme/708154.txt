@@ -1,0 +1,10 @@
+The sysutils repository is a collection of scripts and utilities which I have written 
+to automate common LAMP server administration tasks.
+
+
+Project Description:
+scripts and utilities for linux server administration
+
+README:
+The sysutils repository is a collection of scripts and utilities which I have written 
+to automate common LAMP server administration tasks.

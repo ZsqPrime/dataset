@@ -1,0 +1,5 @@
+Project Description:
+(Will rewrite this from the bottom)
+
+README:
+js/BigInt.js : BigInt class

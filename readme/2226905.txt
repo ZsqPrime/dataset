@@ -1,0 +1,34 @@
+
+
+= Requerimientos =
+
+Django==1.3
+django-piston==0.2.2
+
+
+
+= Instalación =
+
+python manage.py syncdb
+python manage.py 
+
+
+
+
+Project Description:
+
+
+README:
+
+
+= Requerimientos =
+
+Django==1.3
+django-piston==0.2.2
+
+
+
+= Instalación =
+
+python manage.py syncdb
+python manage.py

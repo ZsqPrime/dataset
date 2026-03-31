@@ -1,0 +1,7 @@
+ExportsToC++ parses dumpbin output and converts an assembly’s exported function list output to C++ formatted code. This is very useful for creating Proxy DLL files to Intercept API Calls. You must have the .NET 2.0 Framework installed to run this application.
+
+Project Description:
+Used to create wrappers and proxy libraries for Windows binaries.
+
+README:
+ExportsToC++ parses dumpbin output and converts an assembly’s exported function list output to C++ formatted code. This is very useful for creating Proxy DLL files to Intercept API Calls. You must have the .NET 2.0 Framework installed to run this application.

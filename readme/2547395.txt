@@ -1,0 +1,5 @@
+Project Description:
+Playing around with some graphs and shortest path stuff
+
+README:
+Just a bunch of stuff for playing around with graphs in python, possibly to include such neat things as shortest path and print outs using GraphViz.

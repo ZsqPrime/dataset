@@ -1,0 +1,10 @@
+Run 'make' to build the generator.
+Run 'make lib' to build the library.
+
+
+Project Description:
+Generator of Vala bingings for libmusicbrainz4
+
+README:
+Run 'make' to build the generator.
+Run 'make lib' to build the library.

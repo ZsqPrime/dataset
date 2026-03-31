@@ -1,0 +1,5 @@
+Project Description:
+bukkit plugin to show online players
+
+README:
+For more information: http://dev.bukkit.org/server-mods/simpleonline/

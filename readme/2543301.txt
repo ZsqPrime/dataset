@@ -1,0 +1,7 @@
+Project Description:
+A small, lightweight, GTK3 Twitter client
+
+README:
+Someone wanted a README file.
+
+Here it is!

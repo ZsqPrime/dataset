@@ -1,0 +1,7 @@
+Project Description:
+ECM Frontend Module
+
+README:
+= EcmFrontend
+
+This project rocks and uses MIT-LICENSE.

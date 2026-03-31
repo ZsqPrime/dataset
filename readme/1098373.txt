@@ -1,0 +1,18 @@
+NAME
+    rse - Remote Script Executor.
+SYNOPSIS
+    rse [host:]script[ arg1 arg2 ... argn]
+DESCRIPTION
+    rse connects and logs into the specified host and executes the runnable script with the args. If host is not given it's connected to the localhost. If args is not given it's assigned empty array.
+
+
+Project Description:
+Remote Script Executor
+
+README:
+NAME
+    rse - Remote Script Executor.
+SYNOPSIS
+    rse [host:]script[ arg1 arg2 ... argn]
+DESCRIPTION
+    rse connects and logs into the specified host and executes the runnable script with the args. If host is not given it's connected to the localhost. If args is not given it's assigned empty array.

@@ -1,0 +1,11 @@
+Project Description:
+Assorted utilities to work with AFP data streams 
+
+README:
+# openafp-utils
+
+Assorted utilities to work with AFP data streams 
+
+# Installation
+
+`cabal install`

@@ -1,0 +1,31 @@
+Installation:
+  gem install gosu
+  bundle
+
+To run the server:
+  ruby lib/tank_wars_server.rb
+
+To run the client (after a server is started):
+  export TANK_WARS_SERVER=localhost  <-- set this to your server's ip or hostname
+  rake
+
+HAVE FUN!
+
+
+
+Project Description:
+Real-time scorched earth game that some members of irb.no built on a code retreat at Stavern, Norway May 11-13 2012.
+
+README:
+Installation:
+  gem install gosu
+  bundle
+
+To run the server:
+  ruby lib/tank_wars_server.rb
+
+To run the client (after a server is started):
+  export TANK_WARS_SERVER=localhost  <-- set this to your server's ip or hostname
+  rake
+
+HAVE FUN!

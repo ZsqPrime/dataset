@@ -1,0 +1,120 @@
+Some Python modules.
+
+http://ikn.org.uk/lib/python
+
+    LICENSE
+
+Modules define their own licenses.
+
+    PYTHON 3
+
+    fsmanage (depends on PyGObject 3 <https://live.gnome.org/PyGObject>)
+A GTK file manager for an arbitrary filesystem backend.  This is deprecated in
+favour of a rewritten version: <http://ikn.org.uk/lib/fsmanage>.
+
+    gcutil
+Manage GameCube filesystems.
+
+    srss
+Create and maintain an RSS feed.
+
+    PYTHON 2
+
+    cmdparse (depends on miscutil)
+A CLI command parser - stuff like 'program command [options] [arguments]'.
+Inspired by Mercurial, it accepts any unambiguous abbreviation of known
+commands.
+
+    stringcompress
+Encode strings to an arbitrary character set, and get good compression for
+strings only using a few characters (especially if you know what those
+characters will be).
+
+    htmlparse (depends on miscutil)
+Parse (X)HTML (and apply CSS selections to the result).
+
+    dispman (depends on Pygame <http://www.pygame.org>)
+Manage multiple displays on a single surface.
+
+    tiler (depends on Pygame <http://www.pygame.org>)
+Draw and manage a tiled grid.
+
+    fetch (depends on PycURL <http://pycurl.sourceforge.net>)
+Easy URL fetching with cookies and parallel transfers and stuff.
+
+    sph
+A spatial hash implementation.
+
+    gtkutil (depends on PyGTK <http://www.pygtk.org>)
+General PyGTK stuff.
+
+    miscutil
+A few miscellaneous things.
+
+    mwbot (depends on htmlparse, fetch, PycURL <http://pycurl.sourceforge.net>)
+Read from and write to MediaWiki installations: fetch and process data; perform
+edits, moves, deletions and the like.  This is^Wwas going through a bit of a
+transformation and may not all work right at the moment.
+
+
+Project Description:
+Some Python modules, from general-purpose to very specific.
+
+README:
+Some Python modules.
+
+http://ikn.org.uk/lib/python
+
+    LICENSE
+
+Modules define their own licenses.
+
+    PYTHON 3
+
+    fsmanage (depends on PyGObject 3 <https://live.gnome.org/PyGObject>)
+A GTK file manager for an arbitrary filesystem backend.  This is deprecated in
+favour of a rewritten version: <http://ikn.org.uk/lib/fsmanage>.
+
+    gcutil
+Manage GameCube filesystems.
+
+    srss
+Create and maintain an RSS feed.
+
+    PYTHON 2
+
+    cmdparse (depends on miscutil)
+A CLI command parser - stuff like 'program command [options] [arguments]'.
+Inspired by Mercurial, it accepts any unambiguous abbreviation of known
+commands.
+
+    stringcompress
+Encode strings to an arbitrary character set, and get good compression for
+strings only using a few characters (especially if you know what those
+characters will be).
+
+    htmlparse (depends on miscutil)
+Parse (X)HTML (and apply CSS selections to the result).
+
+    dispman (depends on Pygame <http://www.pygame.org>)
+Manage multiple displays on a single surface.
+
+    tiler (depends on Pygame <http://www.pygame.org>)
+Draw and manage a tiled grid.
+
+    fetch (depends on PycURL <http://pycurl.sourceforge.net>)
+Easy URL fetching with cookies and parallel transfers and stuff.
+
+    sph
+A spatial hash implementation.
+
+    gtkutil (depends on PyGTK <http://www.pygtk.org>)
+General PyGTK stuff.
+
+    miscutil
+A few miscellaneous things.
+
+    mwbot (depends on htmlparse, fetch, PycURL <http://pycurl.sourceforge.net>)
+Read from and write to MediaWiki installations: fetch and process data; perform
+edits, moves, deletions and the like.  This is^Wwas going through a bit of a
+transformation and may not all work right at the moment.

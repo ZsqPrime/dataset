@@ -1,0 +1,29 @@
+Project Description:
+This is a shooting game.
+
+README:
+"Duel Shooting":http://9leap.net/games/1019/
+
+
+
+This is a shooting game. It is operated in a browser.
+
+
+
+|*Action|*Type Key|
+
+|Move Right|Cursor Right|
+
+|Move Left|Cursor Left|
+
+|Wait|Cursor Down|
+
+|Attack1|Cursor Up|
+
+|Attack2|F|
+
+|Attack3|M|
+
+
+
+!https://github.com/supercaracal/duelshooting/raw/master/screenshot.jpg!

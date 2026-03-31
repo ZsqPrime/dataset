@@ -1,0 +1,16 @@
+A public collection of Seer Interactive's Google Docs functions 
+
+google_scraper.js: Google Scraper for Google Docs Spreadsheet.
+has_google_results.js: Determine if there are any results for a given a keyword / site.
+seomoz.js: Wrapper for SEOmoz API
+
+
+Project Description:
+Seer Interactive's public collection of functions for Google Docs Spreadsheets
+
+README:
+A public collection of Seer Interactive's Google Docs functions 
+
+google_scraper.js: Google Scraper for Google Docs Spreadsheet.
+has_google_results.js: Determine if there are any results for a given a keyword / site.
+seomoz.js: Wrapper for SEOmoz API

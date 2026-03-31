@@ -1,0 +1,6 @@
+Project Description:
+Java3D viewer
+
+README:
+Code experiments from 2011. 
+Not maintained anymore.

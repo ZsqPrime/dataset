@@ -1,0 +1,7 @@
+Project Description:
+This is a django/jquery HTML 5 implementation of some sort of League of Legends counter pick application. The purpose of making it an online application is so it is cross platform and will allow users to rate the currently selected counterpicks
+
+README:
+Blah blah blah
+
+I'll add more stuff in here later. I'm just working on this now in the spare time I have at my job.... since we aren't to busy right now.

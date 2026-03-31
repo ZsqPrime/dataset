@@ -1,0 +1,38 @@
+Project Description:
+This is a ready to use locally multinode Oracle Coherence cluster. This intended to be used for training or as a starting template. It can be used for testing and exploratory testing of the function and none functional feature of the Coherence product. Fe
+
+README:
+
+## Requirements
+
+* maven
+* coherence.jar in local maven repo (tested with 3.7.1)
+
+
+## install
+
+    clone repo
+    cd [repo]
+    ./compile.sh
+
+## Launch Cluster
+
+    ./start-cluster.sh
+
+## Launch Java Client
+
+    ./target/classes/scripts/launchers/sh/launcher.sh client
+
+## Launch Clojure Client
+
+    ./target/classes/scripts/launchers/sh/launcher.sh direct-clojure-client
+
+## Stop Cluster
+
+    ./stop-cluster.sh
+
+
+
+
+Download Chainsaw from:
+http://logging.apache.org/log4j/docs/webstart/chainsaw/

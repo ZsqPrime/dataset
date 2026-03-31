@@ -1,0 +1,4 @@
+Project Description:
+Some code for myself to learn C
+
+README:

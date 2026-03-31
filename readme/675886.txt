@@ -1,0 +1,7 @@
+Random little projects that don't deserve their own repo.
+
+Project Description:
+Mini projects and other random programming stuff
+
+README:
+Random little projects that don't deserve their own repo.

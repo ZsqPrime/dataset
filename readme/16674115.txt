@@ -1,0 +1,12 @@
+Project Description:
+RC file for bash, gvim, vim, mrxvt
+
+README:
+- For devilspie2
+  - Install devilspie2 and put it in your startup
+  - put this <checkout>/devilspie2 dir in ~/.config
+
+To remap keys for mac run:
+
+    cp rc/Xmodmap ~/.Xmodmap
+    xmodmap ~/.Xmodmap

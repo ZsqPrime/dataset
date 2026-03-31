@@ -1,0 +1,5 @@
+Project Description:
+Reading "Advanced Programming in the UNIX Environment"
+
+README:
+gcc -Iinclude/ lib/error.c {target.c}

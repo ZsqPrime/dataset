@@ -1,0 +1,12 @@
+= BuildingBlocks
+
+THIS GEM WAS RENAMED BLOCKS AND MOVED TO {blocks}[https://github.com/hunterae/blocks]
+
+
+Project Description:
+Go beyond Blocks and Partials
+
+README:
+= BuildingBlocks
+
+THIS GEM WAS RENAMED BLOCKS AND MOVED TO {blocks}[https://github.com/hunterae/blocks]

@@ -1,0 +1,8 @@
+Clone of MultiGet File Downloader. Source: https://multiget.svn.sourceforge.net/svnroot/multiget
+
+
+Project Description:
+Clone of MultiGet File Downloader
+
+README:
+Clone of MultiGet File Downloader. Source: https://multiget.svn.sourceforge.net/svnroot/multiget

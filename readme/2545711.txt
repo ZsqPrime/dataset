@@ -1,0 +1,17 @@
+Project Description:
+A Rails multiple table inheritance library
+
+README:
+ExtendTableWith
+===============
+
+Rails MTI library 
+
+
+Example
+=======
+
+Example goes here.
+
+
+Copyright (c) 2010 Grady Griffin, released under the MIT license

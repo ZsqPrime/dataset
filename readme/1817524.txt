@@ -1,0 +1,5 @@
+Project Description:
+Repository to store Unity 3D work
+
+README:
+This public repo will be used to store Unity 3D project files for easy distribution

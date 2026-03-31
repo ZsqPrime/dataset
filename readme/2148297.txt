@@ -1,0 +1,20 @@
+# Github Receipt
+
+## Usage
+
+
+```  ./github-receipt --username username --password password ```
+```  ./github-receipt -h ```
+
+
+Project Description:
+
+
+README:
+# Github Receipt
+
+## Usage
+
+
+```  ./github-receipt --username username --password password ```
+```  ./github-receipt -h ```

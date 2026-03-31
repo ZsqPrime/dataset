@@ -1,0 +1,14 @@
+Project Description:
+All about primes !
+
+README:
+Having fun with prime numbers ! 
+
+Find primes using 
+	-> Sieve Of Eratosthenes
+	-> Trial Division
+
+Common prime functions
+	-> Find prime number at location 'x'
+	-> Find the largest prime factor of 'x'
+	-> Find sum of all primes below 'x'

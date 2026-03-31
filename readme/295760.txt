@@ -1,0 +1,18 @@
+php-trakt
+=========
+
+This is a simple class for accessing the Trakt API (api.trakt.tv).
+
+For usage, see the header of the source file.
+
+
+Project Description:
+PHP class for Trakt.tv api
+
+README:
+php-trakt
+=========
+
+This is a simple class for accessing the Trakt API (api.trakt.tv).
+
+For usage, see the header of the source file.

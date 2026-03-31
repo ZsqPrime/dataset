@@ -1,0 +1,46 @@
+(Scroll down for latest updates)
+*** Quick Summary ***
+Decrypts MD5 and SHA-1 hashes up to 6 characters long. (the original string that was hashed is 6 characters or less)
+Do not allow numbers or uppercase unless necessary. Time taken will increase greatly.
+
+*** How do I get a hash to decrypt? ***
+What you want to decrypt is up to you. However, these two hashes are quite widely used across the web.
+If you want to hash something in python simply type:
+
+import hashlib
+hashlib.sha1('<text you want to hash>').hexdigest() # for sha1
+hashlib.md5('<text you want to hash>').hexdigest() # for md5
+
+These are built-in python libraries and do not require this program to use.
+The resulting function(the md5 one) will give something you along the lines of: '187ef4436122d1cc2f40dc2b92f0eba0'
+Copy the text/numbers only, not the '' marks and paste it in to this program when asked.
+This is a simple hash that can be solved quickly, try it out!
+
+*** Latest Updates (2/17/12)***
+- Performance improvements (thanks to wernight)!
+
+
+Project Description:
+MD5 and SHA-1 hash decrypter in Python
+
+README:
+(Scroll down for latest updates)
+*** Quick Summary ***
+Decrypts MD5 and SHA-1 hashes up to 6 characters long. (the original string that was hashed is 6 characters or less)
+Do not allow numbers or uppercase unless necessary. Time taken will increase greatly.
+
+*** How do I get a hash to decrypt? ***
+What you want to decrypt is up to you. However, these two hashes are quite widely used across the web.
+If you want to hash something in python simply type:
+
+import hashlib
+hashlib.sha1('<text you want to hash>').hexdigest() # for sha1
+hashlib.md5('<text you want to hash>').hexdigest() # for md5
+
+These are built-in python libraries and do not require this program to use.
+The resulting function(the md5 one) will give something you along the lines of: '187ef4436122d1cc2f40dc2b92f0eba0'
+Copy the text/numbers only, not the '' marks and paste it in to this program when asked.
+This is a simple hash that can be solved quickly, try it out!
+
+*** Latest Updates (2/17/12)***
+- Performance improvements (thanks to wernight)!

@@ -1,0 +1,5 @@
+Project Description:
+vim configuration
+
+README:
+Minhas configurações pessoais do vim que utilizo no Mac OS

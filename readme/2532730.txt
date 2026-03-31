@@ -1,0 +1,6 @@
+2012年1月のCocoa勉強会関西で発表したときの資料+コードです。
+
+NSFetchedResultsController で抽出した条件に合わなくなってもすぐには
+UITableView から消えないようにする方法についてです。
+
+発表当時は Objective-C 版のみでしたが、Swift による実装も追加しました。

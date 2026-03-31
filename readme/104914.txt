@@ -1,0 +1,10 @@
+RETROFIT 
+is a philosophy (tools and spec) of packaging your libraries and products so that they can be easily dynamically injected into a site with or without permission.
+
+
+Project Description:
+java server for retorfitting existing web applications with new capabilities
+
+README:
+RETROFIT 
+is a philosophy (tools and spec) of packaging your libraries and products so that they can be easily dynamically injected into a site with or without permission.

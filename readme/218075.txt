@@ -1,0 +1,50 @@
+An application to show the opening status of the Stratum 0 hackerspace in the
+system tray icon.
+
+Dependencies:
+ * Qt >= 4.2 (http://qt.nokia.com)
+ * A C++ build system (GCC/GNU make or MS Visual C++ Express will do)
+
+Compiling:
+  qmake main.pro && make
+or, if you are using MS Visual C++:
+  qmake main.pro && nmake
+
+By default, a notification is shown when the opening status changes. If you do
+not want that, you can start the program with the --silent or -s option.
+
+Windows compatibility has not yet been tested by me, though some users report
+that it works too.
+
+Versioning Scheme:
+The version number is calculated by the formula 1-1/(2^n), where n is
+incremented with each release. This way, the version number approaches 1 as n
+approaches infinity.
+
+
+Project Description:
+An application to show the opening status of the Stratum 0 hackerspace in your system tray
+
+README:
+An application to show the opening status of the Stratum 0 hackerspace in the
+system tray icon.
+
+Dependencies:
+ * Qt >= 4.2 (http://qt.nokia.com)
+ * A C++ build system (GCC/GNU make or MS Visual C++ Express will do)
+
+Compiling:
+  qmake main.pro && make
+or, if you are using MS Visual C++:
+  qmake main.pro && nmake
+
+By default, a notification is shown when the opening status changes. If you do
+not want that, you can start the program with the --silent or -s option.
+
+Windows compatibility has not yet been tested by me, though some users report
+that it works too.
+
+Versioning Scheme:
+The version number is calculated by the formula 1-1/(2^n), where n is
+incremented with each release. This way, the version number approaches 1 as n
+approaches infinity.

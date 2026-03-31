@@ -1,0 +1,12 @@
+# Vim Exercises
+
+A small collection of different types of code files to use while practicing Vim commands. These were taken from different open source projects, like Rubinius and JRuby.
+
+
+Project Description:
+Sample code files to use for vim exercises
+
+README:
+# Vim Exercises
+
+A small collection of different types of code files to use while practicing Vim commands. These were taken from different open source projects, like Rubinius and JRuby.

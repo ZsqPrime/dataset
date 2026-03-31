@@ -1,0 +1,236 @@
+h1. rah_bitly
+
+"Download":https://github.com/gocom/rah_bitly/releases | "Issues":https://github.com/gocom/rah_bitly/issues | "Packagist":https://packagist.org/packages/rah/rah_function
+
+"Bitly":http://bitly.com powered short links integration to "Textpattern CMS":https://textpattern.com. Automatically generates short link for an article when it is published, or its URL is updated.
+
+h2. Install
+
+Using "Composer":https://getcomposer.org:
+
+bc. $ composer require rah/rah_bitly
+
+Or "download":https://github.com/gocom/rah_bitly/releases an installer package.
+
+h2. Configuration
+
+To start using rah_bitly, you will first need to configure your *Bitly access token* and a field you want to use to store the shortened links. You can find the options in Textpattern admin at the page *Admin* / *Preferences* and from there *Bitly Integration* section. Included options are:
+
+* *Bitly access token* is your generic access token. You can "generate your own access token in your Bitly account API settings":https://app.bitly.com/settings/api/.
+* *Store in a field* is the field that will be used to store the shortened links. This supports article custom fields.
+
+h2. Usage
+
+h3. Generating links
+
+Bitly links are generated for an article when one of the three conditions is met:
+
+* When the article is published.
+* When already published article's URL title is modified.
+* When the custom field used to store the link is emptied.
+
+All three conditions only apply while the article is in, or is saved with, *live* or *sticky* status. Short links won't be generated for unpublished articles.
+
+All generated links will follow your Bitly account's preferences, including your custom domain or preferred domain.
+
+If requesting a short link from Bitly fails due to connection error, or because Bitly's servers are temporarily unreachable, a new request is sent when the article is saved again. You will notice if the request has been successful when there is a shortened link in the custom field and error message is shown in the editor.
+
+The link that the plugin will shorten is the article's permanent link, the real location of the individual article page that Textpattern responds to. It's the same location as where the **View** link points on the *Write* admin page.
+
+h3. Displaying links
+
+Displaying Bitly links on your page templates and articles is easy and customizable due to the fact that a "custom field":https://docs.textpattern.com/tags/custom_field is used to store the shortened links.
+
+bc. <txp:if_custom_field name="short_url">
+	<a href="<txp:custom_field name="short_url" />">
+		<txp:custom_field name="short_url" />
+	</a>
+<txp:else />
+	<p>No short link.</p>
+</txp:if_custom_field>
+
+The above snippet would display shortened Bitly link when placed to article context. If article doesn't have a short link, @No short link.@ message is shown instead.
+
+h2. For developers
+
+h3. Customizing permlinks
+
+The plugin offers @rah_bitly.permlink@ callback event that can be used to customize the article permanent link that is sent to Bitly. An example observer registered to the event might look something like:
+
+bc.. register_callback('abc_example', 'rah_bitly.permlink');
+
+function abc_example($event, $step, &$data): void
+{
+    if ($data['articleData']['Section'] === 'example') {
+        $data['permlink'] .= '#bitly';
+    }
+}
+
+p. The above would add @#bitly@ anchor to the sent URL, if the article is published to the section named @example@.
+
+h2. Changelog
+
+h3. Version 0.5.1 - 2022/04/25
+
+* Added @rah_bitly.permlink@ callback event that can be used to customize the article permlink that is sent to Bitly.
+
+h3. Version 0.5.0 - 2022/04/18
+
+* Bitly API version 4 compatibility.
+* Textpattern >= 4.7.0 compatibility.
+* Now requires Textpattern >= 4.7.0 and PHP >= 7.2.0.
+
+h3. Version 0.4.2 - 2012/12/21
+
+* Fixed: Undefined variable notices during article updates.
+* Added: Displays preferences group on Textpattern 4.6-dev's Preferences panel.
+
+h3. Version 0.4.1 - 2012/09/20
+
+* Improved: Cleaned up the installer.
+
+h3. Version 0.4 - 2012/08/27
+
+* Added: Textpattern 4.5.0 compatibility. Thank you, "Robert Wetzlmayr":https://github.com/rwetzlmayr.
+* Added: Finnish translation.
+* Fixed: A potential issue with uninstaller SQL statement's wildcards.
+* Changed: Textpacks aren't embedded to the code, but uses installer.
+* Removed: Unnecessary HTML escaping in one of the preference controls.
+* Removed: Functionality added in v0.2 that allowed picking new custom fields from HTTP POST data. This is for future compatibility.
+* Removed: Dropped support to file_get_contents() and "allow_url_fopen":http://php.net/manual/en/filesystem.configuration.php. cURL is now required in favor of future compliance and move to oAuth.
+
+h3. Version 0.3 - 2011/12/05
+
+* Changed: Now uses Textpattern's @script_js()@ to output JavaScript blocks.
+* Improved: Escape URLs returned by Bitly so that it can not break JavaScript string. This is to prevent potential JavaScript injections.
+
+h3. Version 0.2 - 2011/07/21
+
+* Changed: Preference section's heading now uses title case, and option labels sentence case.
+* Changed: Now picks up new custom fields from POST data.
+* "Stef":http://forum.textpattern.com/profile.php?id=8181, "Markus":http://forum.textpattern.com/profile.php?id=9144, thank you for suggestions.
+
+h3. Version 0.1 - 2011/07/20
+
+* Initial release.
+
+
+Project Description:
+Bit.ly integration for Textpattern CMS
+
+README:
+h1. rah_bitly
+
+"Download":https://github.com/gocom/rah_bitly/releases | "Issues":https://github.com/gocom/rah_bitly/issues | "Packagist":https://packagist.org/packages/rah/rah_function
+
+"Bitly":http://bitly.com powered short links integration to "Textpattern CMS":https://textpattern.com. Automatically generates short link for an article when it is published, or its URL is updated.
+
+h2. Install
+
+Using "Composer":https://getcomposer.org:
+
+bc. $ composer require rah/rah_bitly
+
+Or "download":https://github.com/gocom/rah_bitly/releases an installer package.
+
+h2. Configuration
+
+To start using rah_bitly, you will first need to configure your *Bitly access token* and a field you want to use to store the shortened links. You can find the options in Textpattern admin at the page *Admin* / *Preferences* and from there *Bitly Integration* section. Included options are:
+
+* *Bitly access token* is your generic access token. You can "generate your own access token in your Bitly account API settings":https://app.bitly.com/settings/api/.
+* *Store in a field* is the field that will be used to store the shortened links. This supports article custom fields.
+
+h2. Usage
+
+h3. Generating links
+
+Bitly links are generated for an article when one of the three conditions is met:
+
+* When the article is published.
+* When already published article's URL title is modified.
+* When the custom field used to store the link is emptied.
+
+All three conditions only apply while the article is in, or is saved with, *live* or *sticky* status. Short links won't be generated for unpublished articles.
+
+All generated links will follow your Bitly account's preferences, including your custom domain or preferred domain.
+
+If requesting a short link from Bitly fails due to connection error, or because Bitly's servers are temporarily unreachable, a new request is sent when the article is saved again. You will notice if the request has been successful when there is a shortened link in the custom field and error message is shown in the editor.
+
+The link that the plugin will shorten is the article's permanent link, the real location of the individual article page that Textpattern responds to. It's the same location as where the **View** link points on the *Write* admin page.
+
+h3. Displaying links
+
+Displaying Bitly links on your page templates and articles is easy and customizable due to the fact that a "custom field":https://docs.textpattern.com/tags/custom_field is used to store the shortened links.
+
+bc. <txp:if_custom_field name="short_url">
+	<a href="<txp:custom_field name="short_url" />">
+		<txp:custom_field name="short_url" />
+	</a>
+<txp:else />
+	<p>No short link.</p>
+</txp:if_custom_field>
+
+The above snippet would display shortened Bitly link when placed to article context. If article doesn't have a short link, @No short link.@ message is shown instead.
+
+h2. For developers
+
+h3. Customizing permlinks
+
+The plugin offers @rah_bitly.permlink@ callback event that can be used to customize the article permanent link that is sent to Bitly. An example observer registered to the event might look something like:
+
+bc.. register_callback('abc_example', 'rah_bitly.permlink');
+
+function abc_example($event, $step, &$data): void
+{
+    if ($data['articleData']['Section'] === 'example') {
+        $data['permlink'] .= '#bitly';
+    }
+}
+
+p. The above would add @#bitly@ anchor to the sent URL, if the article is published to the section named @example@.
+
+h2. Changelog
+
+h3. Version 0.5.1 - 2022/04/25
+
+* Added @rah_bitly.permlink@ callback event that can be used to customize the article permlink that is sent to Bitly.
+
+h3. Version 0.5.0 - 2022/04/18
+
+* Bitly API version 4 compatibility.
+* Textpattern >= 4.7.0 compatibility.
+* Now requires Textpattern >= 4.7.0 and PHP >= 7.2.0.
+
+h3. Version 0.4.2 - 2012/12/21
+
+* Fixed: Undefined variable notices during article updates.
+* Added: Displays preferences group on Textpattern 4.6-dev's Preferences panel.
+
+h3. Version 0.4.1 - 2012/09/20
+
+* Improved: Cleaned up the installer.
+
+h3. Version 0.4 - 2012/08/27
+
+* Added: Textpattern 4.5.0 compatibility. Thank you, "Robert Wetzlmayr":https://github.com/rwetzlmayr.
+* Added: Finnish translation.
+* Fixed: A potential issue with uninstaller SQL statement's wildcards.
+* Changed: Textpacks aren't embedded to the code, but uses installer.
+* Removed: Unnecessary HTML escaping in one of the preference controls.
+* Removed: Functionality added in v0.2 that allowed picking new custom fields from HTTP POST data. This is for future compatibility.
+* Removed: Dropped support to file_get_contents() and "allow_url_fopen":http://php.net/manual/en/filesystem.configuration.php. cURL is now required in favor of future compliance and move to oAuth.
+
+h3. Version 0.3 - 2011/12/05
+
+* Changed: Now uses Textpattern's @script_js()@ to output JavaScript blocks.
+* Improved: Escape URLs returned by Bitly so that it can not break JavaScript string. This is to prevent potential JavaScript injections.
+
+h3. Version 0.2 - 2011/07/21
+
+* Changed: Preference section's heading now uses title case, and option labels sentence case.
+* Changed: Now picks up new custom fields from POST data.
+* "Stef":http://forum.textpattern.com/profile.php?id=8181, "Markus":http://forum.textpattern.com/profile.php?id=9144, thank you for suggestions.
+
+h3. Version 0.1 - 2011/07/20
+
+* Initial release.

@@ -1,0 +1,5 @@
+Project Description:
+Allow NUnit to read and execute HTML scripts from Selenium IDE
+
+README:
+Allow one or more NUnit test classes to read and run test script commands from a file or embedded resource.

@@ -1,0 +1,6 @@
+
+
+Project Description:
+Jira bot is a library that bridges Jira and XMPP chat.
+
+README:

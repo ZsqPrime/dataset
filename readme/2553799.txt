@@ -1,0 +1,34 @@
+Project Description:
+a mini python web framework based on werkzeug and jinja2
+
+README:
+
+Usage:
+
+1. write a module in app/ directory
+File:
+  app/foo.py
+Content:
+  def bar():
+    return "Hello KoalaWeb!"
+
+
+2. import this modules in app/__init__.py
+File:
+  app/__init__.py
+Content:
+  import foo
+
+3. write main.py like this:
+  import koalaweb as web
+  app = web.create_app()
+  app.run()
+
+4. Open url "http://localhost:5000/foo/bar"
+
+
+So easy! yeah?
+
+More documentation later, or you can see the source code.
+
+Enjoy!

@@ -1,0 +1,15 @@
+------ ExchBot ------
+
+ExchBot is a IRC bot allowing for instant exchange trades and transactions written in Node.JS
+
+---------------------
+
+Project Description:
+
+
+README:
+------ ExchBot ------
+
+ExchBot is a IRC bot allowing for instant exchange trades and transactions written in Node.JS
+
+---------------------

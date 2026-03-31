@@ -1,0 +1,15 @@
+# Pason Battleship Coding Contest Entry
+
+This is the entry that I won the coding contest with.
+
+My Probability class is ugly, I know. :p
+
+Project Description:
+The winning bot for a Battleship 3D contest written by me
+
+README:
+# Pason Battleship Coding Contest Entry
+
+This is the entry that I won the coding contest with.
+
+My Probability class is ugly, I know. :p

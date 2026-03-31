@@ -1,0 +1,100 @@
+Installation
+
+  Requirements
+
+    * libyaml-dev
+    * libssl-dev
+    * libproc-dev
+    * libpam0g-dev
+    * python-dev (python2.7-dev as of Ubuntu 11.04)
+    * python-mako
+
+   Build
+
+     To build zimr simply use the make command:
+     $ make
+
+   Install
+
+     Run the "make install" command as root to install:
+     $ sudo make install
+
+How To
+
+  To use zimr you must first start the zimrd daemon:
+  $ sudo /etc/init.d/zimrd start
+
+  Then create a zimr.cnf file in the desired website directories.
+  Example zimr.webapp:
+
+    websites:
+    - url: zimr.org
+
+  Add the zimr application:
+  $ zimr add
+
+  Then start
+  $ zimr start
+
+  For more information refer to < http://Zimr.org/#Documentation >
+
+About
+
+  Created by Ian Halpern
+  Copyright (c) 2011 Ian Halpern
+  Website: http://Zimr.org
+  License: GNU GPL v3
+  Contact: ian@ian-halpern.com
+
+
+Project Description:
+Serving webapps, not websites
+
+README:
+Installation
+
+  Requirements
+
+    * libyaml-dev
+    * libssl-dev
+    * libproc-dev
+    * libpam0g-dev
+    * python-dev (python2.7-dev as of Ubuntu 11.04)
+    * python-mako
+
+   Build
+
+     To build zimr simply use the make command:
+     $ make
+
+   Install
+
+     Run the "make install" command as root to install:
+     $ sudo make install
+
+How To
+
+  To use zimr you must first start the zimrd daemon:
+  $ sudo /etc/init.d/zimrd start
+
+  Then create a zimr.cnf file in the desired website directories.
+  Example zimr.webapp:
+
+    websites:
+    - url: zimr.org
+
+  Add the zimr application:
+  $ zimr add
+
+  Then start
+  $ zimr start
+
+  For more information refer to < http://Zimr.org/#Documentation >
+
+About
+
+  Created by Ian Halpern
+  Copyright (c) 2011 Ian Halpern
+  Website: http://Zimr.org
+  License: GNU GPL v3
+  Contact: ian@ian-halpern.com

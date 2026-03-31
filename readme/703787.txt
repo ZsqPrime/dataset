@@ -1,0 +1,74 @@
+Yet Another MySQL Backup
+=======================
+
+*under construction*
+
+(I am fully aware that this code is in a crappy stage and that it is public, but I am counting that no one will see it anyway)
+
+What this script does?
+=====================
+
+Takes a full physical backup (actual files) using xtrabackup/innobackupex
+Sets it up to be quickly restored from
+Deletes physical backups older then 2 days old
+
+Takes a full logical backup (SQL statements) using MyDumper
+with seperate compressed files (MyLoader understands these compressedfiles)
+Deletes logical backups older then 7 days
+
+Emails if there is an error with either backup methods
+
+Emails a report at the end of backup with metadata about the backups
+as well as slave information (assumes you are backing up from a slave).
+
+Lightly sprinkled error handling.
+ 
+Assumptions:
+===========
+A lot..
+You have the percona repository installed with xtrabackup and percona-toolkit
+You have MyDumper
+You have configured your own ~/.my.cnf file with your MySQL username and password
+You have sendmail and mutt email applications installed on your server.
+You understand BASH enough to go over the code and make the changes you need for it to work on your own server (it's not that hard.. I'm not that great anyway).
+
+
+
+
+Project Description:
+None
+
+README:
+Yet Another MySQL Backup
+=======================
+
+*under construction*
+
+(I am fully aware that this code is in a crappy stage and that it is public, but I am counting that no one will see it anyway)
+
+What this script does?
+=====================
+
+Takes a full physical backup (actual files) using xtrabackup/innobackupex
+Sets it up to be quickly restored from
+Deletes physical backups older then 2 days old
+
+Takes a full logical backup (SQL statements) using MyDumper
+with seperate compressed files (MyLoader understands these compressedfiles)
+Deletes logical backups older then 7 days
+
+Emails if there is an error with either backup methods
+
+Emails a report at the end of backup with metadata about the backups
+as well as slave information (assumes you are backing up from a slave).
+
+Lightly sprinkled error handling.
+ 
+Assumptions:
+===========
+A lot..
+You have the percona repository installed with xtrabackup and percona-toolkit
+You have MyDumper
+You have configured your own ~/.my.cnf file with your MySQL username and password
+You have sendmail and mutt email applications installed on your server.
+You understand BASH enough to go over the code and make the changes you need for it to work on your own server (it's not that hard.. I'm not that great anyway).

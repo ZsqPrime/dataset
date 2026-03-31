@@ -1,0 +1,8 @@
+Project Description:
+Les Smithson's cv - Contract work as a Python and Linux developer
+
+README:
+Les Smithson's cv
+=================
+
+Download from http://www.open-networks.co.uk/cv.html.

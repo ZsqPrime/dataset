@@ -1,0 +1,6 @@
+Project Description:
+A Foosball ranking and match tracking website developed in Play! for Scala.
+
+README:
+A Foosball ranking and match tracking website developed in Play! for Scala.
+This project is licensed under the GNU General Public License v3 (GPL).

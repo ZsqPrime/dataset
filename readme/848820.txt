@@ -1,0 +1,11 @@
+This project is a test fixture for UNICOEN and its applications.
+Please use 'git submodule'.
+
+
+Project Description:
+None
+
+README:
+This project is a test fixture for UNICOEN and its applications.
+
+Please use 'git submodule'.

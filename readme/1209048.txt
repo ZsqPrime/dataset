@@ -1,0 +1,15 @@
+A revisioned Android Chronometer class that counts and shows milliseconds.
+
+Please consider donating to Pledgie at http://www.pledgie.com/campaigns/16572
+or directly to Paypal at axaros AT gmail.com
+
+
+
+Project Description:
+A revised version of Android Chronometer that shows up milliseconds
+
+README:
+A revisioned Android Chronometer class that counts and shows milliseconds.
+
+Please consider donating to Pledgie at http://www.pledgie.com/campaigns/16572
+or directly to Paypal at axaros AT gmail.com

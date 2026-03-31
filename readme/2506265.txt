@@ -1,0 +1,11 @@
+# CrossWorld
+
+A tool for generating and solving croswords. This is a project for AI class at Sofia University.
+
+Project Description:
+Crossword generator and solver.
+
+README:
+# CrossWorld
+
+A tool for generating and solving croswords. This is a project for AI class at Sofia University.

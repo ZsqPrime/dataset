@@ -1,0 +1,12 @@
+#Code-Rex
+
+This is the source of the webapp we created in php, for conducting an online coding contest.The code base is pretty ugly and hackish, but might be usefull for some one else.
+
+
+Project Description:
+Web app to conduct an online coding contest, built on php.
+
+README:
+#Code-Rex
+
+This is the source of the webapp we created in php, for conducting an online coding contest.The code base is pretty ugly and hackish, but might be usefull for some one else.

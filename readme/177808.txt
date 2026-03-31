@@ -1,0 +1,10 @@
+This repo is for the LG Revolution 4G (LG VS910) recovery and CyanogenMod source.
+(Sorry it took so long to get set up!)
+
+
+Project Description:
+Support for LG Revolution 4G for Cyanogenmod
+
+README:
+This repo is for the LG Revolution 4G (LG VS910) recovery and CyanogenMod source.
+(Sorry it took so long to get set up!)

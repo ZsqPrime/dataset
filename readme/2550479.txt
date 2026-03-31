@@ -1,0 +1,22 @@
+Project Description:
+Vim Configuration
+
+README:
+Installation:
+
+    git clone git://github.com/gregleaver/vimrc.git ~/.vim
+    sh ~/.vim/setup
+
+~/.vim/setup will run the following:
+
+Switch to the `~/.vim` directory, and fetch submodules:
+
+    cd ~/.vim
+    git submodule init
+    git submodule update
+
+Create symlinks:
+
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/gvimrc ~/.gvimrc
+    ln -s ~/.vim/vim-pathogen/autoload/pathogen.vim ~/.vim/autoload/pathogen.vim

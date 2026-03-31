@@ -1,0 +1,42 @@
+oldlib
+ a bunch of stuff using an older version of lib/
+ some of this needs to be resuccitated, like joseph's code in applications/torus2
+
+lib
+  basic constructions of homotopy type theory
+
+homotopy
+  applications of homotopy type theory to formalizing homotopy theory
+
+programming
+  applications of homotopy type theory to programming
+
+computational-interp
+  code having to do with the computational interpretation or 2tt
+
+misc
+  miscellaneous little experiments
+
+
+Project Description:
+None
+
+README:
+oldlib
+ a bunch of stuff using an older version of lib/
+ some of this needs to be resuccitated, like joseph's code in applications/torus2
+
+lib
+  basic constructions of homotopy type theory
+
+homotopy
+  applications of homotopy type theory to formalizing homotopy theory
+
+programming
+  applications of homotopy type theory to programming
+
+computational-interp
+  code having to do with the computational interpretation or 2tt
+
+misc
+  miscellaneous little experiments

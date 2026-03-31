@@ -1,0 +1,8 @@
+The repository contains source files created as a training part of reading the book "First head: Design patterns".
+
+
+Project Description:
+"First Head: Design Patterns" book training source files
+
+README:
+The repository contains source files created as a training part of reading the book "First head: Design patterns".

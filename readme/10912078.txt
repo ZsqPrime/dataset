@@ -1,0 +1,4 @@
+Project Description:
+Visualization of found Post-it notes collected from around the world
+
+README:

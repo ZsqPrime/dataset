@@ -1,0 +1,8 @@
+This is the tried ruby code samples of problems posted in www.pythonchallenge.com 
+
+
+Project Description:
+The programs executed for rubymonk exercises
+
+README:
+This is the tried ruby code samples of problems posted in www.pythonchallenge.com

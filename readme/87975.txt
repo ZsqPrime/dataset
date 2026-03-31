@@ -1,0 +1,225 @@
+h1. Apn Server & Library for Ruby
+
+* http://github.com/jnak/apnmachine
+
+h2. Description
+
+I want:
+- persistent connection to APN Servers (as Apple recommends)
+- real-time notifications (no regular polling a la Resque)
+- super easy to use in Ruby and any languages (as easy as enqueuing a serialized JSON hash in Redis)
+- persist and queue messages when server is down
+- horizontal scalability and out-of-the-box load-balancing
+- fast daemons
+
+So I built ApnMachine. We're running it in production at zapkast.com and find it very reliable.
+
+
+h2. Remaining Tasks
+
+ * Implement feedback service mechanism
+ * Write real tests
+
+h2. ApnMachine Daemon
+
+To start ApnMachine, tell it where is your redis server and the complete path to your PEM file.
+That's it.
+
+<pre>
+  <code>
+Usage: apnmachined [options] --pem /full/path/to/pem
+  --redis-host bind address (defaults to 127.0.0.1)
+    address of your redis server
+
+  --redis-port port
+    the port of your redis server (defaults to)
+
+  --apn-host host
+    APN Server host (defaults to gateway.push.apple.com)
+    Use 'sandbox' to connect to gateway.sandbox.push.apple.com
+
+  --apn-port port of the APN Server
+    APN server port (defaults to 2195)
+
+  --pem pem file path
+    The PEM encoded private key and certificate.
+    To export a PEM ecoded file execute
+    # openssl pkcs12 -in cert.p12 -out cert.pem -nodes -clcerts
+
+  --pem-passphrase passphrase
+    The PEM passphrase to decode key.
+    Default to nil
+
+  --help
+    usage message
+
+  --daemon or -d
+    Runs process as daemon, not available on Windows
+  </code>
+</pre>
+
+h2. Sending Notifications from Ruby
+
+To send a notification, you just need a working Redis client that responds to rpush. It doesn't matter if you're
+in an EventMachine program or a plain vanilla Rails app.
+
+<pre>
+  <code>
+  ApnMachine::Config.redis = @any_redis_client
+  ApnMachine::Config.logger = Rails.logger
+  </code>
+</pre>
+
+Finally:
+
+<pre>
+  <code>
+  notification = ApnMachine::Notification.new
+  notification.device_token = apns_token
+  notification.alert = message
+  notification.badge = 1
+  notification.sound = 'default'
+  notification.push
+  </code>
+</pre>
+
+
+h2. Installation
+
+Apnserver is hosted on "rubygems":https://rubygems.org/gems/apnmachine
+
+<pre>
+<code>
+  $ gem install apnmachine
+</code>
+</pre>
+
+Adding apnmachine to your Rails application
+
+<pre>
+  <code>
+  gem 'apnmachine'
+  </code>
+</pre>
+
+
+h2. License
+
+The MIT License - Copyright (c) 2012 Julien Nakache
+Widely Inspired from groupme/em-apn and bpoweski/apnserver
+
+
+
+Project Description:
+An EventMachine APN server & a Redis-backed library used in production at Zapkast to push iOS notifications
+
+README:
+h1. Apn Server & Library for Ruby
+
+* http://github.com/jnak/apnmachine
+
+h2. Description
+
+I want:
+- persistent connection to APN Servers (as Apple recommends)
+- real-time notifications (no regular polling a la Resque)
+- super easy to use in Ruby and any languages (as easy as enqueuing a serialized JSON hash in Redis)
+- persist and queue messages when server is down
+- horizontal scalability and out-of-the-box load-balancing
+- fast daemons
+
+So I built ApnMachine. We're running it in production at zapkast.com and find it very reliable.
+
+
+h2. Remaining Tasks
+
+ * Implement feedback service mechanism
+ * Write real tests
+
+h2. ApnMachine Daemon
+
+To start ApnMachine, tell it where is your redis server and the complete path to your PEM file.
+That's it.
+
+<pre>
+  <code>
+Usage: apnmachined [options] --pem /full/path/to/pem
+  --redis-host bind address (defaults to 127.0.0.1)
+    address of your redis server
+
+  --redis-port port
+    the port of your redis server (defaults to)
+
+  --apn-host host
+    APN Server host (defaults to gateway.push.apple.com)
+    Use 'sandbox' to connect to gateway.sandbox.push.apple.com
+
+  --apn-port port of the APN Server
+    APN server port (defaults to 2195)
+
+  --pem pem file path
+    The PEM encoded private key and certificate.
+    To export a PEM ecoded file execute
+    # openssl pkcs12 -in cert.p12 -out cert.pem -nodes -clcerts
+
+  --pem-passphrase passphrase
+    The PEM passphrase to decode key.
+    Default to nil
+
+  --help
+    usage message
+
+  --daemon or -d
+    Runs process as daemon, not available on Windows
+  </code>
+</pre>
+
+h2. Sending Notifications from Ruby
+
+To send a notification, you just need a working Redis client that responds to rpush. It doesn't matter if you're
+in an EventMachine program or a plain vanilla Rails app.
+
+<pre>
+  <code>
+  ApnMachine::Config.redis = @any_redis_client
+  ApnMachine::Config.logger = Rails.logger
+  </code>
+</pre>
+
+Finally:
+
+<pre>
+  <code>
+  notification = ApnMachine::Notification.new
+  notification.device_token = apns_token
+  notification.alert = message
+  notification.badge = 1
+  notification.sound = 'default'
+  notification.push
+  </code>
+</pre>
+
+
+h2. Installation
+
+Apnserver is hosted on "rubygems":https://rubygems.org/gems/apnmachine
+
+<pre>
+<code>
+  $ gem install apnmachine
+</code>
+</pre>
+
+Adding apnmachine to your Rails application
+
+<pre>
+  <code>
+  gem 'apnmachine'
+  </code>
+</pre>
+
+
+h2. License
+
+The MIT License - Copyright (c) 2012 Julien Nakache
+Widely Inspired from groupme/em-apn and bpoweski/apnserver

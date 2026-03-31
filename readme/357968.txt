@@ -1,0 +1,7 @@
+Learn zeromq easily with django
+
+Project Description:
+Easy django and zeromq implementation
+
+README:
+Learn zeromq easily with django

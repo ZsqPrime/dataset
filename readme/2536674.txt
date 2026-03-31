@@ -1,0 +1,5 @@
+Project Description:
+Exploring the Bucha effect from a camera phone flash
+
+README:
+Attempting to use and Android Camera phone to create an LED Incapacitator, and exploring the Bucha Effect from a camera phone flash

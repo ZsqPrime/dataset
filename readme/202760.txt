@@ -1,0 +1,4 @@
+各种配置
+
+git clone git@github.com:zhengkai/config.git ~/conf
+

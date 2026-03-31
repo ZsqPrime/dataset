@@ -1,0 +1,37 @@
+Project Description:
+Library for mantain the httpsession transparently, for pedagogical objetives. With request.getSession().setAttribute or getAttribute
+
+README:
+To activate the functionality, this tags have to include in web.xml
+
+<filter>
+    <filter-name>filtroSes</filter-name>
+    <filter-class>com.enjava.FiltroSes</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filtroSes</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+    <dispatcher>INCLUDE</dispatcher>
+    <dispatcher>ERROR</dispatcher>
+  </filter-mapping>
+  
+   <listener>
+    <listener-class>com.enjava.ListenerContexto</listener-class>
+  </listener>
+  
+ 
+ 
+And in appengine-web.xml this tag too!    
+
+  <sessions-enabled>true</sessions-enabled>
+  
+  
+
+The library: https://github.com/downloads/juanantonioruz/servlet-session-gae/servlet-session-gae.jar
+
+bye!
+
+@Date 17.01.2012
+@Author juanantonioruz@gmail.com

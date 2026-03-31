@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+This is the website for the CS247 Final Project of Arda, Kenny, Robi, Charlton, and Blake. 
+Website url: www.stanford.edu/~kennykao/cgi-bin/CS247-P4-Website

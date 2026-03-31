@@ -1,0 +1,8 @@
+Project Description:
+Deploying of a project on multi-server with php/javascript
+
+README:
+nespresso
+=======
+
+deploying projet with php/javascript

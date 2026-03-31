@@ -1,0 +1,13 @@
+CHDK port for Canon IXUS 220HS 1.01G
+
+This port is based on the one for the 1.01C firmware.
+
+
+
+Project Description:
+CHDK port for Canon IXUS 220HS, firmware version 1.01G
+
+README:
+CHDK port for Canon IXUS 220HS 1.01G
+
+This port is based on the one for the 1.01C firmware.

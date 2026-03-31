@@ -1,0 +1,5 @@
+Project Description:
+Python code to experiment with the "travelling salesman problem."
+
+README:
+Just playing around with Python and the travelling salesman problem.

@@ -1,0 +1,19 @@
+EyeEm Memory
+
+Win Phone Memory Game with Images from the EyeEm API.
+
+Built on the PhotoHackday 2012 in Berlin.
+
+Thx to Frank Weigert for UI Support!
+
+Project Description:
+Win Phone App using the Eyeem API
+
+README:
+EyeEm Memory
+
+Win Phone Memory Game with Images from the EyeEm API.
+
+Built on the PhotoHackday 2012 in Berlin.
+
+Thx to Frank Weigert for UI Support!

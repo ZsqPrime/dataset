@@ -1,0 +1,6 @@
+
+
+Project Description:
+SimpleErl is the simplest yet flexible and managable static site engine. Written in Erlang, executed by YAWS.
+
+README:

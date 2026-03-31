@@ -1,0 +1,17 @@
+Project Description:
+get API data from Yandex Map service
+
+README:
+Installation
+------------
+1 - From pypi:
+
+    pip install pyandexmap
+
+2 - From source:
+
+    python setup.py install
+
+Use
+------------
+Looking source

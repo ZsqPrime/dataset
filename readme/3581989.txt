@@ -1,0 +1,17 @@
+Project Description:
+Glawn is a desktop client of Georgia Tech's LAWN browser authentication service.
+
+README:
+Homepage: <http://www.prism.gatech.edu/~nchery3/glawn.html>
+
+Glawn is a desktop client of the LAWN browser authentication service 
+on <https://www.auth.lawn.gatech.edu/>. New features offered by Glawn
+include GNOME desktop integration, a 'Show password' option, and support for
+the Georgia Tech-Lorraine (GTL) campus network. Glawn is licensed under GPLv3.
+
+Requirements:
+ * curl
+ * gtk+-2.0
+
+If any problems are found, please contact Nanley Chery <nanleychery@gmail.com>
+so that they can be fixed.

@@ -1,0 +1,7 @@
+the project is not ready yet. 
+
+Project Description:
+Team Management for Distributed and Offshore Software Development with MongoDB and .NET
+
+README:
+the project is not ready yet.

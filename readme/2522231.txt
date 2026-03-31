@@ -1,0 +1,5 @@
+Project Description:
+Backup scripts for Linux using rsync
+
+README:
+SERVER needs async option when using nfs

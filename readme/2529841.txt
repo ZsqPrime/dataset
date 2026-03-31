@@ -1,0 +1,18 @@
+Project Description:
+Rails site for recording scores between you and your friends in turbo hearts. Built as preparation for a lecture on usability and design.
+
+README:
+Turbohearts Score Tracker
+
+This project is a rails site for recording scores for games of Turbohearts you
+play with friends. It allows you to enter in a score every game and then
+calculates winnings and losses based on these points.
+
+Turbohearts is a card game based on Hearts. The gameplay is primarily the same
+as hearts. However, after passing and before playing tricks, cards may be
+"charged." Players charge cards by placing them face-up in front of them.
+Charged cards are worth double their point effects, and may only be played after 
+their suit has been broken or if there is no other option. Additionally, some
+cards have extra impacts on the score. The 10 of diamonds, for instance, subtracts
+five points from the score if taken. Finally, 9's in any suit force a trick to go
+around twice, where the highest of the eight cards played takes the trick.

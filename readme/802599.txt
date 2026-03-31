@@ -1,0 +1,7 @@
+A program to organize a user's files in proper directories.
+
+Project Description:
+Project to automate the process of searching and sorting music within a given file tree 
+
+README:
+A program to organize a user's files in proper directories.

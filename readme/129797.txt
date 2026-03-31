@@ -1,0 +1,70 @@
+This plugin lets you use the PayPal Mobile Express Checkout Library (MECL)
+in a Phonegap/Cordova application.
+This should not be confused with the Mobile Payment Libraries (MPL), for which
+there's another cordova plugin available.
+
+This plugin has been successfully tested with Cordova 2.6.0.
+Hopefully it will also work with newer releases.
+
+
+What's this MECL thing?
+========================
+Quoting the official documentation:
+
+	Mobile Express Checkout Library (MECL): If you want the PayPal checkout flow to be in a browser or webview, you can use our Mobile Express Checkout Library. This is useful if you already have a express checkout integration completed for your website or if app store policies require you to complete your checkout flow in a browser. This library will help you integrate the mobile web flow into your app.
+
+These are the key features and benefits of the MECL library provided by PayPal:
+	* In-app payments
+	* Quick integration
+	* Credit card checkout (no PayPal account needed)
+	* Supports auth/settle payments
+	* Supports Recurring Payments
+
+In order to successfully exploit the Express Checkout flow, you can use
+the InAppBrowser API provided by Cordova in conjunction with this plugin.
+
+The MECLPayPalPlugin comes in two flavors: iOS and Android.
+
+See the documentation in each platform directory.
+
+The offical MECL library (required to use the plugin but included here for your convenience) can be found at (look for Mobile Express Checkout Library):
+
+	https://www.x.com/developers/paypal/documentation-tools/paypal-sdk-index?qt-paypal_sdk_index=2#qt-paypal_sdk_index
+
+
+Project Description:
+PhoneGap plugin to use the PayPal MECL library under iOS and Android
+
+README:
+This plugin lets you use the PayPal Mobile Express Checkout Library (MECL)
+in a Phonegap/Cordova application.
+This should not be confused with the Mobile Payment Libraries (MPL), for which
+there's another cordova plugin available.
+
+This plugin has been successfully tested with Cordova 2.6.0.
+Hopefully it will also work with newer releases.
+
+
+What's this MECL thing?
+========================
+Quoting the official documentation:
+
+	Mobile Express Checkout Library (MECL): If you want the PayPal checkout flow to be in a browser or webview, you can use our Mobile Express Checkout Library. This is useful if you already have a express checkout integration completed for your website or if app store policies require you to complete your checkout flow in a browser. This library will help you integrate the mobile web flow into your app.
+
+These are the key features and benefits of the MECL library provided by PayPal:
+	* In-app payments
+	* Quick integration
+	* Credit card checkout (no PayPal account needed)
+	* Supports auth/settle payments
+	* Supports Recurring Payments
+
+In order to successfully exploit the Express Checkout flow, you can use
+the InAppBrowser API provided by Cordova in conjunction with this plugin.
+
+The MECLPayPalPlugin comes in two flavors: iOS and Android.
+
+See the documentation in each platform directory.
+
+The offical MECL library (required to use the plugin but included here for your convenience) can be found at (look for Mobile Express Checkout Library):
+
+	https://www.x.com/developers/paypal/documentation-tools/paypal-sdk-index?qt-paypal_sdk_index=2#qt-paypal_sdk_index

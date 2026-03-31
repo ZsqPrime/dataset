@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+Hi!
+
+I'm Vitaliy Filipov. I've studied informational systems at FMI. These are my projects as a bachelor.
+
+Disclaimer: keep in mind that the this repository is not tidy at all. Also somewhere you can find other projects from fellow students :)

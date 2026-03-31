@@ -1,0 +1,12 @@
+I'm working from the copy of the book available at: http://mitpress.mit.edu/sicp/
+
+I'm using DrRacket with the SICP language module available at: http://www.neilvandyke.org/racket-sicp/
+
+
+Project Description:
+Some humble solutions to the exercises in The Structure and Interpretation of Computer Programs.
+
+README:
+I'm working from the copy of the book available at: http://mitpress.mit.edu/sicp/
+
+I'm using DrRacket with the SICP language module available at: http://www.neilvandyke.org/racket-sicp/

@@ -1,0 +1,5 @@
+Project Description:
+A Basecamp usability extension for Chrome
+
+README:
+A simple Chrome extension that makes Basecamp a bit more usable.

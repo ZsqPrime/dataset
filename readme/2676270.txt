@@ -1,0 +1,4 @@
+Project Description:
+Extension to add external (CDN) JavaScript libs to shop
+
+README:

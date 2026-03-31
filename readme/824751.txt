@@ -1,0 +1,14 @@
+kcoloringEA
+===========
+
+k-coloring evolutionary algorithm implementation
+
+
+Project Description:
+k-coloring evolutionary algorithm implementation
+
+README:
+kcoloringEA
+===========
+
+k-coloring evolutionary algorithm implementation

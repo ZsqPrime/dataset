@@ -1,0 +1,9 @@
+Project Description:
+XNA based game
+
+README:
+Luna
+------
+
+
+Fill info in once we have some hehe :-)

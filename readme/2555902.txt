@@ -1,0 +1,5 @@
+Project Description:
+Component to create task difficulty map from land cover data
+
+README:
+Read https://facwiki.cs.byu.edu/WiSAR/index.php/DiffCreate for more info.

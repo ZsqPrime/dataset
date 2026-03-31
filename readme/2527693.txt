@@ -1,0 +1,5 @@
+Project Description:
+Aplikacja demonstracyjna na potrzeby warsztatów "Hello, Android (Market)"
+
+README:
+This software is licensed under the terms of the WTFPL.

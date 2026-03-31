@@ -1,0 +1,33 @@
+Project Description:
+Simplectic Euler n-body simulation
+
+README:
+psystem is a simple gravity simulation using a simplectic Euler integrator.
+
+Obligatory gifs:
+	https://jac2.net/img/psystem_001.gif
+	https://jac2.net/img/psystem_002.gif
+	https://jac2.net/img/psystem_square.gif
+	https://jac2.net/img/psystem_triangle.gif
+
+Building:
+	make
+
+Running:
+	./psystem # generate and play a random particle system
+	./psystem --load ./systems/solar # load and play the "solar" particle system
+
+Controls:
+	Space: switchs between:
+		tracking the center of the system and
+		tracking the first particle
+	p: pauses or unpauses the simulation
+
+	 Left mouse button: add a particle at mouse location
+	Right mouse button: remove the particle under the mouse
+	Note: in the default tracking mode (system center), these operations may
+	make it appear as if the camera jumped, because it does.
+
+	Mouse wheel: alter the size of the to be created particle
+	Note: there is currently no indication of the size it will be, this will be
+	changed to include feedback on this variable.

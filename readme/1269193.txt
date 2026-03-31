@@ -1,0 +1,12 @@
+A series of scripts to grab stuff from Project Gutenberg and format it nicely.
+
+See sample_usage.sh for an example.
+
+
+Project Description:
+The beginnings of some sample scripts for scraping and cleaning data from Project Gutenberg.
+
+README:
+A series of scripts to grab stuff from Project Gutenberg and format it nicely.
+
+See sample_usage.sh for an example.

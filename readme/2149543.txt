@@ -1,0 +1,8 @@
+Usage: Copy output of `./trace <host>`, paste into textarea in display.html, look at route
+
+
+Project Description:
+Plots the route packets take to a host on a google map
+
+README:
+Usage: Copy output of `./trace <host>`, paste into textarea in display.html, look at route

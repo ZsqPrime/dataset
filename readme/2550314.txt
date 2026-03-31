@@ -1,0 +1,5 @@
+Project Description:
+Ruby on Rails clicking game / experiment [no longer in production, but still available]
+
+README:
+TheElevatorGame.com is a Ruby on Rails project for a JoshRWeinstein.com blog post on UX

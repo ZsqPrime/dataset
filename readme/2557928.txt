@@ -1,0 +1,7 @@
+Project Description:
+Server side of the Shop and Share application
+
+README:
+Run the server by running python shopandshare.py
+
+Port and IP address can be changed in shopandshare.conf

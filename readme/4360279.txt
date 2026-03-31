@@ -1,0 +1,5 @@
+Project Description:
+An Andorid LiteCoin miner ported from pooler's "JMiner".
+
+README:
+First commit! :D

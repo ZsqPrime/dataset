@@ -1,0 +1,112 @@
+Project Description:
+Cryptographic library focused on correctness and speed
+
+README:
+DREW
+====
+
+drew is a set of libraries providing a C interface to cryptographic primitives
+as well as higher-level protocols.  It is designed to have very fast (if not the
+fastest) implementations of these primitives, while still preserving
+portability.  An extremely thorough testsuite ensures that the code correctly
+implements every algorithm.
+
+At this point, while it can be used, there are known security problems, such as
+the lack of blinding in RSA.  If you're doing any sort of online processing, or
+if you're paranoid (as you should be), you'll probably want to wait awhile
+before using this.
+
+The license for drew is spelled out in the document LICENSE, but roughly it is
+all available under the terms of your choice of the Apache License, version 2.0,
+or the GNU General Public License, version 2.0 (possibly with some rare
+exceptions).  This license was chosen to minimize barriers to use.  Patented
+algorithms are not included if they cannot be distributed under the GPL.
+
+Releases are available tagged from git.  The repository is stored on github at
+<https://github.com/bk2204/drew> and can be cloned from
+<git://github.com/bk2204/drew.git>.
+
+There are plans to include full TLS, ASN.1, and OpenPGP implementations, and
+work on these is ongoing.  Source-level compatibility with existing
+implementations, including OpenSSL, GnuTLS, and GPGME, is also planned.
+
+To build drew, edit the file config and adjust the options to suit your needs.
+For algorithms, specify "y" if you want to build the algorithm into the
+implementations library (libdrew-impl) or "m" if you want to build it as a
+plugin.  Other values disable the implementation.  For other functionality,
+specify "y" to enable the feature or any other value to disable it.
+
+Some algorithms, those containing the text "128" in their names, use 128-bit
+arithmetic and will only compile on certain platforms and only with a recent
+GCC.  Since alternatives are provided for machines that do not meet those
+requirements, it is safe to disable them without any loss of functionality.
+
+By default, the Perl module RDF::Trine is used to generate embedded RDF metadata
+that can be queried programmatically as triples.  If this is not useful for you
+or you do not want to install RDF::Trine, simply disable the CFG_METADATA option
+in the configuration file.
+
+The only cryptographic module which has external dependencies is the tommath
+plugin, which depends on the public domain libtommath for its implementation.
+Since this is currently the only bignum implementation, public key software will
+not work unless you enable it.  Some utilities also require libpopt.  Also, both
+a C and C++ compiler are required.  If not using the GNU linker, you may need to
+instruct your linker specifically to not export symbols other than those
+starting with "drew_".
+
+Once you have edited the config file, type "make" (with or without a -j option)
+to build the code.  Then type "make test" to run a full testsuite.  Please be
+aware that on slow machines (such as a 333 MHz UltraSPARC IIi) this may take in
+excess of an hour.  Very rarely (approximately 1% of the time), a PRNG may fail
+a test due to the statistical nature of the test; this is not a problem.
+
+To install the files, make sure the directory to which you want to install is
+correctly specified in the config file and type "make install".  To remove the
+files, type "make uninstall".
+
+Some documentation on the interface is provided; type "make doc" to build it.
+You will need Apache FOP and the DocBook XSL-NS Stylesheets.
+
+Please be aware that the entire project is in and assumes UTF-8 (except for
+wchar_t, where it assumes UCS-4).  Files and filenames are presumed to be in
+UTF-8 and some algorithm and symbol names take advantage of this.  Functions
+accepting possibly-const-qualified pointers to char are UTF-8 strings.  This is
+not always checked and things may break if you do not ensure this.
+
+Please report bugs and wishlist requests on the github issue tracker.  Until a
+mailing list is set up, please send email to brian m. carlson at
+<sandals@crustytoothpaste.net>.
+
+Test Vectors
+------------
+
+Part of the goal of this project is to serve as the most comprehensive source
+for cryptographic test vectors on the Internet.  It aggregates vectors from all
+reliable sources in a single set of easy-to-parse formats.  More information is
+available in the TEST-VECTORS.adoc file.
+
+Security
+--------
+
+As it currently stands, drew is not suitable for online applications.  It is
+designed as a testbed for algorithms and implementations, but does not currently
+implement side channel mitigations.  As it is unaudited, it might also have
+other security problems.
+
+Contributing
+------------
+
+Contributions are generally welcome.  Implementations of algorithms are
+generally acceptable provided that they are under the GPLv2/Apache 2.0
+dual-license, under the MIT License, or in the public domain.  If your
+implementation is the first implementation of an algorithm in the project, it
+should be written in portable C or C++ and come with a variety of tests, both
+internal and external.  A new implementation of an algorithm for which there is
+already an implementation should offer something that the original does not,
+such as speed or more options, even if these are limited to a particular
+platform.  A different license is generally not sufficient in this case.
+
+Algorithms should be legitimate, publicly documented cryptographic algorithms.
+Specifications and test vectors should be available at no cost via the Internet.
+
+Contributions are generally preferred as git repositories.

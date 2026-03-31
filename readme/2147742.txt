@@ -1,0 +1,7 @@
+My playground for an HTML game.
+
+Project Description:
+WebGL - SAC Strategy Action Combat
+
+README:
+My playground for an HTML game.

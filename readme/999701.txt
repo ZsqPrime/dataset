@@ -1,0 +1,8 @@
+A collection of custom Python scripts for bioinformatics research.
+
+
+Project Description:
+Python scripts for miscellaneous bioinformatics stuff.
+
+README:
+A collection of custom Python scripts for bioinformatics research.

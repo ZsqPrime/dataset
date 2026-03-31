@@ -1,0 +1,5 @@
+Project Description:
+tool for structured code review for C and C++
+
+README:
+tfscr is a tool for performing structured code review for C and C++ languages.

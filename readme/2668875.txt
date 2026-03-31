@@ -1,0 +1,6 @@
+Project Description:
+vim, bash etc
+
+README:
+
+Config files for vim, bash etc.

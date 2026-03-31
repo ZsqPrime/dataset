@@ -1,0 +1,6 @@
+
+
+Project Description:
+Message broker extension for Ninject using weak events
+
+README:

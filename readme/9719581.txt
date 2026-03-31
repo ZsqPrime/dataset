@@ -1,0 +1,6 @@
+Project Description:
+router/modem firmware hacking
+
+README:
+
+Router/modem firmware hacking tools and general research.

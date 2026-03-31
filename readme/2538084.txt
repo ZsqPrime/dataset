@@ -1,0 +1,7 @@
+Project Description:
+Portlets de exemplo utilizados em posts no blog da SEA Tecnologia (http://seatecnologia.com.br/blog)
+
+README:
+Este projeto contém o código resultante dos exemplos apresentados na série 
+"Entendendo Portlets no Liferay", que postei no blog da SEA Tecnologia. A
+série de posts pode ser acessada no link http://tinyurl.com/PortletsLiferay

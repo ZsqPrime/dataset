@@ -1,0 +1,46 @@
+Project Description:
+
+
+README:
+Convert SplashID DB into keepassX (keepassx.org) and keePass (keepass.info)
+
+These python scripts can be used to migrate account database from SplashID software into either 
+keePassX or keePass. They confusingly have identical names and share UI resemblance, but these 
+are two differnt programs. keePassX is mostly used on Linux, while keePass dominates 
+MS Windows, iOS and Android share.
+
+The scripts will take SplashID exported database (in native VID format) and convert it into 
+keePassX or keePass XML files, that later can be imported to one of the program.
+
+ASSUMPTION:
+  * keePassX <Last Access> and <Last Modified> time stamp filled with a date and time of conversion
+  * SplashID <Description> and <Category> fields merge into keePassX <title>
+  * SplashID <Type> is convert into keepass/X <subgroup> 
+  * All SplashID fields that do not match fixed keePassX ones, added to the keePassX <comments>
+  * All SplashID fields that do not match fixed keePass ones, added to the keePass <notes>
+  * SplashID Creation Date is expected in the following format <November 28, 2009>
+  * Imported data saved in unicode utf-8 format
+  * During SplashID VID file import, some correction is performed in case mismatch found it T and F fields
+  
+TODO:
+  
+  * If SplashID has no username, check <comment> section for <account> data to substitute
+  * Unicoded is implemented for keePass, push it to keePassX as well.
+
+=================
+
+From SplashID website:
+ You may also import and export SplashID records in CSV format.
+ CSV stands for Comma Separated Values, and is a common file format
+ readable by most spreadsheets, databases and word processors.
+ If you wish to import a CSV file, the data must be in the following format:
+
+    Type, Field 1, Field 2, Field 3, Field 4, Field 5, Field 6, Field 7, Field 8, Field 9, Date Modified, Notes, Category
+
+ It is easy to create the above format in Excel by creating a spreadsheet
+ with 13 columns (as designated above) with one record per row.
+ Then save the splashid_export_f in CSV format.
+
+ Note: When importing data, if the type field is blank the record
+ will be placed in Unfiled. If there is a type name and it
+ does not match an existing type a new type will be created.

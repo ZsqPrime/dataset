@@ -1,0 +1,5 @@
+Project Description:
+performs stereo camera calibration 
+
+README:
+Stereo Camera Calibrator based on the PTAM monocular calibration system of G. Klein and D. Murray

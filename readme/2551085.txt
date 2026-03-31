@@ -1,0 +1,8 @@
+Project Description:
+Download Shoutcast Streams
+
+README:
+   RubyRip
+=============
+---------------------------------------
+Download Shoutcast Streams using Ruby!

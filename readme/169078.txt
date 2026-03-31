@@ -1,0 +1,10 @@
+# THIS PROJECT ISN'T MAINTAINED ANYMORE
+## PLEASE UPGRADE TO THE OFFICAL GEM [mollie-api-ruby](https://github.com/mollie/mollie-api-ruby)
+
+
+Project Description:
+A Ruby implementation for handling Mollie iDeal transactions
+
+README:
+# THIS PROJECT ISN'T MAINTAINED ANYMORE
+## PLEASE UPGRADE TO THE OFFICAL GEM [mollie-api-ruby](https://github.com/mollie/mollie-api-ruby)

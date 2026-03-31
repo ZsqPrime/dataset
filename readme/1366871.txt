@@ -1,0 +1,16 @@
+Office Nomads Twitter Box!
+
+# Required Libraries
+	Tweepy: http://tweepy.github.com
+	GPIO Libraries:  http://pypi.python.org/pypi/RPi.GPIO
+
+
+Project Description:
+Office Nomads Twitter Box
+
+README:
+Office Nomads Twitter Box!
+
+# Required Libraries
+	Tweepy: http://tweepy.github.com
+	GPIO Libraries:  http://pypi.python.org/pypi/RPi.GPIO

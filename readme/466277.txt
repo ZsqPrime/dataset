@@ -1,0 +1,8 @@
+Served by Github Pages
+
+
+Project Description:
+Pure HTML website for a lodging, in Romania
+
+README:
+Served by Github Pages

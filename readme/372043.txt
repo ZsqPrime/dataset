@@ -1,0 +1,53 @@
+This is a component for the CMS Joomla to use RPC with JSON. Now it is in developer state and not stable to install. If the first stable version is tested it will be printed here. The goal of this project is a extension to simple add any other components to get json responses for external devices like iPhone/iPad and so on.
+
+## Planed Components:
+- Content
+- Poll
+- System
+
+## Requirements:
+- com_mfpolls
+- plg_mfpollsystem
+
+
+FIXED: [14-02-2012]
+- The key "error" should not be at all responses. The key "error" is only includes if it is really an error.
+
+## TODO's:
+- Add a signature to the response/request to verify the message.
+- If the method exists but the parameter are wrong it should display a error message only at debug mode.
+- Change the validate() to Joomla Framework methods to check the response.
+- Multiple RPC requests at one http request ?
+- Use a Error Object to handle and build responses.
+- Turn off error reporting
+- Add a parameter at administration panel to select the security level (play load encrypted, username and password encrypted, nothing encrypted)
+- Add a parameter at administration panel to select the authentication mechanism (session handled, username and password on every submit)
+
+Project Description:
+Joomla JSON RPC component to support external data requests.
+
+README:
+This is a component for the CMS Joomla to use RPC with JSON. Now it is in developer state and not stable to install. If the first stable version is tested it will be printed here. The goal of this project is a extension to simple add any other components to get json responses for external devices like iPhone/iPad and so on.
+
+## Planed Components:
+- Content
+- Poll
+- System
+
+## Requirements:
+- com_mfpolls
+- plg_mfpollsystem
+
+
+FIXED: [14-02-2012]
+- The key "error" should not be at all responses. The key "error" is only includes if it is really an error.
+
+## TODO's:
+- Add a signature to the response/request to verify the message.
+- If the method exists but the parameter are wrong it should display a error message only at debug mode.
+- Change the validate() to Joomla Framework methods to check the response.
+- Multiple RPC requests at one http request ?
+- Use a Error Object to handle and build responses.
+- Turn off error reporting
+- Add a parameter at administration panel to select the security level (play load encrypted, username and password encrypted, nothing encrypted)
+- Add a parameter at administration panel to select the authentication mechanism (session handled, username and password on every submit)

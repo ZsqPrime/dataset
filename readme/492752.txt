@@ -1,0 +1,6 @@
+
+
+Project Description:
+A list manager for Javascript and Nodejs with a Redis-like interface
+
+README:

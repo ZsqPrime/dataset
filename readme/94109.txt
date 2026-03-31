@@ -1,0 +1,15 @@
+devMX TeamSpeak3 Webviewer Lite
+===============================
+
+Please follow the installation instructions here:
+http://devmx.de/en/software/teamspeak3-webviewer-lite/dokumentation-installation
+
+Project Description:
+A lite teamspeak3 webviewer for PHP 5.3 and newer
+
+README:
+devMX TeamSpeak3 Webviewer Lite
+===============================
+
+Please follow the installation instructions here:
+http://devmx.de/en/software/teamspeak3-webviewer-lite/dokumentation-installation

@@ -1,0 +1,11 @@
+Project Description:
+
+
+README:
+This is a simple blog app to show how to use gem Authem.
+
+You can *only* add and view the list of posts.
+
+Note that everyone can view list of posts but only authenticated users can add new posts.
+
+You'll find implementation of sign in, sign out, reset_password and remember_me methods of the gem here as an example.

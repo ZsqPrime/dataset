@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Android application; part of BSc thesis (see https://dk.um.si/IzpisGradiva.php?id=37852&lang=en for details).

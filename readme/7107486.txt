@@ -1,0 +1,10 @@
+Project Description:
+Archiving tool for collecting unique files from various sources.
+
+README:
+Filefisher
+==========
+An archiving tool for maintaining a master archive of unique files (documents, pictures, etc.) from various sources.
+
+There is a load of duplicate finders, but none is completely satisfying for quickly answering
+if a folder contains files already in the master archive.

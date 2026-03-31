@@ -1,0 +1,8 @@
+This directory contains code for the ICS Camera HAL
+
+
+Project Description:
+HAL module for Qualcomm cameras
+
+README:
+This directory contains code for the ICS Camera HAL

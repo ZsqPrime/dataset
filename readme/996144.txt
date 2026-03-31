@@ -1,0 +1,45 @@
+h1. Rubtítulos
+
+Con Rubtítulos podés descargar los subtítulos en español para tus series
+
+h2. Uso
+
+<pre>./rubtitulos.rb Great.Series.S01E05........avi</pre>
+
+Se va a buscar el subtítulo en Subdivx.com, descargarlo, descomprimirlo (ZIP o RAR), y guardarlo junto al video, con el mismo nombre, para que VLC, Perian, u otro reproductor lo cargue automáticamente.
+
+Nota: Requiere instalar el comando "'unrar'":http://www.rarlab.com/download.htm
+
+h2. TO-DO
+
+* Cambiar a subtitulos.es que se descarga sin comprimir ?
+* Buscar automáticamente los videos a los que les falta el subtítulo en un directorio dado.
+* Soportar películas
+* Mejorar el criterio de selección de mejor subtítulo según el origen del archivo? (release group, etc)
+
+
+
+
+
+Project Description:
+Descarga automática de subtítulos en español para tus series
+
+README:
+h1. Rubtítulos
+
+Con Rubtítulos podés descargar los subtítulos en español para tus series
+
+h2. Uso
+
+<pre>./rubtitulos.rb Great.Series.S01E05........avi</pre>
+
+Se va a buscar el subtítulo en Subdivx.com, descargarlo, descomprimirlo (ZIP o RAR), y guardarlo junto al video, con el mismo nombre, para que VLC, Perian, u otro reproductor lo cargue automáticamente.
+
+Nota: Requiere instalar el comando "'unrar'":http://www.rarlab.com/download.htm
+
+h2. TO-DO
+
+* Cambiar a subtitulos.es que se descarga sin comprimir ?
+* Buscar automáticamente los videos a los que les falta el subtítulo en un directorio dado.
+* Soportar películas
+* Mejorar el criterio de selección de mejor subtítulo según el origen del archivo? (release group, etc)

@@ -1,0 +1,10 @@
+First commit to github
+(Did some testing with Pluralsight's course Git Fundamentals)
+
+Project Description:
+Sandbox for last.fm API
+
+README:
+First commit to github
+
+(Did some testing with Pluralsight's course Git Fundamentals)

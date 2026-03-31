@@ -1,0 +1,29 @@
+Project Description:
+URL Shortener module for the Play framework
+
+README:
+h1. Play URL Shortener
+
+Provides a simple tag for shortening URLs inside a view.  For example:
+
+pre. #{shorten.url 'http://www.example.com'/}
+
+will render to:
+
+pre. http://is.gd/RGW31T
+
+There is not currently any way of adding further parameters and only is.gd can be used.
+
+Once a short URL is found for a long URL, this mapping is stored in the play cache (play.cache.Cache) with the key set to "url-shortener_" followed by the long URL and the value set to the short URL.
+
+h2. Installation
+
+h3. Module installation
+
+Download this whole project into a directory called urlShortener and copy that to the modules directory inside your play framework.  I'll try and get this added to the modules repository soon to make this step easier.
+
+h3. Enable the module
+
+After installing the module, add the following to your @application.conf@ to enable it:
+
+bc. module.shortener=${play.path}/modules/urlShortener

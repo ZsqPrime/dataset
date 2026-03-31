@@ -1,0 +1,7 @@
+SwatchJS -- A utility library for dealing with colors in HTML / CSS
+
+Project Description:
+SwatchJS -- A utility library for dealing with colors in HTML / CSS
+
+README:
+SwatchJS -- A utility library for dealing with colors in HTML / CSS

@@ -1,0 +1,8 @@
+My Arduino hacking.  See http://mikehw.rddev.co.uk for the blog.
+
+
+Project Description:
+
+
+README:
+My Arduino hacking.  See http://mikehw.rddev.co.uk for the blog.

@@ -1,0 +1,6 @@
+Project Description:
+Sublime plug-in which allows real-time collaboration
+
+README:
+This is a sublimetext plugin allows collaboration edititing.
+It is based on extended verion of cccp protocol.

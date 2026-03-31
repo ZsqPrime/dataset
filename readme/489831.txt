@@ -1,0 +1,10 @@
+# xbmc-controller-app
+an android app for the xbmc mediacenter
+
+
+Project Description:
+Android App for the xbmc mediacenter
+
+README:
+# xbmc-controller-app
+an android app for the xbmc mediacenter

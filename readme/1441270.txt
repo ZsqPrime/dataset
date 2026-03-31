@@ -1,0 +1,50 @@
+TerminalActivator - iolate
+
+Call SpringBoard events via Activator on Terminal.
+You can use Activator events on Terminal or SSH.
+
+-----------------
+
+#import <libactivator/libactivator2.h>
+ -> https://github.com/rpetrich/libactivator/blob/master/libactivator.h
+
+
+==HOW-TO-USE==
+bash shell script:
+	$ notify_post [name]
+	(type "notify_post ta_test". NOT "notify_post [ta_test]")
+	(ta_text is just example.)
+
+Command Line Tool:
+1. import header
+	#import <notify.h>
+2. use this command where you want to call events.
+	notify_post("name");
+
+
+Project Description:
+None
+
+README:
+TerminalActivator - iolate
+
+Call SpringBoard events via Activator on Terminal.
+You can use Activator events on Terminal or SSH.
+
+-----------------
+
+#import <libactivator/libactivator2.h>
+ -> https://github.com/rpetrich/libactivator/blob/master/libactivator.h
+
+
+==HOW-TO-USE==
+bash shell script:
+	$ notify_post [name]
+	(type "notify_post ta_test". NOT "notify_post [ta_test]")
+	(ta_text is just example.)
+
+Command Line Tool:
+1. import header
+	#import <notify.h>
+2. use this command where you want to call events.
+	notify_post("name");

@@ -1,0 +1,8 @@
+an alternative client for the MoparClassic project
+
+
+Project Description:
+None
+
+README:
+an alternative client for the MoparClassic project

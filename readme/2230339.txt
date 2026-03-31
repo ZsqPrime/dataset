@@ -1,0 +1,101 @@
+This is the proposal generator: turn Wiki into LaTeX into PDF, uploadable as EU FP7 proposals 
+
+
+Requirements: 
+-------------
+
+* make 
+* python 2.7 
+* latex
+* a file system that supports symbolic links 
+  (it should be possible to do without, but that is not tested) 
+
+
+Installation:
+-------------
+
+* Read INSTALL and the documentation in the doc directory 
+
+
+Directories: 
+------------
+
+* bin: all scripts necessary 
+* doc: documentation - contains PDF file, html both in singlefile 
+  and several directory format. Look here for details. 
+* docsource: the Sphinx / restructured text sources for the documentation 
+* generated: files that are directly generated from wiki; do not edit in there! 
+* latex: latex files for manual editing 
+  * symbolic links to generated files are in put in place automatically,
+    unless a normal file is already in place 
+    
+
+Contact point: 
+--------------
+	Holger Karl 
+	University Paderborn 
+	hkarl@ieee.org 
+
+
+Acknowledgements: 
+-----------------
+
+This set of script was developed while writing a proposal for an FP7
+Integrated Project in Call 8. I am indebted to my colleagues who
+suffered through all the bugs, hazzles and imperfections. In
+particular, Bengt Ahlgren, Dirk Kutscher, Börje Ohlmann, Stephen
+Farrel, Hannu Flinck, and Pasi Sarolahti provided many valuable hints,
+suggestions, and requirements.
+
+Project Description:
+Automatically generate EU FP7 proposals from Wiki descriptions
+
+README:
+This is the proposal generator: turn Wiki into LaTeX into PDF, uploadable as EU FP7 proposals 
+
+
+Requirements: 
+-------------
+
+* make 
+* python 2.7 
+* latex
+* a file system that supports symbolic links 
+  (it should be possible to do without, but that is not tested) 
+
+
+Installation:
+-------------
+
+* Read INSTALL and the documentation in the doc directory 
+
+
+Directories: 
+------------
+
+* bin: all scripts necessary 
+* doc: documentation - contains PDF file, html both in singlefile 
+  and several directory format. Look here for details. 
+* docsource: the Sphinx / restructured text sources for the documentation 
+* generated: files that are directly generated from wiki; do not edit in there! 
+* latex: latex files for manual editing 
+  * symbolic links to generated files are in put in place automatically,
+    unless a normal file is already in place 
+    
+
+Contact point: 
+--------------
+	Holger Karl 
+	University Paderborn 
+	hkarl@ieee.org 
+
+
+Acknowledgements: 
+-----------------
+
+This set of script was developed while writing a proposal for an FP7
+Integrated Project in Call 8. I am indebted to my colleagues who
+suffered through all the bugs, hazzles and imperfections. In
+particular, Bengt Ahlgren, Dirk Kutscher, Börje Ohlmann, Stephen
+Farrel, Hannu Flinck, and Pasi Sarolahti provided many valuable hints,
+suggestions, and requirements.

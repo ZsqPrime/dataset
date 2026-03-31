@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+This project centers around a research endeavor to understand REST.  
+
+For details on the project and progress, view http://mhorner.blogspot.com.

@@ -1,0 +1,12 @@
+Project Description:
+
+
+README:
+quick little project for shopittome. 
+
+RUN:
+ruby puzzle.rb
+
+DEPENDENCIES:
+nokogiri (http://nokogiri.org/)
+nokogiri is a rubygem, so we also require rubygems (http://rubygems.org/)

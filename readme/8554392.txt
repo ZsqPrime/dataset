@@ -1,0 +1,7 @@
+Project Description:
+Chrome extension to look up words in Wiktionary
+
+README:
+Adds a context menu to Chrome to look up the selected word in Wikitionary.
+
+To install, open chrome-wiktionary.crx then click raw.

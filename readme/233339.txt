@@ -1,0 +1,12 @@
+The famous game coded in C. 
+The PC uses a recursive function to calculate its next move.
+It plays every possible move and takes the field with the highest win-rate.
+
+
+Project Description:
+The famous game coded in C, using a recursive function to calculate best moves
+
+README:
+The famous game coded in C. 
+The PC uses a recursive function to calculate its next move.
+It plays every possible move and takes the field with the highest win-rate.

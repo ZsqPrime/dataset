@@ -1,0 +1,15 @@
+Object Recognition
+==================
+
+Please see http://ecto.willowgarage.com/recognition.
+
+
+
+Project Description:
+The core of object recognition, where the development now happens
+
+README:
+Object Recognition
+==================
+
+Please see http://ecto.willowgarage.com/recognition.

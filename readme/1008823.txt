@@ -1,0 +1,123 @@
+LeafCAN - SOC Meter for Nissan Leaf
+by Sam C. Lin <lincomatic@hotmail.com>
+Software Copyright (c) 2012-2014 Sam C. Lin
+Eagle Files Copyright (c) 2012 Sam C. Lin and Chris Howell <chris1howell83@gmail.com>
+
+The files in this project free software; you can redistribute
+and/or modify them under the terms of the GNU General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+These files are distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-----------
+
+CANMonitor.sch - Eagle schematic for CAN bus monitor
+LeafCAN.pde - AT90CAN128 Arduino sketch for Nissan Leaf SOC monitor
+LeafCAN.hex - precompiled HEX file
+flash.bat - MS batch file for setting fuses and flashing firmware
+
+-----------
+
+For more information on this project, see my blog: http://blog.lincomatic.com/?tag=can-bus
+
+Many thanks to the members of the MyNissanLeaf forum, especially garygid, for all the groundwork which led to this project.
+----------
+
+ChangeLog
+
+20141030 SCL v2.01
+- minor cleanup of CanBusInterface class
+
+20131121 SCL v2.00
+- added encoder stuff and rewrote w/ classes
+
+20130321 SCL v1.3
+- added Adafruit 16x2 OLED support - #define ADA_OLED
+
+20121002 SCL v1.3
+- added V2 hardware support
+- added FIXED_FUEL_BARS option
+- added SOCPCT_55B to show "true" SOC% from 55B message
+  (when enabled, replaces amps in center of bottom line)
+
+20120602 SCL v1.2
+- added power consumption in KW to line 2 of display (battery pack volts * amps)
+- added SHOW_KWH/SHOW_KW #defines, allowing users to revert to display style of v1.0 if desired
+
+20120602 SCL v1.1
+- added remaining KWh to display
+- update display only once every 250ms to increase readability
+
+v1.0 - initial release
+
+Project Description:
+SOC Meter for Nissan Leaf - AVR CAN Bus Interface
+
+README:
+LeafCAN - SOC Meter for Nissan Leaf
+by Sam C. Lin <lincomatic@hotmail.com>
+Software Copyright (c) 2012-2014 Sam C. Lin
+Eagle Files Copyright (c) 2012 Sam C. Lin and Chris Howell <chris1howell83@gmail.com>
+
+The files in this project free software; you can redistribute
+and/or modify them under the terms of the GNU General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+These files are distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+-----------
+
+CANMonitor.sch - Eagle schematic for CAN bus monitor
+LeafCAN.pde - AT90CAN128 Arduino sketch for Nissan Leaf SOC monitor
+LeafCAN.hex - precompiled HEX file
+flash.bat - MS batch file for setting fuses and flashing firmware
+
+-----------
+
+For more information on this project, see my blog: http://blog.lincomatic.com/?tag=can-bus
+
+Many thanks to the members of the MyNissanLeaf forum, especially garygid, for all the groundwork which led to this project.
+----------
+
+ChangeLog
+
+20141030 SCL v2.01
+- minor cleanup of CanBusInterface class
+
+20131121 SCL v2.00
+- added encoder stuff and rewrote w/ classes
+
+20130321 SCL v1.3
+- added Adafruit 16x2 OLED support - #define ADA_OLED
+
+20121002 SCL v1.3
+- added V2 hardware support
+- added FIXED_FUEL_BARS option
+- added SOCPCT_55B to show "true" SOC% from 55B message
+  (when enabled, replaces amps in center of bottom line)
+
+20120602 SCL v1.2
+- added power consumption in KW to line 2 of display (battery pack volts * amps)
+- added SHOW_KWH/SHOW_KW #defines, allowing users to revert to display style of v1.0 if desired
+
+20120602 SCL v1.1
+- added remaining KWh to display
+- update display only once every 250ms to increase readability
+
+v1.0 - initial release

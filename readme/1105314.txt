@@ -1,0 +1,34 @@
+Project Description:
+A Hoptoad notifier for Python.
+
+README:
+h1. Pytoad: A Hoptoad Notifier for Python
+
+p. Pytoad is a lightweight "Hoptoad":http://www.hoptoadapp.com notifier for Python.
+
+h2. Configuration
+
+p. Copy _config/environment.default.json_ to _config/environment.json_ and modify the values to match your project.
+
+p. If you are using easy_install, you will need to create a config directory in your project with the _environment.json_ file.
+
+p. If you store your configuration files in a central location, you can also use the _PYTOAD_CONFIG_DIRECTORY_ environment variable to specify the location.
+
+h2. Using the Decorator
+
+bc. from pytoad import pytoad_decorator
+@pytoad_decorator()
+def foobar():
+	raise Exception('banana')
+
+p. Or catch specific types of exceptions
+
+bc. @pytoad_decorator(monitored_exceptions=[StandardError, LookupError])
+def foo():
+	raise StandardError('banana')
+
+h2. Usage Without Decorator
+
+bc. from pytoad import Connection
+connection = Connection(name="Project Name", version="Software Version", environment_name="production", api_key="API-KEY")
+connection.send_to_hoptoad(Exception('banana'), additional_information="additional debug info.")

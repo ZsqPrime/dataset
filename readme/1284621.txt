@@ -1,0 +1,7 @@
+Project Description:
+None
+
+README:
+These plugins has been developed in order to accomplish my thesis project.
+
+I hope that they can be useful for someone.

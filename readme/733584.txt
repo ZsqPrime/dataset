@@ -1,0 +1,10 @@
+This is just a repository to store and share my changes on BroHogan's USIi2c libraries:
+http://arduino.cc/playground/Code/USIi2c
+
+
+Project Description:
+I2C library for ATtiny25/45/85
+
+README:
+This is just a repository to store and share my changes on BroHogan's USIi2c libraries:
+http://arduino.cc/playground/Code/USIi2c

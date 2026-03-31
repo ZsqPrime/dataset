@@ -1,0 +1,187 @@
+This is the graylog2 module.
+
+To use this module you need to have the software available as Debian package.  See below for a
+way to create the Debian package with fpm (https://github.com/jordansissel/fpm)
+
+Usage of the module
+-------------------
+
+gray2log-server:
+
+  class {
+    'graylog2::server':
+      mongodb_password => 'xxx';
+  }
+
+or with mongodb and/or elasticsearch on different host
+
+  class {
+    'graylog2::server':
+      mongodb_password   => 'xxx',
+      mongodb_host       => 'a.b.c.d',
+      elasticsearch_host => 'e.f.g.h',
+  }
+
+gray2log-web-interface:
+
+  class {
+    'graylog2::webinterface':
+      mongodb_password => 'xxx';
+    'graylog2::webinterface::apache':
+  }
+
+Including the apache subclass is optional.  You can use your own apache class too.
+
+Dependancies
+------------
+
+Puppet modules:
+
+rgevaert/mongodb        https://github.com/rgevaert/puppet-mongodb
+rgevaert/elasticsearch  https://github.com/rgevaert/puppet-elasticsearch
+
+
+Configuration mongodb user
+-------------
+
+* mongodb:
+  Create the mongodb user 'grayloguser' and use the password.
+  http://www.mongodb.org/display/DOCS/Security+and+Authentication#SecurityandAuthentication-ConfiguringAuthenticationandSecurity
+
+  > use admin
+  > db.addUser("theadmin", "anadminpassword")
+  > db.auth("theadmin", "anadminpassword")
+  > use graylog2
+  > db.addUser('grayloguser','xyz')
+
+
+How to create the Debian packages
+---------------------------------
+
+1) server component
+
+Download the graylog2-server and get it extracted to /opt/graylog2-server.
+
+Create the Debian package.  E.g. with fpm:
+
+  fpm -n graylog2-server -v 0.9.6 -d openjdk-6-jre -d mongodb-server -d elasticsearch \
+   -a all -m 'Rudy Gevaert <rudy.gevaert+graylog2@ugent.be>' \
+   --description 'Graylog2 is an open source syslog implementation that stores your logs in ElasticSearch.' \
+   --url 'http://www.graylog2.org/' -t deb -s dir /opt/graylog2-server
+
+2) web interface component
+
+Download the graylog2-web-interface and get it extracted to /opt/graylog2-web-interface.
+
+Install bundle and make:
+
+  apt-get install make
+  gem install bundle
+
+Install the necessary gems in the vendor/bundle subdir
+
+  /opt/graylog2-web-interface# bundle install --local
+
+Create the Debian package.  E.g. with fpm:
+  fpm -n graylog2-web-interface -v 0.9.6 -d ruby1.8 -d rake -d ruby-dev  -a all \ 
+   --description 'Graylog2 is an open source syslog implementation that stores your logs in ElasticSearch.' \
+   --url 'http://www.graylog2.org/'  -m 'Rudy Gevaert <rudy.gevaert+graylog2@ugent.be>' -t deb -s dir /opt/graylog2-web-interface
+
+TODO bundle gem needs to be installed to run the webinterface
+
+
+
+Project Description:
+Graylog2 puppet module
+
+README:
+This is the graylog2 module.
+
+To use this module you need to have the software available as Debian package.  See below for a
+way to create the Debian package with fpm (https://github.com/jordansissel/fpm)
+
+Usage of the module
+-------------------
+
+gray2log-server:
+
+  class {
+    'graylog2::server':
+      mongodb_password => 'xxx';
+  }
+
+or with mongodb and/or elasticsearch on different host
+
+  class {
+    'graylog2::server':
+      mongodb_password   => 'xxx',
+      mongodb_host       => 'a.b.c.d',
+      elasticsearch_host => 'e.f.g.h',
+  }
+
+gray2log-web-interface:
+
+  class {
+    'graylog2::webinterface':
+      mongodb_password => 'xxx';
+    'graylog2::webinterface::apache':
+  }
+
+Including the apache subclass is optional.  You can use your own apache class too.
+
+Dependancies
+------------
+
+Puppet modules:
+
+rgevaert/mongodb        https://github.com/rgevaert/puppet-mongodb
+rgevaert/elasticsearch  https://github.com/rgevaert/puppet-elasticsearch
+
+
+Configuration mongodb user
+-------------
+
+* mongodb:
+  Create the mongodb user 'grayloguser' and use the password.
+  http://www.mongodb.org/display/DOCS/Security+and+Authentication#SecurityandAuthentication-ConfiguringAuthenticationandSecurity
+
+  > use admin
+  > db.addUser("theadmin", "anadminpassword")
+  > db.auth("theadmin", "anadminpassword")
+  > use graylog2
+  > db.addUser('grayloguser','xyz')
+
+
+How to create the Debian packages
+---------------------------------
+
+1) server component
+
+Download the graylog2-server and get it extracted to /opt/graylog2-server.
+
+Create the Debian package.  E.g. with fpm:
+
+  fpm -n graylog2-server -v 0.9.6 -d openjdk-6-jre -d mongodb-server -d elasticsearch \
+   -a all -m 'Rudy Gevaert <rudy.gevaert+graylog2@ugent.be>' \
+   --description 'Graylog2 is an open source syslog implementation that stores your logs in ElasticSearch.' \
+   --url 'http://www.graylog2.org/' -t deb -s dir /opt/graylog2-server
+
+2) web interface component
+
+Download the graylog2-web-interface and get it extracted to /opt/graylog2-web-interface.
+
+Install bundle and make:
+
+  apt-get install make
+  gem install bundle
+
+Install the necessary gems in the vendor/bundle subdir
+
+  /opt/graylog2-web-interface# bundle install --local
+
+Create the Debian package.  E.g. with fpm:
+  fpm -n graylog2-web-interface -v 0.9.6 -d ruby1.8 -d rake -d ruby-dev  -a all \ 
+   --description 'Graylog2 is an open source syslog implementation that stores your logs in ElasticSearch.' \
+   --url 'http://www.graylog2.org/'  -m 'Rudy Gevaert <rudy.gevaert+graylog2@ugent.be>' -t deb -s dir /opt/graylog2-web-interface
+
+TODO bundle gem needs to be installed to run the webinterface

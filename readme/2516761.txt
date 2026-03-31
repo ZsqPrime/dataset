@@ -1,0 +1,13 @@
+wireless sous-vide controller - work in progress
+
+version 0.1
+18-03-2012
+
+Project Description:
+arduino based wireless sous-vide controller
+
+README:
+wireless sous-vide controller - work in progress
+
+version 0.1
+18-03-2012

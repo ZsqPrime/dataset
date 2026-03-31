@@ -1,0 +1,18 @@
+npm install express
+npm install mongoose
+
+node app.js
+
+Initially from http://psitsmike.com/2012/02/node-js-and-mongo-using-mongoose-tutorial/
+
+
+Project Description:
+None
+
+README:
+npm install express
+npm install mongoose
+
+node app.js
+
+Initially from http://psitsmike.com/2012/02/node-js-and-mongo-using-mongoose-tutorial/

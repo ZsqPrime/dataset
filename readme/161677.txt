@@ -1,0 +1,12 @@
+This used to just be a vimrc.
+
+It's potentially now becoming my dotfiles repository.
+
+
+Project Description:
+Just a vimrc.
+
+README:
+This used to just be a vimrc.
+
+It's potentially now becoming my dotfiles repository.

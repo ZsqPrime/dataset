@@ -1,0 +1,42 @@
+AdvancedWebClient
+=================
+
+Simple Http library.
+
+Features:
+
+* File downloading
+  * Synchronous/Async
+  * Space preallocation
+
+* String downloading
+  * Synchronous/Async
+  * Manual encoding conf
+  
+* HTTP Requests
+  * Cookies
+  * GZip
+
+
+Project Description:
+System.Net.WebClient with some frequently - used improvements(cookie support, file pre-alloc)
+
+README:
+AdvancedWebClient
+=================
+
+Simple Http library.
+
+Features:
+
+* File downloading
+  * Synchronous/Async
+  * Space preallocation
+
+* String downloading
+  * Synchronous/Async
+  * Manual encoding conf
+  
+* HTTP Requests
+  * Cookies
+  * GZip

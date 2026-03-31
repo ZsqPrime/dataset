@@ -1,0 +1,10 @@
+This repository contains the complete source code used to develop some problem
+sets from MIT's Introduction to Algorithms undergraduate course (6.006).
+ 
+
+Project Description:
+New-Style 6.006 Problem Sets
+
+README:
+This repository contains the complete source code used to develop some problem
+sets from MIT's Introduction to Algorithms undergraduate course (6.006).

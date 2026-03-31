@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+- Mysql module coming from https://github.com/simonsd/puppet-mysql
+- Apache module coming from https://github.com/theforeman/puppet-apache

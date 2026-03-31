@@ -1,0 +1,22 @@
+NAME: BDSHELL
+
+
+DESCRIPTION
+===========
+
+bdshell is a utility with a COPY grammar that uses Text::CSV under the hood. It
+provides additional functionality available to Text::CSV through -[dash] options.
+
+
+Project Description:
+This is a seed of a perl shell for Postgresql, It adds the ability to Import CSVs preprocessed by Text::CSV
+
+README:
+NAME: BDSHELL
+
+
+DESCRIPTION
+===========
+
+bdshell is a utility with a COPY grammar that uses Text::CSV under the hood. It
+provides additional functionality available to Text::CSV through -[dash] options.

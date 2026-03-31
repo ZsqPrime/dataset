@@ -1,0 +1,6 @@
+
+
+Project Description:
+Some useful scripts for converting media files, using rtorrent and else
+
+README:

@@ -1,0 +1,43 @@
+
+Minuit (pronounce me-nu-e [minyi])
+is a Minimalistic User Interface Toolkit
+combined with a visual programming engine
+dedicated to interactive real time graphics.
+
++ Platform +
+
+Ubuntu/Debian
+
++ Dependencies +
+
+build-essential 
+cmake
+libgl1-mesa-dev
+freeglut3-dev
+libjpeg62-dev
+libpng12-dev
+libxmu-dev
+libxi-dev
+
++ Build +
+
+git clone https://github.com/rvba/minuit.git
+cd minuit
+git submodule update --init --recursive
+cd ..
+mkdir build
+cd build
+cmake ../minuit
+make
+
++ Licence +
+
+GPL v2
+
++ Home +
+
+http://rvba.fr/minuit
+
+
+
+

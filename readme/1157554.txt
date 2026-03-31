@@ -1,0 +1,64 @@
+Project Description:
+None
+
+README:
+####################
+WHICH LICENSE HERE???
+####################
+
+
+This project is intended to bridge the gap between the IR remote and the web connected world.  At its core is a linux webserver using a pair of xbees to send IR commands wirelessly between transcievers and a web server.  
+
+
+**********************
+Webserver Description:
+**********************
+
+************************
+Transciever Description:
+************************
+
+Each transciever will be based on an arduino with an xbee shield and a 60mW xbee.  Additionally they will have an IR LED and an IR phototransistor.
+
+
+******
+Tasks:
+******
+
+-Proof of concept 2-way xbee communication - Done
+-Add IR LED and phototransistor to transciever - Done
+-Build a simple web server to prove web control-to xbee link - Done
+-Design document...
+
+***************
+Modus Operandi:
+***************
+
+Pairing a Transciever (priliminary idea):
+-The transciever will send out a request for an ID.
+-The server will respond by issuing a message with format:
+ "0,a,X"
+ [messageDestination=0,commandType=a,transceiverID=XXXX]
+ where X is an integer.
+-The webserver will then prompt the admin next time they go on to the site to fill in the info for their transciever.
+-Once the information has been submitted the server will send over the transcieverName to the transceiver.
+
+--Thoughts - we have not figured out security - should this be done first or before...
+
+Playing a Command:
+-The server gets a request from the user to play a command and sends a message with format:
+ "X,p,Y"
+ [messageDestination=X,commandType=p,command=Y]
+
+Recording a Command:
+-The server gets a request from the user to record a command and sends a message with format: 
+ "X,r,Y"
+ [messageDestination=X,commandType=r,command=Y]
+-The transceiver then turns on its recording light and waits for an IR signal.  
+-After recording the signal the tranceiver sends a signal back to the server where it is saved.
+
+
+***************
+Long Term Ideas:
+***************
+Setup modular plugin system such that people can add new systems (x10, zigbee type systems).

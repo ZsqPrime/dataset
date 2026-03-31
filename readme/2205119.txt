@@ -1,0 +1,4 @@
+Project Description:
+Implementation of RFC 5053 - Raptor Forward Error Correction Scheme for Object Delivery
+
+README:

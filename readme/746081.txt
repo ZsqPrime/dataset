@@ -1,0 +1,52 @@
+Design Patterns in Ruby
+(from Russ Olsen's book)
+
+Chapter 3:  Template Method pattern
+Chapter 4:  Strategy pattern
+Chapter 5:  Observer pattern
+Chapter 6:  Composite pattern
+Chapter 7:  Iterator pattern
+Chapter 8:  Command pattern
+Chapter 9:  Adapter pattern
+Chapter 10: Proxy pattern
+Chapter 11: Decorator pattern
+Chapter 12: Singleton pattern
+Chapter 13: Factory and Abstract factory pattern
+Chapter 14: Builder pattern
+Chapter 15: Interpreter pattern
+Chapter 16: Domain-Specific Languages
+Chapter 17: Meta-programming
+Chapter 18: Convention over configuration
+
+
+==
+Web page: http://designpatternsinruby.com/
+
+
+Project Description:
+Desing Patterns in Ruby (Russ Olsen's book)
+
+README:
+Design Patterns in Ruby
+(from Russ Olsen's book)
+
+Chapter 3:  Template Method pattern
+Chapter 4:  Strategy pattern
+Chapter 5:  Observer pattern
+Chapter 6:  Composite pattern
+Chapter 7:  Iterator pattern
+Chapter 8:  Command pattern
+Chapter 9:  Adapter pattern
+Chapter 10: Proxy pattern
+Chapter 11: Decorator pattern
+Chapter 12: Singleton pattern
+Chapter 13: Factory and Abstract factory pattern
+Chapter 14: Builder pattern
+Chapter 15: Interpreter pattern
+Chapter 16: Domain-Specific Languages
+Chapter 17: Meta-programming
+Chapter 18: Convention over configuration
+
+
+==
+Web page: http://designpatternsinruby.com/

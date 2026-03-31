@@ -1,0 +1,5 @@
+Project Description:
+Node.js middle app for time loging
+
+README:
+This application is part of Master Thesis

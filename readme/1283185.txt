@@ -1,0 +1,90 @@
+Project Description:
+Import issues from Google Code into Github's issue tracker
+
+README:
+=head1 NAME
+
+gcode-issue-import - Import issues from Google Code into Github's issue tracker
+
+=head1 SYNOPSIS
+
+    gcode-issue-import \
+        --from your_googlecode_projectname \
+        --to   owner/githubreponame
+
+=head1 DESCRIPTION
+
+This script aims to pull as much data as possible from Google Code's issue
+tracker and insert it into Github's issue tracker.
+
+This should be considered ALPHA-QUALITY CODE .  Do not (yet) run it targeting a
+Github issue tracker that contains data you care about, or you may spend days
+manually deleting ugly tickets.
+
+=head1 OPTIONS
+
+=over 4
+
+=item --from <google code project name>
+
+The project name of your Google Code project.  Mandatory.
+
+=item --to <github user/repository>
+
+The target Github repository, in user/repositoryname format.  Mandatory.
+
+=item --github-login <username>
+
+Your Github login name.  Optional.  If not provided, value will be pulled from
+your git configuration with `git config`
+
+=item --github-token <api token>
+
+Your Github API token.  Optional.  If not provided, value will be pulled from
+your git configuration with `git config`
+
+=item --start-index <integer>
+
+Google Code issue ID to start at.  Optional.  If not provided, defaults to 1.
+
+=item --help
+
+Short-form help
+
+=item --man
+
+Full manpage
+
+=back
+
+=head1 SEE ALSO
+
+=over 4
+
+=item * 
+
+google-code-to-github-issues.pl by Tatsuhiko Miyagawa
+(L<http://remediecode.org/2009/04/moved-issues-to-github.html>), which was the basis for this script
+
+=item *
+
+L<App::SD|App::SD>, which purports to do bidirectional replication of issues
+between various bugtrackers, including Google Code and Github.  It didn't work
+for me, however.
+
+=back
+
+=head1 AUTHORS
+
+Dave O'Neill <dmo@dmo.ca>
+
+Based on google-code-to-github-issues.pl by Tatsuhiko Miyagawa
+(L<http://remediecode.org/2009/04/moved-issues-to-github.html>)
+
+=head1 LICENSE
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
+
+=cut

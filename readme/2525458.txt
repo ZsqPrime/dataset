@@ -1,0 +1,35 @@
+Project Description:
+
+
+README:
+== Gane San
+
+Gane San is simple twitter bot service on Heroku with Heroku Scheduler addons.
+
+== Getting Started
+
+1. Some command exec.
+       $ heroku create YOUR_HEROKU_APP_NAME --s cedar
+       $ git push heroku master
+       $ heroku run rake db:migrate
+
+2. Access your Heroku URL.
+       http://YOUR_HEROKU_APP_NAME.heroku.com/admin
+
+3. Email and Password input.
+
+4. Your auto tweets and tweet schedule added.
+
+5. Setting some Heroku config add.
+
+       * ENABLE_USER_ID - This is your user record id.
+       * INTERVAL_TIME - This is scheduled tweet interval time.
+       * CONSUMER_KEY - Your twitter application's consumer_key.
+       * CONSUMER_SECRET - Your twitter application's consumer_secret.
+       * OAUTH_TOKEN - Your twitter bot account's oauth token.
+       * OAUTH_TOKEN_SECRET - Your twitter bot account's oauth token secret.
+
+6. Heroku Scheduler addons added and setting.
+       bundle exec rake tweet
+
+7. Heroku Scheduler Run button pushed.

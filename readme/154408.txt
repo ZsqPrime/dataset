@@ -1,0 +1,7 @@
+documentation can be found on http://terradue.github.com/dsi-tools/
+
+Project Description:
+Command Line Tools to interact with Zimory/T-Systems cloud REST server
+
+README:
+documentation can be found on http://terradue.github.com/dsi-tools/

@@ -1,0 +1,128 @@
+postfixadmin-installer
+======================
+
+Script to automate the installation and configuration of a postfixadmin
+system on a debian-alike OS (it uses apt-get).
+
+You will need a working Postfix and MySQL server (and ideally knowledge of
+the root password for the latter), and `LWP::Simple` (which is `libwww-perl` in
+dpkg). 
+
+Installation
+------------
+
+Just download and run as root:
+
+    apt-get install postfix mysql-server libwww-perl
+    GET https://raw.github.com/BigRedS/postfixadmin-installer/master/postfixadmin-installer > postfixadmin-installer
+    perl ./postfixadmin-installer
+
+You will be prompted for MySQL credentials if the debian-sys-maint ones can't be 
+found or are found to not work. At the end of the script you will be given the
+generated setup password to use to set up the first admin user.
+
+There's a few options you can pass the script; use `--help` to see them. The only one 
+that's particularly likely to be useful is `--fqdn`; if this isn't given then the 
+output of `hostname -f` is used. This value is used in a few places in the PostfixAdmin 
+UI; nothing other than links will break if you get it wrong.
+
+
+Config
+------
+
+The script is split in two. The upper, larger, part is where all the config 
+is set, and it's mostly fairly well commented. A quick run down of the defaults:
+
+* Mailboxes go in `/var/lib/vmail/<domain>/<local-part>`
+* MySQL stuff goes in a db called `vmail` accessible by a user `vmail` from `localhost`.
+* Filesystem stuff is all done as `vmail`:`vmail` by both Dovecot and Postfix.
+* Postfixadmin 2.3.6 is downloaded from Sourceforge. It is extracted into 
+  `/var/www/postfixadmin` and Apache is not reconfigured at all; you might need to 
+	configure an alias to make this work.
+* imap, imaps, pop3 and pop3s are all enabled.
+* Plaintext imap(s) & pop3(s) auth is *enabled* (because it's really handy for testing).
+* Plaintext auth for imap and pop is default when enabled. 
+
+To Do
+-----
+
+Patches welcome :) Also, file issues above.
+
+Compatibility
+-------------
+This is the Debian Stretch version of the script.
+
+There exists previous versions of the script for previous Debian versions; see the Releases
+tab on GitHub:
+
+https://github.com/BigRedS/postfixadmin-installer/releases
+
+I'm interested in compatibility with any other Debian-derived distros, too. If you let me know
+which worked where, I'll update this readme with that information.
+
+
+Project Description:
+Script to install a Postfix/Dovecot/Mysql system and the postfixadmin web UI
+
+README:
+postfixadmin-installer
+======================
+
+Script to automate the installation and configuration of a postfixadmin
+system on a debian-alike OS (it uses apt-get).
+
+You will need a working Postfix and MySQL server (and ideally knowledge of
+the root password for the latter), and `LWP::Simple` (which is `libwww-perl` in
+dpkg). 
+
+Installation
+------------
+
+Just download and run as root:
+
+    apt-get install postfix mysql-server libwww-perl
+    GET https://raw.github.com/BigRedS/postfixadmin-installer/master/postfixadmin-installer > postfixadmin-installer
+    perl ./postfixadmin-installer
+
+You will be prompted for MySQL credentials if the debian-sys-maint ones can't be 
+found or are found to not work. At the end of the script you will be given the
+generated setup password to use to set up the first admin user.
+
+There's a few options you can pass the script; use `--help` to see them. The only one 
+that's particularly likely to be useful is `--fqdn`; if this isn't given then the 
+output of `hostname -f` is used. This value is used in a few places in the PostfixAdmin 
+UI; nothing other than links will break if you get it wrong.
+
+
+Config
+------
+
+The script is split in two. The upper, larger, part is where all the config 
+is set, and it's mostly fairly well commented. A quick run down of the defaults:
+
+* Mailboxes go in `/var/lib/vmail/<domain>/<local-part>`
+* MySQL stuff goes in a db called `vmail` accessible by a user `vmail` from `localhost`.
+* Filesystem stuff is all done as `vmail`:`vmail` by both Dovecot and Postfix.
+* Postfixadmin 2.3.6 is downloaded from Sourceforge. It is extracted into 
+  `/var/www/postfixadmin` and Apache is not reconfigured at all; you might need to 
+	configure an alias to make this work.
+* imap, imaps, pop3 and pop3s are all enabled.
+* Plaintext imap(s) & pop3(s) auth is *enabled* (because it's really handy for testing).
+* Plaintext auth for imap and pop is default when enabled. 
+
+To Do
+-----
+
+Patches welcome :) Also, file issues above.
+
+Compatibility
+-------------
+This is the Debian Stretch version of the script.
+
+There exists previous versions of the script for previous Debian versions; see the Releases
+tab on GitHub:
+
+https://github.com/BigRedS/postfixadmin-installer/releases
+
+I'm interested in compatibility with any other Debian-derived distros, too. If you let me know
+which worked where, I'll update this readme with that information.

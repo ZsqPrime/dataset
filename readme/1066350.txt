@@ -1,0 +1,48 @@
+GWT BVH Motion Format Library
+lib-bvh for java/gwt
+
+now has only libbvh 
+
+Player move to GWT BVH Motion Creator
+https://github.com/akjava/BVH-Motion-Creator
+
+this is just library
+no entry point
+
+Release
+r6 - akjavalibbvh_140506.jar
+r5 - akjavalibbvh_131220.jar
+
+
+
+Project Description:
+ GWT/Java lib for BVH motion capture files
+
+README:
+GWT BVH Motion Format Library
+
+lib-bvh for java/gwt
+
+
+
+now has only libbvh 
+
+
+
+Player move to GWT BVH Motion Creator
+
+https://github.com/akjava/BVH-Motion-Creator
+
+
+
+this is just library
+
+no entry point
+
+
+
+Release
+
+r6 - akjavalibbvh_140506.jar
+
+r5 - akjavalibbvh_131220.jar

@@ -1,0 +1,7 @@
+Project Description:
+a socket.io html5 white board for real time collaboration 
+
+README:
+the moon hovered up
+the glow of the sun came back
+as the bus came home

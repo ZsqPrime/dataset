@@ -1,0 +1,22 @@
+Project Description:
+Adaptive Low-Level Packet Sampling for High-Speed Networks
+
+README:
+cctrack
+
+Adaptive Low-Level Packet Sampling for High-Speed Networks
+
+Documentation:
+Lothar Braun, Cornelius Diekmann, Nils Kammenhuber, and Georg Carle. Adaptive Load-Aware Sampling for Network Monitoring on Multicore Commodity Hardware. In IFIP Networking 2013, New York, NY, May 2013.
+pdf: http://www.net.in.tum.de/fileadmin/bibtex/publications/papers/braun_2013_adaptive_load_aware_sampling.pdf
+
+
+This repo contains:
+ * a patched version of PF_RING from http://www.ntop.org/
+ * the patches to the original PF_RING
+   * code/PF_RING-4.7.1/pf_ring_cctrack_libpcap.patch
+   * code/PF_RING-4.7.1/pf_ring.c.patch
+   * code/PF_RING-4.7.1/pf_ring.h.patch
+ * cctrack kernel mode PF_RING plugin in code/PF_RING-4.7.1/kernel/plugins/
+   * must be loaded explicitely, depends on pf_ring.ko
+ * cctrack userland test applications in code/PF_RING-4.7.1/userland/cctrack/

@@ -1,0 +1,5 @@
+Project Description:
+Programs related to data structures and algorithms
+
+README:
+Contains working source code of algorithms I tried for fun or got my hands on.

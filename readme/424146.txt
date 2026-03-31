@@ -1,0 +1,7 @@
+Project Description:
+Coffeescript and stylesheets preprocessor/compiler for Node.js/Express.
+
+README:
+This module is no longer supported.
+
+You can use [mincer](https://github.com/nodeca/mincer) instead.

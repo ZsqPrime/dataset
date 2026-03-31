@@ -1,0 +1,8 @@
+Project Description:
+PHP library for Flattr REST api
+
+README:
+DEPRECATED
+=========================
+
+Please use https://github.com/flattr/php-flattr-client instead.

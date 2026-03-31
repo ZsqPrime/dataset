@@ -1,0 +1,75 @@
+Last Updated: April 19, 2013
+
+RPGCraft Readme
+
+This is a full featured Role Playing plugin developed by myself for my
+server, Tigerstudios.
+
+Features implemented so far.
+1. Coins drop off Mobs.  Still needs to be rewriten.  But works fine for now 
+2. Able to select one of 4 Races (Halfling, Human, Dwarf, Elf)
+3. Each race has Pros and Cons
+4. Mining, and Farming are "fully" implemented
+5. Enchanting is next in line (after some code cleanup and database re organization.
+
+Please see our Wiki for more info
+http://tigerstudios.net/minecraft/wiki
+
+  
+This plugin will require Spoutcraft to work properly.  There is very little
+that will work without it.  
+
+
+As of now the needed config files ARE NOT included in this repository.  I will 
+get these added shortly as I continue to work on organizing the code and database.
+
+If anyone is interested in this plugin and would like to help with testing
+please contact me at michael@tigerstudios.net
+
+
+Michael
+Tigerstudios Entertainment
+http://tigerstudios.net/minecraft
+
+This code is protected by CC Copyright.  See the following for more information.
+http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
+
+Project Description:
+Custom RPG features for Minecraft, including custom coin, mail, etc
+
+README:
+Last Updated: April 19, 2013
+
+RPGCraft Readme
+
+This is a full featured Role Playing plugin developed by myself for my
+server, Tigerstudios.
+
+Features implemented so far.
+1. Coins drop off Mobs.  Still needs to be rewriten.  But works fine for now 
+2. Able to select one of 4 Races (Halfling, Human, Dwarf, Elf)
+3. Each race has Pros and Cons
+4. Mining, and Farming are "fully" implemented
+5. Enchanting is next in line (after some code cleanup and database re organization.
+
+Please see our Wiki for more info
+http://tigerstudios.net/minecraft/wiki
+
+  
+This plugin will require Spoutcraft to work properly.  There is very little
+that will work without it.  
+
+
+As of now the needed config files ARE NOT included in this repository.  I will 
+get these added shortly as I continue to work on organizing the code and database.
+
+If anyone is interested in this plugin and would like to help with testing
+please contact me at michael@tigerstudios.net
+
+
+Michael
+Tigerstudios Entertainment
+http://tigerstudios.net/minecraft
+
+This code is protected by CC Copyright.  See the following for more information.
+http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US

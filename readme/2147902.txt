@@ -1,0 +1,11 @@
+Signpost website infrastructure
+
+*(Likely to be in flux for a while)*
+
+Project Description:
+Website infrastructure for Signpost
+
+README:
+Signpost website infrastructure
+
+*(Likely to be in flux for a while)*

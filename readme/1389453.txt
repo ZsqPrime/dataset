@@ -1,0 +1,13 @@
+python daemon with python_daemon model
+
+http://chunsheng.sinaapp.com/2012/02/24/quick-unix-daemon-use-python_daemon/
+
+
+
+Project Description:
+python daemon with python_daemon model
+
+README:
+python daemon with python_daemon model
+
+http://chunsheng.sinaapp.com/2012/02/24/quick-unix-daemon-use-python_daemon/

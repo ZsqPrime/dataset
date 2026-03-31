@@ -1,0 +1,11 @@
+Project Description:
+SHERborn PArser
+
+README:
+= sherpa - SHERborn PArser
+
+Author::  Mark Wilden (mark@mwilden.com)
+
+Command-line program to parse the citations in Sherborn's Index Animalium
+
+https://github.com/calacademy/sherpa

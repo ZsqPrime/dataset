@@ -1,0 +1,11 @@
+Project Description:
+Kinect Math game
+
+README:
+KineticMath
+
+===========
+
+
+
+A Kinect app for math education for elementary school students

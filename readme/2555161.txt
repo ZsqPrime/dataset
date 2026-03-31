@@ -1,0 +1,5 @@
+Project Description:
+Shell utilities to include figures in LaTeX papers
+
+README:
+Shell utilities to include figures in LaTeX papers

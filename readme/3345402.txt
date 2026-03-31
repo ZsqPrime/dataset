@@ -1,0 +1,43 @@
+Project Description:
+Physics symbols LaTeX package
+
+README:
+ ========================  physymb  ============================
+ Created by David Zaslavsky <diazona@ellipsix.net>
+
+THIS PACKAGE IS OBSOLETE
+
+Instead of physymb you should use some or all of these packages:
+
+* braket
+* commath
+* hepnames
+* mandi
+* physics
+* siunitx
+
+For more on what each of these packages provides, see the package's
+documentation and/or the documentation of physymb.
+
+This package contains four files:
+
+* README: This file :)
+* physymb.pdf: The PDF documentation, which details all the macros
+   defined by the package.
+* physymb.dtx: The documented source. Running pdflatex on this
+   reproduces the PDF documentation.
+* physymb.ins: The installer file. Running latex or pdflatex on
+   this will generate the actual package file, physymb.sty.
+
+To install the package, it should be enough to just copy physymb.sty
+to the tex/latex/physymb/ directory (which you may need to create)
+within your local TDS tree, which is typically $HOME/texmf/ on
+a Linux system. The location varies on Windows. It's also recommended
+to copy physymb.pdf into doc/latex/physymb/ under the TDS tree.
+
+If you don't know what a TDS tree is, or want to have this explained
+in more detail, see
+http://www.tex.ac.uk/cgi-bin/texfaq2html?label=instpackages
+
+physymb is licensed under the LaTeX Project Public License,
+version 1.3 or later.

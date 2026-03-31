@@ -1,0 +1,5 @@
+Project Description:
+real-time gesture recognition and area preditction application, wrote in C++ with QT.
+
+README:
+See the project page here: http://haojian.github.io/gesture_recognition/

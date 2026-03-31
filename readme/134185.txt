@@ -1,0 +1,8 @@
+An R package for analysis of large geostatistical spatial data sets.
+
+
+Project Description:
+None
+
+README:
+An R package for analysis of large geostatistical spatial data sets.

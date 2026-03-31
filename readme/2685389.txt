@@ -1,0 +1,10 @@
+Project Description:
+A virtual recipe book and meal calendar built using rails and jquery moble
+
+README:
+Green Bean
+======================
+
+In a nutshell...
+----------------
+Green Bean is a virtual recipe book and meal calendar with few extra tweaks to help easily manage a family menu.

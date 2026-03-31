@@ -1,0 +1,8 @@
+D bindings for libclang. The bindings were made from version 3.7 of Clang.
+
+
+Project Description:
+A C language family frontend for LLVM
+
+README:
+D bindings for libclang. The bindings were made from version 3.7 of Clang.

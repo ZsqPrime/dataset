@@ -1,0 +1,14 @@
+This is a repo that contains various scripts that don't have a home.
+
+Don't bother using anything out of here unless you want to learn how to hack
+code like an idiot.
+
+
+Project Description:
+Stuff that doesn't have a place
+
+README:
+This is a repo that contains various scripts that don't have a home.
+
+Don't bother using anything out of here unless you want to learn how to hack
+code like an idiot.

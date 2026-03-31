@@ -1,0 +1,8 @@
+http://ktoso.github.com/global-krakow-android-dev-camp
+
+
+Project Description:
+Homepage for Global (Kraków) Android Dev Camp
+
+README:
+http://ktoso.github.com/global-krakow-android-dev-camp

@@ -1,0 +1,32 @@
+Project Description:
+Mini-service that tracks the tweets of South Carolinians leading up to the SC GOP Primary.
+
+README:
+== How to get set up:
+    (Required: RubyGems, Git, Ruby >= v1.9.2)
+    $ git clone git@github.com:rpearce/SCGOPrimaryTweets.git
+    $ cd SCGOPrimaryTweets
+    $ gem install bundler
+    $ bundle install
+
+== Run all major cities in Charleston
+    $ ruby run.rb
+
+== To run individual cities, edit 'cities' array in run.rb
+
+== Lookup tweets in specific city with time range included (in UTC)
+    $ irb
+    $ require './candidate_tweets'
+    $ ct = CandidateTweets.new
+    $ ct.tweets_by_city_and_time_range('Charleston', '2012-01-11 11:00:00', '2012-01-12 04:59:59')
+
+== Streaming (Currently broken in regards to location filter.)
+    http://rubydoc.info/github/intridea/tweetstream/master/TweetStream/Client#filter-instance_method
+    https://dev.twitter.com/docs/streaming-api/methods#locations
+
+    $ irb
+    $ require './candidate_tweets'
+    $ ct = CandidateTweets.new
+    $ ct.get_streaming_tweets
+
+yay.

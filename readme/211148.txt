@@ -1,0 +1,8 @@
+This repository currently contains the active measurement installation scripts for variuos GEMINI supported distributions.
+
+
+Project Description:
+None
+
+README:
+This repository currently contains the active measurement installation scripts for variuos GEMINI supported distributions.

@@ -1,0 +1,15 @@
+Project Description:
+Kuromoji is a Japanese morphological analyzer designed for search.  This software integrates Kuromoji with Apache Solr.
+
+README:
+README.txt
+==========
+
+This is the source distribution of kuromoji-solr.
+
+A distribution can be built using
+
+  % mvn package
+
+Please see dist/README.txt for instructions for integrating
+Kuromoji with Apache Solr.

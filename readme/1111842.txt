@@ -1,0 +1,9 @@
+Project Description:
+hidden markov models in haskell
+
+README:
+This is a Hidden Markov Model (HMM) library for Haskell.  It is in the hackage repository already, and that's probably the version that you want to use.  Try installing it with the command:
+
+> cabal install hmm
+
+The easiest way to learn to use the library is by following the tutorial at: http://izbicki.me/blog/using-hmms-in-haskell-for-bioinformatics

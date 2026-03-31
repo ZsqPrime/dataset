@@ -1,0 +1,14 @@
+udb (Depricated use "pretzel.store" instead)
+============================================
+
+  Micro key value database in pure python
+
+
+Project Description:
+Micro key value database in pure python
+
+README:
+udb (Depricated use "pretzel.store" instead)
+============================================
+
+  Micro key value database in pure python

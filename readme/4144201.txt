@@ -1,0 +1,7 @@
+Project Description:
+ruby classes for parsing WOW-combatlogfiles
+
+README:
+== WoWCombatLogParser
+
+You should document your project here.

@@ -1,0 +1,11 @@
+# HCI
+
+A RESTful backend for HCI's iOS application.
+
+Project Description:
+RESTful iOS backend for HCI
+
+README:
+# HCI
+
+A RESTful backend for HCI's iOS application.

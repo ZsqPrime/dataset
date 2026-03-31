@@ -1,0 +1,8 @@
+Project Description:
+sibilant emacs mode
+
+README:
+
+# License
+
+Sibilant is released under the MIT license

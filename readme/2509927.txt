@@ -1,0 +1,11 @@
+This is the readme file for the sicp working solutions.
+
+This is another line.
+
+Project Description:
+wizard book solution work
+
+README:
+This is the readme file for the sicp working solutions.
+
+This is another line.

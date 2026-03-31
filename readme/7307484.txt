@@ -1,0 +1,14 @@
+Project Description:
+Sync from iTunes to USB mass storage device
+
+README:
+Sync from iTunes OSX to Android (USB mass storage device) and Linux (ssh).
+
+These are command line scripts.
+
+These files are tailored for me.
+Before using them, please update the names of the devices to sync to.
+Please update the list of music to not sync across.
+
+Warning: this will delete all the music on your device that isn't in iTunes.
+Warning: this will delete all dot files from your iTunes music folder.

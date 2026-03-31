@@ -1,0 +1,19 @@
+# Play! sample - Hello
+
+
+# Pushing to HPE Helion Stackato
+
+    stackato push -n
+
+
+
+Project Description:
+None
+
+README:
+# Play! sample - Hello
+
+
+# Pushing to HPE Helion Stackato
+
+    stackato push -n

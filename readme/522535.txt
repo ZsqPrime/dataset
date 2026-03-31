@@ -1,0 +1,8 @@
+[![Build Status](https://secure.travis-ci.org/flatland/useful.png)](http://travis-ci.org/flatland/useful)
+
+
+Project Description:
+Some Clojure functions we use all the time, and so can you.
+
+README:
+[![Build Status](https://secure.travis-ci.org/flatland/useful.png)](http://travis-ci.org/flatland/useful)

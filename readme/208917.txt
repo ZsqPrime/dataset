@@ -1,0 +1,8 @@
+Personal irc bot for the #srs channel.
+
+
+Project Description:
+IRC bot for #srs
+
+README:
+Personal irc bot for the #srs channel.

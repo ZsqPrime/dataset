@@ -1,0 +1,12 @@
+================
+Docs Coming Soon
+================
+
+
+Project Description:
+Open Sourced version of djangopeople.me
+
+README:
+================
+Docs Coming Soon
+================

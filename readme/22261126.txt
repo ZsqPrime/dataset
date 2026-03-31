@@ -1,0 +1,9 @@
+Project Description:
+Konverterar svenska bankutdrag till QIF
+
+README:
+git push origin
+- Skickar ändringarna till hubben.
+
+git pull origin
+- Hämtar från hub

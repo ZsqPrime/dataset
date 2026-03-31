@@ -1,0 +1,8 @@
+Deprecated. 
+
+
+Project Description:
+Ultra-simple modular layout and template system, with automatic data binding and smart routing, for jQuery
+
+README:
+Deprecated.

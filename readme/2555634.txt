@@ -1,0 +1,7 @@
+Project Description:
+OSU CS 419
+
+README:
+The Processing project is in "socialgraph""
+
+libraries needed for the project are listed within "libraries". Just copy everything within the directory into your Processing libraries directory.

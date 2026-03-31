@@ -1,0 +1,4 @@
+Project Description:
+Auto wallpaper changer for Android
+
+README:

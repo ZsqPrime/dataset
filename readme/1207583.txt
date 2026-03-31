@@ -1,0 +1,203 @@
+h1. virgola
+
+CSV to object mapping library.
+
+h2. Author
+
+"Vicente Reig Rincón de Arellano":http://twitter.com/vicentereig
+
+
+h2. Installation
+
+<pre lang="bash">
+  $ gem install virgola
+</pre>
+
+h2. Usage
+
+Given the following CSV file
+
+<pre lang="csv">
+  id,name,email
+  1,"Chris Floess",chris@propertybase.com
+  2,"Konstantin Krauss",konstantin@propertybase.com
+  3,"Vicente Reig",vicente@propertybase.com
+</pre>
+
+You map it to an array of Person objects by specifying to match columns with the `attribute` method.
+
+<pre lang="ruby">
+  class Person
+    include Virgola
+
+    attribute :id
+    attribute :name
+    attribute :email
+
+    after_map :do_something_after_mapping_a_row
+
+    protected
+
+    def do_something_after_mapping_a_row
+      puts 'YES, victory!'
+    end
+  end
+</pre>
+
+You can specify the type for each attribute. If you don't, it will default to String.
+
+<pre lang="ruby">
+  class Person
+    include Virgola
+
+    attribute :id,    type: Integer
+    attribute :name,  type: String
+    attribute :email, type: String
+
+  end
+</pre>
+
+You actually extract the data and perform the mappings using the Extraction API.
+
+<pre lang="ruby">
+  Person.parse(csv).all   # Array of Person instances mapping the guys above
+  Person.parse(csv).count # 3
+  Person.parse(csv).each { |pip|
+    # do stuff
+  }
+  Person.parse(csv).in_groups_of(100) { |pips|
+    # do stuff
+  }
+</pre>
+
+Attributes are overridable.
+
+<pre lang="ruby">
+  class Person
+    def email
+      "<#{super}>"
+    end
+  end
+
+  Person.parse(csv).each do |pip|
+    puts pip.email # <chris@propertybase.com>, ...
+  end
+</pre>
+
+You can access the mappings also as instance attributes.
+
+<pre lang="ruby">
+  class Person
+    def email
+      "<#{@email}>"
+    end
+  end
+
+  Person.parse(csv).each do |pip|
+    puts pip.email # <chris@propertybase.com>, ...
+  end
+</pre>
+
+Project Description:
+a csv to object mapper
+
+README:
+h1. virgola
+
+CSV to object mapping library.
+
+h2. Author
+
+"Vicente Reig Rincón de Arellano":http://twitter.com/vicentereig
+
+
+h2. Installation
+
+<pre lang="bash">
+  $ gem install virgola
+</pre>
+
+h2. Usage
+
+Given the following CSV file
+
+<pre lang="csv">
+  id,name,email
+  1,"Chris Floess",chris@propertybase.com
+  2,"Konstantin Krauss",konstantin@propertybase.com
+  3,"Vicente Reig",vicente@propertybase.com
+</pre>
+
+You map it to an array of Person objects by specifying to match columns with the `attribute` method.
+
+<pre lang="ruby">
+  class Person
+    include Virgola
+
+    attribute :id
+    attribute :name
+    attribute :email
+
+    after_map :do_something_after_mapping_a_row
+
+    protected
+
+    def do_something_after_mapping_a_row
+      puts 'YES, victory!'
+    end
+  end
+</pre>
+
+You can specify the type for each attribute. If you don't, it will default to String.
+
+<pre lang="ruby">
+  class Person
+    include Virgola
+
+    attribute :id,    type: Integer
+    attribute :name,  type: String
+    attribute :email, type: String
+
+  end
+</pre>
+
+You actually extract the data and perform the mappings using the Extraction API.
+
+<pre lang="ruby">
+  Person.parse(csv).all   # Array of Person instances mapping the guys above
+  Person.parse(csv).count # 3
+  Person.parse(csv).each { |pip|
+    # do stuff
+  }
+  Person.parse(csv).in_groups_of(100) { |pips|
+    # do stuff
+  }
+</pre>
+
+Attributes are overridable.
+
+<pre lang="ruby">
+  class Person
+    def email
+      "<#{super}>"
+    end
+  end
+
+  Person.parse(csv).each do |pip|
+    puts pip.email # <chris@propertybase.com>, ...
+  end
+</pre>
+
+You can access the mappings also as instance attributes.
+
+<pre lang="ruby">
+  class Person
+    def email
+      "<#{@email}>"
+    end
+  end
+
+  Person.parse(csv).each do |pip|
+    puts pip.email # <chris@propertybase.com>, ...
+  end
+</pre>

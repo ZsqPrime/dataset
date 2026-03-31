@@ -1,0 +1,76 @@
+Triangle class for Cinder.  This is to measure and manipulate 
+triangles.  Think of it as an analog to the Rectangle class.
+
+See it in use here:
+http://bantherewind.com/kinect-opencv-delaunay-triangulation-box2d
+
+This is a work in progress.  On the to do list...
+
+- Add math to advanced sample
+- 3D terrain sample (2D tri + Z for height)
+   - Map triangles back to source index (needed to obtain Z)
+- Voronoi sample
+- Sierpinski sample
+
+-----------------------------------------
+
+Version 0.0.3
+
+-----------------------------------------
+
+http://www.bantherewind.com
+http://www.libcinder.org
+
+bantherewind@gmail.com
+
+Project Description:
+Triangle class for Cinder.  Analogous to RectT<T>.
+
+README:
+Triangle class for Cinder.  This is to measure and manipulate 
+
+triangles.  Think of it as an analog to the Rectangle class.
+
+
+
+See it in use here:
+
+http://bantherewind.com/kinect-opencv-delaunay-triangulation-box2d
+
+
+
+This is a work in progress.  On the to do list...
+
+
+
+- Add math to advanced sample
+
+- 3D terrain sample (2D tri + Z for height)
+
+   - Map triangles back to source index (needed to obtain Z)
+
+- Voronoi sample
+
+- Sierpinski sample
+
+
+
+-----------------------------------------
+
+
+
+Version 0.0.3
+
+
+
+-----------------------------------------
+
+
+
+http://www.bantherewind.com
+
+http://www.libcinder.org
+
+
+
+bantherewind@gmail.com

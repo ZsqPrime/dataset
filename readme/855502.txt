@@ -1,0 +1,8 @@
+Thanks for reading me. It was a pleasure.
+
+
+Project Description:
+Easily merge JavaScript and CSS into a single file dynamically.  
+
+README:
+Thanks for reading me. It was a pleasure.

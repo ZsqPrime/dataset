@@ -1,0 +1,8 @@
+This is the source for the Freemap site.
+
+
+Project Description:
+OpenStreetMap maps of the UK countryside - code for website and associated projects
+
+README:
+This is the source for the Freemap site.

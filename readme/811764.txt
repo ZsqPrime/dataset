@@ -1,0 +1,5 @@
+Project Description:
+A lightweight wrapper for the Bing Search API - No longer supported
+
+README:
+No longer supported

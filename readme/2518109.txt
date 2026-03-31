@@ -1,0 +1,8 @@
+centralna aplikacja dla projektu sieci sklepów napisana w ruby on rails
+
+
+Project Description:
+
+
+README:
+centralna aplikacja dla projektu sieci sklepów napisana w ruby on rails

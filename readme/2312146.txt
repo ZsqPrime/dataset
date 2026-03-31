@@ -1,0 +1,11 @@
+personally writen scripts that could be of use for someone
+
+released under GNU GPL unless stated otherwise
+
+Project Description:
+repository of released scripts/code
+
+README:
+personally writen scripts that could be of use for someone
+
+released under GNU GPL unless stated otherwise

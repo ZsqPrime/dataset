@@ -1,0 +1,8 @@
+Project Description:
+User Completion Function for Abbreviations in Vim
+
+README:
+Aboriginal
+----------
+
+__User Completion Function for Abbreviations in Vim__

@@ -1,0 +1,27 @@
+Project Description:
+A backup script that stores databases and files in the same folder
+
+README:
+Easy hosting backup
+
+Features :
+- Easy instalation/configuration
+- Backup folders and a DBs in a single tar.gz file
+- Keep daily, weekly, monthly backups
+- Configure how many of backups to keep
+
+Install :
+- Copy files in a private folder on you webserver
+- Edit backup.cfp to suit your needs
+- Setup a daily cron job to launch backup.sh
+- Relax...
+
+Tested on :
+- Rackspace CloudSites
+- Ubuntu 11/12/13
+- OVH shared hosting
+
+Todo :
+- Backup multiple folders/dbs [DONE]
+- Upload backups to a remote server using FTP/SSH
+- Log backup activity and send report erros to root mail

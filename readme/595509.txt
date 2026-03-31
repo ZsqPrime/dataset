@@ -1,0 +1,9 @@
+uses [flot](http://code.google.com/p/flot)
+
+
+
+Project Description:
+Plugin providing statistics about a Stud.IP instance's users and their activity
+
+README:
+uses [flot](http://code.google.com/p/flot)

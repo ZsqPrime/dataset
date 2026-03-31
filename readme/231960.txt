@@ -1,0 +1,20 @@
+Today I learned
+===============
+
+Features to work on
+-------------------
+
+  * 
+
+
+Project Description:
+A sinatra app we're writing in the BBC DIT dojo sessions
+
+README:
+Today I learned
+===============
+
+Features to work on
+-------------------
+
+  *

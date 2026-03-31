@@ -1,0 +1,8 @@
+Project Description:
+A set of scripts, examples and tutorials on various stuff to learn and manage a PostgreSQL cluster.
+
+README:
+This repository contains my material about PostgreSQL, mainly scripts, examples and slides to teach and explain PostgreSQL features at events, meetings and courses.
+
+All the stuff in this repository is released under a BSD like license, please read
+the LICENSE text file for further information.

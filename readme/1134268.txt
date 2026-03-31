@@ -1,0 +1,112 @@
+Introduction
+
+Virtual Gemstone creates a fully functioning VirtualBox virtual machine that runs smalltalk in the Gemstone Object Oriented Database proxied behind Nginx, a high performance easy configuration webserver. 
+The nginx installation is configured to use ssl by default, because we care about a secure browsing experience for our users, and we want to use the same configuration in development as in production.
+Vagrant (http://www.vagrantup.com) and veewee are used to generate a fresh 'box' from a debian iso.
+
+Installation
+
+git clone https://github.com/<repository>/virtual-gemstone.git 
+
+=create a vagrant base box using veewee:=
+ cd virtual-gemstone/veewee
+ vagrant basebox build 'gemstone'
+
+run integration specs:
+ vagrant basebox validate gemstone
+
+create a .box file in the current directory, for reuse or export to other users:
+ vagrant basebox export gemstone
+
+add the box to the list of boxes on the current machine, so you can vagrant box init from it later:
+ vagrant box add 'gemstone' 'gemstone.box'
+
+check that it exists:
+ vagrant box list
+
+Now you have a running box. Next step is to populate your newly created box. Just do
+
+ cd virtual-gemstone/vagrant
+ vagrant up 
+
+If you want to know the details please visit http://vagrantup.com
+
+test it:
+
+log in to the box
+
+vagrant ssh
+
+use the text browser in the box to see the site
+
+(todo, nginx recipe not completed yet).
+lynx http://localhost
+
+or as soon as SSL is in place:
+
+lynx https://localhost
+
+How it works
+Virtual Gemstone is built on Vagrant (http://www.vagrantup.com), a command line interface that lets you create, destroy VMs at will, and run Chef configuration management scripts
+We use veewee to generate the vagrant vm from a standard ubuntu 11.04 LTS VM, so you can be 100% sure where your VM comes from, and you can configure it as you wish.
+
+Credits
+
+
+Project Description:
+bootstrapping a virtual appliance that runs the GemStone OO database and prerequisites to run web applications
+
+README:
+Introduction
+
+Virtual Gemstone creates a fully functioning VirtualBox virtual machine that runs smalltalk in the Gemstone Object Oriented Database proxied behind Nginx, a high performance easy configuration webserver. 
+The nginx installation is configured to use ssl by default, because we care about a secure browsing experience for our users, and we want to use the same configuration in development as in production.
+Vagrant (http://www.vagrantup.com) and veewee are used to generate a fresh 'box' from a debian iso.
+
+Installation
+
+git clone https://github.com/<repository>/virtual-gemstone.git 
+
+=create a vagrant base box using veewee:=
+ cd virtual-gemstone/veewee
+ vagrant basebox build 'gemstone'
+
+run integration specs:
+ vagrant basebox validate gemstone
+
+create a .box file in the current directory, for reuse or export to other users:
+ vagrant basebox export gemstone
+
+add the box to the list of boxes on the current machine, so you can vagrant box init from it later:
+ vagrant box add 'gemstone' 'gemstone.box'
+
+check that it exists:
+ vagrant box list
+
+Now you have a running box. Next step is to populate your newly created box. Just do
+
+ cd virtual-gemstone/vagrant
+ vagrant up 
+
+If you want to know the details please visit http://vagrantup.com
+
+test it:
+
+log in to the box
+
+vagrant ssh
+
+use the text browser in the box to see the site
+
+(todo, nginx recipe not completed yet).
+lynx http://localhost
+
+or as soon as SSL is in place:
+
+lynx https://localhost
+
+How it works
+Virtual Gemstone is built on Vagrant (http://www.vagrantup.com), a command line interface that lets you create, destroy VMs at will, and run Chef configuration management scripts
+We use veewee to generate the vagrant vm from a standard ubuntu 11.04 LTS VM, so you can be 100% sure where your VM comes from, and you can configure it as you wish.
+
+Credits

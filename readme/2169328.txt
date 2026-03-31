@@ -1,0 +1,19 @@
+ATTENTION
+
+Please use competitionrelease branch instead of this one.
+
+I can't seem to merge them properly.
+
+Project Description:
+Haptic Mobile Game
+
+README:
+ATTENTION
+
+
+
+Please use competitionrelease branch instead of this one.
+
+
+
+I can't seem to merge them properly.

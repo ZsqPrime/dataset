@@ -1,0 +1,8 @@
+Project Description:
+Abandoned. PDP-8 ISA-level simulator in C that produces memory trace files for testing.
+
+README:
+This project for a graduate class in computer architecture called for the design of a simulator at the Instruction Set Architecture (ISA) level to generate memory trace files for subsequent testing. 
+
+Winter 2012
+Team: Jen Hanni

@@ -1,0 +1,10 @@
+binos-yarn requirements:
+1) require $HADOOP_COMMON_HOME, $HADOOP_CONF_DIR in your hadoop cluster environment.
+
+
+Project Description:
+deploy distributed real-time computation system on Hadoop-Yarn
+
+README:
+binos-yarn requirements:
+1) require $HADOOP_COMMON_HOME, $HADOOP_CONF_DIR in your hadoop cluster environment.

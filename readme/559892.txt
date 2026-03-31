@@ -1,0 +1,15 @@
+To get started: http://www.sidefx.com/docs/hdk15.0
+
+Several examples from the documentation or other sources (e.g. od[force] - 
+http://odforce.net) will be collected here.
+
+
+
+Project Description:
+None
+
+README:
+To get started: http://www.sidefx.com/docs/hdk15.0
+
+Several examples from the documentation or other sources (e.g. od[force] - 
+http://odforce.net) will be collected here.

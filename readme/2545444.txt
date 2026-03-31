@@ -1,0 +1,16 @@
+Project Description:
+
+
+README:
+Game Architecture - Spring 2012
+
+
+Homework 2 - Vector & Matrix, Cube Transformation
+    Compiling:
+        To build:
+           $ cmake .
+           $ make
+           Ought to produce a hw2 binary in ./bin/ simply run that to get to the prompt. input is function name followed by any arguements separated by a space. help lists all available functions.
+
+Homework 3 - Quaternions / SQT
+    Compiling is the same as Homework 2, ought to produce hw3 binary in addition to the hw2 one in ./bin/ prompt is identical in function to that of hw2.

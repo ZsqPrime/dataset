@@ -1,0 +1,12 @@
+based on http://localtodos.com/ by Jérôme Gravel-Niquet
+
+jQuery powered with underscore templates
+
+
+Project Description:
+Backbone LocalStorage Tasks
+
+README:
+based on http://localtodos.com/ by Jérôme Gravel-Niquet
+
+jQuery powered with underscore templates

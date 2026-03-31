@@ -1,0 +1,9 @@
+# Tor's hammer
+## Written by not me
+
+Project Description:
+Tor's hammer. Slow post DDOS tool written in python.
+
+README:
+# Tor's hammer
+## Written by not me

@@ -1,0 +1,81 @@
+Project Description:
+
+
+README:
+Jonathan Bourdett, jab2279
+COMS W4281 Intro to Quantum Computing
+Prof. Papageorgiou
+February 28, 2012
+Homework #2 Programming README
+
+Included files: Complex.java, Exercise3.java, Exercise3Tester.java
+
+To use my program, unzip the folder, and compile all files with:
+
+javac *.java
+
+Then run it with:
+
+java Exercise3Tester arg0 arg1 arg2 arg3
+
+where arg0, arg1, arg2, and arg3 are of the form :
+
+(real,imag) (real,imag) (real,imag) (real,imag)
+
+Test cases(Input & Output):
+
+X = (0,0) (1,0) (1,0) (0,0), YES
+Y = (0,0) (0,-1) (0,1) (0,0), YES
+Z = (1,0) (0,0) (0,0) (-1,0), YES
+H = (0.7071,0) (0.7071,0) (0.7071,0) (-0.7071,0), YES
+S = (1,0) (0,0) (0,0) (0,1), NO
+T = (1,0) (0,1) (0,0) (0.7071,0.7071), NO
+
+Example Outputs:
+
+H Run Output(+ Debug Output)
+----------------------------
+input
+--------
+0.7071
+0.7071
+0.7071
+-0.7071
+
+u matrix
+------------
+u_00 = 0.7071
+u_01 = 0.7071
+u_10 = 0.7071
+u_11 = -0.7071
+
+norm0 = 1.917981606303347E-5
+norm1 = 1.917981606303347E-5
+
+YES
+
+
+T Run Output(+ Debug Output)
+----------------------------
+input
+--------
+1.0
+1.0i
+0
+0.7071 +0.7071i
+
+u matrix
+------------
+u_00 = 1.0
+u_01 = 1.0i
+u_10 = 0
+u_11 = 0.7071 +0.7071i
+
+norm0 = 0.0
+norm1 = 2.326808676517148
+
+NO
+
+Notes
+-----
+To solve this problem, I calculated U|0>-U^3|0> and U|0>-U^3|1>, and checked whether they were less than an error of 10^-4. I was able to do this because checking |0> and |1> essentially checks the maximum and minimum values of C|phi> for all |phi>.

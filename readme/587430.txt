@@ -1,0 +1,283 @@
+= NWRFC - Wrapper for SAP Netweaver RFC SDK using Ruby-FFI
+
+This library provides a wrapper around the sapnwrfc shared library provided in the SAP Netweaver RFC SDK using Ruby-FFI.
+
+The NW RFC SDK allows you to call remote-enabled function modules on an ABAP server (referred to as RFC,
+which stands for "Remote Function Call").
+
+To use this library, you must have the nwrfcsdk (libsapnwrfc.so / sapnwrfc.dll) library
+and related libraries somewhere in your path.
+
+I am developing the library using the 7.20 patch level 2 version of the NW RFC SDK. I have used 7.11, but found for instance
+that it suffers from the bug described in note 1058327, where RfcGetStringLength() returns the incorrect length
+of the string if it is longer than 255 characters (supposed to have been fixed in 7.10 patch 2).
+
+== Issues
+
+Ruby-FFI does not seem to be able to take string encoding into consideration, so for example, calling RfcGetVersion()
+is problematic, because the returned string pointer has (like all NW RFC SDK functions) UTF-16LE encoding,
+and FFI does not seem to be able to work with this. So far this is not too problematic, but let's see.
+
+== Obtaining the Netweaver RFC shared library
+The Netweaver RFC SDK libraries are available from SAP. You cannot, unfortunately, obtain these as a public user; you need to have access via a customer account to download them
+from SAP Service Marketplace (http://service.sap.com)
+
+Alternatively, you can download and install one of the Netweaver Trial Editions from SDN (requires signup): http://www.sdn.sap.com/irj/scn/downloads
+
+After installation, the files are available in /usr/sap/<sysid>/exe
+
+== Usage
+
+Connecting to the SAP system:
+
+  require 'rubygems'
+
+  gem 'nwrfc'
+  include NWRFC
+
+  c = Connection.new {"user" => "martin", "passwd" => "secret",
+    "client" => "100", "ashost" => "ajax.domain.com", "sysnr" => "00"}
+
+Calling a function:
+
+  f = c.get_function("STFC_STRUCTURE") #Obtain description of a function module
+  fc = f.get_function_call
+  f.invoke
+
+Setting and getting parameters and fields:
+
+  import_struc = fc[:IMPORTSTRUC]
+  import_struc[:RFCCHAR1] = 'a'
+
+== Installation
+
+In order to install and run nwrfc, you need to install {http://github.com/ffi/ffi Ruby-FFI} which requires compilation.
+On Windows, you should be running the one-click {http://rubyinstaller.org/downloads/ Ruby Installer} and install the
+{http://github.com/oneclick/rubyinstaller/wiki/Development-Kit DevKit} which is really the easiest way to compile
+it on Windows.
+
+Then install the nwrfc gem:
+
+On Linux:
+
+    sudo gem install nwrfc
+
+On Windows
+
+    gem install nwrfc
+
+== Documentation
+
+Documentation is installed locally when you install the gem, but you can install it with `rdoc` or `yard` or whatever
+if you have cloned the repository from GitHub.
+
+== Running the tests
+The test are located in the tests/ directory. The file `login_params.yaml` contains parameters that you will need
+to customize to log on to your local system that you are testing with. The YAML file contains parameters for multiple
+systems, so if you want to switch to a different system, change the following line in `test_nwrfc.rb`:
+
+  $login_params = YAML.load_file(File.dirname(__FILE__) + "/login_params.yaml")["system2"]
+
+so that ["system2"] at the end points to whatever label you gave it in the YAML file, then
+
+  rake test
+
+== Release Notes
+
+=== Available in 0.0.9
+
+* Support for qRFC/tRFC
+
+=== Available in 0.0.8
+
+* BigDecimal support added for BCD values (BCD is also returned as BigDecimal to cater for very big numbers like timestamps)
+* Support for String::encode in Ruby 1.9 and above instead of iconv (thanks Meatballs1)
+
+=== What's new in 0.0.7
+
+* Add support for JRuby by extending FFI::StructLayout::CharArrayProxy
+* Fix #7 (error when reading timestamp value / BCD field)
+
+=== What's new in 0.0.6
+
+* Add :blocking => true in attach_function to allow other threads to continue running (thanks Meatballs1[https://github.com/Meatballs1])
+
+=== What's new in 0.0.5
+
+* Bug fix for Table#each
+
+=== What's new in 0.0.4
+
+* Add parameter activation/deactivation functionality
+* Fix/add metadata retrieval for DataContainer
+
+=== What's new in 0.0.3
+
+* Basic RFC server functionality
+
+=== What's new in 0.0.2
+
+* More comprehensive type support
+* More table operations
+
+=== What's new in 0.0.1
+
+* Fix loading sapnw library
+* Fix UTF-8 conversion for Windows
+* Enhanced type support
+
+=== What's new in 0.0.0
+
+* Able to call functions
+* Most types work,
+* Getting list of fields from a structure causes a SEGFAULT
+
+== Contributing
+
+* Improvements to the source code are welcome
+* Indicate on which platforms you have tested the gem
+* Suggestions for improving the API / Hints for idiomatic Ruby
+
+Project Description:
+SAP Netweaver RFC SDK wrapper via Ruby-FFI
+
+README:
+= NWRFC - Wrapper for SAP Netweaver RFC SDK using Ruby-FFI
+
+This library provides a wrapper around the sapnwrfc shared library provided in the SAP Netweaver RFC SDK using Ruby-FFI.
+
+The NW RFC SDK allows you to call remote-enabled function modules on an ABAP server (referred to as RFC,
+which stands for "Remote Function Call").
+
+To use this library, you must have the nwrfcsdk (libsapnwrfc.so / sapnwrfc.dll) library
+and related libraries somewhere in your path.
+
+I am developing the library using the 7.20 patch level 2 version of the NW RFC SDK. I have used 7.11, but found for instance
+that it suffers from the bug described in note 1058327, where RfcGetStringLength() returns the incorrect length
+of the string if it is longer than 255 characters (supposed to have been fixed in 7.10 patch 2).
+
+== Issues
+
+Ruby-FFI does not seem to be able to take string encoding into consideration, so for example, calling RfcGetVersion()
+is problematic, because the returned string pointer has (like all NW RFC SDK functions) UTF-16LE encoding,
+and FFI does not seem to be able to work with this. So far this is not too problematic, but let's see.
+
+== Obtaining the Netweaver RFC shared library
+The Netweaver RFC SDK libraries are available from SAP. You cannot, unfortunately, obtain these as a public user; you need to have access via a customer account to download them
+from SAP Service Marketplace (http://service.sap.com)
+
+Alternatively, you can download and install one of the Netweaver Trial Editions from SDN (requires signup): http://www.sdn.sap.com/irj/scn/downloads
+
+After installation, the files are available in /usr/sap/<sysid>/exe
+
+== Usage
+
+Connecting to the SAP system:
+
+  require 'rubygems'
+
+  gem 'nwrfc'
+  include NWRFC
+
+  c = Connection.new {"user" => "martin", "passwd" => "secret",
+    "client" => "100", "ashost" => "ajax.domain.com", "sysnr" => "00"}
+
+Calling a function:
+
+  f = c.get_function("STFC_STRUCTURE") #Obtain description of a function module
+  fc = f.get_function_call
+  f.invoke
+
+Setting and getting parameters and fields:
+
+  import_struc = fc[:IMPORTSTRUC]
+  import_struc[:RFCCHAR1] = 'a'
+
+== Installation
+
+In order to install and run nwrfc, you need to install {http://github.com/ffi/ffi Ruby-FFI} which requires compilation.
+On Windows, you should be running the one-click {http://rubyinstaller.org/downloads/ Ruby Installer} and install the
+{http://github.com/oneclick/rubyinstaller/wiki/Development-Kit DevKit} which is really the easiest way to compile
+it on Windows.
+
+Then install the nwrfc gem:
+
+On Linux:
+
+    sudo gem install nwrfc
+
+On Windows
+
+    gem install nwrfc
+
+== Documentation
+
+Documentation is installed locally when you install the gem, but you can install it with `rdoc` or `yard` or whatever
+if you have cloned the repository from GitHub.
+
+== Running the tests
+The test are located in the tests/ directory. The file `login_params.yaml` contains parameters that you will need
+to customize to log on to your local system that you are testing with. The YAML file contains parameters for multiple
+systems, so if you want to switch to a different system, change the following line in `test_nwrfc.rb`:
+
+  $login_params = YAML.load_file(File.dirname(__FILE__) + "/login_params.yaml")["system2"]
+
+so that ["system2"] at the end points to whatever label you gave it in the YAML file, then
+
+  rake test
+
+== Release Notes
+
+=== Available in 0.0.9
+
+* Support for qRFC/tRFC
+
+=== Available in 0.0.8
+
+* BigDecimal support added for BCD values (BCD is also returned as BigDecimal to cater for very big numbers like timestamps)
+* Support for String::encode in Ruby 1.9 and above instead of iconv (thanks Meatballs1)
+
+=== What's new in 0.0.7
+
+* Add support for JRuby by extending FFI::StructLayout::CharArrayProxy
+* Fix #7 (error when reading timestamp value / BCD field)
+
+=== What's new in 0.0.6
+
+* Add :blocking => true in attach_function to allow other threads to continue running (thanks Meatballs1[https://github.com/Meatballs1])
+
+=== What's new in 0.0.5
+
+* Bug fix for Table#each
+
+=== What's new in 0.0.4
+
+* Add parameter activation/deactivation functionality
+* Fix/add metadata retrieval for DataContainer
+
+=== What's new in 0.0.3
+
+* Basic RFC server functionality
+
+=== What's new in 0.0.2
+
+* More comprehensive type support
+* More table operations
+
+=== What's new in 0.0.1
+
+* Fix loading sapnw library
+* Fix UTF-8 conversion for Windows
+* Enhanced type support
+
+=== What's new in 0.0.0
+
+* Able to call functions
+* Most types work,
+* Getting list of fields from a structure causes a SEGFAULT
+
+== Contributing
+
+* Improvements to the source code are welcome
+* Indicate on which platforms you have tested the gem
+* Suggestions for improving the API / Hints for idiomatic Ruby

@@ -1,0 +1,14 @@
+ZoomScroll
+==========
+
+jQuery plugin enable to zoom images by scrolling
+
+
+Project Description:
+jQuery plugin enable to zoom images by scrolling
+
+README:
+ZoomScroll
+==========
+
+jQuery plugin enable to zoom images by scrolling

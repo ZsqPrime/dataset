@@ -1,0 +1,72 @@
+h1. ip-writer-rails
+
+p. This is "Kim Asendorf's":http://kimasendorf.com/ "IP Writer":http://kimasendorf.com/ipwriter ported to Ruby for use in for Rails applications. IP Writer reads the IP address of a visitor to a website and tweets it. By default it will tweet to the IP Writer twitter account, although you may configure it to tweet from any account you have access to.
+
+h2. Installation
+
+p. Include IPWriter in your Gemfile: @gem 'ip-writer-rails'@
+
+h2. Usage
+
+p. Using IPWriter is simple. Just include the @ip_writer@ method anywhere in a controller.
+
+<pre>
+class HomeController < ApplicationController
+  def index
+    ip_writer
+    ......
+  end
+end
+</pre>
+
+h3. Tweet from any account
+
+p. You can tweet from any account by passing your Twitter consumer and OAuth keys to IPWriter.
+
+<pre>
+class HomeController < ApplicationController
+  def index
+    ip_writer(CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+    ......
+  end
+end
+</pre>
+
+
+Project Description:
+A Ruby port of Kim Asendorf's IPWriter for Rails.
+
+README:
+h1. ip-writer-rails
+
+p. This is "Kim Asendorf's":http://kimasendorf.com/ "IP Writer":http://kimasendorf.com/ipwriter ported to Ruby for use in for Rails applications. IP Writer reads the IP address of a visitor to a website and tweets it. By default it will tweet to the IP Writer twitter account, although you may configure it to tweet from any account you have access to.
+
+h2. Installation
+
+p. Include IPWriter in your Gemfile: @gem 'ip-writer-rails'@
+
+h2. Usage
+
+p. Using IPWriter is simple. Just include the @ip_writer@ method anywhere in a controller.
+
+<pre>
+class HomeController < ApplicationController
+  def index
+    ip_writer
+    ......
+  end
+end
+</pre>
+
+h3. Tweet from any account
+
+p. You can tweet from any account by passing your Twitter consumer and OAuth keys to IPWriter.
+
+<pre>
+class HomeController < ApplicationController
+  def index
+    ip_writer(CONSUMER_KEY, CONSUMER_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
+    ......
+  end
+end
+</pre>

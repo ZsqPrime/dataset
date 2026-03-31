@@ -1,0 +1,64 @@
+Project Description:
+auto crop images of maximum size from within an image
+
+README:
+ImageCrop v2.2
+
+
+DESCRIPTION
+===========
+The application auto selects images of maximum size from within an outer image.
+It then gives you the option to crop, rotate or save the selection.
+It can be used on images containing multiple scanned items at once.
+
+For first time users: start the wizard by clicking the "Start wizard" button.
+It will guide you through the process.
+
+There are two test image in "/test/resources". You can use them to familiarize
+yourself with the application capabilities.
+
+
+BUILD THE APPLICATION
+=====================
+You need Ant 1.8+ and Apache Ivy 2.0+ to build the application.
+Execute
+	$ ant
+inside the project main directory to build a release - a new "dist" directory
+will be created, which contains all the files needed to run the application.
+
+
+RUN THE APPLICATION
+===================
+You need Java 6+ to run the application. Depending on your OS, execute either
+    $ bash start.sh
+or
+    > start.bat
+to start the application.
+
+
+GENERATING THE UNIT TESTING & CODE COVERAGE REPORTS
+===================================================
+Execute
+	$ ant codeCoverage
+to generate the unit testing and code coverage HTML reports in
+"bin-cobertura/reports/cobertura-html" and "bin-cobertura/reports/junit-html". 
+
+
+CONTACT INFO AND LATEST VERSION
+===============================
+For the contact info and the latest version of the application, check out
+    https://github.com/alexcojocaru/imageCrop
+
+
+REFERENCES
+==========
+The application uses and references (see the AutoSelectTask and ImageKit files)
+algorithms and methods described in the following articles and web sites:
+    Computing the largest orthogonal rectangle in a convex polygon:
+    http://cgm.cs.mcgill.ca/~athens/cs507/Projects/2003/DanielSud/complete.html
+
+    Image manipulation library:
+    http://www.generation5.org/jdk/
+
+    Hough image manipulation example:
+    http://www-dsp.elet.polimi.it/ispg/eti/laboratorio/sessioni/hough/HoughSplit.htm

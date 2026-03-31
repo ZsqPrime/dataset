@@ -1,0 +1,7 @@
+Project Description:
+Gang of Four game module for Erebot
+
+README:
+Gang of Four game
+
+Package detailed description here (found in README)

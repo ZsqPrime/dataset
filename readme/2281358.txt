@@ -1,0 +1,10 @@
+A sample online mobile store and inventory tracking management system....
+An attempt to learn GIT :)
+
+
+Project Description:
+Mobile site
+
+README:
+A sample online mobile store and inventory tracking management system....
+An attempt to learn GIT :)

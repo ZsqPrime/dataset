@@ -1,0 +1,8 @@
+Some random snippets made on my machine. Version controlling to manage it across systems and for revisions. Branches #FTW
+
+
+Project Description:
+Code. Creating backup and version controlling it across branches. Pushing to work across machines. 
+
+README:
+Some random snippets made on my machine. Version controlling to manage it across systems and for revisions. Branches #FTW

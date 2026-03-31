@@ -1,0 +1,41 @@
+Project Description:
+Add som LL Cool J
+
+README:
+/**
+ * llCoolJ.js v0.1
+ * 
+ * http://www.likeneveralways.com
+ *
+ * Commercial use requires one-time license fee
+ *
+ * Copyright 2012 Jacob Broms Engblom
+ */
+
+Tired of manually having to add LL Cool J to yr home page?
+llCoolJ.js is a jQuery plugin for quickly adding LL Cool J to yr home page.
+
+
+Demo:
+
+http://www.likeneveralways.com/llCoolJ.js/demo
+
+Options:
+
+Inset (default value : false) 
+	a more subtle LL Cool J
+Interactive (default value : false)
+	makes LL Cool J interactive
+
+Usage: 
+
+Include jQuery, jquery.llcoolj.css,s and jquery.llcoolj.js and then simply
+
+$('body').llCoolJ();
+
+with options
+
+$('body').llCoolJ({
+  'inset' : true,
+  'interactive' : true
+});

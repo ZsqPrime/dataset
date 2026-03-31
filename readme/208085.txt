@@ -1,0 +1,7 @@
+Examples in Eiffel based on problem descriptions from Rosetta Code (http://rosettacode.org/wiki/Rosetta_Code)
+
+Project Description:
+Examples in Eiffel
+
+README:
+Examples in Eiffel based on problem descriptions from Rosetta Code (http://rosettacode.org/wiki/Rosetta_Code)

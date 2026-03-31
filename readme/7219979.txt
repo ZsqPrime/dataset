@@ -1,0 +1,5 @@
+Project Description:
+Plugin Konsole for Dokuwiki
+
+README:
+Plugin Konsole for Dokuwiki, see more here: https://www.dokuwiki.org/plugin:konsole

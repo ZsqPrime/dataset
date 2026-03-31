@@ -1,0 +1,7 @@
+Html5 ubounded console alike app. Just for fun.
+
+Project Description:
+Text space is a unbounded html5 console. Just for fun.
+
+README:
+Html5 ubounded console alike app. Just for fun.

@@ -1,0 +1,5 @@
+Project Description:
+siriproxy velobleu plugin
+
+README:
+deprecated since siri data are now crypted...

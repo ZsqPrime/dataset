@@ -1,0 +1,8 @@
+Started on a new vim configuration. So why not put it here.
+
+
+Project Description:
+
+
+README:
+Started on a new vim configuration. So why not put it here.

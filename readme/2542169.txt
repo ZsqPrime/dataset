@@ -1,0 +1,4 @@
+Project Description:
+A jQuery time line slider to show images.
+
+README:

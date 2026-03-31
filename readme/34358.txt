@@ -1,0 +1,5 @@
+Project Description:
+A modern device detection script
+
+README:
+Categorizr is no longer being maintained or actively developed. Read more here: http://www.brettjankord.com/2013/01/10/active-development-on-categorizr-has-come-to-an-end/

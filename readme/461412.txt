@@ -1,0 +1,8 @@
+Repo moved to https://github.com/Ang3lus/sphinxalchemy
+
+
+Project Description:
+SphinxQL dialect for SQLAlchemy (uses MySQLdb-Python for wire protocol)
+
+README:
+Repo moved to https://github.com/Ang3lus/sphinxalchemy

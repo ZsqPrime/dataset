@@ -1,0 +1,58 @@
+Perl prereqs (CPAN)
+-------------------
+Moose
+Graph::Directed
+Math::Symbolic
+Parse::RecDescent
+Term::ANSIColor
+Time::Progress
+
+Other prereqs
+-------------
+Swig (requires libpcre, gcc)
+prove (for tests)
+
+Instructions
+------------
+To run tests:
+make test
+
+To build (and test) C parser:
+make cparser
+
+To run the test/demo grammars:
+make turn  (or 'make perl-turn' if cparser not working)
+make debug-turn
+make convo
+
+
+Project Description:
+None
+
+README:
+Perl prereqs (CPAN)
+-------------------
+Moose
+Graph::Directed
+Math::Symbolic
+Parse::RecDescent
+Term::ANSIColor
+Time::Progress
+
+Other prereqs
+-------------
+Swig (requires libpcre, gcc)
+prove (for tests)
+
+Instructions
+------------
+To run tests:
+make test
+
+To build (and test) C parser:
+make cparser
+
+To run the test/demo grammars:
+make turn  (or 'make perl-turn' if cparser not working)
+make debug-turn
+make convo

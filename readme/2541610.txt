@@ -1,0 +1,5 @@
+Project Description:
+Implicit Parallelising Python
+
+README:
+Nothing to see here... come back in two months

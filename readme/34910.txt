@@ -1,0 +1,5 @@
+Project Description:
+Trying out new stuff before the new stuff is ready.
+
+README:
+This repository uses Git Submodules. You will need to run 'git submodule init' and 'git submodule update' from the top level directory of the project working tree before you can run tests, for example.

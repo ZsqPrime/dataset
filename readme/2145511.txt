@@ -1,0 +1,22 @@
+A visualizer for Blueprints graphs using processing
+
+You need gradle to build this
+
+To set up your IDE
+
+run -- 
+gradle eclipse or gradle idea(create a iml file first)
+
+
+Project Description:
+A visualizer for Bluprints graphs
+
+README:
+A visualizer for Blueprints graphs using processing
+
+You need gradle to build this
+
+To set up your IDE
+
+run -- 
+gradle eclipse or gradle idea(create a iml file first)

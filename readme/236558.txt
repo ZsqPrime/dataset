@@ -1,0 +1,6 @@
+
+
+Project Description:
+Find news in your area using html5 GeoLocation, LocalStorage, and the Patch API
+
+README:

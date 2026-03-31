@@ -1,0 +1,4 @@
+Project Description:
+Pivotal Tracker is a tool for managing the scrum process for developing software. the csharp wrapper will be in exposing the API that Pivotal Tracker offers
+
+README:

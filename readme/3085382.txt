@@ -1,0 +1,5 @@
+Project Description:
+Pulls player data from bukkit server for use with a table in a webpage
+
+README:
+The repo has been moved to https://github.com/phyreman/Netstats to better reflect who is working on it as well as a few other reasons (nothing bad). If you want to keep track of it, then please go watch that repo instead since this will (probably) no longer be updated. Thanks for your understanding.

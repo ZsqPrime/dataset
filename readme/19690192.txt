@@ -1,0 +1,105 @@
+LSST Developer Tools
+====================
+
+Utilities to make LSST developers' everyday lives easier.
+
+Installing
+----------
+
+Check out the repository from ::
+
+    git@git.lsstcorp.org:LSST/DMS/devenv/devtools
+
+and set it up::
+
+    setup -r .
+
+Periodically update the tools with 'git pull' as needed.
+
+git Workflow Utilities
+----------------------
+
+gitolite
+~~~~~~~~
+
+A simple alias for accessing server-side gitolite commands. Expands to::
+
+  ssh git@git.lsstcorp.org <...>
+
+git-abandon
+~~~~~~~~~~~
+
+Mark a branch in central LSST repository as abandoned (no further
+development allowed)::
+
+ git abandon [options] <branch_name>
+
+Typical usage::
+
+ git abandon -m "{reason}; ticket closed." ticket/12345
+
+where {reason} is a short description why the branch was abandoned.
+
+Details
+.......
+
+Not all ticket branches are eventually merged to master or another branch;
+some turn out to be dead ends and are abandoned.  Abandoned branches in
+local developers' repositories can simply be deleted.  The branches that
+were pushed to the central LSST repository cannot; just deleting them would
+lead to loss of commits that may have been refered to externally (e.g., in
+Trac tickets, or by outside collaborators).
+
+Instead, we've adopted a convention to tag them as 'abandoned/<branchname>',
+followed by branch deletion. The tag keeps the unmerged commits on this
+branch from being garbage collected, and the prefix 'abandoned/' makes it
+clear this was an abandoned branch.
+
+For example, assuming there's a branch 'tickets/12345', marking it abandoned
+would typically translate to::
+
+    git tag -a abandoned/tickets/12345 origin/tickets/12345
+    git push origin abandoned/tickets/12345
+    git branch -D tickets/12345
+    git push origin :tickets/12345
+
+The exact commands may differ depending on your situation. For example, if
+you haven't checked out a local tracking branch, command #3 is not needed. 
+Or, if you're currently on its local tracking branch, you must remember to
+switch to another branch before deleting it (e.g., 'git checkout master'). 
+Finally, for security reasons only git admins are allowed to delete branches
+in the upstream repository, so the fourth line would fail unless you're an
+admin.
+
+Because of details such as these (and the likelihood of typos), we're
+providing the 'git-abandon' utility. It reduces the above to::
+
+    git abandon ticket/12345
+
+(Note: having an executable named git-XXXX on your path, allows you to call
+it as 'git XXXX').
+
+If you're a gitolite admin, you can add a -d switch to also delete the
+branch upstream::
+
+    git abandon -d ticket/12345
+
+If you're not, don't worry -- the tagged abandoned branches will be
+occasionally 'reaped' by the admins.
+
+Other available options are -n (dry run; just print what you would do but
+don't do it), -s (sign the tag), -r (override default name of the remote
+(default: 'origin')), and -m 'Message' (provide a message on the command
+line).  Running the command with no arguments (or with -h) will show brief
+online help.
+
+git-config-lsst-opts
+~~~~~~~~~~~~~~~~~~~~
+
+Set typical LSST options. Running it will ask for and set::
+
+    git config --global user.name "Firstname Lastname"
+    git config --global user.email "your_email@youremail.com"
+    git config --global color.ui true
+    git config --global push.default tracking
+

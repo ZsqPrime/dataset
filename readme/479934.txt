@@ -1,0 +1,11 @@
+jQuery character counter
+
+Project page http://adobi.github.com/jquery.charcounter
+
+Project Description:
+Character counter plugin for jQuery using Bootstrap from Twitter
+
+README:
+jQuery character counter
+
+Project page http://adobi.github.com/jquery.charcounter

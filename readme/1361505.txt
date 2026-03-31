@@ -1,0 +1,14 @@
+Just a bunch of scripts I've written over the years.
+Hopefully someone finds them useful.
+
+-- Aaron
+
+
+Project Description:
+misc eggdrop and standalone tcl scripts
+
+README:
+Just a bunch of scripts I've written over the years.
+Hopefully someone finds them useful.
+
+-- Aaron

@@ -1,0 +1,4 @@
+Project Description:
+Take two or many images, compute the difference
+
+README:

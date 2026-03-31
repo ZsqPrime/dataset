@@ -1,0 +1,15 @@
+# Assetic
+FLOW3 Package wrapper for Assetic
+
+## Requirements:
+- Symfony.Component.Process: https://github.com/afoeder/Symfony.Component.Process
+
+Project Description:
+draft FLOW3 package for Assetic
+
+README:
+# Assetic
+FLOW3 Package wrapper for Assetic
+
+## Requirements:
+- Symfony.Component.Process: https://github.com/afoeder/Symfony.Component.Process

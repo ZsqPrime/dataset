@@ -1,0 +1,7 @@
+Project Description:
+Zephyr Mobile Application for Android
+
+README:
+Server
+======
+To run the server, execute "python -m server".

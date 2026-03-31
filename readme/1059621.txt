@@ -1,0 +1,9 @@
+Project Description:
+SWFUpload integration to Sproutcore
+
+README:
+SWFUpload integration in Sproutcore 1.6
+
+Check out http://swfupload.org for more details.
+
+The idea is to wrapp the upload form into a SC.View and allow for the events to be managed by Sproutcore KVO and presentation by the VIEW architecture.

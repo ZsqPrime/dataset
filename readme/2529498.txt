@@ -1,0 +1,5 @@
+Project Description:
+Extended django admin filters
+
+README:
+Required Django >= 1.4

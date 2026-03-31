@@ -1,0 +1,6 @@
+Project Description:
+A quick and dirty Mandelbrot set renderer.
+
+README:
+Ken Sheedlo
+Simple Mandelbrot renderer.

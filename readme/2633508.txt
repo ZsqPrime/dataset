@@ -1,0 +1,8 @@
+Project Description:
+Taks price samples for cruises in order to learn more about the best moment to buy.
+
+README:
+## Cruise Pricesnapper
+
+Cruise pricesnapper is a application I use for long-time tracking of
+cruise prices.

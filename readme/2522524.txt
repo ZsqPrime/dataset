@@ -1,0 +1,5 @@
+Project Description:
+Template-based scheduler app
+
+README:
+Management tools for KITS platform

@@ -1,0 +1,599 @@
+= ccp
+
+CCP is a Ruby library for Composite Command Programming
+that helps you to split spaghetti codes into pieces.
+
+=== Websites
+* http://github.com/maiha/ccp
+
+== What is a Composite Command Programming?
+
+There are three principles.
+
+1. SRP (Single responsibility principle)
+2. Typed Variables (especially needed in Ruby)
+3. Explicit Data Dependencies
+
+As you know, Ruby is a handy and powerful programming language.
+We can use variables without definitions and re-assign them even if type mismatch.
+Although it is very comfortable while you are writing, it would be painful for others.
+
+CCP is a framework composed with above principles and a few debugging utils
+that gives you(as writer) a little restrictions and gives you(as reader) a readability.
+
+
+== Example
+=== usual ruby code
+
+  class SomeOperation
+    def execute
+      # fetching data
+      # calculating it
+      # print results
+    end
+  end
+
+Later, it would be a more complex and longer code like this.
+
+  class SomeOperation
+    def execute
+      @data = fetch_data
+      ...
+      @result = calculate(@data)
+      ...
+      print_results(@result)
+    end
+
+    def fetching_data
+      # accessing instance variables, and long code here
+      ...
+
+Let's imagine a situation that you need to replace above "fetch" code after several years.
+It is too hard to see data dependencies especially about instance variables.
+
+=== with CCP
+
+  class SomeOperation
+    include Ccp::Commands::Composite
+
+    command FetchData
+    command Calculate
+    command PrintResult
+  end
+
+  class FetchData                                # 1. SRP 
+    include Ccp::Commands::Core
+
+    # {before,after} methods can be used like Design By Contract
+    def after
+      data.check(:fetched, {Symbol => [Float]})  # 2. Typed Variables
+    end
+
+    def execute
+      # fetching data...
+      data[:fetched] = ...                       # 3. Data Dependencies
+    end
+  end
+
+  class Calculate
+    ...
+
+
+All sub commands like FetchData,Calculate,PrintResult are executed
+in each scopes, and can share variables only via data object.
+
+So you can easily refactor or replace FetchData unit
+because there are no implicit instance variable dependencies
+and futhermore all depencenies would be explicitly declared in "before","after" method.
+
+=== execute
+
+Just call a "execute" instance method.
+
+  cmd = SomeOperation.new
+  cmd.execute
+
+=== invokers
+
+Invokers::Base is a top level composite command.
+It acts same as composite except some special options.
+Those are profile, comment, logger.
+
+  class SomeOperation < Ccp::Invokers::Base
+    command FetchData   # same as composite
+    command Calculate   # same as composite
+    ...
+
+    profile true        # default false
+    comment false       # default true
+    ...
+
+This profile option prints benchmarks of commands.
+
+  ruby -r some_operation -e 'SomeOperation.execute'
+  [43.3%] 2.5834830 FetchData#execute
+  [35.9%] 2.0710440 Calculate#execute
+  ...
+
+
+== Skip commands
+
+"skip" prefixed data key names are reserved for command skipping feature.
+When data[:skip_XXX] given, the XXX command won't be invoked.
+
+  class Program
+    include Ccp::Commands::Composite
+    command Cmd1
+    command Cmd2
+  end
+
+  # normal case
+  Program.execute                       # => Both Cmd1 and Cmd2 will be called
+
+  # with skip
+  Program.execute(:skip_cmd1 => true)   # => Both Cmd2 will be called
+
+
+== Fixtures
+
+Let's imagine a following command that just read :a and write :x.
+
+    class TSFC                  # TestSaveFixtureCmd
+      include Ccp::Commands::Core
+
+      def execute
+        data[:a]                # read
+        data[:x] = 10           # write
+      end
+    end
+
+This may be a part of sequncial commands. 
+When we want to test only this command, usually we should prepare
+some fixture data for the 'data' object.
+
+=== Generating fixtures
+
+Ccp can automatically generate fixture data for each commands.
+Pass :save_fixture option to 'execute' class method to enable it.
+
+  * fixture_save : set true if you want this feature
+  * fixture_dir  : set root dir of fixture (default: tmp/fixtures)
+  * fixture_kvs  : file structure: :file|:dir (default: :file)
+  * fixture_ext  : file format: :json|:yaml (default: :json)
+  * fixture_keys : save data only keys written in here
+
+In above example, we can kick it with data[:a] like this.
+
+    TSFC.execute(:a => 1)
+
+And if you want to geneate fixures for this command, just add :save_fixture.
+
+    TSFC.execute(:a => 1, :fixture_save => true)
+
+This will create following files.
+
+  % tree tmp/fixtures
+  tmp/fixtures
+  +- tsfc
+      +- stub.json
+      +- mock.json
+
+  1 directory, 2 files    
+  % cat tmp/fixtures/tsfc/stub.json
+  {"a":1}
+  % cat tmp/fixtures/tsfc/mock.json
+  {"x":10}
+
+Where, reading means stub and writing means mock.
+
+=== Writing tests
+
+Use them as stubs and expected data as you like.
+
+  describe TSFC do
+    it "should work" do
+      data     = JSON.load(Pathname("tmp/fixtures/tsfc/stub.json").read{})
+      expected = JSON.load(Pathname("tmp/fixtures/tsfc/mock.json").read{})
+
+      cmd = TSFC.execute(data)
+
+      expected.each_pair do |key, val|
+        cmd.data[key].should == val
+      end
+    end
+  end
+
+This code is highly versatile.
+
+=== Filter commands
+
+  * fixture_save : specify command names (negations can be used as "!")
+
+For example, imagine composite commands like this.
+
+  Program
+    +- Cmd1
+    +- Cmd2
+    +- Cmd3
+
+In this case, 
+
+    Program.execute(:fixture_save => true)
+
+generates following files.
+
+  * tmp/fixtures/cmd1/*.json
+  * tmp/fixtures/cmd2/*.json
+  * tmp/fixtures/cmd3/*.json
+  * tmp/fixtures/program/*.json
+
+If you want fixture data only for cmd2, run this.
+
+    Program.execute(:fixture_save => ["Cmd2"])
+
+"!" is used for special syntax which means 'negations'.
+
+    Program.execute(:fixture_save => ["!Program"])
+
+will generates fixtures for cmd1,cmd2,cmd3 (in short "not program").
+
+=== Filter data
+
+  * fixture_keys : specify data key names (negations can be used as "!")
+
+For example, imagine a command like this.
+
+    class Cmd
+      def execute
+        data[:x] = 10
+        data[:logger].debug "x is set"
+      end
+    end
+
+This code will generate fixtures about 'x' and 'logger' cause it read those vars.
+In many case, we don't need 'logger' object for test data, and furthermore,
+the logger object would be failed in Json serialization.
+
+In this case, we want to filter save data. Try fixtures_keys!
+
+    Cmd.execute(:fixture_save => true, :fixture_keys => ['x'])
+
+This will generate "stub.json" that contains only 'x'.
+And, "!" can be used for negations as same as "Filter commands".
+
+    Cmd.execute(:fixture_save => true, :fixture_keys => ['!logger'])
+
+=== Static options
+
+Static options(hard code) are also available.
+
+    class Cmd
+      include Ccp::Commands::Core
+      stub "tmp/stub.json"
+      mock "tmp/mock.json"
+      # keys ["x"]
+      save true
+
+      def execute
+        data[:a]
+        data[:x] = 10
+      end
+    end
+
+    Cmd.execute(:a=>1)
+
+This generates "tmp/stub.json", "tmp/mock.json".
+
+=== Test
+
+Once you got fixtures, call "test" method to test it.
+
+    Cmd.test
+    # or
+    #     Cmd.execute(:fixture_test=>true)
+
+This automatically searchs fixtures when no fixture files are explicitly given.
+This mechanism is as same as 'fixture_save'.
+
+
+
+Project Description:
+A Ruby library for Composite Command Programming
+
+README:
+= ccp
+
+CCP is a Ruby library for Composite Command Programming
+that helps you to split spaghetti codes into pieces.
+
+=== Websites
+* http://github.com/maiha/ccp
+
+== What is a Composite Command Programming?
+
+There are three principles.
+
+1. SRP (Single responsibility principle)
+2. Typed Variables (especially needed in Ruby)
+3. Explicit Data Dependencies
+
+As you know, Ruby is a handy and powerful programming language.
+We can use variables without definitions and re-assign them even if type mismatch.
+Although it is very comfortable while you are writing, it would be painful for others.
+
+CCP is a framework composed with above principles and a few debugging utils
+that gives you(as writer) a little restrictions and gives you(as reader) a readability.
+
+
+== Example
+=== usual ruby code
+
+  class SomeOperation
+    def execute
+      # fetching data
+      # calculating it
+      # print results
+    end
+  end
+
+Later, it would be a more complex and longer code like this.
+
+  class SomeOperation
+    def execute
+      @data = fetch_data
+      ...
+      @result = calculate(@data)
+      ...
+      print_results(@result)
+    end
+
+    def fetching_data
+      # accessing instance variables, and long code here
+      ...
+
+Let's imagine a situation that you need to replace above "fetch" code after several years.
+It is too hard to see data dependencies especially about instance variables.
+
+=== with CCP
+
+  class SomeOperation
+    include Ccp::Commands::Composite
+
+    command FetchData
+    command Calculate
+    command PrintResult
+  end
+
+  class FetchData                                # 1. SRP 
+    include Ccp::Commands::Core
+
+    # {before,after} methods can be used like Design By Contract
+    def after
+      data.check(:fetched, {Symbol => [Float]})  # 2. Typed Variables
+    end
+
+    def execute
+      # fetching data...
+      data[:fetched] = ...                       # 3. Data Dependencies
+    end
+  end
+
+  class Calculate
+    ...
+
+
+All sub commands like FetchData,Calculate,PrintResult are executed
+in each scopes, and can share variables only via data object.
+
+So you can easily refactor or replace FetchData unit
+because there are no implicit instance variable dependencies
+and futhermore all depencenies would be explicitly declared in "before","after" method.
+
+=== execute
+
+Just call a "execute" instance method.
+
+  cmd = SomeOperation.new
+  cmd.execute
+
+=== invokers
+
+Invokers::Base is a top level composite command.
+It acts same as composite except some special options.
+Those are profile, comment, logger.
+
+  class SomeOperation < Ccp::Invokers::Base
+    command FetchData   # same as composite
+    command Calculate   # same as composite
+    ...
+
+    profile true        # default false
+    comment false       # default true
+    ...
+
+This profile option prints benchmarks of commands.
+
+  ruby -r some_operation -e 'SomeOperation.execute'
+  [43.3%] 2.5834830 FetchData#execute
+  [35.9%] 2.0710440 Calculate#execute
+  ...
+
+
+== Skip commands
+
+"skip" prefixed data key names are reserved for command skipping feature.
+When data[:skip_XXX] given, the XXX command won't be invoked.
+
+  class Program
+    include Ccp::Commands::Composite
+    command Cmd1
+    command Cmd2
+  end
+
+  # normal case
+  Program.execute                       # => Both Cmd1 and Cmd2 will be called
+
+  # with skip
+  Program.execute(:skip_cmd1 => true)   # => Both Cmd2 will be called
+
+
+== Fixtures
+
+Let's imagine a following command that just read :a and write :x.
+
+    class TSFC                  # TestSaveFixtureCmd
+      include Ccp::Commands::Core
+
+      def execute
+        data[:a]                # read
+        data[:x] = 10           # write
+      end
+    end
+
+This may be a part of sequncial commands. 
+When we want to test only this command, usually we should prepare
+some fixture data for the 'data' object.
+
+=== Generating fixtures
+
+Ccp can automatically generate fixture data for each commands.
+Pass :save_fixture option to 'execute' class method to enable it.
+
+  * fixture_save : set true if you want this feature
+  * fixture_dir  : set root dir of fixture (default: tmp/fixtures)
+  * fixture_kvs  : file structure: :file|:dir (default: :file)
+  * fixture_ext  : file format: :json|:yaml (default: :json)
+  * fixture_keys : save data only keys written in here
+
+In above example, we can kick it with data[:a] like this.
+
+    TSFC.execute(:a => 1)
+
+And if you want to geneate fixures for this command, just add :save_fixture.
+
+    TSFC.execute(:a => 1, :fixture_save => true)
+
+This will create following files.
+
+  % tree tmp/fixtures
+  tmp/fixtures
+  +- tsfc
+      +- stub.json
+      +- mock.json
+
+  1 directory, 2 files    
+  % cat tmp/fixtures/tsfc/stub.json
+  {"a":1}
+  % cat tmp/fixtures/tsfc/mock.json
+  {"x":10}
+
+Where, reading means stub and writing means mock.
+
+=== Writing tests
+
+Use them as stubs and expected data as you like.
+
+  describe TSFC do
+    it "should work" do
+      data     = JSON.load(Pathname("tmp/fixtures/tsfc/stub.json").read{})
+      expected = JSON.load(Pathname("tmp/fixtures/tsfc/mock.json").read{})
+
+      cmd = TSFC.execute(data)
+
+      expected.each_pair do |key, val|
+        cmd.data[key].should == val
+      end
+    end
+  end
+
+This code is highly versatile.
+
+=== Filter commands
+
+  * fixture_save : specify command names (negations can be used as "!")
+
+For example, imagine composite commands like this.
+
+  Program
+    +- Cmd1
+    +- Cmd2
+    +- Cmd3
+
+In this case, 
+
+    Program.execute(:fixture_save => true)
+
+generates following files.
+
+  * tmp/fixtures/cmd1/*.json
+  * tmp/fixtures/cmd2/*.json
+  * tmp/fixtures/cmd3/*.json
+  * tmp/fixtures/program/*.json
+
+If you want fixture data only for cmd2, run this.
+
+    Program.execute(:fixture_save => ["Cmd2"])
+
+"!" is used for special syntax which means 'negations'.
+
+    Program.execute(:fixture_save => ["!Program"])
+
+will generates fixtures for cmd1,cmd2,cmd3 (in short "not program").
+
+=== Filter data
+
+  * fixture_keys : specify data key names (negations can be used as "!")
+
+For example, imagine a command like this.
+
+    class Cmd
+      def execute
+        data[:x] = 10
+        data[:logger].debug "x is set"
+      end
+    end
+
+This code will generate fixtures about 'x' and 'logger' cause it read those vars.
+In many case, we don't need 'logger' object for test data, and furthermore,
+the logger object would be failed in Json serialization.
+
+In this case, we want to filter save data. Try fixtures_keys!
+
+    Cmd.execute(:fixture_save => true, :fixture_keys => ['x'])
+
+This will generate "stub.json" that contains only 'x'.
+And, "!" can be used for negations as same as "Filter commands".
+
+    Cmd.execute(:fixture_save => true, :fixture_keys => ['!logger'])
+
+=== Static options
+
+Static options(hard code) are also available.
+
+    class Cmd
+      include Ccp::Commands::Core
+      stub "tmp/stub.json"
+      mock "tmp/mock.json"
+      # keys ["x"]
+      save true
+
+      def execute
+        data[:a]
+        data[:x] = 10
+      end
+    end
+
+    Cmd.execute(:a=>1)
+
+This generates "tmp/stub.json", "tmp/mock.json".
+
+=== Test
+
+Once you got fixtures, call "test" method to test it.
+
+    Cmd.test
+    # or
+    #     Cmd.execute(:fixture_test=>true)
+
+This automatically searchs fixtures when no fixture files are explicitly given.
+This mechanism is as same as 'fixture_save'.

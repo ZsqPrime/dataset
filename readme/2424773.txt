@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+OS packages:
+-taglib 
+-libtag1-devel (ubuntu) / taglib-devel (CentOS)

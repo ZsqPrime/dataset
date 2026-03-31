@@ -1,0 +1,10 @@
+[Document](http://c2rexplugins.weebly.com/)  
+[Download all plugins](https://github.com/rexrainbow/C2Plugins/archive/master.zip)
+
+
+Project Description:
+Plugins of Construct 2
+
+README:
+[Document](http://c2rexplugins.weebly.com/)  
+[Download all plugins](https://github.com/rexrainbow/C2Plugins/archive/master.zip)

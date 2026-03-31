@@ -1,0 +1,41 @@
+Project Description:
+Cinder wrapper for the official Kinect SDK
+
+README:
+THIS BLOCK IS NO LONGER SUPPORTED. PLEASE USE THE KINECT COMMON BRIDGE
+https://github.com/wieden-kennedy/Cinder-KCB
+
+-----------------------------------------
+
+This block wraps Microsoft official SDK for the Kinect 
+device.
+
+The "ContoursApp" sample requires "Cinder-OpenCV":
+https://github.com/cinder/Cinder-OpenCV
+
+Installation instructions, changelog, and more information here:
+http://www.bantherewind.com/kinectsdk-for-cinder
+
+-----------------------------------------
+
+Version 1.7.0b
+
+TO DO
+
+* Add infrared stream
+* Add extended depth data
+* Implement new depth API
+* Color camera settings (white balance, contrast, hue, saturation, etc)
+* Add accelerometer reading
+* Implement sensor chooser
+* Fusion sample
+* Interaction sample
+* Optional: FaceTracker sample (review improved API)
+* Optional: Beam sample
+
+-----------------------------------------
+
+http://www.bantherewind.com
+http://www.libcinder.org
+
+bantherewind@gmail.com

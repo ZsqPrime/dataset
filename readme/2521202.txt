@@ -1,0 +1,10 @@
+Project Description:
+Blog at http://www.damainboss.com
+
+README:
+This is a fully functional blog developed with rails. A few commits have not been pushed for security purposes. 
+However, a live view of the blog is at http://www.damainboss.com
+
+Please note that this blog is only used to test out new gems and newly discovered ways of doing things
+
+Contact damainboss@damainboss.com for any queries, which I doubt there would be any :D

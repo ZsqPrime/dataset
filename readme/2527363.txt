@@ -1,0 +1,6 @@
+Project Description:
+Jekyll blog on Github pages.
+
+README:
+
+Jekyll blog hosted on Github pages, pure unadulterated awesomeness.

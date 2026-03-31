@@ -1,0 +1,59 @@
+h1. Picture Pages
+
+By Eric Larson
+
+h2. Code4Lib 2012 Lighting Presentation
+
+h3. See these slides
+
+"http://speakerdeck.com/u/ewlarson/p/finding-images-in-book-page-images": http://speakerdeck.com/u/ewlarson/p/finding-images-in-book-page-images
+
+h2. Requirements
+
+* Ruby
+* ImageMagick
+- For Mac people
+- $> brew install imagemagick
+
+h2. Getting Started
+
+* Download this file
+* Run this file
+* Read the code
+* Fetch your own books and find images
+
+h3. Stay in touch
+
+If you play around in this problem space, let me know.
+
+Project Description:
+Find images within book page images
+
+README:
+h1. Picture Pages
+
+By Eric Larson
+
+h2. Code4Lib 2012 Lighting Presentation
+
+h3. See these slides
+
+"http://speakerdeck.com/u/ewlarson/p/finding-images-in-book-page-images": http://speakerdeck.com/u/ewlarson/p/finding-images-in-book-page-images
+
+h2. Requirements
+
+* Ruby
+* ImageMagick
+- For Mac people
+- $> brew install imagemagick
+
+h2. Getting Started
+
+* Download this file
+* Run this file
+* Read the code
+* Fetch your own books and find images
+
+h3. Stay in touch
+
+If you play around in this problem space, let me know.

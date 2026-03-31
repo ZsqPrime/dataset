@@ -1,0 +1,10 @@
+
+Xell's vimfiles. Updating.
+
+
+Project Description:
+Xell's vimfiles, for both Windows GVim and Mac MacVim.
+
+README:
+
+Xell's vimfiles. Updating.

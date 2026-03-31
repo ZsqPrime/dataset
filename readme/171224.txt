@@ -1,0 +1,28 @@
+Specs
+-----
+http://piratenpad.de/p/ips.
+
+Android App
+-----------
+https://bitbucket.org/keyboardsurfer/trackmeifyoucanandroid
+
+Positioning Server
+------------------
+https://bitbucket.org/keyboardsurfer/trackmeifyoucanserver
+
+
+Project Description:
+The announcement server for the indoor positioning system we develop at global android dev camp 2012
+
+README:
+Specs
+-----
+http://piratenpad.de/p/ips.
+
+Android App
+-----------
+https://bitbucket.org/keyboardsurfer/trackmeifyoucanandroid
+
+Positioning Server
+------------------
+https://bitbucket.org/keyboardsurfer/trackmeifyoucanserver

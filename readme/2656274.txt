@@ -1,0 +1,7 @@
+Project Description:
+Lector de mangas, hecho con groovy y gaelyk
+
+README:
+Lector de mangas, hecho con Groovy y Gaelyk.
+
+Las fuentes originales están tomadas de http://www.submanga.com

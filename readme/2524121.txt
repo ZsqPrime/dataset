@@ -1,0 +1,5 @@
+Project Description:
+Google AppEngine application writtern in Java that converts EMCS XML messages into human readable PDF
+
+README:
+`gcloud app deploy war/WEB-INF/appengine-web.xml --project polandemcs`

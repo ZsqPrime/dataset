@@ -1,0 +1,8 @@
+Placeholder.  Need to fill this with basic information about project
+
+
+Project Description:
+A mobile application for adding service hours and checking upcoming events for the CWRU APO Theta Upsilon Chapter
+
+README:
+Placeholder.  Need to fill this with basic information about project

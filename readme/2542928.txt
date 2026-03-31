@@ -1,0 +1,5 @@
+Project Description:
+Some Java code to learn HBase
+
+README:
+Examples on how to access HBase using the hbase.apache.org Java API.

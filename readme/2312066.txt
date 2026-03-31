@@ -1,0 +1,11 @@
+igt client
+igt server
+
+
+
+Project Description:
+IOWA Gambling task, a psychlogy task implementation over network
+
+README:
+igt client
+igt server

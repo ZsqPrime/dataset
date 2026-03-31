@@ -1,0 +1,23 @@
+Just a collection of shell script useful to developping on mozilla-central.
+These scripts are aimed at helping when managing multiple trees with multiple
+mozconfig.
+
+INSTALL
+=======
+
+1) Type 'curl https://raw.github.com/bgirard/mozhelper/master/install.sh > /tmp/install.sh && chmod +x /tmp/install.sh && /tmp/install.sh'
+
+
+
+Project Description:
+Helps with mozilla platform dev task such as building
+
+README:
+Just a collection of shell script useful to developping on mozilla-central.
+These scripts are aimed at helping when managing multiple trees with multiple
+mozconfig.
+
+INSTALL
+=======
+
+1) Type 'curl https://raw.github.com/bgirard/mozhelper/master/install.sh > /tmp/install.sh && chmod +x /tmp/install.sh && /tmp/install.sh'

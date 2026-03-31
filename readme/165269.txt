@@ -1,0 +1,120 @@
+= Crime In Chicago Cedar
+
+Showcase crime statistics for the city of Chicago
+
+
+== Requirements
+
+Sinatra
+Postgres
+Memcache
+
+
+== Starting
+
+- Clone the git repository
+
+    > git clone git@github.com:open-city/crime-in-chicago.git
+
+- Install all gems necessary
+
+    > gem install bundler
+    > bundle install
+    
+- Set up database
+
+    > pg_ctl -D /usr/local/var/postgres -l logfile start
+    starts postgres
+    
+    > rake db:setup_from_scratch
+    downloads file from City of Chicago Data Portal (~1.3Gb)
+    sets up database and runs import from downloaded file (~20-30 minutes)
+    
+- Setup and start memcached
+
+    > brew install memcached (for OS X, other OS's will need to install manually)
+    > memcached &
+
+- Start application server
+
+    > unicorn
+    navigate to http://localhost:8080
+
+
+== Contributing to Crime in Chicago
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentio
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version
+
+== Copyright
+
+Copyright (c) 2012 Crime In Chicago. See LICENSE.txt for
+further details.
+
+
+Project Description:
+A data visualization that lets you explore crime trends in Chicago's 50 wards. Built using open crime report data from the Chicago Police Department.
+
+README:
+= Crime In Chicago Cedar
+
+Showcase crime statistics for the city of Chicago
+
+
+== Requirements
+
+Sinatra
+Postgres
+Memcache
+
+
+== Starting
+
+- Clone the git repository
+
+    > git clone git@github.com:open-city/crime-in-chicago.git
+
+- Install all gems necessary
+
+    > gem install bundler
+    > bundle install
+    
+- Set up database
+
+    > pg_ctl -D /usr/local/var/postgres -l logfile start
+    starts postgres
+    
+    > rake db:setup_from_scratch
+    downloads file from City of Chicago Data Portal (~1.3Gb)
+    sets up database and runs import from downloaded file (~20-30 minutes)
+    
+- Setup and start memcached
+
+    > brew install memcached (for OS X, other OS's will need to install manually)
+    > memcached &
+
+- Start application server
+
+    > unicorn
+    navigate to http://localhost:8080
+
+
+== Contributing to Crime in Chicago
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentio
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version
+
+== Copyright
+
+Copyright (c) 2012 Crime In Chicago. See LICENSE.txt for
+further details.

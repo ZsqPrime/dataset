@@ -1,0 +1,16 @@
+Euclidean Sequencer
+===================
+
+Source code and schematics for the [Rebel Technology](http://www.rebeltech.org/) Euclidean Sequencer, Stoicheia.
+All code published under the Gnu GPL v2 unless otherwise stated.
+
+
+Project Description:
+Source code and schematics for the Rebel Technology Euclidean Sequencer, Stoicheia.
+
+README:
+Euclidean Sequencer
+===================
+
+Source code and schematics for the [Rebel Technology](http://www.rebeltech.org/) Euclidean Sequencer, Stoicheia.
+All code published under the Gnu GPL v2 unless otherwise stated.

@@ -1,0 +1,76 @@
+#MicTwi.js and its OAuth proxy server
+
+
+##Use it!
+<pre>&lt;script src="https://raw.github.com/ympbyc/MicTwi.js/MicTwi/mictwi.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+MicTwi.oauth(function(){
+  var tweet = MicTwi.generatePostAPI('statuses/update');
+  tweet({status: "whatever"}, function(j){console.log(j)});
+});
+&lt;/script&gt;</pre>
+
+##Installation
+* register an application at http://dev.twitter.com/
+* replace certain keys in /tofucha/server.js.
+* install node and npm to your server, then
+<pre>npm install express
+  npm install oauth </pre>
+
+* push /tofucha to your server and let it run server.js on node.
+* host /MicTwi/mictwi.js wherever you prefer.
+* in your html, include a &lt;script&gt; tag pointing your mictwi.js.
+
+##Usage example
+<pre>(MicTwi.generatePostAPI('statuses/update.json'))({status: 'Posting via MicTwi'}, function(json){alert(json)});</pre>
+
+##Author
+ympbyc
+
+##License
+wtfpl
+
+##Simple demo
+http://ympbyc.kuronowish.com/akarin/mictwi.html
+
+
+Project Description:
+Make AJAX requests to twitter's REST APIs. Although the official "@Anywhere" does pretty much the same thing, I made it anyway 'coz I simply didn't know <i>that</i>. I just didn't wanna throw it away so I'm pushin' it!
+
+README:
+#MicTwi.js and its OAuth proxy server
+
+
+##Use it!
+<pre>&lt;script src="https://raw.github.com/ympbyc/MicTwi.js/MicTwi/mictwi.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+MicTwi.oauth(function(){
+  var tweet = MicTwi.generatePostAPI('statuses/update');
+  tweet({status: "whatever"}, function(j){console.log(j)});
+});
+&lt;/script&gt;</pre>
+
+##Installation
+* register an application at http://dev.twitter.com/
+* replace certain keys in /tofucha/server.js.
+* install node and npm to your server, then
+<pre>npm install express
+  npm install oauth </pre>
+
+* push /tofucha to your server and let it run server.js on node.
+* host /MicTwi/mictwi.js wherever you prefer.
+* in your html, include a &lt;script&gt; tag pointing your mictwi.js.
+
+##Usage example
+<pre>(MicTwi.generatePostAPI('statuses/update.json'))({status: 'Posting via MicTwi'}, function(json){alert(json)});</pre>
+
+##Author
+ympbyc
+
+##License
+wtfpl
+
+##Simple demo
+http://ympbyc.kuronowish.com/akarin/mictwi.html

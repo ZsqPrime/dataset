@@ -1,0 +1,6 @@
+
+
+Project Description:
+Practicing making a slider control w/ html/css and pure js
+
+README:

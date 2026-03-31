@@ -1,0 +1,7 @@
+Projet long d'objets dupliqués d'hagimont qui aurait pu le foutre en C.
+
+Project Description:
+Objets dupliqués (dreamteam le retour)
+
+README:
+Projet long d'objets dupliqués d'hagimont qui aurait pu le foutre en C.

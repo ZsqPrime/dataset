@@ -1,0 +1,5 @@
+Project Description:
+IBM Starcraft II
+
+README:
+A simple web app to track the internal IBM Starcraft II league.

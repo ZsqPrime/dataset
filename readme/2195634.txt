@@ -1,0 +1,16 @@
+version 1.66.2 of the nVentory ruby client.
+
+You'll need to create an /etc/nventory.conf or $HOME/.nventory.conf with at least the following parameter:
+
+server = http://nventory.myserver.com
+
+
+Project Description:
+gem for nventory ruby client
+
+README:
+version 1.66.2 of the nVentory ruby client.
+
+You'll need to create an /etc/nventory.conf or $HOME/.nventory.conf with at least the following parameter:
+
+server = http://nventory.myserver.com

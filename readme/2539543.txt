@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+A simple, but unfinished configuration tool for Chakra Linux. 
+
+CURRENTLY NOT USABLE!

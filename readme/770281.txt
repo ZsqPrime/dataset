@@ -1,0 +1,6 @@
+
+
+Project Description:
+A test JS/HTML app to decode Standard MIDI Files
+
+README:

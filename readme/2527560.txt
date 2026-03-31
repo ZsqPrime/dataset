@@ -1,0 +1,5 @@
+Project Description:
+Solutions to kata in KataTest repos.
+
+README:
+Various Solutions for: https://github.com/warmans/KataTest

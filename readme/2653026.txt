@@ -1,0 +1,12 @@
+Project Description:
+Artificial Neural Network Multilayer Perceptron in C++
+
+README:
+Multilayer Perceptron Artificial Neural Network
+===============================================
+
+###TODO's
+
+* [ ] Update programming style;
+* [ ] Better documentation;
+* [ ] Generalize network for general usage.

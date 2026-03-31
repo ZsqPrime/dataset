@@ -1,0 +1,42 @@
+Project Description:
+An Aperture Export Plugin for exporting to your 500px.com account.
+
+README:
+## What 500px Aperture Uploader Is ##
+
+[500px.com](http://500px.com/) is a pretty sweet photo sharing website, but they're taking their slow-ass time releasing an official Aperture Export plugin. This is a very basic Export plugin for Aperture that fills the gap in the meantime.
+
+You can see a screenshot of the plugin [here](http://cloud.github.com/downloads/iKenndac/500px-Aperture-Uploader/LatestScreenshot.png).
+
+## IMPORTANT ##
+
+This plugin is something I threw together in less than 48 hours one weekend, so it isn't packed with features and it may be buggy. If you have any feature requests or encounter any bugs, please report them in the [Issues tab](https://github.com/iKenndac/500px-Aperture-Uploader/issues) on the project's home on GitHub.
+
+## Donations ##
+
+If you love this plugin, feel free to give me the [gift of awesome](https://500px.com/gift) - it'd be very much appreciated! *Especially* if you work at 500px and you're coming here wondering where all your new customers came from! 
+
+## Requirements ##
+
+This plugin requires Aperture 3.x and a Mac running Mac OS X 10.7 (Lion) or later.
+
+## Downloading and Installing ##
+
+If you'd like to download the plugin without building, you'll find periodic snapshot builds in the [Downloads section](https://github.com/iKenndac/500px-Aperture-Uploader/downloads) of the project's home on GitHub.
+
+The snapshots are now distributed with an installer, so all you need to do is double-click the downloaded installer and push the "Install" button.
+
+## "Plug-In Failed To Load" When Trying To Use The Plugin ##
+
+Make sure you're not running Aperture in 32-bit mode - this plugin is 64-bit only. To do this, find Aperture on your hard drive, select it, choose "Get Info" from Finder's "File" menu and make sure the "Open in 32-bit mode" checkbox is NOT checked. Quit and relaunch Aperture and you should be good to go, as long as you're also running Mac OS X 10.7 (Lion) or higher.
+
+## Building ##
+
+1. Clone using `git clone --recursive git://github.com/iKenndac/500px-Aperture-Uploader.git` to make sure you get all the submodules too.
+2. If you got excited and cloned the repo before reading this, run `git submodule update --init` in the project's root directory to grab the submodules. If I get tickets about it not building and you haven't got the submodules checked out, you lose 5 internet points!
+3. You'll need Apple's [Aperture SDK](http://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20044).
+4. Build away!
+
+## Contact ##
+
+I'm `iKenndac` on most services you'd care to mention, including [Twitter](http://twitter.com/iKenndac) and [500px](http://500px.com/iKenndac).

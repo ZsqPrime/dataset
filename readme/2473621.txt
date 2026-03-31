@@ -1,0 +1,10 @@
+sudo python setup.py install
+
+
+
+
+Project Description:
+A system for translating string queries using formal grammar
+
+README:
+sudo python setup.py install

@@ -1,0 +1,8 @@
+An extremely limited QR Code generator to teach myself Haskell
+
+
+Project Description:
+Non-trivial Haskell learning project
+
+README:
+An extremely limited QR Code generator to teach myself Haskell

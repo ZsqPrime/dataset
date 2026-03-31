@@ -1,0 +1,6 @@
+
+
+Project Description:
+sinatra app that presents fb site data (events, photos, ...) on the web
+
+README:

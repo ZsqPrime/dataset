@@ -1,0 +1,18 @@
+This is a Repo for Agents being developed by our users.
+Each agent should be created in its own directory.
+
+Please see the Wiki page at 
+
+    http://www.eigenlabs.com/wiki/EigenD_Contrib/
+
+
+Project Description:
+EigenD Contributed Agents
+
+README:
+This is a Repo for Agents being developed by our users.
+Each agent should be created in its own directory.
+
+Please see the Wiki page at 
+
+    http://www.eigenlabs.com/wiki/EigenD_Contrib/

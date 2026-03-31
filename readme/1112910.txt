@@ -1,0 +1,12 @@
+# This is iphone app "Alarm Clock".
+# 
+# This is simple application letting you know it is time to wake up.
+
+
+Project Description:
+None
+
+README:
+# This is iphone app "Alarm Clock".
+# 
+# This is simple application letting you know it is time to wake up.

@@ -1,0 +1,11 @@
+### WordPress Plugin: Search (Without Pages)
+
+A simple plugin that hides pages in WordPress search results.
+
+Project Description:
+Hides pages from WordPress search results.
+
+README:
+### WordPress Plugin: Search (Without Pages)
+
+A simple plugin that hides pages in WordPress search results.

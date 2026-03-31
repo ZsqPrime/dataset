@@ -1,0 +1,5 @@
+Project Description:
+Plugin that exposes OpenMRS Reporting module web services through a Pentaho PDI plugin
+
+README:
+This is a working prototype of a PDI plugin that expose OpenMRS Reporting Web Services

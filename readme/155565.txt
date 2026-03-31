@@ -1,0 +1,24 @@
+bin2go
+======
+
+Converts binary files to go source code.
+
+Usage
+-----
+
+	bin2go [-p <package name>] [-l <bytes per line>] [-c] [-a] [-s <single_file.go>] <file 1> <file 2> ...
+
+
+Project Description:
+Converts binary files to Go source code
+
+README:
+bin2go
+======
+
+Converts binary files to go source code.
+
+Usage
+-----
+
+	bin2go [-p <package name>] [-l <bytes per line>] [-c] [-a] [-s <single_file.go>] <file 1> <file 2> ...

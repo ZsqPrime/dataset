@@ -1,0 +1,5 @@
+Project Description:
+String calculator TDD Kata in C#
+
+README:
+String calculator TDD kata in C#, MSTest and Moq.

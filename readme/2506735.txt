@@ -1,0 +1,10 @@
+# API Detran SC
+É uma API (duh) em Python para os prontuários do Detran SC
+ 
+
+Project Description:
+Uma API para os prontuários do Detran SC
+
+README:
+# API Detran SC
+É uma API (duh) em Python para os prontuários do Detran SC

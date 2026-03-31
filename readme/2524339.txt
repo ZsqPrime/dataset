@@ -1,0 +1,36 @@
+Project Description:
+Implementations of the FFT in different programming languages
+
+README:
+Fourier Transforms
+=====================
+
+This repo contains an implementation of the discrete fourier transform, and a
+fast fourier transform implementation using the Cooley-Tukey algorithm.
+
+The two functions in fourier.h are
+
+	void dft(double complex * fdom, double complex * tdom, int n);
+	void fft(double complex * fdom, double complex * tdom, int n);
+
+Each function calculates the transform for the time domain tdom and places
+the results in the complex double array fdom. The integer n is the size of the
+array. For accurate results for the fft, n must be a power of two.
+
+Benchmarking
+==============
+
+The two programs dftstream and fftstream read time-domain samples in from 
+standard input and output the transform to standard output. They each take 
+one argument, which is the size of the input array. The dftstream program
+uses the dft function and fftstream uses the fft function. You can compare 
+the performance of each like so.
+
+	time ./fftstream 65536 < ./sinwave.dat > /dev/null
+	time ./dftstream 65536 < ./sinwave.dat > /dev/null
+
+You will see that the fftstream program is significantly faster.
+
+I have also provided the fftwstream program, which has the same interface as
+the previous two executables, but uses the fftw library instead of mine to
+carry out the transform.

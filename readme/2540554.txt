@@ -1,0 +1,7 @@
+Project Description:
+Projects for Mobile Computing
+
+README:
+ios-apps Repository
+
+This repository holds projects for CS 281 Mobile Computing and is helping me learn git!

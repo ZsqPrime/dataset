@@ -1,0 +1,7 @@
+0.3.0 - new version using Flex SDK 4.6
+
+Project Description:
+Reddit client for Blackberry Playbook
+
+README:
+0.3.0 - new version using Flex SDK 4.6

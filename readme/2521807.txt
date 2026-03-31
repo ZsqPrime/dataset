@@ -1,0 +1,5 @@
+Project Description:
+Sept équipes mêlant journalistes, développeurs et designers s'affronteront à l'occasion d'une joute amicale.
+
+README:
+Project moved to https://github.com/tetalab/hackthepress

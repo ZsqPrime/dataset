@@ -1,0 +1,13 @@
+This is the opendemocracy.fi github repository.
+For more information go to http://www.opendemocracy.fi/
+
+A public release will be available on March 8th
+
+Project Description:
+The OpenDemocracy.fi project
+
+README:
+This is the opendemocracy.fi github repository.
+For more information go to http://www.opendemocracy.fi/
+
+A public release will be available on March 8th

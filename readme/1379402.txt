@@ -1,0 +1,19 @@
+We have changed to another repository.
+===========
+https://github.com/BSSeeker/BSseeker2
+===========
+This repository would not be updated then.
+===========
+
+
+
+Project Description:
+BS Seeker performs accurate and fast mapping of bisulfite-treated short reads.
+
+README:
+We have changed to another repository.
+===========
+https://github.com/BSSeeker/BSseeker2
+===========
+This repository would not be updated then.
+===========

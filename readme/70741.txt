@@ -1,0 +1,15 @@
+Bienvenido al proyecto de Ecommerce de GEx
+
+Este proyecto servira para tener un respaldo del código que utilizamos para desarrollar el E-commerce.
+
+Buen desarrollo.
+
+Project Description:
+Ecommerce de GEx
+
+README:
+Bienvenido al proyecto de Ecommerce de GEx
+
+Este proyecto servira para tener un respaldo del código que utilizamos para desarrollar el E-commerce.
+
+Buen desarrollo.

@@ -1,0 +1,82 @@
+A Javascript x86 emulator written in Coffeescript.
+
+Some of the code based on:
+	JPC: A x86 PC Hardware Emulator for a pure Java Virtual Machine
+	Release Version 2.0
+
+	A project from the Physics Dept, The University of Oxford
+
+	Copyright (C) 2007-2009 Isis Innovation Limited
+
+Build the Javascript source, use make (Coffeescript and coffeelint both need to be installed on your computer) and open index.html in the browser.
+If you want to have the minified version of the source, you can call make minify, however the minified jar from google will need to be downloaded seperately. The index.html file right now doesnt use the minified version!
+
+Please note this is work in progress, and right now it would not work at all :).
+
+If you want to run the emulator, there is debug information written into the console log, right now this cant be disabled. Right now the javascript sources will need to be build directly from the coffeescript source files, they arent in this repo.
+
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2 as published by
+the Free Software Foundation.
+
+The Terminal is written by http://www.masswerk.at/termlib/
+
+Building JavaScript Sources:
+To build the JavaScript sources from the coffeescript files you should use cake in the root directory of the git repository. Currently coffeescript 1.3.1 is used during development to build the sources, other versions are not tested. There are several options to build the file (Again, see cake), however cake build will be in most cases sufficient to test.
+
+
+Running tests:
+To run the tests included with the emulator you will need to download the QUnit files seperatly, and place them in the src/ directory. Without these files the emulator will not run at all.
+After that, open test.html in a browser (Not file the file:// protocol, the test will fail!)
+The tests are currently only tested in Chrome, it is known that the tests dont work in Opera (Causing high CPU load/memory usage).
+
+Generating start.js/kernel.js:
+wget http://bellard.org/jslinux/linuxstart.bin && php conv.php linuxstart.bin src/start.js start
+The kernel need to be generate in the same way, any Linux kernel based on Fabrice Bellards linuxstarter kernel should work. You should use the kernel variable name for the kernel.
+
+Due to a bug in firefox (https://bugzilla.mozilla.org/show_bug.cgi?id=686274) the kernel cant be loaded via this method. For now only Google Chrome is supported anyway, so it should not be a problem.
+
+
+Project Description:
+A Javascript x86 emulator written in Coffeescript.
+
+README:
+A Javascript x86 emulator written in Coffeescript.
+
+Some of the code based on:
+	JPC: A x86 PC Hardware Emulator for a pure Java Virtual Machine
+	Release Version 2.0
+
+	A project from the Physics Dept, The University of Oxford
+
+	Copyright (C) 2007-2009 Isis Innovation Limited
+
+Build the Javascript source, use make (Coffeescript and coffeelint both need to be installed on your computer) and open index.html in the browser.
+If you want to have the minified version of the source, you can call make minify, however the minified jar from google will need to be downloaded seperately. The index.html file right now doesnt use the minified version!
+
+Please note this is work in progress, and right now it would not work at all :).
+
+If you want to run the emulator, there is debug information written into the console log, right now this cant be disabled. Right now the javascript sources will need to be build directly from the coffeescript source files, they arent in this repo.
+
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2 as published by
+the Free Software Foundation.
+
+The Terminal is written by http://www.masswerk.at/termlib/
+
+Building JavaScript Sources:
+To build the JavaScript sources from the coffeescript files you should use cake in the root directory of the git repository. Currently coffeescript 1.3.1 is used during development to build the sources, other versions are not tested. There are several options to build the file (Again, see cake), however cake build will be in most cases sufficient to test.
+
+
+Running tests:
+To run the tests included with the emulator you will need to download the QUnit files seperatly, and place them in the src/ directory. Without these files the emulator will not run at all.
+After that, open test.html in a browser (Not file the file:// protocol, the test will fail!)
+The tests are currently only tested in Chrome, it is known that the tests dont work in Opera (Causing high CPU load/memory usage).
+
+Generating start.js/kernel.js:
+wget http://bellard.org/jslinux/linuxstart.bin && php conv.php linuxstart.bin src/start.js start
+The kernel need to be generate in the same way, any Linux kernel based on Fabrice Bellards linuxstarter kernel should work. You should use the kernel variable name for the kernel.
+
+Due to a bug in firefox (https://bugzilla.mozilla.org/show_bug.cgi?id=686274) the kernel cant be loaded via this method. For now only Google Chrome is supported anyway, so it should not be a problem.

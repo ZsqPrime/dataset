@@ -1,0 +1,11 @@
+Project Description:
+$HOME is where the .heartrc is
+
+README:
+Home is where the .heartrc is
+
+* init.vim - neovim config
+* kitty.conf - config for Kitty terminal
+* .p10k.zsh - Powerline10K config
+* .tmux.conf - tmux config
+* .zshrc - zshell/oh-my-zsh config

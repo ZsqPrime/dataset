@@ -1,0 +1,5 @@
+Project Description:
+code exercise or code mixed reading note of cs books
+
+README:
+Things here are all about exercise or code mixed with reading note

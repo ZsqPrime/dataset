@@ -1,0 +1,18 @@
+Project Description:
+Custom Analyzers for Email , Mobile Numbers , SSN's
+
+README:
+Contents
+-------------------------------------------------------------------------------------
+
+	Filters:
+	
+		-> Email Filter
+		-> Phone Number Filter
+		-> SSN Filter
+		
+	Analyzers:
+		
+		-> Email Analyzer
+		-> Phone Number Analyzer
+		-> SSN Analyzer

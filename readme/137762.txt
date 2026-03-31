@@ -1,0 +1,5 @@
+Description:
+A major-mode for editing AsciiDoc files in Emacs
+
+README:
+README not available

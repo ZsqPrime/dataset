@@ -1,0 +1,27 @@
+h1. *Editee, Code Editor Accessory for ExpressionEngine 2*
+
+p. Editee is a source code editor for Templates, Template Notes, Snippets, Global Variables, Database Query Form, User Message, Communicate, System Offline and Email Notification Templates textareas using EditArea script for ExpressionEngine 2 by "Webunder":http://webunder.com.au
+
+
+p. To use Editee accessory you will need to
+
+# Place *editee* folder into *third_party* folder  e.g. */system/expressionengine/third_party/editee/*
+# Put *edit_area* folder into publicly visible location e.g. */library/scripts/edit_area/*
+# If you placed *edit_area* folder elsewhere update location variable in *acc.editee.php* file on line 33
+# Activate Editee Accessory and enjoy colour coded code highlighting
+
+Project Description:
+Editee, Source Code Editor Accessory for ExpressionEngine 2
+
+README:
+h1. *Editee, Code Editor Accessory for ExpressionEngine 2*
+
+p. Editee is a source code editor for Templates, Template Notes, Snippets, Global Variables, Database Query Form, User Message, Communicate, System Offline and Email Notification Templates textareas using EditArea script for ExpressionEngine 2 by "Webunder":http://webunder.com.au
+
+
+p. To use Editee accessory you will need to
+
+# Place *editee* folder into *third_party* folder  e.g. */system/expressionengine/third_party/editee/*
+# Put *edit_area* folder into publicly visible location e.g. */library/scripts/edit_area/*
+# If you placed *edit_area* folder elsewhere update location variable in *acc.editee.php* file on line 33
+# Activate Editee Accessory and enjoy colour coded code highlighting

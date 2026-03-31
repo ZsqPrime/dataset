@@ -1,0 +1,6 @@
+Project Description:
+a app like twitter
+
+README:
+# sample application
+good good study and day day up:)

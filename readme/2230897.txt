@@ -1,0 +1,14 @@
+Note: This repository is deprecated. All content for the yesodweb.com website,
+including the book, is located at:
+
+https://github.com/yesodweb/yesodweb.com-content
+
+
+Project Description:
+Yesod Web Framework book
+
+README:
+Note: This repository is deprecated. All content for the yesodweb.com website,
+including the book, is located at:
+
+https://github.com/yesodweb/yesodweb.com-content

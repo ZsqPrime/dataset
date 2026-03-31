@@ -1,0 +1,54 @@
+// Copyright (C) 2012 by Jonas Jermann <jjermann2@gmail.com>
+
+
+RGT/RGF
+=======
+
+RGF stands for Recording Game Format. It extends the SGF file format
+(together with additional media files) with time-accurate recordings of 
+games or lectures. It is mainly intended for the game "Go" but in principle
+it should work as is for any game. Other games are not officially supported
+so far though. If you are interested whether it can be made to work
+for other games then please contact me <jjermann2@gmail.com>.
+
+Each added RGF file is referenced in a game-info node in the SGF file which
+also  contains all of its "header" information, stored in two new properties
+named "GS" (game stream) and "MS" (media stream). See DOCS/RGF.txt for a more
+detailed specification. We call such a node a game stream node.
+
+The syntax of an RGF file is very similar to the SGF syntax but it is not
+strictly backwards compatible to SGF. The (main) SGF file remains valid
+though. The SGF file, all RGF files and the media files are all bundled
+together in a .tar file with file extension .rgt. This "container" file
+format is named RGT. If it is further compressed with gzip (.tar.gz) the
+extension becomes .rgz.   
+
+
+Project Description:
+A format to store time-accurate recordings of go lectures/games together with optional media
+
+README:
+// Copyright (C) 2012 by Jonas Jermann <jjermann2@gmail.com>
+
+
+RGT/RGF
+=======
+
+RGF stands for Recording Game Format. It extends the SGF file format
+(together with additional media files) with time-accurate recordings of 
+games or lectures. It is mainly intended for the game "Go" but in principle
+it should work as is for any game. Other games are not officially supported
+so far though. If you are interested whether it can be made to work
+for other games then please contact me <jjermann2@gmail.com>.
+
+Each added RGF file is referenced in a game-info node in the SGF file which
+also  contains all of its "header" information, stored in two new properties
+named "GS" (game stream) and "MS" (media stream). See DOCS/RGF.txt for a more
+detailed specification. We call such a node a game stream node.
+
+The syntax of an RGF file is very similar to the SGF syntax but it is not
+strictly backwards compatible to SGF. The (main) SGF file remains valid
+though. The SGF file, all RGF files and the media files are all bundled
+together in a .tar file with file extension .rgt. This "container" file
+format is named RGT. If it is further compressed with gzip (.tar.gz) the
+extension becomes .rgz.

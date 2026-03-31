@@ -1,0 +1,7 @@
+Project Description:
+a minecraft Bukkit plug-in for Minecraft
+
+README:
+BandageMe for CraftBukkit Plugin
+=============
+"Just when waiting isn't enough"

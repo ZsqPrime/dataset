@@ -1,0 +1,15 @@
+# DDH Theme
+
+### [Wiki](https://github.com/justinhammack/bigFatNoob-blog/wiki)
+
+### [Bug Tracker](https://github.com/justinhammack/bigFatNoob-blog/issues)
+
+Project Description:
+DDH Theme
+
+README:
+# DDH Theme
+
+### [Wiki](https://github.com/justinhammack/bigFatNoob-blog/wiki)
+
+### [Bug Tracker](https://github.com/justinhammack/bigFatNoob-blog/issues)

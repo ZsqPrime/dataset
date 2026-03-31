@@ -1,0 +1,12 @@
+# Pdate
+
+Persian/Khorshidi date function for PHP.
+
+
+Project Description:
+persian date function for php
+
+README:
+# Pdate
+
+Persian/Khorshidi date function for PHP.

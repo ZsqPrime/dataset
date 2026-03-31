@@ -1,0 +1,15 @@
+Project Description:
+help casual carpoolers find each other
+
+README:
+This App explores the concept of reducing the uncertainty of casual-carpooling. Most of the time, riders wait in line without ever really knowing if they'll be getting a ride, and drivers may wait at pickup locations for riders without really knowing if there are any riders coming. 
+
+Features to be implemented include:
+- Using geolocation to detect whether a rider/driver is still available
+
+- Proximity based notifications to riders/drivers for spontaneous carpool matching (i.e, breaking free of the constraints of designated pickup locations)
+
+
+TODO:
+
+Let riders/drivers who are not yet at the locations to publish that they will be arriving shortly

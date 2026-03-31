@@ -1,0 +1,19 @@
+Project Description:
+greasemonky script to expand shorten twitter short links in tweet body
+
+README:
+HOMEPAGE
+========
+
+https://github.com/seenxu/twitter-url
+
+KNOWN ISSUES
+============
+
+* url on single tweet page won't work, because twitter hasn't resolve them automatically 
+* if the links is not expanded as expected, please try to reload the page
+
+COMPATIBILITY
+=============
+
+Tested only on Linux with Firefox 10

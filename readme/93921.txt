@@ -1,0 +1,7 @@
+project moved to https://github.com/unistorage/gridfs-serve
+
+Project Description:
+GridFS http server
+
+README:
+project moved to https://github.com/unistorage/gridfs-serve

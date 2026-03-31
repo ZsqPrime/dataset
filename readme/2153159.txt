@@ -1,0 +1,27 @@
+
+背景画像の大きさは 1900x1200 です。
+
+立ち上げ方
+
+$ git clone https://github.com/monoooki/nurupo.git
+
+$ cd nurupo
+
+$ bundle
+
+$ bundle exec rackup
+
+localhost:9292にアクセス。
+
+ぬる舗のロゴのフォント
+http://chiphead.jp/font/htm/cinecaption.htm
+
+*
+
+確認用のURLはこちらです。
+http://monoooki.github.com/nurupo/public/index.html (gh-pagesブランチにもプッシュすると見れます)
+http://nurupo.heroku.com もあわせてどうぞ。
+
+出前メニューも追加されました。
+https://github.com/monoooki/nurupo/blob/master/public/nurupo_menu/prev.jpg
+

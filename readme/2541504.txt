@@ -1,0 +1,8 @@
+Project Description:
+A lightweight featureful bittorrent tracker
+
+README:
+This software has moved to
+https://codeberg.org/Firedrake/nobraketracker/
+
+See https://sfconservancy.org/GiveUpGitHub/ for why.

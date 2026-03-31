@@ -1,0 +1,9 @@
+#Slicedup Users
+__Version__: 0.3 (development)
+
+Project Description:
+User process library for Lithium. More users, less work.
+
+README:
+#Slicedup Users
+__Version__: 0.3 (development)

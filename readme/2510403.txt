@@ -1,0 +1,120 @@
+/**
+ * JBoss, Home of Professional Open Source. Copyright 2012, Red Hat, Inc., and
+ * individual contributors as indicated by the @author tags. See the
+ * copyright.txt file in the distribution for a full listing of individual
+ * contributors.
+ * 
+ * This is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ * 
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this software; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA, or see the FSF
+ * site: http://www.fsf.org.
+ */
+ 
+ 
+ This fork of the JBoss web project aims to provide a new web connector based on
+ Java-SE 7 NIO2 features(asynchronous channels) . All old connectors remain available
+ for use. To build this project, please refer to the file BUILDING.txt.
+ This project is intended to be used with JBoss AS 7.
+ 
+ Notes:
+  1) To be able to build this project you need JDK-1.7 since we use Java 7 features.
+     You can download it from the following link:
+     
+     http://www.oracle.com/technetwork/java/javase/downloads/index.html
+      
+  2) To test the new connector (NIO2 connector), download JBoss Application Server 7 
+     from the link below, note that we tested this connector using JBoss AS 7.1.1 
+     Final:
+	 
+	 JBoss AS download link: http://www.jboss.org/jbossas/downloads
+    	 
+  3) Copy the result jars ( $PROJECT_HOME/output/jars/) in the directory
+     « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/ ».
+     
+  4) Edit the file « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/module.xml » to
+     add the earlier copied jars as resources as replacement of the old ones.
+     
+  5) Copy the files listed below in the same directory and rename them to the earlier 
+     copied jars within the extension « .index »
+  
+     * « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/jbossweb-7.0.13.Final.jar.index »
+     * « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/jasper-jdt-7.0.3.Final.jar.index »
+     
+     Example: if the jar copied is named « jbossweb.jar », the index file will be 
+              named « jbossweb.jar.index »
+     
+  6) Refer to the JBoss AS 7 guide to configure and use the new connector.
+     http://docs.jboss.org/jbossweb/7.0.x/config/http.html
+
+
+Project Description:
+
+
+README:
+/**
+ * JBoss, Home of Professional Open Source. Copyright 2012, Red Hat, Inc., and
+ * individual contributors as indicated by the @author tags. See the
+ * copyright.txt file in the distribution for a full listing of individual
+ * contributors.
+ * 
+ * This is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ * 
+ * This software is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this software; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA, or see the FSF
+ * site: http://www.fsf.org.
+ */
+ 
+ 
+ This fork of the JBoss web project aims to provide a new web connector based on
+ Java-SE 7 NIO2 features(asynchronous channels) . All old connectors remain available
+ for use. To build this project, please refer to the file BUILDING.txt.
+ This project is intended to be used with JBoss AS 7.
+ 
+ Notes:
+  1) To be able to build this project you need JDK-1.7 since we use Java 7 features.
+     You can download it from the following link:
+     
+     http://www.oracle.com/technetwork/java/javase/downloads/index.html
+      
+  2) To test the new connector (NIO2 connector), download JBoss Application Server 7 
+     from the link below, note that we tested this connector using JBoss AS 7.1.1 
+     Final:
+	 
+	 JBoss AS download link: http://www.jboss.org/jbossas/downloads
+    	 
+  3) Copy the result jars ( $PROJECT_HOME/output/jars/) in the directory
+     « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/ ».
+     
+  4) Edit the file « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/module.xml » to
+     add the earlier copied jars as resources as replacement of the old ones.
+     
+  5) Copy the files listed below in the same directory and rename them to the earlier 
+     copied jars within the extension « .index »
+  
+     * « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/jbossweb-7.0.13.Final.jar.index »
+     * « $JBOSS_INSTALL_DIR/modules/org/jboss/as/web/main/jasper-jdt-7.0.3.Final.jar.index »
+     
+     Example: if the jar copied is named « jbossweb.jar », the index file will be 
+              named « jbossweb.jar.index »
+     
+  6) Refer to the JBoss AS 7 guide to configure and use the new connector.
+     http://docs.jboss.org/jbossweb/7.0.x/config/http.html

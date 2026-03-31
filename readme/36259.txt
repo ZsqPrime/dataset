@@ -1,0 +1,4 @@
+Project Description:
+A Windows Phone 7 Client for accessing user information from VBForums.com
+
+README:

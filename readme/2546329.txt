@@ -1,0 +1,4 @@
+Project Description:
+JTextAreaAppender is a custom Log4j appender implementation to show Log4j messages on swing JTextArea
+
+README:

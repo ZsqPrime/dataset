@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+06.09.2011 1751 initialising the repo
+10.09.2011 0923 added the basic memdroid project files

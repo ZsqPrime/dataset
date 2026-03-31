@@ -1,0 +1,14 @@
+The branches are:
+master: the official project AVO-version of the code-base on github
+release-$tag: Latest stable release running at: http://giseis.alaska.edu/AVO/avoseis/volc2/volc2/index.php (Chinook)
+develop: Latest bleeding edge development version, hosted at http://giseis.alaska.edu/AVO/avoseis/volc2_dev/volc2/index.php (Chinook)
+
+
+Project Description:
+VOLC2 - a Google Maps app for earthquakes and seismic stations
+
+README:
+The branches are:
+master: the official project AVO-version of the code-base on github
+release-$tag: Latest stable release running at: http://giseis.alaska.edu/AVO/avoseis/volc2/volc2/index.php (Chinook)
+develop: Latest bleeding edge development version, hosted at http://giseis.alaska.edu/AVO/avoseis/volc2_dev/volc2/index.php (Chinook)

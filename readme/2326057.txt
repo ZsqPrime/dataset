@@ -1,0 +1,136 @@
+Project Description:
+A multiplayer tetris
+
+README:
+* Tetristar
+Tetristar is an extensible multiplayer tetris game, mainly inspired
+from Tetrinet and TetrisFriends. The aim of this project is to produce
+a high quality, featureful, free and open source, portable tetris
+game.
+
+Tetristar is licensed under the 2-clause BSD license.
+
+** Requirements
+Tetristar requires the following libraries:
+  - [[http://enet.bespin.org/][ENet]]
+  - [[http://developer.gnome.org/glib/][GLib]]
+  - [[http://www.gtk.org/][Gtk 2]]
+  - [[http://www.cairographics.org/][Cairo]]
+  - [[https://live.gnome.org/LibRsvg][LibRsvg]]
+  - [[http://www.lua.org/][Lua]]
+
+Those libraries should be available in most operating systems. For
+example, in Debian based systems, the corresponding packages are:
+=libenet-dev=, =libglib2.0-dev=, =libgtk2.0-dev=, =libcairo2-dev=,
+=librsvg2-dev=, =liblua5.1-0-dev=.
+
+To build tetristar, [[http://www.scons.org/][SCons]] is also needed.
+
+** Compiling Tetristar
+To build all the components of tetristar, just launch =scons= at the
+root of tetristar's directory. To only build the server, launch =scons
+server= and to only build the clients, launch =scons clients=.
+
+If you don't want to install =check=, you can build the client and the
+server without launching the tests with =scons clients server=.
+
+If Scons reports that a library is missing while it is installed, you
+might need to specify the name of the =pkg-config= description file of
+this lib. For example, if you have Lua 5.1, you might want to launch
+=scons LUA='lua5.1'=
+** Running Tetristar
+*** Server
+The server executable is in the =server/= subdirectory. Its behaviour
+can be configured in the =config.lua= file in the same directory. By
+defaults, it listens on =localhost:12345= and the administrator's
+password is =foo=. The available configuration options are:
+
+  - =config.server=: the address on which to listen (=localhost= by
+    default)
+  - =config.port=: the port on which to listen (=12345= by default)
+  - =config.plugins=: the list of plugins to load
+  - =config.password=: the administrator's password (=foo= by default)
+  - =config.datadir=: the directory where data files are saved (=/tmp=
+    by default)
+
+Once launched, one can send a =SIGUSR1= signal to the server to reload
+all the plugins.
+*** Clients
+For the moment there only exists two clients for tetristar: one in
+GTK (in =clients/gtk/=), the other in command line only used for
+debugging (in =clients/simple/=).
+
+To launch the GTK client, just launch the executable from
+=clients/gtk=. The client's layout is composed of two parts:
+  - The /context/, where the current state of the tetris game is displayed
+  - The /chat/, where the players can talk and send commands
+
+To switch the focus between those two parts, the =TAB= key should be
+used. When the context has the focus, the player can move its pieces,
+etc. When the chat has the focus, the player can type messages or
+commands.
+
+The keybinds of the context are the following:
+  - The arrow keys manipulates the piece
+  - The space key drops a piece
+  - The =c= swap the current piece with the kept piece
+  - The =d= key drops a bonus
+  - The number keys (=1=, =2=, ...) send a bonus to the corresponding
+    player
+
+The commands currently supported are the following:
+  - =/password <pass>=: authentificates to the server as administrator
+  - =/start=: start a new game if there is no current game
+  - =/stop=: stop the current game
+  - =/disconnect=: disconnect from the server
+  - =/quit=: quit the client
+
+** Contributing
+This section describe the architecture of Tetristar, for those who
+would like to contribute.
+
+The protocol used between the server and the clients is described in
+=protocol.org=.
+
+Tetristar's server and GTK client both use =libtetris= to store the
+current state of the game. The complete state is known by the server, and
+the clients only know a part of this state (eg. they don't know what
+bonuses the other players have). All the state computations are done
+by the server (this is different than tetrinet, where it is the
+clients that does the computations), thus preventing cheating from
+malicious clients.
+
+The main features of the server are written with /plugins/. Plugins
+consists of lua functions registered to events. When the event occur,
+they are called with the appropriate parameters and can manipulate the
+server's state or send data to the clients. The following plugins
+exists and are activated by default:
+  - =admin.lua=: allow players to authenticate as administrator, to be
+    able to start or stop a game
+  - =bonus.lua=: implement the bonuses (called /specials/ in tetrinet)
+  - =connection.lua=: handle clients connection and disconnection
+  - =field.lua=: implement various helper functions manipulating the
+    matrix
+  - =game.lua=: the most important plugin, handle the player events
+    (drop, move, rotate, ...)
+  - =im.lua=: implement the instant messaging system to allow the
+    players to chat during a game
+  - =kept.lua=: implement the /kept/ piece and handle the related messages
+  - =piece.lua=: implement helper functions to manipulate pieces
+  - =stats.lua=: compute stats during the game and send them as server
+    messages to the clients at the end of a game
+  - =utils.lua=: some helper functions
+  - =winlist.lua=: implement the winlist, that keep tracks of the
+    most winning players
+
+The GTK client also uses plugins to handle the data sent by the
+server:
+  - =bonus.lua=: handles the bonuses (print messages when they are
+    used, and display them)
+  - =chat.lua=: handle the messages to be printed in the chat
+  - =field.lua=: handle the changes in the field sent by the server
+    and compute the pieces shadows
+  - =game.lua=: handle the game status
+  - =kept.lua=: handle the kept piece
+  - =piece.lua=: implement piece transformations, used to compute the shadows
+  - =utils.lua=: implement utils to parse the field sent by the server

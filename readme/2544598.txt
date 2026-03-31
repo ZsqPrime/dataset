@@ -1,0 +1,10 @@
+Project Description:
+An introduction to TI MSP430 Launchpad programming
+
+README:
+Launchpad intro av Albert Skog
+
+1. Blink
+2. Button
+3. Blink + Button
+4. Blink + Button + Timer

@@ -1,0 +1,14 @@
+Project Description:
+A comparison of two search algorithms used to search queries in large datasets: TAAT (term at a time) and DAAT (document at a time).
+
+README:
+A comparison of two search algorithms: TAAT (term at a time) and DAAT (document at a time).
+
+Search = For a given query (comprised of weighted terms) return the most relevant documents based on term frequency.
+
+For more information:
+http://bit.ly/ylLDh1
+
+Co-authors:
+Ruchi Varshney
+Harsh Nayyar

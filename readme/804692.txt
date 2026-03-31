@@ -1,0 +1,13 @@
+# jQuery Countdown Timer
+
+Please see the [example page](http://ro31337.github.io/jQuery-Countdown-Timer/).
+
+
+
+Project Description:
+jQuery countdown timer plugin (2011)
+
+README:
+# jQuery Countdown Timer
+
+Please see the [example page](http://ro31337.github.io/jQuery-Countdown-Timer/).

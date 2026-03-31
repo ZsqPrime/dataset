@@ -1,0 +1,5 @@
+Project Description:
+None
+
+README:
+This is a sample project used to demonstrate how to use CommonJS modules to organize the code in Titanium project.

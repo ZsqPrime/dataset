@@ -1,0 +1,15 @@
+Project Description:
+Displays a fortune as a notification using the GNOME libnotify library.
+
+README:
+fortuner
+========
+
+Fortuner is a program that runs fortune and displays its output
+in a notification bubble.
+
+Original Author: Patrick MacArthur
+
+Usage:
+
+    fortuner

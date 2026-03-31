@@ -1,0 +1,17 @@
+Project Description:
+Solve a Picross puzzle for the DS using a webcam
+
+README:
+Names: Calvin Lee, Michael Bailey, Jane E
+
+Webcam-based solver for the DS game, Picross.
+
+Consists of the following stages in order:
+
+GetPicture
+AntiSkew
+DetectGrid
+FindNumbers
+OCRNumbers
+PicrossSolver
+DisplayPuzzle

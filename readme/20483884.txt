@@ -1,0 +1,52 @@
+Project Description:
+A tool for overclocking Asus eee PC 901 (linux kernel module)
+
+README:
+This kernel module is intended mainly for eee PC 901 over/underclocking. In the
+future it will hopefuly support cpufreqd and could be used for CPU speed
+stepping and smart power control etc.
+
+Maximum allowed CPU speed is now set to (around) 1806 MHz (actual could be
+little lower). Little bit smarter fan control for higher frequencies is now
+available but it could be still smarter.
+I have heard that 2 GHz is achievable with some tuning and manual fan
+control so I keep hacking whenever I have sufficient time slots
+available.
+
+Other things I have plans for is improving battery performance while on sleep
+mode. Motivation for this comes from the fact that eee PC's EC doesn't really
+seem to do much to save energy while the laptop is in sleep mode and I think
+there is still some unused tricks to get this better.
+
+The module itself is in the module/ directory.  To build and insert the
+module into your kernel:
+    cd module
+    make
+    insmod eeefsb.ko
+
+Note: Kernel has to be loaded with acpi_enforce_resources=lax option and
+      it could be necessary to add i2c-i801 into /etc/modules.
+
+Usage:  once the module has been inserted, several files will appear in the
+/proc/eeefsb directory:
+
+    cpu_freq    - Set/Read current cpu clock speed (safety limits are set from options.h)
+    bus_control - Reading this file will return the current FSB and voltage settings,
+                  while writing to this file will change the FSB and voltage.  The
+                  format of this file is three integers:
+                  <CPU PLL N multiplier>  <CPU PLL M divisor> <PCI PLL M divider>  <CPU voltage>
+                  CPU voltage is 0 for "low" and 1 for "high".
+    fan_rpm     - The current speed of the fan in revolutions per minute.
+    fan_speed   - The current speed (0-100%) the fan is set to.
+    fan_manual  - When 0, the embedded controller turns the fan on and off
+                  according to the CPU temperature.  When 1, writing to
+                  fan_speed will change the speed of the fan;  the embedded
+                  controller makes no changes on its own.
+    temperature - The temperature of the CPU (in degrees C).
+
+Note that when the fan is in manual mode, IT IS POSSIBLE TO DESTROY YOUR CPU!
+It appears that the embedded controller will happily allow the temperature to
+reach 90C (the CRITICAL temperature of the CPU), at which point a thermal
+shutdown will be initiated.  This will turn the fan to 100%, throttle the CPU,
+and probably even shutdown the machine.  Your CPU may or may not survive this
+treatment...

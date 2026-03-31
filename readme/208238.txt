@@ -1,0 +1,34 @@
+Another attempt at writing a mud.
+
+* Storage system done
+
+TODO:
+
+* A gamestate object
+  + This would hold things like the the player name list, and all the preamble such as titlescreen and motd
+	+ By that I mean ids of storage objects which hold them
+* Player support
+* Networking
+* Presentation
+* Commands
+* Methods to add things to the game
+
+
+Project Description:
+Another attempt at a mud
+
+README:
+Another attempt at writing a mud.
+
+* Storage system done
+
+TODO:
+
+* A gamestate object
+  + This would hold things like the the player name list, and all the preamble such as titlescreen and motd
+	+ By that I mean ids of storage objects which hold them
+* Player support
+* Networking
+* Presentation
+* Commands
+* Methods to add things to the game

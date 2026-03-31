@@ -1,0 +1,9 @@
+Project Description:
+Plugin for the Perl template toolkit which extracts information from an HTTP User-Agent string
+
+README:
+
+    Template::Plugin::HTTP::UserAgent
+
+This module is a plugin for use with the Template Toolkit.
+It is used to extract information from an HTTP User-Agent string.

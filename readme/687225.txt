@@ -1,0 +1,79 @@
+= Clocking Tool
+
+A modular clocking tool for ChiliProject to make entering time fast and easy
+
+== Features
+
+TODO: fill in features
+
+== Getting the plugin
+
+A copy of the plugin can be downloaded from {Little Stream Software}[https://projects.littlestreamsoftware.com/projects/chiliproject_clocking/files] or from {GitHub}[http://github.com/edavis10/chiliproject_clocking]
+
+
+== Installation and Setup
+
+1. Follow the ChiliProject plugin installation steps at: https://www.chiliproject.org/projects/chiliproject/wiki/Plugin_Install
+
+== Usage
+
+TODO: Add usage
+
+== License
+
+This plugin is licensed under the GNU GPL v2.  See COPYRIGHT.txt and GPL.txt for details.
+
+== Project help
+
+If you need help you can contact the maintainer at the Bug Tracker.  The bug tracker is located at  https://projects.littlestreamsoftware.com
+
+== Running Jasmine
+
+Running `rake jasmine` will start a browser for the Jasmine tests.
+
+You might need to load the main ChiliProject Gemfile with bundler and bundle exec though:
+
+    BUNDLE_GEMFILE=../../../Gemfile bundle exec rake jasmine
+
+
+
+Project Description:
+(Alpha) Time clocking widget
+
+README:
+= Clocking Tool
+
+A modular clocking tool for ChiliProject to make entering time fast and easy
+
+== Features
+
+TODO: fill in features
+
+== Getting the plugin
+
+A copy of the plugin can be downloaded from {Little Stream Software}[https://projects.littlestreamsoftware.com/projects/chiliproject_clocking/files] or from {GitHub}[http://github.com/edavis10/chiliproject_clocking]
+
+
+== Installation and Setup
+
+1. Follow the ChiliProject plugin installation steps at: https://www.chiliproject.org/projects/chiliproject/wiki/Plugin_Install
+
+== Usage
+
+TODO: Add usage
+
+== License
+
+This plugin is licensed under the GNU GPL v2.  See COPYRIGHT.txt and GPL.txt for details.
+
+== Project help
+
+If you need help you can contact the maintainer at the Bug Tracker.  The bug tracker is located at  https://projects.littlestreamsoftware.com
+
+== Running Jasmine
+
+Running `rake jasmine` will start a browser for the Jasmine tests.
+
+You might need to load the main ChiliProject Gemfile with bundler and bundle exec though:
+
+    BUNDLE_GEMFILE=../../../Gemfile bundle exec rake jasmine

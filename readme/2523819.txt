@@ -1,0 +1,73 @@
+Project Description:
+Lenovo Ideapad z370 configuration for slackware64
+
+README:
+Lenovo Ideapad z370 configuration for slackware64
+=================================================
+
+Contents
+--------
+* Kernel configuration
+* Initrd configuration (invoked by ```mkinitrd -c -k <kernel revision> -F ```)
+* Modified rc-files
+* Local and global profile scripts
+* Modified xwmconfig/xdm scripts which add an option for pekwm
+* Machine information
+* Etc
+
+This is a work in progress.
+
+Functionality
+=============
+Quick summary
+-------------
+Resistive touch buttons are buggy but apart from that, this laptop works quite well. 
+I don't know yet how the hybrid stuff is supposed to function, but it would seem 
+(although I can be wrong) that the intel graphics are performing quite spectacularly - 
+stellarium runs att full vsync framerate!
+
+Working
+-------
+* Networking
+ * Wireless (```ath9k```, ```cfg80211```) - hardware kill toggle also works
+* Video
+ * Intel graphics (```i915```)
+* Power-management
+ * Hibernate
+ * Suspend
+ * Disable screen when lid closes
+ * Battery & AC status
+ * Ondemand CPU frequency scaling
+* Multimedia
+ * Memory card reader (```rts5139```)
+ * Webcam (```uvcvideo```)
+ * Audio
+ * FN-key combinations
+<ul><li>LCD brightness keys seem to work (even without ```ideapad_laptop```) on the hardware level
+<li>WiFi toggle, Volume, Play/Pause, Prev/Next etc (```XF86WIFI```, ```XF86AudioLowerVolume```, ```XF86AudioRaiseVolume```, ```XF86AudioPlay``` etc)</li></ul>
+ * The small button to the right of the power-button works and identifies as ```XF86Launch1```
+ * Synaptics touchpad
+<ul><li>Multitouch works, Sidescroll works (with ```xinput --set-prop "SynPS/2 Synaptics TouchPad" "Synaptics Edge Scrolling" 1 1 1```)
+
+Partially working
+-----------------
+* Networking
+ * Wired (```r8169```)
+<ul><li>Works, but exhibits high packet loss on new connections during high bandwidth load</li></ul>
+* Multimedia
+ * Hotkeys (resistive-touch buttons) - buggy. See [this video](http://www.youtube.com/watch?v=cx2vYzSv0mo)
+
+Not working
+-----------
+* Video
+ * [Hybrid graphics](http://linux-hybrid-graphics.blogspot.com) using the NVIDIA gpu for accelerated graphics
+<ul><li>GPU switch appears to do nothing</li></ul>
+
+Untested
+--------
+* Networking
+ * Bluetooth (detected but untested)
+* Multimedia
+ * Microphone
+ * HDMI Audio/Video output
+ * eSATA port

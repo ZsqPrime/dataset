@@ -1,0 +1,5 @@
+Project Description:
+n qeeens problem.
+
+README:
+solve of n queens.

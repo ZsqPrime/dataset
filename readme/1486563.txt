@@ -1,0 +1,9 @@
+# How to send data to specific user using node.js and socket.io
+
+
+
+Project Description:
+send data from the server to the client and displayed to the user with ID = 1
+
+README:
+# How to send data to specific user using node.js and socket.io

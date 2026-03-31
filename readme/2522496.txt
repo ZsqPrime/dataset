@@ -1,0 +1,14 @@
+Project Description:
+A ray casting graphics based renderer. Now with 100% more turning!
+
+README:
+
+Requirements:
+	SDL
+	ncurses # for output window.
+
+	linux or OS X. wouldn't go so far as to say *nix
+   	clang or gcc (or any other compiler that accepts the same compiler flags as in my Makefile)
+
+To build:
+   edit $CC in Makefile

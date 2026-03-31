@@ -1,0 +1,13 @@
+DPE Baseline
+============
+
+A WordPress Starter Theme Stub.
+
+Project Description:
+A WordPress Theme Starter/Stub 
+
+README:
+DPE Baseline
+============
+
+A WordPress Starter Theme Stub.

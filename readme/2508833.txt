@@ -1,0 +1,13 @@
+Telestrekoza post parsing plugin
+
+Wordpress plugin for the telestrekoza.com
+
+
+
+Project Description:
+Telestrekoza post parsing plugin
+
+README:
+Telestrekoza post parsing plugin
+
+Wordpress plugin for the telestrekoza.com

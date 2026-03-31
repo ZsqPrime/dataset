@@ -1,0 +1,5 @@
+Project Description:
+Technology by Design website and application
+
+README:
+Technology by Design is an IT support company located in Billings, MT.  This application is designed by John Pearson.  The purpose of this application is to provide a public access point to the company and to provide online services to the clients of Technology by Design.

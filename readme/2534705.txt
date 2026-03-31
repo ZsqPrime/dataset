@@ -1,0 +1,15 @@
+Project Description:
+Ghetto Version Control System Library
+
+README:
+GVCLib - Ghetto Version Control System
+
+by Michael Craft
+
+
+
+"Ghetto" distributed version control system based solely on MD5 hashes written in Java.
+
+An attempt to make a git for large binary repositories.
+
+Requires a client to be useful. (GVC is the command line client.)

@@ -1,0 +1,6 @@
+
+
+Project Description:
+Qt4 gui application generating plants using mathematical functions
+
+README:

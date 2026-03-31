@@ -1,0 +1,16 @@
+
+django-profilebase
+==================
+
+Tools for building a custom Profile class with authentication.
+
+
+Project Description:
+Tools for building a custom Profile class with authentication
+
+README:
+
+django-profilebase
+==================
+
+Tools for building a custom Profile class with authentication.

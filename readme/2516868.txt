@@ -1,0 +1,8 @@
+Yo This is my solver in progress.
+
+
+Project Description:
+A KenKen solver in Haskell
+
+README:
+Yo This is my solver in progress.

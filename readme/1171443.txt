@@ -1,0 +1,61 @@
+Arduino Developing Base Project
+
+I've started this project in order to be able to easily start develop and deploy arduino application on different environments.
+It exports a base Makefile and ANT tasks.
+Any help or suggestion would be greatly appreciated.
+
+USEFUL LINKS
+
+http://arduino.cc/
+http://www.nongnu.org/avr-libc/user-manual/index.html
+
+
+DEPENDENCIES
+Arduino sdk contains all you need: avr and avrdude (for both linux and windows)
+           
+HOW TO USE    
+see the wiki for details or check the example directory: https://github.com/arons/ArduinoDevel/tree/master/example
+
+
+
+
+
+
+
+Project Description:
+easy tool to start and build arduino projects in eclipse
+
+README:
+Arduino Developing Base Project
+
+
+
+I've started this project in order to be able to easily start develop and deploy arduino application on different environments.
+
+It exports a base Makefile and ANT tasks.
+
+Any help or suggestion would be greatly appreciated.
+
+
+
+USEFUL LINKS
+
+
+
+http://arduino.cc/
+
+http://www.nongnu.org/avr-libc/user-manual/index.html
+
+
+
+
+
+DEPENDENCIES
+
+Arduino sdk contains all you need: avr and avrdude (for both linux and windows)
+
+           
+
+HOW TO USE    
+
+see the wiki for details or check the example directory: https://github.com/arons/ArduinoDevel/tree/master/example

@@ -1,0 +1,70 @@
+Faulty.lib is a dynamic linker with the ability to load libraries
+from Zip archives. At the moment, it only works on ELF Linux systems.
+
+You can build it with the following commands:
+  autoreconf
+  ./configure
+  make
+
+Automated tests can be run with `make check'.
+
+The result of a build is a static library that provides __wrap_dlopen,
+__wrap_dlerror, __wrap_dlsym, __wrap_dlclose, __wrap_dladdr functions
+with the same prototypes as the dl* family of functions.
+
+Loading a library from a Zip archive is achieved by passing a specially
+crafted path name to __wrap_dlopen.
+Its form is `/path/to/file.zip!/subdir/library.so'.
+
+On-demand decompression of the libraries is also possible if, instead
+of being normally zipped, they are first "szipped", then stored in the
+Zip archive. So, instead of doing the following to put a library in the
+Zip archive:
+  zip file.zip library.so
+
+you first need to use the "szip" tool from the linker/ directory:
+  linker/szip library.so library.so.new && mv library.so.new library.so
+
+and store the resulting file in the zip:
+  zip -0 file.zip library.so
+
+The library may then be loaded with the same path form as if it were
+normally compressed.
+
+
+Project Description:
+Dynamic linker for compressed libraries, with on-demand decompression
+
+README:
+Faulty.lib is a dynamic linker with the ability to load libraries
+from Zip archives. At the moment, it only works on ELF Linux systems.
+
+You can build it with the following commands:
+  autoreconf
+  ./configure
+  make
+
+Automated tests can be run with `make check'.
+
+The result of a build is a static library that provides __wrap_dlopen,
+__wrap_dlerror, __wrap_dlsym, __wrap_dlclose, __wrap_dladdr functions
+with the same prototypes as the dl* family of functions.
+
+Loading a library from a Zip archive is achieved by passing a specially
+crafted path name to __wrap_dlopen.
+Its form is `/path/to/file.zip!/subdir/library.so'.
+
+On-demand decompression of the libraries is also possible if, instead
+of being normally zipped, they are first "szipped", then stored in the
+Zip archive. So, instead of doing the following to put a library in the
+Zip archive:
+  zip file.zip library.so
+
+you first need to use the "szip" tool from the linker/ directory:
+  linker/szip library.so library.so.new && mv library.so.new library.so
+
+and store the resulting file in the zip:
+  zip -0 file.zip library.so
+
+The library may then be loaded with the same path form as if it were
+normally compressed.

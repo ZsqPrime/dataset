@@ -1,0 +1,346 @@
+Project Description:
+
+
+README:
+h1. Tint Browser Sample Addon Project
+
+This project is licensed under the "Apache 2":http://www.apache.org/licenses/LICENSE-2.0 license.
+
+This is a sample project for writing an addon for "Tint Browser":https://github.com/Anasthase/TintBrowser. In order to build it, it is also needed to clone the "Tint Browser Addon Framework Library":https://github.com/Anasthase/TintBrowserAddonFrameworkLibrary project.
+
+h1. How to write an addon
+
+h2. Get the sources
+
+Clone this project and the "Tint Browser Addon Framework Library":https://github.com/Anasthase/TintBrowserAddonFrameworkLibrary project.
+
+h2. Addon identity
+
+Change the application package name of the project. Right-click on your project and select ??Android tools > Rename Application Package??. Then rename the package in the src folder to match the application package name just given.
+
+Open the ??AndroidManifest.xml?? file. From the line:
+
+bq. &lt;category android:name=&quot;org.tint.intent.category.CHANGE_THIS_TO_YOUR_ADDON_NAME&quot; /&gt;
+
+Change ??CHANGE_THIS_TO_YOUR_ADDON_NAME?? for a unique string identifying your addon.
+
+Customize your addon identity by providing icons in the ??res/drawable-*?? folders. Open the ??strings.xml?? file in the ??res/values?? folder, and setup the mandatory strings in it. Theses strings will be displayed to the user in the main application.
+
+h2. Addon architecture
+
+Addons are called by Tint Browser on specific events. Addons can answers by a list of actions which are performed by the main application. Addons cannot manipulate themselves objects from the main application.
+
+h2. Implementation
+
+The main class to implement is ??Addon.java?? in the addon project.
+
+h3. Callbacks
+
+Callbacks are used to define to witch events an addon will be notify off. This definition is mandatory. This is done for two reasons:
+# To avoid calls to unused callbacks. When a call to addons must be made, the main application go through the list of active addons, check for each of them if they have defined the current callback, and if yes, call the addon and process its answer. Registering callbacks allow to avoid unnecessary calls to addons;
+# To display to user in the addons details view what an addon is notified of;
+
+Defining callbacks is made in the ??getCallbacks()?? method. Default implementation return 0, which means no callbacks. Change the return value to the callbacks you want to use, separated by a | character.
+
+Example:
+
+bq. @Override
+	public int getCallbacks() throws RemoteException {
+	    return Callbacks.PAGE_FINISHED | Callbacks.HAS_SETTINGS_PAGE;
+	}
+
+In this example, the addon will be notified when a page has finished to be loaded, and provide a settings page. For a list of callbacks, see "Available callbacks":#availablecallbacks.
+
+h3. Performing actions on the browser
+
+The browser can perform actions defined by an addon. Performing actions is available on callbacks where the return type is ??List&lt;Action&gt;??. To make to browser perform actions, create a list of ??Action??, fill it, and return it. The action will be performed in the order they are in the list.
+
+Example:
+
+bq. @Override
+	public List&lt;Action&gt; onPageFinished(String tabId, String url) throws RemoteException {		
+				List&lt;Action&gt; response = new ArrayList&lt;Action&gt;();
+				response.add(new LoadUrlAction(&quot;http://www.something.org&quot;));
+				return response;
+	}
+
+The browser will load the given url in the current tab. For a list of available actions, see "Available actions":#availableactions.
+
+h1. Appendix
+
+h2(#availablecallbacks). Available callbacks
+
+h3. Callbacks.PAGE_STARTED
+
+To be notified when a page starts loading.
+
+Methods called:
+* ??List&lt;Action&gt; onPageStarted(String tabId, String url)??
+** ??tabId??: The id of the tab where the url will be loaded.
+** ??url??: The url which is going to be loaded.
+
+h3. Callbacks.PAGE_FINISHED
+
+To be notified when a page ends loading.
+
+Methods called:
+* ??List&lt;Action&gt; onPageFinished(String tabId, String url)??
+** ??tabId??: The id of the tab where the url has been loaded.
+** ??url??: The url which has been loaded.
+
+h3. Callbacks.TAB_OPENED
+
+To be notified when a new tab is opened.
+
+Methods called:
+* ??List&lt;Action&gt; onTabOpened(String tabId)??
+** ??tabId??: The id of the new tab.
+
+h3. Callbacks.TAB_CLOSED
+
+To be notified when a tab is closed.
+
+Methods called:
+* ??List&lt;Action&gt; onTabClosed(String tabId)??
+** ??tabId??: The id of the closed tab.
+
+h3. Callbacks.TAB_SWITCHED
+
+To be notified when tabs are switched.
+
+Methods called:
+* ??List&lt;Action&gt; onTabSwitched(String tabId)??
+** ??tabId??: The id of the tab displayed to the user.
+
+h3. Callbacks.HAS_SETTINGS_PAGE
+
+Set this if your addon has a settings page.
+
+Methods called:
+* ??void showAddonSettingsActivity()??
+
+In this method, you must open an Activity and display it to the user.
+
+Example:
+
+bq. @Override
+	public void showAddonPreferenceActivity() throws RemoteException {
+		Intent i = new Intent(mService, Preferences.class);
+		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+		mService.startActivity(i);
+	}
+
+Where ??Preferences?? is a class deriving from ??Activity??. As for any ??Activity??, it must be declared in the ??AndroidManifest.xml??. The flag ??Intent.FLAG_ACTIVITY_NEW_TASK?? is mandatory, it will not work otherwise. The flag ??Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS?? is not mandatory, but recommended. If set, the ??Activity?? opened will not be shown in the recent tasks list, and thus will make Tint Browser and its addons behave as a single application.
+
+TODO: Add recomandation for preferences pages here.
+ 
+h3. Callbacks.CONTRIBUTE_MAIN_MENU
+
+To make an addon contribute an item to the main menu.
+
+Methods called:
+* ??String getContributedMainMenuItem(String currentTabId, String currentTitle, String currentUrl)??
+** ??currentTabId??: The id of the current tab.
+** ??currentTitle??: The web page title of the current tab.
+** ??currentUrl??: The web page url of the current tab.
+** Return: the title of the menu to be added. If null or empty, no menu will be shown.
+* ??List&lt;Action&gt; onContributedMainMenuItemSelected(String currentTabId, String currentTitle, String currentUrl)??
+** ??currentTabId??: The id of the current tab.
+** ??currentTitle??: The web page title of the current tab.
+** ??currentUrl??: The web page url of the current tab.
+
+h3. Callbacks.CONTRIBUTE_LINK_CONTEXT_MENU
+
+To make an addon contribute an item to the contextual menu on a link.
+
+Methods called:
+* ??String getContributedLinkContextMenuItem(String currentTabId, int hitTestResult, String url)??
+** ??currentTabId??: The id of the current tab.
+** ??hitTestResult??: The "HitTestResult":http://developer.android.com/reference/android/webkit/WebView.HitTestResult.html, indicating the type of link hitted.
+** ??url??: The url of the hitted link.
+** Return: the title of the menu to be added. If null or empty, no menu will be shown.
+* ??List&lt;Action&gt; onContributedLinkContextMenuItemSelected(String currentTabId, int hitTestResult, String url)??
+** ??currentTabId??: The id of the current tab.
+** ??hitTestResult??: The "HitTestResult":http://developer.android.com/reference/android/webkit/WebView.HitTestResult.html, indicating the type of link hitted.
+** ??url??: The url of the hitted link. 
+
+h3. Callbacks.CONTRIBUTE_HISTORY_BOOKMARKS_MENU
+
+To make an addon contribute an item to the main menu in the bookmarks and history activity.
+
+Methods called:
+* ??String getContributedHistoryBookmarksMenuItem(String currentTabId)??
+** ??currentTabId??: The id of the current tab.
+** Return: the title of the menu to be added. If null or empty, no menu will be shown.
+* ??List&lt;Action&gt; onContributedHistoryBookmarksMenuItemSelected(String currentTabId)??
+** ??currentTabId??: The id of the current tab.
+
+h3. Callbacks.CONTRIBUTE_BOOKMARK_CONTEXT_MENU
+
+To make an addon contribute an item to the contextual menu on a bookmark in the bookmarks and history activity.
+
+Methods called:
+* ??String getContributedBookmarkContextMenuItem(String currentTabId)??
+** ??currentTabId??: The id of the current tab.
+** Return: the title of the menu to be added. If null or empty, no menu will be shown.
+* ??List&lt;Action&gt; onContributedBookmarkContextMenuItemSelected(String currentTabId, String title, String url)??
+** ??currentTabId??: The id of the current tab.
+** ??title??: The title of the selected bookmark.
+** ??url??: The url of the selected bookmark.
+
+h3. Callbacks.CONTRIBUTE_HISTORY_CONTEXT_MENU
+
+To make an addon contribute an item to the contextual menu on an history item in the bookmarks and history activity.
+
+Methods called:
+* ??String getContributedHistoryContextMenuItem(String currentTabId)??
+** ??currentTabId??: The id of the current tab.
+** Return: the title of the menu to be added. If null or empty, no menu will be shown.
+* ??List&lt;Action&gt; onContributedHistoryContextMenuItemSelected(String currentTabId, String title, String url)??
+** ??currentTabId??: The id of the current tab.
+** ??title??: The title of the selected history item.
+** ??url??: The url of the selected history item.
+
+h2(#availableactions). Available actions
+
+h3. Open tab
+
+Class: ??OpenTabAction??.
+
+Constuctors:
+* ??OpenTabAction()??: Open a new tab, loading the default home page defined by the user.
+* ??OpenTabAction(String url)??: Open a new tab, and load the given ??url?? in it.
+
+h3. Close current tab
+
+Class: ??TabAction??, but do not create it directly. Use one of the method below.
+
+Creation:
+* ??static TabAction TabAction.createCloseTabAction()??: Close the current tab.
+* ??static TabAction TabAction.createCloseTabAction(String tabId)??: Close the tab with id ??tabId??. Do nothing if ??tabId?? is invalid or does not exists.  
+
+h3. Stop
+
+Class: ??TabAction??, but do not create it directly. Use one of the method below.
+
+Creation:
+* ??static TabAction TabAction.createBrowseStopAction()??: Stop loading on the current tab.
+* ??static TabAction TabAction.createBrowseStopAction(String tabId)??: Stop loading on the tab with id ??tabId??. Do nothing if ??tabId?? is invalid or does not exists.
+
+h3. Reload
+
+Class: ??TabAction??, but do not create it directly. Use one of the method below.
+
+Creation:
+* ??static TabAction TabAction.createBrowseReloadAction()??: Reload the current tab.
+* ??static TabAction TabAction.createBrowseReloadAction(String tabId)??: Reload the tab with id ??tabId??. Do nothing if ??tabId?? is invalid or does not exists.
+
+h3. Go back
+
+Class: ??TabAction??, but do not create it directly. Use one of the method below.
+
+Creation:
+* ??static TabAction TabAction.createBrowseBackAction()??: Go back in history on the current tab.
+* ??static TabAction TabAction.createBrowseBackAction(String tabId)??: Go back in history on the tab with id ??tabId??. Do nothing if ??tabId?? is invalid or does not exists.
+
+h3. Go forward
+
+Class: ??TabAction??, but do not create it directly. Use one of the method below.
+
+Creation:
+* ??static TabAction TabAction.createBrowseForwardAction()??: Go forward in history on the current tab.
+* ??static TabAction TabAction.createBrowseForwardAction(String tabId)??: Go forward in history on the tab with id ??tabId??. Do nothing if ??tabId?? is invalid or does not exists.
+
+h3. Show toast message
+
+Class: ??ShowToastAction??.
+
+Constructors:
+* ??ShowToastAction(String toastMessage)??
+** ??toastMessage??: The message to display as a toast. Duration of the toast is ??Toast.LENGTH_SHORT??.
+* ??ShowToastAction(String toastMessage, int toastLength)??
+** ??toastMessage??: The message to display as a toast.
+** ??toastLength??: Duration of the toast. Must be either ??Toast.LENGTH_SHORT?? or ??Toast.LENGTH_LONG??. If not, ??Toast.LENGTH_SHORT?? will be used.
+
+h3. Show dialog
+
+Class: ??ShowDialogAction??.
+
+Constructor:
+* ??ShowDialogAction(String title, String message)??
+** ??title??: Title of the dialog.
+** ??message??: Message of the dialog.
+
+h3. Load url
+
+Class: ??LoadUrlAction??.
+
+Constructors:
+* ??LoadUrlAction(String url)??
+* ??LoadUrlAction(String tabId, String url)??
+* ??LoadUrlAction(String url, boolean loadRawUrl)??
+* ??LoadUrlAction(String tabId, String url, boolean loadRawUrl)??
+
+Load an url into a tab. If no tab is specified, the url will be loaded in the current tab. If the specified tab is invalid or does not exists, this action does nothing. If ??loadRawUrl?? is ??true?? (??false?? when not specified), the given url will not be checked by the browser before loading, e.g. ??http://?? will not be added if required, etc. Setting ??loadRawUrl?? to ??true?? is mandatory for javascript injection (e.g. injecting a piece of javascript in the page).
+
+h3. Asking something to the user
+
+Asking something to the user is made in two steps. First an addon must create a specific action in a callback. When the user answer, a method in the addon is called to provide user answer. In order to keep track of questions, and ??int?? id must be provided to each action allowing to ask something to the user. This id will specified when the answer method is called.
+
+h4. Confirmation
+
+Class: ??AskUserConfirmationAction??.
+
+Constructors:
+* ??AskUserConfirmationAction(int id, String title, String message, String positiveButtonCaption, String negativeButtonCaption)??
+** ??id??: The id of the question.
+** ??title??: Title of the message box.
+** ??message??: Message of the message box.
+** ??positiveButtonCaption??: Text displayed in the button for a positive answer.
+** ??negativeButtonCaption??: Text displayed in the button for a negative answer.
+
+Method called when user answer:
+* ??List&lt;Action&gt; onUserConfirm(String currentTabId, int questionId, boolean positiveAnswer)??
+** ??currentTabId??: The id of the current tab.
+** ??questionId??: The id of the question.
+** ??positiveAnswer??: ??true?? if the user has clicked on the positive button, ??false?? if the user has clicked on the negative button or if the user has canceled the dialog (using the "Back" key).
+
+h4. Input
+
+Class: ??AskUserInputAction??.
+
+Constructors:
+* ??AskUserInputAction(int id, String title, String message)??
+** ??id??: The id of the question.
+** ??title??: Title of the message box.
+** ??message??: Message of the message box. Can be ??null??.
+* ??AskUserInputAction(int id, String title, String message, String inputHint)??
+** ??inputHint??: Hint to show in the EditText view of the dialog. Can be ??null??.
+* ??AskUserInputAction(int id, String title, String message, String inputHint, String defaultInput)??
+** ??defaultInput??: Default text in the EditText view of the dialog. Can be ??null??.
+* ??AskUserInputAction(int id, String title, String message, String inputHint, String defaultInput, int inputType)??
+** ??inputType??: "Input type":http://developer.android.com/reference/android/text/InputType.html of the EditTextView of the dialog. This allow to custumize the input type, like set a password field, an url field, etc.
+
+Method called when user answer:
+* ??List&lt;Action&gt; onUserInput(String currentTabId, int questionId, boolean cancelled, String userInput)??
+** ??currentTabId??: The id of the current tab.
+** ??questionId??: The id of the question.
+** ??cancelled??: ??true?? if the user click on the "Cancel" button, or dismissed the dialog with the "Back" key. ??false?? if the user clicked on the "Ok" Button.
+** ??userInput??: The text the user typed. Always ??null?? if ??cancelled?? is ??true??.
+
+h4. Choice
+
+Class: ??AskUserChoiceAction??.
+
+Constructors:
+* ??AskUserChoiceAction(int id, String title, List&lt;String&gt; choices)??
+** ??id??: The id of the question.
+** ??title??: Title of the message box.
+** ??choices??: The choices for the user, as a ??List?? of ??String??. Choices will be presented to the user in the order they are in this list.
+
+Method called when user answer:
+* ??List&lt;Action&gt; onUserChoice(String currentTabId, int questionId, boolean cancelled, int userChoice)??
+** ??currentTabId??: The id of the current tab.
+** ??questionId??: The id of the question.
+** ??cancelled??: ??true?? if the user click on the "Cancel" button, or dismissed the dialog with the "Back" key. ??false?? if the user clicked on the "Ok" Button.
+** ??userChoice??: The index of the item selected by the user. Always ??-1?? if ??cancelled?? is ??true??.

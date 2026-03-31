@@ -1,0 +1,8 @@
+Project Description:
+Notes on various subjects
+
+README:
+# notes
+
+These are my notes on various subjects, mostly programming and ancient
+philosophy.

@@ -1,0 +1,28 @@
+PLease use wiki page in order know how to use this tool.
+
+https://github.com/Shashi-ibuildings/Behat/wiki/Acceptance-Testing-for-PHP
+
+
+Or Read 
+
+http://wp.me/p269P5-11
+
+
+
+
+
+
+
+
+Project Description:
+Test Framework for Behat 
+
+README:
+PLease use wiki page in order know how to use this tool.
+
+https://github.com/Shashi-ibuildings/Behat/wiki/Acceptance-Testing-for-PHP
+
+
+Or Read 
+
+http://wp.me/p269P5-11

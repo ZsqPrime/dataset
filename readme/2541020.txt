@@ -1,0 +1,8 @@
+Project Description:
+
+
+README:
+Герасимов, 3 курс СО/МО вторая задача
+===========================
+Встроен морфологически анализатор.
+Подробнее тут: http://code.google.com/p/russianmorphology/

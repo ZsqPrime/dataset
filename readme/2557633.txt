@@ -1,0 +1,11 @@
+Project Description:
+EZProxy passthrough for Browsers and especially Springerlink Downloader
+
+README:
+EZProxy HTTP-Proxy
+==================
+
+Dependencies
+------------
+- jlibutils [https://github.com/mback2k/jlibutils]
+- jlibproxy	[https://github.com/mback2k/jlibproxy]

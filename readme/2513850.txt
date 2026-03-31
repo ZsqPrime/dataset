@@ -1,0 +1,8 @@
+A python module to work with molecular data, especially transcription factors
+
+
+Project Description:
+A python module to work with molecular data related to Transcription Factors
+
+README:
+A python module to work with molecular data, especially transcription factors

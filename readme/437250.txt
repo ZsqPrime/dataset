@@ -1,0 +1,16 @@
+Usage: `python gpxjson.py [input.gpx]`
+
+Currently only prints to stdout.
+
+So, the easiest thing at this point would be to do `python gpxjson.py [input.gpx] > output.json`
+
+
+Project Description:
+Creates a JSON file representing a path from a .GPX
+
+README:
+Usage: `python gpxjson.py [input.gpx]`
+
+Currently only prints to stdout.
+
+So, the easiest thing at this point would be to do `python gpxjson.py [input.gpx] > output.json`

@@ -1,0 +1,28 @@
+Project Description:
+None
+
+README:
+cd ~/Github/gko_rhizome_web_com
+tail -f log/development.log
+
+rvm use ruby-1.8.7-p374
+cd ~/Github/gko_rhizome_web_com
+bundle install
+rails s
+
+rvm use 1.8.7 --default
+cd ~/Github/gko_rhizome_web_com
+bundle exec rake railties:install:migrations
+bundle exec rake db:migrate
+bundle exec rake db:rollback
+
+rvm use 1.8.7 --default
+
+cd ~/Github/gko_rhizome_web_com
+bundle exec rake assets:precompile
+
+bundle exec rake db:bootstrap
+
+bundle exec rake db:admin:create
+bundle exec rake db:load_default 
+bundle exec rake db:load_sample

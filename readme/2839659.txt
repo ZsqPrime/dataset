@@ -1,0 +1,7 @@
+Project Description:
+A Java library for communicating with the Loggr API.
+
+README:
+## Java Loggr Agent
+
+For complete documentation, see http://docs.loggr.net/agents/java

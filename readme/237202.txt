@@ -1,0 +1,6 @@
+
+
+Project Description:
+A tool managing local copy checked out from vc repositories
+
+README:

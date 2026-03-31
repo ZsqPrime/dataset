@@ -1,0 +1,6 @@
+Project Description:
+a really raw openstack emacs mode
+
+README:
+* openstack-mode
+  This mode adds ability to control openstack infrastructure.

@@ -1,0 +1,7 @@
+Project Description:
+Custom Nagios plugin for Apple HTTP Live - HLS
+
+README:
+check_hls
+
+A simple Nagios plugin to check Apple HTTP Live streaming (HLS).

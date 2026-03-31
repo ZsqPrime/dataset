@@ -1,0 +1,12 @@
+Project Description:
+Pervasive JDBC adapter for Sequel (don't actually trust this)
+
+README:
+= sequel-jdbc-pervasive-adapter
+
+A sequel adapter for working with pervasive databases based on colincasey's sequel-jdbc-hxtt-adapter
+
+
+= don't actually trust this
+
+If someone actually needs this, for more then simple interactions. I can gladly dig in, and improve it so that it _really_ works.

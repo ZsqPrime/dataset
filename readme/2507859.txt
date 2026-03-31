@@ -1,0 +1,13 @@
+@Deprecated
+
+Replace by YPPO, at https://github.com/maartenl/yppo
+
+
+
+Project Description:
+A Photo Gallery (Website) that is easy to use, uses the latest and greatest what Java has to offer and is only suitable for private use.
+
+README:
+@Deprecated
+
+Replace by YPPO, at https://github.com/maartenl/yppo

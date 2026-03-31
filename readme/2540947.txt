@@ -1,0 +1,6 @@
+Project Description:
+Pure-perl generation of QR Code barcode data
+
+README:
+NAME
+    Barcode::QRCode - Pure-perl generation of QR Code barcode data

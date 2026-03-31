@@ -1,0 +1,12 @@
+Experimentos Python - Experimentos random con Python
+===========================================================
+Ese es el proposito de este repositorio, hacer experimentos con Python.
+
+
+Project Description:
+Experimentos con Python
+
+README:
+Experimentos Python - Experimentos random con Python
+===========================================================
+Ese es el proposito de este repositorio, hacer experimentos con Python.

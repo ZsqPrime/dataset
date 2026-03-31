@@ -1,0 +1,21 @@
+Environment
+===========
+MS-Windows, `jscript`
+
+What it does
+============
+Takes a folder full of images and creates a linked set of HTML pages, one per image. Each page links to the next image in the list.
+
+
+
+Project Description:
+Creates a set of HTML pages from a folder full of images
+
+README:
+Environment
+===========
+MS-Windows, `jscript`
+
+What it does
+============
+Takes a folder full of images and creates a linked set of HTML pages, one per image. Each page links to the next image in the list.

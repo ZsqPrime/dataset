@@ -1,0 +1,7 @@
+A site that will convert a HTML snippet to a Jade snippet. Useful for testing out how something would look in Jade vs HTML
+
+Project Description:
+A website for converting (and testing) HTML 2 Jade
+
+README:
+A site that will convert a HTML snippet to a Jade snippet. Useful for testing out how something would look in Jade vs HTML

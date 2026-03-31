@@ -1,0 +1,6 @@
+
+
+Project Description:
+App de exemplo para o Minicurso de Verão Andoid UESPI 2012
+
+README:

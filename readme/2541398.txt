@@ -1,0 +1,26 @@
+Project Description:
+A notification framework prototype, based on Atmosphere
+
+README:
+Idea: a web client holds an open channel to a web server, subscribes to events he wants to listen and get notifications for these events.
+
+Example (pseudo code):
+
+haed.notification.createChannel()
+  .done(function(channel) {
+      channel.subscribe("topic1", function(message) { // topic1 notification });
+      channel.subscribe("topic2", function(message) { // topic2 notification });
+      // ..
+    });
+
+The action will be triggered by application code (not part of the notification framework).
+
+Also the client has to use app-dependent logic to bind its channel to certain topics. This logic comes with additional app-dependent checks, like permission checks.
+
+
+This project comes with a simple, small out-of-the-box testing app:
+- on page load a new channel will be created (channelID will be displayed)
+- first subscribe to a topic (app-dependent logic), e.g.: 'topic1'
+- now you can send a message to a certain topic (always the topic named by the topic-input field)
+
+Note: you can also send a message without receiving it, if you rename the topic but do not press the subscribe button

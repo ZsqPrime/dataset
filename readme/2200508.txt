@@ -1,0 +1,7 @@
+Neo4J Spatial hacking for analyzing Garmin running data using Gephi
+
+Project Description:
+Neo4J Spatial hacking for analyzing Garmin running data using Gephi
+
+README:
+Neo4J Spatial hacking for analyzing Garmin running data using Gephi

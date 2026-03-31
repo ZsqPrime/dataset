@@ -1,0 +1,7 @@
+Project Description:
+Syntax highlighting for the Murphi model checker
+
+README:
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3932
+
+A syntax highlighting plugin for the Murphi model checker's description language. See http://verify.stanford.edu/dill/murphi.html for more info on Murphi.

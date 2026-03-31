@@ -1,0 +1,5 @@
+Project Description:
+OSGi related projects
+
+README:
+Repo to house all OSGi related projects

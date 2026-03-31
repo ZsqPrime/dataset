@@ -1,0 +1,9 @@
+Project Description:
+(GIT MIRROR) apostrophe CMS sandbox
+
+README:
+Please see:
+
+plugins/apostrophePlugin/README
+
+For complete and up to date information.

@@ -1,0 +1,6 @@
+Project Description:
+PHP based generic queuing manager
+
+README:
+PHP Simple Queue
+================

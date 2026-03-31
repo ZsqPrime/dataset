@@ -1,0 +1,5 @@
+Description:
+XBMC music plugin to access all radio.de listed radio stations
+
+README:
+README not available

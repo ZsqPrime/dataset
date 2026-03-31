@@ -1,0 +1,16 @@
+Project Description:
+Assignment Three for Holiday Rails
+
+README:
+Jamie,
+
+Please use rails gems version 1.3.7 before launching. AJAX Pagination gracefully goes to HTML when Java is off
+Admin account is 
+
+U/Name: Admin
+
+P/W: test
+
+
+
+Antony

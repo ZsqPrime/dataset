@@ -1,0 +1,16 @@
+CT390 - Server Side Programming
+
+This is the source for all the course materials.
+
+For now, check out the labs/ directory.
+
+
+Project Description:
+Server Side Programming
+
+README:
+CT390 - Server Side Programming
+
+This is the source for all the course materials.
+
+For now, check out the labs/ directory.

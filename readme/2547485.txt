@@ -1,0 +1,8 @@
+Project Description:
+Web based poker
+
+README:
+Webpoker
+========
+
+A HTML5 client with Node.js backend for playing Texas hold'em.

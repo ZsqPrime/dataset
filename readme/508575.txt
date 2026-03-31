@@ -1,0 +1,75 @@
+Use:
+<?=partial("X/__custom", array('form_primval'=>1))?>
+
+X is name of the extended controller, form by default
+
+
+Form builder:
+
+  Form object
+    - title
+    - prefix (so table name etc)
+    - content
+    - terms_and_conditions
+    - fields
+    
+    Field object
+      - type (text / checkbox / radio / textarea / select)
+      - grouping (hidden value to join multiple radios together etc)
+
+      - title (label)
+      
+      - choices (new line separated options - for select only)
+      
+      - value (for radio / checkboxes)
+      
+      - required field
+      
+email setup uses a notification class, submission is the email view which is empty by default
+
+
+include this in your js:
+
+  jQuery(document).ready(function(){
+    jQuery("form .check-in").hide();
+  });
+
+Project Description:
+None
+
+README:
+Use:
+<?=partial("X/__custom", array('form_primval'=>1))?>
+
+X is name of the extended controller, form by default
+
+
+Form builder:
+
+  Form object
+    - title
+    - prefix (so table name etc)
+    - content
+    - terms_and_conditions
+    - fields
+    
+    Field object
+      - type (text / checkbox / radio / textarea / select)
+      - grouping (hidden value to join multiple radios together etc)
+
+      - title (label)
+      
+      - choices (new line separated options - for select only)
+      
+      - value (for radio / checkboxes)
+      
+      - required field
+      
+email setup uses a notification class, submission is the email view which is empty by default
+
+
+include this in your js:
+
+  jQuery(document).ready(function(){
+    jQuery("form .check-in").hide();
+  });

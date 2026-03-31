@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+Emory University Libraries Python Group
+
+Project One: Chap - text mining

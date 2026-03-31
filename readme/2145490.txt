@@ -1,0 +1,254 @@
+                                                                           
+      @@@@@@@@  @@@@@@@    @@@@@@@@     @@@  @@@  @@@  @@@@@@@@  @@@@@@@   
+     @@@@@@@@@  @@@@@@@@  @@@@@@@@@     @@@  @@@  @@@  @@@@@@@@  @@@@@@@@  
+     !@@        @@!  @@@  !@@           @@!  @@!  @@!  @@!       @@!  @@@  
+     !@!        !@!  @!@  !@!           !@!  !@!  !@!  !@!       !@   @!@  
+     !@! @!@!@  @!@@!@!   !@! @!@!@     @!!  !!@  @!@  @!!!:!    @!@!@!@   
+     !!! !!@!!  !!@!!!    !!! !!@!!     !@!  !!!  !@!  !!!!!:    !!!@!!!!  
+     :!!   !!:  !!:       :!!   !!:     !!:  !!:  !!:  !!:       !!:  !!!  
+     :!:   !::  :!:       :!:   !::     :!:  :!:  :!:  :!:       :!:  !:!  
+      ::: ::::   ::        ::: ::::      :::: :: :::    :: ::::   :: ::::  
+      :: :: :    :         :: :: :        :: :  : :    : :: ::   :: : ::   
+                                                                           
+                                                           
+                     @@@@@@   @@@  @@@  @@@@@@@  @@@  @@@  
+                    @@@@@@@@  @@@  @@@  @@@@@@@  @@@  @@@  
+                    @@!  @@@  @@!  @@@    @@!    @@!  @@@  
+                    !@!  @!@  !@!  @!@    !@!    !@!  @!@  
+                    @!@!@!@!  @!@  !@!    @!!    @!@!@!@!  
+                    !!!@!!!!  !@!  !!!    !!!    !!!@!!!!  
+                    !!:  !!!  !!:  !!!    !!:    !!:  !!!  
+                    :!:  !:!  :!:  !:!    :!:    :!:  !:!  
+                    ::   :::  ::::: ::     ::    ::   :::  
+                     :   : :   : :  :      :      :   : :  
+ 
+
+We make no claims as to the correctness of the crypto code contained in this project. This is a proof of concept, nothing more.
+
+BACK END
+--------
+
+To run a gpg auth web server, pick one of
+
+	./run-backend <--perl|--ruby|--php|--python>
+
+
+FRONT END
+---------
+
+The front end for gpgauth can be any browser extension that implements the gpg
+auth protocol. See http://gpgauth.org/ for more details about the protocol.
+
+Browser extensions that have recent gpgauth implementations:
+
+gpgAuth-chrome (chromium only)
+	- https://chrome.google.com/webstore/detail/pinhikmcljjkhnpjmpfkhjgiaacajajm
+	- most recent version of gpgauth protocol, 1.3.0
+	- uses gpgAuth-npapi plugin, which is browser/os independent
+	- only plugin that works for right now
+
+
+Browser extensions that have legacy gpgauth implementations:
+
+firegpg (firefox only):
+	- officially discontinued, 0.8.0 doesn't work with my firefox 10 browser
+	- fork available on github, revbumped to 0.8.5 and works on ff 10
+	  $ git clone https://github.com/firegpg/firegpg.git
+	- I had to build the extension myself, as there are only precompiled
+	  binaries for v0.8.0 which probably wont work for you
+
+
+DEPENDENCIES
+------------
+
+./run-backend --php
+
+Gentoo: 
+	- php w/ mysql ./configure option
+	- lighttpd w/ fastcgi ./configure option
+	- pecl-gnupg
+
+Debian: 
+	- php5-cgi
+	- lighttpd
+	- php-crypt-gpg
+	- php5-mysql
+
+
+
+./run-backend --perl
+
+
+FreeBSD:
+	- security/p5-GnuPG-Interface
+	- www/p5-FCGI
+	- www/p5-CGI-Session
+	- www/p5-HTTP-Message
+	- databases/p5-DBD-SQLite
+	- math/p5-Math-Random-Secure
+
+Gentoo: 
+	- perl
+	- lighttpd w/ fastcgi ./configure option
+	- HTTP-Message
+	- CGI
+	- CGI-Session
+	- FCGI
+	- Math-Random-Secure
+	- Digest-MD5
+	- DBD-SQLite
+	- GnuPG-Interface
+
+Debian: 
+	- perl
+	- lighttpd
+	- libwww-perl
+	- libcgi-session-perl
+	- libfcgi-perl
+	- libmath-random-perl
+	- libdbd-sqlite3-perl
+	- libgnupg-interface-perl
+
+
+
+./run-backend --ruby
+
+This requires the ruby application rails.
+
+
+
+./run-backend --python
+
+Gentoo/Debian:
+	- python-gnupg (http://code.google.com/p/python-gnupg/)
+	- flup
+
+
+Project Description:
+Public Key based web authentication
+
+README:
+                                                                           
+      @@@@@@@@  @@@@@@@    @@@@@@@@     @@@  @@@  @@@  @@@@@@@@  @@@@@@@   
+     @@@@@@@@@  @@@@@@@@  @@@@@@@@@     @@@  @@@  @@@  @@@@@@@@  @@@@@@@@  
+     !@@        @@!  @@@  !@@           @@!  @@!  @@!  @@!       @@!  @@@  
+     !@!        !@!  @!@  !@!           !@!  !@!  !@!  !@!       !@   @!@  
+     !@! @!@!@  @!@@!@!   !@! @!@!@     @!!  !!@  @!@  @!!!:!    @!@!@!@   
+     !!! !!@!!  !!@!!!    !!! !!@!!     !@!  !!!  !@!  !!!!!:    !!!@!!!!  
+     :!!   !!:  !!:       :!!   !!:     !!:  !!:  !!:  !!:       !!:  !!!  
+     :!:   !::  :!:       :!:   !::     :!:  :!:  :!:  :!:       :!:  !:!  
+      ::: ::::   ::        ::: ::::      :::: :: :::    :: ::::   :: ::::  
+      :: :: :    :         :: :: :        :: :  : :    : :: ::   :: : ::   
+                                                                           
+                                                           
+                     @@@@@@   @@@  @@@  @@@@@@@  @@@  @@@  
+                    @@@@@@@@  @@@  @@@  @@@@@@@  @@@  @@@  
+                    @@!  @@@  @@!  @@@    @@!    @@!  @@@  
+                    !@!  @!@  !@!  @!@    !@!    !@!  @!@  
+                    @!@!@!@!  @!@  !@!    @!!    @!@!@!@!  
+                    !!!@!!!!  !@!  !!!    !!!    !!!@!!!!  
+                    !!:  !!!  !!:  !!!    !!:    !!:  !!!  
+                    :!:  !:!  :!:  !:!    :!:    :!:  !:!  
+                    ::   :::  ::::: ::     ::    ::   :::  
+                     :   : :   : :  :      :      :   : :  
+ 
+
+We make no claims as to the correctness of the crypto code contained in this project. This is a proof of concept, nothing more.
+
+BACK END
+--------
+
+To run a gpg auth web server, pick one of
+
+	./run-backend <--perl|--ruby|--php|--python>
+
+
+FRONT END
+---------
+
+The front end for gpgauth can be any browser extension that implements the gpg
+auth protocol. See http://gpgauth.org/ for more details about the protocol.
+
+Browser extensions that have recent gpgauth implementations:
+
+gpgAuth-chrome (chromium only)
+	- https://chrome.google.com/webstore/detail/pinhikmcljjkhnpjmpfkhjgiaacajajm
+	- most recent version of gpgauth protocol, 1.3.0
+	- uses gpgAuth-npapi plugin, which is browser/os independent
+	- only plugin that works for right now
+
+
+Browser extensions that have legacy gpgauth implementations:
+
+firegpg (firefox only):
+	- officially discontinued, 0.8.0 doesn't work with my firefox 10 browser
+	- fork available on github, revbumped to 0.8.5 and works on ff 10
+	  $ git clone https://github.com/firegpg/firegpg.git
+	- I had to build the extension myself, as there are only precompiled
+	  binaries for v0.8.0 which probably wont work for you
+
+
+DEPENDENCIES
+------------
+
+./run-backend --php
+
+Gentoo: 
+	- php w/ mysql ./configure option
+	- lighttpd w/ fastcgi ./configure option
+	- pecl-gnupg
+
+Debian: 
+	- php5-cgi
+	- lighttpd
+	- php-crypt-gpg
+	- php5-mysql
+
+
+
+./run-backend --perl
+
+
+FreeBSD:
+	- security/p5-GnuPG-Interface
+	- www/p5-FCGI
+	- www/p5-CGI-Session
+	- www/p5-HTTP-Message
+	- databases/p5-DBD-SQLite
+	- math/p5-Math-Random-Secure
+
+Gentoo: 
+	- perl
+	- lighttpd w/ fastcgi ./configure option
+	- HTTP-Message
+	- CGI
+	- CGI-Session
+	- FCGI
+	- Math-Random-Secure
+	- Digest-MD5
+	- DBD-SQLite
+	- GnuPG-Interface
+
+Debian: 
+	- perl
+	- lighttpd
+	- libwww-perl
+	- libcgi-session-perl
+	- libfcgi-perl
+	- libmath-random-perl
+	- libdbd-sqlite3-perl
+	- libgnupg-interface-perl
+
+
+
+./run-backend --ruby
+
+This requires the ruby application rails.
+
+
+
+./run-backend --python
+
+Gentoo/Debian:
+	- python-gnupg (http://code.google.com/p/python-gnupg/)
+	- flup

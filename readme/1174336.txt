@@ -1,0 +1,10 @@
+
+A TiddlySpace personal dashboard, producing bits o content.
+
+
+Project Description:
+a dashboard of little bits of info on tiddlyspace
+
+README:
+
+A TiddlySpace personal dashboard, producing bits o content.

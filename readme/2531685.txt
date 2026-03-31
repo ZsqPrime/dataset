@@ -1,0 +1,8 @@
+Project Description:
+
+
+README:
+Christopher Youden
+CSCI403 repository
+Spring 2012
+SQLite is installed as: /user/bin/sqlite3

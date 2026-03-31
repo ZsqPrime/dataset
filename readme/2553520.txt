@@ -1,0 +1,36 @@
+Project Description:
+Dynamic sound clip button grid
+
+README:
+Zanzibar v0.1
+
+Who?
+Zachary Thacker
+zpthacker@gmail.com
+
+Zanzibar
+
+What?
+Zanzibar is a soundboard application. Its name is a homage to the Halo 2
+multiplayer map of the same name. The multiplayer map featured a large
+structure facing a vast sea. This coastal structure is one of my favorite maps
+in one of my favorite series. The application is what I have called a
+"SEABoard" (it's a synonym for coast!), which stands for "Sound Effect
+Aggregation" Board.
+
+Where?
+The source code is hosted on a public repo in github.
+git clone git@github.com:SirBraneDamuj/Soundboard.git
+
+When?
+Current version is v0.1. I will pick up development on the application after my
+winter term at Drexel (around April).
+
+Why?
+www.instantsfun.es inspired me to write this program. I love the site, but I
+find myself wanting to add more sound effects. So I decided to make an
+application that lets me do a custom one.
+
+How?
+Swing for GUI
+JLayer for mp3 playback

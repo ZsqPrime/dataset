@@ -1,0 +1,12 @@
+# PHPSP
+
+Somos o grupo de PHP do estado de São Paulo, e através deste repositório que nos organizamos.
+
+
+Project Description:
+None
+
+README:
+# PHPSP
+
+Somos o grupo de PHP do estado de São Paulo, e através deste repositório que nos organizamos.

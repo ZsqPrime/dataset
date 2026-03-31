@@ -1,0 +1,8 @@
+Super Herbert Game für die Piratenpartei Frankfurt. Code von plaetzchen, Grafiken von Peter Amende, basiert auf tweetjump
+
+
+Project Description:
+iPhone game (Doodle Jump like) for the pirate party of Frankfurt
+
+README:
+Super Herbert Game für die Piratenpartei Frankfurt. Code von plaetzchen, Grafiken von Peter Amende, basiert auf tweetjump

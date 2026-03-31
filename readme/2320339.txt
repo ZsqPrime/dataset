@@ -1,0 +1,24 @@
+Fork process from Java using a remote daemon.
+
+It is useful in environments where there is not enough memory
+and you could finish having OutOfMemory exceptions while 
+trying to run system processes.
+
+
+If you want to find out more about memory overcommit in Linux see:
+http://developers.sun.com/solaris/articles/subprocess/subprocess.html
+
+
+Project Description:
+Launch system processes without forking the whole JVM
+
+README:
+Fork process from Java using a remote daemon.
+
+It is useful in environments where there is not enough memory
+and you could finish having OutOfMemory exceptions while 
+trying to run system processes.
+
+
+If you want to find out more about memory overcommit in Linux see:
+http://developers.sun.com/solaris/articles/subprocess/subprocess.html

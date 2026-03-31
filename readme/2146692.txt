@@ -1,0 +1,29 @@
+# sicp
+
+Reproduces SICP examples
+
+
+## License
+
+Copyright (C) 2011 Promindis
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
+This file was modified by IntelliJ IDEA 11.0.1 for binding GitHub repository
+
+Project Description:
+Try to produce sicp exercises in clojure
+
+README:
+# sicp
+
+Reproduces SICP examples
+
+
+## License
+
+Copyright (C) 2011 Promindis
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
+This file was modified by IntelliJ IDEA 11.0.1 for binding GitHub repository

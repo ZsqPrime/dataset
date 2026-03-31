@@ -1,0 +1,31 @@
+
+to compile the source code you need to download camllight from:
+http://caml.inria.fr/caml-light/release.fr.html
+
+than include the boxman.ml file, the game will be execute automaticly, if you want to execute it manually write in the terminal : jeu() and press enter.
+
+thats all :)
+
+Younes CHEIKH
+
+Project Description:
+Boxman (Also called Sokoban Pushbox) is a transport puzzle in witch the player pushed boxes around a maze, viewed from above, and tries to put them in designated location. Only one box may be pushed at a time, and boxes cannot be pulled.
+
+README:
+
+
+to compile the source code you need to download camllight from:
+
+http://caml.inria.fr/caml-light/release.fr.html
+
+
+
+than include the boxman.ml file, the game will be execute automaticly, if you want to execute it manually write in the terminal : jeu() and press enter.
+
+
+
+thats all :)
+
+
+
+Younes CHEIKH

@@ -1,0 +1,282 @@
+camel in action
+===============
+
+2012.02.05
+----------
+
+   1. chapter8
+
+   --多条件
+   mvn test -Dtest=AggregateXMLTest
+
+   --其他条件
+   p281
+
+   2. 感觉其他章节内容段时间用不上，暂时不看
+
+   3. Developing Camel project
+   p392
+
+   4. 附录，simple, the expression language
+   p494
+   --真正使用的话需掌握该语言
+
+2012.02.03
+----------
+
+   1. 跳过jpa
+
+   2. chapter8/ Enterprise integration patterns
+
+   chapter8/aggregator
+   mvn test -Dtest=AggregateABCTest
+   p274
+
+2012.02.01
+----------
+
+   1. chapter7/cxf
+
+   maven wsdl2java tool
+   p244
+
+   chapter7/cxf/contract_first
+   mvn generate-sources
+
+   2. 跳过 mina
+   p249
+
+   3. jdbc jpa
+   p254
+   hibernate:http://code.google.com/p/camel-extra
+
+   chapter7/jdbc
+   mvn test -Dtest=JdbcTest
+   p257
+
+2012.01.31
+----------
+
+   1. chapter7/jms
+   mvn test -Dtest=RequestReplyJmsTest
+
+   2. message mappings
+   p235,236
+
+   3. cxf
+   p238
+
+2012.01.28
+----------
+
+   1. chapter5/errorhandler
+   mvn test -Dtest=DefaultErrorHandlerTest
+   --跳过本节和6，学习思路有点被打断
+
+   2. chapter7/
+   most commonly used components
+   p222
+
+   read file
+   mvn compile exec:java -Dexec.mainClass=camelinaction.FilePrinter
+   p227
+
+   nood default false,will move files to .camel directory after processing.
+
+   write file
+   mvn compile exec:java -Dexec.mainClass=camelinaction.FileSaver
+   --指定文件,file:data/outbox?fileName=prompt.txt
+
+   --跳过ftp
+
+   jms
+   camel-jms
+
+   publish方式
+   chapter7/jms
+   mvn clean compile camel:run
+
+   TODO
+   --访问环境变量定义的文件夹
+   p235
+
+2012.01.27
+----------
+
+   1. chapter5
+
+   p158
+
+2012.01.26
+----------
+
+   1. chapter4
+   Camel register bean
+
+   SimpleRegistry
+   mvn test -Dtest=SimpleRegistryTest
+
+   JndiRegistry
+   ApplicationContextRegistry
+
+   p147
+
+   binging useing camel annotations
+   parameter-binding annotations provided by camel
+   p148
+
+   a service that stamps an order ID on an xml
+   mvn test -Dtest=XmlOrderTest
+   using namespaces with @xpath
+   mvn test -Dtest=XmlOrderNamespaceTest
+
+   2. chapter5
+   p153
+
+2012.01.24
+----------
+
+   1. chapter3/transform
+   mvn test -Dtest=OrderToCsvProcessorTest
+   use bean
+   mvn test -Dtest=OrderToCsvBeanTest
+   
+   mvn test -Dtest=TransformTest
+   
+   mvn test -Dtest=SpringTransformScriptTest
+   
+   p107
+   
+   2. chapter3/order
+   mvn test -Dtest=PurchaseOrderJaxbTest
+   
+   3. use csv data format
+   mvn test -Dtest=PurchaseOrderCsvTest
+   
+   4. csv-bindy
+   camelinaction.bindy.PurchaseOrder
+   p114
+   --定义csv文件格式
+   mvn test -Dtest=PurchaseOrderBindyTest
+   
+   from a csv to java object
+   mvn test -Dtest=PurchaseOrderUnmarshalBindyTest
+   
+   5. json
+   mvn test -Dtest=PurchaseOrderJSONTest
+   
+   6. configure camel data format
+   config csv data format
+   p117
+   
+   7. define own data format   
+   ReverseDataFormat
+   
+   8. use template
+   velocity
+   mvn test -Dtest=PurchaseOrderVelocityTest
+   
+   9. chapter3 converter
+   
+   p126
+   
+2012.01.23
+----------
+
+   1. chapter2/multicast
+   mvn clean compile exec:java -Dexec.mainClass=camelinaction.OrderRouterWithMulticast
+   
+   2. chapter2/recipientlist
+   mvn clean compile exec:java -Dexec.mainClass=camelinaction.OrderRouterWithRecipientListBean
+   
+   3. wiretap -- 窃听
+   
+   4. p96
+   
+2012.01.22
+----------
+
+   1. chapter2/cbr
+   mvn clean compile exec:java -Dexec.mainClass=camelinaction.OrderRouter
+   
+   2. p82
+   
+2012.01.21
+----------
+
+   1. run example
+   mvn -e compile exec:java -Dexec.mainClass=camelinaction.FileCopierWithCamel
+   
+   2. chapter2-spring
+   mvn compile exec:java -Dexec.mainClass=camelinaction.GreetMeBean
+   
+   cd spring
+   run camel example:
+   mvn clean compile camel:run
+   show:We just downloaded: messagel.xml
+   
+   spring scan package
+   <camelContext xmlns="http://camel.apache.org/schema/spring">
+   <packageScan>
+    <package>camelinaction.routes</package>
+    <excludes>**.*Test*</excludes>
+    <includes>**.*</includes>
+   </packageScan> 
+   </camelContext>
+   
+   use more xml
+   <import resource="jms-setup.xml"/>
+   
+   p76
+   
+2012.01.20
+----------
+
+   1. git 
+
+Global setup:
+ Set up git
+  git config --global user.name "yang jiandong"
+  git config --global user.email young.jiandong@gmail.com
+      
+Next steps:
+  mkdir camelinaction-source
+  cd camelinaction-source
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:yangjiandong/camelinaction-source.git
+  git push -u origin master
+      
+Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:yangjiandong/camelinaction-source.git
+  git push -u origin master
+      
+Importing a Subversion Repo?
+  Click here
+      
+When you're done:
+  Continue
+
+   2. use 2.9.0
+   
+   --mvn clean install -Dtest=false
+   install.bat
+
+   --mvn compile
+   --mvn eclipse:eclipse
+
+   3. forum
+
+   http://www.manning-sandbox.com/forum.jspa?forumID=601
+
+   4. java graphic 
+   
+   http://yed.yworks.com/support/qa/
+   
+   5. p61
+
+
+   --END

@@ -1,0 +1,14 @@
+DEPRECATED - Please visit http://wiki.sepia.ceph.com
+----------------------------------------------------
+
+This repo has been deprecated in favor of a wiki hosted in the Sepia lab.
+
+
+Project Description:
+Notes on the test lab for the Ceph project
+
+README:
+DEPRECATED - Please visit http://wiki.sepia.ceph.com
+----------------------------------------------------
+
+This repo has been deprecated in favor of a wiki hosted in the Sepia lab.

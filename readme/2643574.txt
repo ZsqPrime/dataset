@@ -1,0 +1,4 @@
+Project Description:
+qt application to access (stream,...) the dreambox
+
+README:

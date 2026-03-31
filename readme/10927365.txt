@@ -1,0 +1,7 @@
+Project Description:
+Benchmark framework for C++ function
+
+README:
+# cppbench 0.0.1 #
+
+A micro-benchmarking framework for C++ code.

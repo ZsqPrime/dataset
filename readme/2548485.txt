@@ -1,0 +1,5 @@
+Project Description:
+Ruby na FIT
+
+README:
+main.rb obsahuje DFS a BFS, zadanie nacitava zo suboru input.txt

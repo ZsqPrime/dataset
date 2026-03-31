@@ -1,0 +1,9 @@
+Project Description:
+projecteuler.net
+
+README:
+These are the numbered problems from projecteuler.net
+
+THIS IS JUST PERSONAL FUN! 
+
+If you came here from my linkedin profile, don't read too much into what you see here, unless you like it.

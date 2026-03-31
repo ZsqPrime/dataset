@@ -1,0 +1,8 @@
+let's hack...
+
+
+Project Description:
+php api and html webclient & Arduino is doing the GPS logging and a Raspberry Pi will post the data to api.blauerhimmel.5th.ch
+
+README:
+let's hack...

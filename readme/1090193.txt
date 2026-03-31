@@ -1,0 +1,11 @@
+# Ruby on Rails Tutorial: Sample Application
+
+Sample application for [*RoR Tutorial*](http://railstutorial.org).
+
+Project Description:
+None
+
+README:
+# Ruby on Rails Tutorial: Sample Application
+
+Sample application for [*RoR Tutorial*](http://railstutorial.org).

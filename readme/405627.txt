@@ -1,0 +1,7 @@
+Seam 3/JSF/EJB starter project.
+
+Project Description:
+Seam 3.1 EAR starter project
+
+README:
+Seam 3/JSF/EJB starter project.

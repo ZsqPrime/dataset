@@ -1,0 +1,4 @@
+Project Description:
+Application showing conference schedule for mobile clients. Written in Groovy and using Gaelyk frameowrk and jQuery Mobile.
+
+README:

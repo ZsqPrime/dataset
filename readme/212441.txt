@@ -1,0 +1,6 @@
+
+
+Project Description:
+COLLADA meta model for the Eclipse Modeling Framework (EMF)
+
+README:

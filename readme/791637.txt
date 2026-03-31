@@ -1,0 +1,5 @@
+Project Description:
+The is the recommendation service component for the ALERT Interaction Highway
+
+README:
+This is the Recommendation Service for the ALERT (http://www.alert-project.eu) Interaction Highway

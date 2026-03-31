@@ -1,0 +1,22 @@
+
+Simple C++ App to read the XML documents from SMSReader Backup application for Android.
+
+Uses shared_ptr
+Uses wxWidgets
+Uses TinyXML
+Uses std::vector
+Uses find algorithm
+
+
+Project Description:
+A GUI Application for Linux that show SMS Messages from the SMS Message Backup Android App
+
+README:
+
+Simple C++ App to read the XML documents from SMSReader Backup application for Android.
+
+Uses shared_ptr
+Uses wxWidgets
+Uses TinyXML
+Uses std::vector
+Uses find algorithm

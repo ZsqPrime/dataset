@@ -1,0 +1,5 @@
+Project Description:
+покер
+
+README:
+play poker

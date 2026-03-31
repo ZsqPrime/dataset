@@ -1,0 +1,27 @@
+==== Pasteque 2.0 ====
+
+== Installation and database configuration ==
+
+-- Requirements --
+
+Pasteque requires Java 1.6.
+
+-- Installation procedure --
+
+To install Pasteque just copy the entire directory where you want.
+
+Run configure.sh or configure.bat to change the configuration.
+
+== Other documentation ==
+
+Check http://redmine.scil.coop for further information.
+
+== Licencing ==
+
+Pasteque is licenced under GNU General Public Licence version 3 or (at your
+option) any later version.
+
+See licencing/gpl-3.0.txt for the whole licence text.
+
+POS-Tech includes third party dependencies, see
+licencing/Openbravo POS notice.txt for the detail of it.

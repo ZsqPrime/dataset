@@ -1,0 +1,16 @@
+jlibnoise is a straight port of libnoise to Java
+
+http://libnoise.sourceforge.net/
+
+Licesned under LGPL.  
+
+
+Project Description:
+A libnoise port to Java
+
+README:
+jlibnoise is a straight port of libnoise to Java
+
+http://libnoise.sourceforge.net/
+
+Licesned under LGPL.

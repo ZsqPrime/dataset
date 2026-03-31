@@ -1,0 +1,179 @@
+ZL is a C compatible and C++ like programming language that focuses on
+extensiblilty and giving the programmer control over how high-level
+constructs (such as classes) are implemented.
+
+ZL was original developed on Ubuntu 10.04, but it should work with any
+Linux system.  (For Ubuntu 12.04 please see the note near the end of
+file if you run until problems.)  Other Unix-like systems may work.
+
+ZL uses the Boehm-Demers-Weiser conservative garbage collector, which
+can be found at http://www.hpl.hp.com/personal/Hans_Boehm/gc/.  It is
+also available Ubuntu under the package names libgc1c2 and libgc-dev.
+
+Also, in order to produce executable code, ZL requires a modified
+version of gcc.  If this is a release than a patch file should have
+been provided.  Most of the development has been done using gcc-4.4.0
+however later versions of gcc-4.4.* should work provided that the
+patch file applies cleanly.  Download gcc 4.4.0 from
+ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.4.0 (gcc-core is all that is
+required) and apply the patch gcc-4.4.0-zl.patch.  When configuring
+make sure you enable the zls language:
+
+  tar xf gcc-core-4.4.0.tar.bz2
+  mv gcc-4.4.0-src
+  mkdir gcc-4.4.0
+  mv gcc-4.4.0-src gcc-4.4.0/src
+  pushd gcc-4.4.0/src
+  patch -p0 < PATH_TO_PATCH/gcc-4.4.0-zl.patch # should apply cleanly
+  popd
+  mkdir gcc-4.4.0/obj
+  cd gcc-4.4.0/obj
+  ../src/configure --enable-languages=zls # --prefix=/opt/gcc-4.4-zl/
+  make bootstrap
+  make install
+  sudo ln -s /opt/gcc-4.4-zl/bin/gcc /usr/local/bin/zls
+
+The latest version of zls is also available in github at
+https://github.com/kevina/zl-gcc.  Just checkout master and follow the
+instructions above, but skip the patching part as the git
+repository includes the full source.
+
+ZL Build instructions:
+
+  # When checking out from git for the first time:
+  # ./autogen
+
+  ./configure
+  make
+  # no need to install, in fact the install target is empty
+  # use "make fake-install" to install a link to to zlc so you can
+  # easily compile zl programs
+
+To test ZL, make sure "zls" in your path and then:
+  make -C test test
+
+To create executable use the "zlc" perl script, which acts as a
+drop-in replacement for cc/gcc and c++/g++.
+
+Ubuntu 12.04 notes:
+
+To build (both gcc and zl) on Ubuntu 12.04 you might need to do
+something similar to
+
+  export LIBRARY_PATH=/usr/lib/$(gcc -print-multiarch)
+  export C_INCLUDE_PATH=/usr/include/$(gcc -print-multiarch)
+  export CPLUS_INCLUDE_PATH=/usr/include/$(gcc -print-multiarch)
+
+as there is a known problem that puts the files in a non standard
+location (http://gcc.gnu.org/ml/gcc/2012-02/msg00314.html).
+
+
+Copyright (C) Kevin Atkinson 2012
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+02110-1301 USA or see http://www.gnu.org/licenses/lgpl-2.1.html.
+
+
+
+Project Description:
+A C compatible and C++ like programming language that focuses on extensiblilty and giving the programmer control over how high-level constructs (such as classes) are implemented.
+
+README:
+ZL is a C compatible and C++ like programming language that focuses on
+extensiblilty and giving the programmer control over how high-level
+constructs (such as classes) are implemented.
+
+ZL was original developed on Ubuntu 10.04, but it should work with any
+Linux system.  (For Ubuntu 12.04 please see the note near the end of
+file if you run until problems.)  Other Unix-like systems may work.
+
+ZL uses the Boehm-Demers-Weiser conservative garbage collector, which
+can be found at http://www.hpl.hp.com/personal/Hans_Boehm/gc/.  It is
+also available Ubuntu under the package names libgc1c2 and libgc-dev.
+
+Also, in order to produce executable code, ZL requires a modified
+version of gcc.  If this is a release than a patch file should have
+been provided.  Most of the development has been done using gcc-4.4.0
+however later versions of gcc-4.4.* should work provided that the
+patch file applies cleanly.  Download gcc 4.4.0 from
+ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.4.0 (gcc-core is all that is
+required) and apply the patch gcc-4.4.0-zl.patch.  When configuring
+make sure you enable the zls language:
+
+  tar xf gcc-core-4.4.0.tar.bz2
+  mv gcc-4.4.0-src
+  mkdir gcc-4.4.0
+  mv gcc-4.4.0-src gcc-4.4.0/src
+  pushd gcc-4.4.0/src
+  patch -p0 < PATH_TO_PATCH/gcc-4.4.0-zl.patch # should apply cleanly
+  popd
+  mkdir gcc-4.4.0/obj
+  cd gcc-4.4.0/obj
+  ../src/configure --enable-languages=zls # --prefix=/opt/gcc-4.4-zl/
+  make bootstrap
+  make install
+  sudo ln -s /opt/gcc-4.4-zl/bin/gcc /usr/local/bin/zls
+
+The latest version of zls is also available in github at
+https://github.com/kevina/zl-gcc.  Just checkout master and follow the
+instructions above, but skip the patching part as the git
+repository includes the full source.
+
+ZL Build instructions:
+
+  # When checking out from git for the first time:
+  # ./autogen
+
+  ./configure
+  make
+  # no need to install, in fact the install target is empty
+  # use "make fake-install" to install a link to to zlc so you can
+  # easily compile zl programs
+
+To test ZL, make sure "zls" in your path and then:
+  make -C test test
+
+To create executable use the "zlc" perl script, which acts as a
+drop-in replacement for cc/gcc and c++/g++.
+
+Ubuntu 12.04 notes:
+
+To build (both gcc and zl) on Ubuntu 12.04 you might need to do
+something similar to
+
+  export LIBRARY_PATH=/usr/lib/$(gcc -print-multiarch)
+  export C_INCLUDE_PATH=/usr/include/$(gcc -print-multiarch)
+  export CPLUS_INCLUDE_PATH=/usr/include/$(gcc -print-multiarch)
+
+as there is a known problem that puts the files in a non standard
+location (http://gcc.gnu.org/ml/gcc/2012-02/msg00314.html).
+
+
+Copyright (C) Kevin Atkinson 2012
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+02110-1301 USA or see http://www.gnu.org/licenses/lgpl-2.1.html.

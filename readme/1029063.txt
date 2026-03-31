@@ -1,0 +1,6 @@
+
+
+Project Description:
+An unofficial version of the Testflight SDK to use as a submodule
+
+README:

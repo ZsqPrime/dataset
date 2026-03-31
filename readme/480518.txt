@@ -1,0 +1,188 @@
+Tournament scoring scripts for the Dungeon Crawl tournament (DCSS)
+==================================================================
+
+Rules Template
+--------------
+
+Tourney rules are described in templates/index.mako. When updating
+index.mako, run update_index.py to generate the html output.
+
+Configuring scripts
+-------------------
+
+The version, dates, etc used to get the game data are defined in loaddb.py.
+Some paths and URLs are defined in crawl_utils.py: see LOCAL_TEST, WEB_BASE,
+and SCORE_FILE_DIR.
+
+Running scripts
+---------------
+
+To run loaddb.py:
+
+1. Make sure MySQL is up and running, with a db 'tournament' with access to
+   the user 'crawl' with no pw.
+
+2. mysql -ucrawl tournament < database-tables.sql will (re)create the tables,
+   discarding any existing data. 
+
+3. mysql -ucrawl tournament < database-views.sql will (re)create the scoring
+   views, without touching existing data.
+
+4. python loaddb.py will update the database with logfile and milestone
+   records that are not already in the db. If interrupted, it can continue
+   where it left off.
+
+   python taildb.py will start a daemon to update the db continuously from
+   the logfile and milestones. taildb is otherwise identical in behaviour
+   to loaddb.py.
+
+Testing scripts
+---------------
+
+If USE_TEST is set to True in test_data.py, then the version, dates, etc in
+that file will be used when running the scripts. Also, the rules page will
+not have toplinks on it (useful when announcing the tournament if you are
+still testing things).
+
+Nemelex' Choice
+---------------
+
+Currently Nemelex' Choice combo selection happens automatically and does not
+require Sequell's database. If NEMELEX_USE_LIST is set to True in nemelex.py,
+then the combos will all be chosen from the file nem_eligible.txt. Otherwise,
+the first combo will be chosen from this file and later combos will be chosen
+from those with the lowest high score thus far in the tournament.
+
+Other things
+------------
+
+* You will probably want to set up a cronjob to grab rcfiles from the various
+  servers and place them in the directories listed in CRAWLRC_DIRECTORY_LIST
+  in loaddb.py.
+
+* When running these scripts on one of the public servers, you will want to
+  link the various logfiles on that server into the current directory.
+  For the 0.9 tournament, ./link-setup was used for this (on CAO).
+
+* The file tourney-guide.txt contains a checklist of all the steps involved in
+  organizing and running a tournament each new version.
+
+Running in Docker
+-----------------
+
+You can use the included docker-compose.yml file to run loaddb.py locally. Here
+are basic usage steps:
+
+* Run `docker-compose up mysql web' in one terminal to leave these services
+  running.
+
+* Edit the code and run 'docker-compose build loaddb && docker-compose up loaddb'
+  to test your changes.
+
+  (docker-compose doesn't intelligently rebuild the image whenever the source
+  directory is modified, which is why you have to explicitly build the image
+  every time.)
+
+  Press ctrl-c to stop this container only.
+
+* Access the website at http://localhost:8080/overview.html
+
+* The MySQL database is persisted to a Docker colume. Run
+  `docker-compose down -v` to delete it.
+
+
+Project Description:
+Dungeon Crawl Stone Soup tournament scripts
+
+README:
+Tournament scoring scripts for the Dungeon Crawl tournament (DCSS)
+==================================================================
+
+Rules Template
+--------------
+
+Tourney rules are described in templates/index.mako. When updating
+index.mako, run update_index.py to generate the html output.
+
+Configuring scripts
+-------------------
+
+The version, dates, etc used to get the game data are defined in loaddb.py.
+Some paths and URLs are defined in crawl_utils.py: see LOCAL_TEST, WEB_BASE,
+and SCORE_FILE_DIR.
+
+Running scripts
+---------------
+
+To run loaddb.py:
+
+1. Make sure MySQL is up and running, with a db 'tournament' with access to
+   the user 'crawl' with no pw.
+
+2. mysql -ucrawl tournament < database-tables.sql will (re)create the tables,
+   discarding any existing data. 
+
+3. mysql -ucrawl tournament < database-views.sql will (re)create the scoring
+   views, without touching existing data.
+
+4. python loaddb.py will update the database with logfile and milestone
+   records that are not already in the db. If interrupted, it can continue
+   where it left off.
+
+   python taildb.py will start a daemon to update the db continuously from
+   the logfile and milestones. taildb is otherwise identical in behaviour
+   to loaddb.py.
+
+Testing scripts
+---------------
+
+If USE_TEST is set to True in test_data.py, then the version, dates, etc in
+that file will be used when running the scripts. Also, the rules page will
+not have toplinks on it (useful when announcing the tournament if you are
+still testing things).
+
+Nemelex' Choice
+---------------
+
+Currently Nemelex' Choice combo selection happens automatically and does not
+require Sequell's database. If NEMELEX_USE_LIST is set to True in nemelex.py,
+then the combos will all be chosen from the file nem_eligible.txt. Otherwise,
+the first combo will be chosen from this file and later combos will be chosen
+from those with the lowest high score thus far in the tournament.
+
+Other things
+------------
+
+* You will probably want to set up a cronjob to grab rcfiles from the various
+  servers and place them in the directories listed in CRAWLRC_DIRECTORY_LIST
+  in loaddb.py.
+
+* When running these scripts on one of the public servers, you will want to
+  link the various logfiles on that server into the current directory.
+  For the 0.9 tournament, ./link-setup was used for this (on CAO).
+
+* The file tourney-guide.txt contains a checklist of all the steps involved in
+  organizing and running a tournament each new version.
+
+Running in Docker
+-----------------
+
+You can use the included docker-compose.yml file to run loaddb.py locally. Here
+are basic usage steps:
+
+* Run `docker-compose up mysql web' in one terminal to leave these services
+  running.
+
+* Edit the code and run 'docker-compose build loaddb && docker-compose up loaddb'
+  to test your changes.
+
+  (docker-compose doesn't intelligently rebuild the image whenever the source
+  directory is modified, which is why you have to explicitly build the image
+  every time.)
+
+  Press ctrl-c to stop this container only.
+
+* Access the website at http://localhost:8080/overview.html
+
+* The MySQL database is persisted to a Docker colume. Run
+  `docker-compose down -v` to delete it.

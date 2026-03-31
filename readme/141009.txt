@@ -1,0 +1,8 @@
+# Personal Information Manager
+
+
+Project Description:
+A command line tool for viewing and maintaining a journal.
+
+README:
+# Personal Information Manager

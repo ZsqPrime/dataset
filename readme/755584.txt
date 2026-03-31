@@ -1,0 +1,6 @@
+
+
+Project Description:
+Script created to install/configure a essential PHP environment.
+
+README:

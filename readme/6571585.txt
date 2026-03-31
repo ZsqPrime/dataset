@@ -1,0 +1,5 @@
+Project Description:
+allows an active record association to be used as a hash of string keys and values
+
+README:
+string_hash_association README

@@ -1,0 +1,79 @@
+Project Description:
+a Ruby wrapper for the w32evol x86 obfuscation engine
+
+README:
+= w32evol_ruby -- w32evol obfuscation engine wrapped in Ruby
+
+== Table of Contents
+1. Introduction
+2. Dependencies
+3. Installation
+4. Usage
+5. Development
+
+== 1. Introduction
+<b>This is not a virus nor does it contain a virus.</b>
+
+This is a Ruby wrapper for the obfuscation engine 
+{w32evol}[https://bitbucket.org/martinvelez/w32evol].
+
+The {w32evol}[https://bitbucket.org/martinvelez/w32evol] obfuscation engine 
+has a command line interface.  This wrapper allows you to use the obfuscation 
+engine within your Ruby scripts.  
+
+== 2. Dependencies
+
+* {Ruby 1.9.2}[http://www.ruby-lang.org/en/downloads/] or greater
+* {wine}[http://www.winehq.org/download] (1.3 or greater, may work with 1.2)
+* {w32evol}[https://bitbucket.org/martinvelez/w32evol/downloads] 
+  (v0.1.0 is include in this gem's ext folder)
+
+== 3. Installation
+
+=== Rubygems:
+You might need to use sudo.
+ gem install w32evol_ruby
+
+=== Not Rubygems:
+1. Download w32evol_ruby[http://bitbucket.org/martinvelez/w32evol_ruby/downloads]
+2. Require the w32evol Ruby class file in your program (lib folder) 
+   * The w32evol.exe engine is located in this gems ext folder.
+
+== 4. Usage
+
+=== Example 1
+This example is found in the examples directory.
+ #!/usr/bin/env ruby
+
+ require 'w32evol'
+
+ ARGF.binmode
+ input = ARGF.read
+ # Assuming engine is installed in this gem's "ext" folder.
+ # Otherwise, you must pass the engine's executable path to the class's 
+ # constructor.
+ # For example:
+ # engine = W32Evol.new({:command => "/path/to/engine"})
+ engine = W32Evol.new
+
+ output, errors, status = engine.obfuscate(input)
+
+ puts "INPUT:", input.inspect
+ puts "STATUS:", status
+ puts "ERRORS: ", errors
+ puts "OUTPUT:", output.inspect
+
+
+== 5. Development
+
+Author:: {Martin Velez}[http://www.martinvelez.com]
+Copyright:: Copyright (C) 2012 {Martin Velez}[http://www.martinvelez.com]
+License:: GPL[http://www.gnu.org/copyleft/gpl.html]
+
+=== Source
+Bitbucket[https://bitbucket.org/martinvelez/w32evol_ruby/src] is hosting this code.
+ http://bitbucket.org/martinvelez/w32evol_ruby/src
+
+=== Issues and Bug Reports
+Provide feedback, get help, request features, and reports bugs here:
+ https://bitbucket.org/martinvelez/w32evol_ruby/issues?status=new?status=open

@@ -1,0 +1,7 @@
+Project Description:
+Interactive map of trails accessible by SmartTrails API
+
+README:
+Pull data from a SmartTrails REST provider and render KML files in a map.
+
+This is an App Engine project. Before deploying please change app.yaml to point to your own appid.

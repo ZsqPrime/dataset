@@ -1,0 +1,16 @@
+inceptusRobot
+=======
+### Code for the 2012 Robot for Team 2264, [inceptus][].
+
+[inceptus]: http://inceptus.org
+
+
+Project Description:
+Robot code using IterativeRobot for inceptus team 2264 FRC for the 2012 season.
+
+README:
+inceptusRobot
+=======
+### Code for the 2012 Robot for Team 2264, [inceptus][].
+
+[inceptus]: http://inceptus.org

@@ -1,0 +1,89 @@
+Project Description:
+Wraps the Bullet 3D physics engine for Cinder
+
+README:
+DOWNLOAD AT YOUR OWN RISK.  This repo is being used as a backup for
+
+a work in progress.
+
+
+
+The included test project requires Cinder-MeshHelper:
+
+https://github.com/BanTheRewind/Cinder-MeshHelper
+
+
+
+This block wraps the Bullet 3D physics engine for Cinder. 
+
+It has a lot of features but there is a lot to go. The goal 
+
+of this block is to provide an interface to Bullet without 
+
+overly wrapping it.  The heavy lifting, such as world 
+
+initialization, creating and managing VBOs to represent bodies, 
+
+memory management, and interaction is done for you. From there, 
+
+you just use Bullet directly.
+
+
+
+TO DO LIST
+
+
+
+- Constraints
+
+
+
+- Sample ideas
+
+  - Trampoline magnet
+
+  - Rigid primitive
+
+  - Rigid mesh
+
+  - Dynamic rigid mesh (camera terrain: how to extend an existing body)
+
+  - Capsule (how to implement Bullet shapes not supported by the block)
+
+  - Soft body (interacts with rigid)
+
+  - Soft body mesh from OBJ
+
+  - Interaction / apply force
+
+  - Ragdoll (springs, collision callback)
+
+  - Vehicle
+
+  - Bullets
+
+  - Voronoi fracture
+
+
+
+More about Bullet here:
+
+http://bulletphysics.org/wordpress/
+
+
+
+https://code.google.com/p/bullet/downloads/list
+
+
+
+-----------------------------------------
+
+
+
+http://www.bantherewind.com
+
+http://www.libcinder.org
+
+
+
+bantherewind@gmail.com

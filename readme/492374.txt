@@ -1,0 +1,8 @@
+[![build status](https://secure.travis-ci.org/crcn/beanpoll-store.png)](http://travis-ci.org/crcn/beanpoll-store)
+
+
+Project Description:
+None
+
+README:
+[![build status](https://secure.travis-ci.org/crcn/beanpoll-store.png)](http://travis-ci.org/crcn/beanpoll-store)

@@ -1,0 +1,5 @@
+Project Description:
+Documentation for MTG API
+
+README:
+#Documentation for Magic The Gathering API

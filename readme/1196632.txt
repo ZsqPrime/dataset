@@ -1,0 +1,41 @@
+
+
+If you really want an app like this to use for real
+you should go check out pressureNet:
+
+https://market.android.com/details?id=ca.cumulonimbus.barometernetwork
+
+
+TODO:
+async upload to service
+- open.sen.se - done!
+- my.own.crap - notdone
+
+oath
+antitrees mom
+
+-pee
+
+
+
+Project Description:
+Android sensor logger
+
+README:
+
+
+If you really want an app like this to use for real
+you should go check out pressureNet:
+
+https://market.android.com/details?id=ca.cumulonimbus.barometernetwork
+
+
+TODO:
+async upload to service
+- open.sen.se - done!
+- my.own.crap - notdone
+
+oath
+antitrees mom
+
+-pee

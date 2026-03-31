@@ -1,0 +1,4 @@
+Project Description:
+This is the automated rooting script for mac and linux for the Nook Tablet by loglud
+
+README:

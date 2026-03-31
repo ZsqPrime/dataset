@@ -1,0 +1,31 @@
+# _$ 
+
+A lightweight memoized cache for jQuery selectors. Minified source fits in a tweet.
+
+Use:
+
+    _$('#selector')
+
+instead of
+
+    $('#selector')
+
+to cache the selection.
+
+Project Description:
+Cache those jquery selectors you plan on being static
+
+README:
+# _$ 
+
+A lightweight memoized cache for jQuery selectors. Minified source fits in a tweet.
+
+Use:
+
+    _$('#selector')
+
+instead of
+
+    $('#selector')
+
+to cache the selection.

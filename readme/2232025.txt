@@ -1,0 +1,12 @@
+# JAGGRAB
+----------
+The JAGGRAB server for the Runelocus community project. 
+
+
+Project Description:
+The JAGGRAB server for the Runelocus community project.
+
+README:
+# JAGGRAB
+----------
+The JAGGRAB server for the Runelocus community project.

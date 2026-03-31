@@ -1,0 +1,21 @@
+Project Description:
+
+
+README:
+README for NIRCA Registration Sytem.
+
+
+User Stories:
+1. The user wants to log in with a name and password so they may view races, etc.
+
+2. The user wants to be able to join a team.
+
+3. The user wants to be able to be specified as a team officer with administrative privileges
+
+4. The admin user for a team wants to create a race to advertise.
+
+5. The admin user for a team wants to add events to the race of varying type.
+
+6. The admin user for a team wants to be able to 'attend' races.
+
+7. The admin user for a team wants to add entries to an event.

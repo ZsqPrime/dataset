@@ -1,0 +1,12 @@
+Apply some PHP filter to a given text
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Access PHP stream filters from Erebot
+
+README:
+Apply some PHP filter to a given text
+
+Package detailed description here (found in README)

@@ -1,0 +1,17 @@
+Project Description:
+port of OpenAL to the Made With Marmalade platform
+
+README:
+Port of OpenAL to Made With Marmalade 
+
+Supports both stereo and mono output.
+
+New version (as of January 2014) with new thread synchronizing algorithm.
+It uses less CPU, and it should work without any cracking sound.
+
+Throughly tested on all iOS mobile devices (iPhone/iPad/iPod), and on PC and on Android. It should work on other platforms too.
+
+Once Marmalade is fixed to allow mutex locks inside s3e callback, this player should be rewritten, as then you wouldn't need worker thread but could call aluMixData() directly from s3e sound callback. That implementation should both be faster and give better sound quality than this implementation. So if you have problems with this implementation, complain to Marmalade to allow mutex locks inside s3e sound callback :)
+
+
+There are a few people using it who have posted issues/fixes in the issues section, so check that out if you have problems.

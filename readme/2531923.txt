@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+Mitchell Wright
+This repository contains all the work done for CSCI 446: Web Applications.

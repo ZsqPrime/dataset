@@ -1,0 +1,8 @@
+Various noodlings around with the stuff at http://nodebeginner.org
+
+
+Project Description:
+Noodling with Node using nodebeginner.org
+
+README:
+Various noodlings around with the stuff at http://nodebeginner.org

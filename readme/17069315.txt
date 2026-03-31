@@ -1,0 +1,6 @@
+Project Description:
+Re-implementation of "Efficient Graph Based Image Segmentation" for 592
+
+README:
+This is my code for the re-implementation of "Graph Based Segmentation
+Algorithms" for my EECS 592 class.

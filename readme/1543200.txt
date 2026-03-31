@@ -1,0 +1,22 @@
+Build Dependencies (for Ubuntu):
+build-essential
+automake
+autoconf
+libtool
+libgtkmm-3.0-dev
+libsndfile1
+libjack-dev
+
+
+Project Description:
+Control audio tracks with the Boss GT-10 and Jack
+
+README:
+Build Dependencies (for Ubuntu):
+build-essential
+automake
+autoconf
+libtool
+libgtkmm-3.0-dev
+libsndfile1
+libjack-dev

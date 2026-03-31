@@ -1,0 +1,6 @@
+
+
+Project Description:
+AJAX abstraction layer to server-side functions.
+
+README:

@@ -1,0 +1,4 @@
+Project Description:
+A project by Kaitlin Till-Landry and I that uses Unity3D, OpenTSPS, and the Kinect to explore the spatial and cinematic properties of connecting physical actions to a virtual 3D scene.
+
+README:

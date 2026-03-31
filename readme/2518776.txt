@@ -1,0 +1,18 @@
+Project Description:
+Mobile app using Hesperian content about warning signs during pregnancy
+
+README:
+This is the hesperian mhealth mobile web application.
+
+Dependencies: Perl,Python and Jinja python package
+Jinja installation: http://jinja.pocoo.org/docs/intro/#installation
+(virtual_env installation recommended)
+
+src: html / css sources
+src/templates.jinja: jinja templates
+jslib: javascript libraries
+
+'make all' to create an html directory containing the app.
+'make gapbuild' to create a gapbuild.zip file for upload to build.phonegap.com
+
+http://www.hesperian.org

@@ -1,0 +1,107 @@
+Project Description:
+Spring Roo is a next-generation rapid application development tool for Java developers. It focuses on higher productivity, stock-standard Java APIs, high usability, avoiding engineering trade-offs and facilitating easy Roo removal.
+
+README:
+# DISID and VMware have ended active development of this project. This repository will no longer be updated.
+
+// Prerequisites:
+//
+//   ruby 2.0.0+
+//   prawn 2.0.0+
+//
+//   asciidoctor
+//   asciidoctor-pdf 1.5.0.alpha.10
+//
+//   (prawn and ruby < 2.0 will not work)
+//
+// Build & review the document before commit it to GitHub:
+//
+//   $ asciidoctor -b html5 README.adoc
+//
+//   # Embed images in XHTML
+//   $ asciidoctor -b html5 -a data-uri README.adoc
+//
+
+= Spring Roo 
+Getting started with Spring Roo development
+:page-layout: base
+:toc-placement: manual
+:Author: DISID Corporation S.L.
+:Email: <springroo@disid.com>
+
+Spring Roo is an easy-to-use development tool for quickly building Spring-powered applications.
+
+Our primary goals are:
+
+* Build Spring-powered applications in a best-practice manner within minutes.
++
+To develop Spring projects requires incredibly long cycle times yet, yes Spring Boot provide a radically faster and widely accessible getting started experience plus non-functional features for all Spring development and due that Spring Roo generates Spring Boot applications, but even so for midsize applications you need functional features, patterns and best-practices that Spring Roo provides you automatically.
+* Incremental approach to add technologies as needed to your project.
++
+This means when you first start a new project Roo will only assume you want to build a simple Spring Boot application. As such it will have next to no dependencies. Only when you ask to add a persistence provider will JPA be installed, and only when you add a field using JavaBean Validation annotations will that library be installed. The same holds true for Spring Security, Spring Data and the other technologies Roo supports.
+* Use Roo over the full lifespan of a project.
++
+This is particularly important given the long-term maintenance costs of a project far outweigh the initial development costs. While you can use Roo just for an initial jump-start if you so wish, your return on investment is exponential as you continue using it throughout a project lifespan.
+
+[[code-of-conduct]]
+== Code of Conduct
+
+This project adheres to the Contributor Covenant link:CODE_OF_CONDUCT.adoc[code of conduct]. By participating, you  are expected to uphold this code. Please report unacceptable behavior to code-of-conduct@spring.io.
+
+[[getting-started]]
+== Installation and Getting Started
+
+The https://docs.spring.io/spring-roo/docs/2.0.x/reference/html/[reference documentation] includes detailed descriptions of all the features, detailed https://docs.spring.io/spring-roo/docs/2.0.x/reference/html/#getting-started-install-roo[installation instructions] as well as an extensive https://docs.spring.io/spring-roo/docs/2.0.x/reference/html/#using-spring-roo[user guide] for main use cases.
+
+[[getting-support]]
+== Getting Support
+
+If you have any trouble using Spring Roo:
+
+* Check the https://docs.spring.io/spring-roo/docs/2.0.x/reference/html/[reference documentation].
+* Spring Roo creates web applications based on Spring projects, take a look at the related Spring project reference documentation. In the https://spring.io[Spring] web-site you will find a lot of excellent reference documentation and getting started guides of the Spring projects.
+* Ask a question in https://stackoverflow.com[stackoverflow] tagged with https://stackoverflow.com/questions/tagged/spring-roo[spring-roo].
+
+https://www.disid.com/#contact[Commercial support] is available too.
+
+[[contribute]]
+== Contribute
+
+Here are some ways for you to get involved in the community:
+
+* Get involved with the Spring community by helping out on https://stackoverflow.com/questions/tagged/spring-roo[stackoverflow]. Join to debates and respond to questions.
+* Report bugs and request new features via the https://jira.spring.io/browse/ROO[Spring Roo JIRA]. Comment and vote on the ones that you are interested in.  
+* If you want to write code, you are welcome. Commit your pull requests from https://help.github.com/forking/[forks of this repository].
+
+See the link:CONTRIBUTING.adoc[contributor guidelines] for details.
+
+[[build-the-source]]
+== Building from Source
+
+The Spring Roo project uses a https://maven.apache.org/[Maven]-based build system. 
+
+Spring Roo can be easily built with the https://github.com/takari/maven-wrapper[maven wrapper] from the root of the source tree and serves as a cross-platform, self-contained bootstrap mechanism for the build:
+
+[source,bash]
+----
+$ ./mvnw clean install
+----
+
+See the link:CONTRIBUTING.adoc[contributor guidelines] for details.
+
+[[stay-in-touch]]
+== Staying in Touch
+
+Follow https://twitter.com/springroo[@SpringRoo] and its team members on Twitter. In-depth articles can be found at https://blog.disid.com/[The DISID Blog], and releases are announced via https://spring.io/blog/[The Spring Blog].
+
+[[acknowledgments]]
+== Acknowledgments
+
+The Spring Roo project uses and depends on a lot of Spring related projects, as well as other ones. We would like to thank all those projects and the people working on them, not only for the effort made to provide such excellent libraries and utilities, but also for the guidance and examples given on how to manage an open source Java project.
+
+Also, this README.adoc file has been written based on the ones included in several Spring projects like https://github.com/spring-projects/spring-boot[Spring Boot project] and https://github.com/spring-projects/spring-data-jpa[Spring Data JPA].
+
+[[license]]
+== License
+
+Spring Roo is Open Source software released under the https://www.apache.org/licenses/LICENSE-2.0.html[Apache 2.0 license].

@@ -1,0 +1,8 @@
+This blog uses the Jekyll typsetting engine and s based on Tom Preston Warner's blog layout.
+
+
+Project Description:
+homepage
+
+README:
+This blog uses the Jekyll typsetting engine and s based on Tom Preston Warner's blog layout.

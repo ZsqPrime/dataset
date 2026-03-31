@@ -1,0 +1,12 @@
+Automatically identify to NickServ
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Auto-identification module for Erebot
+
+README:
+Automatically identify to NickServ
+
+Package detailed description here (found in README)

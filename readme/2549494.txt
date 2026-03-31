@@ -1,0 +1,5 @@
+Project Description:
+A php wrapper for telldus tellstick tdtool
+
+README:
+A php wrapper for the telldus tdtool to use with tellstick.

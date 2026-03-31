@@ -1,0 +1,5 @@
+Project Description:
+For HDL files, FPGA cores etc.
+
+README:
+For HDL files, FPGA cores, etc. As the body of leaf-related HDL files grows this repo will likely become deprecated in favor of smaller, more specialized repos.

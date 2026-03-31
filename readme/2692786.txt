@@ -1,0 +1,5 @@
+Project Description:
+Exercises from Kernigan and Ritchie The C Prog Lang
+
+README:
+These are my solutions to the exercises in KandRC.

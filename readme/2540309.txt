@@ -1,0 +1,33 @@
+Project Description:
+
+
+README:
+Welcome to textPawn!
+
+textPawn is a mail system which allows you to send messages to everyone who has textPawn!
+It's easy to use, fast to figure out and awesome to have!
+
+Login: Test
+Pass: Test
+
+Log in with the details above to see a sample filled inbox!
+
+IMPORTANT: Give our great app some seconds to log you in after you clicked login!
+
+Now go download textPawn en start pawning!
+
+This awesome app is made by:
+Bram Van Houcke
+Mike Van Hemelrijck
+Egbert Douwes (couldn't make it through the night without him)
+
+----------------------------------
+Stuff our legal folk make us say:
+
+Appcelerator, Appcelerator Titanium and associated marks and logos are 
+trademarks of Appcelerator, Inc. 
+
+Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc. All Rights Reserved.
+
+Titanium is licensed under the Apache Public License (Version 2). Please
+see the LICENSE file for the full license.

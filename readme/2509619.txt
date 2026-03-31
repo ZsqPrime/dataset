@@ -1,0 +1,18 @@
+My Thesis
+
+To build: scons
+To clean: scons -c
+
+Written in LATEX. Uses SCons to build (http://www.scons.org/).
+
+
+Project Description:
+
+
+README:
+My Thesis
+
+To build: scons
+To clean: scons -c
+
+Written in LATEX. Uses SCons to build (http://www.scons.org/).

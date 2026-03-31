@@ -1,0 +1,35 @@
+Project Description:
+clojure code for playing with protein structure data
+
+README:
+# structbiol
+
+use the namespace
+(:use '[structbiol.dssp])
+
+read a dssp file and obtain a DSSP. record
+(def dssp (read-dssp "resources/1hnn.dssp"))
+
+There aren't many methods at the moment.  Example -> get chains (filtered to exclude nils)
+(chains dssp)
+> (A B) ;these a strings
+
+Can break a chain up based on blocks of secondary structure -> H,I,G,E,B,S,T,- (other)
+
+(chunk-chain-by-structure "A" (remove-bad-residues (read-dssp "fullpath-to-file")))
+
+# The above is shown in core.clj
+# core.clj is essentially of no use to anyone other than me - unless you change the directory
+# to point at a local collection of dssp files
+
+######################
+#                    #
+# THIS IS VERY HACKY #
+#                    #
+######################
+
+## License
+
+Copyright (C) 2012 theVillageIdiot
+
+Distributed under the Eclipse Public License, the same as Clojure.

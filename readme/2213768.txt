@@ -1,0 +1,114 @@
+Bilazea template is a PHP/HTML/CSS/AJAX template used in several sites
+- PHP core
+- HTML/CSS/AJAX presentation
+
+It's currently an 'on working' project, a prototype (You may download 'Version 0.1 tag' of project)
+First official beta release is available since May 2011, as version 0.1, this is the commun code trunk, with the stable version, the 'master' branch.
+First official release will be available in June 2011, as version 1.0. It is currently developped in 'version_1_0_release' branch.
+A third branch called 'bugfixes_v_0_1_beta' has been created for urgent/security fixes.
+
+
+****************************************************************
+You are currently working on the 'master' branch, stable version
+****************************************************************
+
+
+Main demonstration can be seen on Bilazea.com, on page http://bilazea.com/Bilazea-template
+
+
+It is a very simple framework designed to create quickly a website
+- Main language used is PHP, to create navigation stuff mainly
+- Javascript, HTML and CSS are used to present content
+
+- Ohter external tools used:
+ - Javascript
+  - Mootools
+   - http://mootools.net/
+   - on Github: http://github.com/mootools/mootools-core
+  - Reflexion
+   - http://www.digitalia.be/software/reflectionjs-for-mootools
+  - Google
+   - https://www.google.com/analytics/
+ - MP3 player
+  - Dewplayer
+   - http://www.alsacreations.fr/dewplayer.html
+ - Images slider
+  - Dewslider
+   - http://www.alsacreations.fr/dewslider.html
+ - Video player
+  - Dewtube
+   - http://www.alsacreations.fr/dewtube.html
+ - IE css hack
+  - http://code.google.com/p/curvycorners/
+  - http://davidwalsh.name/rounded-corners-ie
+ - Online editor
+  - CKeditor
+   - http://ckeditor.com/
+ - Online explorer
+  - CKfinder
+   - http://ckfinder.com/
+ - Copy to clipboard
+  - Zeroclipboard
+   - http://code.google.com/p/zeroclipboard/
+ - Slimbox
+  - http://www.digitalia.be/software/slimbox
+
+
+Project Description:
+Template PHP/AJAX/XHTML
+
+README:
+Bilazea template is a PHP/HTML/CSS/AJAX template used in several sites
+- PHP core
+- HTML/CSS/AJAX presentation
+
+It's currently an 'on working' project, a prototype (You may download 'Version 0.1 tag' of project)
+First official beta release is available since May 2011, as version 0.1, this is the commun code trunk, with the stable version, the 'master' branch.
+First official release will be available in June 2011, as version 1.0. It is currently developped in 'version_1_0_release' branch.
+A third branch called 'bugfixes_v_0_1_beta' has been created for urgent/security fixes.
+
+
+****************************************************************
+You are currently working on the 'master' branch, stable version
+****************************************************************
+
+
+Main demonstration can be seen on Bilazea.com, on page http://bilazea.com/Bilazea-template
+
+
+It is a very simple framework designed to create quickly a website
+- Main language used is PHP, to create navigation stuff mainly
+- Javascript, HTML and CSS are used to present content
+
+- Ohter external tools used:
+ - Javascript
+  - Mootools
+   - http://mootools.net/
+   - on Github: http://github.com/mootools/mootools-core
+  - Reflexion
+   - http://www.digitalia.be/software/reflectionjs-for-mootools
+  - Google
+   - https://www.google.com/analytics/
+ - MP3 player
+  - Dewplayer
+   - http://www.alsacreations.fr/dewplayer.html
+ - Images slider
+  - Dewslider
+   - http://www.alsacreations.fr/dewslider.html
+ - Video player
+  - Dewtube
+   - http://www.alsacreations.fr/dewtube.html
+ - IE css hack
+  - http://code.google.com/p/curvycorners/
+  - http://davidwalsh.name/rounded-corners-ie
+ - Online editor
+  - CKeditor
+   - http://ckeditor.com/
+ - Online explorer
+  - CKfinder
+   - http://ckfinder.com/
+ - Copy to clipboard
+  - Zeroclipboard
+   - http://code.google.com/p/zeroclipboard/
+ - Slimbox
+  - http://www.digitalia.be/software/slimbox

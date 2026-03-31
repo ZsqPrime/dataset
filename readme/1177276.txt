@@ -1,0 +1,6 @@
+
+
+Project Description:
+Bear Beware is a Cocos2d iPhone game that was developed in a week long code athon  all art by me and code by me
+
+README:

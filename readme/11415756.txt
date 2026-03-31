@@ -1,0 +1,4 @@
+Project Description:
+Hadoop map reduce article I wrote for Java Tech Journal
+
+README:

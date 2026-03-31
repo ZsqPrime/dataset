@@ -1,0 +1,52 @@
+## Experiment
+
+Generate graphs based on jasmine tests 
+
+![example](https://raw.github.com/hbt/todoapp/master/doc/testing.png)
+
+[More on model based testing](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&ie=UTF-8#output=search&sclient=psy-ab&q=model%20based%20testing&oq=&gs_l=&pbx=1&fp=9a76560dc64857fb&ion=1&bav=on.2,or.r_cp.r_qf.&bvm=bv.45512109,d.b2I&biw=972&bih=514)
+
+## Install
+
+* place app/web under apache public directory
+* run `bundle` -- will install dependencies defined in Gemfile
+* cd app/server and run `npm install` -- will install dependencies defined in package.json
+* install mongodb `apt-get install mongodb` and make sure mongod (server) is running (http://localhost:28017/)
+* launch the node server `node app.js`
+
+
+## Dev
+
+### switch to dev mode
+
+* `rake switch_env dev` will load javascript files asynchronously
+
+### To avoid restarting the node.js server
+
+* use `watch_and_do . js,css,json,html utils/build.rb` to reload node server + web app after making changes
+
+
+### To avoid reloading the page manually
+
+* enable DEBUG flag in web/assets/javascripts/app.js 
+* use watch_and_do scripts to reload web page after making changes to any css,json,html,js file 
+* gem install watch_and_do
+* watch_and_do . js,css,json,html utils/build.rb
+
+
+
+###  Before committing code
+
+* run `rake format_js`
+
+
+### To build the minified version (all files in one)
+
+* `rake switch_env prod` will compress all files into one
+
+
+### to run the tests
+
+* switch to dev
+* click on "Test"
+* reload page and jasmine tests will run

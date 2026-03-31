@@ -1,0 +1,5 @@
+Project Description:
+This is the Depot application from Pragmatic Programmers Agile Web Development with Rails
+
+README:
+This is the Depot application from Pragmatic Programmers Agile Web Development with Rails

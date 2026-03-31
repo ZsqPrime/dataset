@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+Using DevkitPPC http://devkitpro.org/
+and libogc	http://wiibrew.org/wiki/Libogc
+main wiimote support from wiiuse	http://www.wiiuse.net/docs/

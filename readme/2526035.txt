@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Questo Reposity contiene esercizi del corso di programmazione dispositivi mobili

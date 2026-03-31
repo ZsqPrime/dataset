@@ -1,0 +1,4 @@
+Project Description:
+Image cropping asp.net MVC application using jcrop
+
+README:

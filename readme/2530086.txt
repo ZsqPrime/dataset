@@ -1,0 +1,5 @@
+Project Description:
+Emacs epackage (3rd party)
+
+README:
+This is an eldoc plugin for C source files.

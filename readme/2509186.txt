@@ -1,0 +1,6 @@
+
+
+Project Description:
+Pluggable, open source Django apps (configured for GAE deployment)
+
+README:

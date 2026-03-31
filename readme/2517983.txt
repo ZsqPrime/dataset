@@ -1,0 +1,76 @@
+===============================================================================
+            Plugin for connect CopterControl board to simulator.
+===============================================================================
+
+---------------------------------------
+        Building
+---------------------------------------
+
+a) download and install:
+    - MinGW 4.4
+    - Qt 4.8
+b) run:
+    qmake
+    mingw32-make
+
+---------------------------------------
+        Installing
+---------------------------------------
+
+1) Copy folder "CopterControl" from build location to simulator's "Plugin" folder.
+2) Copy QtCore4.dll, QtNetwork4.dll, libgcc_s_dw2-1.dll and mingwm10.dll from
+   Qt library location to the root folder of simulator.
+
+---------------------------------------
+        Configure plugin
+---------------------------------------
+
+See cc_plugin.ini
+You can change network settings, input and output channels map, video modes.
+
+---------------------------------------
+        Tools
+---------------------------------------
+
+"tools\udp_test" utility can be used for test connection.
+
+
+Project Description:
+plugin for AerosimRC simulator
+
+README:
+===============================================================================
+            Plugin for connect CopterControl board to simulator.
+===============================================================================
+
+---------------------------------------
+        Building
+---------------------------------------
+
+a) download and install:
+    - MinGW 4.4
+    - Qt 4.8
+b) run:
+    qmake
+    mingw32-make
+
+---------------------------------------
+        Installing
+---------------------------------------
+
+1) Copy folder "CopterControl" from build location to simulator's "Plugin" folder.
+2) Copy QtCore4.dll, QtNetwork4.dll, libgcc_s_dw2-1.dll and mingwm10.dll from
+   Qt library location to the root folder of simulator.
+
+---------------------------------------
+        Configure plugin
+---------------------------------------
+
+See cc_plugin.ini
+You can change network settings, input and output channels map, video modes.
+
+---------------------------------------
+        Tools
+---------------------------------------
+
+"tools\udp_test" utility can be used for test connection.

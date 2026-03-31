@@ -1,0 +1,53 @@
+Project Description:
+A parser for Mascot Generic Format (MGF) files
+
+README:
+= Mascot::MGF
+
+A parser for Mascot Generic Format (MGF) files.
+
+== MGF Format 
+
+The Mascot::MGF object represents a file of MSMS spectra. See http://www.matrixscience.com/help/data_file_help.html#GEN for more
+information on this file format.
+
+
+== Mascot::MGF
+
+A subclass of File, opens an MGF flat file to read entries using Enumerable syntax.
+
+== Mascot::MGF::Query
+
+A simple object that represents individual MS/MS spectrum objects in an MGF file. I use "Query" instead of "Spectrum" to remain consistent with Mascot''s terminology.
+
+== Simple Usage Examples
+
+=== Reading 
+
+    require 'mascot/mgf'
+
+    # This opens a MGF file and builds an index of the query 
+    # positions. The index is cached to the filesystem.
+    mgf = Mascot::MGF.open("some/file/path.mgf")
+
+    # Same thing as above, but does not cache the index to filesystem
+    mgf = Mascot::MGF.open("some/file/path.mgf",false)
+
+    # How many queries are in this file?
+    mgf.query_count
+		# Reads the next query from the read cursor position
+    query_string = mgf.readquery()
+
+		# Create a Mascot::MGF::Query from the query string
+		query = Mascot::Query.new(query_string)
+    puts query.title
+
+		# Read the next query as a Mascot::MGF::Query object
+		query = mgf.query()
+		puts query.title
+
+		# puts cursor at begining of MGF file
+		mgf.rewind
+    mgf.each_query do |query_object|
+      # do something with query...
+    end

@@ -1,0 +1,6 @@
+Project Description:
+Django web app to record your Crossfit PRs 
+
+README:
+Crossfit PRs
+------------

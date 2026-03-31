@@ -1,0 +1,10 @@
+Use CloudBoard.pde file with corresponding CloudBoard eagle schematic (CloudBoard.brd & CloudBoard.sch) in hardware folder.
+
+
+
+
+Project Description:
+
+
+README:
+Use CloudBoard.pde file with corresponding CloudBoard eagle schematic (CloudBoard.brd & CloudBoard.sch) in hardware folder.

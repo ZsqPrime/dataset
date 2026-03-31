@@ -1,0 +1,13 @@
+Project Description:
+Change your wallpaper using this script on a Linux computer using gconftool. Very useful to run with a cron job.
+
+README:
+wallchanger:
+Nick Lange
+
+Change your wallpaper on a Linux machine using gconftool.
+Useful to put in a cron job to run every X minutes (or whenever you like).
+
+To use:
+Edit the dir variable to point at your directory of images.
+For now, only PNGs and JPGs are accepted.

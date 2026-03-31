@@ -1,0 +1,17 @@
+This project is no longer in use
+
+See our project website for more information:
+https://sites.google.com/site/opensourceiotcloud/
+
+
+Project Description:
+This project is depreciated. Please look at IoTCloud2 for more details
+
+README:
+This project is no longer in use
+
+
+
+See our project website for more information:
+
+https://sites.google.com/site/opensourceiotcloud/

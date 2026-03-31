@@ -1,0 +1,44 @@
+#+STARTUP: showall
+#+TAGS: DOCS(d) CODING(c) TESTING(t) PLANING(p)
+#+STARTUP: hidestars
+#+TITLE: Femto HeNB Platform
+#+AUTHOR: Ibn Hatab <lib.aca55a@gmail.com>
+
+* About
+
+  A Home Node B, or HNB, is the 3GPP's term for a 3G femtocell.
+
+  A Node B is an element of a 3G macro Radio Access Network, or RAN. A
+  femtocell performs many of the function of a Node B, but is
+  optimized for deployment in the home.
+
+* Subject
+
+  The Femto Application Platform Interface (FAPI) is an initiative
+  within the femto industry to encourage competition and innovation
+  between suppliers of platform hardware, platform software and
+  application software by providing a common API around which suppliers
+  of each component can compete. 
+
+* Motivation
+
+  In doing this, we imitate a long and distinguished engineering
+  tradition of providing an “interchangeability of parts” to ensure
+  that the systems vendors can take advantage of the latest
+  innovations in silicon and software with the minimum of entry
+  barrier, and the least amount of custom re-engineering.
+
+* License
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License version 2 as
+  published by the Free Software Foundation;
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA

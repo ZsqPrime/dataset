@@ -1,0 +1,12 @@
+Project Description:
+Capturando conteúdo HTML com JSoup
+
+README:
+Projeto: TutorialJsoup
+http://www.mballem.com/post/capturando-contedo-html-com-jsoup
+
+IDE: Intellij IDEA 11 - Community Edition FREE
+
+Os fontes estão na estrutura de projetos Maven 2.
+
+Para quem não tem conhecimento básico de Maven, veja as bibliotecas necessárias no arquivo pom.xml.

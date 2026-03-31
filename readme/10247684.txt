@@ -1,0 +1,13 @@
+Project Description:
+Use #dereference if you want know what hiding behind short link
+
+README:
+Цель данного проекта создать библиотеку, которая позволит разыменовывать коротки ссылки, получаемые с помощью сервисов сокращателей
+Проверено на:
+- bit.ly
+- clck.ru
+- is.gd
+- goo.gl
+- t.co
+
+Добавлена поддержка google safebrowsing api.

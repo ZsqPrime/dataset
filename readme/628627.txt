@@ -1,0 +1,92 @@
+A bag of simple MELT examples, by Basile Starynkevitch 
+(France, working at CEA, LIST)  <basile@starynkevitch.net>
+
+MELT is a Domain Specific Language to extend the GCC compiler. See
+http://gcc-melt.org/ for more about MELT, and http://gcc.gnu.org/ for
+more about GCC.
+
+The examples are either public domain, or free software licensed under
+the LGPL license. (licensing may vary from file to file).  They are
+developped on Gnu/Linux/Debian/Sid with a GCC 4.6 or better compiler.
+
+Please discuss these examples and anything MELT related on the
+low-traffic gcc-melt@googlegroups.com; we invite you to subscribe to
+that list http://groups.google.com/group/gcc-melt if interested in
+MELT (and in these examples).
+
+Each example has a small file SUMMARY. Here they are:
+####SUMMARIES:
+==> ex01/SUMMARY <==
+ex01/ - hello world in MELT                                      [Public Domain]
+
+==> ex02/SUMMARY <==
+ex02/ - counting functions in MELT with a simple Gimple pass    [public domain]
+
+==> ex03/SUMMARY <==
+ex03/ - showing the GCC pass names thru MELT hooks   [public domain]
+
+==> ex04/SUMMARY <==
+ex04/ - searching simple function signatures [plugin domain]
+
+==> ex05/SUMMARY <==
+ex05/ - search fflush(NULL) in every function named bar*
+
+
+==> ex06/SUMMARY <==
+ex06/  -- typecheck JANSSON variadic functions
+
+       a MELT extension (LGPLv3 license) to typecheck json_pack and
+       json_unpack variadic functions from
+       http://www.digip.org/jansson (a C library for JSON
+       serialization).
+==> ex07/SUMMARY <==
+ex07/     show the passes done by GCC [public domain]===========
+
+
+Project Description:
+examples for GCC MELT
+
+README:
+A bag of simple MELT examples, by Basile Starynkevitch 
+(France, working at CEA, LIST)  <basile@starynkevitch.net>
+
+MELT is a Domain Specific Language to extend the GCC compiler. See
+http://gcc-melt.org/ for more about MELT, and http://gcc.gnu.org/ for
+more about GCC.
+
+The examples are either public domain, or free software licensed under
+the LGPL license. (licensing may vary from file to file).  They are
+developped on Gnu/Linux/Debian/Sid with a GCC 4.6 or better compiler.
+
+Please discuss these examples and anything MELT related on the
+low-traffic gcc-melt@googlegroups.com; we invite you to subscribe to
+that list http://groups.google.com/group/gcc-melt if interested in
+MELT (and in these examples).
+
+Each example has a small file SUMMARY. Here they are:
+####SUMMARIES:
+==> ex01/SUMMARY <==
+ex01/ - hello world in MELT                                      [Public Domain]
+
+==> ex02/SUMMARY <==
+ex02/ - counting functions in MELT with a simple Gimple pass    [public domain]
+
+==> ex03/SUMMARY <==
+ex03/ - showing the GCC pass names thru MELT hooks   [public domain]
+
+==> ex04/SUMMARY <==
+ex04/ - searching simple function signatures [plugin domain]
+
+==> ex05/SUMMARY <==
+ex05/ - search fflush(NULL) in every function named bar*
+
+
+==> ex06/SUMMARY <==
+ex06/  -- typecheck JANSSON variadic functions
+
+       a MELT extension (LGPLv3 license) to typecheck json_pack and
+       json_unpack variadic functions from
+       http://www.digip.org/jansson (a C library for JSON
+       serialization).
+==> ex07/SUMMARY <==
+ex07/     show the passes done by GCC [public domain]===========

@@ -1,0 +1,46 @@
+project name	:tyoro bot
+auther			:tyoro <orz@tyo.ro>
+website			:http://tyo.ro
+
+-- Project description
+phpで書かれたirc用のbotです。
+PEARのNet_SmartIRCを利用しています。
+
+基本的なbotの機能としては以下をサポートしています。
+・urlの展開
+・google検索
+・Amazon検索
+・計算機
+・twitterのユーザー情報の取得
+・ustreamの配信urlの取得
+
+また特殊な機能としてゲームの対戦管理をする機能があります。
+具体的にはトーナメントと紅白戦の管理機能です。
+詳細なコマンドは以下をご覧ください。
+・botつくった - ちょろのわからせられ日記 - ストリートファイターIV
+http://streetfighter4.g.hatena.ne.jp/tyoro1210/20100226
+・紅白戦機能 - ちょろのわからせられ日記 - ストリートファイターIV
+http://streetfighter4.g.hatena.ne.jp/tyoro1210/20100303/1267632901
+
+-- Dependency
+必要なライブラリ
+・PEAR
+Net/SmartIRC
+XML/RSS
+Services/Twitter
+Services/Amazon
+Zend/Gdata
+
+・その他(パッケージに含まれています)
+simple_html_dom
+  http://simplehtmldom.sourceforge.net/
+
+ADOdb
+  http://adodb.sourceforge.net/
+
+-- execute
+01. 上記の必須ライブラリを導入する。
+02. bot.conf.inc.sampleをbot.conf.incにrenameする
+03. bot.conf.incを編集する。
+04. bot.phpを実行する。
+05. ヽ|'◇'|ﾉ

@@ -1,0 +1,5 @@
+Project Description:
+IP zoom camera streaming over HSDPA network using BeagleBoard xM rev C and VISCA PTZ to i-Shot EM12338
+
+README:
+Hello World

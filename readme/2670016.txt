@@ -1,0 +1,5 @@
+Project Description:
+Sample code for learning how to program in Python
+
+README:
+This directory contains answer code for introductory Python assignments.

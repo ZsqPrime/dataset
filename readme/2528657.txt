@@ -1,0 +1,15 @@
+Project Description:
+Dummy Rails app demoing throttled mounted rack apps
+
+README:
+This Rails 3 app demonstrates how you can use Rack::Throttle to throttle any Rack app you have 
+mounted under Rails. It also contains Cucumber tests to verify access and throttling to the API.
+
+Modifications mainly made to these files:
+* config/routes.rb
+* features/my_dumb_api.feature
+* features/step_definitions/api_steps.rb
+* Gemfile
+
+I wrote up a blog post detailing how to do all this step-by-step, see:
+http://jamesbadger.ca/2012/01/14/rails-3-rack-throttle-your-rack-api/

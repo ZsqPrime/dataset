@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+This project is closed.
+
+Root is original site for flipped classroom workshop. 
+
+gh-pages is a redesign to expand offerings.

@@ -1,0 +1,4 @@
+Project Description:
+A chat client/server made in Java because I was bored.
+
+README:

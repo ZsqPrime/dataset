@@ -1,0 +1,6 @@
+
+
+Project Description:
+P.O.C using Spring-Data-Neo4j and Neo4j graph database
+
+README:

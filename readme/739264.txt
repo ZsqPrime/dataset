@@ -1,0 +1,33 @@
+#!/bin/bash -eu
+
+# PS:1 Puppet Configuration
+# Use librarian-puppet to reload modules. 
+# Fun Fact, this is the install script. 
+
+apt-get install -y puppet puppetmaster rubygems
+gem install librarian-puppet hiera 
+gem install --pre hiera-puppet
+cd /etc/puppet
+librarian-puppet update
+/etc/init.d/puppetmaster restart
+/etc/init.d/puppet restart
+
+
+
+Project Description:
+This is the repo for running our digital operations. We use puppet as our centralized orchestrator. Put this repo in /etc/puppetmaster
+
+README:
+#!/bin/bash -eu
+
+# PS:1 Puppet Configuration
+# Use librarian-puppet to reload modules. 
+# Fun Fact, this is the install script. 
+
+apt-get install -y puppet puppetmaster rubygems
+gem install librarian-puppet hiera 
+gem install --pre hiera-puppet
+cd /etc/puppet
+librarian-puppet update
+/etc/init.d/puppetmaster restart
+/etc/init.d/puppet restart

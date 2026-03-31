@@ -1,0 +1,118 @@
+Installation
+============
+
+    gem install s3stream
+
+Configuration
+=============
+
+Log into Amazon Web Services, and lookup your access key ID and secret.
+https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
+
+Here, I'll pretend that your access key is "ABCDEFGHIJKLMNOPQ" and your secret
+is "12345678901234567890abcde". Alright then...
+
+    % echo 'AWSAccessKeyId=ABCDEFGHIJKLMNOPQ' > ~/.aws-credentials
+    % echo 'AWSSecretKey=12345678901234567890abcde' >> ~/.aws-credentials
+    % export AWS_CREDENTIAL_FILE=~/.aws-credentials
+
+  - OR -
+
+    % export AMAZON_ACCESS_KEY_ID='ABCDEFGHIJKLMNOPQ'
+    % export AMAZON_SECRET_ACCESS_KEY='12345678901234567890abcde'
+
+  - OR -
+
+    % export AWS_ACCESS_KEY='ABCDEFGHIJKLMNOPQ'
+    % export AWS_SECRET_KEY='12345678901234567890abcde'
+
+
+Usage
+=====
+
+    % s3stream fetch mybucket myfile.dat > /tmp/myfile.dat
+    % s3stream store mybucket myfile.dat < /tmp/myfile.dat
+
+If you want to try uploading a bunch of data, but don't have any handy:
+
+    % base64 /dev/urandom \
+      | head -c $((10 * 1024 * 1024)) \
+      | s3stream store mybucket 10mb.txt
+
+And if you want to get fancy:
+
+    % cat \
+      <(s3stream fetch mybucket log0.log.gz | gunzip) \
+      <(s3stream fetch mybucket log1.log.gz | gunzip) \
+      | lzop -9 \
+      | s3stream store mybucket combined.log.lzo
+
+
+If you want to stream an upload in ruby:
+
+    S3Stream::Upload.to(:s3object => s3object) do |stream|
+      stream.write("abc")
+      stream.write("123")
+    end
+
+
+Project Description:
+Stream files on S3 to stdout or from stdin
+
+README:
+Installation
+============
+
+    gem install s3stream
+
+Configuration
+=============
+
+Log into Amazon Web Services, and lookup your access key ID and secret.
+https://aws-portal.amazon.com/gp/aws/developer/account/index.html?action=access-key
+
+Here, I'll pretend that your access key is "ABCDEFGHIJKLMNOPQ" and your secret
+is "12345678901234567890abcde". Alright then...
+
+    % echo 'AWSAccessKeyId=ABCDEFGHIJKLMNOPQ' > ~/.aws-credentials
+    % echo 'AWSSecretKey=12345678901234567890abcde' >> ~/.aws-credentials
+    % export AWS_CREDENTIAL_FILE=~/.aws-credentials
+
+  - OR -
+
+    % export AMAZON_ACCESS_KEY_ID='ABCDEFGHIJKLMNOPQ'
+    % export AMAZON_SECRET_ACCESS_KEY='12345678901234567890abcde'
+
+  - OR -
+
+    % export AWS_ACCESS_KEY='ABCDEFGHIJKLMNOPQ'
+    % export AWS_SECRET_KEY='12345678901234567890abcde'
+
+
+Usage
+=====
+
+    % s3stream fetch mybucket myfile.dat > /tmp/myfile.dat
+    % s3stream store mybucket myfile.dat < /tmp/myfile.dat
+
+If you want to try uploading a bunch of data, but don't have any handy:
+
+    % base64 /dev/urandom \
+      | head -c $((10 * 1024 * 1024)) \
+      | s3stream store mybucket 10mb.txt
+
+And if you want to get fancy:
+
+    % cat \
+      <(s3stream fetch mybucket log0.log.gz | gunzip) \
+      <(s3stream fetch mybucket log1.log.gz | gunzip) \
+      | lzop -9 \
+      | s3stream store mybucket combined.log.lzo
+
+
+If you want to stream an upload in ruby:
+
+    S3Stream::Upload.to(:s3object => s3object) do |stream|
+      stream.write("abc")
+      stream.write("123")
+    end

@@ -1,0 +1,4 @@
+Project Description:
+parse a url and return JSON with its contents
+
+README:

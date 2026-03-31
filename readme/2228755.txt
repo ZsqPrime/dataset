@@ -1,0 +1,85 @@
+To read the theoretical part go to:
+http://en.wikipedia.org/wiki/Random_access_machine
+
+##RAM ISA
+
+load X		M[0] <- M[X]
+load= X		M[0] <- X
+load* X		M[0] <- M[M[X]]
+
+store X		M[0] -> M[X]
+store* X	M[0] -> M[M[X]]
+
+read X		Tape -> M[X]
+read* X		Tape -> M[M[X]]
+
+write X		Tape <- M[X]
+write= X	Tape <- X
+write* X	Tape <- M[M[X]]
+
+// NB: operator can be {add, sub, mul, div}
+
+operator X	M[0] <- M[0] op M[X]	
+operator= X	M[0] <- M[0] op X
+operator* X	M[0] <- M[0] op M[M[X]]
+
+jmp LABEL	Jump to 'LABEL'
+jz LABEL	Jump to 'LABEL' if M[0] = 0
+jgz LABEL	Jump to 'LABEL' if M[0] > 0
+
+halt		Stop execution (required)
+
+##Syntax for the emulator
+
+label LABEL	Set 'LABEL' on the next istruction.
+debug X		Call the X° debug function.
+# XXX		Ignore line 'XXX'
+
+##Debug function
+
+1 		Registers dump.
+
+Project Description:
+RAM machine emulator
+
+README:
+To read the theoretical part go to:
+http://en.wikipedia.org/wiki/Random_access_machine
+
+##RAM ISA
+
+load X		M[0] <- M[X]
+load= X		M[0] <- X
+load* X		M[0] <- M[M[X]]
+
+store X		M[0] -> M[X]
+store* X	M[0] -> M[M[X]]
+
+read X		Tape -> M[X]
+read* X		Tape -> M[M[X]]
+
+write X		Tape <- M[X]
+write= X	Tape <- X
+write* X	Tape <- M[M[X]]
+
+// NB: operator can be {add, sub, mul, div}
+
+operator X	M[0] <- M[0] op M[X]	
+operator= X	M[0] <- M[0] op X
+operator* X	M[0] <- M[0] op M[M[X]]
+
+jmp LABEL	Jump to 'LABEL'
+jz LABEL	Jump to 'LABEL' if M[0] = 0
+jgz LABEL	Jump to 'LABEL' if M[0] > 0
+
+halt		Stop execution (required)
+
+##Syntax for the emulator
+
+label LABEL	Set 'LABEL' on the next istruction.
+debug X		Call the X° debug function.
+# XXX		Ignore line 'XXX'
+
+##Debug function
+
+1 		Registers dump.

@@ -1,0 +1,6 @@
+Project Description:
+Some additions to bbcode-mode (https://bitbucket.org/jfm/emacs-bbcode/overview)
+
+README:
+Some additions to emacs bbcode-mode (https://bitbucket.org/jfm/emacs-bbcode/overview).
+Added menu entry and new tags with keybindings.

@@ -1,0 +1,9 @@
+Project Description:
+Fitting and calculation of SANS models of shapes in solution
+
+README:
+Contrail
+
+A selection of models and fitting routines utilising the models developed for SANSView implemented with a python wrapper for command line interaction.
+
+Cameron Neylon

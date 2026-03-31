@@ -1,0 +1,18 @@
+Project Description:
+For each PubMed identifier, return the corresponding bibtex entry (based on TexMed)
+
+README:
+pmid2bibtex
+===========
+
+This project relies on the work of Arne Muller with the TexMed project:
+http://www.bioinformatics.org/texmed/
+
+TexMed provides a web-based interface to retrieve bibtex entries from
+PubMed identifier. This project does the same but command line.
+
+
+Dependency:
+- python                -- http://python.org
+- python-requests       -- http://python-requests.org/
+- python-lxml           -- http://lxml.de/

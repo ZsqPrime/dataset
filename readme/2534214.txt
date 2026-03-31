@@ -1,0 +1,34 @@
+Project Description:
+Javascript "scrollbars" in the style of google and gmail. vertical only. mousewheel support. cross browser. supports window resize event.
+
+README:
+Required files:
+	scrubber.js - scroll bar dependencies
+	hook.js - event handling dependencies
+	
+HTML setup:	
+<div id="scrollarea">
+    <div id="scrollcontent">
+	<!-- Content to be scrolled goes here -->
+	</div>
+    <div id="scrollbar"><div id="scrollscrub"></div></div>
+</div>
+
+<script src="lib/hook.js"></script>
+<script src="lib/scrubber.js"></script>
+<script type="text/javascript">
+	hook.on("load", window, scroll.initialize({
+		scrub	:"scrollscrub",
+		bar	:"scrollbar",
+		content	:"scrollcontent",
+		area	:"scrollarea",
+		height	:window.innerHeight-35,
+		width	:'100%'
+	}));
+	window.onresize = function() {
+		scroll.resize({
+			height	:window.innerHeight-35, // if window size is changed, resize scroll height to new window height, but leave 35 pixels below
+			width	:'100%'
+		});
+	}
+</script>

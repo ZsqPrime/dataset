@@ -1,0 +1,18 @@
+
+[FeedHenry](http://www.feedhenry.com "FeedHenry") Sample Application see:
+
+- [Developer Information](http://developer.feedhenry.com)
+
+- [API Documentation](http://docs.feedhenry.com)
+
+
+Project Description:
+Sample FeedHenry Store Finder Application
+
+README:
+
+[FeedHenry](http://www.feedhenry.com "FeedHenry") Sample Application see:
+
+- [Developer Information](http://developer.feedhenry.com)
+
+- [API Documentation](http://docs.feedhenry.com)

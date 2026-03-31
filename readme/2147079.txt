@@ -1,0 +1,6 @@
+
+
+Project Description:
+Une petit engine pour jeu 2D utilisant SFML 2
+
+README:

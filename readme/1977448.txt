@@ -1,0 +1,6 @@
+Project Description:
+The magic behind the hack@uchicago website
+
+README:
+# hack@uchicago
+The magic behind the [hack@uchicago](http://hack.uchicago.edu/ "hack@uchicago") website.

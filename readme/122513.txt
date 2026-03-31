@@ -1,0 +1,36 @@
+This is a project which uses a character display and an IR reciever on an 
+Arduino to interface with a media player and other functions on a Linux PC.
+
+The core files for the Arduino are:
+-ir_recieve.pde is the Arduino sketch.
+-ir_recieve.py provides the PC interface to the Arduino (via PySerial)
+
+Executable PC side files are:
+-banshee_client.py uses Banshee as the Media Player (through 
+mediaplayer_banshee.py), and D-Bus and xdotool for additional Linux Desktop 
+functions.
+-mpd_client.py uses python-mpd to serve as a client for the Media Player Daemon 
+on a local server.
+-Constants are located near the top of each file for setting the serial port to
+use and other options.
+
+
+Project Description:
+Arduino-based device to control a PC media player with a remote and display track information on an LCD.
+
+README:
+This is a project which uses a character display and an IR reciever on an 
+Arduino to interface with a media player and other functions on a Linux PC.
+
+The core files for the Arduino are:
+-ir_recieve.pde is the Arduino sketch.
+-ir_recieve.py provides the PC interface to the Arduino (via PySerial)
+
+Executable PC side files are:
+-banshee_client.py uses Banshee as the Media Player (through 
+mediaplayer_banshee.py), and D-Bus and xdotool for additional Linux Desktop 
+functions.
+-mpd_client.py uses python-mpd to serve as a client for the Media Player Daemon 
+on a local server.
+-Constants are located near the top of each file for setting the serial port to
+use and other options.

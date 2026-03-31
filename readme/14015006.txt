@@ -1,0 +1,7 @@
+Project Description:
+Command line Blackjack game with ascii art
+
+README:
+CLI Blackjack
+==================
+A command line blackjack game, complete with ascii art.

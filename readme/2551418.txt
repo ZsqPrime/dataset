@@ -1,0 +1,38 @@
+Project Description:
+A python repository to search repos, users, gists on GitHub and Download repositories without SSH!
+
+README:
+Author          : Jay Rambhia
+email 	        : jayrambhia777@gmail.com
+Git 	        : https://github.com/jayrambhia
+gist 	        : https://gist.github.com/jayrambhia
+@jayrambhia     : http://twitter.com/jayrambhia
+Blog            : http://jayrambhia.wordpress.com
+==================================================
+Name	        : searchGit
+version	        : 0.1
+Git             : https://github.com/jayrambhia/searchGit
+compatibility   : Linux (Ubuntu tested)
+
+It's a repository of python scripts to search contents on GitHub as well as gists.
+If you are behind a proxy, change it accordingly in the searchGitUitls.py, otherwise just comment setProxy().
+
+1. searchRepo.py
+	Enter query and language. Get all the relevant repositories links.
+	$ python searchRepo.py
+
+2. saveRepo.py
+	Enter a repository link. And it will download complete repository.
+	$ python saveRepo.py
+
+3. saveUserRepo.py
+	Enter a user link. It will download all the repositories of that user.
+	$ python saveUserRepo.py
+
+4. searchGist.py
+	Enter query. Get all the relevant gists links.
+	$ python searchGist.py
+	
+5. saveGist.py
+	Enter the gist link. And it will download the gist.
+	$ python saveGist.py

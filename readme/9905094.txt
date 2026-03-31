@@ -1,0 +1,5 @@
+Project Description:
+Tcl bindings for the SWORD Bible Project
+
+README:
+Tcl bindings for the Sword project (www.crosswire.org)

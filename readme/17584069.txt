@@ -1,0 +1,13 @@
+Project Description:
+EEG interface to LED UI
+
+README:
+Mind's Eye
+Author: Ophir Ronen
+EEG based LED biofeedback installation
+cc Ophir Ronen 2012
+
+For non-commercial use only
+ophir@tizos.org
+
+Using TAP Plastic: Lighting White 40%

@@ -1,0 +1,42 @@
+Project Description:
+JavaScript Browser History plugin for jQuery
+
+README:
+jQuery history event v0.4
+Copyright (c) 2014 Tom Rodenberg <tarodenberg gmail com>
+jQuery history event is released under two licenses: new BSD, and MIT. You may pick the
+license that best suits your development needs.
+
+Adds a history event to jQuery. Allows dynamic pages to create page states and easily recall them when user navigation occurs (such as the back button).
+
+$(function() {
+    $('#status').history(function(e, currentHash, previousHash) {
+        $(this).html('User navigated to: ' + currentHash);
+    });
+    $('#status').historyadd(function(e, currentHash, previousHash) {
+        $(this).html('Navigation added: ' + currentHash);
+    });
+
+    $(window).history(function(e, hash) {
+        //myCustomLoadFunction(hash);
+    });
+
+    $('#button').click(function() {
+        $.history.add('item123');
+    });
+
+    $('#status').html('The initial location is: ' + $.history.getCurrent());
+});
+
+Need data storage?
+
+$(function(){
+    var textboxData = {};
+    $('#textbox').historyadd(function(e, currentHash, previousHash) {
+        textboxData[previousHash] = $(this).val();
+    });
+
+    $('#textbox').history(function(e, currentHash, previousHash) {
+        $(this).val(textboxData[currentHash] || '');
+    });
+});

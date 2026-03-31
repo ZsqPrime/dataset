@@ -1,0 +1,12 @@
+Servico de listas públicas para itens nao repetidos. Exemplos: Listas de compras, aniversarios, eventos, etc..
+
+Hospedado em: http://listas-publicas.herokuapp.com/
+
+
+Project Description:
+projeto para criar listas de itens não repetidos e fáceis de compartilhar e imprimir
+
+README:
+Servico de listas públicas para itens nao repetidos. Exemplos: Listas de compras, aniversarios, eventos, etc..
+
+Hospedado em: http://listas-publicas.herokuapp.com/

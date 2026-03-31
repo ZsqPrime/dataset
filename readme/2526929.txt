@@ -1,0 +1,8 @@
+Project Description:
+Firmware for firecrow hardware modules
+
+README:
+fireCrow
+========
+
+This is the firmware for the fireCrow hardware module v2.0

@@ -1,0 +1,65 @@
+This application lets you easily manage multiple languages in apps powered by Appcelerator. 
+As input it takes a CSV file and as output it produces separate language files.
+
+The CSV file should have the following columns for an app translated into english and swedish:
+
+Input, strings.csv:
++-------------------+-----------+----------+
+| string            | en        | sv       |
++-------------------+-----------+----------+
+| greeting_text     | Hello!    | Tjena!   +
++-------------------+-----------+----------+
+
+Output:
+
+en/en.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="greeting_text">Hello!</string>
+</resources>
+
+sv/sv.xml:
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="greeting_text">Tjena!</string>
+</resources>
+
+Typical usage:
+java -Dfile.encoding=UTF8 -jar runcsv.jar -i UTF-8 -d xlsstrings.csv
+
+Where -Dfile.encoding=UTF8 is the encoding of the input file, -i the encoding of the ouput file and then finally the input file name.
+
+Project Description:
+None
+
+README:
+This application lets you easily manage multiple languages in apps powered by Appcelerator. 
+As input it takes a CSV file and as output it produces separate language files.
+
+The CSV file should have the following columns for an app translated into english and swedish:
+
+Input, strings.csv:
++-------------------+-----------+----------+
+| string            | en        | sv       |
++-------------------+-----------+----------+
+| greeting_text     | Hello!    | Tjena!   +
++-------------------+-----------+----------+
+
+Output:
+
+en/en.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="greeting_text">Hello!</string>
+</resources>
+
+sv/sv.xml:
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="greeting_text">Tjena!</string>
+</resources>
+
+Typical usage:
+java -Dfile.encoding=UTF8 -jar runcsv.jar -i UTF-8 -d xlsstrings.csv
+
+Where -Dfile.encoding=UTF8 is the encoding of the input file, -i the encoding of the ouput file and then finally the input file name.

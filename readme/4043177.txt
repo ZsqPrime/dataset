@@ -1,0 +1,7 @@
+Project Description:
+Decorate product pages on amazon.co.uk with the equivilent irish price. This price will be in euro and include the Irish VAT rate where applicable.
+
+README:
+This Chrome Extension will decorate product pages on amazon.co.uk with the equivalent Irish price. This price will be in Euro and include the Irish VAT rate where applicable.
+
+This extension can be installed at https://chrome.google.com/extensions/detail/ljbghemliajpgabhbaecbipkgngkoalf?hl=en

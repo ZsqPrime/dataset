@@ -1,0 +1,13 @@
+Install script is inst.sh
+
+(don't forget all the files are hidden)
+
+
+
+Project Description:
+.vimrc/.zhrc/etc.
+
+README:
+Install script is inst.sh
+
+(don't forget all the files are hidden)

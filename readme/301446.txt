@@ -1,0 +1,14 @@
+Kharcha
+=======
+
+Expense tracking.
+
+
+Project Description:
+Expense tracker
+
+README:
+Kharcha
+=======
+
+Expense tracking.

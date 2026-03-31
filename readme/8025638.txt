@@ -1,0 +1,8 @@
+Project Description:
+Package to enable all IP Ranges for a Salesforce org.
+
+README:
+NOTE
+
+This repository is retired, please use this instead:
+https://github.com/rdehler/sfdc-whitelist-ips-chrome

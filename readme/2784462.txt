@@ -1,0 +1,5 @@
+Project Description:
+Ranking of the comentators on telestrekoza
+
+README:
+Wordpress plugin to rank commentators on the telestrekoza

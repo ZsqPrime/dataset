@@ -1,0 +1,14 @@
+Project Description:
+Uses the daily engine
+
+README:
+Create daily.yml file pointing at your db form the example.
+
+rake db:create
+rake daily_engine:install:migrations
+rake db:migrate
+
+rake user:admin[brian@example.com,password]
+
+rails s
+script/delayed_job start

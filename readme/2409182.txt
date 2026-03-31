@@ -1,0 +1,17 @@
+Luggage Packages
+----------------------
+
+This repo contains recipes for creating packages using
+The Luggage (https://github.com/unixorn/luggage)
+
+
+
+Project Description:
+Packages made with The Luggage
+
+README:
+Luggage Packages
+----------------------
+
+This repo contains recipes for creating packages using
+The Luggage (https://github.com/unixorn/luggage)

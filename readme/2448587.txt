@@ -1,0 +1,162 @@
+Collection of script to manage the hotkeys of the Asus Eeepc 1015pem and models with the same acpi events.
+
+REQUIRED PACKAGES:
+- acpid: daemon to catch the acpi events
+- libnotify: notification support in gtk systems
+- kdialog: notification support in qt systems
+- dmidecode: check model in install script
+- a kernel that supports frequency scaling and eeepc_laptop module
+
+For old Arch Linux setups you need all dependencies of:
+- xorg-server-utils [1]
+
+CONFIG_CPU_FREQ
+CONFIG_CPU_FREQ_TABLE
+CONFIG_CPU_FREQ_GOV_PERFORMANCE
+CONFIG_CPU_FREQ_GOV_POWERSAVE
+CONFIG_CPU_FREQ_GOV_ONDEMAND
+CONFIG_CPU_FREQ_GOV_CONSERVATIVE
+CONFIG_X86_ACPI_CPUFREQ
+
+CONFIG_EEEPC_LAPTOP
+
+##############################################################################
+
+INSTALL:
+
+git clone git://github.com/dieghen89/eeepc-1015pem-acpi.git
+cd eeepc-1015pem-acpi
+sudo ./install.sh
+
+Options:
+--prefix DIR
+
+Install all files in DIR directory. Example:
+
+sudo ./install.sh --prefix /home/user/fakeroot
+
+##############################################################################
+
+CONFIGURE:
+
+You can find the configuration file in: /etc/conf.d/eeepc-1015pem-acpi.conf
+
+##############################################################################
+
+REMOVE:
+
+sh ./install.sh --uninstall
+
+##############################################################################
+##############################################################################
+
+FEATURES:
+
+- Link commands to all Fn+FX keys
+- Touchpad toggle
+- SHE toggle
+- CPU governors toggle
+- Various tweaks in /sys and /proc
+- Log support
+- libnotify/kdialog support
+- boot to powersave/performace (put eeepc-bootup.sh in /etc/rc.local)
+- presets support (manage CPU+SHE+Sys_Proc_Tweaks with easy performance profile)
+- manual switch the presets/CPU/SHE (eeepc-power-manager.sh)
+- Tweaked conservative CPU governor
+
+Credits to:
+
+- nbigaouette acpi-eeepc-generic project: 
+	https://github.com/nbigaouette/acpi-eeepc-generic
+- cruchbang powersave script: 
+	http://crunchbanglinux.org/forums/topic/11954
+- Melko: 
+	http://linux4netbook.blogspot.com/2010/10/howto-creiamoci-i-nostri-script-acpi.html
+- LessWatts: 
+	http://www.lesswatts.org/tips/
+
+[1] http://www.archlinux.org/packages/extra/any/xorg-server-utils/
+
+
+Project Description:
+Acpi Scripts for eeepc 1015pem
+
+README:
+Collection of script to manage the hotkeys of the Asus Eeepc 1015pem and models with the same acpi events.
+
+REQUIRED PACKAGES:
+- acpid: daemon to catch the acpi events
+- libnotify: notification support in gtk systems
+- kdialog: notification support in qt systems
+- dmidecode: check model in install script
+- a kernel that supports frequency scaling and eeepc_laptop module
+
+For old Arch Linux setups you need all dependencies of:
+- xorg-server-utils [1]
+
+CONFIG_CPU_FREQ
+CONFIG_CPU_FREQ_TABLE
+CONFIG_CPU_FREQ_GOV_PERFORMANCE
+CONFIG_CPU_FREQ_GOV_POWERSAVE
+CONFIG_CPU_FREQ_GOV_ONDEMAND
+CONFIG_CPU_FREQ_GOV_CONSERVATIVE
+CONFIG_X86_ACPI_CPUFREQ
+
+CONFIG_EEEPC_LAPTOP
+
+##############################################################################
+
+INSTALL:
+
+git clone git://github.com/dieghen89/eeepc-1015pem-acpi.git
+cd eeepc-1015pem-acpi
+sudo ./install.sh
+
+Options:
+--prefix DIR
+
+Install all files in DIR directory. Example:
+
+sudo ./install.sh --prefix /home/user/fakeroot
+
+##############################################################################
+
+CONFIGURE:
+
+You can find the configuration file in: /etc/conf.d/eeepc-1015pem-acpi.conf
+
+##############################################################################
+
+REMOVE:
+
+sh ./install.sh --uninstall
+
+##############################################################################
+##############################################################################
+
+FEATURES:
+
+- Link commands to all Fn+FX keys
+- Touchpad toggle
+- SHE toggle
+- CPU governors toggle
+- Various tweaks in /sys and /proc
+- Log support
+- libnotify/kdialog support
+- boot to powersave/performace (put eeepc-bootup.sh in /etc/rc.local)
+- presets support (manage CPU+SHE+Sys_Proc_Tweaks with easy performance profile)
+- manual switch the presets/CPU/SHE (eeepc-power-manager.sh)
+- Tweaked conservative CPU governor
+
+Credits to:
+
+- nbigaouette acpi-eeepc-generic project: 
+	https://github.com/nbigaouette/acpi-eeepc-generic
+- cruchbang powersave script: 
+	http://crunchbanglinux.org/forums/topic/11954
+- Melko: 
+	http://linux4netbook.blogspot.com/2010/10/howto-creiamoci-i-nostri-script-acpi.html
+- LessWatts: 
+	http://www.lesswatts.org/tips/
+
+[1] http://www.archlinux.org/packages/extra/any/xorg-server-utils/

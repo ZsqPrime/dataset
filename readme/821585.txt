@@ -1,0 +1,6 @@
+
+
+Project Description:
+Solarbetriebene VersuchsAnlage zur FreiflächenBeleuchtung
+
+README:

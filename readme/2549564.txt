@@ -1,0 +1,7 @@
+Project Description:
+Switch Android settings with by touching NFC tags
+
+README:
+You will need ub0rlib (branch noabs)[1] to compile this code.
+
+[1] http://github.com/felixb/ub0rlib/

@@ -1,0 +1,32 @@
+It's all yours.
+
+You will find a lot of code in C, C++ and C#, mostly for basic concepts training purposes.
+
+There is a snake game and a words mixer code in C, mostly to train string/char manipulation, 
+there is also a Plugins installer for some Linux distros. That Plugins install app also
+received an interface, which was firstly writed using raw GTK but later 'constructed' using 
+Glade.
+
+In C# there is TrackingTool, a huge application for finantial control on Pharmacy chain networks 
+used as final project for my degree.
+
+As I said, it's all yours if you find some utility for ir :)
+
+
+Project Description:
+C, C#, C++, ruby and other random codes
+
+README:
+It's all yours.
+
+You will find a lot of code in C, C++ and C#, mostly for basic concepts training purposes.
+
+There is a snake game and a words mixer code in C, mostly to train string/char manipulation, 
+there is also a Plugins installer for some Linux distros. That Plugins install app also
+received an interface, which was firstly writed using raw GTK but later 'constructed' using 
+Glade.
+
+In C# there is TrackingTool, a huge application for finantial control on Pharmacy chain networks 
+used as final project for my degree.
+
+As I said, it's all yours if you find some utility for ir :)

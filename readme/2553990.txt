@@ -1,0 +1,23 @@
+Project Description:
+Code to answer the questions at the Euler Project.  Will be used mainly to learn and benchmark new languages.
+
+README:
+Project Euler Questions
+
+Questions at the project euler web site: http://projecteuler.net/
+
+Current Languages with some problems solved
+Javascript	
+Python
+Java
+
+Upcoming Languages
+C++
+
+PHP
+
+Description
+
+This project was undertaken to try and motivate myself to learn some of the languages that are availible for use today.  Instead of reading tutorials, I always find the most effective way to learn a language is to actually put it to use. The Project Euler questions give a good framework for developing skills without having to come up with new projects on my own.
+
+In order to subverse myself in as many languages as possible, I'll be doing 5 questions in one language before going back and doing those same questions in another language.  I'll be starting off with 4 languages at once and then expanding to new languages later on.

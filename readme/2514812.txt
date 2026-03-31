@@ -1,0 +1,11 @@
+A simple nuclear power plant simulator.
+
+Unusable without core design files which, unfortunately, contain data which is property of Westinghouse Electric, Co. LLC.
+
+Project Description:
+Server for EGON NPP simulator
+
+README:
+A simple nuclear power plant simulator.
+
+Unusable without core design files which, unfortunately, contain data which is property of Westinghouse Electric, Co. LLC.

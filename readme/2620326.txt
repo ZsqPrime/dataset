@@ -1,0 +1,9 @@
+Project Description:
+Extraction of scheduling functionality I wrote for a letterpress studio website, but could be useful for other types of situations
+
+README:
+Scheduler
+
+This is a some functionality that I wrote for a letterpress studio where people can (now) reserve time on various presses. 
+
+Could conceivably work for other types of things that need to be reserved (tennis courts?)

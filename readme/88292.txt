@@ -1,0 +1,22 @@
+Refresh your Development with NuGet
+===========
+
+This presentation covers how to use, create and interact with the open source package manager for .NET, NuGet.
+
+Links:
+
+* [NuGet](http://www.nuget.org)
+
+
+Project Description:
+Repository for the Refresh your Development with NuGet presentation.
+
+README:
+Refresh your Development with NuGet
+===========
+
+This presentation covers how to use, create and interact with the open source package manager for .NET, NuGet.
+
+Links:
+
+* [NuGet](http://www.nuget.org)

@@ -1,0 +1,48 @@
+Project Description:
+Try to develop an open souce firmware for an 808 Micro Cam
+
+README:
+The project goal is to develop an open souce firmware for the 808 Micro Camera. 
+
+For my development i use Ubuntu Linux Version 10.10
+
+The 808 Cam uses an Sunplus SPCA1527 Chip
+
+http://www.chucklohr.com/808/C3/index.html
+
+Tools we use.
+
+The 8051 Assembler ( as31
+
+http://www.pjrc.com/tech/8051/
+
+Upload sample code
+Try at your own risk.
+
+
+
+Compile the sample:
+
+as31 blink.asm
+
+Convert the hex File to BIN
+
+avr-objcopy -I ihex -O binary blink.hex blink.bin
+
+Press the mode button and connect the cam to usb.
+
+lsusb
+
+Now the Cam is in webcam mode
+
+ID 04fc:1528 Sunplus Technology Co., Ltd SPCA1527A/SPCA1528 SD card camera (webcam mode)
+
+Upload the code ( Wrong code can destroy your Cam !!!)
+
+ISP808
+
+Yes. Now the Led will blink. We loaded our first code in your Cam.
+
+Disconnect the cam from USB
+
+Press Reset.

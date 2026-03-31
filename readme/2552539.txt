@@ -1,0 +1,7 @@
+Project Description:
+Ohjelmoinnin harjoitustyö
+
+README:
+OhHa
+====
+Ohjelmoinnin harjoitustyö

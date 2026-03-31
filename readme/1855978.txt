@@ -1,0 +1,7 @@
+Project Description:
+akax.github.com
+
+README:
+# Akax`s Blog
+
+this blog povered by jekyll.

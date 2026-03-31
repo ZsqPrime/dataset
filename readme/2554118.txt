@@ -1,0 +1,7 @@
+Project Description:
+random maze generation; maze exploration; shortest path determination.
+
+README:
+messy random maze generation and, eventually, maze exploration and shortest path determination
+
+fastest_path.c:

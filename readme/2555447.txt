@@ -1,0 +1,22 @@
+Project Description:
+
+
+README:
+== Welcome to Tugowa!
+
+Tugowa is (will be) a competitive scholastic preparedness engine.
+
+Pre-requisities: 
+ruby (rvm is recommended)
+git
+
+Install:
+  git clone
+
+  bundle install
+
+set up your database.yml 
+
+  bundle exec rails s
+
+That's it (so far).

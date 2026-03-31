@@ -1,0 +1,15 @@
+Standards for Pull Request:
+- No Trailing White spaces
+- Add /** to Function, and // Notes above function
+- Always test before Creating a Pull Request
+- Use the most efficient code you can.
+
+Project Description:
+Call of Duty Plugin
+
+README:
+Standards for Pull Request:
+- No Trailing White spaces
+- Add /** to Function, and // Notes above function
+- Always test before Creating a Pull Request
+- Use the most efficient code you can.

@@ -1,0 +1,96 @@
+Space shooter v0.0.2 by joined forces
+--==----===----===----==--
+Controls:
+  W - Forward thrust
+  S - Reverse thrust
+  A - Rotate left
+  D - Rotate right
+  
+  E - Rotate thru weapons
+  L - Toggle lights
+
+  SPACE - Shoot lasers !!
+  LSHIFT - Afterburners
+  
+--==----===----===----==--
+Thank you:
+--==----===----===----==--
+Developers and community of "Badlogic Games" for libGDX
+http://code.google.com/p/libgdx/
+
+License:
+Code: http://www.apache.org/licenses/LICENSE-2.0
+Content: http://creativecommons.org/licenses/by-sa/3.0/
+--==----===----===----==--
+Developers and community of "Slick" for Slick 2d game engine :)
+http://slick.cokeandcode.com/
+
+License:
+http://slick.cokeandcode.com/static.php?page=license
+--==----===----===----==--
+kalle_h from Badlogic games forum for Bloom library
+http://www.badlogicgames.com/forum/viewtopic.php?f=17&t=3131
+
+License: N/A
+--==----===----===----==--
+kalle.hamalainen85 for Box2DLights library
+http://code.google.com/p/box2dlights/
+
+License: http://www.apache.org/licenses/LICENSE-2.0
+--==----===----===----==--
+Kryptid from deviantart.com for sprite sheets for spaceships :)
+http://kryptid.deviantart.com/art/Spaceship-Sprite-Package-117026929
+
+License: N/A
+--==----===----===----==--
+
+
+Project Description:
+A game creation test
+
+README:
+Space shooter v0.0.2 by joined forces
+--==----===----===----==--
+Controls:
+  W - Forward thrust
+  S - Reverse thrust
+  A - Rotate left
+  D - Rotate right
+  
+  E - Rotate thru weapons
+  L - Toggle lights
+
+  SPACE - Shoot lasers !!
+  LSHIFT - Afterburners
+  
+--==----===----===----==--
+Thank you:
+--==----===----===----==--
+Developers and community of "Badlogic Games" for libGDX
+http://code.google.com/p/libgdx/
+
+License:
+Code: http://www.apache.org/licenses/LICENSE-2.0
+Content: http://creativecommons.org/licenses/by-sa/3.0/
+--==----===----===----==--
+Developers and community of "Slick" for Slick 2d game engine :)
+http://slick.cokeandcode.com/
+
+License:
+http://slick.cokeandcode.com/static.php?page=license
+--==----===----===----==--
+kalle_h from Badlogic games forum for Bloom library
+http://www.badlogicgames.com/forum/viewtopic.php?f=17&t=3131
+
+License: N/A
+--==----===----===----==--
+kalle.hamalainen85 for Box2DLights library
+http://code.google.com/p/box2dlights/
+
+License: http://www.apache.org/licenses/LICENSE-2.0
+--==----===----===----==--
+Kryptid from deviantart.com for sprite sheets for spaceships :)
+http://kryptid.deviantart.com/art/Spaceship-Sprite-Package-117026929
+
+License: N/A
+--==----===----===----==--

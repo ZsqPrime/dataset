@@ -1,0 +1,5 @@
+Project Description:
+Visualization of an R-tree using Swing
+
+README:
+This project visualizes R-tree structures in a Swing GUI. It was made in 2004 by Eirik Eide and Odin Hole Standal.

@@ -1,0 +1,19 @@
+Android-based Augmented Reality using crowd-sourced meta-data
+
+Prerequisites:
+* Android 2.1 SDK
+* OpenCV 2.3.1
+* Cassandra 1.x
+* Hector 1.x
+
+Project Description:
+Android Augmented Reality, based on the AndroRemote project
+
+README:
+Android-based Augmented Reality using crowd-sourced meta-data
+
+Prerequisites:
+* Android 2.1 SDK
+* OpenCV 2.3.1
+* Cassandra 1.x
+* Hector 1.x

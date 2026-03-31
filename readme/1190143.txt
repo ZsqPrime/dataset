@@ -1,0 +1,23 @@
+= tower
+
+work in progress
+
+== Copyright
+
+Copyright (c) 2011 Jordan Glasner. See LICENSE.txt for
+further details.
+
+
+
+Project Description:
+Add app/services to Rails 3 
+
+README:
+= tower
+
+work in progress
+
+== Copyright
+
+Copyright (c) 2011 Jordan Glasner. See LICENSE.txt for
+further details.

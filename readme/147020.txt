@@ -1,0 +1,36 @@
+To run unit tests:
+------------------
+make test
+
+To install:
+-----------
+sudo make install
+
+To uninstall:
+-------------
+sudo make uninstall
+
+Other notes:
+------------
+* shunit2 downloaded from http://shunit2.googlecode.com/svn/trunk/source/2.1/doc/shunit2.html
+
+
+Project Description:
+Database schema migrations
+
+README:
+To run unit tests:
+------------------
+make test
+
+To install:
+-----------
+sudo make install
+
+To uninstall:
+-------------
+sudo make uninstall
+
+Other notes:
+------------
+* shunit2 downloaded from http://shunit2.googlecode.com/svn/trunk/source/2.1/doc/shunit2.html

@@ -1,0 +1,8 @@
+See `docs/README.rst <https://github.com/collective/iwwb.eventlist/blob/master/docs/README.rst>`_.
+
+
+Project Description:
+iwwb.eventlist
+
+README:
+See `docs/README.rst <https://github.com/collective/iwwb.eventlist/blob/master/docs/README.rst>`_.

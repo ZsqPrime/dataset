@@ -1,0 +1,12 @@
+# This is $HOME #
+
+![My Precious](https://github.com/jpablobr/mp/raw/master/gollum.jpg)
+
+
+Project Description:
+ Yes, precious, false! They will cheat you, hurt you, LIE. 
+
+README:
+# This is $HOME #
+
+![My Precious](https://github.com/jpablobr/mp/raw/master/gollum.jpg)

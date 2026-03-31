@@ -1,0 +1,6 @@
+
+
+Project Description:
+A Logo like environment for Pharo Smalltalk to learn the basics of OOP
+
+README:

@@ -1,0 +1,5 @@
+Project Description:
+Battleships with single- multiplayer created with Symfony 2
+
+README:
+Battleships with a single- and multiplayer programmed with Symfony 2

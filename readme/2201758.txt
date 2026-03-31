@@ -1,0 +1,15 @@
+audiolibjs-intro
+================
+
+This is a repo of slides and demos for an introduction to the audiolib.js 
+JavaScript audio API.
+
+Project Description:
+Materials from an introductory presentation on audiolib.js
+
+README:
+audiolibjs-intro
+================
+
+This is a repo of slides and demos for an introduction to the audiolib.js 
+JavaScript audio API.

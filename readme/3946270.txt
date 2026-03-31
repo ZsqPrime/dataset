@@ -1,0 +1,7 @@
+Project Description:
+Ruby Object Mapper - Relation Graph
+
+README:
+# rom-relation
+
+This repo was merged into main [ROM](https://github.com/rom-rb/rom) repository.

@@ -1,0 +1,4 @@
+Project Description:
+Additional iOs-like components for MeeGo
+
+README:

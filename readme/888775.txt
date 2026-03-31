@@ -1,0 +1,8 @@
+Project Description:
+Code as Fast as You Can Think
+
+README:
+A code playground for various languages and frameworks!
+
+Happy Hacking,
+ Glenn Chen

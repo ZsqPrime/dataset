@@ -1,0 +1,7 @@
+Project Description:
+A javascript SAMP client using the web profile.
+
+README:
+## The What
+
+This is a javascript SAMP client. It uses the web profile.

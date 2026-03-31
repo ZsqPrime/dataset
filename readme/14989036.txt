@@ -1,0 +1,9 @@
+Project Description:
+I'll admit this is part of an assignment, but i'm doing it in a unique way!
+
+README:
+
+Two branches;
+
+Master - checks files given a hardcoded txt file
+Cmd - checks files from command line arguments

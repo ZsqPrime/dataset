@@ -1,0 +1,5 @@
+Project Description:
+Site to organize rides to events within a group. Basically me messing around with node.js
+
+README:
+readme

@@ -1,0 +1,7 @@
+Initial stages of creating StructureCreator in HTML5
+
+Project Description:
+Creates your initial files and folders with the use of template files.
+
+README:
+Initial stages of creating StructureCreator in HTML5

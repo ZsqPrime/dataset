@@ -1,0 +1,5 @@
+Description:
+Satzung des Chaos Computer Club Mannheim e.V. Im Master-Branch befinden sich die jeweils akutellen, beschlossenen Fassungen.
+
+README:
+README not available

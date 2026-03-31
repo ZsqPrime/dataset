@@ -1,0 +1,18 @@
+Modizer
+=======
+
+iOS modules, chiptunes & vgm player.
+
+yoyofr
+
+
+Project Description:
+iOS chiptune/module player
+
+README:
+Modizer
+=======
+
+iOS modules, chiptunes & vgm player.
+
+yoyofr

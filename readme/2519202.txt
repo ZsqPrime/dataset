@@ -1,0 +1,9 @@
+Project Description:
+This project deals with programs related to compiled design
+
+README:
+This project contains all the programs done for teaching compiler
+course
+
+lex --> this has experiments done on lex tool
+lex/removeblank.l -> to remove all blanks from the input

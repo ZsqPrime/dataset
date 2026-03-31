@@ -1,0 +1,6 @@
+Project Description:
+synthetic modeling & vsp processing
+
+README:
+Testing 1 2 3 
+imagi - synthetic velocity model building and vsp modeling - processing

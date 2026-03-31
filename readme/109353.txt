@@ -1,0 +1,11 @@
+This repository no longer maintains tumblr_client, if you want to file issues, check out new code please see the official repository found
+[here](https://github.com/tumblr/tumblr_client).
+
+
+
+Project Description:
+A Ruby Wrapper for the Tumblr v2 API
+
+README:
+This repository no longer maintains tumblr_client, if you want to file issues, check out new code please see the official repository found
+[here](https://github.com/tumblr/tumblr_client).

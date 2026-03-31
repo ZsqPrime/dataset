@@ -1,0 +1,7 @@
+Project Description:
+Førelopig GUI til POC
+
+README:
+Dette er den foreløpige GUI til POC'en som skal leveres fredag den 10. februar.
+
+Hei, hei!!

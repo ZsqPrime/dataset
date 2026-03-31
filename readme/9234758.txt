@@ -1,0 +1,6 @@
+Project Description:
+A vim bundle to enable syntax highlighting for Microsoft t4 text templates
+
+README:
+This is a very simple set of config files for vim to enable t4 (.tt) file
+syntax highlighting and so on.  Its by no means complete, but its a start

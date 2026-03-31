@@ -1,0 +1,8 @@
+Project Description:
+Benchmark on Event-driven Network IO Frameworks
+
+README:
+
+export MAVEN_OPTS="-server -Xms64m -Xmx64m -XX:+UseParallelGC -XX:+AggressiveOpts -XX:+UseFastAccessorMethods -XX:MaxPermSize=32m -XX:PermSize=16m"
+
+mvn clean compile exec:java

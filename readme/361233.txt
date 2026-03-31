@@ -1,0 +1,8 @@
+http://mobisocial.stanford.edu/socialkit/
+
+
+Project Description:
+Library for building social applications for Android
+
+README:
+http://mobisocial.stanford.edu/socialkit/

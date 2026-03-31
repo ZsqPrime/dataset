@@ -1,0 +1,9 @@
+This is the OLD repo. The new one contains just source for the device and vendor folders, which is how it should be done.
+
+
+
+Project Description:
+CyanogenMod for the Toshiba THRiVE AT105
+
+README:
+This is the OLD repo. The new one contains just source for the device and vendor folders, which is how it should be done.

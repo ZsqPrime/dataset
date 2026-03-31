@@ -1,0 +1,16 @@
+Project Description:
+
+
+README:
+ConcurrentInvert
+================
+Compile with "javac ConcurrentInvert.java"
+Run with "java ConcurrentInvert <input file> <# threads>"
+For example: "java ConcurrentInvert image.jpg 2"
+
+
+ConcurrentOil
+=============
+Compile with "javac ConcurrentOil.java"
+Run with "java ConcurrentOil <input file> <radius> <# threads>"
+For example: "java ConcurrentOil image.jpg 4 2"

@@ -1,0 +1,9 @@
+DAGGRE AutoTrader project
+\\
+
+Project Description:
+automatic trader for DAGGRE project
+
+README:
+DAGGRE AutoTrader project
+\\

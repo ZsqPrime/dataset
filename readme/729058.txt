@@ -1,0 +1,6 @@
+
+
+Project Description:
+Wordpress blog editor for Mac OS X
+
+README:

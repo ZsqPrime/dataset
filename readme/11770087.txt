@@ -1,0 +1,23 @@
+Project Description:
+Javascript Library that can generate bootstrap alert messages
+
+README:
+# Alert Library for Bootstrap
+version: 0.08.00 (2012-MAR-02)
+
+## Demo Website
+http://www.308tube.com/bootstrap/
+308tube@gmail.com
+
+## Comment
+allows you create bootstrap alerts textbox.
+
+## Requires:
+* Bootstrap 2.0
+* jQuery
+* bootstrap.alertHandler.js
+
+This document is licensed as free software under the terms of the
+MIT License: http://www.opensource.org/licenses/mit-license.php
+
+"NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK."

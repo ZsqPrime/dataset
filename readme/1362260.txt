@@ -1,0 +1,19 @@
+For documentation, see: 
+
+[`Resources/doc/index.rst`](https://github.com/jonathaningram/JbiBrowscapBundle/blob/master/Resources/doc/index.rst)
+
+For license, see:
+
+[`Resources/meta/LICENSE`](https://github.com/jonathaningram/JbiBrowscapBundle/blob/master/Resources/meta/LICENSE)
+
+Project Description:
+Use the Browscap library in a Symfony2 application
+
+README:
+For documentation, see: 
+
+[`Resources/doc/index.rst`](https://github.com/jonathaningram/JbiBrowscapBundle/blob/master/Resources/doc/index.rst)
+
+For license, see:
+
+[`Resources/meta/LICENSE`](https://github.com/jonathaningram/JbiBrowscapBundle/blob/master/Resources/meta/LICENSE)

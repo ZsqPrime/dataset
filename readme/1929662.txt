@@ -1,0 +1,8 @@
+Source code for non-blocking algorithms talk at QCon
+
+
+Project Description:
+
+
+README:
+Source code for non-blocking algorithms talk at QCon

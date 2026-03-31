@@ -1,0 +1,9 @@
+== Empirical investigation of Thompson sampling based solutions to Gaussian multi-armed bandits and the Goore game ==
+
+
+
+Project Description:
+None
+
+README:
+== Empirical investigation of Thompson sampling based solutions to Gaussian multi-armed bandits and the Goore game ==

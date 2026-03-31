@@ -1,0 +1,12 @@
+Textatic is a C++ library for people who want to create efficient text-based games.
+This framework uses OpenGL to render text directly, and is far more efficient
+than rendering to a CLI using e.g. ncurses.
+
+
+Project Description:
+Super Library of Text Based Awesomness for long, this library is made for people wishing to create rouge-likes in OpenGL. Should be pretty efficient, but to be frank, I've not tested it against nCurses.
+
+README:
+Textatic is a C++ library for people who want to create efficient text-based games.
+This framework uses OpenGL to render text directly, and is far more efficient
+than rendering to a CLI using e.g. ncurses.

@@ -1,0 +1,5 @@
+Project Description:
+Experience all the pleasures of sharing with CloudApp now in your terminal.
+
+README:
+This project has moved to [cloudapp.rb](https://github.com/cloudapp/cloudapp.rb)

@@ -1,0 +1,36 @@
+Minicards
+---------
+
+This is stuff I'm going to use to generate the artwork for the back of my Moo minicard business cards.
+
+Notes:
+
+Moo minicard artwork should be 874 pixels by 378 pixels.
+
+canvas.x has a factor of 38 = 23 blocks wide
+canvas.y has a factor of 27 = 14 blocks tall
+
+TODO:
+
+Include RMagick, desaturate, and draw shapes on top of the background.
+
+
+Project Description:
+Image generation for the back of Moo Minicards
+
+README:
+Minicards
+---------
+
+This is stuff I'm going to use to generate the artwork for the back of my Moo minicard business cards.
+
+Notes:
+
+Moo minicard artwork should be 874 pixels by 378 pixels.
+
+canvas.x has a factor of 38 = 23 blocks wide
+canvas.y has a factor of 27 = 14 blocks tall
+
+TODO:
+
+Include RMagick, desaturate, and draw shapes on top of the background.

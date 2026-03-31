@@ -1,0 +1,18 @@
+Project Description:
+gonna win
+
+README:
+== Welcome to Roomies
+
+This website is targeted towared adult roommates who want to make keeping track of 
+the mundane features of living together easier.  The app provides two main features.  
+First, you can track expenses and settlements.  This is useful for rent, milk, video
+games or anything else that is bought for the household as a whole.
+
+This has been done before but we provide some nifty features which remove any need 
+for personal calculations.
+
+The second thing we add is a chore tracker.  Of course, anybody could do this in excel
+but we offer automation an interesting twist.  People can offer to pay other roommates
+to do their chore.  If you hate taking out the trash, offer to pay 10 dollars for 
+housemate to do it.  Finally, a way to avoid chores without the guilt trip.

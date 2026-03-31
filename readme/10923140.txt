@@ -1,0 +1,5 @@
+Project Description:
+Pypins will notify you when your favorite pypi package has been updated 
+
+README:
+# pypins - pypi notification manager

@@ -1,0 +1,61 @@
+Project Description:
+A serial/usb printer interface rails engine
+
+README:
+== Welcome to Printr
+
+Printr is an interface to serial/usb/plain_file printers on *nix systems. You can use it with your udev 
+rules etc. It is built as a rails engine, and should be used as a gem.
+
+You can pull the latest edition from this repo, or:
+
+#Gemfile
+gem 'printr'
+
+Then run bundle install
+
+The rails g printr:install
+
+and rails g printr:views
+
+If  you pass in a :scope, it will set that to the view directory. Normally it is: app/views/printr/view.prnt.erb,
+if you don't want it to be that, you can set the :scope rails g printr:views printer_views would install the
+views to app/views/printer_views/#{view}.prnt.erb
+
+
+The default source for printer configurations is :yaml, and expects a printrs.yml file to be present in
+RAILS_ROOT/config/, you can also feed it off of an ActiveRecord, in initializers/printr.rb
+
+config.printr_source = {:active_record => { 
+  :class_name => YourActiveRecordClass, 
+  :name => :attribute_name, 
+  :path => :attribute_name } 
+}
+
+If you set the scope, make sure to add:
+
+config.scope = 'the_scope_you_passed'
+
+Where:
+
+  :name must be an attribute of the active record object, and the value it resolves to must be 
+   a snake_case_name
+  :path must be the full path to the printer, like /dev/som0 or /home/user/printer.txt
+
+==Basic Usage:
+
+@printer = Printr.new
+@printer.the_name_of_some_printer "text"
+
+==Advanced Usage
+
+Create a printr folder in your views directory for your rails app. name the view #{some_name}.prnt.erb
+
+So for instance, say you want an item view:
+
+/views/printr/item.prnt.erb
+
+Then somewhere in your app, call:
+
+@printer = Printr.new
+@printer.the_name_of_some_printer "item",binding

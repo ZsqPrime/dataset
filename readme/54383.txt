@@ -1,0 +1,9 @@
+my dotfiles. configurations will likely include zsh/emacs/tmux/i3-wm
+
+
+
+Project Description:
+"This is UNIX. Stop acting so helpless!" -- Daniel J. Bernstein
+
+README:
+my dotfiles. configurations will likely include zsh/emacs/tmux/i3-wm

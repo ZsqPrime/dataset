@@ -1,0 +1,33 @@
+==== PIVOTAL-LS ====
+
+Simple command line tool for listing started Pivotal stories that you're working on. The idea is that this tool makes it easier to mention story numbers in your git commits, in order to trigger post-receive Pivotal Tracker actions. For more information on Github integration with Pivotal Tracker, this post describes the process: http://soenkerohde.com/2010/01/connecting-pivotal-tracker-with-github/
+
+Requirements
+* Ruby 1.9.x
+* Bundler (gem install bundler)
+
+Instructions:
+1. Rename .pvt.sample to .pvt
+2. Fill .pvt in with your personal details
+3. Place .pvt in your home directory
+4. Run "bundle install" in pivotal-ls's directory
+5. Run "ruby pvt.rb" (or alias it to something simpler, and run that)
+
+Project Description:
+List your started Pivotal Tracker stories from the command line. Used to quickly lookup story numbers when using the Pivotal post-receive hook.
+
+README:
+==== PIVOTAL-LS ====
+
+Simple command line tool for listing started Pivotal stories that you're working on. The idea is that this tool makes it easier to mention story numbers in your git commits, in order to trigger post-receive Pivotal Tracker actions. For more information on Github integration with Pivotal Tracker, this post describes the process: http://soenkerohde.com/2010/01/connecting-pivotal-tracker-with-github/
+
+Requirements
+* Ruby 1.9.x
+* Bundler (gem install bundler)
+
+Instructions:
+1. Rename .pvt.sample to .pvt
+2. Fill .pvt in with your personal details
+3. Place .pvt in your home directory
+4. Run "bundle install" in pivotal-ls's directory
+5. Run "ruby pvt.rb" (or alias it to something simpler, and run that)

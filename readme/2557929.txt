@@ -1,0 +1,5 @@
+Project Description:
+try to customize Excel menu
+
+README:
+This is README file

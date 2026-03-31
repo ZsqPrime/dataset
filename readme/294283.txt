@@ -1,0 +1,7 @@
+Cuscino is in its "idea" stage. Stay tuned for the first real release.
+
+Project Description:
+Cuscino (kuʃˈʃino) is a comfortable CouchDb .Net client
+
+README:
+Cuscino is in its "idea" stage. Stay tuned for the first real release.

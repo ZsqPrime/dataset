@@ -1,0 +1,11 @@
+Source code for the Milken Knights team.
+
+Licensing information in the COPYING file.
+
+Project Description:
+Team 1836's code for the 2012 FRC, Rebound Rumble
+
+README:
+Source code for the Milken Knights team.
+
+Licensing information in the COPYING file.

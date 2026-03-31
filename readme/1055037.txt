@@ -1,0 +1,6 @@
+
+
+Project Description:
+Score handling application for dice game 'LaCrise'.
+
+README:

@@ -1,0 +1,14 @@
+MinePermit
+==========
+
+A plugin that allow players on a server to buy plots of land to mine in.
+
+
+Project Description:
+
+
+README:
+MinePermit
+==========
+
+A plugin that allow players on a server to buy plots of land to mine in.

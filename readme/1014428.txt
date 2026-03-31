@@ -1,0 +1,56 @@
+What follows is a list of the subprojects in this repository, and a copy of
+their README information.
+
+configfiles
+-----------
+'bashrc' - My (currently extremely simple) Arch Linux bashrc.
+'Xdefaults' - Mainly a collection of terminal color schemes.
+
+euclidian_gcd
+-------------
+This is a straightforward way to implement Euclid's greated common divisor
+algorithm. This specific implementation only uses one mathematical operation:
+subtraction.
+
+treecrawler
+-----------
+Here lives a collection of vector images depicting ways of visiting the
+elements of tree-like data structures.
+
+vimrc
+-----
+My personal, hand-baked vimrc. Most notable features are a color scherme that
+I really like (3d party), and a latex plugin (3d party). Other changes include
+mouse support, line numbering, custom status line, smart search, tabwidth of 2,
+etcetera by default.
+
+
+Project Description:
+Short pieces of code that I wrote and might be reused some day. Some are just for fun and profit too.
+
+README:
+What follows is a list of the subprojects in this repository, and a copy of
+their README information.
+
+configfiles
+-----------
+'bashrc' - My (currently extremely simple) Arch Linux bashrc.
+'Xdefaults' - Mainly a collection of terminal color schemes.
+
+euclidian_gcd
+-------------
+This is a straightforward way to implement Euclid's greated common divisor
+algorithm. This specific implementation only uses one mathematical operation:
+subtraction.
+
+treecrawler
+-----------
+Here lives a collection of vector images depicting ways of visiting the
+elements of tree-like data structures.
+
+vimrc
+-----
+My personal, hand-baked vimrc. Most notable features are a color scherme that
+I really like (3d party), and a latex plugin (3d party). Other changes include
+mouse support, line numbering, custom status line, smart search, tabwidth of 2,
+etcetera by default.

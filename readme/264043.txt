@@ -1,0 +1,11 @@
+
+Log.i("onCreate", "Father-Focus");
+
+
+
+Project Description:
+Hey, stay focused!
+
+README:
+
+Log.i("onCreate", "Father-Focus");

@@ -1,0 +1,8 @@
+Outline view plugin for Orion (provides an Ast and regular outline view) based on the Esprima parser
+
+
+Project Description:
+Outline view plugin for Orion using Esprima parser
+
+README:
+Outline view plugin for Orion (provides an Ast and regular outline view) based on the Esprima parser

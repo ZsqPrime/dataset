@@ -1,0 +1,5 @@
+Project Description:
+Yet another scheme interpreter, written in RPython.
+
+README:
+See targetvm.py for usage.

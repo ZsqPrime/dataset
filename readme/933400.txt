@@ -1,0 +1,12 @@
+
+see http://gitbuh.github.com/decl/
+
+
+
+
+Project Description:
+decl is a javascript function that creates a prototype object and returns its constructor.
+
+README:
+
+see http://gitbuh.github.com/decl/

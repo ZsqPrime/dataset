@@ -1,0 +1,16 @@
+Project Description:
+A video game save file backup and synching utility.
+
+README:
+Bonus Round is a cross-platform backup and syncing utility. Its
+intended to back up and sync video game save files across computers
+with a minimal amount of setup and upkeep.
+
+Thing are pretty meager right now, and there's not much to share, but
+this document will evolve with the program.
+
+Here is contact information regarding Bonus Round:
+	Chris Frisz
+	chris.frisz@gmail.com
+
+Copyright 2012 Chris Frisz

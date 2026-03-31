@@ -1,0 +1,11 @@
+mocker
+======
+
+
+
+Project Description:
+NodeJS mocking library
+
+README:
+mocker
+======

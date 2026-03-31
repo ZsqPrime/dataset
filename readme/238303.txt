@@ -1,0 +1,13 @@
+Project Euler
+=============
+
+On my quest to learn F# this is where I solve the project euler problems!
+
+Project Description:
+Solving Project Euler in F#
+
+README:
+Project Euler
+=============
+
+On my quest to learn F# this is where I solve the project euler problems!

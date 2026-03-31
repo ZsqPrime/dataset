@@ -1,0 +1,14 @@
+# RailsModel
+## Dependencies
+
+  backbone.js > 0.9.0   *(for older versions, see git history)*
+
+
+Project Description:
+Backbone models with rails associations
+
+README:
+# RailsModel
+## Dependencies
+
+  backbone.js > 0.9.0   *(for older versions, see git history)*

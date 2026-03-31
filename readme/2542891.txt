@@ -1,0 +1,7 @@
+Project Description:
+A scalable DMS system implemented with Scala, Akka, Play and more ...
+
+README:
+A DMS project with scala, akka, mongodb, maven, guice and some other technologies
+
+The project needs ImageMagick and Tesseract to work properly

@@ -1,0 +1,7 @@
+Description:
+A PEG.js parser for ICU MessageFormat strings
+
+README:
+The parser has been merged into the messageformat monorepo:
+
+https://github.com/messageformat/messageformat/tree/master/packages/parser

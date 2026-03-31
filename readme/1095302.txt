@@ -1,0 +1,9 @@
+Project Description:
+Bayesian Factor Regression Model (BFRM) techniques from West group at Duke - wrappers written to integrate as an R package to call platform-specific executable.
+
+README:
+README DOCUMENT FOR THE bfrm PACKAGE
+
+AUTHOR: BRIAN M. BOT
+
+Bayesian Factor Regression Modelling (bfrm) - wrappers written to integrate bfrm algorithm from West group as an R package to call platform-specific executables.

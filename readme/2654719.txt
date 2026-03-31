@@ -1,0 +1,8 @@
+Project Description:
+updated movie browser
+
+README:
+Movie List
+***********
+
+add, delete, view

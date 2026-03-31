@@ -1,0 +1,8 @@
+Academic project (fake distributed system entirely developed in python)
+
+
+Project Description:
+Academic project (fake distributed system entirely developed in python)
+
+README:
+Academic project (fake distributed system entirely developed in python)

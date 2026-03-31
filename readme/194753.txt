@@ -1,0 +1,8 @@
+Letharion's public Gentoo overlay 
+
+
+Project Description:
+None
+
+README:
+Letharion's public Gentoo overlay

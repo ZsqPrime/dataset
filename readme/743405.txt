@@ -1,0 +1,99 @@
+General
+=======
+
+Original source: http://agafix.org/anime-crc32-checksum-in-linux-v20/, have found out after I created my git repo that the original programmer added the script into his: https://github.com/taoufix/tools/tree/
+
+This script is a free software replacement of RapidCRC unicode mod (allowing me to drop another Windows dependency) and has the following goals (implemented in differing modes):
+
+1. CRC32 hash files and compare their hashes with those embedded in their filenames.
+2. Where CRC32 hashes are absent in filenames, offer to add them.
+3. MD5 hash files.
+4. Generate eD2k hash URIs so that they can be c&p'd to AniDB.
+5. Process sfv and md5 checksum files with and without nested directories in a platform independent fashion, and cope with RapidCRC unicode mod files.
+6. Create sfv and md5 checksum files.
+
+This script is now mature, but basic feature requests are still welcome. I escaped Windows many years ago so won't be testing there, but I do welcome bug reports and I expect this script to run in a platform-independent fashion. There are no plans to wrap a GUI around this script (terminal+CLI is the universal GUI ;)), although if someone is up for it, I can make a mode to better communicate with a wrapper (I'm guessing this is needed).
+
+
+Requirements
+============
+
+Python v2.7 (compatible with Python v3.2)
+
+
+Optional
+--------
+
+Colorama module for colour support on Windows, courtesy of wiiaboo - http://pypi.python.org/pypi/colorama
+OpenSSL install (on Debian, specifically the libssl package) for the md4 hash used in the eD2k hashing mode.
+
+
+Documentation
+=============
+
+See animecheck.py --help. If this is not enough and enough people are interested, I will look into better documentation methods.
+
+
+Contact Details
+===============
+
+OmegaPhil: OmegaPhil@startmail.com
+
+
+Credits
+=======
+
+wiiaboo (Ricardo Constantino): Code fixes to support Windows command prompt, fixes to support Python v3 whilst keeping v2.x compatibility (v0.5, 0.11).
+darealshinji: Implemented --no-progress and --no-special-chars (v1.2).
+
+Project Description:
+Commandline CRC32, MD5 and eD2k-based hashing script also capable of reading and creating SFV and MD5 checksum files and generating eD2k links. This is an initial foray into python and github
+
+README:
+General
+=======
+
+Original source: http://agafix.org/anime-crc32-checksum-in-linux-v20/, have found out after I created my git repo that the original programmer added the script into his: https://github.com/taoufix/tools/tree/
+
+This script is a free software replacement of RapidCRC unicode mod (allowing me to drop another Windows dependency) and has the following goals (implemented in differing modes):
+
+1. CRC32 hash files and compare their hashes with those embedded in their filenames.
+2. Where CRC32 hashes are absent in filenames, offer to add them.
+3. MD5 hash files.
+4. Generate eD2k hash URIs so that they can be c&p'd to AniDB.
+5. Process sfv and md5 checksum files with and without nested directories in a platform independent fashion, and cope with RapidCRC unicode mod files.
+6. Create sfv and md5 checksum files.
+
+This script is now mature, but basic feature requests are still welcome. I escaped Windows many years ago so won't be testing there, but I do welcome bug reports and I expect this script to run in a platform-independent fashion. There are no plans to wrap a GUI around this script (terminal+CLI is the universal GUI ;)), although if someone is up for it, I can make a mode to better communicate with a wrapper (I'm guessing this is needed).
+
+
+Requirements
+============
+
+Python v2.7 (compatible with Python v3.2)
+
+
+Optional
+--------
+
+Colorama module for colour support on Windows, courtesy of wiiaboo - http://pypi.python.org/pypi/colorama
+OpenSSL install (on Debian, specifically the libssl package) for the md4 hash used in the eD2k hashing mode.
+
+
+Documentation
+=============
+
+See animecheck.py --help. If this is not enough and enough people are interested, I will look into better documentation methods.
+
+
+Contact Details
+===============
+
+OmegaPhil: OmegaPhil@startmail.com
+
+
+Credits
+=======
+
+wiiaboo (Ricardo Constantino): Code fixes to support Windows command prompt, fixes to support Python v3 whilst keeping v2.x compatibility (v0.5, 0.11).
+darealshinji: Implemented --no-progress and --no-special-chars (v1.2).

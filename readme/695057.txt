@@ -1,0 +1,13 @@
+reamEdit by Sebastian Broberg is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+Based on a work at https://github.com/headswe/DreamEdit.
+Permissions beyond the scope of this license may be available at https://github.com/headswe/DreamEdit.
+Source code only, relevent copyright for images contained within.
+
+Project Description:
+A attempt at more modern IDE for BYOND.
+
+README:
+reamEdit by Sebastian Broberg is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+Based on a work at https://github.com/headswe/DreamEdit.
+Permissions beyond the scope of this license may be available at https://github.com/headswe/DreamEdit.
+Source code only, relevent copyright for images contained within.

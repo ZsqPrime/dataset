@@ -1,0 +1,5 @@
+Project Description:
+A naïve Bayes classifier for NodeJS
+
+README:
+This is a naïve Bayes classifier utility.

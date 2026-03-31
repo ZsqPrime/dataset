@@ -1,0 +1,145 @@
+= has_followers {<img src="https://secure.travis-ci.org/fabianoalmeida/has_followers.png" />}[http://travis-ci.org/fabianoalmeida/has_followers]
+
+*ATTENTION:* This is a Rails 3 only implementation.
+
+NOTE: It's necessary to a *User* model exist. Executing the migration it will add two columns in <code>users</code> table: <code>followeds_count</code> and <code>followers_count</code>.
+
+== Installation
+* The first step is add this gem to your Gemfile <code>gem 'has_followers'</code>
+* After that, install the gem in your development environment <code>bundle install</code>
+* Execute the migration generator to create the necessary tables and columns <code>rails g has_followers:migration</code>
+* Run the migrations with <code>rake db:migrate</code>
+
+== Usage
+It's very simple to use this gem. See the examples below.
+
+First, you'll need to add the <code>has_followers</code> method to your model.
+ class User < ActiveRecord::Base
+   has_followers
+ end
+
+To follow someone you need only do this
+ you.follow(someone)
+This action automatically increment your <code>followeds_count</code> column and his (someone) <code>followers_count</code> column too.
+
+If you want to unfollow someone, no problem. It's similar to follow someone
+ you.unfollow(someone)
+When you <code>unfollow</code> someone, this automatically decrement your <code>followeds_count</code> column and his (someone) <code>followers_count</code> column too.
+
+You can check how many users you are following
+ you.followeds_count
+
+Or how many users are following you
+ you.follwers_count
+
+If you want to know who are your followeds users
+ you.followeds
+
+And your followers
+ you.followers
+
+Check if the user is you
+ you.is?(someone) # => true if someone is you
+
+If you want to know if you are following someone
+ you.following?(someone) # => Follow object if you already following someone
+
+If you want to know if someone is following you
+ you.follow_me?(someone) # => Follow object if he is following you
+
+Or in case you want to know the relationship between you and your followed or follower
+ you.following_for(someone)
+Or
+ you.followed_for(someone)
+
+The first one will find on your followeds list, however the second one will find on your followers list.
+
+== Contributing to has_followers
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Fabiano Almeida. See LICENSE.txt for
+further details.
+
+
+
+Project Description:
+Add follower support to Rails apps
+
+README:
+= has_followers {<img src="https://secure.travis-ci.org/fabianoalmeida/has_followers.png" />}[http://travis-ci.org/fabianoalmeida/has_followers]
+
+*ATTENTION:* This is a Rails 3 only implementation.
+
+NOTE: It's necessary to a *User* model exist. Executing the migration it will add two columns in <code>users</code> table: <code>followeds_count</code> and <code>followers_count</code>.
+
+== Installation
+* The first step is add this gem to your Gemfile <code>gem 'has_followers'</code>
+* After that, install the gem in your development environment <code>bundle install</code>
+* Execute the migration generator to create the necessary tables and columns <code>rails g has_followers:migration</code>
+* Run the migrations with <code>rake db:migrate</code>
+
+== Usage
+It's very simple to use this gem. See the examples below.
+
+First, you'll need to add the <code>has_followers</code> method to your model.
+ class User < ActiveRecord::Base
+   has_followers
+ end
+
+To follow someone you need only do this
+ you.follow(someone)
+This action automatically increment your <code>followeds_count</code> column and his (someone) <code>followers_count</code> column too.
+
+If you want to unfollow someone, no problem. It's similar to follow someone
+ you.unfollow(someone)
+When you <code>unfollow</code> someone, this automatically decrement your <code>followeds_count</code> column and his (someone) <code>followers_count</code> column too.
+
+You can check how many users you are following
+ you.followeds_count
+
+Or how many users are following you
+ you.follwers_count
+
+If you want to know who are your followeds users
+ you.followeds
+
+And your followers
+ you.followers
+
+Check if the user is you
+ you.is?(someone) # => true if someone is you
+
+If you want to know if you are following someone
+ you.following?(someone) # => Follow object if you already following someone
+
+If you want to know if someone is following you
+ you.follow_me?(someone) # => Follow object if he is following you
+
+Or in case you want to know the relationship between you and your followed or follower
+ you.following_for(someone)
+Or
+ you.followed_for(someone)
+
+The first one will find on your followeds list, however the second one will find on your followers list.
+
+== Contributing to has_followers
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Fabiano Almeida. See LICENSE.txt for
+further details.

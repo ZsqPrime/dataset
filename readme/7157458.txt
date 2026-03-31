@@ -1,0 +1,6 @@
+Project Description:
+Dumpster
+
+README:
+This a repository where I put random scripts and interesting stuff
+that myself and other people might be interested in after a while.

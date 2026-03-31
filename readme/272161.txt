@@ -1,0 +1,49 @@
+lodspeakr - Simple Publishing Kit for Linked Open Data
+author: Alvaro Graves (alvaro@graves.cl)
+version: 20120329 
+
+Simplest Installation
+---------------------
+
+Simply go to your web server root directory (e.g., /var/www), create a new folder, cd into it and run
+
+   bash < <(curl -sL http://purl.org/twc/projects/prov-lodspeakr/install)
+
+Alternative methods of installation available at
+
+   https://github.com/alangrafu/lodspeakr/wiki/Installation
+
+            
+That's it. You should be able to serve your data in RDF/XML, Turtle, Ntriples, JSONRDF and RDFa.
+
+Documentation available at
+
+    https://github.com/alangrafu/lodspeakr/wiki
+
+
+
+Project Description:
+Models and Views for W3C Provenance Working Group's OWL Ontology
+
+README:
+lodspeakr - Simple Publishing Kit for Linked Open Data
+author: Alvaro Graves (alvaro@graves.cl)
+version: 20120329 
+
+Simplest Installation
+---------------------
+
+Simply go to your web server root directory (e.g., /var/www), create a new folder, cd into it and run
+
+   bash < <(curl -sL http://purl.org/twc/projects/prov-lodspeakr/install)
+
+Alternative methods of installation available at
+
+   https://github.com/alangrafu/lodspeakr/wiki/Installation
+
+            
+That's it. You should be able to serve your data in RDF/XML, Turtle, Ntriples, JSONRDF and RDFa.
+
+Documentation available at
+
+    https://github.com/alangrafu/lodspeakr/wiki

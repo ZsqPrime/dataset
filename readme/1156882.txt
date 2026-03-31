@@ -1,0 +1,31 @@
+This is my a level computing project.
+
+Here is a very very quick overview of my project.
+
+The idea was to make a webapp for a hockey team where they can stand on the pitch side
+after the game and are presented with a pre selected list of names showing who has played
+and then the captain can check off who has 'paid' as this would allow the treasurer to go
+home and not have to insert them all his self into an excel sheet. Instead he could go home
+and log in and create reports on the fixtures that were played that day, or on the teams.
+
+Once the games have been played and someone hasn't paid; then using mailers an email should
+be sent out reminding the person that they have not paid for a game. If there is a running
+total the! Mailer should query the database and find all un-paid subs for the same player.
+
+Project Description:
+None
+
+README:
+This is my a level computing project.
+
+Here is a very very quick overview of my project.
+
+The idea was to make a webapp for a hockey team where they can stand on the pitch side
+after the game and are presented with a pre selected list of names showing who has played
+and then the captain can check off who has 'paid' as this would allow the treasurer to go
+home and not have to insert them all his self into an excel sheet. Instead he could go home
+and log in and create reports on the fixtures that were played that day, or on the teams.
+
+Once the games have been played and someone hasn't paid; then using mailers an email should
+be sent out reminding the person that they have not paid for a game. If there is a running
+total the! Mailer should query the database and find all un-paid subs for the same player.

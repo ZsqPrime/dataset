@@ -1,0 +1,139 @@
+Current Version 2.6.1-SNAPSHOT
+------------------------------
+
+Dear user
+
+This product was orignally implemented by Dr. Lars H. Hahn who has produced and managed
+a great tool for over 3 years. 
+
+Now, in year 2012, we decided to support this product. We have started to read
+and to refactor the code in order to be able to improve this product. This means that in
+the current state this version might have bugs that can also damage your data.
+
+So, don't forget to back up your data before using one of these snapshot version!
+
+In any case, you are also invited to support our work. Contact us!
+
+/*
+ * This is the project jHaushalt.
+ * jHaushalt is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * jHaushalt is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with jHaushalt; if not, see <http://www.gnu.org/licenses/>.
+ * (C)opyright 2002-2010 Dr. Lars H. Hahn
+ */
+
+ * 2010.08.14 Name der Datei für die Properties jetzt variabel
+ * (PROPERTIES_FILENAME)
+ * 2009.07.27 Erhöhen der Versionsnummer auf 2.6
+ * 2008.04.15 Erhöhen der Versionsnummer auf 2.5.4 :-)
+ * 2008.04.04 BugFix: Korrektur Doppelpunkt
+ * 2008.03.19 Erhöhen der Versionsnummer auf 2.5.3 :-)
+ * 2008.03.11 Erhöhen der Versionsnummer auf 2.5.2 :-)
+ * 2008.03.10 Erhöhen der Versionsnummer auf 2.5.1 :-)
+ * 2008.02.12 Überprüfung, ob Auswertungen geaendert, hinzugefügt
+ * 2008.01.15 Internationalisierung
+ * 2007.04.03 Automatisches Anlegen des ersten Registers beim Neueinrichten
+ * eines Haushaltsbuchs
+ * 2007.02.22 Erweiterung: Export aller Buchungen
+ * 2007.02.14 Register können umbenannt und von Hand verschoben werden
+ * 2007.02.06 Erweiterung: Beim Erstellen eines neuen Registers kann
+ * optional ein Eröffnungssaldo übergeben werden
+ * 2007.01.31 BugFix: Korrektes Merken der Größe des Auswertungsdialog
+ * Erhöhen der Versionsnummer auf 2.5 :-)
+ * 2006.06.21 Erhöhen der Versionsnummer auf 2.1.3 :-)
+ * 2006.06.19 Speicherung der Fenstergröße des Auswertungsdialog
+ * 2006.06.11 Erhöhen der Versionsnummer auf 2.1.2 :-)
+ * 2006.04.19 Erhöhen der Versionsnummer auf 2.1.1 :-)
+ * 2006.02.09 Ausdruck eines Registers; Verlagerung der
+ * Druckereinstellungen in den Auswertungsdialog
+ * 2006.02.06 Erweiterung: Planungen hinzugefügt
+ * 2006.02.03 BugFix: Nur reduzierte Split-Buchungen speichern
+ * 2006.02.01 Umwandeln von Buchungen hinzugefügt
+ * 2006.01.31 Methode zum Anzeigen von Änderungen in einem
+ * Register
+ * 2006.01.24 Erhöhen der Versionsnummer auf 2.1 :-)
+ * 2005.04.30 BugFix: Nach Splitten Buchung merken
+ * 2005.03.10 Erweiterung: Gemerkte Buchungen ab Datum
+ * 2005.02.18 BugFix: Nachdem Splitten einer Buchung wurde
+ * nicht "mitgesprungen".
+ * 2004.08.25 BugFix: Abbruch beim CSV-Import berücksichtigt.
+ 
+ 
+
+Project Description:
+jHaushalt ist ein Programm zur Verwaltung der Haushaltskasse, mit zahlreichen Möglichkeiten Statistiken und Auswertungen zu erstellen.
+
+README:
+Current Version 2.6.1-SNAPSHOT
+------------------------------
+
+Dear user
+
+This product was orignally implemented by Dr. Lars H. Hahn who has produced and managed
+a great tool for over 3 years. 
+
+Now, in year 2012, we decided to support this product. We have started to read
+and to refactor the code in order to be able to improve this product. This means that in
+the current state this version might have bugs that can also damage your data.
+
+So, don't forget to back up your data before using one of these snapshot version!
+
+In any case, you are also invited to support our work. Contact us!
+
+/*
+ * This is the project jHaushalt.
+ * jHaushalt is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3 of the License, or
+ * (at your option) any later version.
+ * jHaushalt is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with jHaushalt; if not, see <http://www.gnu.org/licenses/>.
+ * (C)opyright 2002-2010 Dr. Lars H. Hahn
+ */
+
+ * 2010.08.14 Name der Datei für die Properties jetzt variabel
+ * (PROPERTIES_FILENAME)
+ * 2009.07.27 Erhöhen der Versionsnummer auf 2.6
+ * 2008.04.15 Erhöhen der Versionsnummer auf 2.5.4 :-)
+ * 2008.04.04 BugFix: Korrektur Doppelpunkt
+ * 2008.03.19 Erhöhen der Versionsnummer auf 2.5.3 :-)
+ * 2008.03.11 Erhöhen der Versionsnummer auf 2.5.2 :-)
+ * 2008.03.10 Erhöhen der Versionsnummer auf 2.5.1 :-)
+ * 2008.02.12 Überprüfung, ob Auswertungen geaendert, hinzugefügt
+ * 2008.01.15 Internationalisierung
+ * 2007.04.03 Automatisches Anlegen des ersten Registers beim Neueinrichten
+ * eines Haushaltsbuchs
+ * 2007.02.22 Erweiterung: Export aller Buchungen
+ * 2007.02.14 Register können umbenannt und von Hand verschoben werden
+ * 2007.02.06 Erweiterung: Beim Erstellen eines neuen Registers kann
+ * optional ein Eröffnungssaldo übergeben werden
+ * 2007.01.31 BugFix: Korrektes Merken der Größe des Auswertungsdialog
+ * Erhöhen der Versionsnummer auf 2.5 :-)
+ * 2006.06.21 Erhöhen der Versionsnummer auf 2.1.3 :-)
+ * 2006.06.19 Speicherung der Fenstergröße des Auswertungsdialog
+ * 2006.06.11 Erhöhen der Versionsnummer auf 2.1.2 :-)
+ * 2006.04.19 Erhöhen der Versionsnummer auf 2.1.1 :-)
+ * 2006.02.09 Ausdruck eines Registers; Verlagerung der
+ * Druckereinstellungen in den Auswertungsdialog
+ * 2006.02.06 Erweiterung: Planungen hinzugefügt
+ * 2006.02.03 BugFix: Nur reduzierte Split-Buchungen speichern
+ * 2006.02.01 Umwandeln von Buchungen hinzugefügt
+ * 2006.01.31 Methode zum Anzeigen von Änderungen in einem
+ * Register
+ * 2006.01.24 Erhöhen der Versionsnummer auf 2.1 :-)
+ * 2005.04.30 BugFix: Nach Splitten Buchung merken
+ * 2005.03.10 Erweiterung: Gemerkte Buchungen ab Datum
+ * 2005.02.18 BugFix: Nachdem Splitten einer Buchung wurde
+ * nicht "mitgesprungen".
+ * 2004.08.25 BugFix: Abbruch beim CSV-Import berücksichtigt.

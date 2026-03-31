@@ -1,0 +1,316 @@
+** Introduction **
+
+This Project is a try out at re analysing the super application(cleaning management system) through means of :
+
+ - Domain driven development  
+ - Command Query Responsibility Segregation  
+ - Event sourcing.
+
+nCQRS framework has been used used but is totally discarded now. Current solution implies the use of Joliver Commain domain and events store.
+
+A bus with RABBITMQ is currently used. I use an EasyNetQ modified to fit my purpose. This is somewhat temporary.
+
+The application deals currently with one website in ASP.net MVC which communicates with 4 webservices each responsible for a bounded context.
+
+*The application is under hardcore development and so might work or not depending on the day you get it.*
+	
+---------------
+DOMAIN NOTES
+---------------
+
+** General **
+
+A basic contextmap can be found in the documentation folder.
+
+To define the bounded context and their interactions (see contextmap.png in documentation)
+so far I have found :
+ 
+    - programmazione : 	BC responsible for the generation of intervento
+    - Appaltatore : 	Handling of Intervento by the appaltatore
+    - Controllo :       Control of the intervento through the means of schede and various tools
+    - Contabilita :      BC responsible for creating the context in which the other BCs evolve. Besides it uses information provided by the other Bcs to create reports depending on accounting rules.
+
+
+The initial aim of this project was to give tools to develop a full blown solution using BDD.
+
+    Given some Messages
+    Then one Message
+    Expect some other Messages
+
+And to generate some documentation on the fly of the different tests available. Triggering Specs.Documentation will generate html pages in Documentation/Specs,where all test are gathered
+
+** current basic architecture **
+
+                          
+IMesssage --> Message --> | -------> CommandBase with ICommand ---> misc Command           
+
+IMesssage --> Message --> | -------> misc Event with IEvent
+
+Message is responsible for having the Id and the commitId of the message.
+CommandBase is used to to centralize ICommand behavior and allows to operate specific action on the commands (e.g.  IsExecuted,...)
+
+
+
+
+** Intervento Saga **
+
+Programmazione aims at creating interventi that are going to be handled by the people of both Appaltatore and Controllo. Albeit the start and end date are vital information for the Appaltatore coming from Programmazione. The subsequent change is not so important when done by the appaltatore.
+Furthermore, the controll is aimed to take place once the job is done. Therefore the saga will only handle the information that some intervento was consuntivato , the read model of the controllo should have then plenty of time to get the information from the appaltatore. (to be assessed...)
+
+
+
+
+---------------
+TECHNICAL NOTES
+---------------
+
+** Eventstore **
+
+A new Guid is produced for every use of the fluent builders associated with the events. As for the command, a new Guid might be generated, or we can pass one to create the command.
+As a consequence, the equality between two messages does not take into account the commitId, but only aggregateId and version.
+
+Projection have a HandleEventOnlyOnceHandler which save the id already projected and its date to disable further handling.
+
+
+** current worries **
+ - modelling the domain... (quite a lot to do actually) I am redoing things several times before getting someting acceptable so far, but I huess, I am learning something with every iteration... ;)
+ - Serialization of the command and Command Repository to be enhanced... for now, quick n' dirty! 
+ - having one readModel per bounded context, I am afraid it is the only way. 
+ - experimenting with sagas 
+
+
+ 
+ 
+** next threads of fun **
+
+ - inspect Zeromq to substitute it to RabbitMQ
+ - Swap xml soap for json serialization of the messages
+ - swap wcf webservice for something different REST Call?, ServiceStack? do not know what yet but it smells like something not so good there... to be continued
+ - having fun again with node.js and/or looking around signalR
+ - Use another server (node.js, Rx,...) and drop MVC?
+ - Elmah for mvc
+ - Create a build server
+ - Create a production server to hold the Mammuth!!!!
+ - experimenting with code contracts ( have to add some build server to see how to maximize building time and contract features..)
+ - Sagas : among other things, I have to add a alarm clock to trigger a time out.., FuturePublish is used but not implemented in EasyNetQ so far. I have to add the scheduler but too lazy to do it now. This is a simple mechanism to add, nothing more, and nothing real interesting.
+
+** Dependencies **
+
+ - CodeContracts
+ - Sql server
+ - Easy netQ ( my version is to be cloned in Super2013\Framework )
+ - glimpse (nuget asp.net mvc 3 beta)
+ - elmahR.Elmah (nuget)
+ 
+ 
+
+
+Project Description:
+None
+
+README:
+** Introduction **
+
+
+
+This Project is a try out at re analysing the super application(cleaning management system) through means of :
+
+
+
+ - Domain driven development  
+
+ - Command Query Responsibility Segregation  
+
+ - Event sourcing.
+
+
+
+nCQRS framework has been used used but is totally discarded now. Current solution implies the use of Joliver Commain domain and events store.
+
+
+
+A bus with RABBITMQ is currently used. I use an EasyNetQ modified to fit my purpose. This is somewhat temporary.
+
+
+
+The application deals currently with one website in ASP.net MVC which communicates with 4 webservices each responsible for a bounded context.
+
+
+
+*The application is under hardcore development and so might work or not depending on the day you get it.*
+
+	
+
+---------------
+
+DOMAIN NOTES
+
+---------------
+
+
+
+** General **
+
+
+
+A basic contextmap can be found in the documentation folder.
+
+
+
+To define the bounded context and their interactions (see contextmap.png in documentation)
+
+so far I have found :
+
+ 
+
+    - programmazione : 	BC responsible for the generation of intervento
+
+    - Appaltatore : 	Handling of Intervento by the appaltatore
+
+    - Controllo :       Control of the intervento through the means of schede and various tools
+
+    - Contabilita :      BC responsible for creating the context in which the other BCs evolve. Besides it uses information provided by the other Bcs to create reports depending on accounting rules.
+
+
+
+
+
+The initial aim of this project was to give tools to develop a full blown solution using BDD.
+
+
+
+    Given some Messages
+
+    Then one Message
+
+    Expect some other Messages
+
+
+
+And to generate some documentation on the fly of the different tests available. Triggering Specs.Documentation will generate html pages in Documentation/Specs,where all test are gathered
+
+
+
+** current basic architecture **
+
+
+
+                          
+
+IMesssage --> Message --> | -------> CommandBase with ICommand ---> misc Command           
+
+
+
+IMesssage --> Message --> | -------> misc Event with IEvent
+
+
+
+Message is responsible for having the Id and the commitId of the message.
+
+CommandBase is used to to centralize ICommand behavior and allows to operate specific action on the commands (e.g.  IsExecuted,...)
+
+
+
+
+
+
+
+
+
+** Intervento Saga **
+
+
+
+Programmazione aims at creating interventi that are going to be handled by the people of both Appaltatore and Controllo. Albeit the start and end date are vital information for the Appaltatore coming from Programmazione. The subsequent change is not so important when done by the appaltatore.
+
+Furthermore, the controll is aimed to take place once the job is done. Therefore the saga will only handle the information that some intervento was consuntivato , the read model of the controllo should have then plenty of time to get the information from the appaltatore. (to be assessed...)
+
+
+
+
+
+
+
+
+
+---------------
+
+TECHNICAL NOTES
+
+---------------
+
+
+
+** Eventstore **
+
+
+
+A new Guid is produced for every use of the fluent builders associated with the events. As for the command, a new Guid might be generated, or we can pass one to create the command.
+
+As a consequence, the equality between two messages does not take into account the commitId, but only aggregateId and version.
+
+
+
+Projection have a HandleEventOnlyOnceHandler which save the id already projected and its date to disable further handling.
+
+
+
+
+
+** current worries **
+
+ - modelling the domain... (quite a lot to do actually) I am redoing things several times before getting someting acceptable so far, but I huess, I am learning something with every iteration... ;)
+
+ - Serialization of the command and Command Repository to be enhanced... for now, quick n' dirty! 
+
+ - having one readModel per bounded context, I am afraid it is the only way. 
+
+ - experimenting with sagas 
+
+
+
+
+
+ 
+
+ 
+
+** next threads of fun **
+
+
+
+ - inspect Zeromq to substitute it to RabbitMQ
+
+ - Swap xml soap for json serialization of the messages
+
+ - swap wcf webservice for something different REST Call?, ServiceStack? do not know what yet but it smells like something not so good there... to be continued
+
+ - having fun again with node.js and/or looking around signalR
+
+ - Use another server (node.js, Rx,...) and drop MVC?
+
+ - Elmah for mvc
+
+ - Create a build server
+
+ - Create a production server to hold the Mammuth!!!!
+
+ - experimenting with code contracts ( have to add some build server to see how to maximize building time and contract features..)
+
+ - Sagas : among other things, I have to add a alarm clock to trigger a time out.., FuturePublish is used but not implemented in EasyNetQ so far. I have to add the scheduler but too lazy to do it now. This is a simple mechanism to add, nothing more, and nothing real interesting.
+
+
+
+** Dependencies **
+
+
+
+ - CodeContracts
+
+ - Sql server
+
+ - Easy netQ ( my version is to be cloned in Super2013\Framework )
+
+ - glimpse (nuget asp.net mvc 3 beta)
+
+ - elmahR.Elmah (nuget)

@@ -1,0 +1,17 @@
+Project Description:
+A real-time online board game
+
+README:
+/*
+
+**********************************************************
+
+Author: Qawelesizwe Mlilo
+
+Email: qawemlilo@gmail.com
+
+Description: Darft: A real-time board game
+
+**********************************************************
+
+*/

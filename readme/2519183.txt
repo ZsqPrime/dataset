@@ -1,0 +1,24 @@
+Project Description:
+Ensures that skype is running on Ubuntu over a local network
+
+README:
+Run this script on a local network with others also running this script: Skype will be restarted if it dies.
+
+Installation (on Debian)
+------------------------
+
+You'll need to move the cm_checkskype script to /etc/init.d/cm_checkskype.
+
+Then you'll want to start that script when starting skype:
+
+You can set a program to run when Skype starts up by going to:
+
+Skype -> Options -> Notifications -> Skype Login -> Advanced View -> Execute the following script
+
+If you copied it to the location as above, enter:
+
+/etc/init.d/cm_checkskype start
+
+This wrapping script checks if cm_checkskype.py is already running: which is important since it will be run again when Skype restarts.
+
+For some reason you can't just start up the script once at system startup: if started too early it never finds Skype.

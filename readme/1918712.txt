@@ -1,0 +1,13 @@
+For discussion, bug reports, etc, please join the google group:
+
+http://groups.google.com/group/hdpvr-killer-device
+
+
+
+Project Description:
+Circuit design and corresponding software to power cycle an HD-PVR under software control
+
+README:
+For discussion, bug reports, etc, please join the google group:
+
+http://groups.google.com/group/hdpvr-killer-device

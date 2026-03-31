@@ -1,0 +1,5 @@
+Project Description:
+r code for analysis of jw file
+
+README:
+This is a r code script to analyze the jw datafile.

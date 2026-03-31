@@ -1,0 +1,16 @@
+Adicionado as seguintes imagens:
+- Casos de Uso
+- DFD Nível 0
+- Cadeia de Markov
+- Extrator de Característica
+
+
+Project Description:
+None
+
+README:
+Adicionado as seguintes imagens:
+- Casos de Uso
+- DFD Nível 0
+- Cadeia de Markov
+- Extrator de Característica

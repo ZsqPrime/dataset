@@ -1,0 +1,17 @@
+Polychrome - a python implementation of Michael Schacht's Coloretto
+
+Dependencies: Python 2.x.x or Python 3.x.x
+
+Chee Sing Lee 30 January 2012
+
+
+
+Project Description:
+Python implementation of the game Coloretto by Michael Schact
+
+README:
+Polychrome - a python implementation of Michael Schacht's Coloretto
+
+Dependencies: Python 2.x.x or Python 3.x.x
+
+Chee Sing Lee 30 January 2012

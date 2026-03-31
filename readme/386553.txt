@@ -1,0 +1,116 @@
+h1(#usaidwat). usaidwat
+
+Are you a Redditor? Do you use Ruby? Do you want to view the subreddits in which a particular user commonly posts? If you answered "yes" to all three of these questions, then *usaidwat* is the gem for you!
+
+h2(#install). Installation
+
+*usaidwat* can be installed via RubyGems:
+
+bc. $ gem install usaidwat
+
+h2(#usage). Usage
+
+A @usaidwat@ binary is installed with the gem. @usaidwat@ will analyze a user's last 100 comments and provide statistics.
+
+To list a Redditor's comments, use the @log@ subcommand:
+
+bc. $ usaidwat log mipadi
+
+To list a count of subreddits in which a user has posted, use the @tally@ subcommand:
+
+bc. $ usaidwat tally mipadi
+
+You will see output like the following:
+
+bc. apple              6
+AskReddit         61
+battlefield3       2
+books              2
+django             1
+Games              1
+nyc                1
+personalfinance    1
+photography        1
+programming       20
+redditcasual       1
+wikipedia          1
+worldnews          2
+
+Which indicates that mipadi has commented in @/r/AskReddit@ 61 times (out of his last 100 comments).
+
+To see the comments for a specific subreddit, tack on that subreddit:
+
+bc. $ usaidwat log mipadi AskReddit
+
+All the comments for the given subreddit will be printed.
+
+h2(#testing). Testing
+
+Test suites can be run with RSpec and Cucumber.
+
+h2(#development). Development
+
+The repository has been configured to use "jq":https://stedolan.github.io/jq/ to generate pretty diffs for the @.json@ files in @fixtures/features@. To use these prettier diffs, install jq, then run this:
+
+bc. $ git config diff.json.textconv "jq '.'"
+
+
+Project Description:
+Answers the age-old question, "Where does a Redditor comment the most?"
+
+README:
+h1(#usaidwat). usaidwat
+
+Are you a Redditor? Do you use Ruby? Do you want to view the subreddits in which a particular user commonly posts? If you answered "yes" to all three of these questions, then *usaidwat* is the gem for you!
+
+h2(#install). Installation
+
+*usaidwat* can be installed via RubyGems:
+
+bc. $ gem install usaidwat
+
+h2(#usage). Usage
+
+A @usaidwat@ binary is installed with the gem. @usaidwat@ will analyze a user's last 100 comments and provide statistics.
+
+To list a Redditor's comments, use the @log@ subcommand:
+
+bc. $ usaidwat log mipadi
+
+To list a count of subreddits in which a user has posted, use the @tally@ subcommand:
+
+bc. $ usaidwat tally mipadi
+
+You will see output like the following:
+
+bc. apple              6
+AskReddit         61
+battlefield3       2
+books              2
+django             1
+Games              1
+nyc                1
+personalfinance    1
+photography        1
+programming       20
+redditcasual       1
+wikipedia          1
+worldnews          2
+
+Which indicates that mipadi has commented in @/r/AskReddit@ 61 times (out of his last 100 comments).
+
+To see the comments for a specific subreddit, tack on that subreddit:
+
+bc. $ usaidwat log mipadi AskReddit
+
+All the comments for the given subreddit will be printed.
+
+h2(#testing). Testing
+
+Test suites can be run with RSpec and Cucumber.
+
+h2(#development). Development
+
+The repository has been configured to use "jq":https://stedolan.github.io/jq/ to generate pretty diffs for the @.json@ files in @fixtures/features@. To use these prettier diffs, install jq, then run this:
+
+bc. $ git config diff.json.textconv "jq '.'"

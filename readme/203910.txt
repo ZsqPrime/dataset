@@ -1,0 +1,7 @@
+RTL-Tester plugin for WordPress
+
+Project Description:
+RTL-Tester plugin for WordPress
+
+README:
+RTL-Tester plugin for WordPress

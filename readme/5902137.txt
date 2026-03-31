@@ -1,0 +1,169 @@
+Project Description:
+Powerful caching for Erector widgets
+
+README:
+= Erector Cache
+
+Widget caching for Erector.
+
+<em>Note:
+This only works at the widget level as this is essentially a fragment caching utility, and will not work for widgets rendered directly from a controller. (widget vs render_widget)</em>
+
+== Installation
+  sudo gem install erector_cache
+
+Checkout redis http://github.com/antirez/redis and install
+
+MAKE SURE REDIS SERVER IS RUNNING
+
+First, connect to the Redis database.  This would most likely go into an environment.rb.
+
+  Lawnchair.connectdb
+
+This will connect to a default database on localhost, if you want to connect to a particular database you can do:
+
+  Lawnchair.connectdb(Redis.new(:database => 11, :host => "127.0.0.1", :port => 6379))
+
+== Usage
+* cache_for - Use this to tell the widget how long it should be cached for.  Defaults to 1 hour
+* cache_with - These are the widget parameters you want to use to build the cache key
+* expire! - Expire the instances of a widget matching the given parameters
+
+    class Bluth < Erector::Widget
+      cache_with :name, :mistake
+      cache_for 3.seasons
+    
+      def content
+        div "My name is #{@name} and #{@mistake.to_param}"
+      end
+    end
+  
+    class Mistake < ORM::Base
+      attr_reader :updated_at
+    
+      def initialize(size)
+        @size = size || :huge
+        @updated_at = Time.now
+      end
+    
+      def size
+        @size
+      end
+    
+      def to_param
+        "I_just_made_a_#{size}_mistake"
+      end
+    end
+  
+=== cache_with
+
+In the simple case the cache key will be built off of the value of the parameter eg.
+
+  widget Bluth, :name => "George Michael", :mistake => "consubrinaphilia"
+
+This will yield a cache key of <em>"Lawnchair:Bluth:name:GeorgeMichael:mistake:consubrinaphilia"</em>
+---
+You can also pass whole objects into the widget and build the cache based on this.  It will default to using the to_param of the object as the key component value.
+
+  @mistake = Mistake.create(:huge)
+  widget Bluth, :name => "Gob", :mistake => @mistake
+  
+This will yield a cache key of <em>"Lawnchair:Bluth:name:Gob:mistake:I_just_made_a_huge_mistake"</em>
+---
+This is essentially the same as doing this, which opens up more complex possibilities for generating cache keys
+  
+  class Bluth < Erector::Widget
+    cache_with :name, :mistake => lambda {|mistake| mistake.to_param }
+  end
+  
+  @mistake = Mistake.create(:huge)
+  widget Bluth, :name => "Gob", :mistake => @mistake
+---
+Using this, we could set the cache to auto expire every time the associated object is updated.
+
+  class Bluth < Erector::Widget
+    cache_with :name, :mistake => lambda {|mistake| mistake.updated_at }
+  end
+
+== Expiration
+
+Widget expiration is possible by calling the widget class's expire! method and passing in as much information about the keys to expire as you want.
+
+Assume the following have occurred:
+
+  widget Bluth, :name => "Tobias", :mistake => "I_just_blue_myself"
+  widget Bluth, :name => "Tobias", :mistake => "analyst_and_therapist"
+  widget Bluth, :name => "Buster", :mistake => "swimming_with_seal"
+
+You can expire all Bluth widgets regardless of what the values of the params passed into them with:
+  
+  Bluth.expire!
+  
+You can expire only the Bluth widget with <em>:mistake => "I_just_blue_myself"</em> by using:
+
+  Bluth.expire!(:mistake => "I_just_blue_myself")
+  
+You can expire all widgets with <em>:name => "Tobias"</em> with:
+
+  Bluth.expire!(:name => "Tobias")
+  
+Likewise, calling the following will expire only the one cached version of the widget that exists, leaving the other instance in the cache:
+
+  Bluth.expire!(:name => "Tobias", :mistake => "I_just_blue_myself")
+  
+Any cache key component that is not passed into the expire! method will result in a wildcard match on that component, allowing you to be as specific as you wish.
+
+<em>Note:
+Lawnchair will automatically condense spaces, so don't feel constrained to using underscores or dashes in keys.</em>
+
+
+                         ....:~~~~~~~~~~~~~:~~::::::,..                         
+                   ......,~===~=====~~~~~::::::::::::::,.....  ..               
+                   ....,~+++=++++++==~~~~:::::::::::::::,...  ..                
+                   ..~I?+?????+?+++===~~~~::::::::::::::~:,...   .              
+                   .=I7?I?????+?+++===~~~~~:::::::::::::~~:....  ..             
+             .....~$$77II7III?+?++++===~~~~::::::::::::::~~=:......             
+             ....:ZZ$$7IIIIII???++++++==~~~:::::::::~~~:~~~==,.....             
+             ....7OZZ$77I777I????+++++==~~::::::::::~~::~~~===, ..              
+             ...?OOOZ$$$7777II?????+++===~~:::::::::::::~~~~==~....             
+             ..,7OOO$$$$$7777II??+++==~~~~~::::::::::::~::::~~=,...             
+             . ?OOOOZZ$$$77777I??++=++=~~~~:::::::::::::::~~===:...             
+             ..I8OOO$Z$ZZ77777I???+=+==~~::::::::::,:::::~=+++++...             
+              ,78OOO$ZZZ$$7777II7ZOOOOZ$7?+~~::::,,,::~~~?I7ZOOZ?..... ..       
+              ,7O8OO$$ZZZ$77$77ZOO8OOZ$II?+++=::,,,:::~===~+++I$Z:.... ..       
+              :7O88O8Z$$$$$$$OOZ???+III777$?+=~~::::::~:=I7+=::~+:~~, ..        
+              ,7OOO8OOZ77$I$OZIII~~~~=+???++I7I=:~=~=+I$=~I~=~:~+...=,:,        
+             ..IOOO8OOZ777IZZ+=I++++?+=??I7II7$Z$??I$$$+?+=::~~=:.. ,=?:        
+             ..?O88O88OZ$$$$7$Z+?+?77ZOO7III$7$ZI=:::Z7+78ZO8$I~=~++,~=..       
+             ..+O88O8OOZ$777=$7=??$ODN$8?+$I?7787=~~:O$?ZN88$Z8?=~...+:..       
+             ,:+7ZDDD8OZZ$$7?$Z?IZOII$7?++++?77$??+~:IZ=?+~~=+II=,...+,.        
+       .....:II++7O8DOZ$$7$7IIZ??7Z7?~~=+++=+7O7+I?=:+$~=?7I??I?+:..:+..        
+       ... .?ZOZ?++$8O$$7777??7$=???I?+===~:~77+I?==~:~=~~~~~~~~==.,:..         
+       ... ,+77?7OI78O777777II+?$=~~~~~~~:::II+$7?+~:~:~~~:,:::::~=:.....       
+       ....,+77==Z$$8O$7777IIII??I=:::::,,+?II?77I+~,,::=I7~,,.:=++:....        
+       .....=7?=?O8$88Z$$$777II?+=+7$IIII=:+$7III77?==~~=+=+?+=~~~~:.....       
+       .....~7++7877O8O$$$$77I?+===:~~:::~+IZ$I?+7O$+=~~?++==~::::~:....        
+       .....,I+?==?788OZZ$$77II?+==~~~~~===+7ODD8OZ8OZZ8D7+~~++~~~=: ...        
+       ......I=+=+I7O8OOZZ$777I??+===~~====+?IOO$7$O88Z$$7+=~=+=~==:.....       
+             ,$++7ZIOD8OZ$$$7777I?++=====?I$ZZZ$Z77ZZOOZ$ZZ$I+~+++=.....        
+              ~I++?7OO$$$$$$777$77?++=?IZOZOOOOZZOOOOOOZ$ZOZ$Z$+=+~......       
+             .,?++?IZO$$Z$$$777777I??I$ZOOOOOOOZZOZZ7II$7IZOOOZI=+~......       
+             ..,II=:?Z$$$$$$77I77I?78888888OZZZ$77$III7?+?$O8OO$++,..  .        
+             ...,,..,7$$$$$$77I7777O8O8D888OZ?II:===?=,:.?NNOZO7++,..           
+             ........?7$$$$$77II77II=+77Z8NNNNDNNN8DNDNMNO7+?7I++~.    .        
+             ........?$$$$$$$7I777I?==+++?IO8OZI==,::,?$7I?==?+==:              
+                .....?7$$$$Z$77I7$$7?=++++I??7I+===+?+=?I?===~=+=..             
+                   ..?$$ZZZZ$$$77777I?+=+++II++++=====++===~~==+...             
+                   . ?$$$ZZZZ$$777777I+=+++?II?+????++?+++=~~==~...             
+             .  .  ..I$$ZZOOOZZ$$777777+=+?+=+?++++==+=~~~~~~~~...              
+             .......:$$ZZZOOOOOZZ$777$$?+=+++===~~=~~~~~~~~~~=, ..              
+              .....,I$7$$$$$ZOOOOZ$$7$Z7I+=====~~:::~:~~~~~=~.....              
+             . ....+77777$$$ZOO88OZZ$$Z$I?+=====~~::~~~~~=~=,.. ..              
+  . .,,    ......,I77$$7I7777$$ZO888OOZOO$I?+++==~::~~:~=~+~ . . ..             
+ . :D88DDDZ7+:.,?7I7$$$7IIIII777$ZOOO888OOZ$II??+====+==++,.                    
+ ..?8Z8O88DDDDO7I??777IIIII?77I7$$ZOOOOOOOOZ$$7I?+===+???,..                    
+ ,Z8OOOOOO888888DD8DDD88DDD$?IIII7$ZOZOOOOOOOOZZZZZ$Z$I=.....                   
+
+== Copyright
+
+Copyright (c) 2010 Grockit. See LICENSE for details.

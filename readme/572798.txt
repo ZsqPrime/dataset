@@ -1,0 +1,12 @@
+# Exquisite Haiku
+
+Like Quake 3, but for haiku.
+
+
+Project Description:
+Collaborative poetry composition.
+
+README:
+# Exquisite Haiku
+
+Like Quake 3, but for haiku.

@@ -1,0 +1,8 @@
+pat.go is at now http://github.com/bmizerany/pat
+
+
+Project Description:
+Now at bmizerany/pat
+
+README:
+pat.go is at now http://github.com/bmizerany/pat

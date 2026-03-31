@@ -1,0 +1,8 @@
+playing around with node, express, and jade
+
+
+Project Description:
+travel photolog
+
+README:
+playing around with node, express, and jade

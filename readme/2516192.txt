@@ -1,0 +1,8 @@
+Project for roasting coffee using an air popcorn popper and an arduino.
+
+
+Project Description:
+Coffee air roasting with arduino
+
+README:
+Project for roasting coffee using an air popcorn popper and an arduino.

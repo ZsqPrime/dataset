@@ -1,0 +1,202 @@
+Project Description:
+SysBackup helps you Be Prepared to recover from disasters of different types as well as collect the data you need to respond to the day-to-day information requests you get from your user community 
+
+README:
+[Generated from doc/README.html]
+
+
+                                SysBackup README
+
+     [a+logo.png] Note: The most up-to-date copy of this file is
+     available in the [1]SysBackup Documentation and FAQ pages on the
+     [2]AzerTech.net web site. Source code documentation was previously
+     being generated using phpdoc; work has begun to switch over to
+     Doxygen. The results so far can be found in the
+     [3]/doc/doxygen/html/ folder within the distribution tarball.
+
+   Remember to check the notes in the headers of the various scripts
+   (especially sysbackup, remexec and localexec for helpful information.
+
+   This is a short introduction to SysBackup, a swiss-army-knife-type
+   utility that helps simplify and organize the nightly backup tasks. It
+   allows the system administrator to quickly and easily script jobs that
+   tarball folders and compress files into a backup set.
+
+The Problem
+
+   As system administrators we are faced with a variety of problems on our
+   servers from day to day. Over long periods of time we experience
+   different issues with our user community and our equipment. This leads
+   us to recognize a variety of different needs and, in general, try to
+   meet them with little scripts. We run these little scripts every night
+   in the hope that we might be better prepared for the days ahead. After
+   a while, though, the scripts start to get complicated. Then, when
+   disaster does strike again - and it will - we find out the hard way
+   that things didn't quite work out as planned. There are always minor
+   details that conspire against us (often just simple system software
+   upgrades and changes in the behavior of the user community.) The
+   problems also tend to happen most when we are most confident that we
+   are doing what we need to be doing - which leads to much embarrassment.
+   This forces us to review the backup procedure and make more
+   adjustments.
+
+The Solution
+
+                          [multi-function-tool.jpg]
+
+                                                       [4]Docs & FAQ Pages
+                                                     [5]Download SysBackup
+                                               [6]SysBackup on SourceForge
+                                                    [7]SysBackup on GitHub
+                                                     [8]SysBackup on Ohloh
+                                                  [9]Installation Overview
+                                                   [10]System Requirements
+                                                    [11]Basic Installation
+                                                    [12]SSH Remote Storage
+                                                             [13]First Run
+                                                          [14]Be Prepared!
+
+   The ultimate solution is an iterative business process combined with a
+   simple but flexible collection of tools. The business process will
+   include regular reviews and disaster recovery exercises to ensure that
+   everything is running smoothly. What we want from the backup tool is
+   to:
+     * easily perform simple tasks, such as tarballing specific folders or
+       collections of folders, quickly and conveniently,
+     * intelligently execute common tasks such as backing-up a well-known
+       service.
+     * allow us to simply, quickly and easily add to and adjust the
+       overall procedure in response to day-to-day issues.
+
+   SysBackup is a swiss-army-knife-type utility that helps simplify and
+   organize the nightly backup tasks. It allows the system administrator
+   to quickly and easily script jobs that tarball folders and compress
+   files into a backup set. The jobs are really easy to setup.
+
+   The jobs make use of a collection of plugins that are designed to
+   simplify common tasks. Each plugin is a small and simple script that is
+   designed to perform some kind of common task. For example the
+   mysql.plugin script is designed to backup a MySQL database server, the
+   mailman.plugin script is designed to backup a mailman installation,
+   etc.
+
+   Some of the plugins perform generic functions. The sysdirs.plugin, for
+   example, is designed to tarball any list of system folders. This tends
+   to work well for system folders that are rarely updated but wastes a
+   huge amount of disk space if you try using it on user home directories.
+   Users typically make changes to the files in their working folders and
+   those changes, when part of a huge tarball, prevent the SysBackup
+   utility from making use of hardlinks to save disk space. Therefore, the
+   homedirs.plugin is designed to list all the files and folders in a
+   users' home directory and compress everything into separate files. This
+   more granular approach can save a great deal of disk space. It can also
+   make it easier for the system administrator to find files that might be
+   requested by the users.
+
+   At the time of this writing there is a small collection of plugins
+   available and, hopefully, that collection will grow over time.
+
+   Once you get to know about the different plugins you can setup the jobs
+   you need to properly backup your server or workstation. Again,
+   setting-up the backup jobs is fairly easy. Job configuration scripts
+   are really just little scripts that schedule calls to the plugins. If
+   you need to do something complicated you can take a look at the code
+   for the existing plugins and roll your own.
+
+   The resulting backup sets are conveniently organized into daily, weekly
+   and monthly rotations that are automatically pruned for you. Each
+   backupset contains a set of sub-folders containing, hopefully,
+   everything related to a particular service or user.
+
+   Together these tools become a powerful and effective solution to the
+   day-to-day problems faced by a system administrator. At the same time,
+   SysBackup is simple and flexible enough that new jobs, possibly
+   involving new plugins, can easily be added as new issues are
+   identified.
+
+Limitations
+
+     * SysBackup was written for Linux. It will run fine under Cygwin or
+       XAMPP and the sys-tarballs class can be configured to use zip
+       instead of tar or pax. Then again there are many Windows backup
+       solutions available and they tend to understand the Windows
+       Registry and NTFS file attributes - issues that SysBackup makes no
+       effort to address.
+     * SysBackup is not a plug-and-play backup utility. You can't just
+       install and run it - it won't do anything for you unless you take
+       the time to think about what you need and configure the jobs and
+       plugins to do what you need them to do.
+     * SysBackup is not a bit-copy utility. In theory you could setup a
+       job that tarballs an entire server or workstation - but that's not
+       what SysBackup is designed to do. There are other solutions
+       available for bit-copy operations. For example:
+          + On Amazon AWS you can make bit-copies of your VM's using the
+            Create Image function available through the web-based GUI.
+          + On physical VM hosts you can simply take a snapshot of the
+            VM's storage and compress it to create a bit-image of an
+            entire server.
+          + On physical workstations and servers you can boot a
+            SysRescCD.org CD and use Partition Image to bit-copy an entire
+            host over to network storage.
+
+Be Prepared!
+
+   [15][main-use-case.png] It's always a good idea to make some kind of
+   backup - having copies of data is better than not having copies - but
+   any experienced system administrator will tell you that backups are
+   not, by themselves, very useful. Blindly running a backup utility is
+   not the same as being prepared for the day-to-day issues that your
+   organization will face over a period of years.
+
+   The goal of any serious backup process is to be prepared. An
+   experienced system administrator wants to make sure that any piece of
+   equipment (server or workstation) is setup so that users will be able
+   to get what they need, when they need it, for different types of
+   restore operations. This often means being able to go back in time and:
+     * find copies of files that users have accidentally changed or
+       deleted (sometimes undetected for days, weeks or months,)
+     * help users recover from long-term data value degradation caused by
+       malware and software bugs,
+     * restore a service or services that have been damaged by software
+       upgrades,
+     * migrate a server to a new host,
+     * comply with regulations concerning long-term storage of data
+     * and respond to regulatory agency requests for otherwise expired
+       information.
+
+   SysBackup is a simple, flexible and efficient tool that you can use to
+   help you get the results you need - but only if you plan the process,
+   test it and adjust it to ensure that you are, in fact, getting what you
+   need!
+     __________________________________________________________________
+
+
+                             [16][agpl-v3-logo.svg]   [17][gfdl-logo.svg]
+
+
+    Copyright © 2011 by [18]Sam Azer<[19]sam[at]azertech.net>, All rights
+    reserved.
+
+   Last modified: Thu Jan 12 17:06:30 EST 2012
+
+References
+
+   1. http://www.azertech.net/content/category/3/49/29/
+   2. http://www.azertech.net/
+   3. file://doc/doxygen/html/
+   4. http://www.azertech.net/content/category/3/49/29/
+   5. http://www.azertech.net/sysbackup-sfd
+   6. http://www.azertech.net/sysbackup-sf
+   7. http://www.azertech.net/sysbackup-gh
+   8. http://www.azertech.net/sysbackup-oh
+   9. http://www.azertech.net/content/view/69/29/
+  10. http://www.azertech.net/content/view/94/29/
+  11. http://www.azertech.net/content/view/92/29/
+  12. http://www.azertech.net/content/view/93/29/
+  13. http://www.azertech.net/content/view/95/29/
+  14. http://www.azertech.net/content/view/70/29/
+  15. http://www.azertech.net/content/view/70/29/
+  16. http://www.gnu.org/licenses/agpl.html
+  17. http://www.gnu.org/copyleft/fdl.html
+  18. http://azertech.net/about
+  19. mailto:sam[at]azertech.net?subject=SysBackup

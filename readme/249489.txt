@@ -1,0 +1,13 @@
+Pilfered Boids in Javascript
+
+http://pld.github.com/boids/
+
+
+
+Project Description:
+None
+
+README:
+Pilfered Boids in Javascript
+
+http://pld.github.com/boids/

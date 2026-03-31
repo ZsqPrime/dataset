@@ -1,0 +1,6 @@
+
+
+Project Description:
+A Desktop Wrapper for Jango.com
+
+README:

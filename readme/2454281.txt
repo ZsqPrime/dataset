@@ -1,0 +1,38 @@
+                                       _       _
+     ___  ___   ___ _ __ ___   ___  __| |_   _(_)___
+    / __|/ _ \ / __| '_ ` _ \ / _ \/ _` \ \ / / / __|
+    \__ \ (_) | (__| | | | | |  __/ (_| |\ V /| \__ \
+    |___/\___/ \___|_| |_| |_|\___|\__,_| \_/ |_|___/
+
+## Instructions
+
+```sh
+rake preview
+```
+
+```sh
+rake build
+rake deploy
+```
+
+
+Project Description:
+Website for the Workshop on Social Media Visualization (2012)
+
+README:
+                                       _       _
+     ___  ___   ___ _ __ ___   ___  __| |_   _(_)___
+    / __|/ _ \ / __| '_ ` _ \ / _ \/ _` \ \ / / / __|
+    \__ \ (_) | (__| | | | | |  __/ (_| |\ V /| \__ \
+    |___/\___/ \___|_| |_| |_|\___|\__,_| \_/ |_|___/
+
+## Instructions
+
+```sh
+rake preview
+```
+
+```sh
+rake build
+rake deploy
+```

@@ -1,0 +1,32 @@
+# clj-zoo
+
+Layer on top of zooker to define services.
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
+
+Project Description:
+None
+
+README:
+# clj-zoo
+
+Layer on top of zooker to define services.
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.

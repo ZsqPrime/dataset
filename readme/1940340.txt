@@ -1,0 +1,82 @@
+This is elcap version 0.2. A nose plugin that tests mutations of your source
+code.
+
+This is an early release. All comments are welcome.
+
+Acknowledgments:
+This plugin was built using some of the ideas present on Pymutester:
+http://pypi.python.org/pypi/pymutester
+
+Usage:
+ $ nosetests --with-mutations
+
+Testing:
+ $ pip install ludibrio, nose
+ $ nosetests tests
+
+Known Limitations:
+ - The mutators only work when the mutated node has lineno and col_offset
+ - The TestCoverage plugin has some problems with isolation, hence some lines
+   are not reported as covered, affecting the possible mutations.
+ - Sometimes the timeout function get stuck and it's not possible to release it.
+
+TODO features:
+ - improve reporting of what was mutated (wanted to use codegen, but is really 
+   unfinished, already fixed many bugs, but there is still lots to do)
+
+Changelog:
+- 27/01/2013: Released version 0.2
+  fixed formatting
+  fixed some bugs
+  refactored code
+  added way to specify custom Mutators
+  added way to stop tests in case they get stuck
+- 16/02/2012: Released version 0.1.5
+  added arguments to skip lines or files
+  improved reporting
+- 08/02/2012: Released version 0.1
+  basic functionality
+
+
+Project Description:
+Nose plugin that test mutated versions of your source code
+
+README:
+This is elcap version 0.2. A nose plugin that tests mutations of your source
+code.
+
+This is an early release. All comments are welcome.
+
+Acknowledgments:
+This plugin was built using some of the ideas present on Pymutester:
+http://pypi.python.org/pypi/pymutester
+
+Usage:
+ $ nosetests --with-mutations
+
+Testing:
+ $ pip install ludibrio, nose
+ $ nosetests tests
+
+Known Limitations:
+ - The mutators only work when the mutated node has lineno and col_offset
+ - The TestCoverage plugin has some problems with isolation, hence some lines
+   are not reported as covered, affecting the possible mutations.
+ - Sometimes the timeout function get stuck and it's not possible to release it.
+
+TODO features:
+ - improve reporting of what was mutated (wanted to use codegen, but is really 
+   unfinished, already fixed many bugs, but there is still lots to do)
+
+Changelog:
+- 27/01/2013: Released version 0.2
+  fixed formatting
+  fixed some bugs
+  refactored code
+  added way to specify custom Mutators
+  added way to stop tests in case they get stuck
+- 16/02/2012: Released version 0.1.5
+  added arguments to skip lines or files
+  improved reporting
+- 08/02/2012: Released version 0.1
+  basic functionality

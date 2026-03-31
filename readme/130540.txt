@@ -1,0 +1,6 @@
+
+
+Project Description:
+Rails deployment to EC2 instances
+
+README:

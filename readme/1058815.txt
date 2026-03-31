@@ -1,0 +1,5 @@
+Project Description:
+лабы по си
+
+README:
+мои лабораторные по C#

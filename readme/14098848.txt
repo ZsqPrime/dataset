@@ -1,0 +1,6 @@
+Project Description:
+Various scripts and setup to keep the same config across computers
+
+README:
+Several conf files to share environments between computers
+See [ansible-playbooks](https://github.com/sebhz/ansible-playbooks.git) for the deployment recipes.

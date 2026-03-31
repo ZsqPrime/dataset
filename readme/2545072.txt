@@ -1,0 +1,30 @@
+Project Description:
+Perl script meant to aid in the creation of packages for Slackware.
+
+README:
+preparepkg.pl 13.37 (120201)
+
+Usage: preparepkg.pl [options] package_name.txz
+
+Prepares the current and all subdirectories for makepkg by creating
+slack-desc, slack-required and gzipping any uncompressed man pages. 
+Dependencies are automatically determined and written to slack-required. 
+
+options: -r, --required       Generate slack-required.
+         -h, --help           Display usage.
+
+------------------------------------------------------------------------
+mkslack-required.pl 13.37 (120201)
+
+Usage: mkslack-required.pl
+
+Run from package root dir. Automatically determines dependencies
+of package and writes them to install/slack-required
+
+------------------------------------------------------------------------
+lsdeps.pl 13.37 (120202)
+
+Usage: lsdeps.pl package_name
+       e.g lsdeps.pl xchat
+
+Lists dependencies for an installed package.

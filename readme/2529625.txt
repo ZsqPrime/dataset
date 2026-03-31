@@ -1,0 +1,5 @@
+Project Description:
+Scrabble AI
+
+README:
+Scrabble (and that ilk) AI

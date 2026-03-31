@@ -1,0 +1,8 @@
+Project Description:
+An experimental VJ tool
+
+README:
+pxlfkr
+======
+
+An experimental video performance tool using Lua as an embedded scripting layer.

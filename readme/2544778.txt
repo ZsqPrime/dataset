@@ -1,0 +1,7 @@
+Project Description:
+A Bayeux client for Python
+
+README:
+# baiocas
+
+A simple Bayeux client for Python following the Comet paradigm.

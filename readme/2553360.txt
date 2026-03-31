@@ -1,0 +1,6 @@
+Project Description:
+C++ Tweener 
+
+README:
+
+C++ tweening library that will be connected to Perl.

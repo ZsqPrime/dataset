@@ -1,0 +1,10 @@
+This is an application for dealing with registrations for Go
+tournaments.
+
+
+Project Description:
+A web app for taking registrations for Go tournaments
+
+README:
+This is an application for dealing with registrations for Go
+tournaments.

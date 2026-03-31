@@ -1,0 +1,8 @@
+This is a research P2P filesystem. This is a clean rewrite of the filesystem what I have successfully implemented, but it had flaws in architecture. Let's see what I can do with guice+replication+disruptor+nonblocking sockets+snapshots+journal. 
+
+
+Project Description:
+Orchid Filesystem
+
+README:
+This is a research P2P filesystem. This is a clean rewrite of the filesystem what I have successfully implemented, but it had flaws in architecture. Let's see what I can do with guice+replication+disruptor+nonblocking sockets+snapshots+journal.

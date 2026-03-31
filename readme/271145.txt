@@ -1,0 +1,8 @@
+Django File Manager APP
+
+
+Project Description:
+Django File Manager
+
+README:
+Django File Manager APP

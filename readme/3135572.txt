@@ -1,0 +1,5 @@
+Project Description:
+easyDNS Client
+
+README:
+See http://nakkaya.com/easy-dns.html for documentation.

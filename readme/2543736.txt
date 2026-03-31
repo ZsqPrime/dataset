@@ -1,0 +1,5 @@
+Project Description:
+Open Collaboration Services provider
+
+README:
+OCS api component

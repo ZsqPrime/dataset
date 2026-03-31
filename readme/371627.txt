@@ -1,0 +1,13 @@
+# Test My Code Exercise Author Plugin for NetBeans #
+
+This plugin currently provides syntax highlighting for solution and stub demarcation.
+
+
+
+Project Description:
+NB plugin for exercise authors
+
+README:
+# Test My Code Exercise Author Plugin for NetBeans #
+
+This plugin currently provides syntax highlighting for solution and stub demarcation.

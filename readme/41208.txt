@@ -1,0 +1,8 @@
+this is the troopjs-core project
+
+
+Project Description:
+Core TroopJS modules
+
+README:
+this is the troopjs-core project

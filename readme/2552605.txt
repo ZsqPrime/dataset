@@ -1,0 +1,6 @@
+Project Description:
+EECS 495 w/ Professor Nikolaos Hardavellas in Winter 2012 at Northwestern University
+
+README:
+CUDA Programming @ Northwestern University
+- Haotian Liu

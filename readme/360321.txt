@@ -1,0 +1,83 @@
+This module supports access to the Amazon Simple Storage Service (S3), a
+popular cloud-based storage platform, from Corona SDK applications.
+
+It supports both synchronous and cancellable asynchronous requests to S3.
+
+For more information, see:
+
+    http://aws.amazon.com/s3/
+    http://www.anscamobile.com/corona/
+
+Usage:
+
+    local s3 = require("s3")
+
+    -- Set credentials
+    s3.AWS_Access_Key_ID = "your_access_key"
+    s3.AWS_Secret_Key    = "your_secret_key"
+
+    -- Get a bucket object
+    local bucket = s3.getBucket("bucketName")
+
+    -- Get bucket contents
+    --
+    local status = bucket:list("/", "path/", 100)
+    print("Found " .. #status.bucket.Contents .. " .. items in bucket")
+
+    -- Write some data to an S3 object, get it back, and delete the object
+    --
+    bucket:put("path/object.txt", nil, "this is the object contents")
+    status = bucket:get("path/object.txt")
+    if not status.isError and status.response.code = 200 then
+        print("Got bucket object contents: " .. status.response.body)
+    end    
+    bucket:delete("path/object.txt")
+
+    -- Write a file to an S3 object and get a copy back
+    --
+    bucket:put_file("path/object.png", system.pathForFile("boulder.png", system.DocumentsDirectory))
+    bucket:get_file("path/object.png", system.pathForFile("new_boulder.png", system.DocumentsDirectory))
+
+Project Description:
+Implementation of Amazon S3 REST API support from Corona SDK
+
+README:
+This module supports access to the Amazon Simple Storage Service (S3), a
+popular cloud-based storage platform, from Corona SDK applications.
+
+It supports both synchronous and cancellable asynchronous requests to S3.
+
+For more information, see:
+
+    http://aws.amazon.com/s3/
+    http://www.anscamobile.com/corona/
+
+Usage:
+
+    local s3 = require("s3")
+
+    -- Set credentials
+    s3.AWS_Access_Key_ID = "your_access_key"
+    s3.AWS_Secret_Key    = "your_secret_key"
+
+    -- Get a bucket object
+    local bucket = s3.getBucket("bucketName")
+
+    -- Get bucket contents
+    --
+    local status = bucket:list("/", "path/", 100)
+    print("Found " .. #status.bucket.Contents .. " .. items in bucket")
+
+    -- Write some data to an S3 object, get it back, and delete the object
+    --
+    bucket:put("path/object.txt", nil, "this is the object contents")
+    status = bucket:get("path/object.txt")
+    if not status.isError and status.response.code = 200 then
+        print("Got bucket object contents: " .. status.response.body)
+    end    
+    bucket:delete("path/object.txt")
+
+    -- Write a file to an S3 object and get a copy back
+    --
+    bucket:put_file("path/object.png", system.pathForFile("boulder.png", system.DocumentsDirectory))
+    bucket:get_file("path/object.png", system.pathForFile("new_boulder.png", system.DocumentsDirectory))

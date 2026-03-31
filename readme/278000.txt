@@ -1,0 +1,6 @@
+
+
+Project Description:
+open source alternative video player for IOS
+
+README:

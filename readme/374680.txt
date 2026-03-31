@@ -1,0 +1,13 @@
+Chillout-Tent-bot
+=================
+
+A Turntable.fm bot for the Chillout Tent room
+
+Project Description:
+A Turntable.fm bot for the Chillout Tent room
+
+README:
+Chillout-Tent-bot
+=================
+
+A Turntable.fm bot for the Chillout Tent room

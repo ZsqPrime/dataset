@@ -1,0 +1,11 @@
+Edited on github.
+Later on, use for guidance with this project.
+
+
+
+Project Description:
+GAE based membership administration
+
+README:
+Edited on github.
+Later on, use for guidance with this project.

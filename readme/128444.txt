@@ -1,0 +1,12 @@
+This repository contains a collection of more or less generic 
+Phing (http://phing.info) buildscripts. Have a look at the script's readme.txt 
+and sample property files for more information on how to use them.
+
+
+Project Description:
+A repository of easy to use Phing http://www.phing.info buildscripts
+
+README:
+This repository contains a collection of more or less generic 
+Phing (http://phing.info) buildscripts. Have a look at the script's readme.txt 
+and sample property files for more information on how to use them.

@@ -1,0 +1,9 @@
+Project Description:
+ElectricFence-like library, which aims to be more on the watch
+
+README:
+adios.h		universally usable collection of macros
+etense.c	source of libetense
+etense.h	API for libetense
+test.c		fuzzy test for libetense
+test.pl		verifyer for test.c

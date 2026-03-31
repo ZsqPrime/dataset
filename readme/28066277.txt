@@ -1,0 +1,7 @@
+Project Description:
+A "Tiny Tiny RSS" plugin that adds the ability to share links from tt-rss to a StatusNet instance (such as identica)
+
+README:
+# Moved
+
+This repository has been moved to https://codeberg.org/chimo/tt-rssToSN

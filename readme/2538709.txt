@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+This is just a playground for now.
+
+I'm exploring github and WordPress oop plugin development.

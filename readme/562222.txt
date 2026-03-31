@@ -1,0 +1,59 @@
++ TERA (Throughput Enabled Rate Adaptation) is in a branch called tera 
+https://github.com/dnlove/ns3/tree/tera
+
+You can find the source here:
+
+src/wifi/model/tera-wifi-manager.*
+
+
++ Maica rate adaptation is in a branch called maica
+https://github.com/dnlove/ns3/tree/maica
+
+You can find the source here:
+
+src/wifi/model/maica-wifi-manager.*
+
+Please see our paper for more details.
+
++ Minstrel rate adaptation from Linux Kernel for ns-3 simulator
+
+You can find the source here:
+
+src/wifi/model/minstrel-wifi-manager.*
+example/wireless/multirate.cc
+
+Feel free to contact me duy@soe.ucsc.edu.
+
+
+
+
+
+Project Description:
+This is ns-3 simulator with branches of Minstrel, Maica, and Tera rate adaptations.
+
+README:
++ TERA (Throughput Enabled Rate Adaptation) is in a branch called tera 
+https://github.com/dnlove/ns3/tree/tera
+
+You can find the source here:
+
+src/wifi/model/tera-wifi-manager.*
+
+
++ Maica rate adaptation is in a branch called maica
+https://github.com/dnlove/ns3/tree/maica
+
+You can find the source here:
+
+src/wifi/model/maica-wifi-manager.*
+
+Please see our paper for more details.
+
++ Minstrel rate adaptation from Linux Kernel for ns-3 simulator
+
+You can find the source here:
+
+src/wifi/model/minstrel-wifi-manager.*
+example/wireless/multirate.cc
+
+Feel free to contact me duy@soe.ucsc.edu.

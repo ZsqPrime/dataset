@@ -1,0 +1,14 @@
+cod2log
+=======
+
+An experiment with Clojure/ClojureScript/OM.
+
+
+Project Description:
+A Call of Duty 2 log file parser and web stats front end
+
+README:
+cod2log
+=======
+
+An experiment with Clojure/ClojureScript/OM.

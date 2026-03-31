@@ -1,0 +1,7 @@
+Project Description:
+Markov chains in java
+
+README:
+Generates Markov Chains based off text files. Still very basic and needs more features.
+
+Profiling coming soon!

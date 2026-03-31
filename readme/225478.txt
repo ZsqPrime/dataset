@@ -1,0 +1,139 @@
+h1. rah_default_category
+
+p. "Project page":http://rahforum.biz/plugins/rah_default_category | "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_default_category | "Support forum":http://forum.textpattern.com/viewtopic.php?id=29154 | "Donate":http://rahforum.biz/donate/rah_default_category
+
+p. Rah_default_category is a tiny admin-extension for "Textpattern CMS":http://www.textpattern.com. The plugin brings the default section feature to categories. The extension adds new options to Textpattern's "Advanced Preferences":http://textpattern.net/wiki/index.php?title=Advanced_Preferences that allow site admins set default article categories, just like one can select a default article section. Selected default categories are then used as the default option on the "Write":http://textpattern.net/wiki/index.php?title=Write panel.
+
+h2. Requirements
+
+p. Rah_default_category's minimum requirements:
+
+* Textpattern v4.4.0 or newer.
+* PHP 5.2 or newer.
+
+h2. Installing
+
+p. Rah_default_category's installation follows the standard plugin installation steps.
+
+# Download the plugin installation code.
+# Copy and paste the installation code into the _Install plugin_ box of your Textpattern Plugin pane.
+# Run the automated setup.
+# After the setup is done, activate the plugin. Done.
+
+h2. Changelog
+
+h3. Version 0.6 - 2012/08/27
+
+* Added: Finnish translation.
+* Added: French translation by "Patrick Lefevre":https://twitter.com/lowel.
+* Improved: Now uses @escape_js()@ to make sure JavaScript strings are valid.
+* Improved: Language strings aren't embedded to the source code, but uses external Textpack that are ran during install.
+* Changed: Wrapped functions to a class.
+* Changed: Renamed Preference group to _Default article categories_.
+* Changed: In preferences displays categories as a tree. Child categories are listed under the parent.
+* Fully compatible with Textpattern v4.5.
+
+h3. Version 0.5 - 2011/06/29
+
+* Fixed: the issue where default values didn't show up directly after logging in. "Thank you for reporting the issue Husain":http://forum.textpattern.com/viewtopic.php?pid=242061#p242061.
+
+h3. Version 0.4 - 2011/06/29
+
+* Changed: Integrated the plugin's preferences pane to Textpattern's build in Advanced Preferences interface. The plugin no longer has own tab, but instead the preferences are located at _TXP/Admin/Preferences/Advanced_.
+* Changed: Preferences are now stored in txp_prefs table instead of its own table. The plugin comes with migration script that makes transition automatic.
+* Fixed: Doesn't throw up JavaScript if browser's JavaScript support is disabled.
+* Added: Language string support.
+* Added: Options link to the Textpattern's plugins pane.
+* For full feature compatibility requires Textpattern 4.2.0 or newer.
+
+h3. Version 0.3 - 2010/11/02
+
+* Removed unnecessary default values from the installation query.
+* Removed no-longer used HTML IDs.
+
+h3. Version 0.2 - 2010/08/11
+
+* Fixed: conditional logic. Now doesn't reselected default categories after _article post + empty categories_ combination.
+* Removed tables from the plugin's prefs panel and changed to better layout.
+* Removed inline styles.
+* Improved installer.
+* Now uses same coding style as all newer rah-plugins.
+* Centralized preferences fetcher.
+* Changed prefs panel event from @rah_default_category_page@ to @rah_default_category@.
+* Now requires Textpattern version 4.0.7 or newer.
+
+h3. Version 0.1 - 2008/12/11
+
+* Initial release.
+
+Project Description:
+Select a default category for your Textpattern articles
+
+README:
+h1. rah_default_category
+
+p. "Project page":http://rahforum.biz/plugins/rah_default_category | "Twitter":http://twitter.com/gocom | "GitHub":https://github.com/gocom/rah_default_category | "Support forum":http://forum.textpattern.com/viewtopic.php?id=29154 | "Donate":http://rahforum.biz/donate/rah_default_category
+
+p. Rah_default_category is a tiny admin-extension for "Textpattern CMS":http://www.textpattern.com. The plugin brings the default section feature to categories. The extension adds new options to Textpattern's "Advanced Preferences":http://textpattern.net/wiki/index.php?title=Advanced_Preferences that allow site admins set default article categories, just like one can select a default article section. Selected default categories are then used as the default option on the "Write":http://textpattern.net/wiki/index.php?title=Write panel.
+
+h2. Requirements
+
+p. Rah_default_category's minimum requirements:
+
+* Textpattern v4.4.0 or newer.
+* PHP 5.2 or newer.
+
+h2. Installing
+
+p. Rah_default_category's installation follows the standard plugin installation steps.
+
+# Download the plugin installation code.
+# Copy and paste the installation code into the _Install plugin_ box of your Textpattern Plugin pane.
+# Run the automated setup.
+# After the setup is done, activate the plugin. Done.
+
+h2. Changelog
+
+h3. Version 0.6 - 2012/08/27
+
+* Added: Finnish translation.
+* Added: French translation by "Patrick Lefevre":https://twitter.com/lowel.
+* Improved: Now uses @escape_js()@ to make sure JavaScript strings are valid.
+* Improved: Language strings aren't embedded to the source code, but uses external Textpack that are ran during install.
+* Changed: Wrapped functions to a class.
+* Changed: Renamed Preference group to _Default article categories_.
+* Changed: In preferences displays categories as a tree. Child categories are listed under the parent.
+* Fully compatible with Textpattern v4.5.
+
+h3. Version 0.5 - 2011/06/29
+
+* Fixed: the issue where default values didn't show up directly after logging in. "Thank you for reporting the issue Husain":http://forum.textpattern.com/viewtopic.php?pid=242061#p242061.
+
+h3. Version 0.4 - 2011/06/29
+
+* Changed: Integrated the plugin's preferences pane to Textpattern's build in Advanced Preferences interface. The plugin no longer has own tab, but instead the preferences are located at _TXP/Admin/Preferences/Advanced_.
+* Changed: Preferences are now stored in txp_prefs table instead of its own table. The plugin comes with migration script that makes transition automatic.
+* Fixed: Doesn't throw up JavaScript if browser's JavaScript support is disabled.
+* Added: Language string support.
+* Added: Options link to the Textpattern's plugins pane.
+* For full feature compatibility requires Textpattern 4.2.0 or newer.
+
+h3. Version 0.3 - 2010/11/02
+
+* Removed unnecessary default values from the installation query.
+* Removed no-longer used HTML IDs.
+
+h3. Version 0.2 - 2010/08/11
+
+* Fixed: conditional logic. Now doesn't reselected default categories after _article post + empty categories_ combination.
+* Removed tables from the plugin's prefs panel and changed to better layout.
+* Removed inline styles.
+* Improved installer.
+* Now uses same coding style as all newer rah-plugins.
+* Centralized preferences fetcher.
+* Changed prefs panel event from @rah_default_category_page@ to @rah_default_category@.
+* Now requires Textpattern version 4.0.7 or newer.
+
+h3. Version 0.1 - 2008/12/11
+
+* Initial release.

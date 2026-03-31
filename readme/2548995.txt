@@ -1,0 +1,4 @@
+Project Description:
+The application that will run on the smartphone that will control the quadrotor
+
+README:

@@ -1,0 +1,12 @@
+*Note: this repo has continued under the `calabash` account*
+
+[https://github.com/calabash/calabash-ios](https://github.com/calabash/calabash-ios)
+
+
+Project Description:
+Automated Functional Testing for ios based on Cucumber
+
+README:
+*Note: this repo has continued under the `calabash` account*
+
+[https://github.com/calabash/calabash-ios](https://github.com/calabash/calabash-ios)

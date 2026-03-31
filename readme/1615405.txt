@@ -1,0 +1,7 @@
+Project Description:
+HTML5 canvas game
+
+README:
+#Osito
+
+A simple canvas game

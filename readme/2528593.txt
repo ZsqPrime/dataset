@@ -1,0 +1,488 @@
+#+BABEL: :session *R* :cache yes :results output graphics :exports both :tangle yes 
+* Think Stats port to SQL and R
+** purpose 
+   
+   This project exists as a port, to SQL and R, of the (Python) exercise solutions and code examples delivered in [[http://greenteapress.com/thinkstats/]["Think Stats: Probability and Statistics for Programmers"]].
+
+** current state
+   
+   There exists a tremendous (and increasing) amount of domain specific data stored in relational databases, much of the initial gathering of data to prepare samples for statistical analysis simply must be written in SQL.
+
+   The R programming language is the defacto standard for statistical programming and provides a rich set of functions for analysis and visualization.  
+   
+** considerations
+   
+   The emergence of data sciences as a discipline can be supported by a standardized approach to gathering and preparing data which can be consumed by reusable statistical functions that provide useful feedback to enable informed decisions.
+
+   In the course of translating the original code, it will be necessary to reorganize some of the resources.  For example, there may be a SQL directory separate from an R directory.  We will need to maintain a mapping in order to ensure complete coverage.
+
+   The original code will serve as a suite of unit tests and allow us to validate the quality of our work.
+
+   The R scripts and functions will be designed to be reusable for arbitrary sets of data, written to interface with an ODBC connection to any relational database.  We will be developing primarily against a PostgreSQL database and secondarily Microsoft SQL Server.  There will be an absolute minimum amount of SQL maintained within the R scripts. 
+
+   There has been a deliberate choice to *not* take advantage of the [[http://www.joeconway.com/plr/][PL/R - R Procedural Language for PostgreSQL]] as the initial intent of this project is to produce ANSI SQL decoupled from R scripts and functions that can be used with any RDBMS platform.  Once this goal is met, the use of PL/R will be re-evaluated.
+
+   All of the exercises will be translated following a reproduciple approach to research which will be implemented using literate programming techniques enabled by org-babel and org-mode in emacs.
+
+   Linux (specifically Arch) serves as the operating system for the development of this effort, however, this work should be portable to any other operating system.
+
+   As this is a derivitave work of an original (copyright 2010 Allen B. Downey) which has been licensed [[http://www.gnu.org/licenses/gpl.html][GNU GPLv3]], this work too is licensed the same (copyright 2011 Brian P. Muckian)
+   
+   - assumptions
+     - unless otherwise noted, the project root is the current working directory prior to executing any commands
+     - sudo is [[https://wiki.archlinux.org/index.php/Sudo][installed]] and the user is able to switch to the postgres user 
+     - PostgreSQL software [[https://wiki.archlinux.org/index.php/PostgreSQL][installed]] and running
+     - unixODBC and PostgreSQL ODBC driver are installed
+
+** resources 
+
+   - [[https://github.com/spaceshipoperator/a_portable_guide][a portable guide]]
+   - [[http://orgmode.org/org-mode-documentation.html][Org-Mode: Documentation]]
+   - [[http://greenteapress.com/manifesto.html][The Textbook Manifesto]]
+   - [[http://greenteapress.com/thinkstats/]["Think Stats: Probability and Statistics for Programmers"]]
+   - [[http://www.gnu.org/licenses/quick-guide-gplv3.html][GNU GPLv3 License]]
+   - [[http://www.postgresql.org/docs/9.1/interactive/index.html][PostgreSQL Documentation]]
+   - [[http://cran.r-project.org/doc/manuals/R-intro.html][An Introduction to R]]   
+
+** implementation
+*** action plan 
+   - [X] create github repo with initial draft plan
+     
+   - [X] create postgres database
+     
+     switch to the postgres (Linux) user, create the database super user login (also named postgres) to the PostgreSQL server, add your regular Linux user account to the PostgreSQL super user role. (*NOTE*: I am terribly sorry that bits quite confusing, but I insist I did my best to make sense of it myself)
+     #+begin_src sh
+     # switch to postgres (Linux) user 
+
+     sudo -i -u postgres
+
+     # create database super user
+
+     createuser -s -U postgres
+
+     # Enter name of role to add: 
+
+     bpmuckian # <-- my Linux login
+
+     exit # <-- from the postgres shell, now your back at your own shell
+
+     createdb thinkstats
+     #+end_src
+     
+   - [X] create ODBC DSN 
+
+     add the following to a file in your home directory named .odbcinst.ini (*note* the preceeding dot)
+     #+begin_example
+     [PostgreSQL]
+     Description     = PostgreSQL driver for Arch
+     
+     Driver          = /usr/lib/psqlodbcw.so
+     
+     FileUsage       = 1
+     
+     #+end_example
+
+     add the following to a file in your home directory named .odbc.ini (*note* the preceeding dot)
+     #+begin_example
+     [thinkstats]
+     
+     Description         = Postgres thinkstats database
+     
+     Driver              = PostgreSQL
+     
+     Trace               = Yes
+     
+     TraceFile           = sql.log
+     
+     Database            = thinkstats
+     
+     Servername          = localhost
+     
+     UserName            =
+     
+     Password            =
+     
+     Port                = 5432
+     
+     Protocol            = 6.4
+     
+     ReadOnly            = No
+     
+     RowVersioning       = No
+     
+     ShowSystemTables    = No
+     
+     ShowOidColumn       = No
+     
+     FakeOidIndex        = No
+     
+     ConnSettings        =
+     
+     #+end_example
+    
+   - [X] in the project root, create tmp dir with .gitignore 
+     this will be a scratch pad area not intended to be under source control
+     #+begin_src sh
+     mkdir tmp
+
+     echo '*' > tmp/.gitignore
+     #+end_src     
+     
+   - [X] retrieve original thinkstats python source 
+     #+begin_src sh
+     cd tmp
+
+     svn checkout http://thinkstats.googlecode.com/svn/trunk/ thinkstats-read-only
+
+     wget http://greenteapress.com/thinkstats/thinkstats.pdf
+
+     cd ..
+     #+end_src
+     
+   - [X] create directories in the project root
+     #+begin_src sh
+     mkdir data
+
+     mkdir r
+
+     mkdir sh
+
+     mkdir sql
+
+     echo "this directory holds data downloaded from other sources, generally, nothing here should reside under source control" > data/README
+    #+end_src
+     
+*** exercises
+    - *1.1*: Although the NSFG has been conducted seven times, it is not a longitudinal study. Read the Wikipedia pages about [[http://wikipedia.org/wiki/Cross-sectional_study]["cross-sectional studies"]] and [[http://wikipedia.org/wiki/Longitudinal_study]["longitudinal studies"]] to make sure you understand why not.
+
+    - *1.2*: download NSFG data and [[http://thinkstats.com/survey.py][survey.py]] 
+      - copy NSFG data from orginal source, assuming [[http://thinkstats.com/nsfg.html][terms accepted]]
+	#+begin_src sh
+	cp tmp/thinkstats-read-only/workspace/*gz* data/ 
+	#+end_src
+	
+      - extract data (with gzip), parse (with awk) and generate csv
+	- *note*: the awk built-in variable [[http://www.math.utah.edu/docs/info/gawk_11.html][FNR]] provides the current record number, this value is used to populate an 'id' field in the subsequently created database tables, the 'id' will serve as a unique (candidate) key.
+
+	- 2002FemPreg.dat.gz
+          #+begin_src sh
+          gunzip -c data/2002FemPreg.dat.gz | 
+          awk '{
+            print FNR","\
+            substr($0,1,12)","\
+            substr($0,22,1)","\
+            substr($0,56,1)","\
+            substr(57,2)","\
+            substr($0,59,2)","\
+            substr($0,275,2)","\
+            substr($0,277,1)","\
+            substr($0,278,2)","\
+            substr($0,284,4)","\
+            substr($0,423,18)}' | 
+          sed 's/ *//g' > /tmp/2002FemPreg.csv
+          #+end_src
+	
+	- 2002FemResp.dat.gz
+          #+begin_src sh
+          gunzip -c data/2002FemResp.dat.gz | 
+          awk '{
+            print FNR","\
+            substr($0,1,12)}' | 
+	  sed 's/ *//g' > /tmp/2002FemResp.csv
+	  #+end_src
+ 	
+      - create and load table within postgresql database
+	- *note*: conventionally, table names cannot begin with a number
+	  
+	- fem_preg_2002 (for 2002FemPreg.dat.gz)
+          #+begin_src sql
+          create table fem_preg_2002 (
+          id int,
+          caseid int,
+          nbrnaliv int,
+          babysex int,
+          birthwgt_lb int,
+          birthwgt_oz int,
+          prglength int,
+          outcome int,
+          birthord int,
+          agepreg int,
+          finalwgt float);
+        
+          copy fem_preg_2002 
+          from '/tmp/2002FemPreg.csv'
+          with delimiter ','
+          null as '';
+          #+end_src
+	  
+	- fem_resp_2002 (for 2002FemResp.dat.gz)
+          #+begin_src sql
+          create table fem_resp_2002 (
+          id int,
+	  caseid int);
+	  
+	  copy fem_resp_2002
+	  from '/tmp/2002FemResp.csv'
+	  with delimiter ','
+	  null as '';
+	  #+end_src
+
+      - number of respondents and pregnancies
+	- query
+	  #+begin_src sql
+          select 'Number of respondents ' || count(1) results from fem_resp_2002
+          union
+          select 'Number of pregnancies ' || count(1) from fem_preg_2002;
+          #+end_src 
+	  
+	- results
+          |-----------------------------|
+          | Number of respondents 7643  |
+          | Number of pregnancies 13593 |
+          |                             |
+          |-----------------------------|
+	  
+    - *1.3*: explore pregnancies data
+      - query 
+	#+begin_src sql
+	with 
+	firsts as (
+	select
+	count(1) as count_births,
+	round(avg(prglength),10) mean_gestation
+	from fem_preg_2002
+	where outcome = 1
+	and birthord = 1),
+	others as (
+	select
+	count(1) as count_births,
+	round(avg(prglength),10) mean_gestation
+	from fem_preg_2002
+	where outcome = 1
+	and birthord != 1)
+	select 'Number of first babies ' || count_births as results
+	from firsts
+	union
+	select 'Number of others ' || count_births as results
+	from others
+	union
+	select 'Mean gestation in weeks: ' 
+	union 
+	select 'First babies ' || mean_gestation
+	from firsts
+	union 
+	select 'Others ' || mean_gestation
+	from others
+	union
+	select 'Difference in days ' || (f.mean_gestation - o.mean_gestation) * 7.0
+	from firsts f
+	join others o
+	on 1 = 1;
+        #+end_src
+	
+      - results
+        |----------------------------------|
+        | Number of first babies 4413      |
+        | Number of others 4735            |
+        | Mean gestation in weeks:         |
+        | First babies 38.6009517335       |
+        | Others 38.5229144667             |
+        | Difference in days 0.54626086760 |
+        |                                  |
+        |----------------------------------|
+	
+    - *1.4*: The best way to learn about statistics is to work on a project you are interested in. Is there a question like, “Do first babies arrive late,” that you would like to investigate?
+      
+    - *2.1*: compute the mean, variance and standard deviation of pumpkins
+      *note*: regexp_split_to_table is non-ANSI, PostgreSQL specific, there is similar capability available to other RDBMS.  Consider writing a custom funtion based on this example (ie, given list return table with mean, standard deviation, variance)
+      - query
+        #+begin_src sql
+        with st as (
+        select regexp_split_to_table::float val
+        from regexp_split_to_table('1,1,1,3,3,591', ','))
+        select 
+        'Mean' measure, 
+        avg(val) result
+        from st
+        union
+        select 
+        'Variance', 
+        avg((val - 100)^2) 
+        from st
+        union 
+        select 
+        'Standard Deviation', 
+        round(stddev(val)::numeric, 10)
+        from st
+        #+end_src
+	
+      - results
+        |--------------------+---------------|
+        | Mean               |           100 |
+        | Variance           |         48217 |
+        | Standard Deviation | 240.541888244 |
+        |                    |               |
+        |--------------------+---------------|
+	
+      - further investigation
+	determine why PostgreSQL variance function returns different results (perhaps sample variance?)
+	- query
+	  #+begin_src sql
+          select variance(regexp_split_to_table::float) val
+          from regexp_split_to_table('1,1,1,3,3,591', ',');
+          #+end_src
+
+	- results
+          |---------|
+          | 57860.4 |
+          |         |
+          |---------|
+	  
+    - *2.2*: compute standard deviation of gestation time for first babies and others
+      - re: survey.py and first.py
+	
+      - query
+	#+begin_src sql
+	select 
+	'First: ' baby, 
+	round(stddev(prglength), 10) stddev_of_gestation
+	from fem_preg_2002
+	where outcome = 1
+	and birthord = 1
+	union
+	select
+	'Other: ', 
+	round(stddev(prglength), 10) 
+	from fem_preg_2002
+	where outcome = 1
+	and birthord != 1;
+        #+end_src
+		
+      - results
+        |--------+--------------|
+        | First: | 2.7919014147 |
+        | Other: | 2.6158523504 |
+        |        |              |
+        |--------+--------------|
+
+      - questions and comments
+        - Does it look like the spread is the same for the two groups?
+	- How big is the difference in the means compared to these standard deviations?
+	- What does this comparison suggest about the statistical significance of the difference?
+	  
+    - *2.3*: given list of values, find mode of frequency distribution
+
+      - query
+	#+begin_src sql
+        select regexp_split_to_table v, count(1) f 
+        from regexp_split_to_table('1,1,1,2,3,3,3,3,4,5,6,6', ',') 
+        group by regexp_split_to_table order by 2 desc, 1 asc limit 1;
+	#+end_src
+	
+      - results
+        |---+---|
+        | 3 | 4 |
+        |---+---|
+	
+      - questions and comments
+	- need to confirm understanding of [[http://wikipedia.org/wiki/Mode_(statistics)][Mode]]; what if multiple values have the same frequency?
+	  
+    - *2.4*: given a PMF of lifetimes and an age, return a new PMF that represents the distribution of remaining lifetimes
+      - re: survival.py
+      - investigate [[http://wikipedia.org/wiki/Survival_analysis][survival analysis]]
+	- [[http://www.google.com/url?sa=t&rct=j&q=r%20survival%20analysis&source=web&cd=1&ved=0CDcQFjAA&url=http%3A%2F%2Fwww.stat.wisc.edu%2F~deepayan%2FSIBS2005%2Fslides%2Fsurvival.pdf&ei=Zx01T5jgKsnJiQLIh6yNCg&usg=AFQjCNExx8ArObEcWLnVgpBXSAJPegHsHg][brief overview of suvival analysis in R (pdf)]]
+	- 
+
+      
+    - *2.5*: Write functions called PmfMean and PmfVar that take a Pmf object and compute the mean and variance
+      
+    - *2.6*: 
+ 
+
+
+*** examples 
+    - *2.5*: birth order histogram 
+      #+begin_src R :session *R* :results output silent
+	library("RODBC")
+	library("ggplot2")
+ 
+	channel <- odbcConnect(
+	  dsn="thinkstats")
+ 
+	dat <- sqlQuery(
+	  channel, 
+	  paste("
+	    select 
+	    case 
+	      when birthord = 1 
+	      then 'first' 
+	      else 'other' 
+	    end as birth_order, 
+	    prglength pregnancy_length
+	    from fem_preg_2002
+	    where prglength >= 20"))
+      #+end_src
+
+      #+begin_src R :session *R* :results output graphics :file images/birth_order_histogram_compare.png
+	hist <- ggplot(dat, aes(x=pregnancy_length, fill=birth_order)) 
+	hist + geom_histogram(position="dodge")
+      #+end_src
+
+      #+results:
+      [[file:images/birth_order_histogram_compare.png]]
+
+    - *2.7*: birth order probability mass function (PMF)
+      #+begin_src R :session *R* :results output graphics :file images/birth_order_probability_mass_function_compare.png
+	hist + geom_histogram(position="dodge", aes(y = ..density..)) + ylab('probability')
+      #+end_src
+
+      #+results:
+      [[file:images/birth_order_probability_mass_function_compare.png]]
+
+    - *2.8*: birth order difference between first babies PMF and others
+      #+begin_src R :session *R* :results output graphics :file images/birth_order_probability_mass_function_difference.png
+	library(sqldf)
+	
+	zdat <- sqldf("
+	  select *
+	  from dat
+	  where pregnancy_length > 34
+	  and pregnancy_length < 46")
+	
+	fdat <- sqldf("
+	  select
+	  pregnancy_length,
+	  count(1) c
+	  from zdat
+	  where birth_order = 'first'
+	  group by pregnancy_length")
+	
+	odat <- sqldf("
+	  select
+	  pregnancy_length,
+	  count(1) c
+	  from zdat
+	  where birth_order = 'other'
+	  group by pregnancy_length")
+	
+	n <- nrow(zdat)
+	
+	ddat <- fn$sqldf("
+	  select
+	  f.pregnancy_length,
+	  100*(cast(f.c - o.c as real)/ $n) p
+	  from fdat f
+	  join odat o
+	  on f.pregnancy_length = o.pregnancy_length")
+	
+	dhist <- ggplot(ddat, aes(pregnancy_length, p)) 
+	dhist + geom_histogram(stat = "identity", fill="blue")
+      #+end_src
+
+      #+results:
+      [[file:images/birth_order_probability_mass_function_difference.png]]
+
+*** misc
+    - [ ] email A. Downey to inform of this effort
+    - [ ] separate exercises into separate org file (and link to it)
+    - [ ] tangle and weave in order to produce R scripts that can run independently of orgmode (as it wraps up some magic such as creating the png files)

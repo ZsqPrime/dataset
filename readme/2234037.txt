@@ -1,0 +1,9 @@
+Project Description:
+Mojo Media Labs WordPress Theme
+
+README:
+= TWENTY ELEVEN =
+
+* by the WordPress team, http://wordpress.org/
+
+== ABOUT TWENTY ELEVEN ==

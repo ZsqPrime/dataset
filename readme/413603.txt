@@ -1,0 +1,14 @@
+== FundingList.us
+FundingList.us is a website that scrapes SEC's EDGAR database and turns it into something a bit easier to use
+
+This is the production version with a few things redacted (Namely the password for the email)
+
+
+Project Description:
+FundingList makes it easy to find out how much funding a startup has received.
+
+README:
+== FundingList.us
+FundingList.us is a website that scrapes SEC's EDGAR database and turns it into something a bit easier to use
+
+This is the production version with a few things redacted (Namely the password for the email)

@@ -1,0 +1,20 @@
+
+cd .vim
+git submodule init && git submodule update
+
+cd ~/.vim/bundle/command-T/ruby/command-t
+ruby extconf.rb
+make
+
+
+Project Description:
+None
+
+README:
+
+cd .vim
+git submodule init && git submodule update
+
+cd ~/.vim/bundle/command-T/ruby/command-t
+ruby extconf.rb
+make

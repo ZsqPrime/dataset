@@ -1,0 +1,16 @@
+# OpenRasta StructureMap support
+
+Provides support for using StructureMap as the IoC container in 
+OpenRasta.
+
+Project Description:
+None
+
+README:
+# OpenRasta StructureMap support
+
+
+
+Provides support for using StructureMap as the IoC container in 
+
+OpenRasta.

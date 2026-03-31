@@ -1,0 +1,7 @@
+Project Description:
+Bulletin board system in Rails.
+
+README:
+== bb-sys
+
+Simple bulletin board system in Rails.

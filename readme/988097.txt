@@ -1,0 +1,27 @@
+en_US
+====
+Access wiki for information: https://github.com/walkeralencar/rrnuVaccine/wiki/English
+
+pt_BR
+=====
+Acesse a wiki para informações: https://github.com/walkeralencar/rrnuVaccine/wiki/Português
+
+Contribute
+-------------------------------------------------------------
+Fork, commit, push, and send us a pull request at walkeralencar/rrnuVaccine
+
+Project Description:
+Vaccine: Malware rr.nu
+
+README:
+en_US
+====
+Access wiki for information: https://github.com/walkeralencar/rrnuVaccine/wiki/English
+
+pt_BR
+=====
+Acesse a wiki para informações: https://github.com/walkeralencar/rrnuVaccine/wiki/Português
+
+Contribute
+-------------------------------------------------------------
+Fork, commit, push, and send us a pull request at walkeralencar/rrnuVaccine

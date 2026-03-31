@@ -1,0 +1,8 @@
+root's homedir is revisioned via git -- local changes may be overwritten
+
+
+Project Description:
+Root homedir configs and assorted files
+
+README:
+root's homedir is revisioned via git -- local changes may be overwritten

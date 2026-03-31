@@ -1,0 +1,40 @@
+readhis
+-------
+
+Author: Krzysztof Miernik, 2012
+
+Program for reading histograms from HIS/DRR file format (upak library), and
+converting data to ascii format.
+
+To generate documentation with doxygen run
+ $ doxygen readhis.doxy
+
+See also help after running code with -h or --help parameter.
+
+Distributed under GPL v3. 
+
+Please feel free to comment, send bug reports or features requests. Source
+code contributions are also very welcome!
+
+
+Project Description:
+
+
+README:
+readhis
+-------
+
+Author: Krzysztof Miernik, 2012
+
+Program for reading histograms from HIS/DRR file format (upak library), and
+converting data to ascii format.
+
+To generate documentation with doxygen run
+ $ doxygen readhis.doxy
+
+See also help after running code with -h or --help parameter.
+
+Distributed under GPL v3. 
+
+Please feel free to comment, send bug reports or features requests. Source
+code contributions are also very welcome!

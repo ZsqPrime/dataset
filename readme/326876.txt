@@ -1,0 +1,8 @@
+A collection of custom puppet modules/facts/functions I've crafted, hopefully generalized enough to be usful to people
+
+
+Project Description:
+Custom Puppet Modules/Facts/Functions etc I've cleaned up and feel like sharing....
+
+README:
+A collection of custom puppet modules/facts/functions I've crafted, hopefully generalized enough to be usful to people

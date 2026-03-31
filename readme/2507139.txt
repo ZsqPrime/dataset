@@ -1,0 +1,17 @@
+= lifetracker
+
+Describe your project here
+
+:include:lifetracker.rdoc
+
+
+
+Project Description:
+None
+
+README:
+= lifetracker
+
+Describe your project here
+
+:include:lifetracker.rdoc

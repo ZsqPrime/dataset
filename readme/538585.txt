@@ -1,0 +1,58 @@
+h1. OrientDB / Spring integration
+
+h2. About the project
+
+_spring-orientdb_ is an attempt to provide a PlatformTransactionManager for OrientDB useable with the Spring Framework, in particular with _@Transactional_ annotation.
+
+h3. Configuration and usage
+
+For sample configuration and usage see orientdb-spring-samples:
+https://github.com/megadix/orientdb-spring-samples
+
+h2. Disclaimer
+
+*WARNING*: this is my first attempt at the implementation of such a complex beast like a transaction manager, so *USE IT AT YOUR OWN RISK!*
+
+* I'm not an expert in Spring internals;
+* I'm not an expert in OrientDB;
+* I just think that Spring & OrientDB are very cool projects that somehow need to work better together.
+
+Project Description:
+OrientDB integration with Spring
+
+README:
+h1. OrientDB / Spring integration
+
+
+
+h2. About the project
+
+
+
+_spring-orientdb_ is an attempt to provide a PlatformTransactionManager for OrientDB useable with the Spring Framework, in particular with _@Transactional_ annotation.
+
+
+
+h3. Configuration and usage
+
+
+
+For sample configuration and usage see orientdb-spring-samples:
+
+https://github.com/megadix/orientdb-spring-samples
+
+
+
+h2. Disclaimer
+
+
+
+*WARNING*: this is my first attempt at the implementation of such a complex beast like a transaction manager, so *USE IT AT YOUR OWN RISK!*
+
+
+
+* I'm not an expert in Spring internals;
+
+* I'm not an expert in OrientDB;
+
+* I just think that Spring & OrientDB are very cool projects that somehow need to work better together.

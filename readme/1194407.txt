@@ -1,0 +1,14 @@
+This app provides views that will be the
+basis for apps built by our ToolKit engine.
+
+More at http://eternalmatt.github.com/ToolKit
+
+
+Project Description:
+Environmental sensing senior project
+
+README:
+This app provides views that will be the
+basis for apps built by our ToolKit engine.
+
+More at http://eternalmatt.github.com/ToolKit

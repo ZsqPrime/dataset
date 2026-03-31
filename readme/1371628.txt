@@ -1,0 +1,90 @@
+Tools for snappers for working with git and stuff
+
+guppy
+-----
+
+Does a pull from upstream master and push to origin master. You can be in a
+branch with uncommitted work; your stuff will be safely stashed/unstashed and
+you will be automatically switched to master for the pull/push and back again
+when done.
+
+Will exit with a warning if the pull into your master branch requires a merge;
+you should be doing all work in topic branches so that your master branch can
+do fast-forward-only pulls.
+
+proon
+-----
+
+Cleans out old branches; removes all branches that have been merged into master
+and pushes the removal to origin.
+
+pullrep
+-------
+
+Outputs a mini-report of your merged pull requests: counts of pull requests
+merged by users and the last 5 pull requests merged. Only considers the local
+repo, so you'll only see what you've pulled from upstream master.
+
+The pulley tool does not include both participant's usernames in its commit log
+entries, so pulley commits are not currently included in the reports!
+
+purq
+----
+
+A tool for grabbing and examining pull requests. Call it with a PR id or user
+and branch name. Requires setup; you'll need entries in your ~/.netrc file for
+github.com and api.github.com and optionally some kind of tool for examining
+the diff's in the PR (edit purq and set DIFF_CMD to whatever works for you).
+
+INSTALLATION
+
+Add the directory containing these files to your PATH or symlink to them
+individually from a directory already in your PATH, e.g. /home/yourname/bin.
+
+
+Project Description:
+tools for working with git@snap
+
+README:
+Tools for snappers for working with git and stuff
+
+guppy
+-----
+
+Does a pull from upstream master and push to origin master. You can be in a
+branch with uncommitted work; your stuff will be safely stashed/unstashed and
+you will be automatically switched to master for the pull/push and back again
+when done.
+
+Will exit with a warning if the pull into your master branch requires a merge;
+you should be doing all work in topic branches so that your master branch can
+do fast-forward-only pulls.
+
+proon
+-----
+
+Cleans out old branches; removes all branches that have been merged into master
+and pushes the removal to origin.
+
+pullrep
+-------
+
+Outputs a mini-report of your merged pull requests: counts of pull requests
+merged by users and the last 5 pull requests merged. Only considers the local
+repo, so you'll only see what you've pulled from upstream master.
+
+The pulley tool does not include both participant's usernames in its commit log
+entries, so pulley commits are not currently included in the reports!
+
+purq
+----
+
+A tool for grabbing and examining pull requests. Call it with a PR id or user
+and branch name. Requires setup; you'll need entries in your ~/.netrc file for
+github.com and api.github.com and optionally some kind of tool for examining
+the diff's in the PR (edit purq and set DIFF_CMD to whatever works for you).
+
+INSTALLATION
+
+Add the directory containing these files to your PATH or symlink to them
+individually from a directory already in your PATH, e.g. /home/yourname/bin.

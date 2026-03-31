@@ -1,0 +1,7 @@
+Project Description:
+This is time management solution for pair TM provided by Viacode
+
+README:
+This file was created by PyCharm 2.0.1 for binding GitHub repository
+
++ edited

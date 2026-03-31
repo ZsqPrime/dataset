@@ -1,0 +1,166 @@
+h1. Vim installation
+
+Ubuntu:
+
+<pre><code>sudo apt-get install python-software-properties -y
+sudo add-apt-repository ppa:fcwu-tw/ppa
+sudo apt-get update -y
+sudo apt-get install vim -y
+</code></pre>
+
+OS X
+
+<pre><code>brew install macvim</code></pre>
+
+h1. Dependencies
+
+You will need these dependencies figured out:
+
+* Ruby (for the fuzzy finder plugin)
+* Exuberant Ctags (http://ctags.sourceforge.net/)
+
+In Ubuntu, for example, you will have to do:
+
+<pre><code>apt-get install exuberant-ctags</code></pre>
+
+In OS X, you can install ctags with homebrew
+
+<pre><code>brew install ctags-exuberant</code></pre>
+
+On Windows you have to download Ctags and add ctags.exe in your PATH.
+
+Mac OS X and most Linux distros come with Ruby already. If you're in Windows
+look for Luis Lavena's latest Ruby Installer (http://rubyforge.org/projects/rubyinstaller/)
+
+h1. Vimfiles installation
+
+<pre><code>git clone https://github.com/jshafton/vimfiles.git ~/.vim</pre></code>
+
+Now you should create a new <tt>.vimrc</tt> file in your home directory that
+loads the pre-configured one that comes bundled in this package. You can do it
+on Linux/Mac like this:
+
+<pre><code>echo "source ~/.vim/vimrc" > ~/.vimrc</code></pre>
+
+On Windows you should create a <tt>_vimrc</tt> (underline instead of dot) and add
+the following line inside:
+
+<pre><code>source ~/vimfiles/vimrc</code></pre>
+
+This way you can override the default configuration by adding your own inside
+this file.
+
+You should also create a new <tt>.gvimrc</tt> file in your home directory. You can do
+it on Linux/Mac like this:
+
+<pre><code>echo "source ~/.vim/gvimrc" > ~/.gvimrc</code></pre>
+
+h1. YouCompleteMe support
+
+The YouCompleteMe plugin has a bunch of requirements to build it.
+
+In Ubuntu:
+
+<pre><code>sudo apt-get install build-essential python-dev cmake -y</code></pre>
+
+h1. Bundle installation
+
+In order to install all the required plugins, you'll need to use Vundle. First, clone its repo into your bundle folder:
+
+<pre><code>$ git clone https://github.com/gmarik/vundle.git bundle/vundle</code></pre>
+
+Install the bundles with the following:
+
+<pre><code>$ vim +BundleInstall</code></pre>
+
+h1. Compile YouCompleteMe
+
+<pre><code>cd ~/.vim/bundle/YouCompleteMe
+./install.sh
+</code></pre>
+
+
+Project Description:
+None
+
+README:
+h1. Vim installation
+
+Ubuntu:
+
+<pre><code>sudo apt-get install python-software-properties -y
+sudo add-apt-repository ppa:fcwu-tw/ppa
+sudo apt-get update -y
+sudo apt-get install vim -y
+</code></pre>
+
+OS X
+
+<pre><code>brew install macvim</code></pre>
+
+h1. Dependencies
+
+You will need these dependencies figured out:
+
+* Ruby (for the fuzzy finder plugin)
+* Exuberant Ctags (http://ctags.sourceforge.net/)
+
+In Ubuntu, for example, you will have to do:
+
+<pre><code>apt-get install exuberant-ctags</code></pre>
+
+In OS X, you can install ctags with homebrew
+
+<pre><code>brew install ctags-exuberant</code></pre>
+
+On Windows you have to download Ctags and add ctags.exe in your PATH.
+
+Mac OS X and most Linux distros come with Ruby already. If you're in Windows
+look for Luis Lavena's latest Ruby Installer (http://rubyforge.org/projects/rubyinstaller/)
+
+h1. Vimfiles installation
+
+<pre><code>git clone https://github.com/jshafton/vimfiles.git ~/.vim</pre></code>
+
+Now you should create a new <tt>.vimrc</tt> file in your home directory that
+loads the pre-configured one that comes bundled in this package. You can do it
+on Linux/Mac like this:
+
+<pre><code>echo "source ~/.vim/vimrc" > ~/.vimrc</code></pre>
+
+On Windows you should create a <tt>_vimrc</tt> (underline instead of dot) and add
+the following line inside:
+
+<pre><code>source ~/vimfiles/vimrc</code></pre>
+
+This way you can override the default configuration by adding your own inside
+this file.
+
+You should also create a new <tt>.gvimrc</tt> file in your home directory. You can do
+it on Linux/Mac like this:
+
+<pre><code>echo "source ~/.vim/gvimrc" > ~/.gvimrc</code></pre>
+
+h1. YouCompleteMe support
+
+The YouCompleteMe plugin has a bunch of requirements to build it.
+
+In Ubuntu:
+
+<pre><code>sudo apt-get install build-essential python-dev cmake -y</code></pre>
+
+h1. Bundle installation
+
+In order to install all the required plugins, you'll need to use Vundle. First, clone its repo into your bundle folder:
+
+<pre><code>$ git clone https://github.com/gmarik/vundle.git bundle/vundle</code></pre>
+
+Install the bundles with the following:
+
+<pre><code>$ vim +BundleInstall</code></pre>
+
+h1. Compile YouCompleteMe
+
+<pre><code>cd ~/.vim/bundle/YouCompleteMe
+./install.sh
+</code></pre>

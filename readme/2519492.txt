@@ -1,0 +1,6 @@
+Project Description:
+Project Euler Problems
+
+README:
+Project Euler problems solved in Erlang
+http://projecteuler.net/problems

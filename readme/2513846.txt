@@ -1,0 +1,10 @@
+
+*cuando no queres dar de alta otro puesto te deberia llevar a la ventana "gestionar puestos o funciones" que es la anterior y no al menuprincipal
+
+
+Project Description:
+En la carpeta estan Las Entidades, Los Gestores y las Interfases (TODO UNIFICADO)
+
+README:
+
+*cuando no queres dar de alta otro puesto te deberia llevar a la ventana "gestionar puestos o funciones" que es la anterior y no al menuprincipal

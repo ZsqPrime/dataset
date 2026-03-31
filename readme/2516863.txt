@@ -1,0 +1,7 @@
+RAW is a 2D side-scrolling game for Android created by Detour Games.
+
+Project Description:
+NOTE: Has moved to: https://github.com/amplify91/RAW-Gdx
+
+README:
+RAW is a 2D side-scrolling game for Android created by Detour Games.

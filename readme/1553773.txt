@@ -1,0 +1,11 @@
+It implements most of the generally used algorithms in graph theory,number thoery, string operations(searching and pattern matching), computational geometry and implements classes for fractions, matrices, polynomials and complex numbers. 
+
+This was mostly written for programming contests, so is not very well documented. But beginners can still find it to be very useful for learning the basic algorithm. 
+
+Project Description:
+it implements most of the generally used algorithms in graph theory,number thoery, string operations(searching and pattern matching) and implements a class for fractions and complex numbers
+
+README:
+It implements most of the generally used algorithms in graph theory,number thoery, string operations(searching and pattern matching), computational geometry and implements classes for fractions, matrices, polynomials and complex numbers. 
+
+This was mostly written for programming contests, so is not very well documented. But beginners can still find it to be very useful for learning the basic algorithm.

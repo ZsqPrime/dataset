@@ -1,0 +1,18 @@
+$git clone git://github.com/w1mvy/flask_on_gae.git ./myproject
+$cd myproject
+$curl -LO "http://svn.zope.org/*checkout*/zc.buildout/trunk/bootstrap/bootstrap.py"
+$python bootstrap.py -d
+$./bin/buildout
+$./bin/dev_appserver src/
+
+
+Project Description:
+use flask on google app engine
+
+README:
+$git clone git://github.com/w1mvy/flask_on_gae.git ./myproject
+$cd myproject
+$curl -LO "http://svn.zope.org/*checkout*/zc.buildout/trunk/bootstrap/bootstrap.py"
+$python bootstrap.py -d
+$./bin/buildout
+$./bin/dev_appserver src/

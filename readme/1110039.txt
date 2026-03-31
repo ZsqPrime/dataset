@@ -1,0 +1,8 @@
+Project Description:
+Universitas - an open source project focused on a more social & sharing perspective on groups.
+
+README:
+== Universitas
+Will write a cool and explanatory readme someday. Seriously. I swear.
+
+Updated for Travis-CI just to force a build.

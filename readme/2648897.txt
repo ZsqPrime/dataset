@@ -1,0 +1,9 @@
+Project Description:
+Node controller, abstraction layer for the scheduler
+
+README:
+Rainbow Node Controller
+=============================
+
+Purpose
+-------

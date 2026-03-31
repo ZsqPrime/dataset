@@ -1,0 +1,33 @@
+* Programming Language Playground
+
+- Agda moved to [[https://github.com/steshaw/agda-playground]]
+- Erlang moved to [[https://github.com/steshaw/erlang-playground]]
+- Flix playground at [[https://github.com/steshaw/flix-playground]]
+- Go[lang] moved to [[https://github.com/steshaw/go-playground]]
+- Haskell moved to [[https://github.com/steshaw/haskell-playground]]
+- Idris moved to [[https://github.com/steshaw/idris-playground]]
+- Java moved to [[https://github.com/steshaw/java-playground]]
+- Nix moved to [[https://github.com/steshaw/nix-playground]]
+- OCaml moved to [[https://github.com/steshaw/ocaml-playground]]
+- Rust moved to [[https://github.com/steshaw/rust-playground]]
+- Scala moved to [[https://github.com/steshaw/scala-playground]]
+- Typesetting languages moved to [[https://github.com/steshaw/typesetting-playground]]
+
+
+Project Description:
+Steve's code playground
+
+README:
+* Programming Language Playground
+
+- Agda moved to [[https://github.com/steshaw/agda-playground]]
+- Erlang moved to [[https://github.com/steshaw/erlang-playground]]
+- Go[lang] moved to [[https://github.com/steshaw/go-playground]]
+- Haskell moved to [[https://github.com/steshaw/haskell-playground]]
+- Idris moved to [[https://github.com/steshaw/idris-playground]]
+- Java moved to [[https://github.com/steshaw/java-playground]]
+- Nix moved to [[https://github.com/steshaw/nix-playground]]
+- OCaml moved to [[https://github.com/steshaw/ocaml-playground]]
+- Rust moved to [[https://github.com/steshaw/rust-playground]]
+- Scala moved to [[https://github.com/steshaw/scala-playground]]
+- Typesetting languages moved to [[https://github.com/steshaw/typesetting-playground]]

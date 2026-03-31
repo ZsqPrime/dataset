@@ -1,0 +1,4 @@
+Project Description:
+SolR frontend made easy in java
+
+README:

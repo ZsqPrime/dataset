@@ -1,0 +1,20 @@
+README
+===========================
+
+Requirements:
+1) OCE 0.8
+2) PythonOCC
+3) Hands
+
+
+Project Description:
+None
+
+README:
+README
+===========================
+
+Requirements:
+1) OCE 0.8
+2) PythonOCC
+3) Hands

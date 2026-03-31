@@ -1,0 +1,10 @@
+Project Description:
+BSA District website bits and pieces based on Joomla and Fabrik
+
+README:
+This repository contains the bits and pieces that we use for several of
+the BSA District websites in the Capitol Area Council (central Texas).
+
+See the wiki for more information.
+
+Thanks!

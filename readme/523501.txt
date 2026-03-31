@@ -1,0 +1,12 @@
+[![Build Status](https://travis-ci.org/mrwilson/aoko.png?branch=master)](https://travis-ci.org/mrwilson/aoko)
+
+Visit the <a href="https://github.com/UWCS/aoko/wiki">wiki</a> for information.
+
+
+Project Description:
+A music server implementation with Java/Spring/Hibernate
+
+README:
+[![Build Status](https://travis-ci.org/mrwilson/aoko.png?branch=master)](https://travis-ci.org/mrwilson/aoko)
+
+Visit the <a href="https://github.com/UWCS/aoko/wiki">wiki</a> for information.

@@ -1,0 +1,7 @@
+Pure Gallery aims to be a hassle free Lightroom web gallery: no animations, no flash, keyboard friendly, mobile device friendly (swipe friendly), fullscreen pictures (at least big pictures)
+
+Project Description:
+Pure Gallery aims to be a hassle free Lightroom web gallery: no animations, no flash, keyboard friendly, fullscreen pictures (at least big pictures)
+
+README:
+Pure Gallery aims to be a hassle free Lightroom web gallery: no animations, no flash, keyboard friendly, mobile device friendly (swipe friendly), fullscreen pictures (at least big pictures)

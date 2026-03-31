@@ -1,0 +1,8 @@
+This is a fast poker hand evaluator which evaluates projecteuler 54 hands. This code doesn't uses conditional branches. Could be even faster using more threads. 
+
+
+Project Description:
+Fast poker hand evaluator written in c++/c
+
+README:
+This is a fast poker hand evaluator which evaluates projecteuler 54 hands. This code doesn't uses conditional branches. Could be even faster using more threads.

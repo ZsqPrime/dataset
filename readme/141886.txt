@@ -1,0 +1,22 @@
+```
+...............................
+. This is itochan's dotfiles. .
+...............................
+```
+
+This repository uses chezmoi.  
+https://www.chezmoi.io/
+
+
+Project Description:
+dot hell
+
+README:
+```
+...............................
+. This is itochan's dotfiles. .
+...............................
+```
+
+This repository uses chezmoi.  
+https://www.chezmoi.io/

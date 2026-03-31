@@ -1,0 +1,138 @@
+== StorageRoom Gem
+
+This gem provides read and write access to the StorageRoom API (http://storageroomapp.com). 
+
+== Main Features
+
+* ActiveRecord/ActiveModel like interface.
+* Automatic creation of Entry Classes from a Collection, you don't have to configure anything
+* Supports lazy-loading of associations (e.g. post.category will fetch a category transparently if it has not yet been loaded)
+* Supports caching through an identity map, so that Resources don't have to be loaded multiple times
+* Easy file uploads and removals
+* Model Callbacks
+
+== Installation
+
+To install the library execute:
+
+  sudo gem install storage_room
+
+
+== Basic Usage
+
+This is a walkthrough with all steps you need to setup a devise entry, including model, migration, route files, and optional configuration.
+  
+  StorageRoom.authenticate(YOUR_ACCOUNT_ID, YOUR_APPLICATION_API_KEY)
+  collection = StorageRoom::Collection.find('4ddaf68b4d085d374a000003')
+  
+  entry = collection.entries.resources.first # collection.entries contains meta information, the resources key contains the returned objects
+  
+  entry.name = 'Foobar'
+  
+  if entry.save
+    puts "Entry saved."
+  else
+    puts "Could not save Entry: #{entry.errors.join(', )}"
+  end
+
+You can find the documentation at http://rdoc.info/github/thriventures/storage_room_gem.
+
+== Long Running Processes
+
+The gem caches responses from the API. If you have a long-running process such as a server or worker you probably want fresh data and you should clear the cache before each request:
+
+  StorageRoom::IdentityMap.clear
+
+== More Examples
+
+See the examples folder.
+
+== TODO
+
+Please refer to TODO file.
+
+== Maintainers
+
+* Sascha Konietzke 
+
+== Bugs and Feedback
+
+If you discover any bugs, please create an issue on GitHub.
+
+http://github.com/thriventures/storage_room_gem/issues
+
+== License
+
+MIT License. Copyright 2010 Thriventures UG (haftungsbeschränkt) - http://www.thriventures.com
+
+
+Project Description:
+A gem to access the StorageRoom API
+
+README:
+== StorageRoom Gem
+
+This gem provides read and write access to the StorageRoom API (http://storageroomapp.com). 
+
+== Main Features
+
+* ActiveRecord/ActiveModel like interface.
+* Automatic creation of Entry Classes from a Collection, you don't have to configure anything
+* Supports lazy-loading of associations (e.g. post.category will fetch a category transparently if it has not yet been loaded)
+* Supports caching through an identity map, so that Resources don't have to be loaded multiple times
+* Easy file uploads and removals
+* Model Callbacks
+
+== Installation
+
+To install the library execute:
+
+  sudo gem install storage_room
+
+
+== Basic Usage
+
+This is a walkthrough with all steps you need to setup a devise entry, including model, migration, route files, and optional configuration.
+  
+  StorageRoom.authenticate(YOUR_ACCOUNT_ID, YOUR_APPLICATION_API_KEY)
+  collection = StorageRoom::Collection.find('4ddaf68b4d085d374a000003')
+  
+  entry = collection.entries.resources.first # collection.entries contains meta information, the resources key contains the returned objects
+  
+  entry.name = 'Foobar'
+  
+  if entry.save
+    puts "Entry saved."
+  else
+    puts "Could not save Entry: #{entry.errors.join(', )}"
+  end
+
+You can find the documentation at http://rdoc.info/github/thriventures/storage_room_gem.
+
+== Long Running Processes
+
+The gem caches responses from the API. If you have a long-running process such as a server or worker you probably want fresh data and you should clear the cache before each request:
+
+  StorageRoom::IdentityMap.clear
+
+== More Examples
+
+See the examples folder.
+
+== TODO
+
+Please refer to TODO file.
+
+== Maintainers
+
+* Sascha Konietzke 
+
+== Bugs and Feedback
+
+If you discover any bugs, please create an issue on GitHub.
+
+http://github.com/thriventures/storage_room_gem/issues
+
+== License
+
+MIT License. Copyright 2010 Thriventures UG (haftungsbeschränkt) - http://www.thriventures.com

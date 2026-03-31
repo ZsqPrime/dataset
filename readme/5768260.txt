@@ -1,0 +1,6 @@
+Project Description:
+Corba server and client for hpp-wholebody-step-planner
+
+README:
+This package implements a corba server and client to control
+hpp-wholebody-step-planner library.

@@ -1,0 +1,7 @@
+TODO: Write out readme
+
+Project Description:
+Windows Phone Application
+
+README:
+TODO: Write out readme

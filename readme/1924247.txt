@@ -1,0 +1,10 @@
+$Id$
+Exercises from Accelerated C++.
+
+
+Project Description:
+Accelerated C++ Exercises
+
+README:
+$Id$
+Exercises from Accelerated C++.

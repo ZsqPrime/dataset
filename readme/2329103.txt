@@ -1,0 +1,6 @@
+
+
+Project Description:
+Gaussian Mixture Model Implementation using Eigen Library
+
+README:

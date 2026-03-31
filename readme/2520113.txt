@@ -1,0 +1,5 @@
+Project Description:
+An extensible RSS feed bot in perl
+
+README:
+Oyster - Extensible RSSfeed bot in Perl

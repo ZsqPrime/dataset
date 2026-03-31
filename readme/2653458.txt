@@ -1,0 +1,17 @@
+Project Description:
+Setting up puppet
+
+README:
+Disable SELinux and reboot
+sudo sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config && sudo /sbin/reboot
+
+To clone this project
+sudo yum -y install git
+git clone http://github.com/bornready/orville
+cd orville
+
+To install puppet from scratch:
+sudo ./install-puppet.sh
+
+To configure puppet
+sudo ./configure-puppet.sh

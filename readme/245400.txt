@@ -1,0 +1,18 @@
+Phycas is a Python application for carrying out phylogenetic analyses.
+It is also a C++ and Python library that can be used to create new
+applications or to extend the current functionality.
+
+Phycas was written by Paul O. Lewis, Mark T. Holder and David L. Swofford.
+
+
+
+
+Project Description:
+Python and C++ hybrid program for Bayesian phylogenetics 
+
+README:
+Phycas is a Python application for carrying out phylogenetic analyses.
+It is also a C++ and Python library that can be used to create new
+applications or to extend the current functionality.
+
+Phycas was written by Paul O. Lewis, Mark T. Holder and David L. Swofford.

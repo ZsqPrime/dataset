@@ -1,0 +1,5 @@
+Project Description:
+Prog Quiz 9 Naive Solution
+
+README:
+Naive solution for proggit quiz #9.

@@ -1,0 +1,48 @@
+usage: ead_tag_use.py [-h] [-outfile [OUTFILE]] dir [dir ...]
+
+analyze EAD tag useage
+
+positional arguments:
+  dir                 EAD XML corpus directory
+
+optional arguments:
+  -h, --help          show this help message and exit
+  -outfile [OUTFILE]  output tag useage report
+
+recursively searches "*.xml" files in given dirs for EAD tags
+
+Sample output: 
+    https://gist.github.com/1614098
+
+Dependencies: 
+    lxml
+
+Acknowledgements: 
+    inspired by the tag analysis work of Kathy Wisser from Simmons.
+
+
+Project Description:
+generate report on tag use from a corpus of EAD files
+
+README:
+usage: ead_tag_use.py [-h] [-outfile [OUTFILE]] dir [dir ...]
+
+analyze EAD tag useage
+
+positional arguments:
+  dir                 EAD XML corpus directory
+
+optional arguments:
+  -h, --help          show this help message and exit
+  -outfile [OUTFILE]  output tag useage report
+
+recursively searches "*.xml" files in given dirs for EAD tags
+
+Sample output: 
+    https://gist.github.com/1614098
+
+Dependencies: 
+    lxml
+
+Acknowledgements: 
+    inspired by the tag analysis work of Kathy Wisser from Simmons.

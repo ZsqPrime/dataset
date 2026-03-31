@@ -1,0 +1,254 @@
+uim-external-editor
+===================
+
+uim-external-editor is an input method for [uim](http://code.google.com/p/uim/)
+which writes selection text to temporary file and launches external editor.
+
+Requirements
+============
+
+  * uim 1.7.2 or newer.
+
+uim-external-editor uses uim text acquisition API (surrounding text API)
+to acquire selection or clipboard text.
+Uim text acquisition API is supported by following bridges.
+
+  * uim-gtk
+  * uim-qt4
+  * uim-qt3
+  * MacUIM 0.6.15-1
+
+For other bridges, uim-external-editor can launch external editor
+on empty temporary file and read edited content.
+
+Install
+=======
+
+./install.sh
+
+Setting
+=======
+
+From uim-pref-gtk or uim-pref-qt4 command,
+select "Global settings" -> "Enabled input methods" -> "Edit...",
+enable "external-editor".
+
+To switch to external-editor by keyboard,
+check "Enable IM switching by hotkey" and edit "IM switching key".
+
+Usage
+=====
+
+Switch to external-editor by uim-toolbar or IM switching key
+(icon: ![icon](https://github.com/deton/uim-external-editor/raw/master/pixmaps/external-editor.png)).
+
+Select text and type 'e' key.
+external-editor writes selection text to temporary file and launches editor.
+
+Edit and save the temporary file using the editor.
+
+Type 'r' key on the text area.
+external-editor reads the temporary file and replaces the selection text.
+
+For following uim bridges which support delay showing candidate window,
+external-editor checks exit of the editor and reads the temporary file
+without 'r' key.
+
+  * uim-gtk (after trunk r7324)
+  * uim-xim (after trunk r7324) (text acquisition API is not supported)
+
+Key and function
+----------------
+
+* e  writes selection text to temporary file and launch editor.
+* r  reads the temporary file and replaces the selection text.
+* u  undo last file read (for text area that does not have undo function).
+* ~  switch to default input method.
+
+Customization
+=============
+
+external-editor is customizable by uim-pref-gtk or uim-pref-qt4.
+
+* editor command to launch (default: "gnome-text-editor")
+* directory for temporary file (default: "/tmp")
+* read temporary file after editor exit (default: #t)
+* read temporary file after file modify (default: #t)
+* switch to default IM after read of temporary file (default: #f)
+* remove temporary file after read (default: #t)
+
+* key to launch editor (default: "e")
+* key to read edited file (default: "r")
+* key to undo last read (default: "u")
+* key to switch to default IM (default: "~")
+
+Remark
+======
+
+* Encoding of temporary file must be UTF-8.
+* If the application exits without reading the temporary file,
+  the temporary file is not removed
+  (/tmp/uim-external-editor-username-XXXXXXXXX.txt).
+* If no text is selected when 'e' key is typed,
+  external-editor tries to acquire all text in edit area.
+  But acquiring all text may fail on Firefox or Google Chrome,
+  so it is better to select all text by Ctrl+a key and type 'e' key.
+
+See Also
+========
+
+* Select text, run following script, edit text and paste from clipboard
+
+        #!/bin/sh
+        xsel -o >~/xsel.tmp; xterm -e vim ~/xsel.tmp; cat ~/xsel.tmp | xsel -i -b
+
+* clipboard manager tools: ClipIt, Parcellite, Glipper, Glippy, Dioden, etc.
+* Stumpwm(Window Manager) script to edit text by emacs
+  http://read-eval-print.blogspot.com/2010/11/stumpwm-it-all-text.html
+
+* uim-external-filter https://github.com/deton/uim-external-filter
+* uim-wordcount https://github.com/deton/uim-wordcount
+* uim-japan-util https://github.com/deton/uim-japan-util
+* uim-fmt-ja https://github.com/deton/uim-fmt-ja
+
+History
+=======
+
+* 1.0.1 (2012-01-07)
+
+    Change to use /bin/sh to launch editor for command like
+    `xterm -e vim -c 'se fenc=utf-8'`.
+
+* 1.0.0 (2011-12-29)
+
+    Initial release.
+
+
+Project Description:
+external editor launcher as uim input method
+
+README:
+uim-external-editor
+===================
+
+uim-external-editor is an input method for [uim](http://code.google.com/p/uim/)
+which writes selection text to temporary file and launches external editor.
+
+Requirements
+============
+
+  * uim 1.7.2 or newer.
+
+uim-external-editor uses uim text acquisition API (surrounding text API)
+to acquire selection or clipboard text.
+Uim text acquisition API is supported by following bridges.
+
+  * uim-gtk
+  * uim-qt4
+  * uim-qt3
+  * MacUIM 0.6.15-1
+
+For other bridges, uim-external-editor can launch external editor
+on empty temporary file and read edited content.
+
+Install
+=======
+
+./install.sh
+
+Setting
+=======
+
+From uim-pref-gtk or uim-pref-qt4 command,
+select "Global settings" -> "Enabled input methods" -> "Edit...",
+enable "external-editor".
+
+To switch to external-editor by keyboard,
+check "Enable IM switching by hotkey" and edit "IM switching key".
+
+Usage
+=====
+
+Switch to external-editor by uim-toolbar or IM switching key
+(icon: ![icon](https://github.com/deton/uim-external-editor/raw/master/pixmaps/external-editor.png)).
+
+Select text and type 'e' key.
+external-editor writes selection text to temporary file and launches editor.
+
+Edit and save the temporary file using the editor.
+
+Type 'r' key on the text area.
+external-editor reads the temporary file and replaces the selection text.
+
+For following uim bridges which support delay showing candidate window,
+external-editor checks exit of the editor and reads the temporary file
+without 'r' key.
+
+  * uim-gtk (after trunk r7324)
+  * uim-xim (after trunk r7324) (text acquisition API is not supported)
+
+Key and function
+----------------
+
+* e  writes selection text to temporary file and launch editor.
+* r  reads the temporary file and replaces the selection text.
+* u  undo last file read (for text area that does not have undo function).
+* ~  switch to default input method.
+
+Customization
+=============
+
+external-editor is customizable by uim-pref-gtk or uim-pref-qt4.
+
+* editor command to launch (default: "gnome-text-editor")
+* directory for temporary file (default: "/tmp")
+* read temporary file after editor exit (default: #t)
+* read temporary file after file modify (default: #t)
+* switch to default IM after read of temporary file (default: #f)
+* remove temporary file after read (default: #t)
+
+* key to launch editor (default: "e")
+* key to read edited file (default: "r")
+* key to undo last read (default: "u")
+* key to switch to default IM (default: "~")
+
+Remark
+======
+
+* Encoding of temporary file must be UTF-8.
+* If the application exits without reading the temporary file,
+  the temporary file is not removed
+  (/tmp/uim-external-editor-username-XXXXXXXXX.txt).
+* If no text is selected when 'e' key is typed,
+  external-editor tries to acquire all text in edit area.
+  But acquiring all text may fail on Firefox or Google Chrome,
+  so it is better to select all text by Ctrl+a key and type 'e' key.
+
+See Also
+========
+
+* Select text, run following script, edit text and paste from clipboard
+
+        #!/bin/sh
+        xsel -o >~/xsel.tmp; xterm -e vim ~/xsel.tmp; cat ~/xsel.tmp | xsel -i -b
+
+* clipboard manager tools: ClipIt, Parcellite, Glipper, Glippy, Dioden, etc.
+* Stumpwm(Window Manager) script to edit text by emacs
+  http://read-eval-print.blogspot.com/2010/11/stumpwm-it-all-text.html
+
+* uim-external-filter https://github.com/deton/uim-external-filter
+* uim-wordcount https://github.com/deton/uim-wordcount
+* uim-japan-util https://github.com/deton/uim-japan-util
+* uim-fmt-ja https://github.com/deton/uim-fmt-ja
+
+History
+=======
+
+* 1.0.1 (2012-01-07)
+
+    Change to use /bin/sh to launch editor for command like
+    `xterm -e vim -c 'se fenc=utf-8'`.
+
+* 1.0.0 (2011-12-29)
+
+    Initial release.

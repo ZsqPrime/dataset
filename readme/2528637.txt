@@ -1,0 +1,8 @@
+Project Description:
+Jekyll engine behind aaronlerch.github.io
+
+README:
+# aaronlerch.github.io
+
+Based on the [Lagom](https://github.com/swanson/lagom) theme by
+[swanson](https://github.com/swanson).

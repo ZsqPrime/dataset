@@ -1,0 +1,5 @@
+Description:
+The BG2 Fixpack is an ongoing project to finally fix the last remaining bugs and errors left after numerous official patches and unofficial fixpacks in Baldur's Gate 2 and Throne of Bhaal.
+
+README:
+README not available

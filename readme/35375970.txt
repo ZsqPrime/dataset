@@ -1,0 +1,5 @@
+Project Description:
+Pedantically set music filename, metadata and volume normalisation
+
+README:
+<img src="http://gfxmonk.net/dist/status/project/music-import.png">

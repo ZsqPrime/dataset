@@ -1,0 +1,13 @@
+Project Description:
+experimenting with GL and Qt
+
+README:
+jmfairlie at gmail dot com
+
+Just some experiments with GL and Qt.
+
+building
+----------
+cd glexperiment
+qmake
+make

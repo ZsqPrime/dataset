@@ -1,0 +1,322 @@
+* εφφαθα
+Be ye opened.
+
+** Setup
+Install NodeJS first, then check out this repository.
+Within this repo, either install OpenSSL and run
+: ./certs.sh
+or create your SSL certificates manually.
+You'll need a directory called
+: ./certs
+and a key PEM in
+: ./certs/ephphatha.key
+and a certificate PEM in
+: .certs/ephphatha.cert
+Then, all you need to do is run
+: node serve.js
+and point your browser at [[https://localhost:15214/]]
+and calm your browser's complaints about the self-signed certificate.
+From there, everything should be discoverable by following hyperlinks.
+(well, not really, but some day maybe)
+* unsorted
+Apologies to anyone trying to read this.
+I use org-mode wrong, and I'm not going to change soon.
+
+This documentation is way out of date. Sorry.
+** starting over
+Okay, this documentation is no good.
+So here's how you use what I have up there right now:
+*** visit the server as above
+there are also ways to specify the port, but I haven't written of that here
+*** log in at /admin/login/
+the command line will tell you the password once it's set it; you can change the password with the setPassword method on the server object
+*** go to /admin/dashboard/
+I haven't yet put a link to that on the admin panel yet
+*** navigate the server object, evalling into it as needed
+documentation on how to do this may be forthcoming (ask me a question, and I might update this doc with the answer)
+** that's all for now
+this is woefully underdocumented; my next plan is to use the system to replace itself with something more self-documenting (check back soon)
+* unsorted
+I probably need to state my goals in here and revisit them every time I get something done, especially since progress on some of these goals tends to require action to restore the invariants I want from the other goals.
+
+Goal: everything has a URL
+
+Goal: state is reproducible
+
+Goal: federation
+
+Goal: client-only also works when servers are unreachable
+
+** Environment
+I'm tempted to add a "get" method which equals "read".
+I'm tempted to add a "curry" method or something.
+
+** Server
+It's been too long since I've used this, so I need some documentation.
+That's convenient, since you need some documentation too!
+
+serve.js provides the first hint at how to use a Server from server.js .
+first, create a var server = new Server();
+Now is a good time to add some routes.
+Then, pass the port to server.setPort(port);
+Now is an okay time to add some routes.
+Next, server.init(http, continuation)
+ where http is something that acts like Node's http library's createServer function
+ and continuation gets called with no parameters.
+That creates a boring server. We need to add routes.
+
+*** Routes
+This documentation is out of date.
+
+The Server maintains a list of route functions as mutable state.
+A var server = new Server() has server.serve(q,s)
+ which calls this.route(q, fn)
+  where fn(r) tries to call r(q, s) or yells at you.
+It has a server.route(q, success, failure, throwp)
+ which tries to pass the first route to the success callback.
+The first route is the result of the first function in server.routes
+ that returns a function when passed the request q,
+  or else (if none do) the default route server.defaultRoute if it is a function,
+  or a permanent default route.
+
+All this means that
+ if you want to append subordinate functionality to a server,
+  you should push a function r onto server.routes
+   such that r(q) returns a responding function s
+    iff q belongs to the domain of s
+    and s(q, response) responds
+     like a typical Node HTTP server would.
+And if you want to patch dominant functionality to a server,
+ (that is, override existing functionality, casting a shadow)
+ then you should server.routes.unshift such a routing function instead.
+
+** Starting over
+let's do the simplest thing we can: let the admin eval strings
+first, we'll need to store the strings (for convenience)
+ we don't have to, but it'll be nicer this way
+
+*** string list
+anonymous can append a string to the list
+**** admin can
+read
+write
+execute
+delete
+**** anonymous can
+GET the form to submit a new string
+POST to add the string to the end of the list
+**** HTTPS
+access the append form
+
+admin secure-only cookie
+ session token (not password)
+ do not allow insecure admin access
+  enable that later
+***** actions
+GET read
+DELETE
+POST
+ exec
+ persist
+**** URLs
+: / index
+: /index index
+: /index.html index
+: /append GET form
+: /append POST append
+: /admin/index admin index
+: /admin/ admin index
+: /admin/index.html admin index
+: /admin/list/ GET listing
+: /admin/$num GET read $num-th element
+: /admin/$num DELETE remove $num-nth element, moving others down?
+:  not implementing this time around since I can't use it
+: /admin/$num/del POST same as /admin/$num DELETE
+:  because https://www.w3.org/Bugs/Public/show_bug.cgi?id=10671 is RESOLVED WONTFIX
+: /admin/$num/delete POST same as /admin/$num DELETE
+:  not that it matters
+: /admin/$num/exec POST run it, returning the string representation of the immediate return
+:  unless it returns a promise? make that a next-time feature
+: /admin/$num/persist POST save it to a directory somewhere to load when the server starts
+:  make that a next-time feature
+: /admin/$num/save same as /admin/$num/persist because persist is an annoying way to say it
+: /admin/login GET login form
+: /admin/login POST generate session and set HTTPS-only cookie
+: /admin/mouse GET mouse control via AJAX
+: /admin/mouse POST
+:  depends upon xdotool
+
+** tests
+run server
+: node serve.js
+visit https://localhost:15214/
+ see links
+ follow links
+
+** license
+I want this to be Public Domain, but I think that means I can only accept Public-Domain submissions.
+So if you send me a pull request, I'm going to assume that you intend for your patch to belong to the Public Domain.
+
+
+Project Description:
+be ye opened
+
+README:
+* εφφαθα
+Be ye opened.
+
+** Setup
+Install NodeJS first, then check out this repository.
+Within this repo, either install OpenSSL and run
+: ./certs.sh
+or create your SSL certificates manually.
+You'll need a directory called
+: ./certs
+and a key PEM in
+: ./certs/ephphatha.key
+and a certificate PEM in
+: .certs/ephphatha.cert
+Then, all you need to do is run
+: node serve.js
+and point your browser at [[https://localhost:15214/]]
+and calm your browser's complaints about the self-signed certificate.
+From there, everything should be discoverable by following hyperlinks.
+(well, not really, but some day maybe)
+* unsorted
+Apologies to anyone trying to read this.
+I use org-mode wrong, and I'm not going to change soon.
+
+This documentation is way out of date. Sorry.
+** starting over
+Okay, this documentation is no good.
+So here's how you use what I have up there right now:
+*** visit the server as above
+there are also ways to specify the port, but I haven't written of that here
+*** log in at /admin/login/
+the command line will tell you the password once it's set it; you can change the password with the setPassword method on the server object
+*** go to /admin/dashboard/
+I haven't yet put a link to that on the admin panel yet
+*** navigate the server object, evalling into it as needed
+documentation on how to do this may be forthcoming (ask me a question, and I might update this doc with the answer)
+** that's all for now
+this is woefully underdocumented; my next plan is to use the system to replace itself with something more self-documenting (check back soon)
+* unsorted
+I probably need to state my goals in here and revisit them every time I get something done, especially since progress on some of these goals tends to require action to restore the invariants I want from the other goals.
+
+Goal: everything has a URL
+
+Goal: state is reproducible
+
+Goal: federation
+
+Goal: client-only also works when servers are unreachable
+
+** Environment
+I'm tempted to add a "get" method which equals "read".
+I'm tempted to add a "curry" method or something.
+
+** Server
+It's been too long since I've used this, so I need some documentation.
+That's convenient, since you need some documentation too!
+
+serve.js provides the first hint at how to use a Server from server.js .
+first, create a var server = new Server();
+Now is a good time to add some routes.
+Then, pass the port to server.setPort(port);
+Now is an okay time to add some routes.
+Next, server.init(http, continuation)
+ where http is something that acts like Node's http library's createServer function
+ and continuation gets called with no parameters.
+That creates a boring server. We need to add routes.
+
+*** Routes
+This documentation is out of date.
+
+The Server maintains a list of route functions as mutable state.
+A var server = new Server() has server.serve(q,s)
+ which calls this.route(q, fn)
+  where fn(r) tries to call r(q, s) or yells at you.
+It has a server.route(q, success, failure, throwp)
+ which tries to pass the first route to the success callback.
+The first route is the result of the first function in server.routes
+ that returns a function when passed the request q,
+  or else (if none do) the default route server.defaultRoute if it is a function,
+  or a permanent default route.
+
+All this means that
+ if you want to append subordinate functionality to a server,
+  you should push a function r onto server.routes
+   such that r(q) returns a responding function s
+    iff q belongs to the domain of s
+    and s(q, response) responds
+     like a typical Node HTTP server would.
+And if you want to patch dominant functionality to a server,
+ (that is, override existing functionality, casting a shadow)
+ then you should server.routes.unshift such a routing function instead.
+
+** Starting over
+let's do the simplest thing we can: let the admin eval strings
+first, we'll need to store the strings (for convenience)
+ we don't have to, but it'll be nicer this way
+
+*** string list
+anonymous can append a string to the list
+**** admin can
+read
+write
+execute
+delete
+**** anonymous can
+GET the form to submit a new string
+POST to add the string to the end of the list
+**** HTTPS
+access the append form
+
+admin secure-only cookie
+ session token (not password)
+ do not allow insecure admin access
+  enable that later
+***** actions
+GET read
+DELETE
+POST
+ exec
+ persist
+**** URLs
+: / index
+: /index index
+: /index.html index
+: /append GET form
+: /append POST append
+: /admin/index admin index
+: /admin/ admin index
+: /admin/index.html admin index
+: /admin/list/ GET listing
+: /admin/$num GET read $num-th element
+: /admin/$num DELETE remove $num-nth element, moving others down?
+:  not implementing this time around since I can't use it
+: /admin/$num/del POST same as /admin/$num DELETE
+:  because https://www.w3.org/Bugs/Public/show_bug.cgi?id=10671 is RESOLVED WONTFIX
+: /admin/$num/delete POST same as /admin/$num DELETE
+:  not that it matters
+: /admin/$num/exec POST run it, returning the string representation of the immediate return
+:  unless it returns a promise? make that a next-time feature
+: /admin/$num/persist POST save it to a directory somewhere to load when the server starts
+:  make that a next-time feature
+: /admin/$num/save same as /admin/$num/persist because persist is an annoying way to say it
+: /admin/login GET login form
+: /admin/login POST generate session and set HTTPS-only cookie
+: /admin/mouse GET mouse control via AJAX
+: /admin/mouse POST
+:  depends upon xdotool
+
+** tests
+run server
+: node serve.js
+visit https://localhost:15214/
+ see links
+ follow links
+
+** license
+I want this to be Public Domain, but I think that means I can only accept Public-Domain submissions.
+So if you send me a pull request, I'm going to assume that you intend for your patch to belong to the Public Domain.

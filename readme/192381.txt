@@ -1,0 +1,26 @@
+The (unattainable, in its full scope) aim of this project is to procedurally generate an entire naturalistic conlang.  So far the following two components exist.
+
+- morphology_categories/morphology.pl: systems of morphological contrasts (but not their forms).  Data files have been written for nouns.  
+
+- phonology/gleb.pl: phonology, including allophony and other such processes.  
+  An nearly current version of gleb is running at https://gleb.000024.org/ .
+
+Raise comments of general interest on the CONLANG list, http://listserv.brown.edu/archives/conlang.html , or write me at 000024@gmail.com.
+
+See also the list of other software conlanging tools at http://www.frathwiki.com/Software_tools_for_conlanging .
+
+
+Project Description:
+Random language generation
+
+README:
+The (unattainable, in its full scope) aim of this project is to procedurally generate an entire naturalistic conlang.  So far the following two components exist.
+
+- morphology_categories/morphology.pl: systems of morphological contrasts (but not their forms).  Data files have been written for nouns.  
+
+- phonology/gleb.pl: phonology, including allophony and other such processes.  
+  An nearly current version of gleb is running at https://gleb.000024.org/ .
+
+Raise comments of general interest on the CONLANG list, http://listserv.brown.edu/archives/conlang.html , or write me at 000024@gmail.com.
+
+See also the list of other software conlanging tools at http://www.frathwiki.com/Software_tools_for_conlanging .

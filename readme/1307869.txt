@@ -1,0 +1,174 @@
+Project Description:
+Merge data into DOM using plain javascript and HTML
+
+README:
+express-notemplate
+==================
+
+Let the template be plain HTML code, and use javascript to merge data into it.
+
+Why ?
+-----
+
+The view is totally separated from the model.
+The glue code that merges data into the view is easy to maintain, and can be run by the server or the clients.
+There is no artificial syntax, no unnecessary abstraction.
+Just familiar DOM and javascript.
+
+In particular, this allows one to merge new data on the clients using a messenging system using the exact same code as what is needed on the server to output html.
+
+The only extra is a jQuery $ object provided by default on server.
+(if the javascript code is not used on clients, jQuery is not needed on clients).
+
+
+Express 3 Setup
+---------------
+
+	var notemplate = require('express-notemplate');
+	app.set('statics', process.cwd() + '/public');
+	app.set('views', process.cwd() + '/views');
+	app.engine('html', notemplate.__express);
+	app.set('view engine', 'html');
+	app.use(express.static(app.get('statics')));
+	app.use(notemplate.middleware); // initialize document.location
+
+Usage
+-----
+
+It is meant to be used as any other express view rendering :
+
+	res.locals.mydata = mydata;
+	res.render('index');
+
+Then express-notemplate will load the html file into a DOM, add window.$ to it, and process script tags :
+
+	<script type="text/javascript">
+		// some client code here, won't be run on server
+	</script>
+	<script type="text/javascript" notemplate="both" src="javascripts/moment.js"></script>
+	<script type="text/javascript" notemplate="server">
+		$(document).on('data', function(e, data) {
+			$('head > title').text(data.mydata.title + moment());
+		});
+	</script>
+	<script type="text/javascript" notemplate="both">
+		$(document).on('data', function(e, data) {
+			$('body').html(data.mydata.body);
+		});
+		$(document).ready(function() {
+			if (window.navigator.server) return; // is true when run on server inside notemplate. Will change when jsdom supports it.
+			// do client ui stuff here that won't be useful on server
+		});
+	</script>
+
+
+In this example :
+
+* moment.js is loaded and the script tag is kept in the html output,
+* the first handler is run on server but won't be available on client
+* the second handler is run and it will be possible to trigger it on client too.
+
+script tags can have attribute notemplate = server | client | both :
+
+* (default) client : script are not run
+* server : scripts are run and tag is removed
+* both : scripts are run
+
+The "notemplate" attribute is removed from html output.
+
+IE-style conditional comments are replaced by the tag they contain (provided there is only one tag in it),
+before document.ready event and are restored before output event. It allows all notemplate middleware
+to process the nodes hidden within those comments the same way as other nodes.
+
+
+Middleware
+----------
+
+Only page-bound scripts can listen to these events:
+
+* $(document).ready(function() {})
+  the usual document.ready event.
+* $(document).on('data', function(e, obj) {})
+  obj can be the options object given by express to template engines render method.
+  It can also be a simple object received through other channels (say a message
+  from a websocket connection).
+  It is advised to check for existence of obj.mydatakey before trying to use it.
+  Listener arguments : e, locals
+* $(window).on('load', function() {})
+	after all data event listeners has been called.
+	It more or less matches the browser event.
+
+New in version 0.2.0: page-bound scripts are allowed to use XMLHttpRequest
+and can setup setTimeout calls - the render event is guaranteed to be called
+upon completion of the handlers of those calls.
+New in version 0.2.5: XMLHttpRequest use nodejs http.globalAgent.
+
+
+Only nodejs-bound scripts can listen to these events (emitted by notemplate):
+
+* notemplate.on('ready', function(view, opts) {})
+	DOM is ready in view.window, but only jquery is available; other scripts
+	are not yet evaluated. It's a way to listen to the 'ready' event before
+	any other script does.
+* notemplate.on('data', function(view, opts) {})
+  called just before document.data handlers.
+* notemplate.on('request', function(method, url, status, data) {})
+	The document made an XHR request with method, url and received status
+	(http code), data.
+	Called between 'ready' and 'render' events.
+* notemplate.on('render', function(view, opts) {})
+	called just after document.data handlers.
+	view.instance.toString() will serialize dom, respecting fragment options.
+	Setting view.instance.output will prevent next step from calling toString.
+* notemplate.on('output', function(instance, opts) {})
+	called just after instance.output has been set.
+	instance.output can be anything, since it can be customized in a render event
+	listener before. See usage below.
+
+
+Usage :
+
+	view.window
+	view.window.$
+	view.window.document
+	view.window.console
+
+	opts.settings.env
+	opts.locals.mydata
+	opts.mydata
+	opts.use(...)
+
+
+	var notemplate = require('express-notemplate');
+	../..
+	notemplate.on('output', function(ref) {
+		ref.output = ref.output.replace('é', '&eacute;');
+	});
+
+A typical use of middleware is in notemplate-minify.
+
+A typical use of render event middleware is in notemplate-archive.
+
+
+Error handling
+--------------
+
+Starting with version 0.2.2 each page runs into its own domain, so all
+errors are caught and passed on to express error handling mecanism.
+The domain the page is run in is disposed afterwise.
+
+
+Quick jsdom window with jquery
+------------------------------
+
+If you need quick access to an empty DOM with jquery,
+
+  require('notemplate').window(htmlstr, href)
+
+is what you need.
+
+
+Tips
+----
+
+* console.log works in the jsdom context.

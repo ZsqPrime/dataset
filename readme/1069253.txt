@@ -1,0 +1,14 @@
+dm-timelime
+=============
+ 
+ DataMapper plugin providing support for temporal objects. 
+
+
+Project Description:
+Make it easy to use temporal objects in datamapper
+
+README:
+dm-timelime
+=============
+ 
+ DataMapper plugin providing support for temporal objects.

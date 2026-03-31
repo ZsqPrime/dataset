@@ -1,0 +1,15 @@
+Project Description:
+Some configurations, nothing fancy though.
+
+README:
+* Dotfiles
+  Lovingly crafted, artisinal configuration files for the finest software available.
+
+  Currently going nix mode, based and reproducibilitypilled. Shellscriptcels seething.
+
+** Installation
+   To install, clone the repo and run =./install=. This should install dotbot and get everything
+   linked.
+
+   After that, install nix using the determinate nix installer, `cd etc/home-manager` and then do
+   `nix run . switch`

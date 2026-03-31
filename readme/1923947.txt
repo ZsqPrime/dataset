@@ -1,0 +1,7 @@
+MountainWest RubyConf Website
+
+Project Description:
+Homepage for http://mtnwestrubyconf.org/
+
+README:
+MountainWest RubyConf Website

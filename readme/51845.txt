@@ -1,0 +1,14 @@
+This is alankila & lioncash's fork of Swimsuitboys's DroidSound from sasq64.
+
+The application has been written for Android 4.x support, GUI has been
+redesigned, and plugins are more up-to-date.
+
+
+Project Description:
+
+
+README:
+This is alankila & lioncash's fork of Swimsuitboys's DroidSound from sasq64.
+
+The application has been written for Android 4.x support, GUI has been
+redesigned, and plugins are more up-to-date.

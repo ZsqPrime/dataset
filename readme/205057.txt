@@ -1,0 +1,20 @@
+Tylko CsClient
+
+Cele:
+- przeżyć
+- poznać planszę (algorytm)
+- współpracować
+- komunikować się
+
+
+Project Description:
+None
+
+README:
+Tylko CsClient
+
+Cele:
+- przeżyć
+- poznać planszę (algorytm)
+- współpracować
+- komunikować się

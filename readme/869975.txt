@@ -1,0 +1,11 @@
+= EcmCmsCore
+
+This project rocks and uses MIT-LICENSE.
+
+Project Description:
+ECM CMS Core Module
+
+README:
+= EcmCmsCore
+
+This project rocks and uses MIT-LICENSE.

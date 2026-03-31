@@ -1,0 +1,7 @@
+Project Description:
+Analytics engine written on node.js
+
+README:
+# Apollo
+
+Analytics on node.js. Very much still in initial dev.

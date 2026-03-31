@@ -1,0 +1,388 @@
+* CL-Tursas
+
+  CL-Tursas is port of my Clojure chess engine to Common Lisp. This is my first
+  project using Common Lisp so some questionable design choices might be found
+  in the code. The engine shows its Clojure roots but its slowly being converted
+  to more idiomatic Common Lisp code.
+
+  Currently the port is functioning but its pretty slow. I've used it with the
+  XBoard program as UI but the engine can also be played from the console. To
+  make the console interface more usable I've included some utility commands in
+  Tursas. These commands can print the board in ASCII or list available moves to
+  user. There are also some undocumented commands but these are little use to
+  casual user and are used mostly for debugging the engine from the console. I'm
+  planning to add full XBoard protocol support to Tursas eventually.
+
+  The engine itself uses alphabeta algorithm to search moves and uses 0x88 as
+  board representation.
+
+* ChangeLog:
+
+  I'll try to update here the major points in each version of the chess
+  engine. For detailed list check the [[https://github.com/zmyrgel/cl-tursas/commits/][commits]].
+
+*** Version 0.3
+
+    - Converted the code to a more idiomatic Common Lisp style
+    - Switched to using Prove for unit tests and fixed the tests
+    - Added playother option to switch sides
+
+*** Version 0.2
+
+    - Added some unit tests, more to come
+    - Added more error detection in game repl via cl-ppcre
+
+*** Version 0.1
+
+    - Subset of Chess Engine Communication Protocol implemented so engine can be played.
+    - Working alphabeta algorithm
+    - Game state representation with 0x88 board
+    - Working evaluator which playes according to rules and can win weakest of
+      players
+
+* Roadmap
+
+  These are some of my ideas what could be done in the Tursas project.
+  I'm not planning to blindly follow these but I think it gives nice rough
+  idea what to except and in what point.
+
+  Version 0.4
+    - Time controls
+    - Core/Mem limits for engine
+
+  Version 0.5
+    - NPS command
+    - Transposition table
+
+  Version 0.6
+    - Analyse mode
+
+  Version 0.7
+    - AI Pondering mode
+
+  Version 0.8
+    - Repetition rule for draws and making AI avoid it
+
+  Version 0.9
+    - Iterative deepening
+    - Quiescence search
+
+  Version 1.0
+    - Type declarations and optimizations
+    - Clean up and testing
+
+*** Possibly added in later versions
+
+    - UCI protocol interface
+    - Bitboard state representation
+    - Negascout replacement for alphabeta
+
+* Installation
+
+  The Tursas can be installed by following.
+  - Checkout the code:
+    git checkout https://github.com/zmyrgel/cl-tursas.git
+  - change current directory to cl-tursas
+    cd cl-tursas
+  - load and compile tursas with SBCL:
+    sbcl --eval "(asdf:operate 'asdf:load-op 'tursas)"
+  - Use SBCL REPL to dump executable file:
+    (sb-ext:save-lisp-and-die "tursas" :toplevel #'tursas.core:main :executable t)
+
+  The above commands will compile the code and dump executable core file named
+  tursas to cl-tursas directory.
+
+* Running
+
+  After making the binary file you can run the engine with
+  "./tursas"
+
+  Its recommeded to run the engine with some external program to get more visual
+  appearance. I recommend using XBoard (WinBoard).  With XBoard you can use
+  tursas by starting xboard with command: "xboard -fcp './tursas'"
+
+* Usage
+
+  The game tries to support the XBoard protocol with some custom extensions.
+  Once the engine is started you should start by giving the "xboard"
+  command. This command makes the engine use xboard protocol. For more
+  information type "help" in the repl or see the [[http://home.hccnet.nl/h.g.muller/engine-intf.html][XBoard protocol definition]].
+
+  Here are the currently supported commands:
+
+**** Available general commands:
+  - help :: display this help
+  - load :: load the last saved game from file
+  - save :: store the current game to file
+  - bd :: display the board on the screen
+  - fd :: display current game state in FEN
+  - lm :: print a list of all available moves
+  - xboard :: enable xboard mode
+  - quit :: quite the Tursas engine
+
+**** Available XBoard commands:
+  - protover N :: change engine to use protocol version N
+  - accepted :: Accept last feature
+  - reject :: Reject last feature
+  - variant VARIANT :: change to use VARIANT rules. Only 'normal' supported
+  - random :: Tursas doesn't support this so this does nothing
+  - force :: Disable engine AI
+  - go :: Enable engine AI
+  - sd DEPTH :: set search depth to DEPTH
+  - usermove MOVE :: make given MOVE if legal
+  - ping N :: Pings the engine for pong reply
+  - result RESULT {COMMENTS} :: give the game RESULT to engine.
+  - setboard FEN :: Set the game board to given FEN.
+  - undo :: tell engine to undo last move
+  - remove :: tell engine to undo last two moves
+  - name X :: tell engine its opponents name
+  - rating :: ask engine its rating, simply prints out 100.
+  - computer :: tell engine that its playing against cpu
+  - option NAME[=VALUE] :: tell engine to use new option
+
+* Known issues
+
+  The engine has few known issues that I'll try to sort out in due time:
+
+- Perft calculation is incorrect
+- AI promotes always to queen
+- Unoptimized code paths so slow move generation
+- Move generation doesn't check for leaving game to check if threatening a
+  another piece
+- When using with XBoard the engine ceases to function after few moves
+- When player promotes as black, it seems the engine things the piece is his
+- engine loops over ai move strings and gets stuck as follows:
+
+bd
+8|- - Q q k b - -
+7|- - p - n - - r
+6|p - - p p p p p
+5|- - - - - - - -
+4|- - - - - - - -
+3|- - - - - - - -
+2|- P P P P P P P
+1|R N B Q K B N R
+-+---------------
+| a b c d e f g h
+  WHITE TO MOVE
+
+a1a6
+move h8g8
+move h8g8
+move h8g8
+...
+
+* License
+
+  Copyright (c) 2018 Timo Myyrä
+
+  Permission to use, copy, modify, and/or distribute this software for
+  any purpose with or without fee is hereby granted, provided that the
+  above copyright notice and this permission notice appear in all
+  copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+  WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+  WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+  AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+  DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+  PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.
+
+
+Project Description:
+Port of Tursas chess engine to Common Lisp
+
+README:
+* CL-Tursas
+
+  CL-Tursas is port of my Clojure chess engine to Common Lisp. This is my first
+  project using Common Lisp so some questionable design choices might be found
+  in the code. The engine shows its Clojure roots but its slowly being converted
+  to more idiomatic Common Lisp code.
+
+  Currently the port is functioning but its pretty slow. I've used it with the
+  XBoard program as UI but the engine can also be played from the console. To
+  make the console interface more usable I've included some utility commands in
+  Tursas. These commands can print the board in ASCII or list available moves to
+  user. There are also some undocumented commands but these are little use to
+  casual user and are used mostly for debugging the engine from the console. I'm
+  planning to add full XBoard protocol support to Tursas eventually.
+
+  The engine itself uses alphabeta algorithm to search moves and uses 0x88 as
+  board representation.
+
+* ChangeLog:
+
+  I'll try to update here the major points in each version of the chess
+  engine. For detailed list check the [[https://github.com/zmyrgel/cl-tursas/commits/][commits]].
+
+*** Version 0.3
+
+    - Converted the code to a more idiomatic Common Lisp style
+    - Switched to using Prove for unit tests and fixed the tests
+    - Added playother option to switch sides
+
+*** Version 0.2
+
+    - Added some unit tests, more to come
+    - Added more error detection in game repl via cl-ppcre
+
+*** Version 0.1
+
+    - Subset of Chess Engine Communication Protocol implemented so engine can be played.
+    - Working alphabeta algorithm
+    - Game state representation with 0x88 board
+    - Working evaluator which playes according to rules and can win weakest of
+      players
+
+* Roadmap
+
+  These are some of my ideas what could be done in the Tursas project.
+  I'm not planning to blindly follow these but I think it gives nice rough
+  idea what to except and in what point.
+
+  Version 0.4
+    - Time controls
+    - Core/Mem limits for engine
+
+  Version 0.5
+    - NPS command
+    - Transposition table
+
+  Version 0.6
+    - Analyse mode
+
+  Version 0.7
+    - AI Pondering mode
+
+  Version 0.8
+    - Repetition rule for draws and making AI avoid it
+
+  Version 0.9
+    - Iterative deepening
+    - Quiescence search
+
+  Version 1.0
+    - Type declarations and optimizations
+    - Clean up and testing
+
+*** Possibly added in later versions
+
+    - UCI protocol interface
+    - Bitboard state representation
+    - Negascout replacement for alphabeta
+
+* Installation
+
+  The Tursas can be installed by following.
+  - Checkout the code:
+    git checkout https://github.com/zmyrgel/cl-tursas.git
+  - change current directory to cl-tursas
+    cd cl-tursas
+  - load and compile tursas with SBCL:
+    sbcl --eval "(asdf:operate 'asdf:load-op 'tursas)"
+  - Use SBCL REPL to dump executable file:
+    (sb-ext:save-lisp-and-die "tursas" :toplevel #'tursas.core:main :executable t)
+
+  The above commands will compile the code and dump executable core file named
+  tursas to cl-tursas directory.
+
+* Running
+
+  After making the binary file you can run the engine with
+  "./tursas"
+
+  Its recommeded to run the engine with some external program to get more visual
+  appearance. I recommend using XBoard (WinBoard).  With XBoard you can use
+  tursas by starting xboard with command: "xboard -fcp './tursas'"
+
+* Usage
+
+  The game tries to support the XBoard protocol with some custom extensions.
+  Once the engine is started you should start by giving the "xboard"
+  command. This command makes the engine use xboard protocol. For more
+  information type "help" in the repl or see the [[http://home.hccnet.nl/h.g.muller/engine-intf.html][XBoard protocol definition]].
+
+  Here are the currently supported commands:
+
+**** Available general commands:
+  - help :: display this help
+  - load :: load the last saved game from file
+  - save :: store the current game to file
+  - bd :: display the board on the screen
+  - fd :: display current game state in FEN
+  - lm :: print a list of all available moves
+  - xboard :: enable xboard mode
+  - quit :: quite the Tursas engine
+
+**** Available XBoard commands:
+  - protover N :: change engine to use protocol version N
+  - accepted :: Accept last feature
+  - reject :: Reject last feature
+  - variant VARIANT :: change to use VARIANT rules. Only 'normal' supported
+  - random :: Tursas doesn't support this so this does nothing
+  - force :: Disable engine AI
+  - go :: Enable engine AI
+  - sd DEPTH :: set search depth to DEPTH
+  - usermove MOVE :: make given MOVE if legal
+  - ping N :: Pings the engine for pong reply
+  - result RESULT {COMMENTS} :: give the game RESULT to engine.
+  - setboard FEN :: Set the game board to given FEN.
+  - undo :: tell engine to undo last move
+  - remove :: tell engine to undo last two moves
+  - name X :: tell engine its opponents name
+  - rating :: ask engine its rating, simply prints out 100.
+  - computer :: tell engine that its playing against cpu
+  - option NAME[=VALUE] :: tell engine to use new option
+
+* Known issues
+
+  The engine has few known issues that I'll try to sort out in due time:
+
+- Perft calculation is incorrect
+- AI promotes always to queen
+- Unoptimized code paths so slow move generation
+- Move generation doesn't check for leaving game to check if threatening a
+  another piece
+- When using with XBoard the engine ceases to function after few moves
+- When player promotes as black, it seems the engine things the piece is his
+- engine loops over ai move strings and gets stuck as follows:
+
+bd
+8|- - Q q k b - -
+7|- - p - n - - r
+6|p - - p p p p p
+5|- - - - - - - -
+4|- - - - - - - -
+3|- - - - - - - -
+2|- P P P P P P P
+1|R N B Q K B N R
+-+---------------
+| a b c d e f g h
+  WHITE TO MOVE
+
+a1a6
+move h8g8
+move h8g8
+move h8g8
+...
+
+* License
+
+  Copyright (c) 2018 Timo Myyrä
+
+  Permission to use, copy, modify, and/or distribute this software for
+  any purpose with or without fee is hereby granted, provided that the
+  above copyright notice and this permission notice appear in all
+  copies.
+
+  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+  WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+  WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+  AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+  DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+  PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THIS SOFTWARE.

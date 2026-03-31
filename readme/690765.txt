@@ -1,0 +1,8 @@
+Examples of work with OpenGL in iOS platform.
+
+
+Project Description:
+Examples of work with OpenGL in iOS platform.
+
+README:
+Examples of work with OpenGL in iOS platform.

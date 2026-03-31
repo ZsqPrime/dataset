@@ -1,0 +1,7 @@
+Project Description:
+Track user subscriptions to records
+
+README:
+# ActsAsSubscribable
+
+Allows the you track records that users subscribe to and easily notify subscribers of updates to the object.

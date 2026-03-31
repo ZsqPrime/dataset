@@ -1,0 +1,7 @@
+First version - still needs some tweaks.
+
+Project Description:
+Allows adding content (possibly with file attachments) directly to the river
+
+README:
+First version - still needs some tweaks.

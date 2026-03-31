@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Converter Hunspell (.aff + .dic) -> Plain text

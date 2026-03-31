@@ -1,0 +1,14 @@
+faildns - A Ruby DNS client/server implementation
+=================================================
+
+Just for fun, maybe :3
+
+
+Project Description:
+Fail DNS library in Ruby
+
+README:
+faildns - A Ruby DNS client/server implementation
+=================================================
+
+Just for fun, maybe :3

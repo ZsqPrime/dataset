@@ -1,0 +1,4 @@
+Project Description:
+Provides the base environment in Windows for building ossbuild libraries and packages.
+
+README:

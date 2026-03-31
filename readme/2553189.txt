@@ -1,0 +1,21 @@
+Project Description:
+Conference Manager
+
+README:
+== Conference Manager
+
+This application was born out of the need to bring order to the way my team
+manages bookings of our Conference Numbers.
+
+== Security
+
+This application was not built with high regard being paid to security. 
+Conference Manager is only suitable to be exposed to internal networks, behind a 
+corporate firewall.
+
+As you will shortly find out, things like "Password" aren't mandatory and stored
+in the clear text. The 'authentication' is used in it's lightest sense, simply to
+be able to tell people apart, rather than keep anyone from using the system.
+
+Only basic identification information is gathered and anyone can sign up without
+validating their email address.

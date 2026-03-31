@@ -1,0 +1,18 @@
+Lunch-Scheduler
+===============
+
+Obviously, the favicon.ico is the best part of this page.
+
+Checkout the ansible-Lunch-Scheduler repository for an automated deployment using Ansible.
+
+
+Project Description:
+Lunch Scheduler tool to make sure coverage is available during lunch.
+
+README:
+Lunch-Scheduler
+===============
+
+Obviously, the favicon.ico is the best part of this page.
+
+Checkout the ansible-Lunch-Scheduler repository for an automated deployment using Ansible.

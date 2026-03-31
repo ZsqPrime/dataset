@@ -1,0 +1,38 @@
+Project Description:
+A gem for quickly enciphering and deciphering text.
+
+README:
+# QuickCipher
+
+## What is it?
+
+QuickCipher can quickly and easily do transposition ciphers.  It also has the ability to decipher giant blocks of text for which the character shift is unknown.  Currently, QuickCipher only supports basic lowercase alphabet ciphering.  QuickCipher supports any plain text file that can be read in, character by character.
+
+## How does it work?
+
+To encipher a document, simply do the following:
+
+	number_to_shift = 15
+	results = QuickCipher.encipher_file(path_to_file, number_to_shift)
+	
+To decipher a document:
+
+	results = QuickCipher.decipher_file(path_to_file)
+	
+Note: QuickCipher needs a sizable chunk of text in order to decipher it automatically.  See below for more examples...
+
+## More examples
+
+Enciphering Basic Text
+
+	>> QuickCipher.encipher("the quick brown fox jumped over the big lazy dog.", 15)
+	=> "iwt fjxrz qgdlc udm yjbets dktg iwt qxv apon sdv."
+	
+Deciphering Basic Text with a Known Cipher
+
+	>> QuickCipher.decipher("iwt fjxrz qgdlc udm yjbets dktg iwt qxv apon sdv.", 15)
+	=> "the quick brown fox jumped over the big lazy dog."
+	
+## Other Notes
+
+I am by no means a cryptographic or cipher expert.  I just did this in response to a challenge I saw on reddit.  I might further expand on it as I toy with some of the challenges in "The Ghost in the Wires."

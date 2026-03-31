@@ -1,0 +1,8 @@
+This is an ever collection of scripts that I've built over the years. Inside you'll find everything from MySQL configs to cloud backup tools.
+
+
+Project Description:
+A variety of scripts I've found useful over the years. Maybe you will too.
+
+README:
+This is an ever collection of scripts that I've built over the years. Inside you'll find everything from MySQL configs to cloud backup tools.

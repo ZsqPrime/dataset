@@ -1,0 +1,83 @@
+Project Description:
+Redis+Ohm based persistence module for Extraloop
+
+README:
+= Extraloop Redis Storage
+
+== Description
+
+Persistence layer for the {ExtraLoop}[https://github.com/afiore/extraloop] data extraction toolkit.
+This module is implemented as a wrapper around {Ohm}[http://ohm.keyvalue.org], an object-hash mapping library which 
+makes easy storing structured data into Redis. Includes a convinent command line tool that allows to 
+list, filter, and delete harvested datasets, as well as exporting them on local files or remote data stores (i.e Google Fusion tables).
+
+== Installation 
+
+ gem install extraloop-redis-storage
+
+== Usage
+
+Extraloop's Redis storage module decorates <code>ExtraLoop::ScraperBase</code> and <code>ExtraLoop::IterativeScraper</code> instances 
+with the +set_storage+ method: a helper method that allows to specify how the scraped data should be stored.
+
+ require "extraloop/redis-storage"
+
+ class AmazonReview < ExtraLoop::Storage::Record
+   attribute :title
+   attribute :rank
+   attribute :date
+
+   def validate
+     assert (0..5).include?(rank.to_i), "Rank not in range"
+   end
+ end
+
+ scraper = AmazonReviewScraper.new("0262560992").
+   .set_storage(AmazonReview, "Amazon reviews of 'The Little Schemer'")
+   .run()
+
+At each scraper run, the ExtraLoop storage module internally instantiates a 
+session (see <code>ExtraLoop::Storage::ScrapingSession</code>) and associates the extracted records to it.
+The `AmazonReview` records just created, can now be accessed by calling the `#records` metod on scraper session object.
+
+ reviews = scraper.session.records
+
+=== #set_storage 
+
+The +set_storage+ method accepts the following arguments:
+
+* _model_ A Ruby constant or a symbol specifying the model to be used for storing the extracted data. If a symbol is passed, it is assumed that a model does not exist and the storage module dynamically generates one by subclassing <code>ExtraLoop::Storage::Record</code>. 
+* _session_title_ A human readable title for the extracted dataset (optional).
+
+== Command line interface 
+
+Once installed, the gem will also add to your system path the +extraloop+ executable: a command line interface to the datasets harvested through ExtraLoop.
+A list of datasets can be obtained by running:
+
+ extraloop datastore list
+
+This will generate a table like the following one:
+
+  id | title                              | model           | records
+ --------------------------------------------------------------------
+  48 | 1330106699 GoogleNewsStory Dataset | GoogleNewsStory | 110    
+  49 | 1330106948 AmazonReview Dataset    | AmazonReview    | 0      
+  51 | 1330107087 GoogleNewsStory Dataset | GoogleNewsStory | 110    
+  52 | 1330111630 AmazonReview Dataset    | AmazonReview    | 10     
+
+
+Datasets can be removed using the +delete+ subcommand:
+
+ extraloop datastore delete [id]
+
+Where +id+ is either a single scraping session id, or a session id range (e.g. 48..52).
+
+From the Redis datastore, ExtraLoop datasets can be exported to disk as CSV, JSON, or YAML documents:
+
+  extraloop datastore export 51..52 -f csv
+
+Similarly, stored datasets can be uploaded to a remote datastore:
+
+  extraloop datastore push 51..48 fusion_tables -c google_username:password
+
+While Google's Fusion Tables is currently the only one implemented, support for pushing dataset to other remote datastores (e.g. {couchDB}[http://couchdb.apache.org/],  {cartoDB}[http://cartodb.com], and {CKAN Webstore}[http://wiki.ckan.org/Webstore]) will be added soon.

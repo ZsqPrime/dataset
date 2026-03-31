@@ -1,0 +1,7 @@
+Usage: java -jar openttd-admin.jar -cp slf4j-api-1.6.6.jar localhost:3977 admin_password
+
+Project Description:
+OpenTTD Admin networking
+
+README:
+Usage: java -jar openttd-admin.jar -cp slf4j-api-1.6.6.jar localhost:3977 admin_password

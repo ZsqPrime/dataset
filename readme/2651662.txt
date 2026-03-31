@@ -1,0 +1,5 @@
+Project Description:
+Geospatial monitoring plugins for Nagios
+
+README:
+This will be a plugin to NAGIOS to monitor wms webservices

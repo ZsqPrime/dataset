@@ -1,0 +1,8 @@
+Project Description:
+mobile
+
+README:
+sudo npm install -g express
+
+see a.js
+see public/layout.coffee

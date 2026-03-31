@@ -1,0 +1,19 @@
+Project Description:
+
+
+README:
+This project consists of a game engine.
+
+Directory Structure:
+
+./Include
+	Include files for the objects in Src
+
+./Lib
+	Library for compiling engine
+
+./Src
+	Object files to be written to a library
+
+./Tools
+	Tools for the game engine

@@ -1,0 +1,12 @@
+Automatically join channels upon connection
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Auto-join feature for Erebot
+
+README:
+Automatically join channels upon connection
+
+Package detailed description here (found in README)

@@ -1,0 +1,7 @@
+Free open source City Building engine.
+
+Project Description:
+An open-source implementation of the Pharaoh/Casear3/Zeus game engine using .NET/mono and XNA.
+
+README:
+Free open source City Building engine.

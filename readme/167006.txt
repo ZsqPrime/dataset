@@ -1,0 +1,94 @@
+libfep -- a library to implement FEP (front end processor) on ANSI terminals
+
+Features:
+
+* Render text at the bottom of the terminal.
+* Render text at the cursor position.
+* Send text to the child process.
+* Monitor key strokes typed on the terminal.
+
+Test:
+
+$ echo $SHLVL
+1
+$ fep /bin/sh
+$ echo $SHLVL
+2
+$ fepcli -s "foo" # show text at the bottom
+$ { sleep 1; fepcli -c "foo"; } & # show text at the cursor
+$ { sleep 1; fepcli -d "bar"; } & # send text to the child process
+$ fepcli -e # wait for a key event
+# type any key
+keyval = XX, modifiers = XX
+$
+
+Documentation:
+
+* http://du-a.org/docs/libfep/html/ for native binding reference
+* http://du-a.org/docs/libfep-glib/html/ for GLib binding reference
+
+License:
+
+Some files to build "fep" program are BSD, while the rest of files are
+GPLv3+.  See fep/README for more detail.
+
+Copyright (C) 2012 Daiki Ueno <ueno@unixuser.org>
+Copyright (C) 2012 Red Hat, Inc.
+
+This file is free software; as a special exception the author gives
+unlimited permission to copy and/or distribute it, with or without
+modifications, as long as this notice is preserved.
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+Project Description:
+Library to implement FEP (front end processor) on ANSI terminals
+
+README:
+libfep -- a library to implement FEP (front end processor) on ANSI terminals
+
+Features:
+
+* Render text at the bottom of the terminal.
+* Render text at the cursor position.
+* Send text to the child process.
+* Monitor key strokes typed on the terminal.
+
+Test:
+
+$ echo $SHLVL
+1
+$ fep /bin/sh
+$ echo $SHLVL
+2
+$ fepcli -s "foo" # show text at the bottom
+$ { sleep 1; fepcli -c "foo"; } & # show text at the cursor
+$ { sleep 1; fepcli -d "bar"; } & # send text to the child process
+$ fepcli -e # wait for a key event
+# type any key
+keyval = XX, modifiers = XX
+$
+
+Documentation:
+
+* http://du-a.org/docs/libfep/html/ for native binding reference
+* http://du-a.org/docs/libfep-glib/html/ for GLib binding reference
+
+License:
+
+Some files to build "fep" program are BSD, while the rest of files are
+GPLv3+.  See fep/README for more detail.
+
+Copyright (C) 2012 Daiki Ueno <ueno@unixuser.org>
+Copyright (C) 2012 Red Hat, Inc.
+
+This file is free software; as a special exception the author gives
+unlimited permission to copy and/or distribute it, with or without
+modifications, as long as this notice is preserved.
+
+This file is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

@@ -1,0 +1,8 @@
+This is a yelp integrated iPhone application which helps decide where to eat for lunch.
+
+
+Project Description:
+A Yelp integrated iPhone app that helps decide where to get lunch
+
+README:
+This is a yelp integrated iPhone application which helps decide where to eat for lunch.

@@ -1,0 +1,14 @@
+# Eclipse Distcc Status Monitor for Linux
+
+This Eclipse plugin embeds a table-view in your Eclipse that will display the files that currently are being build.
+The output is identical to distccmon-text and distccmon-gnome but is embedded inside Eclipse.
+
+
+Project Description:
+Distcc Build Monitor for Eclipse
+
+README:
+# Eclipse Distcc Status Monitor for Linux
+
+This Eclipse plugin embeds a table-view in your Eclipse that will display the files that currently are being build.
+The output is identical to distccmon-text and distccmon-gnome but is embedded inside Eclipse.

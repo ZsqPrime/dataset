@@ -1,0 +1,11 @@
+#Sistema de registro JOINCIC
+Alguien debería escribir algo aquí =)
+
+
+Project Description:
+Sistema centralizado de las Jornadas Interuniversitarias de Ciencias de la Computación
+
+README:
+#Sistema de registro JOINCIC
+
+Alguien debería escribir algo aquí =)

@@ -1,0 +1,6 @@
+Project Description:
+parses BabyEsp (http://www.babyesp.com) csv data and creates schedule chart
+
+README:
+1. ./parser.rb <csv_file>
+2. open generated baby-schedule.html in browser

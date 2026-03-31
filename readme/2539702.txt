@@ -1,0 +1,5 @@
+Project Description:
+Starting block for each project I build. Whoo
+
+README:
+`git clone` the shit outta this!

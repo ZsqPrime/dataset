@@ -1,0 +1,30 @@
+Project Description:
+An Sequencer in Qt for JACK friendly linux audio tools
+
+README:
+This is an attempt at creating a nice Sequencer for linux and JACK friendly audio apps.
+
+The software will rely extensively on QGraphicsView for display and score-editing.
+
+°°Status :
+
+  Currently, I have got basic GUI up and running and basic midi playback too!
+
+°°Plans include :
+
+  °Writing aids :
+
+    - showing scales on note selection
+    - showing notes from other tracks 
+    - scripting API to enable quick writing of patterns
+
+  °Easy setup of the actual audio rendering tools
+
+    - Effortless configuration of DSSI plugins
+    - Persistence of JACK connections
+
+°°Compiling :
+
+You will need a recent Qt (I use 4.8) 
+and a C++ compiler that has reasonable support of C++11 (at the moment I'm using the latest clang) 
++ jack libraries + alsa libraries

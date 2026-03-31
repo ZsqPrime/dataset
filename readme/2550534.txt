@@ -1,0 +1,8 @@
+Project Description:
+Keeps track of table tennis scores
+
+README:
+TouchType Table Tennis Tracker
+==============================
+
+This is an appspot application with very little readme information.

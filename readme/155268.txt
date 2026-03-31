@@ -1,0 +1,8 @@
+A script I used to help automate side porting Debian packages to Ubuntu and publishing them in a Launchpad PPA. This project is obsolete and archived here for reference.
+
+
+Project Description:
+Automated script for side porting Debian packages to Ubuntu and publishing them in a Launchpad PPA.
+
+README:
+A script I used to help automate side porting Debian packages to Ubuntu and publishing them in a Launchpad PPA. This project is obsolete and archived here for reference.

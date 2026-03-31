@@ -1,0 +1,8 @@
+Pycon Apac 2011 site, modified version of con2py - http://code.google.com/p/conf2py/
+
+
+Project Description:
+
+
+README:
+Pycon Apac 2011 site, modified version of con2py - http://code.google.com/p/conf2py/

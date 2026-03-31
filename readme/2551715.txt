@@ -1,0 +1,9 @@
+Project Description:
+Codigo del curso de Ruby
+
+README:
+### Readme del curso rubylearning.org
+#
+# Inicio del curso el 12 de Febrero del 2012. 
+#
+# Espero terminarlo :)

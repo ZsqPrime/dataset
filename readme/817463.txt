@@ -1,0 +1,95 @@
+New URL: http://coetzeeseq.usc.edu/publication/Coetzee_SG_et_al_2012/
+
+Abstract/Summary:
+Single nucleotide polymorphisms (SNPs) are increasingly used to tag genetic loci
+associated with phenotypes such as risk of complex diseases. Technically, this
+is done genome-wide without prior restriction or knowledge of biological
+feasibility in scans referred to as genome-wide association studies (GWAS).
+Depending on the linkage-disequilibrium (LD) structure at a particular locus,
+such tagSNPs may be surrogates for many thousands of other SNPs, and it is
+difficult to distinguish those that may play a functional role in the phenotype
+from those simply genetically linked. Because a large proportion of tagSNPs have
+been identified within non-coding regions of the genome, distinguishing
+functional from non-functional SNPs has been an even greater challenge. A
+strategy was recently proposed that prioritizes surrogate SNPs based on
+non-coding chromatin and epigenomic mapping techniques that have become feasible
+with the advent of massively parallel sequencing. Here we introduce an
+R/Bioconductor software package that enables the identification of candidate
+functional SNPs by integrating information from tagSNP locations, lists of
+linked SNPs from the 1000 genomes project, and locations of chromatin features
+which may have functional significance. Availability: FunciSNP is available from
+Bioconductor (bioconductor.org). 
+
+##
+May 17, 2012 - Repo made public.
+
+##
+May 13, 2012 - FunciSNP manuscript accepted in Nucleic Acids Research.
+doi: 10.1093/nar/gks542
+
+##
+Feb 3, 2012 - Reorganized folder project. Added new versions of FunciSNP.
+
+new version of TSS.human.GRCh37
+from genomebrowser on 2012-03-26 
+filtered only rows with "hg19.knonwCanonical.transcript" != "na"
+no duplicated ensembl id's allowed no "na" ensembl id's allowed
+
+##
+September 27, 2011
+This project contains all the current working in house scripts for the Coetzee Lab.
+
+## 
+Each folder represents one in house script. View README within is folder for more information.
+
+
+
+
+
+Project Description:
+Coetzee Lab Data Analysis
+
+README:
+New URL: http://coetzeeseq.usc.edu/publication/Coetzee_SG_et_al_2012/
+
+Abstract/Summary:
+Single nucleotide polymorphisms (SNPs) are increasingly used to tag genetic loci
+associated with phenotypes such as risk of complex diseases. Technically, this
+is done genome-wide without prior restriction or knowledge of biological
+feasibility in scans referred to as genome-wide association studies (GWAS).
+Depending on the linkage-disequilibrium (LD) structure at a particular locus,
+such tagSNPs may be surrogates for many thousands of other SNPs, and it is
+difficult to distinguish those that may play a functional role in the phenotype
+from those simply genetically linked. Because a large proportion of tagSNPs have
+been identified within non-coding regions of the genome, distinguishing
+functional from non-functional SNPs has been an even greater challenge. A
+strategy was recently proposed that prioritizes surrogate SNPs based on
+non-coding chromatin and epigenomic mapping techniques that have become feasible
+with the advent of massively parallel sequencing. Here we introduce an
+R/Bioconductor software package that enables the identification of candidate
+functional SNPs by integrating information from tagSNP locations, lists of
+linked SNPs from the 1000 genomes project, and locations of chromatin features
+which may have functional significance. Availability: FunciSNP is available from
+Bioconductor (bioconductor.org). 
+
+##
+May 17, 2012 - Repo made public.
+
+##
+May 13, 2012 - FunciSNP manuscript accepted in Nucleic Acids Research.
+doi: 10.1093/nar/gks542
+
+##
+Feb 3, 2012 - Reorganized folder project. Added new versions of FunciSNP.
+
+new version of TSS.human.GRCh37
+from genomebrowser on 2012-03-26 
+filtered only rows with "hg19.knonwCanonical.transcript" != "na"
+no duplicated ensembl id's allowed no "na" ensembl id's allowed
+
+##
+September 27, 2011
+This project contains all the current working in house scripts for the Coetzee Lab.
+
+## 
+Each folder represents one in house script. View README within is folder for more information.

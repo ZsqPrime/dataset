@@ -1,0 +1,5 @@
+Project Description:
+an extension for Alfredapp to open Files/Folders in vim in iTerm2
+
+README:
+An Extension for Alfred app that opens Files/Folders in the current vim session of iTerm2!

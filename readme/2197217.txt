@@ -1,0 +1,15 @@
+For complete documentation please visit http://www.egrappler.com/xml-driven-vertical-news-scroller-script-using-html-and-jquery-vscroller/
+
+or 
+
+Github plugin wiki page https://github.com/mshahbazsaleem/vScroller/wiki/XML-driven-Vertical-News-Scroller-Script-using-HTML-and-jQuery:-vScroller
+
+Project Description:
+XML-driven Vertical News Scroller Script using HTML and jQuery: vScroller
+
+README:
+For complete documentation please visit http://www.egrappler.com/xml-driven-vertical-news-scroller-script-using-html-and-jquery-vscroller/
+
+or 
+
+Github plugin wiki page https://github.com/mshahbazsaleem/vScroller/wiki/XML-driven-Vertical-News-Scroller-Script-using-HTML-and-jQuery:-vScroller

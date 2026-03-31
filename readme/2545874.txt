@@ -1,0 +1,5 @@
+Project Description:
+Go Solutions to Project Euler problems
+
+README:
+Go Programs for [Project Euler](http://projecteuler.net) problems.

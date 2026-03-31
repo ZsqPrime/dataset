@@ -1,0 +1,12 @@
+# Simple wrapper for Google's reCAPTCHA library
+
+A single class that allows you to add Google reCAPTCHA to your forms. Code is very simple, take a look at it for implementation.
+
+
+Project Description:
+Google's reCAPTCHA module for the Kohana Framework
+
+README:
+# Simple wrapper for Google's reCAPTCHA library
+
+A single class that allows you to add Google reCAPTCHA to your forms. Code is very simple, take a look at it for implementation.

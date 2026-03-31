@@ -1,0 +1,5 @@
+Project Description:
+A virtual machine, along with matching assembler and compiler, written for educational purposes.
+
+README:
+This is a simple virtual machine project written in the interests of learning. The matching assembler and compiler are written with similiar intentions.

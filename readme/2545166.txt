@@ -1,0 +1,5 @@
+Project Description:
+Observer Pattern on Python
+
+README:
+Observer Pattern on Python 3 inspired by pynotify

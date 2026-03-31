@@ -1,0 +1,14 @@
+Eucalyptus Education services automation scripts.
+
+These scripts are built to control the education environment for Eucalyptus'
+Professional Services training courses.
+
+
+Project Description:
+Scripts for automating the setup and control of the Eucalyptus education environment
+
+README:
+Eucalyptus Education services automation scripts.
+
+These scripts are built to control the education environment for Eucalyptus'
+Professional Services training courses.

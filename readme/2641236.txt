@@ -1,0 +1,4 @@
+Project Description:
+http://drupal.org/project/drush_entity
+
+README:

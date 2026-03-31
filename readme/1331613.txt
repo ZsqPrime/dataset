@@ -1,0 +1,7 @@
+Project Description:
+Learn how to program by solving & creating physics based puzzles (like Angry Birds)
+
+README:
+We're working on a better README section. In the meantime you can find us at the Google Group:
+
+http://groups.google.com/group/peanutty

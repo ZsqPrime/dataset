@@ -1,0 +1,9 @@
+Project Description:
+Proof of Concept for an HTML game
+
+README:
+# Planets
+
+This is just a _Proof of Concept_.
+
+The status is _development_.

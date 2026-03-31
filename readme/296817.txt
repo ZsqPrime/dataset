@@ -1,0 +1,22 @@
+Sendgrid Stats Accumulator
+=============================
+
+A simple php endpoint for accumulating SendGrid's Event API messages into a
+simple extendable mysql database.
+
+Currently the tests.ini file cannot contain spaces, strings must be pre-url
+encoded for now.
+
+
+Project Description:
+Server that receives blast e-mails statistics from SendGrid's EventAPI and stores them in a SQL database.
+
+README:
+Sendgrid Stats Accumulator
+=============================
+
+A simple php endpoint for accumulating SendGrid's Event API messages into a
+simple extendable mysql database.
+
+Currently the tests.ini file cannot contain spaces, strings must be pre-url
+encoded for now.

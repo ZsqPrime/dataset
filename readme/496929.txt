@@ -1,0 +1,14 @@
+
+*This module has been obsoleted.*
+
+event-transceiver module renamed to [event-sign](https://github.com/kumatch/node-event-sign).
+
+
+Project Description:
+[**obsoleted] Defines event specification and creates event transmit/receive wrapper.
+
+README:
+
+*This module has been obsoleted.*
+
+event-transceiver module renamed to [event-sign](https://github.com/kumatch/node-event-sign).

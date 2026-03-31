@@ -1,0 +1,9 @@
+Project Description:
+Device configuration for Samsung Galaxy S3 (Verizon variant)
+
+README:
+Copyright 2012 - The CyanogenMod Project
+
+Device configuration for Samsung Galaxy S III (Verizon model).
+
+WORK IN PROGRESS. WILL EAT YOUR CAT.

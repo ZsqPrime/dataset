@@ -1,0 +1,5 @@
+Project Description:
+Encode/Decode video to and from memory
+
+README:
+See http://dimitri-christodoulou.blogspot.com/2012/02/encode-and-decode-video-from-memory.html

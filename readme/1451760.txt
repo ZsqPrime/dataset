@@ -1,0 +1,20 @@
+MySeqel
+-------
+An NCurses based MySQL client.
+
+Planned Features
+----------------
+Support for other DB's, e.g. Postgres
+
+
+Project Description:
+NCurses based MySQL client
+
+README:
+MySeqel
+-------
+An NCurses based MySQL client.
+
+Planned Features
+----------------
+Support for other DB's, e.g. Postgres

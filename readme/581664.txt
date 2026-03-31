@@ -1,0 +1,22 @@
+My default configs, put into git for easy synchronization between multiple machines.
+
+Install with:
+
+git clone https://github.com/pelme/pelmerc.git ~/.pelmerc
+cd .pelmerc
+git submodule update --init
+~/.pelmerc/bin/prc_install
+
+
+Project Description:
+None
+
+README:
+My default configs, put into git for easy synchronization between multiple machines.
+
+Install with:
+
+git clone https://github.com/pelme/pelmerc.git ~/.pelmerc
+cd .pelmerc
+git submodule update --init
+~/.pelmerc/bin/prc_install

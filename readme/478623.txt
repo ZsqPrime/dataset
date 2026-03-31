@@ -1,0 +1,17 @@
+Jinrikisha
+==========
+Asakusa Framework Starter Package
+
+https://docs.asakusafw.com/jinrikisha/ja/html/index.html
+
+
+
+Project Description:
+Starter Toolkit for Asakusa Framework
+
+README:
+Jinrikisha
+==========
+Asakusa Framework Starter Package
+
+https://docs.asakusafw.com/jinrikisha/ja/html/index.html

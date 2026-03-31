@@ -1,0 +1,10 @@
+Project Description:
+Tool to create smaller android 9path elements from bigger
+
+README:
+add to your bashrc
+alias a9pt='python PATH_TO_INIT/init.py'
+
+reload bashrc
+
+type something like: a9pt drawable-mdpi/*

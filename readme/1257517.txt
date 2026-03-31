@@ -1,0 +1,28 @@
+MiniTest asserts for mongoid.  More details shortly.
+
+Notes
+-----
+
+Roughly ported from riot-mongoid
+
+TODO
+----
+
+Make sure it's gemified proper, and ship it to rubygems
+
+
+Project Description:
+Mongoid assertion matchers for MiniTest
+
+README:
+MiniTest asserts for mongoid.  More details shortly.
+
+Notes
+-----
+
+Roughly ported from riot-mongoid
+
+TODO
+----
+
+Make sure it's gemified proper, and ship it to rubygems

@@ -1,0 +1,10 @@
+This is the 1st implementation of the [CoderStats service](http://coderstats.net/).
+This code is not being used or maintained any more.
+
+
+Project Description:
+Coderstats - get statistics on your public code at Github
+
+README:
+This is the 1st implementation of the [CoderStats service](http://coderstats.net/).
+This code is not being used or maintained any more.

@@ -1,0 +1,5 @@
+Project Description:
+Neural Network experiments
+
+README:
+This is a repository for experimental code implementing Neural Networks.

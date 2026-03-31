@@ -1,0 +1,4 @@
+Project Description:
+A jQuery plugin designed to make form error checking easier - once and for all
+
+README:

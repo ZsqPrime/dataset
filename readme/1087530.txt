@@ -1,0 +1,8 @@
+This sandbox has graduated to [js.scala](http://github.com/js-scala/js-scala).
+
+
+Project Description:
+Graduated to js.scala: JavaScript as an embedded DSL in Scala
+
+README:
+This sandbox has graduated to [js.scala](http://github.com/js-scala/js-scala).

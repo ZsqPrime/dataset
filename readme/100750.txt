@@ -1,0 +1,8 @@
+The project Euler problems solved by dbkaiser in Java
+
+
+Project Description:
+the dbkaiser's solution of euler
+
+README:
+The project Euler problems solved by dbkaiser in Java

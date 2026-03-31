@@ -1,0 +1,4 @@
+Project Description:
+Stuff for when i'm fooling around in C++
+
+README:

@@ -1,0 +1,140 @@
+
+Copyright 2009 Peter Eddy (peter.eddy@gmail.com)
+
+Introduction
+------------
+
+Clouchdb is a simple Common Lisp wrapper for the CouchDb document
+database server API. Please see http://couchdb.org for information
+about that software. With Clouchdb you can manage CouchDb databases,
+documents contained in those databases, and views which are CouchDb's
+method for querying documents. It is hoped that Clouchdb's API methods
+will provide a more convenient API for Lisp programmers than CouchDb's
+native REST API.
+
+Full documentation for ClouchDb can be found at
+http://common-lisp.net/project/clouchdb/
+
+
+Requirements
+------------
+
+Clouchdb is written in generic lisp code and should run in most lisp
+implementations. It relies on the Parenscript and Drakma libraries
+(and their dependencies). The included clouchdb-tests package also
+relies on the Stefil unit test framework.
+
+Supported Platforms
+-------------------
+
+ClouchDb is developed and tested with the following software:
+
+CouchDb
+
+- version 1.1.1. 
+
+OS
+
+- Linux (Fedora 16, 64 bit)
+- OSX Lion
+
+Lisp Implementations:
+
+- SBCL (version 1.0.51-1)
+- Clozure CL (version 1.7)
+
+
+Installation
+------------
+
+By far the easiest way to install this library is via the wonderful
+Quicklisp tool by Zach Beane:
+
+  (ql:quickload "clouchdb")
+
+You can find Quicklisp at http://www.quicklisp.org.
+
+You should also be able to use ASDF-INSTALL to install Clouchdb:
+
+  (asdf-install:install '#:clouchdb)
+
+And ASDF to load the library:
+
+  (asdf:oos 'asdf:load-op '#:clouchdb)
+
+  Or, with SBCL use:
+
+  (require 'clouchdb) 
+
+
+Project Description:
+Common Lisp API for CouchDb
+
+README:
+
+Copyright 2009 Peter Eddy (peter.eddy@gmail.com)
+
+Introduction
+------------
+
+Clouchdb is a simple Common Lisp wrapper for the CouchDb document
+database server API. Please see http://couchdb.org for information
+about that software. With Clouchdb you can manage CouchDb databases,
+documents contained in those databases, and views which are CouchDb's
+method for querying documents. It is hoped that Clouchdb's API methods
+will provide a more convenient API for Lisp programmers than CouchDb's
+native REST API.
+
+Full documentation for ClouchDb can be found at
+http://common-lisp.net/project/clouchdb/
+
+
+Requirements
+------------
+
+Clouchdb is written in generic lisp code and should run in most lisp
+implementations. It relies on the Parenscript and Drakma libraries
+(and their dependencies). The included clouchdb-tests package also
+relies on the Stefil unit test framework.
+
+Supported Platforms
+-------------------
+
+ClouchDb is developed and tested with the following software:
+
+CouchDb
+
+- version 1.1.1. 
+
+OS
+
+- Linux (Fedora 16, 64 bit)
+- OSX Lion
+
+Lisp Implementations:
+
+- SBCL (version 1.0.51-1)
+- Clozure CL (version 1.7)
+
+
+Installation
+------------
+
+By far the easiest way to install this library is via the wonderful
+Quicklisp tool by Zach Beane:
+
+  (ql:quickload "clouchdb")
+
+You can find Quicklisp at http://www.quicklisp.org.
+
+You should also be able to use ASDF-INSTALL to install Clouchdb:
+
+  (asdf-install:install '#:clouchdb)
+
+And ASDF to load the library:
+
+  (asdf:oos 'asdf:load-op '#:clouchdb)
+
+  Or, with SBCL use:
+
+  (require 'clouchdb)

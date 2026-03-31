@@ -1,0 +1,11 @@
+staticmole - remote static analysis tool based on JShint.
+Fill in the github repo address and get the full report.
+staticmole.org
+
+Project Description:
+static analysis tool for github project
+
+README:
+staticmole - remote static analysis tool based on JShint.
+Fill in the github repo address and get the full report.
+staticmole.org

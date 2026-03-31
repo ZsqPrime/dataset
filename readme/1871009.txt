@@ -1,0 +1,18 @@
+HasBitmaskAttributes
+====================
+
+HasBitmaskAttributes has been renamed to [bitmasker](https://github.com/amiel/bitmasker)
+
+This repository will be left to accomidate any bundler git references.
+
+
+Project Description:
+Moved to: https://github.com/amiel/bitmasker
+
+README:
+HasBitmaskAttributes
+====================
+
+HasBitmaskAttributes has been renamed to [bitmasker](https://github.com/amiel/bitmasker)
+
+This repository will be left to accomidate any bundler git references.

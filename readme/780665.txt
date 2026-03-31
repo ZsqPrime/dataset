@@ -1,0 +1,52 @@
+Framework for IMH
+
+
+---------
+3/29/2012
+---------
+• Middleman helper template tags
+• FTUX addition
+• SocialPages landing page
+• Javascript & CSS refinements
+
+
+----------
+2/24/2012
+---------
+• Individual module documentation
+• Javascript & CSS refinements
+• Design refinements
+• Address client observations
+
+
+----------
+12/22/2011
+----------
+• Calendar Ribbon refinements
+• Pulse interactions and refinements
+• Campaign refinements
+
+
+----------
+12/14/2011
+----------
+• Business Unit Switcher & User Login menu
+• Security Notification Module
+• Pulse Development & Styling
+• Campaigns development
+
+
+---------
+12/7/2011
+---------
+• Topbar subnav items
+• Left/main nav refinements
+• Content containers
+• SLIM/SASS/CSS3 development
+
+
+---------
+11/6/2012
+---------
+• Included IMH FTUX presentation in 'welcome' dir
+• General Editor environment

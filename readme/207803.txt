@@ -1,0 +1,184 @@
+Description:
+
+A pipeline for clustering and identifying barcode sequences from a next-generation
+sequencer such as Roche 454 or the Ion Torrent.
+
+
+Basic usage:
+
+pipeline.py --input_file [fasta_files] --outdir_dir [results_directory]
+
+By default the input files will be clustered with octupus (if present) and the non-singleton
+clusters will be identified by blasting them against the NCBI nucleotide database.
+
+For a complete list of commands and options see the manuals or the help under pipeline.py -h
+
+
+Scripts:
+
+This project contains the following scripts:
+
+ - pipeline.py			The main script that takes the user
+				files and executes the other scripts
+				and programs.
+ 
+ - paths.py			Search the system for the tools and 
+				scripts that are needed to run the pipeline.
+				The programs used are listed below.
+
+ - filter.py			A small python script that can filter
+				the input data based on size or remove
+				duplicate sequences.
+
+ - tag_fasta_files.py		When dealing with multiple datasets,
+				each set can be tagged to identify the
+				and compare different datasets during
+				downstream analysis.
+
+ - pick_otu_rep.py		It takes the OTU output files from
+				the various cluster programs and pick
+				a consensus or random sequence for 
+				identification.
+
+ - cluster_to_txt.py		Normalize the OTU information to a tsv file.
+				It contains the sequence names present in 
+				a cluster.
+
+ - custom_blast_db.py		Uses the NCBI-blast+ program to set up
+				a blast database based on a reference
+				set and then blasts a set of sequences
+				against the database to identify these.
+
+ - blast.py			Identifies sequences by blasting them
+				against the genbank database.
+
+ - filter_blast.py		Filter the genbank or local blast results based
+				on hit length or similarity.
+
+ - cluster_freq.py		When dealing with multiple input files
+				it takes the clustering results and
+				compares how much each dataset has
+				contributed to a certain cluster.
+				
+ - cluster_stat.py		Takes the cluster OTU file and retrieve
+ 				basic information about the number of 
+ 				sequences used, number of cluster and 
+ 				the size of the clusters.
+
+Requirements:
+
+This project require the following the following software / tools:
+
+ - Python 2.7 or 3.2		The latest version of either python 2.*
+				or 3.* are needed to support the modules
+				used in the scripts. (most notably the
+				'argparse' module).
+
+ - Biopython 1.58		Biopython is used to deal with fasta
+				sequences, multiple sequence alignments
+				and genbank files.
+
+ - NCBI-Blast-2.2.25+		Blast+ is used to identify sequences
+				with a custom made refrence database.
+
+Any of the following cluster programs:
+ - TGICL
+ - Usearch 6.0 or newer 	(the older versions can be used by specifying
+				--program usearch_old when using the pipeline).
+ - Octupus (default)
+ - cd-hit
+
+
+Project Description:
+454 sequence clustering and identification
+
+README:
+Description:
+
+A pipeline for clustering and identifying barcode sequences from a next-generation
+sequencer such as Roche 454 or the Ion Torrent.
+
+
+Basic usage:
+
+pipeline.py --input_file [fasta_files] --outdir_dir [results_directory]
+
+By default the input files will be clustered with octupus (if present) and the non-singleton
+clusters will be identified by blasting them against the NCBI nucleotide database.
+
+For a complete list of commands and options see the manuals or the help under pipeline.py -h
+
+
+Scripts:
+
+This project contains the following scripts:
+
+ - pipeline.py			The main script that takes the user
+				files and executes the other scripts
+				and programs.
+ 
+ - paths.py			Search the system for the tools and 
+				scripts that are needed to run the pipeline.
+				The programs used are listed below.
+
+ - filter.py			A small python script that can filter
+				the input data based on size or remove
+				duplicate sequences.
+
+ - tag_fasta_files.py		When dealing with multiple datasets,
+				each set can be tagged to identify the
+				and compare different datasets during
+				downstream analysis.
+
+ - pick_otu_rep.py		It takes the OTU output files from
+				the various cluster programs and pick
+				a consensus or random sequence for 
+				identification.
+
+ - cluster_to_txt.py		Normalize the OTU information to a tsv file.
+				It contains the sequence names present in 
+				a cluster.
+
+ - custom_blast_db.py		Uses the NCBI-blast+ program to set up
+				a blast database based on a reference
+				set and then blasts a set of sequences
+				against the database to identify these.
+
+ - blast.py			Identifies sequences by blasting them
+				against the genbank database.
+
+ - filter_blast.py		Filter the genbank or local blast results based
+				on hit length or similarity.
+
+ - cluster_freq.py		When dealing with multiple input files
+				it takes the clustering results and
+				compares how much each dataset has
+				contributed to a certain cluster.
+				
+ - cluster_stat.py		Takes the cluster OTU file and retrieve
+ 				basic information about the number of 
+ 				sequences used, number of cluster and 
+ 				the size of the clusters.
+
+Requirements:
+
+This project require the following the following software / tools:
+
+ - Python 2.7 or 3.2		The latest version of either python 2.*
+				or 3.* are needed to support the modules
+				used in the scripts. (most notably the
+				'argparse' module).
+
+ - Biopython 1.58		Biopython is used to deal with fasta
+				sequences, multiple sequence alignments
+				and genbank files.
+
+ - NCBI-Blast-2.2.25+		Blast+ is used to identify sequences
+				with a custom made refrence database.
+
+Any of the following cluster programs:
+ - TGICL
+ - Usearch 6.0 or newer 	(the older versions can be used by specifying
+				--program usearch_old when using the pipeline).
+ - Octupus (default)
+ - cd-hit

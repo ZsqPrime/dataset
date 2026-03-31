@@ -1,0 +1,10 @@
+Project Description:
+Gestor de Eventos
+
+README:
+== Welcome to Rails ==
+
+Desarrollado con Ruby 1.9.3-p0
+
+Una vez bajado:
+bundle install --without production

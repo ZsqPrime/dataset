@@ -1,0 +1,5 @@
+Project Description:
+Some AWE12 stuff
+
+README:
+This is an repository for a Ruby On Rails Curse

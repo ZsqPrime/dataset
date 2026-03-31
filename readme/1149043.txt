@@ -1,0 +1,17 @@
+ANDROID KERNEL SOURCE TREE FOR MEIZU M8
+
+MAINTAINED BY TEAM LBE
+
+CONTACT: eoc1985@gmail.com
+
+
+
+Project Description:
+M8 Android Open Source Kernel Tree maintained by Team LBE
+
+README:
+ANDROID KERNEL SOURCE TREE FOR MEIZU M8
+
+MAINTAINED BY TEAM LBE
+
+CONTACT: eoc1985@gmail.com

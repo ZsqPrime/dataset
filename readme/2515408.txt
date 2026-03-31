@@ -1,0 +1,20 @@
+Complex number plugin for Hot Soup Processor
+
+Created with MS VC++ 2010.
+
+See Release/readme.txt for details (written in Japanese).
+
+
+Project Description:
+Complex number plugin on HSP 3.x
+
+README:
+Complex number plugin for Hot Soup Processor
+
+
+
+Created with MS VC++ 2010.
+
+
+
+See Release/readme.txt for details (written in Japanese).

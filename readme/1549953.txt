@@ -1,0 +1,5 @@
+Project Description:
+Syntax highlight for regular text. 
+
+README:
+http://sootn.github.io/Ordkraft

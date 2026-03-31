@@ -1,0 +1,10 @@
+Project Description:
+A canvas/js port of the popular iPhone game Quell
+
+README:
+/*TODO*/
+
+Write the README
+Add in the golden rings!
+
+Loads of changes going on here. This will probably be a minor release!

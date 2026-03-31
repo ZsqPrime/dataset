@@ -1,0 +1,5 @@
+Project Description:
+Grails application to review LDAP objects 
+
+README:
+This is a first try.

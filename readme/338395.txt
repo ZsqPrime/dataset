@@ -1,0 +1,10 @@
+Char touch application for Education
+HTML5 CSS JavaScript
+
+
+Project Description:
+HTML5 Kanji/Kana touch game
+
+README:
+Char touch application for Education
+HTML5 CSS JavaScript

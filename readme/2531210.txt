@@ -1,0 +1,12 @@
+Project Description:
+Html5 app for mandelbrot set fractal
+
+README:
+Mandelbrot Set App, done in html5.
+Zooms in real time until floating point looses precision.
+Set reticule to zoom to an interesting area. You can stop it by clicking on stop and select 
+a new area. The reticule is already pointing to an interesting area. 
+
+Website: http://kecho.me/mandelbrot
+
+Kleber Garcia (c) 2012

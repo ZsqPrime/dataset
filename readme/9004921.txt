@@ -1,0 +1,9 @@
+Project Description:
+A Java library for manage IMDB data
+
+README:
+=== IMDBj ===
+IMDBj is a Java library that fetch and manage data from IMDB Movie Database
+
+== Licence ==
+IMDBj is released under LGPLv2.1 (see lglpl-2.1.txt)

@@ -1,0 +1,5 @@
+Project Description:
+Mobile friendly class schedule for novia students in Vaasa
+
+README:
+Alternative site for mobile phone users at Novia University of Applied Sciences.

@@ -1,0 +1,27 @@
+AndroidLogger
+
+Can generate log trace for:
+
+	* CPU
+	* Memory
+	* Screen
+	* Bluetooth
+	* GPS
+	* Wifi
+	* 3G
+
+Project Description:
+973work
+
+README:
+AndroidLogger
+
+Can generate log trace for:
+
+	* CPU
+	* Memory
+	* Screen
+	* Bluetooth
+	* GPS
+	* Wifi
+	* 3G

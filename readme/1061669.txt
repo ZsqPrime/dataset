@@ -1,0 +1,6 @@
+
+
+Project Description:
+project to develop web application for wedding after-party by Haskell
+
+README:

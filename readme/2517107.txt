@@ -1,0 +1,19 @@
+Playab Website Installation Document
+------------------------------------
+
+How to reset your test seed data?
+===================
+
+    rake dev:db:reset
+
+Project Description:
+website for playable co, ltd
+
+README:
+Playab Website Installation Document
+------------------------------------
+
+How to reset your test seed data?
+===================
+
+    rake dev:db:reset

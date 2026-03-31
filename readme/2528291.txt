@@ -1,0 +1,10 @@
+Project Description:
+Virtual marble game based on OpenCV
+
+README:
+Virtual Marble Game
+
+Student project for the Augmented Reality class.
+
+Copyright 2012
+License yet undecided.

@@ -1,0 +1,12 @@
+Android Application
+
+Incorporates a Moai SDK player
+
+
+Project Description:
+Android native build using Moai Lua game sdk
+
+README:
+Android Application
+
+Incorporates a Moai SDK player

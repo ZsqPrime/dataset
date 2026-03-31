@@ -1,0 +1,7 @@
+Project Description:
+First experiments using Disruptor in Scala
+
+README:
+Try to connect to disruptor in Scala
+
+This file was created by IntelliJ IDEA (Nika) IU-111.228 for binding GitHub repository

@@ -1,0 +1,1 @@
+ facade over the tuxguitar library which allows easy read (and soon write) of common binary tab format files (gp, ptb etc etc) —

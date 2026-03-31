@@ -1,0 +1,5 @@
+Project Description:
+Gamestore administration system made on Django
+
+README:
+Gamestore administration system made on Django. 2012.

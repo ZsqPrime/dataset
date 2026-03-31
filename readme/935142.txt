@@ -1,0 +1,14 @@
+Electron movement simulatrion.
+
+Condition : Each electron is able to move sphiere surface only.
+	Crone force apply by 1/(r*r)
+
+
+Project Description:
+Electron movement simulation
+
+README:
+Electron movement simulatrion.
+
+Condition : Each electron is able to move sphiere surface only.
+	Crone force apply by 1/(r*r)

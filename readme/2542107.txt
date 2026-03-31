@@ -1,0 +1,4 @@
+Project Description:
+Module to scrape incorrectly configured sharepoint sites for usernames and AD groups
+
+README:

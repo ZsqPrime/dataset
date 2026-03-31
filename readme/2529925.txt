@@ -1,0 +1,7 @@
+Project Description:
+jasmine jquery failing on second call where .show('fast') is called
+
+README:
+This project is to demonstrate an apparent bug in testing jquery 'show' with animation.
+
+See the example_spec.js file, is short and should be self explanatory.

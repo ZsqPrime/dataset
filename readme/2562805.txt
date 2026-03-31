@@ -1,0 +1,5 @@
+Project Description:
+accelerometer tracking app
+
+README:
+OSU Activity Tracker App

@@ -1,0 +1,30 @@
+####################################################################
+# Project: RavianX - tX4
+# File Title : README
+# Author : tHeStRyNg - stryng@gmail.com
+# Date : 21-02-2012 
+# Version : 0.002
+# Description: This source had the contribution of Advocaite, donn
+# allkori, dzoki, dixxie, ZZJHONS and many more.
+# The main objective will be to put out a working version of
+# ZravianX version 4 with all the look and feel of the popular 
+# game reverse engineered.
+####################################################################
+
+
+Project Description:
+A Reverse Egineered version of the popular Travian V4 Online Game Ported to Open Source
+
+README:
+####################################################################
+# Project: RavianX - tX4
+# File Title : README
+# Author : tHeStRyNg - stryng@gmail.com
+# Date : 21-02-2012 
+# Version : 0.002
+# Description: This source had the contribution of Advocaite, donn
+# allkori, dzoki, dixxie, ZZJHONS and many more.
+# The main objective will be to put out a working version of
+# ZravianX version 4 with all the look and feel of the popular 
+# game reverse engineered.
+####################################################################

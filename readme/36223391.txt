@@ -1,0 +1,20 @@
+Project Description:
+arduino and java code for surplus trans lux display
+
+README:
+
+
+This is sample Java and Arduino code for driving a TransLux datawall board.
+
+https://goo.gl/photos/TfGjPaihxif2U6dF7
+
+| Trans-Lux J2  | AVR168      | Purpose            |
+| ------------- |-------------|--------------------|
+| pin 1         | pin 2       | clock              |
+| pin 3         | pin 3       | data               |
+| pin 6         | pin 4       | enable (high==off) |
+
+The `trans_lux.sch` is an eagle file of a portion of the board. By no means is it accurate or complete. 
+It was used only to determine the which pins were clock, data, and enable.
+
+This code is released under the Apache 2.0 license.

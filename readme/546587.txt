@@ -1,0 +1,7 @@
+Dit is een iOS applicatie om met socialtext om te gaan.
+
+Project Description:
+Native iOS client for socialtext
+
+README:
+Dit is een iOS applicatie om met socialtext om te gaan.

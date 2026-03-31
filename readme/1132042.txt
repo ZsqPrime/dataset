@@ -1,0 +1,12 @@
+# A base virtual machine set up for modern Perl developement #
+
+Enjoy!
+
+
+Project Description:
+A skeleton vagrant & puppet configuration for developing modern Perl apps
+
+README:
+# A base virtual machine set up for modern Perl developement #
+
+Enjoy!

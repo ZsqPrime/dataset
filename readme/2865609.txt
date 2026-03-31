@@ -1,0 +1,7 @@
+Project Description:
+For CS4460 Information Visualization class in Georgia Tech
+
+README:
+Twitter tunnel is based on the Event Tunnel visualization.
+
+Uses HTML5 Boilerplate, CASS, JIT, dygraphs

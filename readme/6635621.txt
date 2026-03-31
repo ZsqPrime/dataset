@@ -1,0 +1,10 @@
+Project Description:
+Python transaction datamanager for working with zmq sockets
+
+README:
+=========================
+ 0MQ Transaction Manager
+=========================
+
+Designed for use with ReqRep sockets, usable for anything that can use
+a dict as a payload.

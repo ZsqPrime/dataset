@@ -1,0 +1,8 @@
+Some katas I´ve done recently using java... Also my first repo in GitHub :)
+
+
+Project Description:
+Some Katas...
+
+README:
+Some katas I´ve done recently using java... Also my first repo in GitHub :)

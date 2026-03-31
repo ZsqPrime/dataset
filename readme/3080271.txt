@@ -1,0 +1,5 @@
+Project Description:
+A collaborative effort to prepare a top notch presentation on clojure
+
+README:
+A collaborative effort to make a top notch presentation on clojure.

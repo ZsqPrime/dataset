@@ -1,0 +1,4 @@
+Project Description:
+Diversos proyectos encontrados en los libros sobre grails, adapatados a grails 2.0
+
+README:

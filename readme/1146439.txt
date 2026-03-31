@@ -1,0 +1,36 @@
+Machine Learning and Decision Making
+Project: Sentiment Analysis
+
+Supervisor: Ivo Langbroek
+
+Group members:
+Auke Wiggers
+Camiel Verschoor
+Duncan ten Velthuis
+Sharon Gieske
+Steven Laan
+
+Description:
+
+The goal of this assignment is the automatic sentiment analysis of several online messages, such as tweets, blog posts, etc. 
+
+
+Project Description:
+Social Media Project
+
+README:
+Machine Learning and Decision Making
+Project: Sentiment Analysis
+
+Supervisor: Ivo Langbroek
+
+Group members:
+Auke Wiggers
+Camiel Verschoor
+Duncan ten Velthuis
+Sharon Gieske
+Steven Laan
+
+Description:
+
+The goal of this assignment is the automatic sentiment analysis of several online messages, such as tweets, blog posts, etc.

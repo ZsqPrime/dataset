@@ -1,0 +1,12 @@
+ObjectiveZlib
+=============
+A category on NSData for easily compressing/decompressing data in memory
+
+
+Project Description:
+NSData extensions for zlib compression
+
+README:
+ObjectiveZlib
+=============
+A category on NSData for easily compressing/decompressing data in memory

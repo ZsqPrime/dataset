@@ -1,0 +1,18 @@
+Project Description:
+Check MySQL via HTTP for haproxy healthchecks
+
+README:
+Installation instructions, git clone repo.
+edit mhc.py, change IP address/hostname in file.
+
+yum install MySQL-python, required for python to speak SQL
+
+then copy .conf file to /etc/init, this will add it to upstart.
+
+then issue:
+
+start mysqlhealth
+
+it will subsequently restart on reboot.
+
+Then just hit http://<ip or host>:<port> to view results.

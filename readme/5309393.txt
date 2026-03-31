@@ -1,0 +1,4 @@
+Project Description:
+A set of C++ classes to perform expression parsing and symbolic expression differentiation / simplification.
+
+README:

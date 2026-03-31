@@ -1,0 +1,448 @@
+* Kawa Scheme on Android
+This started as a collection of examples of Kawa on Android because I
+couldn't find anything substantive. It will slowly morph into a
+tutorial. At the moment it consists of a number of examples ported
+from Java and an application written from scratch in Kawa,
+SpeedRead. If you're new, work your way up with the simpler examples
+first. If you want to dive right in, look at SpeedRead. It's much
+cleaner.
+
+** Setting up
+We'll first need to get an Android SDK set up, skip this if you've
+already got one. You'll need to install the Android SDK; your
+distribution's package management software will help with this. Once
+you're done, run /android/, select and install the latest API
+revision (17 as of this document).
+
+To get started with Scheme you'll need a custom build for Kawa, this
+will fetch and build the latest sources
+#+BEGIN_SRC sh
+bin/setup-kawa <android-home> <android-platform>
+#+END_SRC
+
+You'll need to point it to your android SDK directory and give it the
+platform number. On my machine this looks like:
+#+BEGIN_SRC sh
+bin/setup-kawa /opt/android-sdk-update-manager android-17
+#+END_SRC
+
+** Creating a new project
+To create a new project you can use
+#+BEGIN_SRC sh
+bin/make-project <android-platform> <project-name> <activity-name> <package>
+#+END_SRC
+for example
+#+BEGIN_SRC sh
+bin/make-project android-17 HelloWorld hello kawa.example
+#+END_SRC
+The arguments are: the platform/api level, the project name and the
+original activity name. This calls 'android create project' and
+patches the resulting build.xml file. It will create a trivial
+application that displays a message. Sources are in
+<project-name>/src/kawa/android/<activity>.scm. The resulting
+application will have package name kawa.android. You should probably
+change this, It's recorded in src/kawa/kawa/example.java,
+AndroidManifest.xml, and build.xml. The <package> name is how Android
+will internally refer to this application. So if you want to start it
+or for example uninstall it you would use the package name, for example
+#+BEGIN_SRC sh
+adb uninstall kawa.example
+#+END_SRC
+
+*** Running on the phone
+
+Building and running are both done by the same script.
+#+BEGIN_SRC sh
+cd SpeedRead && ./make-and-send
+#+END_SRC
+This will create an apk and send it out to the phone and run it. When
+you modify the code just rerun make-and-send. Your first compile will
+likely be slow but subsequent ones will be much faster. When you're
+done you can clean up with
+#+BEGIN_SRC sh
+adb uninstall zeroxab.speedread
+#+END_SRC
+
+*** Running in the emulator
+
+You first need to set up the emulator by running
+#+BEGIN_SRC sh
+android create avd -a -n Test -t 1 --abi armeabi-v7a
+#+END_SRC
+and accepting the defaults. If you've got a plain-vanilla SDK setup id
+1 will be the basic android platform. You can check with /android list
+targets/ and adjust accordingly. Once it's setup it, just run
+#+BEGIN_SRC sh
+bin/start-emulator
+#+END_SRC
+to fire it up, it'll take a while...  The emulator is so obscenely
+slow that you'll want to either run things on your phone or set up
+vmware.
+
+Running and building work the same way they do for the phone from the
+same /make-and-send/ script.
+
+*** Debugging
+
+While debugging I have 
+#+BEGIN_SRC sh
+bin/colorize-adb-logcat
+#+END_SRC
+running in a terminal to easily spot log messages.
+
+*** XML sanity
+
+I highly recommend editing your UIs and Manifest files in Eclipse with
+the Android plugins available from
+
+    https://dl-ssl.google.com/android/eclipse/
+
+Click /Help/, /Install New Software/, add the above repository,
+and install all of the software it provides. Once you've created a
+project with the /make-project/ script above import it into
+Eclipse. Click /New/, /Project/, choose /Android/, /Android
+Project from Existing Code/ and select the toplevel directory of the
+project. Eclipse will eventually complain that classes are missing
+because it doesn't know about our Scheme code but editing Manifests
+and resources with the Eclipse UI isn't too bad.
+
+Click /AndroidManifest.xml/, select /Application/ (bottom),
+/Theme/, /Browse/, and pick /Holo.Light.ButtonBar/ and
+save. Navigate to /res/, /layout/, /main.xml/ and there's the UI
+of the application we just made and it's now using the pretty Holo
+UI.
+
+The default application that make-project creates doesn't use the xml
+file at all, it creates its own TextView widget on the fly:
+#+BEGIN_SRC scheme
+  ((this):setContentView
+   (android.widget.TextView
+    (this)
+    text: "Hello from Kawa Scheme!"))
+#+END_SRC scheme
+Replace that code with
+#+BEGIN_SRC scheme
+((this):setContentView <package-name>.R$layout:main)
+#+END_SRC scheme
+Note the /R/ syntax for accessing resources.
+and you'll see the UI from Eclipse.
+** Examples 
+*** SDK/LearningAndroid
+- KawaHello is a simple hello world application
+- LunarLander is a reimplementation of the SDK example
+- LearningAndroid-chapter{6,7,8,9,10} are implementations of the main
+  projects for most of the chapters from Marko Garneta's "Learning
+  Android"
+
+These were written while I was figuring out if Kawa can be used for
+Android development and how to work out various Android&Kawa-specific
+quirks. All examples try to mostly stay true to their source however
+badly designed that source was. As such this isn't a good place to
+look for good Scheme style or idiomatic Kawa.
+
+In general these are meant to be read, not necessarily run as such I
+don't always keep them up to date.
+
+You may need to update local.properties in each of the examples
+directory to change the path to the Android SDK.
+
+LearningAndroid examples need to a copy of jtwitter.jar and
+signpost-core-1.2.1.1.jar from
+http://www.winterwell.com/software/jtwitter.php in each of their libs
+directory.
+*** SpeedRead
+SpeedRead is an app for rapid sequential visual presentation (RSVP) of
+text. It flashes text to allow you to read more quickly. This is a
+working application. With some love it will one day make its way into
+the app market. It was designed for the ground up as a Kawa
+application and has much nicer style than the other examples. It's
+also a much more complex application than the other examples while
+still being quite small. Note all of the macros which make unpleasant
+repetitive code much nicer. One day these and other code will make
+their way into a standard library for Android Kawa.
+** Troubleshooting the build system
+*** bad magic bits with dex
+You've somehow managed to install with 1.7. Delete your old install
+entirely, downgrade to 1.6 and reinstall.
+*** make-and-send fails
+If you see
+#+BEGIN_SRC
+INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES
+#+END_SRC
+after running make-and-send, you've got a copy of apk you're trying to
+send to the phone already installed but it was compiled on a different
+machine with a different certificate. You just have to uninstall
+it. Keep in mind that if you've never changed the name of a project
+you've left the default (kawa.android) in. You'll want to uninstall
+the old package with
+#+BEGIN_SRC
+adb uninstall kawa.android
+#+END_SRC
+and read the section above on creating projects for how to change the
+internal project name.
+*** unable to resolve project target 'android-number'
+You're compiling a project for an SDK version you don't actually have
+installed. The simplest solution is to just edit /project.properties/
+and change the SDK version.
+** Troubleshooting kawa
+By far the most difficult and frustrating part of writing code with
+Kawa for Android is going to be dealing with Kawa's extremely
+unhelpful error messages. I've listed some of the common ones and what
+they mean.
+*** more than one possibly applicable method '<init>' in ...
+A common error with a pretty unhelpful error message. Usually happens
+in code that looks like:
+#+BEGIN_SRC
+(make <org.apache.http.client.methods.HttpGet> x)
+#+END_SRC
+Kawa is getting confused about the type of x, so you have to give it a
+hand by casting it explicitly.
+#+BEGIN_SRC
+(make <org.apache.http.client.methods.HttpGet> (as String x))
+#+END_SRC
+*** no known slot '...' in java.lang.Object
+As above, Kawa can't figure out the type of the object you're trying
+to use and at some point ended up casting it to Object. Vou've
+got something like a function or let binding where you didn't specify
+a type. You can either specify one or cast as in the above section.
+
+((lunarView:getThread):pause)
+
+This might also happen if you have a misspelled identifier. 
+*** no possibly applicable method '<init>/valueOf' in ...
+You've got code like
+#+BEGIN_SRC
+(make <something> args ...)
+#+END_SRC
+and one of the arguments is of the wrong type.
+*** Unfortunately, <application name> has stopped.
+Run 'adb logcat' or 'bin/colorize-adb-logcat' and have a look at the
+RuntimeException. Right now there's no interactive debugger but one is
+in the pipeline.
+
+
+Project Description:
+Examples of Android applications written in Kawa scheme
+
+README:
+* Kawa Scheme on Android
+This started as a collection of examples of Kawa on Android because I
+couldn't find anything substantive. It will slowly morph into a
+tutorial. At the moment it consists of a number of examples ported
+from Java and an application written from scratch in Kawa,
+SpeedRead. If you're new, work your way up with the simpler examples
+first. If you want to dive right in, look at SpeedRead. It's much
+cleaner.
+
+** Setting up
+We'll first need to get an Android SDK set up, skip this if you've
+already got one. You'll need to install the Android SDK; your
+distribution's package management software will help with this. Once
+you're done, run /android/, select and install the latest API
+revision (17 as of this document).
+
+To get started with Scheme you'll need a custom build for Kawa, this
+will fetch and build the latest sources
+#+BEGIN_SRC sh
+bin/setup-kawa <android-home> <android-platform>
+#+END_SRC
+
+You'll need to point it to your android SDK directory and give it the
+platform number. On my machine this looks like:
+#+BEGIN_SRC sh
+bin/setup-kawa /opt/android-sdk-update-manager android-17
+#+END_SRC
+
+** Creating a new project
+To create a new project you can use
+#+BEGIN_SRC sh
+bin/make-project <android-platform> <project-name> <activity-name> <package>
+#+END_SRC
+for example
+#+BEGIN_SRC sh
+bin/make-project android-17 HelloWorld hello kawa.example
+#+END_SRC
+The arguments are: the platform/api level, the project name and the
+original activity name. This calls 'android create project' and
+patches the resulting build.xml file. It will create a trivial
+application that displays a message. Sources are in
+<project-name>/src/kawa/android/<activity>.scm. The resulting
+application will have package name kawa.android. You should probably
+change this, It's recorded in src/kawa/kawa/example.java,
+AndroidManifest.xml, and build.xml. The <package> name is how Android
+will internally refer to this application. So if you want to start it
+or for example uninstall it you would use the package name, for example
+#+BEGIN_SRC sh
+adb uninstall kawa.example
+#+END_SRC
+
+*** Running on the phone
+
+Building and running are both done by the same script.
+#+BEGIN_SRC sh
+cd SpeedRead && ./make-and-send
+#+END_SRC
+This will create an apk and send it out to the phone and run it. When
+you modify the code just rerun make-and-send. Your first compile will
+likely be slow but subsequent ones will be much faster. When you're
+done you can clean up with
+#+BEGIN_SRC sh
+adb uninstall zeroxab.speedread
+#+END_SRC
+
+*** Running in the emulator
+
+You first need to set up the emulator by running
+#+BEGIN_SRC sh
+android create avd -a -n Test -t 1 --abi armeabi-v7a
+#+END_SRC
+and accepting the defaults. If you've got a plain-vanilla SDK setup id
+1 will be the basic android platform. You can check with /android list
+targets/ and adjust accordingly. Once it's setup it, just run
+#+BEGIN_SRC sh
+bin/start-emulator
+#+END_SRC
+to fire it up, it'll take a while...  The emulator is so obscenely
+slow that you'll want to either run things on your phone or set up
+vmware.
+
+Running and building work the same way they do for the phone from the
+same /make-and-send/ script.
+
+*** Debugging
+
+While debugging I have 
+#+BEGIN_SRC sh
+bin/colorize-adb-logcat
+#+END_SRC
+running in a terminal to easily spot log messages.
+
+*** XML sanity
+
+I highly recommend editing your UIs and Manifest files in Eclipse with
+the Android plugins available from
+
+    https://dl-ssl.google.com/android/eclipse/
+
+Click /Help/, /Install New Software/, add the above repository,
+and install all of the software it provides. Once you've created a
+project with the /make-project/ script above import it into
+Eclipse. Click /New/, /Project/, choose /Android/, /Android
+Project from Existing Code/ and select the toplevel directory of the
+project. Eclipse will eventually complain that classes are missing
+because it doesn't know about our Scheme code but editing Manifests
+and resources with the Eclipse UI isn't too bad.
+
+Click /AndroidManifest.xml/, select /Application/ (bottom),
+/Theme/, /Browse/, and pick /Holo.Light.ButtonBar/ and
+save. Navigate to /res/, /layout/, /main.xml/ and there's the UI
+of the application we just made and it's now using the pretty Holo
+UI.
+
+The default application that make-project creates doesn't use the xml
+file at all, it creates its own TextView widget on the fly:
+#+BEGIN_SRC scheme
+  ((this):setContentView
+   (android.widget.TextView
+    (this)
+    text: "Hello from Kawa Scheme!"))
+#+END_SRC scheme
+Replace that code with
+#+BEGIN_SRC scheme
+((this):setContentView <package-name>.R$layout:main)
+#+END_SRC scheme
+Note the /R/ syntax for accessing resources.
+and you'll see the UI from Eclipse.
+** Examples 
+*** SDK/LearningAndroid
+- KawaHello is a simple hello world application
+- LunarLander is a reimplementation of the SDK example
+- LearningAndroid-chapter{6,7,8,9,10} are implementations of the main
+  projects for most of the chapters from Marko Garneta's "Learning
+  Android"
+
+These were written while I was figuring out if Kawa can be used for
+Android development and how to work out various Android&Kawa-specific
+quirks. All examples try to mostly stay true to their source however
+badly designed that source was. As such this isn't a good place to
+look for good Scheme style or idiomatic Kawa.
+
+In general these are meant to be read, not necessarily run as such I
+don't always keep them up to date.
+
+You may need to update local.properties in each of the examples
+directory to change the path to the Android SDK.
+
+LearningAndroid examples need to a copy of jtwitter.jar and
+signpost-core-1.2.1.1.jar from
+http://www.winterwell.com/software/jtwitter.php in each of their libs
+directory.
+*** SpeedRead
+SpeedRead is an app for rapid sequential visual presentation (RSVP) of
+text. It flashes text to allow you to read more quickly. This is a
+working application. With some love it will one day make its way into
+the app market. It was designed for the ground up as a Kawa
+application and has much nicer style than the other examples. It's
+also a much more complex application than the other examples while
+still being quite small. Note all of the macros which make unpleasant
+repetitive code much nicer. One day these and other code will make
+their way into a standard library for Android Kawa.
+** Troubleshooting the build system
+*** bad magic bits with dex
+You've somehow managed to install with 1.7. Delete your old install
+entirely, downgrade to 1.6 and reinstall.
+*** make-and-send fails
+If you see
+#+BEGIN_SRC
+INSTALL_PARSE_FAILED_INCONSISTENT_CERTIFICATES
+#+END_SRC
+after running make-and-send, you've got a copy of apk you're trying to
+send to the phone already installed but it was compiled on a different
+machine with a different certificate. You just have to uninstall
+it. Keep in mind that if you've never changed the name of a project
+you've left the default (kawa.android) in. You'll want to uninstall
+the old package with
+#+BEGIN_SRC
+adb uninstall kawa.android
+#+END_SRC
+and read the section above on creating projects for how to change the
+internal project name.
+*** unable to resolve project target 'android-number'
+You're compiling a project for an SDK version you don't actually have
+installed. The simplest solution is to just edit /project.properties/
+and change the SDK version.
+** Troubleshooting kawa
+By far the most difficult and frustrating part of writing code with
+Kawa for Android is going to be dealing with Kawa's extremely
+unhelpful error messages. I've listed some of the common ones and what
+they mean.
+*** more than one possibly applicable method '<init>' in ...
+A common error with a pretty unhelpful error message. Usually happens
+in code that looks like:
+#+BEGIN_SRC
+(make <org.apache.http.client.methods.HttpGet> x)
+#+END_SRC
+Kawa is getting confused about the type of x, so you have to give it a
+hand by casting it explicitly.
+#+BEGIN_SRC
+(make <org.apache.http.client.methods.HttpGet> (as String x))
+#+END_SRC
+*** no known slot '...' in java.lang.Object
+As above, Kawa can't figure out the type of the object you're trying
+to use and at some point ended up casting it to Object. Vou've
+got something like a function or let binding where you didn't specify
+a type. You can either specify one or cast as in the above section.
+
+((lunarView:getThread):pause)
+
+This might also happen if you have a misspelled identifier. 
+*** no possibly applicable method '<init>/valueOf' in ...
+You've got code like
+#+BEGIN_SRC
+(make <something> args ...)
+#+END_SRC
+and one of the arguments is of the wrong type.
+*** Unfortunately, <application name> has stopped.
+Run 'adb logcat' or 'bin/colorize-adb-logcat' and have a look at the
+RuntimeException. Right now there's no interactive debugger but one is
+in the pipeline.

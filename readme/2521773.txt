@@ -1,0 +1,12 @@
+Project Description:
+A senior design project on iOS to take a picture of a target and analyze the bullet spread
+
+README:
+Welcome to our repository!!
+
+the Code folder contains all of the code
+
+the Doc folder contains all of the uncompiled .tex documentation files
+
+==============================
+Using git

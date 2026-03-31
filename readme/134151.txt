@@ -1,0 +1,50 @@
+1. scheme editor/ ide ( java, clojure  )
+2. piano playing program. it's not very good yet (java,swing,processing)
+3. i ching - hexagram generator - ( javascript canvas )
+4. 3d display of information (java, processing )
+5. 'naive bayes classifier' (java. downloads from the net, stores locally etc )
+6. some dabblings in clojure and jython . they all work (for a _small_ value of 'work')
+
+
+- edi and scythe are almost repeats. edi.clj too
+- scythe needs sisc scheme to work, and a file location
+- robot musician can use GAs ,maybe
+- at some point in the future, we can connect the robotmusician to a pulse detector. bio feedback !!
+- reddit needs a lot of attention. redditspace begs creating 
+- 3d data in processing.js seems like a good idea
+- snippetos. the repository needs code snippets for problem spaces.  
+
+- one day I'll have a website that accepts cash 
+gae
+android wifi/bluetooth/gps/data/ is IRRITATING
+secure shell
+java monitoring tools
+jasper reporter website
+
+
+Project Description:
+
+
+README:
+1. scheme editor/ ide ( java, clojure  )
+2. piano playing program. it's not very good yet (java,swing,processing)
+3. i ching - hexagram generator - ( javascript canvas )
+4. 3d display of information (java, processing )
+5. 'naive bayes classifier' (java. downloads from the net, stores locally etc )
+6. some dabblings in clojure and jython . they all work (for a _small_ value of 'work')
+
+
+- edi and scythe are almost repeats. edi.clj too
+- scythe needs sisc scheme to work, and a file location
+- robot musician can use GAs ,maybe
+- at some point in the future, we can connect the robotmusician to a pulse detector. bio feedback !!
+- reddit needs a lot of attention. redditspace begs creating 
+- 3d data in processing.js seems like a good idea
+- snippetos. the repository needs code snippets for problem spaces.  
+
+- one day I'll have a website that accepts cash 
+gae
+android wifi/bluetooth/gps/data/ is IRRITATING
+secure shell
+java monitoring tools
+jasper reporter website

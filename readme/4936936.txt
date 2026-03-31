@@ -1,0 +1,12 @@
+Project Description:
+Miscellaneous plugins and hooks for AII, contributed by the community: AII maintainers have no responsibility on them!
+
+README:
+This repository holds community-contributed plugins or hooks for AII.
+
+Sharing your plugins is encouraged. Do it here, on a GitHub fork or
+anywhere you like to publish your stuff.
+
+The AII maintainers take no responsibility or commitments for the
+plugins in this repository, or in any other one maintained by the
+community.

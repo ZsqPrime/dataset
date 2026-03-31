@@ -1,0 +1,15 @@
+DietCake
+========
+
+[![Build Status](https://secure.travis-ci.org/dietcake/dietcake.png?branch=master)](http://travis-ci.org/dietcake/dietcake)
+
+
+
+Project Description:
+Fastest MVC framework skeleton for PHP
+
+README:
+DietCake
+========
+
+[![Build Status](https://secure.travis-ci.org/dietcake/dietcake.png?branch=master)](http://travis-ci.org/dietcake/dietcake)

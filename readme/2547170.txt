@@ -1,0 +1,25 @@
+Project Description:
+
+
+README:
+Prithvi Prabahar
+COMPSCI 108, Spring 2012
+Picassa Part 2: Code Complete
+
+Date Started: 01/30/12
+Date Finished: 02/02/12
+Estimate of Hours: 4
+I thought it would take me about 3-4 hours to finish, and my estimate is pretty good.
+
+Students Discussed With: None
+
+Resources Consulted: Regex site http://docs.oracle.com/javase/tutorial/essential/regex/char_classes.html
+
+Description of the files used to start your project and test your project: NA
+
+Description of any data or resource files required by your project: NA
+
+Impressions:
+
+Part 3 was reasonably easy to implement because it was simply extensions
+of previous commands.

@@ -1,0 +1,9 @@
+This package provides a mechanism for validating structured data and
+extracting the results of validation.
+
+Project Description:
+A library for structured data validation and extraction
+
+README:
+This package provides a mechanism for validating structured data and
+extracting the results of validation.

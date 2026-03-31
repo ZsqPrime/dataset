@@ -1,0 +1,9 @@
+This package has been superseded by [reutils](https://github.com/gschofl/reutils).
+
+
+
+Project Description:
+R interface to NCBI's Entrez Utilities
+
+README:
+This package has been superseded by [reutils](https://github.com/gschofl/reutils).

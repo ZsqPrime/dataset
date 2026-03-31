@@ -1,0 +1,81 @@
+* * * * * * * * * * * * * * * * * * * * * * *
+
+    LAPIS 2012
+    Linked APIs for the Semantic Web
+    ESWC 2012 workshop
+    http://lapis2012.linkedservices.org/
+
+* * * * * * * * * * * * * * * * * * * * * * *
+
+
+"The Web as I envisioned it, we have not seen it yet."
+  – Tim Berners-Lee
+
+"Services and the Semantic Web: it's complicated."
+  – anonymous gossip
+
+"Semantic Web and APIs: an essential problem in need of a fresh look."
+  – LAPIS 2012 mission
+
+
+=======================
+ Challenge for Papers – What do *you* have to say about Linked APIs and the Semantic Web?
+=======================
+
+
+LAPIS 2012 in 5 questions
+-------------------------
+
+Why?       The Web has changed: services become resource-oriented APIs. We must react now.
+Goal?      Exploring the opportunities resource-oriented APIs offer, especially in combination with links.
+For whom?  Motivated researchers from the REST, Semantic Web, and Linked Data communities.
+What?      A truly interactive workshop, driven by constructive discussion and dialog.
+Format?    An inspiring day. Morning: talks and dialog. Afternoon: brainstorm and discussion
+
+
+LAPIS 2012 in 5 bullets
+-----------------------
+The main goal of the LAPIS workshop is to give birth to new ideas and visions, through presentations that encourage interaction and discussion. Topics of discussion include:
+
+- defining Linked APIs, what they could look like, and what role links can play
+- identifying the essential building blocks for enabling Linked APIs
+- pinpointing challenges to move from resource-oriented APIs towards Linked APIs
+- capturing added value of Linked APIs for the Semantic Web and REST communities
+- designing applications by connecting Linked Data and Linked APIs for reading and writing
+The above list is not exhaustive and we therefore actively encourage participants to be creative.
+
+
+LAPIS 2012 wants your submission
+--------------------------------
+Regular paper (8 pages)
+    Regular papers focus on new ideas or technologies you have developed that relate to Linked APIs.
+    We are very open-minded towards the workshop scope, and expect the same from you.
+   
+    Be original. Be creative. But most of all: be at least a little controversial – generate discussion.
+    We're not looking for the next Big Invention. Workshop participants want to discover and to learn.
+    
+    Details: http://lapis2012.linkedservices.org/call-for-papers/
+  
+Vision paper (4 pages)
+    Vision papers focus on creative ideas and concepts, even if there are no concrete results yet.
+    Having more questions than answers can in fact be a plus… if you find the right questions.
+    
+    Details: http://lapis2012.linkedservices.org/call-for-papers/
+  
+Wild ideas and discussion starters (1 paragraph)
+    Besides the traditional papers component, we would also like to run an experiment.
+    We want your wildest ideas and discussion topics to make LAPIS 2012 an interactive workshop.
+    
+    Details: http://lapis2012.linkedservices.org/call-for-papers/
+  
+
+Motivated for this challenge?
+-----------------------------
+
+Great! Visit us at http://lapis2012.linkedservices.org/
+Your deadline is March 9th, 2012, and the workshop will take place on May 27.
+
+LAPIS 2012 is organized by Craig Knoblock, Barry Norton, Ruben Verborgh, Sebastian Speiser, and Maria Maleshkova.
+LAPIS 2012 is driven by you, its participants. Come and discuss with us!
+
+http://lapis2012.linkedservices.org/

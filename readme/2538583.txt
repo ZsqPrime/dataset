@@ -1,0 +1,5 @@
+Project Description:
+A simple, lightweight, extendable text editor that will support a wide variety of file formats.
+
+README:
+Readme to be added here.

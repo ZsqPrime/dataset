@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+This is the public repository for the latest version of QualitySNP.
+
+For information, please contact harm.nijveen@wur.nl .

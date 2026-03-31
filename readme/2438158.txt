@@ -1,0 +1,9 @@
+Adventure.  Excitement.  Math.
+This file was modified by JetBrains RubyMine 4.0 for binding GitHub repository
+
+Project Description:
+Earn favor with the gods, go on epic quests, learn math.
+
+README:
+Adventure.  Excitement.  Math.
+This file was modified by JetBrains RubyMine 4.0 for binding GitHub repository

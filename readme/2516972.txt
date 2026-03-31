@@ -1,0 +1,10 @@
+This project is to produce all kinds of statistics about identifier use in
+Scala code.
+
+
+Project Description:
+Fun with identifiers in Scala programs
+
+README:
+This project is to produce all kinds of statistics about identifier use in
+Scala code.

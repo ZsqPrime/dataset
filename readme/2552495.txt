@@ -1,0 +1,8 @@
+Project Description:
+A service for registering leasecar milages
+
+README:
+TripData     
+
+A RestService that registers data from trips with a lease car.
+The start milage, end milage, start location and end location etc.

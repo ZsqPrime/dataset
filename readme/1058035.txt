@@ -1,0 +1,8 @@
+Biscuit - An API for the IRobot Create and Command Module
+
+
+Project Description:
+An API for the iRobot Create by the Penn State ACM student chapter
+
+README:
+Biscuit - An API for the IRobot Create and Command Module

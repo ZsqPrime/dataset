@@ -1,0 +1,5 @@
+Project Description:
+A simple, browser-based spelling game.
+
+README:
+Example here: http://natelong.net/bspell/

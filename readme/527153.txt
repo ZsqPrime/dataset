@@ -1,0 +1,17 @@
+Camomile might some day become a nice yet another music player for android
+
+The reason I started this project is to get a normal gapless and cue support
+in an open source program. However, this task requires doing all the decoding
+and media management by hand, since anroid media player is incapable of such tasks.
+So it would take some time...
+
+Project Description:
+gapless player for android
+
+README:
+Camomile might some day become a nice yet another music player for android
+
+The reason I started this project is to get a normal gapless and cue support
+in an open source program. However, this task requires doing all the decoding
+and media management by hand, since anroid media player is incapable of such tasks.
+So it would take some time...

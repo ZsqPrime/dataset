@@ -1,0 +1,13 @@
+DIAMOND gem
+
+This tiny gem can be used to process data in a releases text file from
+Diamond Comics Distributors (www.previewsworld.com).
+
+Project Description:
+Little ruby gem for parsing release text files from Diamond Comics
+
+README:
+DIAMOND gem
+
+This tiny gem can be used to process data in a releases text file from
+Diamond Comics Distributors (www.previewsworld.com).

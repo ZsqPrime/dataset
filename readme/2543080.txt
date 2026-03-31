@@ -1,0 +1,9 @@
+Project Description:
+Archetype Rails Application
+
+README:
+== Archetype
+(c)2012 Patrick Morgan
+
+== Credits
+Based upon the Ruby on Rails web application framework.

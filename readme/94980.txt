@@ -1,0 +1,7 @@
+Visit http://remotair.yoz.sk
+
+Project Description:
+Remotair is a concept of transmitting device inputs (gestures, accelerometer, camera etc.) into receiving flash or AIR application. Consists of one transmitting app installed on a mobile device or a tablet and one receiving app running on a PC. In order t
+
+README:
+Visit http://remotair.yoz.sk

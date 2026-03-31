@@ -1,0 +1,4 @@
+Project Description:
+A work distribution server inspired by the zmq::Titanic specification.
+
+README:

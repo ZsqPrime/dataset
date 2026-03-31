@@ -1,0 +1,5 @@
+Project Description:
+Solutions to "SICP" Exercises
+
+README:
+Here will be my solutions to "Structure and Interpretation of Computer Programs" Exercises.

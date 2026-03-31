@@ -1,0 +1,26 @@
+Project Description:
+Uses node.js and the twitter streaming API to host pages of live streaming twitter data
+
+README:
+This is a simple server that accesses tweets on http://localhost/stream/search_term_here
+
+It requires the following:
+jade
+express
+ntwitter
+socket.io
+
+TODO:
+Add node logger
+
+Version 1.2
+Allowed connection to echonest to get verified twitter accounts
+Pulls in tweets from verified accounts
+
+Version 1.1
+Added Jade templating
+Added Tweet limiting
+Seperated client javascript from server javascript
+
+Version 1.0
+Initial Commit

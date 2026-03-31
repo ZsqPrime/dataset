@@ -1,0 +1,18 @@
+Project Description:
+A  Greasemonkey Script that redesigns Gaia's Fishing Status Page using
+
+README:
+Project R,
+
+The project goal to update the current fishing stats pages on Gaiaonline.com
+
+Arima Begoun
+
+==== Versions ====
+
+* Version 0.4
+- Menu added.
+
+* Version 0.3
+- Holder and backgournd created, and working on all three pages.
+- Displaying the current content in the holder.

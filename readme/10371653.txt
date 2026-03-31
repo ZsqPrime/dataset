@@ -1,0 +1,5 @@
+Project Description:
+Used for teaching JPA
+
+README:
+Used to teach JPA.

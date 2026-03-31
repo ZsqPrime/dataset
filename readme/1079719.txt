@@ -1,0 +1,32 @@
+Requires:
+	ForgeModLoader.
+
+Features:
+  None currently learning Forge :)
+
+
+Todo: 
+  Learn Forge
+
+Developers:
+  xxroltsxx
+  Frostmute
+
+
+Project Description:
+Project Narna's Official Client Mod!
+
+README:
+Requires:
+	ForgeModLoader.
+
+Features:
+  None currently learning Forge :)
+
+
+Todo: 
+  Learn Forge
+
+Developers:
+  xxroltsxx
+  Frostmute

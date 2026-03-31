@@ -1,0 +1,12 @@
+#AgMIP Core Library
+
+TODO
+
+
+Project Description:
+Core library for AgMIP development
+
+README:
+#AgMIP Core Library
+
+TODO

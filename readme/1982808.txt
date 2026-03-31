@@ -1,0 +1,11 @@
+TODO: Put some stuff here!
+
+This app was created using CakePHP.
+
+Project Description:
+yet another soccer management app
+
+README:
+TODO: Put some stuff here!
+
+This app was created using CakePHP.

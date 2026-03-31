@@ -1,0 +1,22 @@
+GoDjango
+========
+
+Website for GoDjango.com
+
+
+
+Note: This is an old repo, code is no longer in use.
+
+
+Project Description:
+Website for GoDjango.com
+
+README:
+GoDjango
+========
+
+Website for GoDjango.com
+
+
+
+Note: This is an old repo, code is no longer in use.

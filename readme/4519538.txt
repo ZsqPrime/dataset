@@ -1,0 +1,34 @@
+Project Description:
+C API for TVDB (http://bit.ly/bE4F6V)
+
+README:
+Description:
+
+  libtvdb is a C library implementation of The TVDB.com API (http://thetvdb.com/wiki/index.php?title=Programmers_API).  It is still a work-in-progress.  
+
+  It's usually tested on Windows XP 32 bit, Ubuntu 32 & 64 bit, and Mac OS X.  It should be reasonably portable to other OSes as well.  You may find it in a broken state at any given moment.  It's still in very early development.  If it's broken, try moving the HEAD back until you find a working commit to play with...or, help me fix what's broken.  :-)
+
+  Currently, it should work well enough to retrieve mirrors, server time, and a list of series from a name (e.g., "xfiles" currently returns info on three xfiles related series).  The core libtvdb functions return just the raw XML string or save a zip file from TVDB.com.  You can either use your own XML parser or you can use libtvdb functions that parse the XML into libtvdb data structs (e.g., linked list, buffer, etc.).
+
+  There are still API functions that need to be added.  And, in the future, I hope to add functionality to unzip files from TVDB.com and parse the contents.
+
+Goals:
+
+- Cross platform ANSI C (minimum: Linux, Windows and Mac)
+- Build as static or shared library (32 or 64 bit)
+- Keep dependencies to a minimum (but don't reinvent the wheel)
+- Open source with MIT license
+  
+Build:
+
+*** NOTE: after running CMake, edit libtvdb/src/tvdb_key.h to include *your* TVDB API key.
+
+CMake 2.8 or higher is required as well as libCURL and libxml2.
+
+tvdb builds as a static lib by default but can be built as a shared lib (.so or .dll, for example) by running CMake with the following option...
+
+cmake -DSHARED_LIB:BOOL=ON ..
+
+  Windows:
+
+    - Edit INCLUDE and LIB environment variables to include the libCURL and libxml2 paths.  Eventually libxml2 will be optional but for now it's required.

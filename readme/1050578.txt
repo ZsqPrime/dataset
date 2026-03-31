@@ -1,0 +1,8 @@
+Repository for group projects assigned throughout the semester in CS 1567
+
+
+Project Description:
+None
+
+README:
+Repository for group projects assigned throughout the semester in CS 1567

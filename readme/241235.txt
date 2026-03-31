@@ -1,0 +1,19 @@
+== Considerating
+
+This is an application being developed for Josh Sucher.
+
+Currently running live at: http://considerating.com
+
+Released under the GPLv3.
+
+Project Description:
+Considerate or creepy? Josh wants to know.
+
+README:
+== Considerating
+
+This is an application being developed for Josh Sucher.
+
+Currently running live at: http://considerating.com
+
+Released under the GPLv3.

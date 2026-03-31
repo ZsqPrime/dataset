@@ -1,0 +1,20 @@
+rsyslog
+
+This is a rsyslog module.
+So old I don't remember it's original sources
+
+Needs heavy refactoring (PCS)
+
+
+
+
+Project Description:
+Puppet Rsyslog Module
+
+README:
+rsyslog
+
+This is a rsyslog module.
+So old I don't remember it's original sources
+
+Needs heavy refactoring (PCS)

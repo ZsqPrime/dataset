@@ -1,0 +1,8 @@
+Shaun Meyer's backup repo for CSCI homeworks.
+
+
+Project Description:
+CSCI Homeworks
+
+README:
+Shaun Meyer's backup repo for CSCI homeworks.

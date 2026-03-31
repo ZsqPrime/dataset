@@ -1,0 +1,5 @@
+Project Description:
+Some Elgg coding for the Center of Global Politics
+
+README:
+Start from the bottom!

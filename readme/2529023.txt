@@ -1,0 +1,20 @@
+Project Description:
+A gem to make using gosu even easier.
+
+README:
+h1. GOSU Extensions
+
+GOSU is a great Ruby game framework.
+
+This gem sets out to already provide basic objects and capabilities for use with gosu.
+
+h2. Quick examples
+
+Take a look at
+
+@bundle exec ruby examples/tree_run/run.rb@
+@bundle exec ruby examples/tank_vs_spaceship/run.rb@
+@bundle exec ruby examples/cern_horror/run.rb@
+
+to get a feel what you can do.
+(And then at the code for how easy it is ;) )

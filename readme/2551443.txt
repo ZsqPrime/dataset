@@ -1,0 +1,8 @@
+Project Description:
+Cookbooks for Chef
+
+README:
+Cookbooks
+---
+
+KATALUS specific cookbooks

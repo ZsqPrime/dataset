@@ -1,0 +1,13 @@
+Project Description:
+Team 2035 Robo Rockin Bots 2012 Code
+
+README:
+FIRST Team 2035 robot code
+
+Season 2012
+
+
+
+This github repository houses the Netbeans 7.1 project of the code that
+
+runs on the cRIO for the robotics competition.

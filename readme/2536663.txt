@@ -1,0 +1,5 @@
+Project Description:
+Uses a feature based neural network model to predict weather for a location and date range for recommending vacation plans
+
+README:
+Uses a feature based neural network model to predict weather for a location and date range for recommending vacation plans

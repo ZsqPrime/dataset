@@ -1,0 +1,7 @@
+Project Description:
+Examples apps for Railo WebSocket Gateway Extension 
+
+README:
+h2. Railo Websocket Gateway Extension Sample Apps
+
+p. Examples have been moved into the extension repository. See https://github.com/andreacfm/WebSocket-Gateway-Extension

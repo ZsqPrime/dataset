@@ -1,0 +1,6 @@
+
+
+Project Description:
+D binding for Redis client `hiredis`
+
+README:

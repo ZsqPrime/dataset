@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+Simulation of silver nanocrystal growth.
+
+Usage:
+make
+./kmc

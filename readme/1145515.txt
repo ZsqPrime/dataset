@@ -1,0 +1,6 @@
+
+
+Project Description:
+This project is an update of BackendPro an ACL Library for Codeigniter, This library is similar to PHPGACL.
+
+README:

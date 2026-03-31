@@ -1,0 +1,11 @@
+Project Description:
+Control Panel for the built-in iSight webcam for Mac's.
+
+README:
+iSightControlPanel
+==================
+
+This tool will allow you to control the settings of the iSight camera built in
+many Mac computers.
+
+Early stage of development.

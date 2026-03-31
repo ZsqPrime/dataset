@@ -1,0 +1,330 @@
+
+pix_openni (0.12 experimenting...)
+======================================
+pure data / Gem external to get multiple Kinect rgb and depth streams, single device skeleton tracking and hand tracking
+
+* depends on OpenNI, NITE, SensorKinect
+
+2011/2012 by Matthias Kronlachner
+__________________________________________________________
+
+::INSTALL::
+tested under Ubuntu, OSX 10.8.2 and Windows 7
+
+
+OSX: 
+you don't have to compile the external for yourself -> use included binaries from build folder (copy pix_openni.pd_darwin in pix_openni folder)
+you still need OpenNI, NITE and SensorKinect!!
+* 	download latest OpenNI and NITE unstable build for OSX from http://www.openni.org/Downloads/OpenNIModules.aspx, 
+	sudo ./install.sh in the extracted folders
+*	install SensorKinect from https://github.com/avin2/SensorKinect
+
+
+WINDOWS:
+you don't have to compile the external for yourself -> use included binaries from build folder (copy pix_openni.dll in pix_openni folder)
+install OpenNI, NITE and SensorKinect
+
+http://www.openni.org/Downloads/OpenNIModules.aspx
+(OpenNI Binaries, unstable, x86 - 32 bit)
+
+Binary of NITE
+http://www.openni.org/Downloads/OpenNIModules.aspx
+(OepnNI Compiliant Middleware Binaries, x86 - 32 Bit)
+
+Binary of avin2 / SensorKinect
+https://github.com/avin2/SensorKinect/downloads
+SensorKinect093-Bin-Win32-v5.1.2.1.msi
+
+
+Linux:
+*	get/install pd and Gem (http://puredata.info)
+
+*	get and install OpenNI, NITE and the hacked Primesense Kinect driver
+	--> instruction: https://github.com/avin2/SensorKinect
+	http://www.openni.org/Downloads/OpenNIModules.aspx
+
+*	edit Makefile for right path to Gem, pd and OpenNI sources
+
+*	#.../pix_openni> make
+
+*	have a look at the pix_openni-help.pd file!
+
+:: Usage ::
+
+*	Have a look at my pd-kinect-examples at Github: http://github.com/kronihias/pd-kinect-examples
+
+Hand Tracking:
+
+to track multiple Hands edit following File: 
+	/usr/etc/primesense/Hands_*/Nite.ini
+and add or uncomment:
+
+	[HandTrackerManager]
+	AllowMultipleHands=1
+	TrackAdditionalHands=1
+
+_________________
+Changelog
+
+0.12	* multiple Kinect support (just for rgb/depth capture, not for tracking -> OpenNI limitation!)
+
+0.11	* improved playback/record functionality -> now it is possible to switch between live and playback
+		* bugfixes
+
+0.10	* various bugfixes
+		* depth_output simplified - just rgba and yuv available ->
+		* ATTENTION INCOMPABILITY: "viewable" depth output outsourced into pix_depth2rgba
+		* record and playback functionality
+		* user coloring
+		* skeleton settable smoothing factor
+		
+0.03	* switchable OSC Style output of tracking data /skeleton/joint/r_hand id x y z, /hand/coords id x y z
+		* switchable real-world coordinate output in [mm]
+		* switchable registration between rgb image and depth image -> change point of view from depth camera to match with rgb image (overlay)
+		* improved help file
+
+0.02
+		* OSX binaries
+		* output rgb and depth stream simultaneously
+		* hand tracking
+		* change image and depth modes
+		* init without .xml init file
+		* fixed depth to rgb conversion for output_mode 1 & 2
+
+
+0.01
+		* skeleton and rgb or depth stream output
+
+ ________________
+:::THINGS TO DO:::
+
+* 	playback speed is still a mystery!
+
+
+*	motor and led control as well as audio is currently not supported from SensorKinect
+	you can do that with pd external freenect: http://github.com/kronihias/freenect
+
+
+questions: m.kronlachner@gmail.com
+
+
+
+Project Description:
+pure data / Gem external to get Kinect rgb and depth streams, skeleton tracking, hand tracking
+
+README:
+
+
+pix_openni (0.12 experimenting...)
+
+======================================
+
+pure data / Gem external to get multiple Kinect rgb and depth streams, single device skeleton tracking and hand tracking
+
+
+
+* depends on OpenNI, NITE, SensorKinect
+
+
+
+2011/2012 by Matthias Kronlachner
+
+__________________________________________________________
+
+
+
+::INSTALL::
+
+tested under Ubuntu, OSX 10.8.2 and Windows 7
+
+
+
+
+
+OSX: 
+
+you don't have to compile the external for yourself -> use included binaries from build folder (copy pix_openni.pd_darwin in pix_openni folder)
+
+you still need OpenNI, NITE and SensorKinect!!
+
+* 	download latest OpenNI and NITE unstable build for OSX from http://www.openni.org/Downloads/OpenNIModules.aspx, 
+
+	sudo ./install.sh in the extracted folders
+
+*	install SensorKinect from https://github.com/avin2/SensorKinect
+
+
+
+
+
+WINDOWS:
+
+you don't have to compile the external for yourself -> use included binaries from build folder (copy pix_openni.dll in pix_openni folder)
+
+install OpenNI, NITE and SensorKinect
+
+
+
+http://www.openni.org/Downloads/OpenNIModules.aspx
+
+(OpenNI Binaries, unstable, x86 - 32 bit)
+
+
+
+Binary of NITE
+
+http://www.openni.org/Downloads/OpenNIModules.aspx
+
+(OepnNI Compiliant Middleware Binaries, x86 - 32 Bit)
+
+
+
+Binary of avin2 / SensorKinect
+
+https://github.com/avin2/SensorKinect/downloads
+
+SensorKinect093-Bin-Win32-v5.1.2.1.msi
+
+
+
+
+
+Linux:
+
+*	get/install pd and Gem (http://puredata.info)
+
+
+
+*	get and install OpenNI, NITE and the hacked Primesense Kinect driver
+
+	--> instruction: https://github.com/avin2/SensorKinect
+
+	http://www.openni.org/Downloads/OpenNIModules.aspx
+
+
+
+*	edit Makefile for right path to Gem, pd and OpenNI sources
+
+
+
+*	#.../pix_openni> make
+
+
+
+*	have a look at the pix_openni-help.pd file!
+
+
+
+:: Usage ::
+
+
+
+*	Have a look at my pd-kinect-examples at Github: http://github.com/kronihias/pd-kinect-examples
+
+
+
+Hand Tracking:
+
+
+
+to track multiple Hands edit following File: 
+
+	/usr/etc/primesense/Hands_*/Nite.ini
+
+and add or uncomment:
+
+
+
+	[HandTrackerManager]
+
+	AllowMultipleHands=1
+
+	TrackAdditionalHands=1
+
+
+
+_________________
+
+Changelog
+
+
+
+0.12	* multiple Kinect support (just for rgb/depth capture, not for tracking -> OpenNI limitation!)
+
+
+
+0.11	* improved playback/record functionality -> now it is possible to switch between live and playback
+
+		* bugfixes
+
+
+
+0.10	* various bugfixes
+
+		* depth_output simplified - just rgba and yuv available ->
+
+		* ATTENTION INCOMPABILITY: "viewable" depth output outsourced into pix_depth2rgba
+
+		* record and playback functionality
+
+		* user coloring
+
+		* skeleton settable smoothing factor
+
+		
+
+0.03	* switchable OSC Style output of tracking data /skeleton/joint/r_hand id x y z, /hand/coords id x y z
+
+		* switchable real-world coordinate output in [mm]
+
+		* switchable registration between rgb image and depth image -> change point of view from depth camera to match with rgb image (overlay)
+
+		* improved help file
+
+
+
+0.02
+
+		* OSX binaries
+
+		* output rgb and depth stream simultaneously
+
+		* hand tracking
+
+		* change image and depth modes
+
+		* init without .xml init file
+
+		* fixed depth to rgb conversion for output_mode 1 & 2
+
+
+
+
+
+0.01
+
+		* skeleton and rgb or depth stream output
+
+
+
+ ________________
+
+:::THINGS TO DO:::
+
+
+
+* 	playback speed is still a mystery!
+
+
+
+
+
+*	motor and led control as well as audio is currently not supported from SensorKinect
+
+	you can do that with pd external freenect: http://github.com/kronihias/freenect
+
+
+
+
+
+questions: m.kronlachner@gmail.com

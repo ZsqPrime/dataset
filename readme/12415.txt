@@ -1,0 +1,68 @@
+Project Description:
+S3 Uploader Rails Example (uses the jQuery-File-Upload plugin)
+
+README:
+== S3 Uploader Rails Example
+
+<b>Check the s3_direct_upload gem https://github.com/waynehoover/s3_direct_upload for an easier solution using Amazon's new CORS feature.</b>
+
+Based on the great jQuery File Upload plugin: http://blueimp.github.com/jQuery-File-Upload/
+
+Features:
+
+* No flash :)
+* Uploads straight to S3 without hitting the server first
+* File Progress Indicator (Chrome, Firefox, Safari)
+* Multiple file selection, parallel upload (Chrome, Firefox, Safari)
+* Drag'n'Drop (Chrome, Firefox 4+, Safari 5+ - buggy on windows)
+* Internet Explorer and Opera fall back to iframe transport single file uploads
+
+Tested with Chrome, Firefox, Safari, Opera and IE 8
+
+Gets around S3's lacking cross domain access header support by storing the upload form on s3, embedded in an iframe.
+Upload progress is displayed on the host server by utilizing postMessage browser communication.
+
+After a file is uploaded a post ajax request is made to create a resource for the uploaded file in the db.
+
+== Getting Started
+
+1. Install gems
+    bundle install
+
+2. Migrate database
+    bundle exec rake db:migrate
+
+3. Make sure the following environment variables are set:
+    ENV['S3_UPLOADER_BUCKET']
+    ENV['S3_UPLOADER_ACCESS_KEY']
+    ENV['S3_UPLOADER_SECRET_ACCESS_KEY']
+
+4. Set your server host in app/assets/javascripts/s3_uploader/s3_uploader.js:
+    var host = 'http://yourdomain.com';
+
+5. Deploy uploader javascript and form to s3
+    bundle exec rake uploader:deploy
+
+6. Run or deploy the app :)
+
+
+== Notes
+
+* The uploader location on s3 is currently hardcoded to /uploader.
+
+* The path for the uploaded files defaults to "#{controller_name}/:uuid" and can be changed in the s3_uploader
+  helper options via the :uploaded_files_path parameter. Currently the path must have the :uuid placeholder in it.
+  It is replaced with a random string for each uploaded file, to obfuscate the file locations and to prevent overwriting existing files.
+
+* There is no progress bar in Safari yet, as I'm using the progress tag which is not supported by Safari.
+  Feel free to add a fallback bar and send me a pull request. ;-)
+
+* For some reason in Chrome only the last upload of multiple parallel uploads can be cancelled. Other uploads can be removed from the progress
+  list, but their upload still continues. Firefox doesn't show this odd behaviour. All uploads can be canceled there as expected.
+  I filed a bug here: http://code.google.com/p/chromium/issues/detail?can=2&start=0&num=100&q=&colspec=ID%20Pri%20Mstone%20ReleaseBlock%20Area%20Feature%20Status%20Owner%20Summary&groupby=&sort=&id=114879
+
+* S3 is very particular about what params have to accompany a file upload. Specifically, the policy, the bucket, the signature, & the access key.
+
+* The signature is the trickiest to generate. The signature is a Base64 encoded hash of the S3 policy using your S3 secret access key.
+  This signature in the s3_signature method in the UploadsHelper class. The s3_uploader method in the UploadsHelper class generates the
+  iframe with the necessary params.

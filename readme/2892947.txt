@@ -1,0 +1,7 @@
+Project Description:
+Bignum manipulation support for nifs
+
+README:
+bignum support functions for nif.
+
+bit module serve as an example on how to use the bignum support functions

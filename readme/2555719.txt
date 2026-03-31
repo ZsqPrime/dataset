@@ -1,0 +1,5 @@
+Project Description:
+Snippet plugin for cloud9ide (currently work in progress)
+
+README:
+Main file is under heavy development, so don't be afraid when you read it :)

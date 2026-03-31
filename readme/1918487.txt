@@ -1,0 +1,8 @@
+Go bindings for libudev.
+
+
+Project Description:
+Go bindings for libudev
+
+README:
+Go bindings for libudev.

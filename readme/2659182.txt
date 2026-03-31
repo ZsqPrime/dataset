@@ -1,0 +1,8 @@
+Project Description:
+A neat, touch-friendly, and human-friendly songbook/sheet music organizer written as an HTML5 offline app
+
+README:
+Repo moved
+==========
+
+The songbook is alive! But the repo lives at https://github.com/AnotherKamila/songbook-web.

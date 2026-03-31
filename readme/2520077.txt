@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+Hello, for the file sms.php make sure the you change necessary varibles within the file to match your mysql database.
+As well you may need to know what Incident Id of the report, this is to make sure you get the correct report message sent to you.

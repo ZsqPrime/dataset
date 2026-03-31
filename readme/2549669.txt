@@ -1,0 +1,5 @@
+Project Description:
+Joomla 1.7 plugin to beautify html output source
+
+README:
+Pritty-HTML-Out Readme

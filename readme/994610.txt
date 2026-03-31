@@ -1,0 +1,7 @@
+Project Description:
+Art-Net server and client module for Node.JS
+
+README:
+# artnet-node
+## Art-Net Library for NodeJS
+##### BrianMMcClain

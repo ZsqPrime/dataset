@@ -1,0 +1,12 @@
+Should be installed into ~/.r3volut1oner
+
+Some my scripts, for terminal and other configs.
+
+
+Project Description:
+Saving some configs and other for many comuters
+
+README:
+Should be installed into ~/.r3volut1oner
+
+Some my scripts, for terminal and other configs.

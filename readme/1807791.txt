@@ -1,0 +1,6 @@
+
+
+Project Description:
+Ski school management software
+
+README:

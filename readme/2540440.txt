@@ -1,0 +1,88 @@
+Project Description:
+Patches für das OTR-Schneidescript von http://www.siggimania4u.de/otrcut.html
+
+README:
+otrcut.sh
+
+# Achtung: Unmaintained!
+Kompatibilität mit Sniplist (aka cutlist.at 2018) ist gegeben.
+Dieses Script Benötigt [Avidemux2](http://avidemux.sourceforge.net/) (aka 2.6), welches mehrere bekannte Sicherheitslücken aufweist. Für einen sinnvollen Betrieb müsste Kompatilibität mit Avidemux3 (aka 2.7) hergestellt werden, welches leider eine andere Ansteuerung benötigt.
+
+Patchset: Florian Knodt <www.adlerweb.info>
+Original: http://www.siggimania4u.de/otrcut.html
+
+# Enthaltene Patche:
+
+## HD-Video-Patch
+Erlaubt es HD-Videos zu schneiden, welche mit 50FPS aufgezeichnet wurden. Nur mit avidemux getestet.
+
+## Cutlist-Space-Patch
+Cutlisten, welche ein Leerzeichen im Dateinamen haben, führen nicht mehr zu Programmabbrüchen
+
+## File-Space-Patch
+Es können Eingabedateien mit Leerzeichen im Dateinamen verwendet werden.
+Um dies zu ermöglichen wurde die Bedienung des Programms angepasst: Bisher wurden mehrere Dateien durch Leerzeichen getrennt nach -i angegeben:
+    ./otrcut.sh -i datei1.avi datei2.avi
+
+Nun wird jede Datei mit -i eingeleitet:
+
+    ./otrcut.sh -i datei1.avi -i datei2.avi -i "datei 3.avi"
+
+## Temp-Space-Patch
+Temporäre Pfade, welche Leerzeichen enthalten, konnten im Original zu Fehlfunktionen oder Datenverlust führen
+
+==========================
+Dieses Script schneidet OTR-Dateien anhand der Cutlist von http://cutlist.at.
+Es können entweder die Tools avidemux oder avisplit/avimerge benutzt werden.
+Avidemux kann im Gegensatz zu avisplit auch zwischen Keyframes schneiden.
+Hier die Anwendung:
+
+otrcut.sh [optionen] -i film.mpg.avi
+
+Optionen:
+
+-i, --input [arg]   Input Datei/Dateien
+
+-a, --avisplit      Avisplit und avimerge anstelle von avidemux verwenden
+
+-e, --error     Bei Fehlern das Script beenden
+
+--tmp [arg]     TMP-Ordner angeben (Standard: /tmp/), In diesem Ordner wird noch ein Ordner "otrcut" angelegt, ACHTUNG: ALLE Daten in \$tmp werden gelöscht!!!
+
+-l, --local         Lokale Cutlists verwenden (Cutlists werden im aktuellen Verzeichnis gesucht)
+
+--delete        Quellvideo nach Schneidevorgang löschen ACHTUNG: Falls es sich bei der Quelle um ein OtrKey handelt wird dies auch gelöscht!!!
+
+-o, --output [arg]  Ausgabeordner wählen (Standard "./cut")
+
+-ow, --overwrite    Schon existierende Ausgabedateien überschreiben
+
+-b, --bewertung     Bewertungsfunktion aktivieren
+
+-p, --play      Zusammen mit "-b, --bewertung" einsetzbar, startet vor dem Bewerten das Video in einem Videoplayer (Wird in der Variablen \$player definiert)
+
+-w, --warn      Warnung bezüglich Löschung aller Dateien in \$tmp unterdrücken
+
+--toprated      Verwendet die best bewertetste Cutlist
+
+-v, --verbose       Ausführliche Ausgabe von avidemux bzw. avimerge/avisplit aktivieren
+
+--nosmart       So wird das --force-smart-Argument für avidemux abgeschaltet.
+
+--personal      Die persönliche ID von cutlist.at zum Bewerten benutzen
+
+-av, --avidemux     Bei Verwendung von Avidemux <=2.4 muss diese Schalter gesetzt werden.
+
+-c, --copy      Wenn $toprated=yes, und keine Cutlist gefunden wird, $film nach $output kopieren
+
+--vcodec [arg]          Videocodec (avidemux) spezifizieren. Wenn nicht gesetzt, dann "copy". Mögliche Elemente für [arg]: Divx/Xvid/FFmpeg4/VCD/SVCD/DVD/XVCD/XSVCD/COPY
+
+-u, --update        Nach einer neuen Version von OtrCut suchen
+
+-h, --help      Diese Hilfe ^^
+
+Author: Daniel Siegmanski
+Homepage: http://www.siggimania4u.de
+Cutlists: http://www.cutlist.de, http://www.cutlist.at
+
+Danke an MKay für das Aspect-Ratio-Script

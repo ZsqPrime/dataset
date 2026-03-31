@@ -1,0 +1,234 @@
+== Linux tcpdrop kernel module ==
+
+(c) 2012 Roman Arutyunyan <arut@qip.ru>
+
+
+Module:
+======
+This module lets you drop TCP connections from 
+working Linux system. It also supports unscheduling 
+TIME_WAIT sockets.
+
+The module creates pseudo-file /proc/net/tcp_drop
+which expects input of the following format:
+
+saddr:sport daddr:dport
+
+Note: Spaces between the two can be of any type & size.
+
+Requirements:
+============
+
+Linux kernel 3.0.0
+
+Build & install:
+===============
+
+Untar/ungzip & cd to module directory & just run make.
+
+Load module:
+
+sudo insmod ./tcp_drop.ko
+
+Unload module:
+
+sudo rmmod tcp_drop
+
+Note: remember you need root privileges to write to /proc/net/tcp_drop.
+
+Example1:
+========
+
+We have 4 connected sockets by IMAP client (port 143). Let's drop the last one:
+
+netstat -n|grep ESTABLISHED|grep 143
+
+tcp        0      0 10.31.1.141:51292       192.168.0.1:143        ESTABLISHED
+tcp        0      0 10.31.1.141:51293       192.168.0.1:143        ESTABLISHED
+tcp        0      0 10.31.1.141:51436       192.168.0.1:143        ESTABLISHED
+                    ^.............copy this...............^
+
+Just copy the middle part of string (incl. tabs/spaces) to /proc/net/tcp_drop:
+
+
+echo "10.31.1.141:51436       192.168.0.1:143" > /proc/net/tcp_drop
+
+
+Now it'dead:
+
+netstat -n|grep ESTABLISHED|grep 143
+tcp        0      0 10.31.1.141:51292       192.168.0.1:143        ESTABLISHED
+tcp        0      0 10.31.1.141:51293       192.168.0.1:143        ESTABLISHED
+
+
+IMAP client has received a socket error & will reconnect when needed.
+
+Example2:
+========
+
+Let's kill a TIME_WAIT socket.
+I've just created a TIME_WAIT socket with a netcat connection to localhost:8080:
+
+netstat -n|grep TIME_WAIT
+tcp        0      0 127.0.0.1:34790         127.0.0.1:8080          TIME_WAIT
+                    ^....................................^
+
+
+Here's how to kill it (it's better to say 'unschedule'):
+
+echo "127.0.0.1:34790         127.0.0.1:8080" > /proc/net/tcp_drop
+
+
+Let's see:
+
+netstat -n|grep TIME_WAIT
+
+<nothing here>
+
+IPv6 support:
+============
+
+If built for non-ancient (>2.6.19) kernel IPv6 is fully supported.
+Dropping IPv6 connections is done the same way as IPv4:
+
+echo "::1:34717               ::1:8080" > /proc/net/tcp_drop
+
+Standard representation of IPv6 address with port ([ipv6addr]:port)
+is also supported:
+
+echo "[::1]:34717               [::1]:8080" > /proc/net/tcp_drop
+
+
+What server/client code receives:
+================================
+
+All code which has been using the socket killed
+receives network error (it's like receiving TCP RESET):
+
+telnet localhost 8080
+Trying ::1...
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+Connection closed by foreign host.
+
+
+
+
+Project Description:
+Linux implementation of tcpdrop (dropping TCP sockets on working system)
+
+README:
+== Linux tcpdrop kernel module ==
+
+(c) 2012 Roman Arutyunyan <arut@qip.ru>
+
+
+Module:
+======
+This module lets you drop TCP connections from 
+working Linux system. It also supports unscheduling 
+TIME_WAIT sockets.
+
+The module creates pseudo-file /proc/net/tcp_drop
+which expects input of the following format:
+
+saddr:sport daddr:dport
+
+Note: Spaces between the two can be of any type & size.
+
+Requirements:
+============
+
+Linux kernel 3.0.0
+
+Build & install:
+===============
+
+Untar/ungzip & cd to module directory & just run make.
+
+Load module:
+
+sudo insmod ./tcp_drop.ko
+
+Unload module:
+
+sudo rmmod tcp_drop
+
+Note: remember you need root privileges to write to /proc/net/tcp_drop.
+
+Example1:
+========
+
+We have 4 connected sockets by IMAP client (port 143). Let's drop the last one:
+
+netstat -n|grep ESTABLISHED|grep 143
+
+tcp        0      0 10.31.1.141:51292       192.168.0.1:143        ESTABLISHED
+tcp        0      0 10.31.1.141:51293       192.168.0.1:143        ESTABLISHED
+tcp        0      0 10.31.1.141:51436       192.168.0.1:143        ESTABLISHED
+                    ^.............copy this...............^
+
+Just copy the middle part of string (incl. tabs/spaces) to /proc/net/tcp_drop:
+
+
+echo "10.31.1.141:51436       192.168.0.1:143" > /proc/net/tcp_drop
+
+
+Now it'dead:
+
+netstat -n|grep ESTABLISHED|grep 143
+tcp        0      0 10.31.1.141:51292       192.168.0.1:143        ESTABLISHED
+tcp        0      0 10.31.1.141:51293       192.168.0.1:143        ESTABLISHED
+
+
+IMAP client has received a socket error & will reconnect when needed.
+
+Example2:
+========
+
+Let's kill a TIME_WAIT socket.
+I've just created a TIME_WAIT socket with a netcat connection to localhost:8080:
+
+netstat -n|grep TIME_WAIT
+tcp        0      0 127.0.0.1:34790         127.0.0.1:8080          TIME_WAIT
+                    ^....................................^
+
+
+Here's how to kill it (it's better to say 'unschedule'):
+
+echo "127.0.0.1:34790         127.0.0.1:8080" > /proc/net/tcp_drop
+
+
+Let's see:
+
+netstat -n|grep TIME_WAIT
+
+<nothing here>
+
+IPv6 support:
+============
+
+If built for non-ancient (>2.6.19) kernel IPv6 is fully supported.
+Dropping IPv6 connections is done the same way as IPv4:
+
+echo "::1:34717               ::1:8080" > /proc/net/tcp_drop
+
+Standard representation of IPv6 address with port ([ipv6addr]:port)
+is also supported:
+
+echo "[::1]:34717               [::1]:8080" > /proc/net/tcp_drop
+
+
+What server/client code receives:
+================================
+
+All code which has been using the socket killed
+receives network error (it's like receiving TCP RESET):
+
+telnet localhost 8080
+Trying ::1...
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+Connection closed by foreign host.

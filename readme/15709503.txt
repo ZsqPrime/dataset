@@ -1,0 +1,11 @@
+Project Description:
+Mongolab $resource adapter for angular.js
+
+README:
+# Depreciated
+
+
+
+This project is depreciated and not maintained any longer.
+
+Use https://github.com/pkozlowski-opensource/angularjs-mongolab-promise instead.

@@ -1,0 +1,15 @@
+Project Description:
+Extension for Flask Which Sends E-mails to Administrators Whenever a 500 Error Has Occurred
+
+README:
+# Flask-ErrorMail
+
+See documentation at http://packages.python.org/Flask-ErrorMail/
+
+## Installing
+
+    easy_install Flask-ErrorMail
+
+or
+
+    pip install Flask-ErrorMail

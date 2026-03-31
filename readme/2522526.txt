@@ -1,0 +1,8 @@
+Project Description:
+Aplicación base para proyectos muy sencillos
+
+README:
+BaseApp
+=======
+
+Aplicación base para proyectos muy sencillos

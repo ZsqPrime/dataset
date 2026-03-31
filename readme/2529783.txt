@@ -1,0 +1,8 @@
+Project Description:
+
+
+README:
+requires OpenGL and SDL
+
+run ./build.sh
+then, run ./testapp

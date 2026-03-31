@@ -1,0 +1,11 @@
+Project Description:
+A ruby CLI ipod manger.  Backed by gnupod.
+
+README:
+rupod 
+  - A ruby CLI ipod manger with a gnupod backend
+
+dependencies
+  - gnupod
+  - ruby
+  - an ipod (?)

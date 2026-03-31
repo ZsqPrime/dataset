@@ -1,0 +1,5 @@
+Project Description:
+Fully customizable CMS with complete backend
+
+README:
+This is a simple application, hosted on www.las7encinas.com

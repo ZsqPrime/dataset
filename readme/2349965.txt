@@ -1,0 +1,4 @@
+Project Description:
+a chrome extension that automatically searches and finds data for images of products
+
+README:

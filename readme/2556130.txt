@@ -1,0 +1,5 @@
+Project Description:
+Examples of how to write rspec-puppet
+
+README:
+# This is a simple module intended to explain how rspec-puppet and travis-ci work #

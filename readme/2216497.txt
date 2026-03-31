@@ -1,0 +1,20 @@
+Desktop client for LinguaLeo.ru english learning service. 
+Allows you to translate english words and add to your personal dictionary at service.
+In future support for COM/Arduino keyboard will be added
+Tested on Qt 4.7.4, QMake 2.01a, gcc 4.6.1
+
+Build information:
+Open .pro file in Qt Creator, specify active run configuration to src, build and run.
+
+
+Project Description:
+Desktop client for lingualeo.ru with support of reading from COM port.
+
+README:
+Desktop client for LinguaLeo.ru english learning service. 
+Allows you to translate english words and add to your personal dictionary at service.
+In future support for COM/Arduino keyboard will be added
+Tested on Qt 4.7.4, QMake 2.01a, gcc 4.6.1
+
+Build information:
+Open .pro file in Qt Creator, specify active run configuration to src, build and run.

@@ -1,0 +1,8 @@
+Spyder Trap room Turntable.fm bot.
+
+
+Project Description:
+Spyder Trap's official turntable.fm bot.
+
+README:
+Spyder Trap room Turntable.fm bot.

@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+here's a collection of spikes, mainly Eclipse projects.

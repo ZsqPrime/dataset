@@ -1,0 +1,35 @@
+Project Description:
+A helper application for specific cryptography problems (which I encountered in university subject 'Codes and Security')
+
+README:
+!! READ !!
+
+For now, the application supports Czech language only.
+
+
+
+This Java application helps you with certain tasks, which I encountered in university subject called 'Codes and Security'.
+
+
+
+It can:
+
+	- analyze given encrypted text 
+
+	- show the index of coincidence of the text
+
+	- show a table of character frequencies clearly
+
+	- show a graph chart rendering the frequencies
+
+	- add English or Czech character frequencies next to the text frequencies
+
+	- offset the English/Czech character frequencies to ease discovering 'shift ciphers'
+
+
+
+Requirements
+
+------------
+
+Java Environment 7 (JRE 7)

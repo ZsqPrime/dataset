@@ -1,0 +1,143 @@
+(NB: If you see strange escape characters or other line noise in this file,
+or in fact any other file or output of this package, you forgot to
+switch your system to UTF-8.)
+
+«HomEvenT» is a contraction of "home event", plus funky capitalization.
+Its principal author is Matthias Urlichs <matthias@urlichs.de>.
+
+
+I wrote HomEvenT because while playing around with some home automation
+stuff, I found that none of the free systems out there fit my needs
+particularly well, plus they are not talking to each other.
+
+In my home, I really need a heterogenous infrastructure: some switches
+need to be wireless, in others existing wired switches need to survive;
+some devices can only be controlled by infrared, some are in places
+where nothing except stringing some wire would work.
+
+
+This code uses Unicide, more specifically UTF-8, quite liberally.
+For this reason it's imperative to teach Python that the default character
+set is UTF-8, not ASCII. Thus, you need to add the following code to
+/etc/python2.7/sitecustomize.py:
+
+    import sys
+    try:
+    	sys.setdefaultencoding("utf-8")
+    except AttributeError:
+    	pass
+
+This change is very unlikely to be a problem.
+
+
+The rest of the documentation is in the doc/ subdirectory.
+You'll probably want to start with the tutorial.
+
+Interactive tests and experiments are easy:
+just type “make i”, then “help”.
+
+
+The components I'm concerned with are:
+
+* FS20
+
+This is a German wireless system operating in the 868-MHz range. It's
+not at all secure and generally doesn't use two-way handshakes. Wall
+switches cost €15, a heating controller is €40, so it's not too bad.
+
+There's a FS20 controller for USB, whcih I'm currently using. Alternately,
+you can buy a sender and a receiver, and connect them to your computer
+directly. Somehow. I plan to use an USB sound interface for that, because
+I want to control the heating system directly, and the commercial
+controller doesn't let you do that.
+
+That controller is supported by a large and well-maintained server
+written in Perl. The main problem I have with it is that I do not like
+Perl :-/ the other is that it's 100% synchronous code, which does not
+integrate at all well with the 1wire bus.
+
+* Wago
+
+This is a industrial controller made by Wago GmbH, Germany.
+It runs Linux and it has decent pluggable I/O modules for most needs.
+The daemon I wrote to run on that device could probably be adapted quite
+easily to use standard Linux GPIO instead.
+
+I'm intentionally not using MODBUS or some other standard (which these
+controllers also support) since these buses don't afford timed outputs.
+It's imperative that my watering system closes the valves after the
+prescribed time, however, even if the network goes down …
+
+* 1-wire
+
+This is a two-wire bus system -- one of these wires is Ground, so
+apparently it doesn't count. ☺ In practice, you do need a separate power
+supply. Personally, I use a cheap shielded four-wire cable (LIYCY).
+
+The bus can be connected rather haphazardly if your wires are not *that*
+long, or you can use special branch controllers if you need to be more
+careful. It works admirably well in my house.
+
+The system is not that fast. In practice, you can poll a simple on/off
+sensor 250 times a second, so the limit with cheap sensors is 40
+switches on a bus — 100, if you get somewhat-more-expensive "event
+counter" chips instead of dumb sensors. You can also connect a variety
+of sensors and A/D converters to that bus, but not at the same time
+because doing so will block the bus for up to a second. :-/
+
+On the plus side: the peripherals, including voltage and (calibrated!)
+temperature sensors, are really cheap, and a little bit of electronics
+knowledge goes a long way. (Who needs "when's sunrise" code, when you
+can add a real daylight sensor to your system for less than €5?) There
+are also inexpensive LCD panels for remote status displays which don't
+warrant their own control computer.
+
+Linux support for 1-wire comes either as an incomplete kernel module,
+or a user-space daemon (<http://owfs.sourceforge.net>) with support for
+networking and multiple scripting languages. I'm using the latter.
+
+* LIRC
+
+I use infrared to control the window blinds. Good motors cost around
+€110 wholesale (or €210 retail ☹).
+
+LIRC is a reasonably integral part of most modern Linux distributions,
+so the idea to use it as a simple way to control a couple of Linux
+programs ("if I turn off the room lights in my living room at night,
+please pause Rhythmbox and/or Totem, turn off power to the stereo, and
+let the computer hibernate") has a lot of appeal... and if the lights
+are not controlled centrally, see above for the cheap light sensor.
+
+Other systems and projects
+--------------------------
+
+* plutohome
+
+Really large. Not my kettle of fish: writing my own system is bound to
+be quicker than figuring out how to hook 1-wire sensors into this beast
+of hundreds of C++ classes.
+
+* misterhome
+
+Looks interesting, but frankly I hate Perl. Writing a home automation
+*configuration* in Perl is not what I want to do.
+
+* fhem
+
+Focuses on FS20. Might be OK as a front-end. Again, too much Perl.
+
+* xap
+
+This protocol tries to be both high-level enough to serve as a generic
+home control infrastructure and low-level enough to be understandable in
+dumb devices. My take is that a high-level protocol needs to be more
+structured (dare I say XML?) and low-level devices are better handled by
+an adapter — the protocol is too verbose for slow interfaces.
+
+The available software is somewhat Windows-centric. The Python module
+for it (100% written in C, one wonders why) is one of the most ugly
+pieces of code I've *ever* seen.
+
+Writing a front-end adapter might work, and there are some good ideas
+in the data structures it models.
+

@@ -1,0 +1,5 @@
+Project Description:
+Sequence annotation image generation
+
+README:
+Testing environment for preparing a sequence annotation image. Playarea really.

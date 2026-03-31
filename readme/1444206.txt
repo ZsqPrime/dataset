@@ -1,0 +1,38 @@
+= opentransact-example
+
+Example OpenTransact provider using nov's rack-oauth2 gem.
+
+== Installation
+
+  git clone git://github.com/herestomwiththeweather/opentransact_example.git
+
+== Resources
+
+* Example OAuth 2 MAC token client code (https://gist.github.com/2024309)
+* Report Issues on GitHub (https://github.com/herestomwiththeweather/opentransact_example/issues)
+
+== Copyright
+
+Copyright (c) 2012 Tom Brown. See LICENSE for details.
+
+
+Project Description:
+work in progress...
+
+README:
+= opentransact-example
+
+Example OpenTransact provider using nov's rack-oauth2 gem.
+
+== Installation
+
+  git clone git://github.com/herestomwiththeweather/opentransact_example.git
+
+== Resources
+
+* Example OAuth 2 MAC token client code (https://gist.github.com/2024309)
+* Report Issues on GitHub (https://github.com/herestomwiththeweather/opentransact_example/issues)
+
+== Copyright
+
+Copyright (c) 2012 Tom Brown. See LICENSE for details.

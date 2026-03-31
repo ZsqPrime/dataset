@@ -1,0 +1,12 @@
+# vimrc
+
+Настройки редактора vim.
+
+
+Project Description:
+Мои настройки vim
+
+README:
+# vimrc
+
+Настройки редактора vim.

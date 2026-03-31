@@ -1,0 +1,11 @@
+= Ecm::Comments
+
+This project rocks and uses MIT-LICENSE.
+
+Project Description:
+ECM CMS Comments Module
+
+README:
+= Ecm::Comments
+
+This project rocks and uses MIT-LICENSE.

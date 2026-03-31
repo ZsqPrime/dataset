@@ -1,0 +1,4 @@
+Project Description:
+django based library for sprout studios
+
+README:

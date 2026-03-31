@@ -1,0 +1,4 @@
+Project Description:
+Rails gem for easy reporting which will construct queries and show it using google table
+
+README:

@@ -1,0 +1,11 @@
+Sample app that demonstrates issue with actions named "status"
+
+Seems to clash with a rails ActionController method and breaks the app :(
+
+Project Description:
+None
+
+README:
+Sample app that demonstrates issue with actions named "status"
+
+Seems to clash with a rails ActionController method and breaks the app :(

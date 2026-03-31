@@ -1,0 +1,5 @@
+Project Description:
+A microblog running on heroku
+
+README:
+Heroku microblogging app written in Django. Postgres for database. <3 Django.

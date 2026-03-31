@@ -1,0 +1,12 @@
+Multi threaded file download with ASIHTTPRequest
+
+Include ASIHTTP(http://allseeing-i.com/ASIHTTPRequest/) and REACHABILITY (http://developer.apple.com/iphone).
+
+
+Project Description:
+ASIHttpRequest mutliple request file Download
+
+README:
+Multi threaded file download with ASIHTTPRequest
+
+Include ASIHTTP(http://allseeing-i.com/ASIHTTPRequest/) and REACHABILITY (http://developer.apple.com/iphone).

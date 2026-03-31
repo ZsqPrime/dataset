@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+== Video Processing Rails App
+
+This is a simple video processing Rails app. User can upload video clips, the application generates 
+4 file formats from the uplaoded clips using FFmpeg (jpg, png, mp4 and ogg). Users can then download any of the available
+file formats.

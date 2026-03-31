@@ -1,0 +1,11 @@
+Project Description:
+Proof of concept archiving tool that allows for the creation of arbitrary metadata within the web interface.
+
+README:
+This project is a proof of concept demonstrating how to go about creating a database driven application
+for managing arbitrary sets of data for which the metadata is not predefined.  Instead, the user has
+the ability to create metadata relationships and types that are associated with various types of records
+and subsequently stored in the database.
+
+This approach also means that searches can be performed across all of the metadata simultaneously since
+the application takes the approach that, "It's all data to me!"

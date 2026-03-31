@@ -1,0 +1,6 @@
+Project Description:
+Java samples repository.
+
+README:
+Repository of Java samples using different frameworks.
+http://lshimokawa.net

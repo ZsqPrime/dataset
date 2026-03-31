@@ -1,0 +1,40 @@
+== Description ==
+A monte carlo simulator of various asset models that have stochastic volatility driven by fractional brownian motion.
+
+== Acknowledgements ==
+* The Fractional Brownian Motion Generation is provided by Ton Dieker (http://www2.isye.gatech.edu/~adieker3/fbm/index.html)
+* Matrix operations provided by Meschach (http://www.netlib.org/c/meschach/)
+* Random number generation provided by Ranlib (http://www.netlib.org/random/)
+
+== Installation ==
+=== OS X Notes ===
+Meschach and Ranlib can be installed using MacPorts (http://www.macports.org/)
+<code>sudo port install meschach libranlib</code>
+=== Ubuntu Notes ===
+
+== Models ==
+=== Geometric fractional Brownian Motion ===
+<math>dS_t=\mu S_t dt + \sigma S_t dB_t^{H}</math>
+
+
+Project Description:
+A program to simulate asset paths using various models encorporating fractional brownian motion.  Will give expected price, as well as some derrivative pricing.
+
+README:
+== Description ==
+A monte carlo simulator of various asset models that have stochastic volatility driven by fractional brownian motion.
+
+== Acknowledgements ==
+* The Fractional Brownian Motion Generation is provided by Ton Dieker (http://www2.isye.gatech.edu/~adieker3/fbm/index.html)
+* Matrix operations provided by Meschach (http://www.netlib.org/c/meschach/)
+* Random number generation provided by Ranlib (http://www.netlib.org/random/)
+
+== Installation ==
+=== OS X Notes ===
+Meschach and Ranlib can be installed using MacPorts (http://www.macports.org/)
+<code>sudo port install meschach libranlib</code>
+=== Ubuntu Notes ===
+
+== Models ==
+=== Geometric fractional Brownian Motion ===
+<math>dS_t=\mu S_t dt + \sigma S_t dB_t^{H}</math>

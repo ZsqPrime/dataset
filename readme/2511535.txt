@@ -1,0 +1,15 @@
+HTML5 pure JS sound player demo based on 
+http://www.youtube.com/watch?v=MoS-4eD9OwI
+and
+http://chromakode.com/misc/waves/pow.html
+
+
+
+Project Description:
+Playing around with JS sound, inspired by Max Goodman's presentation "Making Waves: A Primer in Pure JS Generated Audio".  See http://chromakode.com/misc/waves/pow.html
+
+README:
+HTML5 pure JS sound player demo based on 
+http://www.youtube.com/watch?v=MoS-4eD9OwI
+and
+http://chromakode.com/misc/waves/pow.html

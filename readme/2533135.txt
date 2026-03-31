@@ -1,0 +1,4 @@
+Project Description:
+P2P publish subscribe system implemented using Kompics on top of a customized overlay using friend links
+
+README:

@@ -1,0 +1,7 @@
+Javascript utility functions collection
+
+Project Description:
+KT javascript library
+
+README:
+Javascript utility functions collection

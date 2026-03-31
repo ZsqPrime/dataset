@@ -1,0 +1,133 @@
+= mygengo_string
+
+Description goes here.
+
+== Installation
+
+1.
+Add this to you Gemfile
+
+  group :development, :test do
+    gem 'mygengo_string'
+  end
+
+Do you put it into prpoduction
+
+2.
+Put this into lib/tasks/mygengo.rake
+  Dir["#{Gem.searcher.find('mygengo_string').full_gem_path}/tasks/*.rake"].each { |ext| load ext }
+
+3.
+Add a mygengo.yml file to your #{Rails.root.to_s}/config directory with the following lines
+   development:
+      token: TOKEN
+      project: PROJECT_NAME
+
+You may optionally add default languages that you would be pulling most often
+   development:
+      token: TOKEN
+      project: PROJECT_NAME
+      languages: en,ru
+
+To get the project name and token 
+
+* Go to Dashboard
+* Under 'Download files' you will see a link to 'All languages' that will have the following form
+
+  http://mygengo.com/string/p/[PROJECT_NAME]/export/all/[TOKEN]
+
+
+
+== Usage
+
+After this is configured you can run the rake task
+    rake mygengo:locale
+
+In addition, if you would like to pull down only specific languages
+
+    rake mygengo:locale languages=ru
+
+== Contributing to mygengo_string
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Ilya Katz. See LICENSE.txt for
+further details.
+
+
+
+Project Description:
+Manage your locale files on mygengo.com string account
+
+README:
+= mygengo_string
+
+Description goes here.
+
+== Installation
+
+1.
+Add this to you Gemfile
+
+  group :development, :test do
+    gem 'mygengo_string'
+  end
+
+Do you put it into prpoduction
+
+2.
+Put this into lib/tasks/mygengo.rake
+  Dir["#{Gem.searcher.find('mygengo_string').full_gem_path}/tasks/*.rake"].each { |ext| load ext }
+
+3.
+Add a mygengo.yml file to your #{Rails.root.to_s}/config directory with the following lines
+   development:
+      token: TOKEN
+      project: PROJECT_NAME
+
+You may optionally add default languages that you would be pulling most often
+   development:
+      token: TOKEN
+      project: PROJECT_NAME
+      languages: en,ru
+
+To get the project name and token 
+
+* Go to Dashboard
+* Under 'Download files' you will see a link to 'All languages' that will have the following form
+
+  http://mygengo.com/string/p/[PROJECT_NAME]/export/all/[TOKEN]
+
+
+
+== Usage
+
+After this is configured you can run the rake task
+    rake mygengo:locale
+
+In addition, if you would like to pull down only specific languages
+
+    rake mygengo:locale languages=ru
+
+== Contributing to mygengo_string
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Ilya Katz. See LICENSE.txt for
+further details.

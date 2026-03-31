@@ -1,0 +1,7 @@
+This is the aberdeen permitting software repository.
+
+Project Description:
+Permitting Software for the town of Aberdeen NC
+
+README:
+This is the aberdeen permitting software repository.

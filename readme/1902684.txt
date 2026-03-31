@@ -1,0 +1,10 @@
+clojure.prxml is a fix-up of clojure.contrib.prxml that is compatible
+with clojure 1.3.
+
+
+Project Description:
+clojure 1.3 compatible version of clojure.prxml
+
+README:
+clojure.prxml is a fix-up of clojure.contrib.prxml that is compatible
+with clojure 1.3.

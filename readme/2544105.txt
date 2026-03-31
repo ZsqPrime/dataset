@@ -1,0 +1,7 @@
+Project Description:
+a few concrete merging examples of svn vs git, as shell scripts
+
+README:
+Comparisson between Git and SVN in a few merging examples, in shellscript format. This project was opened mostly to actually see the difference between the two merging formats, as git is porported as traditionally 'better' but since SVN 1.5 added mergeinfo, there was no longer an obvious difference between merge structures.
+
+This is to illustrate the few corner cases (rename file in different branch, and criss-cross merging) that git resolves and SVN checks as a conflict.

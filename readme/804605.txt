@@ -1,0 +1,285 @@
+= vf
+
+Enhanced version of the standard "cd" command
+
+== Usage
+
+=== Like "cd"
+
+Use a <i>real</i> path :
+
+  vf /go/to/the/desired/path
+  vf ../here
+  vf ~/documents
+  vf -
+  vf
+
+If you use option <tt>-f</tt>, vf will try to find the desired directory for you :
+
+  $ pwd 
+  /Users/greg
+  $ vf -f github
+  $ pwd
+  /Users/greg/dev/github
+
+=== Use alias
+
+Create an alias :
+
+  vf /go/to/the/desired/path
+  vf -s myalias
+
+Then if you want to go to <tt>/go/to/the/desired/path</tt> :
+
+  vf myalias
+
+Remove an alias :
+
+  vf -r myalias
+
+List your alias :
+
+  vf -l
+
+=== Use history
+
+Consult your history :
+
+  vf -H
+
+This will display a list like :
+
+  ...
+  3 : ~
+  2 : /Users/greg/Documents/CouchDB
+  1 : /Users/greg/temp/Leonhard
+
+Then you can use <tt>+N</tt> to go back to <tt>N</tt> :
+
+  vf +2
+  # I'm now in /Users/greg/Documents/CouchDB
+
+=== autojump[https://github.com/joelthelion/autojump] mode
+
+Consult tour statistics :
+
+  vf -j
+
+This will display a list like :
+
+  Statistics :
+   /Users/greg/.vf : 8
+   /Users/greg/VIDAL/Dev/github/merlin : 4
+   /Users/greg/Dev/github : 4
+   /Users/greg : 1
+   /Users/greg/VIDAL/Dev/github : 1
+   /Users/greg/Dev/github/vf : 9
+
+Then use the <tt>-j</tt> option again to go to the most visited directory :
+
+  vf -j github
+  # I'm now in /Users/greg/Dev/github/vf
+
+=== Configuration
+
+Display the current configuration :
+
+  vf --config show
+
+Here is the default result :
+
+  Configuration :
+   history_max_size = 50
+   history_display_size = 10
+   auto_find = false
+   local_directory_first = true
+
+* <tt>history_max_size</tt> is the history size (see "history" bellow)
+* <tt>history_display_size</tt> is the history size, displayed by the <tt>-H</tt> option (see "history" bellow)
+* <tt>auto_find</tt> allow vf to find the directory, or not (see <tt>-f</tt> option)
+* <tt>local_directory_first</tt> set to <tt>true</tt> will look if <tt>./dir</tt> exist before looking in the alias list
+
+If you want to change an options, use <tt>--config</tt> :
+
+  vf --config history_display_size 15
+
+=== More ?
+
+If you need more help : 
+
+  vf -h
+
+== Install
+
+Clone the repository in your prefered directory :
+
+  git clone git://github.com/glejeune/vf
+
+Then add the following line in your .bashrc, .zshrc, .<i>your shell</i>rc :
+
+  source /path/to/vf/vf.sh
+
+If sometimes you think you are a guinea pig, you can try the experimental completion system. To do it, use <tt>vf-comp.sh</tt> instead of <tt>vf.sh</tt>. 
+
+<b>ZSH Users</b>, if you use <tt>vf-comp.sh</tt>, be sure to load <tt>compinit</tt> before!
+
+== It does not work to me
+
+<i>Sorry dude!</i> 
+
+vf was tested on MacOSX only, but you can help...
+
+== Contributing to vf
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet 
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+
+
+
+Project Description:
+Enhanced version of the standard "cd" command 
+
+README:
+= vf
+
+Enhanced version of the standard "cd" command
+
+== Usage
+
+=== Like "cd"
+
+Use a <i>real</i> path :
+
+  vf /go/to/the/desired/path
+  vf ../here
+  vf ~/documents
+  vf -
+  vf
+
+If you use option <tt>-f</tt>, vf will try to find the desired directory for you :
+
+  $ pwd 
+  /Users/greg
+  $ vf -f github
+  $ pwd
+  /Users/greg/dev/github
+
+=== Use alias
+
+Create an alias :
+
+  vf /go/to/the/desired/path
+  vf -s myalias
+
+Then if you want to go to <tt>/go/to/the/desired/path</tt> :
+
+  vf myalias
+
+Remove an alias :
+
+  vf -r myalias
+
+List your alias :
+
+  vf -l
+
+=== Use history
+
+Consult your history :
+
+  vf -H
+
+This will display a list like :
+
+  ...
+  3 : ~
+  2 : /Users/greg/Documents/CouchDB
+  1 : /Users/greg/temp/Leonhard
+
+Then you can use <tt>+N</tt> to go back to <tt>N</tt> :
+
+  vf +2
+  # I'm now in /Users/greg/Documents/CouchDB
+
+=== autojump[https://github.com/joelthelion/autojump] mode
+
+Consult tour statistics :
+
+  vf -j
+
+This will display a list like :
+
+  Statistics :
+   /Users/greg/.vf : 8
+   /Users/greg/VIDAL/Dev/github/merlin : 4
+   /Users/greg/Dev/github : 4
+   /Users/greg : 1
+   /Users/greg/VIDAL/Dev/github : 1
+   /Users/greg/Dev/github/vf : 9
+
+Then use the <tt>-j</tt> option again to go to the most visited directory :
+
+  vf -j github
+  # I'm now in /Users/greg/Dev/github/vf
+
+=== Configuration
+
+Display the current configuration :
+
+  vf --config show
+
+Here is the default result :
+
+  Configuration :
+   history_max_size = 50
+   history_display_size = 10
+   auto_find = false
+   local_directory_first = true
+
+* <tt>history_max_size</tt> is the history size (see "history" bellow)
+* <tt>history_display_size</tt> is the history size, displayed by the <tt>-H</tt> option (see "history" bellow)
+* <tt>auto_find</tt> allow vf to find the directory, or not (see <tt>-f</tt> option)
+* <tt>local_directory_first</tt> set to <tt>true</tt> will look if <tt>./dir</tt> exist before looking in the alias list
+
+If you want to change an options, use <tt>--config</tt> :
+
+  vf --config history_display_size 15
+
+=== More ?
+
+If you need more help : 
+
+  vf -h
+
+== Install
+
+Clone the repository in your prefered directory :
+
+  git clone git://github.com/glejeune/vf
+
+Then add the following line in your .bashrc, .zshrc, .<i>your shell</i>rc :
+
+  source /path/to/vf/vf.sh
+
+If sometimes you think you are a guinea pig, you can try the experimental completion system. To do it, use <tt>vf-comp.sh</tt> instead of <tt>vf.sh</tt>. 
+
+<b>ZSH Users</b>, if you use <tt>vf-comp.sh</tt>, be sure to load <tt>compinit</tt> before!
+
+== It does not work to me
+
+<i>Sorry dude!</i> 
+
+vf was tested on MacOSX only, but you can help...
+
+== Contributing to vf
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet 
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.

@@ -1,0 +1,7 @@
+Simple library for converting CSS selectors into XPath. Just import it and call Convert(...)!
+
+Project Description:
+None
+
+README:
+Simple library for converting CSS selectors into XPath. Just import it and call Convert(...)!

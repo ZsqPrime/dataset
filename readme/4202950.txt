@@ -1,0 +1,7 @@
+Project Description:
+3D FPS Game Engine WIP
+
+README:
+3D-FPS-Game-Engine
+==================
+Initial work towards basic 3D java game engine. Much work still needed.

@@ -1,0 +1,13 @@
+CraftGen
+========
+
+> Nothing here yet
+
+Project Description:
+Minecraft Redstone circuitry generator
+
+README:
+CraftGen
+========
+
+> Nothing here yet

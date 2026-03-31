@@ -1,0 +1,5 @@
+Project Description:
+Catalyst publishing framework for a critical edition text
+
+README:
+Run script/chronicle_server.pl to test the application.

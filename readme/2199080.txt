@@ -1,0 +1,85 @@
+=encoding utf8
+
+=head1 DESCRIPTION
+
+DBIx::MoCo を用いた習作.
+日記を記述するためのアプリケーションで, 
+ローカルアプリケーションと web アプリケーションのためにそれぞれブランチを切っています. 
+
+=head1 CONFIGURATION AND ENVIRONMENT
+
+=head2 DATABASE CONFIGURATION
+
+本アプリケーションは, MySQL サーバーを使用します. 
+
+=head3 DATABASE CONF FILE
+
+接続先 DB の設定は, 以下のファイルに記述します. 
+
+=over 2
+
+=item 本番用: config/db_for_production.conf
+
+=item テスト用: config/db_for_test.conf
+
+=back
+
+これらのファイルに記述されたナンバー記号 (#) で始まる行はコメント行として無視されます. 
+コメント行以外の行のうち, 1 つめの行が dsn, 2 つめの行が DB のユーザー名, 
+3 つめの行が DB のパスワードだとみなされます. 
+記述例は次の節を参照してください. 
+
+=head3 MANUAL DATABASE INITIALIZATION
+
+DB の設定を手動で行う場合, まず DB の初期化を行った後, db/shema.sql ファイルを
+用いて DB のテーブルを構成してください. 
+diary という DB 名で DB の初期化を行う例を以下に示します. 
+
+  $ mysql -u root -e 'CREATE DATABASE diary DEFAULT CHARACTER SET utf8'
+  $ mysql -u root diary < db/schema.sql
+
+その後, 本アプリケーションの接続先 DB の設定ファイル 
+(本番用は config/db_for_production.conf, テスト用は config/db_for_test.conf)
+を記述します. 
+以下に例を示します. 
+
+  # dsn
+  dbi:mysql:dbname=diary
+  # username
+  username
+  # password
+  password_for_user
+
+=head3 AUTOMATIC DATABASE INITIALIZATION
+
+付属の initdb.pl スクリプトを使用することで, 
+前節で述べた DB の初期化と設定ファイルの作成を自動的に行うことが出来ます. 
+
+引数なしで initdb.pl を実行すると, DB への接続に使用するユーザー名,
+パスワードや, 本番用の DB を設定するか, テスト用の DB を設定するかを
+尋ねるプロンプトが表示されます. それぞれ値を入力してください. 
+その後, 初期化対象のデータベース名を尋ねるプロンプトが表示されますので, 
+ご希望の DB 名を入力してください. 
+
+ここで, 入力した名前の DB が既に存在する場合, 元々存在した DB は確認なしで
+消去されますのでご注意ください. 
+また, config/db_for_production.conf ファイルや config/db_for_test.conf ファイルも
+確認なしで上書きされます. 
+
+=head1 DEPENDENCIES
+
+以下の CPAN モジュールがインストール済みである必要があります. 
+
+  Encode::Locale
+  DateTime
+  DateTime::Format::MySQL
+  Exporter::Lite
+  IO::Prompt
+  Class::Data::Inheritable (DBIx::MoCo で使用)
+  UNIVERSAL::require (DBIx::MoCo で使用)
+  List::MoreUtils (DBIx::MoCo で使用)
+  Class::Singleton (DBIx::MoCo で使用)
+  Class::Trigger (DBIx::MoCo で使用)
+  SQL::Abstract (DBIx::MoCo で使用)
+  Log::Dispatch::Screen (DBIx::MoCo で使用)
+

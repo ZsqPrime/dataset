@@ -1,0 +1,5 @@
+Project Description:
+mongorm is copyright © 2011-2013 Magma Labs Pty Ltd, all rights reserved
+
+README:
+THIS IS ALPHA SOFTWARE, USE AT YOUR OWN RISK

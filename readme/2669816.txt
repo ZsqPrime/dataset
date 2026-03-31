@@ -1,0 +1,6 @@
+Project Description:
+Firefox Extension for PokerStars Staff
+
+README:
+# devSwitcher
+DevSwitcher is a FireFox Toolbar Extension for PokerStars staff to simplify switching between our global websites and development environments.

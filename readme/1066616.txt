@@ -1,0 +1,13 @@
+This is a Titanium mobile project practice.
+
+The goal is to understanding, when we need to read, pars and save data from remote or local,  what are the tools we can use in Titanium 
+
+
+
+Project Description:
+ a Titanium Mobile app following Chapter 2 of "Appcelerator Titanium Smartphone App Development Cookbook". 
+
+README:
+This is a Titanium mobile project practice.
+
+The goal is to understanding, when we need to read, pars and save data from remote or local,  what are the tools we can use in Titanium

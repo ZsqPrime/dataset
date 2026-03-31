@@ -1,0 +1,5 @@
+Project Description:
+This project would demonstrate how to use Findbug, PMD,CPD, Checkstyle, cobertura, sonar with Ant
+
+README:
+This project would demonstrate how to use Findbug, PMD,CPD, Checkstyle, cobertura, sonar with Ant

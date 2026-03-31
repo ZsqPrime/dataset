@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+My plugins for MusicBrainz Picard (http://musicbrainz.org/doc/MusicBrainz_Picard)
+
+Symlink them to your plugin directory to use (don't worry they aren't enabled by default)

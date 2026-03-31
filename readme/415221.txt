@@ -1,0 +1,12 @@
+Script to add whitelist entries to the gld whitelist table.
+
+gld can be found at http://www.gasmi.net/progs.php
+
+
+Project Description:
+Automatically add whitelist entries to gld whitelist table
+
+README:
+Script to add whitelist entries to the gld whitelist table.
+
+gld can be found at http://www.gasmi.net/progs.php

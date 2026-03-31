@@ -1,0 +1,7 @@
+Nomic game, where all rules are just code commits.
+
+Project Description:
+Nomic game, where all rules are just a code.
+
+README:
+Nomic game, where all rules are just code commits.

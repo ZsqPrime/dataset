@@ -1,0 +1,13 @@
+Project Description:
+A Ruby on Rails program for losing weight - works with Rails 3.0.9
+
+README:
+-*- mode: org; fill-column:65 -*-
+
+* Run user identification scripts
+015_identification/010_scaffold_user
+015_identification/020_identify_user
+015_identification/030_login_form
+015_identification/040_welcome_login.sh
+015_identification/050_add_authenticate_method_to_user
+015_identification/060_edit_logout_in_welcome

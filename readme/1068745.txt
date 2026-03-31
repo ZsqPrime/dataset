@@ -1,0 +1,26 @@
+This repo is only a backup of the drupal.org one.
+The module project page is : http://drupal.org/project/d4os
+
+Nothing will be commited to master branch anymore.
+You can checkout other branches like :
+git checkout 2010
+or
+git checkout 2012-d6
+or
+git checkout 2012-d7
+
+
+Project Description:
+D4os is a set of modules for drupal to manage an opensim grid. This script is in ALPHA stage, so everything is not finished and can be changed at any time, so DONT use it on production server.
+
+README:
+This repo is only a backup of the drupal.org one.
+The module project page is : http://drupal.org/project/d4os
+
+Nothing will be commited to master branch anymore.
+You can checkout other branches like :
+git checkout 2010
+or
+git checkout 2012-d6
+or
+git checkout 2012-d7

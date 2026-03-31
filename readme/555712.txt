@@ -1,0 +1,43 @@
+#TABLE OF CONTENTS:
+  1) History
+
+  2) Future plans
+
+  3) Using the tool
+
+  4) License
+
+  5) Credits
+    a)Links
+    b)People
+
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+#History
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+This tool originated as a standard deviation calculator. (And as a quick side note, I was using the wrong formula.)
+LibMath was originally called MathematicsResourceLibrary, a real pain to type out since it has only static methods. The TextResourceLibrary, the next class in LibSubject,
+was added before the renaming. LibVarious came next, as I realized that I had some methods that didn't fall under text or mathematics.
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+#Future plans
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+I want to get some more advanced methods in LibVarious. Right now all I have are property accessors and a few odds and ends. Programming structures I find myself using over and over
+will be the primary thing added to LibVarious. An executable version (text AND graphical) are planned but haven't even started being implemented. They probably won't be until I run
+out of ideas for things to add to all of the classes.
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+#Using the tool
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+Just import the code to your project and go. The methods are all static, so you'll have to use the class name rather than instantiating. The files do
+not contain a main class, but read #Future plans, because a future update may bring an executable version of these files.
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+#License
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+These files are governed by my own custom license, the NRPL 3. The license is attached.
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+#Credits
+⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉⑉
+##Links
+http://library.thinkquest.org/20991/geo/solids.html - I used this for reference on some of the geomorty related methods in LibMath
+
+http://www.java2s.com/Tutorial/Java/0120__Development/Javasystemproperties.htm - I was clueless about property accessors before I found this page. Huge thanks to whoever wrote it.
+##People
+Look at EDITORS for a full list.

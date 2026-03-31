@@ -1,0 +1,5 @@
+Description:
+Weever Apps Administrator Component for Joomla
+
+README:
+README not available

@@ -1,0 +1,7 @@
+﻿[Installation and usage](https://github.com/yapi-net/YandexDirect/wiki)
+
+Project Description:
+Yandex.Direct API library for .NET
+
+README:
+﻿[Installation and usage](https://github.com/yapi-net/YandexDirect/wiki)

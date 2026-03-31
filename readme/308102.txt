@@ -1,0 +1,6 @@
+
+
+Project Description:
+Price any entity for Vespolina (Ecommerce for Symfony2)
+
+README:

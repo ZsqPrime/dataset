@@ -1,0 +1,7 @@
+Project Description:
+An RMAS connector for pFACT
+
+README:
+RMAS pFACT Connector
+====================
+pFACT connector for talking to RMAS servers

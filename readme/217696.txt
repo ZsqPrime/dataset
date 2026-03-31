@@ -1,0 +1,18 @@
+# Project has moved
+
+The TextRedux module has moved to a new location and maintainer. You can now
+find it at:
+
+[https://github.com/rgieseke/textredux](https://github.com/rgieseke/textredux)
+
+
+Project Description:
+A module for the Textadept editor offering text based interfaces for core functionality
+
+README:
+# Project has moved
+
+The TextRedux module has moved to a new location and maintainer. You can now
+find it at:
+
+[https://github.com/rgieseke/textredux](https://github.com/rgieseke/textredux)

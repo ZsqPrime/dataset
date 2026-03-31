@@ -1,0 +1,12 @@
+Project Description:
+Api do Mailee em PHP, se você realmente precisar!
+
+README:
+= Instalação
+
+sudo apt-get install php5 php5-cli php5-curl
+
+= Uso
+
+Para uma documentação mais completa e atualizada visite:
+http://help.mailee.me/integration_php.html

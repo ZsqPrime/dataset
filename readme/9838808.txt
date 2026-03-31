@@ -1,0 +1,7 @@
+Project Description:
+Help determine patients' ability to read prescription labels
+
+README:
+# iCY
+
+Help patients read prescription labels.

@@ -1,0 +1,11 @@
+Project Description:
+None
+
+README:
+MariTime Silk Road is a board game desined by R.K.
+
+In China, it's delegated by GameHarbor.
+
+
+
+This iOS version is target to play it on iPhone/iPad 5.0+

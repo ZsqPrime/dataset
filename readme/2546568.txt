@@ -1,0 +1,10 @@
+Project Description:
+Pages for PWB
+
+README:
+This is the (future) source code for the ProjectWeb Website.
+
+Requirements
+------------
+
+* Less (node.js version)

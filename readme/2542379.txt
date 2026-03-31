@@ -1,0 +1,4 @@
+Project Description:
+a search application based on using AJAX to search data in a MySQL database
+
+README:

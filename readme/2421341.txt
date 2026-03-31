@@ -1,0 +1,7 @@
+This package provides an alternate approach to message localization for Python.
+
+Project Description:
+
+
+README:
+This package provides an alternate approach to message localization for Python.

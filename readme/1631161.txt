@@ -1,0 +1,10 @@
+Conferece site for Laboratory #28 of Space Research Institute
+For developing you also need to download yiiframework and setup index.php & protected/config/main.php database params
+
+
+Project Description:
+Conference site for  laboratory #28 of Space Research Institute
+
+README:
+Conferece site for Laboratory #28 of Space Research Institute
+For developing you also need to download yiiframework and setup index.php & protected/config/main.php database params

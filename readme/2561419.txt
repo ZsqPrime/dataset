@@ -1,0 +1,5 @@
+Project Description:
+Openquake Hazard Library
+
+README:
+THIS REPOSITORY IS OBSOLETE: HAZARDLIB HAVE BEEN INTEGRATED INTO https://github.com/gem/oq-engine

@@ -1,0 +1,4 @@
+Project Description:
+Python module for easily creating a properly formatted Django project.
+
+README:

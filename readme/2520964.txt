@@ -1,0 +1,6 @@
+Project Description:
+Window manager for MAME focused media box
+
+README:
+I want a MAME cabinet, internet TV, and general video watcher machine, and I
+ want it to have a unified look. So I'm making a window manager. Seems reasonable, right?

@@ -1,0 +1,12 @@
+#This Project is deprecated, watch [YAMMP] [link] instead.#
+
+[link]: https://github.com/mariotaku/yammp 
+
+
+Project Description:
+Android media player with many awesome features
+
+README:
+#This Project is deprecated, watch [YAMMP] [link] instead.#
+
+[link]: https://github.com/mariotaku/yammp

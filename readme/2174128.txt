@@ -1,0 +1,10 @@
+This is a search-based implementation using Hill Climbing approach for 
+detecting ambiguity in CFGs
+
+
+Project Description:
+Ambiguity detection using Hill Climbing
+
+README:
+This is a search-based implementation using Hill Climbing approach for 
+detecting ambiguity in CFGs

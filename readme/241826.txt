@@ -1,0 +1,8 @@
+Django application for collaborative paper review.
+
+
+Project Description:
+None
+
+README:
+Django application for collaborative paper review.

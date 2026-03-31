@@ -1,0 +1,73 @@
+Send Github News to wiki
+
+Needs conf.py file which contains variables:
+
+	TOP_PAGE - Top page on wiki. String
+	SPACE - Space on wiki. String
+	WIKI_USER - Your wiki username. String
+	WIKI_PASS - Your wiki password. String
+	title - Base name of pages with news (without date). String
+	org_name - Organization name on github. String
+	github_login - Your github login. String
+	github_pass - Your github password. String
+	oauth_token - Your github oAuth token (scope: repo). String
+	use_token - Authorization type. Boolean (True if you use oAuth token, False if you use login/password)
+	db_name - Database name. String
+	events_list - Events list. Dictionary (value = True if you want to see it on wiki, else False)
+		Events types (key):
+			CommitCommentEvent
+			CreateEvent
+			DeleteEvent
+			DownloadEvent
+			FollowEvent
+			ForkEvent
+			ForkApplyEvent
+			GistEvent
+			GollumEvent
+			IssueCommentEvent
+			IssuesEvent
+			MemberEvent
+			PublicEvent
+			PullRequestEvent
+			PushEvent
+			TeamAddEvent
+			WatchEvent
+
+Project Description:
+None
+
+README:
+Send Github News to wiki
+
+Needs conf.py file which contains variables:
+
+	TOP_PAGE - Top page on wiki. String
+	SPACE - Space on wiki. String
+	WIKI_USER - Your wiki username. String
+	WIKI_PASS - Your wiki password. String
+	title - Base name of pages with news (without date). String
+	org_name - Organization name on github. String
+	github_login - Your github login. String
+	github_pass - Your github password. String
+	oauth_token - Your github oAuth token (scope: repo). String
+	use_token - Authorization type. Boolean (True if you use oAuth token, False if you use login/password)
+	db_name - Database name. String
+	events_list - Events list. Dictionary (value = True if you want to see it on wiki, else False)
+		Events types (key):
+			CommitCommentEvent
+			CreateEvent
+			DeleteEvent
+			DownloadEvent
+			FollowEvent
+			ForkEvent
+			ForkApplyEvent
+			GistEvent
+			GollumEvent
+			IssueCommentEvent
+			IssuesEvent
+			MemberEvent
+			PublicEvent
+			PullRequestEvent
+			PushEvent
+			TeamAddEvent
+			WatchEvent

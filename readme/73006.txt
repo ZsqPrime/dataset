@@ -1,0 +1,99 @@
+
+== Examples: ==
+
+Make a new editor and add to DOM:
+
+    var e = new Editor()
+    e.appendTo(".my_elem")
+ 
+Convert a textarea to an Editor:
+
+    var e = new Editor("#my_textarea")   
+
+Listen to events: (acts very similar to jquery object)
+   
+    e.bind({
+        'keyup' : myHandler
+      , 'change' : myHandler
+      , 'nodeChange': myHandler
+    })
+
+Get a normalised version of the editor's content:
+
+    var html = e.html() // Normalised
+      , text = e.val()
+      , also_text = e.text()
+   
+
+---- Rough ideas: ---   
+   
+Set the transform for normalisation:
+ 
+    e.transforms = function(){
+      return {
+      //   MODE  : HTML
+          'bold' : '<strong />'
+        , 'link' : '<span class="mock-link" />'
+        , 'italic' : function(text){return to_html(text)}
+      }
+    }
+
+Or:
+
+    e.normalize = function(html){
+      return my_normalize(html)
+    }
+
+
+
+
+
+Project Description:
+An abstraction layer for contentEditable
+
+README:
+
+== Examples: ==
+
+Make a new editor and add to DOM:
+
+    var e = new Editor()
+    e.appendTo(".my_elem")
+ 
+Convert a textarea to an Editor:
+
+    var e = new Editor("#my_textarea")   
+
+Listen to events: (acts very similar to jquery object)
+   
+    e.bind({
+        'keyup' : myHandler
+      , 'change' : myHandler
+      , 'nodeChange': myHandler
+    })
+
+Get a normalised version of the editor's content:
+
+    var html = e.html() // Normalised
+      , text = e.val()
+      , also_text = e.text()
+   
+
+---- Rough ideas: ---   
+   
+Set the transform for normalisation:
+ 
+    e.transforms = function(){
+      return {
+      //   MODE  : HTML
+          'bold' : '<strong />'
+        , 'link' : '<span class="mock-link" />'
+        , 'italic' : function(text){return to_html(text)}
+      }
+    }
+
+Or:
+
+    e.normalize = function(html){
+      return my_normalize(html)
+    }

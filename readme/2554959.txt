@@ -1,0 +1,7 @@
+Project Description:
+Experiment with node.js, express, jade, coffeescript, mongodb etc
+
+README:
+Sitex
+
+A site extension module

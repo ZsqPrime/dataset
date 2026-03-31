@@ -1,0 +1,5 @@
+Project Description:
+PhoneGap application for Inventory
+
+README:
+PhoneGap application that interfaces with the HSC Inventory API to manage inventory

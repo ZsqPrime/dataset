@@ -1,0 +1,5 @@
+Project Description:
+OTA update app for VillainROM supported devices.
+
+README:
+OTA(Over The Air) update application for devices supported by VillainROM. Not all ROMs/Devices are currently supported by the application.

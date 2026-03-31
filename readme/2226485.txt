@@ -1,0 +1,227 @@
+Project Description:
+shalbum is a powerful shell script to create HTML image galleries. It has heaps of great features such as slideshow, config files, picture subtitles, watermarks and much more. shalbum's only requirement is GraphicsMagick or ImageMagick.
+
+README:
+           shalbum - https://github.com/sztokbant/shalbum/releases
+              =================================================
+                                   README
+                        document updated: 25-Dec-2008
+
+1.) About shalbum
+2.) Using shalbum
+3.) Using shalbum recursively (shalbumrec)
+4.) Performance issues
+5.) Note for non-Unix users (e.g. Windows)
+6.) Known issues
+7.) Support
+
+
+1.) About shalbum
+
+- Pure bourne shell script to create HTML photo galleries.
+
+- Default options can be overridden with configuration files.
+
+- Requires either ImageMagick - http://www.imagemagick.com - or
+  GraphicsMagick - http://www.graphicsmagick.org.
+
+----------------------------------------------------------------------
+
+2.) Using shalbum
+
+Usage: from a directory with image files run
+    shalbum [options]
+
+ -h        help screen
+ -v        show shalbum version and exit
+
+ -t title  specify gallery title
+ -d date   specify gallery date/subtitle
+ -r title  specify gallery third title
+ -a name   specify gallery author's name
+ -e e-mail specify gallery author's e-mail
+
+ -V num    specify vga resolution
+ -T num    specify thumbnail resolution
+ -H num    specify huge image resolution ("copy" to keep same)
+ -W num    specify table width
+ -R num    specify number of rows
+ -C num    specify number of columns
+ -O opt    image sorting option; either "time", "name" or "file"
+ -S secs   seconds per pic in slideshow mode; zero=off
+
+ -G        use GraphicsMagick
+ -I        use ImageMagick
+
+ -c        specify CSS file path
+
+ -u        update existing album
+
+ -b link   link to go back
+ -l label  back link label for album list site
+
+ -m        selects mhd secondary set of default options
+ -i        don't resize images, only rebuild the HTML files
+ -q        quiet mode, suppress output
+
+You can define your own default options by creating a
+'/etc/shalbum/shalbum.conf' or a '$HOME/.shalbum/shalbum.conf'
+file. You can alternatively bypass default options by creating your
+own .shalbum file and puting it in your pictures directory.
+
+You can base these configuration files upon a commented
+shalbum.conf-sample file distributed with shalbum.
+
+ $ cd /my/pictures/
+ $ shalbum [options...]
+
+You have also the option of including your own customized comments
+under each picture using a _subtitles file in your pictures
+directory. The syntax of this file must be as follows:
+
+    FILENAME1.JPG=some description for this pic
+    FILENAME2.JPG=other description for other pic
+
+Note that "pic_label_type" in your .shalbum file must be set to "conf"
+for shalbum to consider your _subtitles file.
+
+If you want even more descriptive comments enable the
+"long_description" option and customize a FILENAME-description.html
+file for each picture you want to add more info.
+
+----------------------------------------------------------------------
+
+3.) Using shalbum recursively (shalbumrec)
+
+Usage: from a directory containing sub-directories with image files run
+    shalbumrec [options]
+
+ -h        help screen
+ -v        show shalbum version and exit
+
+ -b link   link to go back
+ -l label  back link label for album list site
+
+ -G        use GraphicsMagick
+ -I        use ImageMagick
+
+ -c        specify CSS file path
+
+ -i        don't resize shalbum images, only rebuild the HTML files
+ -q        quiet mode, suppress output
+ -Q        suppress shalbum output
+
+You can define your own default options by creating a
+'/etc/shalbum/shalbumrec.conf' or a '$HOME/.shalbum/shalbumrec.conf'
+file. You can alternatively bypass default options by creating your
+own .shalbumrec file and puting it in your pictures directory.
+
+You can base these configuration files upon a commented
+shalbumrec.conf-sample file distributed with shalbum.
+
+ $ cd /my/dir/with/subdirs/with/pics/
+ $ shalbumrec [options...]
+
+----------------------------------------------------------------------
+
+4.) Performance issues
+
+- Version 1.2 of shalbum improved its algorithm for resizing
+  images. It resizes a single image using its immediately superior-size
+  equivalent as input rather than the original file, which makes it run
+  in about half of the time spent by version 1.1.
+
+- Version 1.6 of shalbum supports not only ImageMagick but also
+  GraphicsMagick. With GM shalbum runs about 30-50% faster than with IM.
+  GraphicsMagick 1.2 (still beta) is apparently faster than 1.1 and
+  might be worth a try.
+
+- As of version 1.8 shalbum solved some dash (Debian Almquist shell)
+  compatibility issues. Using dash instead of bash as default /bin/sh
+  makes POSIX-shell script interpretation about twice as fast.
+
+- Building an optimized version of libjpeg is another thing that can
+  improve shalbum's performance. The same should be true for other libs
+  used by ImageMagick such as libtiff and libpng. Feel free to make your
+  own tests.
+
+Here I present you the benchmarks of some simple experiments
+optimizing libjpeg on different platforms and systems:
+
+
+Platform: Intel Pentium III 700MHz, Ubuntu Linux 6.06, 20 selected JPEGs
+* Small performance gain comparing to default package (~5%).
+
+-------------------------------------------+------------+-----------
+ libjpeg build CFLAGS / CXXFLAGS           | time (sec) | percentage
+-------------------------------------------+------------+-----------
+ default Ubuntu package                    |   200.63   |   100%
+-------------------------------------------+------------+-----------
+ -O3 -march=pentium3 -pipe                 |            |
+ -fomit-frame-pointer -msse -mmmx          |   191.43   |    95%
+ -mfpmath=sse                              |            |
+-------------------------------------------+------------+-----------
+
+
+Platform: AMD Athlon XP 2200+, Debian GNU/Linux, 20 selected JPEGs
+* Small performance gain comparing to default package (~4%).
+
+-------------------------------------------+------------+-----------
+ libjpeg build CFLAGS / CXXFLAGS           | time (sec) | percentage
+-------------------------------------------+------------+-----------
+ default Debian package                    |    49.79   |   100%
+-------------------------------------------+------------+-----------
+ -O3 -march=athlon-xp -pipe                |            |
+ -fomit-frame-pointer -msse -mmmx -m3dnow  |    47.77   |    96%
+ -mfpmath=sse                              |            |
+-------------------------------------------+------------+-----------
+
+
+Platform: Intel Pentium D, FreeBSD 6.1, 20 selected JPEGs
+* Small performance gain comparing to default build (~7%).
+
+-------------------------------------------+------------+-----------
+ libjpeg build CFLAGS / CXXFLAGS           | time (sec) | percentage
+-------------------------------------------+------------+-----------
+ FreeBSD ports defaults:                   |            |
+  -O2 -fno-strict-aliasing -pipe           |   24.757   |   100%
+-------------------------------------------+------------+-----------
+ -O3 -march=pentium4 -pipe                 |            |
+ -fomit-frame-pointer -msse2 -mmmx         |   23.083   |    93% 
+ -mfpmath=sse                              |            |
+-------------------------------------------+------------+-----------
+
+
+----------------------------------------------------------------------
+
+5.) Note for non-Unix users (e.g. Windows)
+
+It is known that shalbum runs very well on any Unix platform
+containing ImageMagick or GraphicsMagick and a bourne shell
+interpreter. I myself already run it on Linux, FreeBSD and MacOS X. I
+also know about people running shalbum on Microsoft Windows systems
+over CygWin, a Linux-like environment for Windows.
+
+Instructions on installing CygWin can be found at CygWin official
+website - http://www.cygwin.com. Don't forget to Install a bourne
+shell compatible interpreter and ImageMagick or GraphicsMagick. I
+believe just selecting 'GraphicsMagick' (or 'ImageMagick') and 'dash'
+(or 'bash') packages during CygWin installation is enough.
+
+Once CygWin is installed shalbum shall run like on any other Unix.
+
+----------------------------------------------------------------------
+
+6.) Know issues
+
+- Frames code doesn't work properly with GraphicsMagick (tested with
+  version 1.1.7). Use ImageMagick instead.
+
+----------------------------------------------------------------------
+
+7.) Support
+
+Feel free to contact me if you have any questions or problems running
+shalbum:
+
+  Eduardo Sztokbant <du at du.eti.br> - shalbum author

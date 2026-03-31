@@ -1,0 +1,39 @@
+Project Description:
+Select Committee Oral Evidence prototypes
+
+README:
+
+Select Committee Oral Evidence prototypes
+=========================================
+
+This project contains two directories: "working" and "screenshots".
+
+The "working" directory contains the files "index.html" and "mobile.html", together with styles and scripts necessary to display them.
+
+
+Working files
+-------------
+
+"index.html" is the 'standard' web view, intended for larger screens.
+
+"mobile.html" is the 'mobile' view, intended for mobile devices.
+
+
+Screenshots
+-----------
+
+SingleColumnStandard.jpg - a view of the evidence view on a standard screen, constrained to a single column.
+
+TwoColumnStandard.jpg - a view of the evidence view on a standard screen, expanded to two columns.   
+
+iPadLandscapeMembers.jpg - a view on an emulated iPad of the 'Members' screen, in landscape orientation.
+
+iPadPortraitStandard.jpg - a view on an emulated iPad of the evidence screen, in portrait orientation.
+
+TwoColumnBoxesStandard.jpg - a view of the evidence view on a standard screen, expanded to two columns, together with embedded Twitter feeds.   
+
+iPadLandscapeEvidence.jpg - a view on an emulated iPad of the evidence screen, in landscape orientation.
+
+iPadPortrait.jpg - a view on an emulated iPad of the evidence screen, in portrait orientation.    
+
+iPhone.jpg - a view on an emulated iPhone of the evidence screen, in portrait orientation.

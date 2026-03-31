@@ -1,0 +1,6 @@
+
+
+Project Description:
+Helper service for Geocaching4Locus to get data for download Wherigo cartridges.
+
+README:

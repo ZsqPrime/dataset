@@ -1,0 +1,8 @@
+Project Description:
+Port of the LLVM compiler infrastructure to the time-predictable processor Patmos
+
+README:
+patmos-llvm
+===========
+
+Port of LLVM to the Patmos architecture of the T-CREST project.

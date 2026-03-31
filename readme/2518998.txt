@@ -1,0 +1,5 @@
+Project Description:
+A WordPress plugin that enables adding and managing Project Wonderful ads.
+
+README:
+GitHub readme placeholder.

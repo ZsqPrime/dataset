@@ -1,0 +1,8 @@
+Project Description:
+A tool for creating pleasing changelog summaries from Git commits and Redmine tickets
+
+README:
+Gitsummary
+==========
+
+This app provides a way to write changelogs based on your repos' commits in GitHub.

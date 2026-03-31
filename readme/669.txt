@@ -1,0 +1,5 @@
+Project Description:
+Java EE 6 Example Application
+
+README:
+Java EE 6 Blog example application.

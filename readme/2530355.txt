@@ -1,0 +1,5 @@
+Project Description:
+Javascript and HTML5 technologies game engine
+
+README:
+This project is an accumulation of javascript and html5 game engine components.

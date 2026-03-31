@@ -1,0 +1,6 @@
+
+
+Project Description:
+allow to write or append to set of files atomically
+
+README:

@@ -1,0 +1,15 @@
+= Knife OVH Private Cloud Configuration management 
+
+= DEPRECATED 
+
+Please use this instead  - https://github.com/Estebita/knife-ovh-cloud
+
+Project Description:
+
+
+README:
+= Knife OVH Private Cloud Configuration management 
+
+= DEPRECATED 
+
+Please use this instead  - https://github.com/Estebita/knife-ovh-cloud

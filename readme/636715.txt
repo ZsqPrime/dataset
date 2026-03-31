@@ -1,0 +1,13 @@
+Combination & Permutation Calculator
+====================================
+
+Just drop the .html file into a browser. Change styles as necessary.
+
+Project Description:
+Finite Math related programs and other things I've created for finitehelp.com
+
+README:
+Combination & Permutation Calculator
+====================================
+
+Just drop the .html file into a browser. Change styles as necessary.

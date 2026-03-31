@@ -1,0 +1,5 @@
+Project Description:
+Note for learning and using git
+
+README:
+Repo I set up to experiment with git.

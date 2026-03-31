@@ -1,0 +1,8 @@
+First Project Django Testings
+
+
+Project Description:
+None
+
+README:
+First Project Django Testings

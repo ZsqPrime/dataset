@@ -1,0 +1,8 @@
+Work in progress
+
+
+Project Description:
+visualization of the budgets, revenues and ratings of recent films
+
+README:
+Work in progress

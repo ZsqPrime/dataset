@@ -1,0 +1,15 @@
+Project Description:
+Operating Systems Lab, Semester 6
+
+README:
+OS Lab questions & solutions for semester 6.
+Shell scripts and system call programs with C
+
+TODO : 
+
+	Add make file 
+
+Author		: Jaseem Abid <jaseemabid@gmail.com>
+License		:
+	Code			: Do what ever you want with this.
+	question pdfs	: NIT Calicut CSED property. DONT Use this document without prior permission.

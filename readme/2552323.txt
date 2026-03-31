@@ -1,0 +1,9 @@
+Project Description:
+List of selected stocks
+
+README:
+Welcome to Stocklist
+
+A simple web application to monitor NASDAQ, NYSE and AMEX stock exchanges
+
+Still lot to come!

@@ -1,0 +1,9 @@
+Project Description:
+Source Code regarding the "SE using FM"-lecture.
+
+README:
+This repository contains all necessary information and shared work
+for the lecture "Software Engineering using Formal Methods".
+
+Further information:
+http://www.se.tu-darmstadt.de/teaching/courses/software-engineering-using-formal-methods/

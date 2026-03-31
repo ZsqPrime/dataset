@@ -1,0 +1,4 @@
+Project Description:
+a basic, pure-js sound sequencer 
+
+README:

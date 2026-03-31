@@ -1,0 +1,74 @@
+Project Description:
+
+
+README:
+= CCLS Abstracts
+
+
+THIS APP AND REPO ARE NOW DEAD.  AS OF TODAY, 20120313, THIS FUNCTIONALITY HAS OR WILL BE INCORPORATED INTO THE ODMS APPLICATION.
+
+
+
+UC Berkeley, School of Public Health, California Childhood Leukemia Study
+
+== Requirements
+
+* ruby >= 1.8.7 - primarily due to the liberal use of #inject
+* ruby <= 1.8.7 - primarily due to ruby 1.9.1 differences
+* rubygems
+* ImageMagick (which may require {MacPorts}[http://www.macports.org/])
+  * ImageMagick is used for image manipulation
+* curl - for the initial installation of rvm
+
+== Required Gem Sources
+
+ gem sources -a http://rubygems.org
+ gem sources -a http://gems.github.com
+
+== Required Gems
+
+* rails ~> 2
+* jrails
+* ruby-hmac
+* ssl_requirement
+* ryanb-acts-as-list
+* RedCloth
+* {ccls-ccls_engine}[http://github.com/ccls/ucb_ccls_engine]
+* {ccls-simply_helpful}[http://github.com/ccls/simply_helpful]
+* {ccls-calnet_authenticated}[http://github.com/ccls/calnet_authenticated]
+* {ccls-simply_authorized}[http://github.com/ccls/simply_authorized]
+* {ccls-rails_extension}[http://github.com/ccls/rails_extension]
+* {ccls-use_db}[http://github.com/ccls/use_db]
+* {ccls-ruby_extension}[http://github.com/ccls/ruby_extension] - modifications, updates and patches for ruby.
+
+== Required and included plugins
+
+
+== Installation 
+
+
+== Production Installation
+
+For some reason, the current setup won't allow the creation of a sqlite3 database,
+so must be created elsewhere and imported?
+
+== Documentation
+
+
+== Testing
+
+
+== Further Info
+
+
+== To Do
+
+
+== Credit / Special Thanks
+
+{Demo on css rounded corners}[http://css-radius.heroku.com]
+
+{Background image gradients}[http://gradients.glrzad.com/]
+
+
+Copyright (c) 2010 [Jake Wendt], released under the MIT license

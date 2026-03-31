@@ -1,0 +1,7 @@
+Tacirnet SASS
+
+Project Description:
+tacirnet e-ticaret sistemi icin hazirladigimiz yeni scss yapisi
+
+README:
+Tacirnet SASS

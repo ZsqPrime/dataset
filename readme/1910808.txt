@@ -1,0 +1,7 @@
+Octopress theme for wordpress
+
+Project Description:
+
+
+README:
+Octopress theme for wordpress

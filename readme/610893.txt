@@ -1,0 +1,6 @@
+
+
+Project Description:
+RPM-package for GIMP Normalmap plugin
+
+README:

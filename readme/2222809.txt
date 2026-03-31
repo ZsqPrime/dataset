@@ -1,0 +1,7 @@
+An Javascript implementation of the Game of Life, powered by Raphael.
+
+Project Description:
+An Javascript implementation of the Game of Life, powered by Raphael.
+
+README:
+An Javascript implementation of the Game of Life, powered by Raphael.

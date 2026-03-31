@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+This is a tool for resizing RRDTool logs
+
+Please refer to http://perlmonks.org/?node_id=874274 for more information.

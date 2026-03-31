@@ -1,0 +1,34 @@
+Project Description:
+excercises
+
+README:
+//int_to_alpha : convert integer to char.
+
+//txtrd - read all dire and files and list all files with given text
+
+//Details.java - Java program start
+
+//list.cpp - list programs workout here, double-list, reverse, 
+             list-merge sort
+
+//cback - C++ call back
+
+//check_num  - check if passed is number
+
+//map_stl - stl map operations
+
+//leftjustified - leftjustified string manipulation
+
+//string used - for left justified text
+
+//file_rw - perl for file search, read write
+
+//factorial - Java 
+
+//bntree_del - binary tree deletion
+
+//bintree_all - all binarytree operations
+
+//hash_map - a simple hash for c++
+
+//List - java list

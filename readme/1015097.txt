@@ -1,0 +1,4 @@
+Project Description:
+Symfony2 bundle for crateing of catalog structure
+
+README:

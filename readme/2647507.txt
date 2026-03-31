@@ -1,0 +1,36 @@
+Project Description:
+A source cross-reference
+
+README:
+A source cross-reference designed to suit my needs better than LXR.
+
+Some nice features:
+
+Inline viewing of tags and sources.  Clicking on the tag type character for
+an entry brings up an inline source window that should even display the
+proper scope.
+
+Takes preprocessed source, making references much less ambiguous.
+Especially within the macro-heavy and multiply-implemented arch/
+directory.  Downside: you only cross-reference your specific build.
+
+All dynamic features are implemented in javascript, meaning it works
+entirely offline, or with a server just serving static pages.
+
+Should deduplicate source pretty well.  Tags less so, due to line numbering
+issues.
+
+$XR is this directory.
+
+Set up $XR/gen/xr_config.py. INPUT_BASE is the root of your source, OUTPUT_BASE
+should usually be $XR/tree
+
+compile $XR/gen/
+
+Prepare your build environment. Build with CC=path/to/gcc.py
+
+With $XR as your working directory, run gen/post.sh
+
+You can export the results by copying the $XR directory as needed. This command:
+rsync -avz -f "- *.ctags" -f "- *.gcc_tags" -f "- gen/pre_tag/*" $SRC_HOST:$XR/* $DEST_DIR
+Will exclude the large amount of temporaries.

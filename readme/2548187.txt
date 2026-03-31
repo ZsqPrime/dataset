@@ -1,0 +1,12 @@
+Project Description:
+Seminarska naloga pri predmetu elektronsko poslovanje
+
+README:
+#CakeShop
+
+CakePHP based webshop
+
+
+
+
+#authors: Mia Erbus, Aleš Matijevič and Igor Jončevski

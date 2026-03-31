@@ -1,0 +1,8 @@
+Synergy is a set of useful Django apps. More details soon.
+
+
+Project Description:
+A set of usefull Django apps
+
+README:
+Synergy is a set of useful Django apps. More details soon.

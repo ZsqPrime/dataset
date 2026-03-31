@@ -1,0 +1,55 @@
+Project Description:
+Program in C that unscrambles a given string into a word, using a provided word list (aspell dump master)
+
+README:
+Scramble v0.4
+
+Written by Doug Molineux
+
+Simple C program that unscrambles a collection of letters to reveal real words. 
+words is a words list file that scramble depends on. Primarily, this was made
+for educational reasons, use Valgrind to analyze some of the memory allocation
+and to debug memory leaks. The 'words' file  must exist inside the local 
+directory of the scramble executable. To run scramble execute (in Linux):
+
+	./scramble
+
+You can also enter a 2nd mode (md5 mode) which will unscramble a md5 entered 
+string. For example, the MD5 hash of the word "test" is:
+
+	098f6bcd4621d373cade4e832627b4f6
+
+If you enter the above hash into the second mode, it will return the string
+
+	Match: test
+
+With scramble comes a very simple regression test script that compares real 
+output to expected output. Run reg.sh to run the regression test.
+
+If you need to generate a words list, you can do so with aspell: 
+
+	// installs aspell (using yum installer)
+	yum install aspell
+
+	// extract word list to words file
+	aspell dump master > words
+
+To compile, with debugging symbols use this:
+
+	gcc -o scramble scramble.c -I/usr/local/ssl/include -L /usr/local/ssl/lib -lssl -lcrypto -g
+
+3/12/2012 
+ - Increased accuracy of hash "decryptor"
+ - Moved hash function to seperate file (hash.c)
+ - Added a makefile for compilation
+
+3/2/2012
+ - Added ability to unscramble hash input
+
+3/1/2012
+ - Added a regression directory
+ - Added executable
+ - Updated scramble.c
+
+2/2/2012
+ - Added project to Github, contains .c file and words list

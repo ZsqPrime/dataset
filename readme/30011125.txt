@@ -1,0 +1,21 @@
+Project Description:
+Checks foreign keys in a SQLite database
+
+README:
+There is a built-in [PRAGMA](http://sqlite.org/pragma.html#pragma_foreign_key_check) since SQLite 3.7.16 (2013-03-18)...
+
+OVERVIEW
+
+This is a modified version of the 'genfkey' tool:
+  - for each foreign key declaration, the program checks that there is at least one associated index,
+  - triggers are not generated, instead queries are generated to check that there is no dangling FKs.
+See http://www.mail-archive.com/sqlite-users@sqlite.org/msg37771.html
+And http://www.mail-archive.com/sqlite-users@sqlite.org/msg37866.html
+
+USAGE
+
+$ checkfkey ./test.db | sqlite3 ./test.db
+
+BUILD
+
+$ gcc -fPIC -O2 -Wall -o checkfkey checkfkey.c `pkg-config --libs sqlite3`

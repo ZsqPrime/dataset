@@ -1,0 +1,9 @@
+IsUnit ensures your unit tests don't have external dependencies or dependencies on other classes 
+unless explicitly stated making your code clean and easy to refactor.
+
+Project Description:
+IsUnit ensures your unit tests don't have external dependencies or dependencies on other classes unless explicitly stated making your code clean and easy to refactor
+
+README:
+IsUnit ensures your unit tests don't have external dependencies or dependencies on other classes 
+unless explicitly stated making your code clean and easy to refactor.

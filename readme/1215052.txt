@@ -1,0 +1,12 @@
+KidPuzzle game sources and resources.
+
+This is proprietary code and copyrighted set of assets (graphics, sound). Copying or distribution is not allowed.
+
+
+Project Description:
+iPad version of the game
+
+README:
+KidPuzzle game sources and resources.
+
+This is proprietary code and copyrighted set of assets (graphics, sound). Copying or distribution is not allowed.

@@ -1,0 +1,39 @@
+Project Description:
+kernel-based security module for USB mass-storage device filtering
+
+README:
+The USBWall project
+-------------------
+
+The goal of the usbwall project is to add a complete USB mass-storage filtering system in the Linux
+kernel.
+Through filtering we would like to support:
+
+1) USB Storage white-listing, permitting to allow only specific pre-registered usb devices. Other
+devices are simply unaccessible from any userspace tools such as mount.
+2) USB Storage fine grain filtering, specifying which action can be done for each allowed device,
+such as read, write, execute, setu(g)id root execution, etc. This function needs to be integrated
+in a complete security suite which is not supported by now.
+3) Simple listing management through graphical user interface.
+4) High level API definition through a userspace library, allowing to update or modify the module
+interface without impacting userspace software. Only the abstraction library has to be updated.
+
+The USBWall module
+------------------
+This is the source repository of the USBWall module.
+This sources contain only the Linux kernel module. The library and the currently being implemented
+applications can be found on github:
+https://github.com/LACSC/
+
+The module currently support whitelisting through usb mass storage devices injection. By now, there
+is no automatic key injection at startup. This should be done by the user using the startup scripts
+of his distribution
+
+Limitations
+-----------
+In order to be functionnal, the usb_storage module has to be compiled as a module (not statically)
+this is the case in all major distributions for desktop), and the usbwall module has to be loaded
+_before_ usb_storage. In the other case, the usb_storage module will take the hand on the device
+first and the filtering will not be supported.
+
+This limitation will be corrected in the future.

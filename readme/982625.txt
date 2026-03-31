@@ -1,0 +1,7 @@
+The project was moved to [code-story-planning](https://github.com/CodeStory/code-story-planning)
+
+Project Description:
+CodeStory World
+
+README:
+The project was moved to [code-story-planning](https://github.com/CodeStory/code-story-planning)

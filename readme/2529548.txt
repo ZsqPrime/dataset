@@ -1,0 +1,19 @@
+Project Description:
+a demonstration application for the delightful_forms plugin for Rails
+
+README:
+This application is a demonstration of the use of the soon-to-be-released 
+delightful_forms plugin for Rails.  
+
+The plugin, and this demonstration application are contributed to the community
+by my employer: ShopKeep.com.  The initial extraction of code from our business 
+application is complete.  I am in the process of now 'paring it down' to a 
+bare-bones Rails application.  When that is complete, I'll be moving on to the 
+central task of moving the work currently done by the shared/stretchy_text_field
+partial into a FormBuilder.
+
+Feel free to contact me at the email address below with comments, criticisms, or
+suggestions... or even offers of help! ;-)
+
+Bill Walton
+bill@shopkeep.com

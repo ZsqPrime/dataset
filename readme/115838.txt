@@ -1,0 +1,13 @@
+# Ashton Harris
+## Web Designer/Front End Developer
+
+Welcome to Ashton Harris' portfolio
+
+Project Description:
+Rails Portfolio
+
+README:
+# Ashton Harris
+## Web Designer/Front End Developer
+
+Welcome to Ashton Harris' portfolio

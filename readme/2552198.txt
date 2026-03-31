@@ -1,0 +1,50 @@
+Project Description:
+Hibernate for Ruby
+
+README:
+= rubernate
+
+Create a class with common java values
+
+  class User < Rubernate::Entity
+    integer :id , :id=>true , :generated => [:auto=>true, :strategy=>:auto]
+    string :name
+    float :float_otra
+    double :double_otra
+    boolean :active
+  end
+
+  rubernate = Rubernate::Init.new
+  rubernate.load_classes(User)
+
+  connection_properties = Hash[
+    :dialect=>"org.hibernate.dialect.MySQLDialect',
+    :url=>'jdbc:mysql://localhost:3306/rubernate',
+    :driver=>'com.mysql.jdbc.Driver',
+    :username=>'root',
+    :password=>'',
+    :auto_ddl=>'update',
+    ]
+  
+    rubernate.connect connection_properties
+
+  User.all.each do |user|
+    puts user
+  end
+
+  User.find(1)
+
+== Contributing to rubernate
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Jonathan Garay. See LICENSE.txt for
+further details.

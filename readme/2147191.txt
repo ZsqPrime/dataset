@@ -1,0 +1,15 @@
+
+LIST OF ROUTINES:
+
+- sor_ds(...) - Successive over-relaxation (SOR) 
+- cgm_ds(...) - Conjugate gradient method 
+
+Project Description:
+Some implementations of common high performance routines used in scientific computing.
+
+README:
+
+LIST OF ROUTINES:
+
+- sor_ds(...) - Successive over-relaxation (SOR) 
+- cgm_ds(...) - Conjugate gradient method

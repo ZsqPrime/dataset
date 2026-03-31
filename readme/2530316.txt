@@ -1,0 +1,8 @@
+Project Description:
+PDL access to raw audio/video data
+
+README:
+
+PDL::GStreamer -- PDL access to raw audio/video data
+
+https://github.com/zpmorgan/PDL-GStreamer

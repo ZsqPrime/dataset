@@ -1,0 +1,7 @@
+This file was created by IntelliJ IDEA 11.0.2 for binding GitHub repository
+
+Project Description:
+ActionScript3 code generator for the Surveys project. Generates dto classes and remote services proxies from annotated Java classes and interfaces. The credit for creating most of it goes to Rafał Jamróz, I just did some bugfix here.
+
+README:
+This file was created by IntelliJ IDEA 11.0.2 for binding GitHub repository

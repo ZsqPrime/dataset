@@ -1,0 +1,5 @@
+Project Description:
+Motivated to not be a too damned time consuming activites, I create this framework implementing Microsoft IUI style application. Focused heavily on database desktop application.
+
+README:
+This should make my life, and could be yours too, easier. After that? go get a life! ;)

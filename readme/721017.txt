@@ -1,0 +1,16 @@
+This is the biroxy add-on.  It contains:
+
+* A program (lib/main.js).
+* A few tests.
+* Some meager documentation.
+
+
+Project Description:
+a firefox extension for playing danmu videos
+
+README:
+This is the biroxy add-on.  It contains:
+
+* A program (lib/main.js).
+* A few tests.
+* Some meager documentation.

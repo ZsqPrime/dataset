@@ -1,0 +1,15 @@
+ZenPacks
+===============================================================================
+
+This repository contains submodule references to other ZenPack repositories.
+
+
+
+Project Description:
+Collection of submodules referencing other ZenPack repositories.
+
+README:
+ZenPacks
+===============================================================================
+
+This repository contains submodule references to other ZenPack repositories.

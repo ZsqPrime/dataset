@@ -1,0 +1,6 @@
+
+
+Project Description:
+Tools for next-generation sequencing in use at the CCR/NCI
+
+README:

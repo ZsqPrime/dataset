@@ -1,0 +1,5 @@
+Project Description:
+F# implementation of Project Euler problems
+
+README:
+F# implementation of Project Euler problems

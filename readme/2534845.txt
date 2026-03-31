@@ -1,0 +1,4 @@
+Project Description:
+A Java port of Alignment with Gap Excision (AGE) as a standalone program and a Hadoop MapReduce application.
+
+README:

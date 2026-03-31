@@ -1,0 +1,6 @@
+
+
+Project Description:
+A mock plugin which rescues files of rpmbuild -bp from mock environment
+
+README:

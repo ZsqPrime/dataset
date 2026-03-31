@@ -1,0 +1,21 @@
+Project Description:
+Download matching torrents from an rss-feed
+
+README:
+Script for watching an rss-feed of torrents and download
+any matches to a special folder.
+
+Written by Anders Bennehag and licensed under GPL.
+
+To run the program, create a config-file bicycles.ini:
+	[torrent]
+	rss: http://rss.thepiratebay.org/208
+	search-string:bicycles 720p
+	min-size:600
+	max-size:1200
+	folder: /home/anders/torrents/watch/tv-shows
+
+and then start rssdownloader with 
+	python rssdownloader.py -c bicycles.ini
+
+The program will look through the feed once and put matching new torrents in the designated folder after which it is done. It is not a daemon which is why it must be scheduled with cron.

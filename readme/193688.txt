@@ -1,0 +1,24 @@
+# dotfiles
+
+## Setup
+
+```shell
+git clone git@github.com:hnagato/dotfiles.git
+cd dotfiles
+./setup.rb
+```
+
+
+Project Description:
+dotfiles
+
+README:
+# dotfiles
+
+## Setup
+
+```shell
+git clone git@github.com:hnagato/dotfiles.git
+cd dotfiles
+./setup.rb
+```

@@ -1,0 +1,10 @@
+THIS MODULE IS DEPRECATED 
+The polymer simulators have been integrated into opm-autodiff
+
+
+Project Description:
+None
+
+README:
+THIS MODULE IS DEPRECATED 
+The polymer simulators have been integrated into opm-autodiff

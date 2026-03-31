@@ -1,0 +1,21 @@
+Project Description:
+This is now deprecated, using http://bitbucket.org/GeissT/gbsh
+
+README:
+Basic Linux Shell written in C
+------------------------------
+
+Features
+++++++++
+
+Simple Prompt, which checks for the root user, execute as root to see this.
+
+TODO
+++++
+
+Improve commands
+Add more commands eg. cat, grep etc
+Add a text editor, either nano or create own
+Finish of SUDO command
+
+Skeleton is set out for the SUDO command, just needs implementation.

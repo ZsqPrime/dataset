@@ -1,0 +1,23 @@
+Project Description:
+Stores Gyazo pictures in the AWS S3 storage
+
+README:
+==========================================================================================
+Gyazo-AWS-S3 is a php script that stores screenshots at the AWS S3.
+
+It uses S3 php class written by Donovan Schonknecht  stored in /files folder. 
+
+Also it has a great feature to shorten URL through bitly.
+
+v 0.1
+
+
+
+v 0.2 change list:
+-- added painting tools
+
+
+==========================================================================================
+
+Andrey Kozhokaru
+andrey@kozhokaru.com

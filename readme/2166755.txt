@@ -1,0 +1,5 @@
+Project Description:
+A phone to desktop Audio Streaming App. A project for CS 454 @CSULA
+
+README:
+This app will allow an Android device to stream audio to a host machine for output to any connected speaker system.

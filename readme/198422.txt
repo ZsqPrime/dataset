@@ -1,0 +1,8 @@
+This repository contains scripts I use while working on BlueZ development.
+
+
+Project Description:
+None
+
+README:
+This repository contains scripts I use while working on BlueZ development.

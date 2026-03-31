@@ -1,0 +1,18 @@
+Project Description:
+ Admin interface for ARM-based PCs
+
+README:
+ARM{in}
+Lightweight web adm{in} interface for ARM-based PCs
+
+Web Framework: Padrino
+:renderer: haml
+:test: shoulda
+:orm: activerecord
+:mock: none
+:stylesheet: css
+:script: jquery
+
+Webserver: Thin
+CSS Framework: Twitter Bootstrap
+CSS Grid: Object Oriented Cascading Style Sheets (OOCSS)

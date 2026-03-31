@@ -1,0 +1,13 @@
+Project Description:
+Build Scatterplots using HTML5's canvas element.
+
+README:
+Scatterplot:
+
+
+
+Build scatterplots using HTML5's canvas element.
+
+
+
+Authored by Ron Rider (rideron89@gmail.com)

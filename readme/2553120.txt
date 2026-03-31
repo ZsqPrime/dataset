@@ -1,0 +1,34 @@
+Project Description:
+Setup and configuration for a system
+
+README:
+* setup - UNIX home directory configuration
+
+  Clone into home directory.  Or, clone into 'setup', and mv all files
+  into your home directory (or better yet, fork and use your own):
+
+    #+BEGIN_SRC
+    git clone git://github.com/pjkundert/setup.git
+    mv setup/* setup/.* ~
+    #+END_SRC
+
+  It is configured to excludes all files, by default: to add a file
+  for tracking, use: git add -f <filename>
+
+  Supports Mac and Linux (Ubuntu, Debian).
+
+** Makefile
+   Checks, downloads and builds necessary targets.  The following
+   targets are supported:
+*** make [all]
+    Checks all targets and configuration
+*** make iterm
+    Checks for iTerm2, and checks for configuration of control- and
+    shift-return keys to send escape sequences, so that org-mode is
+    usabled in an Mac OS-X iTerm2 text terminal.
+*** make homebrew
+    Checks for and installs homebrew (on Mac).  Required for many other packages.
+*** make emacs
+    Checks and installs Emacs 24, and installs emacs-prelude into .emacs.d
+*** make bash
+    Checks and installs bash configuration, with git sensitive prompt.

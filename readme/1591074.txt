@@ -1,0 +1,16 @@
+A DynDNS Updater in Python.
+
+Print usage with:
+	python DynDNS_Update.py -h
+	python DynDNS_Update.py --help
+
+
+Project Description:
+A DynDNS Updater in Python.
+
+README:
+A DynDNS Updater in Python.
+
+Print usage with:
+	python DynDNS_Update.py -h
+	python DynDNS_Update.py --help

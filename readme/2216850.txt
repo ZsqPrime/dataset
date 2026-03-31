@@ -1,0 +1,10 @@
+Petit ajout d'un fichier .txt où l'on peut mettre ce qu'on a modifié/ajouté, etc ...
+ TO DO : chargement de fichiers .ecore
+
+
+Project Description:
+
+
+README:
+Petit ajout d'un fichier .txt où l'on peut mettre ce qu'on a modifié/ajouté, etc ...
+ TO DO : chargement de fichiers .ecore

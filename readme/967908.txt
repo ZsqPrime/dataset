@@ -1,0 +1,21 @@
+yabe tutorial with play 2.0 for scala
+=====================================
+
+This is yabe tutorial with play 2.0 for Scala.
+
+http://scala.playframework.org/documentation/scala-0.9.1/guide1
+http://www.playframework.org/documentation/1.2.4/guide1
+
+
+
+Project Description:
+yabe sample with play 2.0 for scala
+
+README:
+yabe tutorial with play 2.0 for scala
+=====================================
+
+This is yabe tutorial with play 2.0 for Scala.
+
+http://scala.playframework.org/documentation/scala-0.9.1/guide1
+http://www.playframework.org/documentation/1.2.4/guide1

@@ -1,0 +1,16 @@
+Buzz Words!
+
+Buzz Words is a game of creative description and ingenious guessing.
+
+Authors: Patrick Reynolds, Edward Rowe, and Lucas Rowe
+
+
+Project Description:
+Like Buzzwords, without the buzzwords
+
+README:
+Buzz Words!
+
+Buzz Words is a game of creative description and ingenious guessing.
+
+Authors: Patrick Reynolds, Edward Rowe, and Lucas Rowe

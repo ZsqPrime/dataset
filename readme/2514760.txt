@@ -1,0 +1,8 @@
+Java реализация хранилища для NuGet. В идеале - прокси к Maven
+
+
+Project Description:
+Java NuGet server
+
+README:
+Java реализация хранилища для NuGet. В идеале - прокси к Maven

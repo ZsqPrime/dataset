@@ -1,0 +1,11 @@
+Project Description:
+Shows a graphic of where the sun is in the sky at any given time of day at any geographic location.
+
+README:
+Since I lost my window, I have no idea if the sun is up.  
+This is so I can see where the sun is in the sky, 
+even in my windowless cell.
+
+Screenshot:
+
+https://github.com/evandhoffman/Sunrise-Display/raw/master/screenshot.png

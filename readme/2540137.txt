@@ -1,0 +1,6 @@
+Project Description:
+Meine eingescannten Mitschriften aus dem BSETITTI-Studiengang - Ich lade herzlich dazu ein, andere Mitschriften auch hochzuladen. Einfach melden!
+
+README:
+Dieses Repository beinhaltet meine eingescannten Mitschriften des BSETITTI-Studiengangs.
+Ich gebe keine Gewähr auf nichts.

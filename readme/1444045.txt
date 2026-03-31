@@ -1,0 +1,11 @@
+This project is only in its very early stages. There is a preliminary planning document at https://piratenpad.de/p/bitwasp-planning
+
+Thanks everyone, this should be good!
+
+Project Description:
+A secure marketplace integrated with the Bitcoin currency.
+
+README:
+This project is only in its very early stages. There is a preliminary planning document at https://piratenpad.de/p/bitwasp-planning
+
+Thanks everyone, this should be good!

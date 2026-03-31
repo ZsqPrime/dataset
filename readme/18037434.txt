@@ -1,0 +1,7 @@
+Project Description:
+Shows the lines of source of programs as they run, so that all your code can be anime authentic!
+
+README:
+This is just a simple python script that will output the source of your program to standard out as it runs.
+Gives it an 'Anime Code' effect where whenever a 'complex' program is ran, the output on the screen is
+simple a bunch of source code looking stuff.

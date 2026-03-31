@@ -1,0 +1,49 @@
+Source code for the Ateneo de Manila High School Guidance Office
+Counseling Assistance system.
+
+
+Developers:
+1. Aron Asor
+2. April Canlas
+3. Anna Uy
+
+----------------------------------------------------------------------------------------
+
+Dependencies:
+1. Python
+2. Web.py
+3. MySql (for production, but SQLite up until the first prototype)
+4. SQLAlchemy (for hardcore database action!)
+5. xlrd (for reading xls files)
+
+Notes:
+
+1. To initialize the DB, run init_db.py
+2. The system assumes that all users logged in are counselors - 16 Feb 2012
+
+Project Description:
+Ateneo High School Guidance System
+
+README:
+Source code for the Ateneo de Manila High School Guidance Office
+Counseling Assistance system.
+
+
+Developers:
+1. Aron Asor
+2. April Canlas
+3. Anna Uy
+
+----------------------------------------------------------------------------------------
+
+Dependencies:
+1. Python
+2. Web.py
+3. MySql (for production, but SQLite up until the first prototype)
+4. SQLAlchemy (for hardcore database action!)
+5. xlrd (for reading xls files)
+
+Notes:
+
+1. To initialize the DB, run init_db.py
+2. The system assumes that all users logged in are counselors - 16 Feb 2012

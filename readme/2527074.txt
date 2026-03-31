@@ -1,0 +1,6 @@
+Project Description:
+a smart solution of elevator
+
+README:
+2012/1/15 added by trashtoken
+The repo was created!!

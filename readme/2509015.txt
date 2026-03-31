@@ -1,0 +1,12 @@
+# Test Ruby on Rails tutorial
+
+Do not checkout this test
+
+
+Project Description:
+Tuto ruby
+
+README:
+# Test Ruby on Rails tutorial
+
+Do not checkout this test

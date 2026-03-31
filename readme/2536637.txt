@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Django based app for building trainings

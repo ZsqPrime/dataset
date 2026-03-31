@@ -1,0 +1,13 @@
+I have forked this library to the official robotlegs organisation page.
+Please post any about any known issues/bugs there.
+https://github.com/robotlegs/robotlegs-extensions-SignalCommandMap
+
+
+
+Project Description:
+Signal command map extension for RobotLegs2
+
+README:
+I have forked this library to the official robotlegs organisation page.
+Please post any about any known issues/bugs there.
+https://github.com/robotlegs/robotlegs-extensions-SignalCommandMap

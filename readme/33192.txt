@@ -1,0 +1,5 @@
+Project Description:
+Support for using Spring when developing native Android applications.
+
+README:
+# spring-android is no longer actively maintained by VMware, Inc.

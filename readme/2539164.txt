@@ -1,0 +1,7 @@
+Project Description:
+Startup Weekend SLO Project
+
+README:
+# Dependencies
+
+* pip install django-social-auth

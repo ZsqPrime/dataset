@@ -1,0 +1,9 @@
+Project Description:
+An alternative reader for pdf.js which renders the document pages on-demand, incrementally.
+
+README:
+# Description 
+
+This is a very simple reader for pdf.js, written in JavaScript.
+
+I plan to integrate it in collective.pdfjs when it is stable.

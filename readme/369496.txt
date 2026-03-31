@@ -1,0 +1,304 @@
+Services PageRank
+=================
+
+PageRank Lookup (Based on Google Toolbar for Mozilla Firefox)
+
+Generates the CheckHash (ch) and lookups up the URL to parse the PageRank from Google.
+
+* @category  Services
+* @package   PageRank
+* @author    James Wade <hm2k@php.net>
+* @copyright 2012 Phurix
+* @license   http://www.opensource.org/licenses/bsd-license.php The BSD License
+* @version   Release: @package_version@
+* @link      http://pagerank.phurix.net/
+
+Credits
+-------
+
+* Written by [James Wade as HM2K](http://www.hm2k.com/)
+* Sponsored by [Phurix Web Hosting](http://www.phurix.co.uk/)
+
+Dependencies
+------------
+PHP >= 5
+HTTP_Request2
+
+Install
+-------
+
+Using wget as a user:
+	wget https://github.com/hm2k/Services_PageRank/tarball/master -O hm2k-Services_PageRank.tar.gz
+	tar zxf hm2k-Services_PageRank.tar.gz hm2k-Services_PageRank-*/Services
+	mv hm2k-Services_PageRank-*/Services Services
+	rm -fr hm2k-Services_PageRank*
+
+Using git as root:
+	git fetch git://github.com/hm2k/Services_PageRank.git
+	pear uninstall Services_PageRank
+	pear install --alldeps Services_PageRank/package.xml
+
+Examples
+--------
+
+In this usage example you can lookup echo the pagerank of the domain or URL you query:
+<?php
+	require('Services/PageRank.php');
+	echo new Services_PageRank('example.com'); # returns 7
+?>
+
+Advanced examples
+-----------------
+
+<?php
+	require('Services/PageRank.php');
+	$pr = new Services_PageRank();
+	$pr->setQuery('example.com');
+	echo $pr->getQuery(); # returns example.com
+?>
+<?php
+	require('Services/PageRank.php');
+	$pr = new Services_PageRank();
+	$pr->setQuery('example.com');
+	echo $pr->getCheckhash(); # returns 85ee6a887
+?>
+<?php
+	require('Services/PageRank.php');
+	$pr = new Services_PageRank();
+	$pr->setQuery('example.com');
+	echo $pr->getUrl(); # returns http://toolbarqueries.google.com/tbr?client=navclient-auto&ch=85ee6a887&features=Rank&q=info:example.com
+?>
+<?php
+	require('Services/PageRank.php');
+	$pr = new Services_PageRank();
+	$pr->setQuery('example.com');
+	echo $pr->getData(); # returns Rank_1:1:7
+?>
+<?php
+	require('Services/PageRank.php');
+	$pr = new Services_PageRank();
+	$pr->setQuery('example.com');
+	echo $pr->getData(); # returns 7
+?>	
+
+"Terms of Service"
+------------------
+
+The hash seed or "cipher" string used in the algorithm to generate the
+ checkhash needed for each query is as follows:
+
+	"Mining PageRank is AGAINST GOOGLE'S TERMS OF SERVICE. Yes, I'm talking to you, scammer."
+
+The above sentance is used to generate the checkhash and is only included for that reason.
+
+This "Hash Seed" first appeared in the official Google Toolbar for Firefox plugin available here:
+
+	https://dl-ssl.google.com/firefox/google-toolbar-beta-win.xpi
+
+To my knowledge Google's "Terms Of Service" does not cover or mention "Mining" or "PageRank".
+
+However, in the infamous words of Google: "Don't be evil".
+
+Project Description:
+Generates the CheckHash (ch) and lookups up the URL to parse the PageRank from Google.
+
+README:
+Services PageRank
+
+=================
+
+
+
+PageRank Lookup (Based on Google Toolbar for Mozilla Firefox)
+
+
+
+Generates the CheckHash (ch) and lookups up the URL to parse the PageRank from Google.
+
+
+
+* @category  Services
+
+* @package   PageRank
+
+* @author    James Wade <hm2k@php.net>
+
+* @copyright 2012 Phurix
+
+* @license   http://www.opensource.org/licenses/bsd-license.php The BSD License
+
+* @version   Release: @package_version@
+
+* @link      http://pagerank.phurix.net/
+
+
+
+Credits
+
+-------
+
+
+
+* Written by [James Wade as HM2K](http://www.hm2k.com/)
+
+* Sponsored by [Phurix Web Hosting](http://www.phurix.co.uk/)
+
+
+
+Dependencies
+
+------------
+
+PHP >= 5
+
+HTTP_Request2
+
+
+
+Install
+
+-------
+
+
+
+Using wget as a user:
+
+	wget https://github.com/hm2k/Services_PageRank/tarball/master -O hm2k-Services_PageRank.tar.gz
+
+	tar zxf hm2k-Services_PageRank.tar.gz hm2k-Services_PageRank-*/Services
+
+	mv hm2k-Services_PageRank-*/Services Services
+
+	rm -fr hm2k-Services_PageRank*
+
+
+
+Using git as root:
+
+	git fetch git://github.com/hm2k/Services_PageRank.git
+
+	pear uninstall Services_PageRank
+
+	pear install --alldeps Services_PageRank/package.xml
+
+
+
+Examples
+
+--------
+
+
+
+In this usage example you can lookup echo the pagerank of the domain or URL you query:
+
+<?php
+
+	require('Services/PageRank.php');
+
+	echo new Services_PageRank('example.com'); # returns 7
+
+?>
+
+
+
+Advanced examples
+
+-----------------
+
+
+
+<?php
+
+	require('Services/PageRank.php');
+
+	$pr = new Services_PageRank();
+
+	$pr->setQuery('example.com');
+
+	echo $pr->getQuery(); # returns example.com
+
+?>
+
+<?php
+
+	require('Services/PageRank.php');
+
+	$pr = new Services_PageRank();
+
+	$pr->setQuery('example.com');
+
+	echo $pr->getCheckhash(); # returns 85ee6a887
+
+?>
+
+<?php
+
+	require('Services/PageRank.php');
+
+	$pr = new Services_PageRank();
+
+	$pr->setQuery('example.com');
+
+	echo $pr->getUrl(); # returns http://toolbarqueries.google.com/tbr?client=navclient-auto&ch=85ee6a887&features=Rank&q=info:example.com
+
+?>
+
+<?php
+
+	require('Services/PageRank.php');
+
+	$pr = new Services_PageRank();
+
+	$pr->setQuery('example.com');
+
+	echo $pr->getData(); # returns Rank_1:1:7
+
+?>
+
+<?php
+
+	require('Services/PageRank.php');
+
+	$pr = new Services_PageRank();
+
+	$pr->setQuery('example.com');
+
+	echo $pr->getData(); # returns 7
+
+?>	
+
+
+
+"Terms of Service"
+
+------------------
+
+
+
+The hash seed or "cipher" string used in the algorithm to generate the
+
+ checkhash needed for each query is as follows:
+
+
+
+	"Mining PageRank is AGAINST GOOGLE'S TERMS OF SERVICE. Yes, I'm talking to you, scammer."
+
+
+
+The above sentance is used to generate the checkhash and is only included for that reason.
+
+
+
+This "Hash Seed" first appeared in the official Google Toolbar for Firefox plugin available here:
+
+
+
+	https://dl-ssl.google.com/firefox/google-toolbar-beta-win.xpi
+
+
+
+To my knowledge Google's "Terms Of Service" does not cover or mention "Mining" or "PageRank".
+
+
+
+However, in the infamous words of Google: "Don't be evil".

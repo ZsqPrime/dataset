@@ -1,0 +1,7 @@
+computational geometry exercises
+
+Project Description:
+computational geometry
+
+README:
+computational geometry exercises

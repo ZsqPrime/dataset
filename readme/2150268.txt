@@ -1,0 +1,7 @@
+Project Description:
+An iPad app for naturally creating 3D models
+
+README:
+Like [this][1], but on an iPad. Currently a WIP.
+
+[1]:http://cs.nyu.edu/~gingold/annotations/

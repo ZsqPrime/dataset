@@ -1,0 +1,10 @@
+HTO is a collaborative project and is currently under development
+Check help/ for an overview and examples
+
+
+Project Description:
+Diffusion tool for multichannel audio setups
+
+README:
+HTO is a collaborative project and is currently under development
+Check help/ for an overview and examples

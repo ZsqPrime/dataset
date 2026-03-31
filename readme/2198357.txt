@@ -1,0 +1,13 @@
+CRM
+customer relationship management system
+written on PHP using CakePHP framework
+
+Project Description:
+custom relationship management application written on php using cakephp framework
+
+README:
+CRM
+
+customer relationship management system
+
+written on PHP using CakePHP framework

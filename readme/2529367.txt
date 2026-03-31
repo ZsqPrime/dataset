@@ -1,0 +1,5 @@
+Project Description:
+Jargo is a framework for creating Java Inversion of Control (IOC) Containers.
+
+README:
+This file was created by IntelliJ IDEA 10.0.3 for binding GitHub repository

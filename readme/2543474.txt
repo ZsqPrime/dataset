@@ -1,0 +1,49 @@
+Project Description:
+A Chrome extension to manage your Rackspace cloud account
+
+README:
+This Application will allow you to quickly know how your Rackspace Servers are doing (among some other informations)
+But also (soft-)reboot them.
+
+In the future, I will Add the ability to 
+	- add/edit/delete servers, but also flavors, images and maybe more.
+	- rebuild/resize your servers
+	- Update servers names and Administrative password
+	
+------------------------------------------------------------------------------------
+
+v1.3.0.2:
+	- The IPs will now display correctly.
+
+v1.3:
+	- You can now reboot (soft) a server
+	- Adding the tooltips
+	- Fixing some issues in the js lib
+
+v1.2.1.1:
+	- Fixing the date format for the images
+	- The sorting (desc/asc) iamges are now displayed
+
+v1.2.1:
+	- Preparing the code for the actions on ther servers/Images
+	- Adding the ability to list flavors
+
+v1.2:
+	- Adding the ability to list the images
+	- Fixing a bug that could prevent to scroll up and down
+	- The list (images and server) are now global
+
+v1.1.2:
+	- Updating dataTable to 1.9.0 (now using the minified version)
+	- Now using the minified version of jQuery
+	- Updating bootstrap to v2.0
+	- Creating the images and flavors pages (coming soon)
+
+v1.1.1: 
+	- Optimizing a bit and modifying the icon
+
+v1.1.0: 
+	- Initial version.
+
+icon copyright (c) Emey87 - http://emey87.deviantart.com/
+coming soon icon copyright (c) iconFinder.

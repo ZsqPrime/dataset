@@ -1,0 +1,5 @@
+Project Description:
+boring experiments in graphing stuff
+
+README:
+Boring experiments with a few different client-side graphing libraries. Nothing to see here.

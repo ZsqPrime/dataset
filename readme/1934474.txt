@@ -1,0 +1,106 @@
+Persival - persisten key value store in Go
+==========================================
+
+Persival is an in-memory pseudo key-value storage, very efficient to
+keep list of records with small amount of data, when there's no need
+of searching for the values nor keys.
+
+Philosophy
+----------
+Persival follows those simple rules:
+
+* No user-defined keys are allowed, system MUST decide under what key the
+  value will be stored.
+* All the data SHALL always be kept in the memory.
+* Persistency SHALL be provided only via logging.
+* Activity log SHOULD be merged after it reaches certain size.
+* Search for the values CAN NOT be performed.
+
+Storage implementation
+----------------------
+So far it's only proof of concept, so all the data is stored as a gob
+encoded stream.
+
+Installation
+------------
+Use the `go install` tool:
+
+    $ go install github.com/nu7hatch/persival
+
+Usage
+-----
+
+    package main
+    
+    import "github.com/nu7hatch/persival"
+    
+    func main() {
+        bucket, _ := persival.NewBucket("./mybucket.bkt", 0)
+        k1, _ := bucket.Set("hello")
+        k2, _ := bucket.Set("world")
+        bucket.Update(k2, "hurra")
+        bucket.Delete(k1)
+        bucket.Close()
+    }
+
+Copyright
+---------
+Copyright (C) 2011 by Krzysztof Kowalik <chris@nu7hat.ch>
+
+Released under the MIT license. See COPYING file for details.
+
+
+Project Description:
+Programatic, persistent, pseudo key-value storage in Go
+
+README:
+Persival - persisten key value store in Go
+==========================================
+
+Persival is an in-memory pseudo key-value storage, very efficient to
+keep list of records with small amount of data, when there's no need
+of searching for the values nor keys.
+
+Philosophy
+----------
+Persival follows those simple rules:
+
+* No user-defined keys are allowed, system MUST decide under what key the
+  value will be stored.
+* All the data SHALL always be kept in the memory.
+* Persistency SHALL be provided only via logging.
+* Activity log SHOULD be merged after it reaches certain size.
+* Search for the values CAN NOT be performed.
+
+Storage implementation
+----------------------
+So far it's only proof of concept, so all the data is stored as a gob
+encoded stream.
+
+Installation
+------------
+Use the `go install` tool:
+
+    $ go install github.com/nu7hatch/persival
+
+Usage
+-----
+
+    package main
+    
+    import "github.com/nu7hatch/persival"
+    
+    func main() {
+        bucket, _ := persival.NewBucket("./mybucket.bkt", 0)
+        k1, _ := bucket.Set("hello")
+        k2, _ := bucket.Set("world")
+        bucket.Update(k2, "hurra")
+        bucket.Delete(k1)
+        bucket.Close()
+    }
+
+Copyright
+---------
+Copyright (C) 2011 by Krzysztof Kowalik <chris@nu7hat.ch>
+
+Released under the MIT license. See COPYING file for details.

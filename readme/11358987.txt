@@ -1,0 +1,6 @@
+Project Description:
+Read out JTAG ID of the FPGA on a Kovan board
+
+README:
+This program configures the GPIOs on a Kovan unit, then requests the
+ID CODE from the FPGA and prints it out to the terminal.

@@ -1,0 +1,8 @@
+example of javascript access to google api
+
+
+Project Description:
+example of google javascript api
+
+README:
+example of javascript access to google api

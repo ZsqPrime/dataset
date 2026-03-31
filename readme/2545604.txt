@@ -1,0 +1,5 @@
+Project Description:
+Adds a userpicker invitation form to group members pages
+
+README:
+put in mod/memberpicker

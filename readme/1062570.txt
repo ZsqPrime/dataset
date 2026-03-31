@@ -1,0 +1,65 @@
+Genie is an efficient & intuitive webtop.
+
+Webtop - http://en.wikipedia.org/wiki/Web_desktop
+
+
+[Files]
+
+index.php - Page the server loads by default.
+register.php - Where new users register.
+checklogin.php - Where the users get to use the WEBTOP.
+validate_registration.php - validate username
+webtop.php - the main desktop page
+
+
+[Credits]
+
+* Anoop Toffy
+* Jithu Sunny
+* K Syam Krishnan
+* Nipun Mohan
+* Vishwajeet Nair
+
+[Bug]
+
+works fine with fire fox. Not compatible with chrome
+
+[DB]
+
+
+Create a database 'genie' and populate with db.sql
+
+Project Description:
+An efficient, intuitive webtop
+
+README:
+Genie is an efficient & intuitive webtop.
+
+Webtop - http://en.wikipedia.org/wiki/Web_desktop
+
+
+[Files]
+
+index.php - Page the server loads by default.
+register.php - Where new users register.
+checklogin.php - Where the users get to use the WEBTOP.
+validate_registration.php - validate username
+webtop.php - the main desktop page
+
+
+[Credits]
+
+* Anoop Toffy
+* Jithu Sunny
+* K Syam Krishnan
+* Nipun Mohan
+* Vishwajeet Nair
+
+[Bug]
+
+works fine with fire fox. Not compatible with chrome
+
+[DB]
+
+
+Create a database 'genie' and populate with db.sql

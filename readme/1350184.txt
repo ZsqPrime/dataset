@@ -1,0 +1,11 @@
+# cola.js
+
+[cujoJS](http://cujojs.com) object linking architecture
+
+Project Description:
+Extensible, two-way data binding.
+
+README:
+# cola.js
+
+[cujoJS](http://cujojs.com) object linking architecture

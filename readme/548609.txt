@@ -1,0 +1,21 @@
+# DESCRIPTION
+
+# REQUIREMENTS
+
+# ATTRIBUTES
+
+# USAGE
+
+
+
+Project Description:
+Cookbook to setup and install tablesnap
+
+README:
+# DESCRIPTION
+
+# REQUIREMENTS
+
+# ATTRIBUTES
+
+# USAGE

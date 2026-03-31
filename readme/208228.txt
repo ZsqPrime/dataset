@@ -1,0 +1,21 @@
+DeathTimeout
+
+After a player dies they are kicked from the server.
+They cannot join the server untill the ban has gone
+for the selected amount of time.(Configurable it is in seconds)
+
+Thanks to the maker of Tempban InfiniteMinecraft without your plugin
+I could not have got my head around using hashmaps ;D
+
+Project Description:
+Timeout plugin for bukkit when a player dies
+
+README:
+DeathTimeout
+
+After a player dies they are kicked from the server.
+They cannot join the server untill the ban has gone
+for the selected amount of time.(Configurable it is in seconds)
+
+Thanks to the maker of Tempban InfiniteMinecraft without your plugin
+I could not have got my head around using hashmaps ;D

@@ -1,0 +1,18 @@
+# deploying
+
+```
+heroku container:push web
+heroku container_release web
+```
+
+
+Project Description:
+Phrase Generator
+
+README:
+# deploying
+
+```
+heroku container:push web
+heroku container_release web
+```

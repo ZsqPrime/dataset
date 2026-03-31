@@ -1,0 +1,32 @@
+This is a startup script for ksh93.
+Inspired by http://aperiodic.net/phil/prompt/ , it defines a fancy two
+lines prompt.  If we're under a git repository, the current branch
+appears in the right prompt,  otherwise it's the current date.
+It also redefines cd using a stack.
+* README: this file.
+* bin: directory containing some utility scripts.
+* funcs: directory containing various utility functions for ksh.
+* kshrc: startup file for interactive shells.
+* profile: startup file read by a login shell.
+* screenrc: GNU screen startup file.
+* install.sh: install the various files and scripts.  It also adds
+cleanhist to a user crontab.
+
+
+Project Description:
+Startup script for ksh93 defining a fancy prompt.
+
+README:
+This is a startup script for ksh93.
+Inspired by http://aperiodic.net/phil/prompt/ , it defines a fancy two
+lines prompt.  If we're under a git repository, the current branch
+appears in the right prompt,  otherwise it's the current date.
+It also redefines cd using a stack.
+* README: this file.
+* bin: directory containing some utility scripts.
+* funcs: directory containing various utility functions for ksh.
+* kshrc: startup file for interactive shells.
+* profile: startup file read by a login shell.
+* screenrc: GNU screen startup file.
+* install.sh: install the various files and scripts.  It also adds
+cleanhist to a user crontab.

@@ -1,0 +1,5 @@
+Description:
+A comic and manga reader for Android
+
+README:
+README not available

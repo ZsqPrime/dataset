@@ -1,0 +1,12 @@
+Welcome to the Android Configuration Manager library.
+
+Please see https://www.milesburton.com/Android_Configuration_Manager for up-to-date information.
+
+
+Project Description:
+A library project which allows preferences to be driven through annotations
+
+README:
+Welcome to the Android Configuration Manager library.
+
+Please see https://www.milesburton.com/Android_Configuration_Manager for up-to-date information.

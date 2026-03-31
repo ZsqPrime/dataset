@@ -1,0 +1,7 @@
+Project Description:
+a far-from-finished HTML5 Amiga 500 emulator
+
+README:
+AEJS is an Amiga emulator written in JavaScript.  It's a personal project started purely for academic interest.  It is not meant to be a practical tool for running Amiga programs.
+
+For a functional Javascript Amiga Emulator ported from UAE, see https://github.com/naTmeg/ScriptedAmigaEmulator

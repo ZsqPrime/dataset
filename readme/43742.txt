@@ -1,0 +1,8 @@
+myqee 3.0 core
+
+
+Project Description:
+myqee core library
+
+README:
+myqee 3.0 core

@@ -1,0 +1,7 @@
+Project Description:
+This application provides client side functions to the REST geonition api 
+
+README:
+This django app provides the basic functionality to access the REST api.
+
+This is mainly made so that it is supposed to be forked to implement more specific functionality for the services.

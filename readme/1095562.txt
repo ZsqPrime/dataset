@@ -1,0 +1,70 @@
+                         / flask-blog /
+
+                 a minimal blog application
+
+
+    ~ What is flask-blog?
+
+      A Flask and SQLAlchemy powered blog application
+
+    ~ How do I use it?
+
+      1. edit the configuration in the config.py file or
+         export an BLOG_SETTINGS environment variable
+         pointing to your own configuration file.
+	
+      2. run 
+      
+      		$ make config
+
+      3. now you can run the blog with 
+      
+      		$ make
+
+      3. now you can run the blog.py file with your
+         python interpreter and the application will
+         greet you on http://localhost:5000/
+	
+    ~ Is it tested?
+
+    	Yes, to see the unit tests pass, run
+
+    		$ make test
+
+
+Project Description:
+None
+
+README:
+                         / flask-blog /
+
+                 a minimal blog application
+
+
+    ~ What is flask-blog?
+
+      A Flask and SQLAlchemy powered blog application
+
+    ~ How do I use it?
+
+      1. edit the configuration in the config.py file or
+         export an BLOG_SETTINGS environment variable
+         pointing to your own configuration file.
+	
+      2. run 
+      
+      		$ make config
+
+      3. now you can run the blog with 
+      
+      		$ make
+
+      3. now you can run the blog.py file with your
+         python interpreter and the application will
+         greet you on http://localhost:5000/
+	
+    ~ Is it tested?
+
+    	Yes, to see the unit tests pass, run
+
+    		$ make test

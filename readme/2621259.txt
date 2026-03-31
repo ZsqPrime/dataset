@@ -1,0 +1,4 @@
+Project Description:
+MongoDB Editor based on EasyUI Library.
+
+README:

@@ -1,0 +1,6 @@
+Project Description:
+Mixed Logarithmic Hamiltonian + TTL method combined with the Bulirsch-Stoer integrator
+
+README:
+This is a public code that uses Logarhmic Hamiltonian, Time Transformed Leapfrog combined  Bulirsch-Stoer integrator for N-body dynamics
+(c) 2012, Evghenii Gaburov

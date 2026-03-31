@@ -1,0 +1,14 @@
+# WebSockets Talk
+
+This repository contains the code samples for my talk on WebSockets.
+See the individual directories for more information.
+
+
+Project Description:
+Samples from the WebSockets talk.
+
+README:
+# WebSockets Talk
+
+This repository contains the code samples for my talk on WebSockets.
+See the individual directories for more information.

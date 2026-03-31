@@ -1,0 +1,16 @@
+diff written in VimL.
+
+Usage:
+  :set runtimepath+=/path/to/vim-diff
+  :set diffexpr=diff#diffexpr()
+
+
+Project Description:
+
+
+README:
+diff written in VimL.
+
+Usage:
+  :set runtimepath+=/path/to/vim-diff
+  :set diffexpr=diff#diffexpr()

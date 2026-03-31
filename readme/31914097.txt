@@ -1,0 +1,10 @@
+Project Description:
+Proyecto de 9no semestre para el Tec de Monterrey - Sistema de regalo de puntos para salones de clase.
+
+README:
+Proyecto de 9no Semestre para el Tec de Monterrey
+
+-------------------------------------------------
+
+Este proyecto consiste en el desarrollo de una aplicacion que permita compartir puntos virtuales y que incentive la colaboracion de los alumnos del tec.
+hola

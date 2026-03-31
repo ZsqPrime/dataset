@@ -1,0 +1,13 @@
+The ExternalScreen PhoneGap plugin has moved.  It is now in a fork of the phonegap/phonegap-plugins repo, to soon be included in the main phonegap repository.
+
+https://github.com/triceam/phonegap-plugins/tree/master/iPhone/ExternalScreen
+
+
+
+Project Description:
+Native Plugin for PhoneGap which enables multi-screen apps on iOS devices.
+
+README:
+The ExternalScreen PhoneGap plugin has moved.  It is now in a fork of the phonegap/phonegap-plugins repo, to soon be included in the main phonegap repository.
+
+https://github.com/triceam/phonegap-plugins/tree/master/iPhone/ExternalScreen

@@ -1,0 +1,46 @@
+Project Description:
+rubylearning training on rails repositories
+
+README:
+
+Note: From this point onwards, whenever you create a new program, or modify an existing program in the folder my_ruby_programs, open a Bash shell in that folder and type:
+
+git add .
+git commit -a -m "a note about your commit"
+git push
+The GitHub repository will show you the latest files that you have uploaded.
+
+exercise 2
+curl --manual # has docs about how to post and a suggestion to use formfind.pl
+curl http://sinatra2.hectorsq.com|formfind.pl
+# output gives a clue:
+--- FORM report. Uses POST to URL "/reverse"
+Input: NAME="str" VALUE="Type a string..." (TEXT)
+Button: ".. and reverse it!" (SUBMIT)
+--- end of FORM
+
+$ curl http://sinatra2.hectorsq.com/reverse -d "str=atest"
+# output: success!
+
+<h1>String Reverse Results</h1> 
+
+<p>You had entered the string - atest</p> 
+<p>The reversed string is     - tseta</p> 
+
+day 8 exercise 2 (or 3):
+
+syntax for my first heroku app:
+
+curl http://rbg-rackheroku.heroku.com/reverse?reverse='this is a new string with spaces'
+curl http://rbg-rackheroku.heroku.com/reverse?reverse='this%20is%20a%20new%20string%20with%20spacesaspercent20'
+
+from browser window:
+
+http://rbg-rackheroku.heroku.com/reverse?reverse=hi%20there
+
+reference: http://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax
+
+note: deployed it without knowing this syntax above was required - but there is no other way to pass in the string (so far)
+
+day 10 bonus:
+curl localhost:9292/show?symbol=goog # syntax was not obvious from formfind.pl

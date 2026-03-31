@@ -1,0 +1,5 @@
+Project Description:
+A jQuery Shopping Cart Plugin
+
+README:
+This is BrentCartÉ An ajax application for the shopping cart of Zen Cart.

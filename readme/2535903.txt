@@ -1,0 +1,5 @@
+Project Description:
+Client Desktop pour l'administration/affichage des capteurs.
+
+README:
+Client PC

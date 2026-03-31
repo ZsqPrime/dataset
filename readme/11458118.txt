@@ -1,0 +1,5 @@
+Project Description:
+a crawler to crawl flickr
+
+README:
+see README.rtf

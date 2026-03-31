@@ -1,0 +1,96 @@
+Food For Thought is a web application which allows users to order food online.
+It is built on Rails.mysql database is used.Bootstrap layout is used for this
+application, the corresponding style sheets are saved in assets/stylesheets
+folder.
+
+The models in this application are:
+	-User
+	-User session
+	-Hotel
+	-Fooditems
+	-Comments
+
+each of these model have their own controllers and views. lets have a look into
+what are the functionalities of these controllers
+	User:
+	this is the main model of this application. it has two types of users one is
+	Admin, who can add hotels,fooditems to hotels and can edit them and the other
+  is the normal user who can order food . Authlogic is used to provide
+  authentication for user model. to use authlogic add
+  	" acts_as_authentic" to the user model.
+  firstly the user should register himself by providing details such as name,
+  email,password and location. when the user registers using a postmark app
+  registration success message is sent to his mail-id. to use postmark app
+  firstly we need to define a mailer. Mailers are new models added in rails3.0.
+  the following fuction is to be
+  added in the mailer class
+      def registration_confirmation(user)
+        mail(:to => user.email, :subject => "Registered"
+              ,:from => "name@domain.com", :tag => "registration")
+      end
+  the signature of the postmark is to be authenticated through command line.
+
+Now, for user login authlogic provides a sessions class. on providing correct
+credentials, it creates a session for the user. the logout destroys the session
+and returns the control to the root of the application. On successful
+authentication the user can check the list of hotels and items in hotels and add
+comments to the hotels and the fooditems.
+The model hotel and fooditem are associated by has_many and belongs_to
+associations. Model comments is ploymorphically associated to the user and food
+item.
+<<<<<<< HEAD
+images for user and the fooditems are added using paperclip gem. 
+=======
+images for user and the fooditems are added using paperclip gem. 
+>>>>>>> origin/master
+
+
+Project Description:
+food for thought
+
+README:
+Food For Thought is a web application which allows users to order food online.
+It is built on Rails.mysql database is used.Bootstrap layout is used for this
+application, the corresponding style sheets are saved in assets/stylesheets
+folder.
+
+The models in this application are:
+	-User
+	-User session
+	-Hotel
+	-Fooditems
+	-Comments
+
+each of these model have their own controllers and views. lets have a look into
+what are the functionalities of these controllers
+	User:
+	this is the main model of this application. it has two types of users one is
+	Admin, who can add hotels,fooditems to hotels and can edit them and the other
+  is the normal user who can order food . Authlogic is used to provide
+  authentication for user model. to use authlogic add
+  	" acts_as_authentic" to the user model.
+  firstly the user should register himself by providing details such as name,
+  email,password and location. when the user registers using a postmark app
+  registration success message is sent to his mail-id. to use postmark app
+  firstly we need to define a mailer. Mailers are new models added in rails3.0.
+  the following fuction is to be
+  added in the mailer class
+      def registration_confirmation(user)
+        mail(:to => user.email, :subject => "Registered"
+              ,:from => "name@domain.com", :tag => "registration")
+      end
+  the signature of the postmark is to be authenticated through command line.
+
+Now, for user login authlogic provides a sessions class. on providing correct
+credentials, it creates a session for the user. the logout destroys the session
+and returns the control to the root of the application. On successful
+authentication the user can check the list of hotels and items in hotels and add
+comments to the hotels and the fooditems.
+The model hotel and fooditem are associated by has_many and belongs_to
+associations. Model comments is ploymorphically associated to the user and food
+item.
+<<<<<<< HEAD
+images for user and the fooditems are added using paperclip gem. 
+=======
+images for user and the fooditems are added using paperclip gem. 
+>>>>>>> origin/master

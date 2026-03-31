@@ -1,0 +1,42 @@
+STEPS FOR THE FIRST TIME:
+
+cd ~
+rm -rf ~/.vim/
+git clone https://github.com/hanzhixing/vim.git
+ln -sf ~/vim ~/.vim
+
+#If you want to use vim without any plugins
+ln -sf ~/.vim/vimrc ~/.vimrc
+
+#If you want to use vim with plugins
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+ln -sf ~/.vim/vimrc.with.plugins ~/.vimrc
+
+vim
+:PluginInstall
+:q
+
+
+Project Description:
+vim configuration
+
+README:
+STEPS FOR THE FIRST TIME:
+
+cd ~
+rm -rf ~/.vim/
+git clone https://github.com/hanzhixing/vim.git
+ln -sf ~/vim ~/.vim
+
+#If you want to use vim without any plugins
+ln -sf ~/.vim/vimrc ~/.vimrc
+
+#If you want to use vim with plugins
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+ln -sf ~/.vim/vimrc.with.plugins ~/.vimrc
+
+vim
+:PluginInstall
+:q

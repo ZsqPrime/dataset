@@ -1,0 +1,4 @@
+Project Description:
+Talks on Scamp 2.0 for NWRUG
+
+README:

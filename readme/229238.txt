@@ -1,0 +1,5 @@
+Description:
+Modular IRC bot
+
+README:
+README not available

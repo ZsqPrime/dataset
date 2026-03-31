@@ -1,0 +1,62 @@
+= ticketfly
+
+A ruby implementation of the Ticketfly event and venue API.
+
+== simple consumption
+ gem 'ticketfly'
+
+ venues = Ticketfly::Venues.get_all
+
+ venue_events = venues.first.events
+
+ next_headliner = venue_events.first.headliners.first.name
+
+== event searching
+
+ events = Ticketfly::Events.search('SEARCH_STRING')       <- artist name or city string 
+
+ venue = events.first.venue
+
+== coming soon
+ 
+* purchase API
+* artist database
+
+== copyright
+
+Copyright (c) 2012 Charley Hine. See LICENSE.txt for
+further details.
+
+
+Project Description:
+A ruby implementation (gem) of the Ticketfly event and venue API
+
+README:
+= ticketfly
+
+A ruby implementation of the Ticketfly event and venue API.
+
+== simple consumption
+ gem 'ticketfly'
+
+ venues = Ticketfly::Venues.get_all
+
+ venue_events = venues.first.events
+
+ next_headliner = venue_events.first.headliners.first.name
+
+== event searching
+
+ events = Ticketfly::Events.search('SEARCH_STRING')       <- artist name or city string 
+
+ venue = events.first.venue
+
+== coming soon
+ 
+* purchase API
+* artist database
+
+== copyright
+
+Copyright (c) 2012 Charley Hine. See LICENSE.txt for
+further details.

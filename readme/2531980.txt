@@ -1,0 +1,6 @@
+Project Description:
+twitter 2 gtalk client
+
+README:
+GWT GAE Sample application.
+It shows your twitter contact an let you drag-drop them to groups. Tweets from the *star* groups ar resent to GTalk.

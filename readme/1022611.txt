@@ -1,0 +1,8 @@
+My first attempt at learning Google App Engine
+
+
+Project Description:
+Using app engine with  feedparser and mail module.
+
+README:
+My first attempt at learning Google App Engine

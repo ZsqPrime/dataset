@@ -1,0 +1,24 @@
+Self-written website with blog built in.
+
+[![Build Status](https://travis-ci.org/kielpedia/Blog.png)](https://travis-ci.org/kielpedia/Blog)
+
+Utilizes:
+  Django
+  Boostrap
+  Modernizr
+  jQuery
+
+
+Project Description:
+Blog that is written in Django. Github pages killed the need for this
+
+README:
+Self-written website with blog built in.
+
+[![Build Status](https://travis-ci.org/kielpedia/Blog.png)](https://travis-ci.org/kielpedia/Blog)
+
+Utilizes:
+  Django
+  Boostrap
+  Modernizr
+  jQuery

@@ -1,0 +1,8 @@
+Blog for http://j.furinkan.meidokon.net/
+
+
+Project Description:
+jekyll blog
+
+README:
+Blog for http://j.furinkan.meidokon.net/

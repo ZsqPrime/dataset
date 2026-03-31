@@ -1,0 +1,5 @@
+Project Description:
+a douban.com like jQuery dialog for common usage
+
+README:
+a douban style dialog for common useage, see http://micate.me/projects/dialog for details.

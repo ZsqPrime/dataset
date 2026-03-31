@@ -1,0 +1,5 @@
+Project Description:
+Bits and peices of useful stuff for CMLComp
+
+README:
+Copies of the (open source) CMLComp stuff I have been able to track down.

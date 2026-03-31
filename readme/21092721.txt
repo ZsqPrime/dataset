@@ -1,0 +1,5 @@
+Project Description:
+Using javascript to display a user's public gists from github.
+
+README:
+Gist is a project to display public gists from github using javascript

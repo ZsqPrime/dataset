@@ -1,0 +1,6 @@
+
+
+Project Description:
+Blog Custom Resource Type for MODX 2.2
+
+README:

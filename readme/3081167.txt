@@ -1,0 +1,7 @@
+Project Description:
+stashing common files I use for google maps
+
+README:
+# Backbone Mapping
+
+quick and simple googlemaps with backbone

@@ -1,0 +1,7 @@
+Project Description:
+WebSMS' Connector for https://www.smsbug.com
+
+README:
+You will need websms-api [1] to compile this code.
+
+[1] http://github.com/felixb/websms-api/

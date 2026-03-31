@@ -1,0 +1,5 @@
+Project Description:
+Malé skriptíky, které bych nerad, aby upadly v zapomnění, a třeba je ještě někdy použil.
+
+README:
+Bla bla bla. Beztak nečekám, že by toto někdo četl.

@@ -1,0 +1,11 @@
+Project Description:
+Adventure/Puzzle Game
+
+README:
+* W
+    W was created as my entry into [[http://www.ludumdare.com/compo/][Ludum Dare Jam 22]] (See [[https://github.com/thomcc/W/downloads][downloads]]
+    or [[https://github.com/thomcc/W/tree/ldjam][this branch]] for what I submitted, the entry itself is located
+    [[http://www.ludumdare.com/compo/ludum-dare-22/?action=preview&uid=7728][here]]).
+  
+    I have changed it since then, however I'm no longer working on
+    it.

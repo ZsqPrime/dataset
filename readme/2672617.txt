@@ -1,0 +1,4 @@
+Project Description:
+Software Repository der Piratenpartei Deutschland Stadtverband Oldenburg. Da wir vieles anpassen und erweitern soll euch das nicht vorenthalten werden und im besten Fall in die angepassten Projekte zurück fließen.
+
+README:

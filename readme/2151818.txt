@@ -1,0 +1,13 @@
+Responsive UPC
+==============
+
+Example of a responsive implementation
+
+Project Description:
+
+
+README:
+Responsive UPC
+==============
+
+Example of a responsive implementation

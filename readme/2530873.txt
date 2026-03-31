@@ -1,0 +1,5 @@
+Project Description:
+application helping to include media in django framework
+
+README:
+Media management application for Django.

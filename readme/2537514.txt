@@ -1,0 +1,7 @@
+Project Description:
+rc files
+
+README:
+### This repository is deprecated.
+
+#### Replaced with [dotfiles](https://github.com/winfred-lu/dotfiles) instead.

@@ -1,0 +1,5 @@
+Project Description:
+Source code developed during introduction to computer science class.
+
+README:
+## Kod produkowany na zajęciach Zasady Programowania Komputerów.

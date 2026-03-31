@@ -1,0 +1,12 @@
+= Realtime notifications with ember.js
+
+Simple Rails 3.2 app using ember.js to deliver notifications.
+
+
+Project Description:
+ember.js + Rails 3.2.1
+
+README:
+= Realtime notifications with ember.js
+
+Simple Rails 3.2 app using ember.js to deliver notifications.

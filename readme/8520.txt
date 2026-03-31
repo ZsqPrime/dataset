@@ -1,0 +1,5 @@
+Project Description:
+[Bachelor Thesis] Visualisation of Overlapping Annotations in Text
+
+README:
+This project is about my bachelor thesis "Visualisation of Overlapping Annotations in Text".

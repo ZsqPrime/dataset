@@ -1,0 +1,26 @@
+Project Description:
+A template for TBNav, a utility to create Twitter Bootstrap styled navigation bar with drop down menus from the output of Lift's Menu.builder. 
+
+README:
+This is an application template for [TBNav](https://github.com/dph01/lift-TBUtils), a utility to create Twitter Bootstrap styled navigation
+bar with drop down menus from the output of Lift's Menu.builder. 
+
+You can see a running example of the code here: [www.damianhelme.com/tbnav](www.damianhelme.com/tbnav)
+
+To download and run this application:
+
+1. In your workspace directory, download and build the TBUtils library:
+
+        git clone git://github.com/dph01/lift-TBUtils.git
+        cd liftTBUtils
+        ./sbt publish-local
+
+2. In your workspace directory, download and run this application:
+       
+        git clone git://github.com/dph01/lift-TBNavbarTemplate.git
+        cd lift-TBNavbarTemplate
+        ./sbt ~container:start
+
+3. In a browser go to [http://localhost:8080](http://localhost:8080).
+
+For a bit more of a write up, and to post comments, questions, etc. please see the accompanying [blogpost](http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts)

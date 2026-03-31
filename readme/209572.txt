@@ -1,0 +1,7 @@
+POS system.
+
+Project Description:
+CS473 Project 1
+
+README:
+POS system.

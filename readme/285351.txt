@@ -1,0 +1,9 @@
+Jonathan Foucher
+
+
+
+Project Description:
+The source files for jfoucher.com with jekyll, hosted at jfoucher.github.com
+
+README:
+Jonathan Foucher

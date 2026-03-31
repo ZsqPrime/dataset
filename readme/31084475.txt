@@ -1,0 +1,12 @@
+Project Description:
+Flash/Actionscript Grid-based collision detection example, runs on HTML page
+
+README:
+Grid-based collision detection using Flash/Actionscript in an HTML page.
+
+[Try it out](http://elucidation.github.io/Grid-based-Collision-in-Flash/)
+
+# To use
+
+- Download and unzip
+- Open the HTML page

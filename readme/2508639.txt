@@ -1,0 +1,22 @@
+This filesystem is now functional.
+
+The mount command takes two arguments:
++ Mount Point
++ The HDFS server details
+
+For example:
+./hadoopfs.sh /hadoop localhost:9000
+
+
+Project Description:
+Refactor of IBM's (tm) hadoop filesystem to work with fuse4j
+
+README:
+This filesystem is now functional.
+
+The mount command takes two arguments:
++ Mount Point
++ The HDFS server details
+
+For example:
+./hadoopfs.sh /hadoop localhost:9000

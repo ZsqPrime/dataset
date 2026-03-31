@@ -1,0 +1,7 @@
+Project Description:
+Name Generator
+
+README:
+Name Generator
+==============
+This utility simply generates English names.

@@ -1,0 +1,30 @@
+Project Description:
+Onze openbare agenda
+
+README:
+Projectgroep Webdb1241
+
+Opdracht: Openbare Agenda
+
+-----
+
+Bewijs van samenwerking:
+David van Schoorisse (10288821)
+Ben Witzen (10189459)
+Igor Willems (10274979)
+Maarten Jager (10172527)
+
+-----
+
+De website URL: http://websec.science.uva.nl/webdb1241/
+
+Gebruikersnaam: admin@roadhouse.nl
+Gebruikerswachtwoord: supergeheim
+
+-----
+
+Credits voor code niet van ons.
+Tevens aangegeven in de comments voor die code.
+
+Contact-pagina doorlinken aan e-mailadres:
+ > http://dreamweaverspot.com/adobe-dreamweaver-tutorial-contact-forms/

@@ -1,0 +1,7 @@
+Find List Elements on a Wikipedia Lists page and compare to dynamically generated list by sematic search engine broccoli :)
+
+Project Description:
+Compare Lists on Wikipedia to dynamically generated list by semantic search engine, broccoli
+
+README:
+Find List Elements on a Wikipedia Lists page and compare to dynamically generated list by sematic search engine broccoli :)

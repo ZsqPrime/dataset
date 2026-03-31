@@ -1,0 +1,18 @@
+Project Description:
+A fast replacement for Data.Sequence based on wider-fanout trees
+
+README:
+This library is designed to be a drop-in replacement for the Haskell
+Data.Sequence library from the containers package, originally written
+by Ross Patterson and Ralf Hinze and documented here:
+
+http://hackage.haskell.org/packages/archive/containers/0.4.2.1/doc/html/Data-Sequence.html
+
+Like Data.Sequence, Data.FastSequence makes use of finger trees in
+order to provide O(lg n) concatenation and indexing.  However, it uses
+much wider vector-style nodes rather than the 2-3 tree nodes used in
+Data.Sequence.  It is intended to run faster in practice than
+Data.Sequence; substantial performance regressions should be
+considered a bug.
+
+For now, though, the code is still under development and testing.

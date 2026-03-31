@@ -1,0 +1,8 @@
+Project Description:
+App for watching accelerometer graphs in iOS.
+
+README:
+TransientGraph
+--------------
+
+Hi!

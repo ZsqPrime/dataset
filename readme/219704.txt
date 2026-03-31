@@ -1,0 +1,6 @@
+
+
+Project Description:
+Integrate HeroChat 5+ with Dynmap
+
+README:

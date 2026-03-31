@@ -1,0 +1,7 @@
+This is a public repository for sharing of small stand alone examples to get the most from your cloudant cluster.
+
+Project Description:
+Public Examples
+
+README:
+This is a public repository for sharing of small stand alone examples to get the most from your cloudant cluster.

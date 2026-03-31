@@ -1,0 +1,16 @@
+FBReader for Android plugin.
+
+Adds "scan local network for (bonjour announced) OPDS catalogs" feature.
+
+Integrates FBReader with Calibre server.
+
+
+Project Description:
+Scans local network for OPDS catalogs
+
+README:
+FBReader for Android plugin.
+
+Adds "scan local network for (bonjour announced) OPDS catalogs" feature.
+
+Integrates FBReader with Calibre server.

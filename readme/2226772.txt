@@ -1,0 +1,6 @@
+
+
+Project Description:
+A faster and more .Net centric couchbase client
+
+README:

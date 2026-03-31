@@ -1,0 +1,8 @@
+A Jenkins parameter plugin that allows for two select elements. The second select populates values depending upon the selection made for the first select. See the [wiki page](https://github.com/tekante/Dynamic-Jenkins-Parameter/wiki) for more information.
+
+
+Project Description:
+A Jenkins parameter type that is based on the DynamicDropDownListBox item in the ui samples repo
+
+README:
+A Jenkins parameter plugin that allows for two select elements. The second select populates values depending upon the selection made for the first select. See the [wiki page](https://github.com/tekante/Dynamic-Jenkins-Parameter/wiki) for more information.

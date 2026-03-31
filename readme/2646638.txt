@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+ROS stack containing the packages for teleoperating the Shadow Hand
+
+Robert Krug 2011/02/14

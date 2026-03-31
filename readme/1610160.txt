@@ -1,0 +1,19 @@
+GONZBEE
+
+Gonzbee is a command line NZB downloader, written in go
+
+It decodes NZB files, parses yEnc message, can pick out par2 files
+and downloads the files in place.
+
+
+
+Project Description:
+Nzb downloader written in go
+
+README:
+GONZBEE
+
+Gonzbee is a command line NZB downloader, written in go
+
+It decodes NZB files, parses yEnc message, can pick out par2 files
+and downloads the files in place.

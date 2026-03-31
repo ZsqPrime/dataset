@@ -1,0 +1,7 @@
+Project Description:
+A presentation about git and svn, and bla bla bla.
+
+README:
+This file is realy realy important, Do believe me, This will help you man :-)
+
+Please open the presentation using Chrome.

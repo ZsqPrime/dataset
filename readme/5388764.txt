@@ -1,0 +1,20 @@
+Project Description:
+End Point tools for SoftLayer API access
+
+README:
+SoftLayer (IBM Cloud) API tools
+
+This is a small set of standalone programs that interface with SoftLayer's
+API, which we have found useful at End Point. Important links:
+
+http://www.softlayer.com/ - SoftLayer's main website
+http://sldn.softlayer.com/ - API information and documentation
+
+The scripts run on different servers, with different API keys each having
+the minimum required privileges at SoftLayer, so we've so far seen no
+need to make a shared library or any separate configuration file to
+store the API key.
+
+Jon Jensen
+End Point Corporation
+https://www.endpointdev.com/

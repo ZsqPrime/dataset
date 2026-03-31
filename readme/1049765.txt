@@ -1,0 +1,7 @@
+This project is used for testing the capabilities of Django and Git. 
+
+Project Description:
+None
+
+README:
+This project is used for testing the capabilities of Django and Git.

@@ -1,0 +1,4 @@
+Project Description:
+iphone app that makes it easy to track money while travelling with friends
+
+README:

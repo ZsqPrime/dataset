@@ -1,0 +1,4 @@
+Project Description:
+AllowLog is an application to manage allowance payment at sqlite in Android.
+
+README:

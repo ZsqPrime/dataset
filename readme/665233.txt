@@ -1,0 +1,21 @@
+Project Description:
+A catalogue of printed books we have at home. Maybe it can grow into something larger.
+
+README:
+==========
+ Knihomor
+==========
+Simple web-based library managament system.
+
+Requirements
+------------
+* PHP 5
+* MySQL
+
+Implementation
+--------------
+
+
+Planned Features
+----------------
+* Lots ;-)

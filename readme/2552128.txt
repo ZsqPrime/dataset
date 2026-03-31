@@ -1,0 +1,25 @@
+Project Description:
+
+
+README:
+VanRed (eVaporate and Reauthor DVDs) 
+Copy the main movie of a DVD to your hard disc and select which audio and subtitles to keep.
+
+The following information are provided about a DVD:
+   - Audio Streams (language, format, channels, frequency, size, etc.)
+   - Subtitle Streams (language and size)
+   - Video Stream (resolution, code, size etc.)
+   - Title (number of audio and subtitle streams, number of chapters, number of cells contained in a PGC (programm chain), color palette, size, etc.)
+
+In order to build and run VanRed you will need in addition the following piece of software:
+   libdvdread 
+   dvdauthor
+   vamps and play_cell 
+
+   Ubuntu users: sudo apt-get install libdvdread-dev dvdauthor vamps 
+
+
+Known Issues:
+VanRed was imported to git to continue developing (maybe) after several years. 
+The current version v0.6.1 does not work with current dvdauthor versions. 
+Nevertheless the option -I provides useful disc information

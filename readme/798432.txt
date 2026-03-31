@@ -1,0 +1,8 @@
+Git repozitorij za projekt pri krožku na Gimnaziji Vič.
+
+
+Project Description:
+Predelava neke online igrice kjer streljaš zombije. Krožek na gimnaziji Vič.
+
+README:
+Git repozitorij za projekt pri krožku na Gimnaziji Vič.

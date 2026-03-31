@@ -1,0 +1,34 @@
+Project Description:
+Occupy Cincinnati Android App
+
+README:
+The Occupy Cincinnati Android App is an application that runs on devices (phones, tablets) with Android operating systems.
+
+This is the first public release of the application. It simply downloads the latest updates (RSS feed) from the occupycincy.org web 
+site and displays the latest updates in a scrollable list. Users can tap any of the entries in the list, which will open a web page 
+with the detailed information about the item. The app attempts to download updates when more than 15 minutes have passed since the last update.
+
+Device requirements:
+* Android 2.1 or later.
+* Internet connection.
+* SD card / External storage.
+
+Available releases:
+
+    * Latest: OccupyCincy_0.1.apk published on January 21, 2012
+    * OccupyCincy_0.01beta.apk published on January 16, 2012
+
+To install the application on your device:
+
+    * Use Android Market:
+      0. Open Market application on your device.
+      1. Search for "Occupy Cincinnati"
+      2. Open "Occupy Cincinnati" information page.
+      3. Click "Install" button and follow the instructions.
+
+       
+    * Install from this site:
+      0. Allow to install non-Market apps on your device: Settings -> Applications -> Unknown Sources.
+      1. Download the latest .apk file to your device by either using the link above or scanning the QR code on the right.
+      2. If your browser doesn't automatically prompt you to install the app, tap the downloaded file.
+      3. Follow the installation instructions.

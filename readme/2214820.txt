@@ -1,0 +1,5 @@
+Project Description:
+Software to create a website on which a user can join together to ditially occupy a location and select the issues they stand for while they occupy. Essentially, this software is the Occupy Movement from your own home.
+
+README:
+This project depends on having PHP Savant installed. You can install PHP Savant via pear.

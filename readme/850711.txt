@@ -1,0 +1,7 @@
+A place to keep my .emacs file
+
+Project Description:
+Emacs dot file
+
+README:
+A place to keep my .emacs file

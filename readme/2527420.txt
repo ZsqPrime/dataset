@@ -1,0 +1,11 @@
+Project Description:
+some css3 edit plugins for notepad++, eclipse, etc.
+
+README:
+Develop steps:
+1. notepad++ plugin(in process)
+2. eclipse plugin
+3. web editor
+4. auto update(rules, config)
+
+Under GPL license

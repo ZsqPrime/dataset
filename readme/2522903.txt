@@ -1,0 +1,9 @@
+Project Description:
+OSGeo.nl website
+
+README:
+Deze repository bevatte de website voor OSGeo.nl.
+Inmiddels is de website verhuisd naar een CMS omgeving.
+Deze repo heeft alleen nog historische waarde.
+
+Zie huidige OSGeo.nl website http://osgeo.nl

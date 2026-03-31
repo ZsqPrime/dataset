@@ -1,0 +1,5 @@
+Project Description:
+An IRC bot platform in Neat
+
+README:
+You need FCC to compile this project!

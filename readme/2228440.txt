@@ -1,0 +1,87 @@
+Tab-Separated Values (TSV) to Comma-Separated Values Converter
+
+by William R. Fraser, 10/19/2011
+
+--
+
+usage: tsv [options] [input-file]
+         > csv-output
+
+Options:
+  +<start line>    Line (1-based) to start on. Default = 1.
+  -t <tab width>   Specify the width of a tab character. Default = 8.
+  --notabs         Use this if the input data contains no tab characters.
+                   This increases performance by reading directly from the
+                   input file instead of converting all tabs to spaces into a
+                   temp file first. With this option, the input must be a
+                   seekable stream.
+
+--
+
+Tab-separated values is how I'm going to refer to a simple file type for making
+tables, where the starts of each column are aligned visually, with whitespace.
+
+Example:
+
+State       Capitol         Biggest City
+Illinois    Springfield     Chicago
+Washington  Olympia         Seattle
+California  Sacramento      Los Angeles
+New York    New York        New York
+Louisiana   Baton Rouge     New Orleans
+
+Even though some cells have internal white space, the columns are easily
+identified because they're the only places where the whitespace vertically
+lines up for the entirity of the table.
+
+Note that "tab-separated" doesn't necessarily mean with literal tab characters. It can be space-separated as well.
+
+This program takes a file with TSV data, and outputs CSV data, which is more
+easily read by other programs.
+
+
+
+Project Description:
+Tab-Separated Values (TSV) to Comma-Separated Values (CSV) Converter
+
+README:
+Tab-Separated Values (TSV) to Comma-Separated Values Converter
+
+by William R. Fraser, 10/19/2011
+
+--
+
+usage: tsv [options] [input-file]
+         > csv-output
+
+Options:
+  +<start line>    Line (1-based) to start on. Default = 1.
+  -t <tab width>   Specify the width of a tab character. Default = 8.
+  --notabs         Use this if the input data contains no tab characters.
+                   This increases performance by reading directly from the
+                   input file instead of converting all tabs to spaces into a
+                   temp file first. With this option, the input must be a
+                   seekable stream.
+
+--
+
+Tab-separated values is how I'm going to refer to a simple file type for making
+tables, where the starts of each column are aligned visually, with whitespace.
+
+Example:
+
+State       Capitol         Biggest City
+Illinois    Springfield     Chicago
+Washington  Olympia         Seattle
+California  Sacramento      Los Angeles
+New York    New York        New York
+Louisiana   Baton Rouge     New Orleans
+
+Even though some cells have internal white space, the columns are easily
+identified because they're the only places where the whitespace vertically
+lines up for the entirity of the table.
+
+Note that "tab-separated" doesn't necessarily mean with literal tab characters. It can be space-separated as well.
+
+This program takes a file with TSV data, and outputs CSV data, which is more
+easily read by other programs.

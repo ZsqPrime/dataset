@@ -1,0 +1,51 @@
+Creole Forth - a scripting language in the form of a Delphi/Lazarus
+component. 
+
+Forth is a simple stack based language commonly used in resource-constrained 
+systems. I don't normally work in those environments. Developing my own version 
+of Forth gave me the opportunity to use it on my own projects. 
+
+My scripting language takes many of the best features of Forth and adds it own
+unusual set of features. It is nearly trivial to add to any Delphi or Lazarus
+application - simply drop the TCreole component on a form, set a few properties
+and call an initialization method, and then submit commands to it. 
+
+As an extensible embedded language it has some similarities to Tcl. However, it
+is much simpler in terms of both code and in the ease a developer can add extensions
+to the language. 
+
+Creole Forth's features include strings as first-class objects, simple codebase 
+(about 3000 lines), and easy extensibility.
+
+Subfolders:
+sources - sources used to build TCreole sources
+demoapp - executable demo of Creole Forth functionality</p>
+
+
+
+Project Description:
+Scripting language in the form of a Delphi/Lazarus component
+
+README:
+Creole Forth - a scripting language in the form of a Delphi/Lazarus
+component. 
+
+Forth is a simple stack based language commonly used in resource-constrained 
+systems. I don't normally work in those environments. Developing my own version 
+of Forth gave me the opportunity to use it on my own projects. 
+
+My scripting language takes many of the best features of Forth and adds it own
+unusual set of features. It is nearly trivial to add to any Delphi or Lazarus
+application - simply drop the TCreole component on a form, set a few properties
+and call an initialization method, and then submit commands to it. 
+
+As an extensible embedded language it has some similarities to Tcl. However, it
+is much simpler in terms of both code and in the ease a developer can add extensions
+to the language. 
+
+Creole Forth's features include strings as first-class objects, simple codebase 
+(about 3000 lines), and easy extensibility.
+
+Subfolders:
+sources - sources used to build TCreole sources
+demoapp - executable demo of Creole Forth functionality</p>

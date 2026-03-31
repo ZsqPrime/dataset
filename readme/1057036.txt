@@ -1,0 +1,15 @@
+For complete documentation please visit http://www.egrappler.com/a-stylo-modern-jquery-accordion-akordeon/
+
+or 
+
+Github plugin wiki page https://github.com/mshahbazsaleem/Akordeon/wiki/Stylish-jQuery-Accordion-Plugin-(FREE):-Akordeon
+
+Project Description:
+Stylish jQuery Accordion Plugin
+
+README:
+For complete documentation please visit http://www.egrappler.com/a-stylo-modern-jquery-accordion-akordeon/
+
+or 
+
+Github plugin wiki page https://github.com/mshahbazsaleem/Akordeon/wiki/Stylish-jQuery-Accordion-Plugin-(FREE):-Akordeon

@@ -1,0 +1,27 @@
+Project Description:
+Lucene Based Indexing and Searching Utilities
+
+README:
+Description :
+----------------------------------------------------------------------------
+	--> Apache Lucene and Apache Tika based Indexer and Searcher for any
+		file type.
+	--> Apache Lucene and Apache Tika Library Required to use the Indexer and 
+		Searcher
+	
+----------------------------------------------------------------------------
+
+
+Contents :
+----------------------------------------------------------------------------
+
+	--> LuceneCommonIndexer
+	--> LuceneFileSearcher
+	
+	
+Author :
+----------------------------------------------------------------------------
+
+	-->	Mohan Singh 
+		
+----------------------------------------------------------------------------

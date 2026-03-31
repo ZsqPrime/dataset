@@ -1,0 +1,8 @@
+scraps of code written for the echinacea project. some things may get moved into a different repo and abandoned here.
+
+
+Project Description:
+various bits of code written to use for the echinacea project
+
+README:
+scraps of code written for the echinacea project. some things may get moved into a different repo and abandoned here.

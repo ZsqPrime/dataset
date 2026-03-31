@@ -1,0 +1,77 @@
+FEEDEATER renders a Tumblr feed into HTML.
+
+Does not require jQuery, but can use jQuery if it's around --
+pass jQuery selectors or selector strings as the 'target' parameter,
+use jQuery in custom renderers, etc.
+
+
+Basic usage:
+
+  <script src="tumblr-feedeater.js"></script>
+  <script src="http://yourblog.tumblr.com/api/read/json"></script>
+  <div id="tumblr-posts"></div>
+
+  <script>
+    // use old-style class invocation
+    FEEDEATER.render_posts();
+
+    // or new-style instance invocation
+    var f = new FEEDEATER();
+    f.render({target: 'tumblr-posts'});
+  </script>
+
+Advanced usage:
+
+  See tumblr-feedeater.js source.
+
+Testing:
+
+  Load index.html to run Jasmine tests on tumblr-feedeater.js.
+
+
+Released under the MIT License.
+
+ ,   copyright 2012         pete gamache     pete@#$!@#$gamache.org
+(k)  all rights reversed
+
+
+
+Project Description:
+Render a Tumblr feed as HTML
+
+README:
+FEEDEATER renders a Tumblr feed into HTML.
+
+Does not require jQuery, but can use jQuery if it's around --
+pass jQuery selectors or selector strings as the 'target' parameter,
+use jQuery in custom renderers, etc.
+
+
+Basic usage:
+
+  <script src="tumblr-feedeater.js"></script>
+  <script src="http://yourblog.tumblr.com/api/read/json"></script>
+  <div id="tumblr-posts"></div>
+
+  <script>
+    // use old-style class invocation
+    FEEDEATER.render_posts();
+
+    // or new-style instance invocation
+    var f = new FEEDEATER();
+    f.render({target: 'tumblr-posts'});
+  </script>
+
+Advanced usage:
+
+  See tumblr-feedeater.js source.
+
+Testing:
+
+  Load index.html to run Jasmine tests on tumblr-feedeater.js.
+
+
+Released under the MIT License.
+
+ ,   copyright 2012         pete gamache     pete@#$!@#$gamache.org
+(k)  all rights reversed

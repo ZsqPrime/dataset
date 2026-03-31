@@ -1,0 +1,4 @@
+Project Description:
+A bukkit plugin which add battlegrounds game mode.
+
+README:

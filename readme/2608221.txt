@@ -1,0 +1,13 @@
+Project Description:
+Allows user to view all slides on webpage slideshow instead of having to repeatedly click next.
+
+README:
+This was made using python 2.5. I also used the python library beautifulsoup.
+To view all slides for a particular webpage, put the url in the beginning of the script where it says url = "PUT URL IN BETWEEN THESE QUOTES"
+
+Examples of sites where View-All-Slides works:
+
+
+http://www.time.com/time/specials/packages/article/0,28804,2094690_2094691_2094802,00.html
+
+http://www.complex.com/pop-culture/2010/08/the-50-greatest-saturday-morning-cartoons/

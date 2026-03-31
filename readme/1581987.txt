@@ -1,0 +1,16 @@
+Digital Image Processing in C
+at ITESM Campus Queretaro - Jan/May 2012 by Dr. Rick Leigh Swenson Durie
+
+by @jjperezaguinaga
+
+Project Description:
+Repository with activities and content for Dr. Rick Swenson digital image processing class.
+
+README:
+Digital Image Processing in C
+
+at ITESM Campus Queretaro - Jan/May 2012 by Dr. Rick Leigh Swenson Durie
+
+
+
+by @jjperezaguinaga

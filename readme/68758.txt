@@ -1,0 +1,8 @@
+Simple slider (carousel) for jQuery, that is easy to use and extend
+
+
+Project Description:
+Yet Another jQuery Slider Plugin
+
+README:
+Simple slider (carousel) for jQuery, that is easy to use and extend

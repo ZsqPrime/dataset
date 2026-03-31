@@ -1,0 +1,12 @@
+slGTD
+
+Welcome to slGTD a tool to manage their lists of tasks quickly and easily.
+
+
+Project Description:
+Sistema de Administración de Tareas
+
+README:
+slGTD
+
+Welcome to slGTD a tool to manage their lists of tasks quickly and easily.

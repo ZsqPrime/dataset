@@ -1,0 +1,80 @@
+Author
+======
+
+Created by [Michael Schade](https://twitter.com/#!/sch).
+
+Example
+=======
+
+![New Charge Notifications](https://github.com/michaelschade/stripe_growl/raw/master/examples/newcharge.png)
+
+Requirements
+============
+
+Requires [Growl 1.3](http://growl.info/) or greater.
+
+Installation
+============
+
+To install, simply run `python setup.py install`.
+
+Usage
+=====
+
+Standalone
+----------
+
+Run `python stripe_growl.py -h` for an explanation of the configuration options.
+
+In Your Own Code
+----------------
+
+See `stripe_growl.StripeNotifier`.
+
+License
+=======
+
+Released under the MIT License. See `LICENSE` for more information.
+
+
+Project Description:
+Polls Stripe.com and displays new events with Growl.
+
+README:
+Author
+======
+
+Created by [Michael Schade](https://twitter.com/#!/sch).
+
+Example
+=======
+
+![New Charge Notifications](https://github.com/michaelschade/stripe_growl/raw/master/examples/newcharge.png)
+
+Requirements
+============
+
+Requires [Growl 1.3](http://growl.info/) or greater.
+
+Installation
+============
+
+To install, simply run `python setup.py install`.
+
+Usage
+=====
+
+Standalone
+----------
+
+Run `python stripe_growl.py -h` for an explanation of the configuration options.
+
+In Your Own Code
+----------------
+
+See `stripe_growl.StripeNotifier`.
+
+License
+=======
+
+Released under the MIT License. See `LICENSE` for more information.

@@ -1,0 +1,8 @@
+This is a simple Firefox extension that backs up existing values of the home page and keyword search prefs, and then resets them to their default values. It also resets the current search engine to the original default engine, and then uninstalls itself.
+
+
+Project Description:
+re-sets some important Firefox prefs
+
+README:
+This is a simple Firefox extension that backs up existing values of the home page and keyword search prefs, and then resets them to their default values. It also resets the current search engine to the original default engine, and then uninstalls itself.

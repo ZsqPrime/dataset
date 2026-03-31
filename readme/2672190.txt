@@ -1,0 +1,7 @@
+Project Description:
+set of scripts to install development software on to a vanilla Ubuntu installation
+
+README:
+You must be using ubuntu, have a password of password.
+
+Run from the commandline: bash < <(wget -O - -o /dev/null https://raw.github.com/lashd/devup/master/devup)

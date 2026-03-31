@@ -1,0 +1,22 @@
+If you want to use omniauth with twitter,
+please add /config/twitter.yml and edit it like the following:
+
+/config/twitter.yml - - - - - - - - - -
+development:
+  consumer_key: "CONSUMER_KEY"
+  consumer_secret: "CONSUMER_SECRET"
+- - - - - - - - - - - - - - - - - - - -
+
+
+Project Description:
+None
+
+README:
+If you want to use omniauth with twitter,
+please add /config/twitter.yml and edit it like the following:
+
+/config/twitter.yml - - - - - - - - - -
+development:
+  consumer_key: "CONSUMER_KEY"
+  consumer_secret: "CONSUMER_SECRET"
+- - - - - - - - - - - - - - - - - - - -

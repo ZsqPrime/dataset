@@ -1,0 +1,11 @@
+The ancient game of Go. 
+
+Takes TUIO messages for input. See http://www.tuio.org/.
+
+Project Description:
+The game of go for multi-touch displays
+
+README:
+The ancient game of Go. 
+
+Takes TUIO messages for input. See http://www.tuio.org/.

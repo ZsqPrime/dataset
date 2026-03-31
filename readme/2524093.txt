@@ -1,0 +1,9 @@
+Project Description:
+RefineryCMS as a standalone rails project with all dependencies
+
+README:
+RefineryCMS as a stand alone rails project. Version 1.0.0
+
+This was an interim step before adding it to my other projects but I thought that others might have a use for it.
+
+All tests pass except for two relating to the Sitemap and I18n frontend locales.

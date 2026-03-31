@@ -1,0 +1,25 @@
+Gift Aid module for UK Charity 
+
+Required: 
+
+Drupal 7 
+CiviCRM 4.1
+
+
+This module has been tested on Drupal 7/CiviCRM 4.1 and was developed and fixed during CiviCRM London Code Sprint 2012
+
+
+
+Project Description:
+A civicrm giftaid module for Drupal 4.1
+
+README:
+Gift Aid module for UK Charity 
+
+Required: 
+
+Drupal 7 
+CiviCRM 4.1
+
+
+This module has been tested on Drupal 7/CiviCRM 4.1 and was developed and fixed during CiviCRM London Code Sprint 2012

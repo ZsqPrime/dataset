@@ -1,0 +1,7 @@
+Testing different technics of 2D animation in Java. 
+
+Project Description:
+Java fast graphic examples
+
+README:
+Testing different technics of 2D animation in Java.

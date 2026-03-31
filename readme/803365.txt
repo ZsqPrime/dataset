@@ -1,0 +1,8 @@
+Don't use this. There are far better ways.
+
+
+Project Description:
+Create fast, flexible form objects from your models using Zend / Doctrine 1 & 2
+
+README:
+Don't use this. There are far better ways.

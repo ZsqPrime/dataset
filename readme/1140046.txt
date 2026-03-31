@@ -1,0 +1,18 @@
+Fanatical-Dev-Core
+==================
+
+Micro OpenID/FB-connect based PHP framework
+
+License: MIT
+
+
+Project Description:
+Micro OpenID/FB-connect based PHP framework
+
+README:
+Fanatical-Dev-Core
+==================
+
+Micro OpenID/FB-connect based PHP framework
+
+License: MIT

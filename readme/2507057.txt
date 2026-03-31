@@ -1,0 +1,6 @@
+Project Description:
+These are some of the scripting experiments
+
+README:
+# Scripts
+My scripting experiments

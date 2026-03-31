@@ -1,0 +1,5 @@
+Project Description:
+Soar Agent for the 2011 Google AI Challenge
+
+README:
+Soar bot to play the 2011 Google AI Challenge

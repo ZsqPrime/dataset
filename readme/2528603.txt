@@ -1,0 +1,4 @@
+Project Description:
+Vagrant configuration using puppet with manifests to run magento, prestashop... (work in progress)
+
+README:

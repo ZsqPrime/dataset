@@ -1,0 +1,8 @@
+Project Description:
+Library to make programming simpler and cleaner (and slower, because I was too lazy to implement usable data structures)
+
+README:
+libf
+====
+
+Data structures for C programmers

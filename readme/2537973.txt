@@ -1,0 +1,18 @@
+Project Description:
+
+
+README:
+To Tests:
+- strafe vs point turn
+- test that we can see both cards when looking straight down corridor
+- changing his findSquares() function
+
+To Writes:
+- write sub class of RobotPose for camera stuff
+- write strafeTo() function -  PID controller for this too
+- write updateSquares() - take new image and process it into usable data
+
+Assignment Algorithm:
+1. find the two closest pair of cards
+2. compare the areas of the colors (one or both?)
+3. move toward smaller squares (or where there is no square?)

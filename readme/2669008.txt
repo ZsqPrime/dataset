@@ -1,0 +1,7 @@
+Project Description:
+memcached session manager for jetty (based on jetty-nosql); using kryo serialization
+
+README:
+# jetty-nosql-memcached-kryo
+
+repository has been merged into [jetty-nosql-memcached](https://github.com/yyuu/jetty-nosql-memcached).

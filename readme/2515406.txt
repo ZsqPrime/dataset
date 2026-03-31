@@ -1,0 +1,10 @@
+This is the source for the home page of messycamp.dk.
+It is a static site, so should maybe use a cms, but this is a simple site, that will probably never grow
+
+
+Project Description:
+The homepage of messycamp.dk
+
+README:
+This is the source for the home page of messycamp.dk.
+It is a static site, so should maybe use a cms, but this is a simple site, that will probably never grow

@@ -1,0 +1,53 @@
+Project Description:
+
+
+README:
+= rb-fsevent
+
+Very simple & usable Mac OSX FSEvents API
+
+- RubyCocoa not required!
+- Signals are working (really) -- I don't know if they are or not.
+- Tested on MRI 1.8.7 & 1.9.2, JRuby 1.6.3
+- Tested on 10.5.8
+- Works on PowerPC
+
+== Install
+
+    gem install rb-fsevent-legacy
+
+== Usage
+
+=== Singular path
+
+    require 'rb-fsevent-legacy'
+
+    fsevent = FSEvent.new(Dir.pwd)
+
+    #some changes happen here, other program code, etcj
+
+    fsevent.events do |e|
+      puts "Detected change inside: #{e.event_path}"
+    end
+
+=== Multiple paths
+
+    require 'rb-fsevent'
+
+    paths = ['/tmp/path/one', '/tmp/path/two', Dir.pwd]
+
+    fsevent = FSEvent.new
+    fsevent.add_paths(paths)
+    fsevent.watch do |e|
+      puts "Detected change inside: #{e.event_path}"
+    end
+
+    #some things happen
+
+    fsevent.events.collect { |e| e.event_path }
+
+=== Threads
+    
+  The native stream runs in it's own (isolated) CoreFoundation thread, which is started as soon as the gem
+  is loaded and it terminated when the program stops.  You may check for changes as often as you like in 
+  ruby loop, or from an additional Ruby thread.

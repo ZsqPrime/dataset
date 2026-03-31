@@ -1,0 +1,8 @@
+http://pilot-mapreduce.readthedocs.org/en/latest/
+
+
+Project Description:
+A Pilot-based MapReduce Implementation
+
+README:
+http://pilot-mapreduce.readthedocs.org/en/latest/

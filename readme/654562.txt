@@ -1,0 +1,11 @@
+Project Description:
+Automation Scripts
+
+README:
+Index: 
+
+OpenSSL 
+  - autocreate_openssl_server_cert.py: autogenerate server ssl certs
+
+OpenVPN
+  - autocreate client keys and email

@@ -1,0 +1,11 @@
+# PHP Rails
+
+Rails for PHP users, currently only some Ruby modules are ported, Rails helpers are on the way.
+
+Project Description:
+UNMAINTAINED. PHP port of the Ruby on Rails framework. 
+
+README:
+# PHP Rails
+
+Rails for PHP users, currently only some Ruby modules are ported, Rails helpers are on the way.

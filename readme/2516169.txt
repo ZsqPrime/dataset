@@ -1,0 +1,53 @@
+To load the RSS must first put the beginning of your XML file:
+
+prefix: parameter for differentiating flows between them if you have several
+feed: This is the URL of your RSS or ATOM
+limit: the maximum number of news you want to recover
+
+Then you call the properties as follows:
+
+$INFO[Window.property (RSS.X.Title)]
+
+where X is the number of the news you want to recover
+where Y is the prefix to differentiate them flow (optional)
+
+There are properties defined:
+      [Y.]RSS.X.Title: title of the news
+      [Y.]RSS.X.Date: date of the news
+      [Y.]RSS.X.Desc: What's in the news
+      [Y.]RSS.X.Image: Img File-related news, is False if no picture
+      [Y.]RSS.X.Video: Link to video, is empty if no video
+      [Y.]RSS.X.MultiImages : Path to directory containing images attached to item (usage in MultiImage control or Slideshow builtin), content images only if SlideShowable is set to true
+      [Y.]RSS.X.ImageCount : count of images attached to item
+      [Y.]RSS.X.SlideShowable : if set to true it means we can use MultiImage control or builtin Slideshow function
+      [Y.]RSS.count : holds count of RSS items passed to skin (usefull if script will return less items than skinner wanted - limit parameter)
+
+
+
+Project Description:
+get rss news for xbmc skinner
+
+README:
+To load the RSS must first put the beginning of your XML file:
+
+prefix: parameter for differentiating flows between them if you have several
+feed: This is the URL of your RSS or ATOM
+limit: the maximum number of news you want to recover
+
+Then you call the properties as follows:
+
+$INFO[Window.property (RSS.X.Title)]
+
+where X is the number of the news you want to recover
+where Y is the prefix to differentiate them flow (optional)
+
+There are properties defined:
+      [Y.]RSS.X.Title: title of the news
+      [Y.]RSS.X.Date: date of the news
+      [Y.]RSS.X.Desc: What's in the news
+      [Y.]RSS.X.Image: Img File-related news, is False if no picture
+      [Y.]RSS.X.Video: Link to video, is empty if no video
+      [Y.]RSS.X.MultiImages : Path to directory containing images attached to item (usage in MultiImage control or Slideshow builtin), content images only if SlideShowable is set to true
+      [Y.]RSS.X.ImageCount : count of images attached to item
+      [Y.]RSS.X.SlideShowable : if set to true it means we can use MultiImage control or builtin Slideshow function
+      [Y.]RSS.count : holds count of RSS items passed to skin (usefull if script will return less items than skinner wanted - limit parameter)

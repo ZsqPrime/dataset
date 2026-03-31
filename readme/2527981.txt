@@ -1,0 +1,5 @@
+Project Description:
+The website for the Columbia University Sparrow Lab.
+
+README:
+This file was created by PyCharm 2.0.1 for binding GitHub repository

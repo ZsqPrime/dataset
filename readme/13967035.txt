@@ -1,0 +1,8 @@
+Project Description:
+some useful or brilliant java code
+
+README:
+JavaUtils
+=========
+
+some useful or brilliant java code

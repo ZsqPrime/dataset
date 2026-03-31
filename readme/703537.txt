@@ -1,0 +1,12 @@
+## Description
+
+This app lets you import your photos from your Mac into the iOS Simulator.
+
+
+Project Description:
+Photo Importer App for iOS Simulator
+
+README:
+## Description
+
+This app lets you import your photos from your Mac into the iOS Simulator.

@@ -1,0 +1,20 @@
+Project Description:
+A plugin for jQuery to allow you to lazy load other javaScript scripts and add handlers to notice when they have loaded
+
+README:
+This script allows you to leave loading of scripts till after the page has rendered.
+
+To use this include the script in your header after jQuery.
+Then to load a script deferred use the following:
+
+$().deferJSLoad('url.js');
+
+
+To check the js has loaded and to bind further events use code like this:
+
+function jsTest() {
+  //example of lazyloaded fancybox plugin, this binds the fancybox element after it has loaded
+  $('a.popup').fancybox();
+}
+
+$(window).bind('deferJSLoaded', jsTest);

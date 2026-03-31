@@ -1,0 +1,4 @@
+Project Description:
+a customised XML programmable slide viewer for a Brainer multimedia composition
+
+README:

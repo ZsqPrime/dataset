@@ -1,0 +1,16 @@
+MultiTouch
+---------------
+A touch surface D&D game.
+
+This project is in the early stages of development and is nowhere near stable. Read BUILDING.
+
+
+Project Description:
+Multi-Touch Table Top Game Play
+
+README:
+MultiTouch
+---------------
+A touch surface D&D game.
+
+This project is in the early stages of development and is nowhere near stable. Read BUILDING.

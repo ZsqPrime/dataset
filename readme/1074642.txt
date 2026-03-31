@@ -1,0 +1,16 @@
+Project Description:
+base template for classic sinatra apps
+
+README:
+Minimal Sinatra template, as requested on Twitter.
+
+Run:
+
+    bundle install
+    foreman start
+
+Deploy to heroku:
+
+    heroku create --stack cedar
+    heroku config:add RACK_ENV=production
+    git ps heroku

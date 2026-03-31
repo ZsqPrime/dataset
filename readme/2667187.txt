@@ -1,0 +1,9 @@
+Project Description:
+Rock,Paper,Scissors Rails
+
+README:
+Rock Paper Scissors Ruby on rails
+
+two controllers stats and throw.
+
+click on one of the links on the index page for throwing.

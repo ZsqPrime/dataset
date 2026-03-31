@@ -1,0 +1,12 @@
+# Extensions for Play 2
+
+Various extensions including MongoDB support
+
+
+Project Description:
+Various extensions to Play 2
+
+README:
+# Extensions for Play 2
+
+Various extensions including MongoDB support

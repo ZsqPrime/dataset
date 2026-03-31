@@ -1,0 +1,6 @@
+Project Description:
+Dreamhost blog/portfolio thing. I
+
+README:
+I got tired of hi.im being down all the time and put together my own little
+central location for my online life.

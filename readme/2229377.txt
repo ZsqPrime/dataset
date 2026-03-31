@@ -1,0 +1,11 @@
+Cybernetic Tiger Repository
+
+The folder "newbuild" is where we are keeping all of the source for the CMPT371 project "NextBooks".
+
+Project Description:
+
+
+README:
+Cybernetic Tiger Repository
+
+The folder "newbuild" is where we are keeping all of the source for the CMPT371 project "NextBooks".

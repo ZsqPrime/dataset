@@ -1,0 +1,7 @@
+Hello DeployD
+
+Project Description:
+OLD. Efforts moved to - https://github.com/davidwhitney/deployd-micro
+
+README:
+Hello DeployD

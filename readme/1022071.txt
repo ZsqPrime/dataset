@@ -1,0 +1,54 @@
+Feb 14, 2020
+
+This project has been almost totally redone since it was crated a decade ago.
+The latest libturbojpeg build process has changed greatly, its now hosted on github
+and this project basically uses scripts created by DRC to build for iOS and the Simulator.
+
+NOTE: Xcode 11.4-beta complains about the current official Simulator slice in the offical
+  binaries, and fails with a hard error! If you want to use libturbojpeg get it here,
+  or use the project to build from scratch.
+
+The current version of the archive in this repository is 2.0.4
+You can just grab it, libturbojpeg.a (with arm64, x86_64) or build it from scratch.
+
+BUILDING FROM SCRATCH:
+
+1) Set the desired version (branch) in ScriptVariables, or set it to "master" for latest
+
+2) ScriptRunner will try to pull the lastest source into a sub directory, libjpeg-turbo.
+
+3) If you want a simulator archive that uses SIMD, then you need to install yasm (see libturbo README),
+   which Homebrew currently installs as /usr/local/bin/yasm. Otherwise a "C" only version is build
+   (which really should be just fine).
+
+4) You should now have a libturbojpeg.a in the project directory, the pre-existing one is deleted.
+
+
+Project Description:
+Xcode project and script files to help build a fat library with multiple architectures including the Simulator
+
+README:
+Feb 14, 2020
+
+This project has been almost totally redone since it was crated a decade ago.
+The latest libturbojpeg build process has changed greatly, its now hosted on github
+and this project basically uses scripts created by DRC to build for iOS and the Simulator.
+
+NOTE: Xcode 11.4-beta complains about the current official Simulator slice in the offical
+  binaries, and fails with a hard error! If you want to use libturbojpeg get it here,
+  or use the project to build from scratch.
+
+The current version of the archive in this repository is 2.0.4
+You can just grab it, libturbojpeg.a (with arm64, x86_64) or build it from scratch.
+
+BUILDING FROM SCRATCH:
+
+1) Set the desired version (branch) in ScriptVariables, or set it to "master" for latest
+
+2) ScriptRunner will try to pull the lastest source into a sub directory, libjpeg-turbo.
+
+3) If you want a simulator archive that uses SIMD, then you need to install yasm (see libturbo README),
+   which Homebrew currently installs as /usr/local/bin/yasm. Otherwise a "C" only version is build
+   (which really should be just fine).
+
+4) You should now have a libturbojpeg.a in the project directory, the pre-existing one is deleted.

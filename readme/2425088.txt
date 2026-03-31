@@ -1,0 +1,31 @@
+
+What: 
+
+An MIT licensed containers lib which uses static memory allocation.
+
+Why:
+
+There are contexts where you need containers, but cannot for some reason use malloc.
+
+Platform: 
+
+Initially Linux/GCC, but an AIX-port is planned.
+
+
+
+Project Description:
+C-language containers, statically and perhaps also dynamically allocated
+
+README:
+
+What: 
+
+An MIT licensed containers lib which uses static memory allocation.
+
+Why:
+
+There are contexts where you need containers, but cannot for some reason use malloc.
+
+Platform: 
+
+Initially Linux/GCC, but an AIX-port is planned.

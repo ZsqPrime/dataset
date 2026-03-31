@@ -1,0 +1,66 @@
+How to install Milkymist LM32-MMU modified version of binutils
+
+1°) Clone source repository and patch it
+
+	git clone git://github.com/fallen/lm32-binutils-mmu.git
+	wget http://www.rtems.org/ftp/pub/rtems/SOURCES/4.11/binutils-2.22-rtems4.11-20120427.diff
+	cd lm32-binutils-mmu
+	cat ../binutils-2.22-rtems4.11-20120427.diff | patch -p1 --dry-run
+	# If the previous command says no error you can continue
+	cat ../binutils-2.22-rtems4.11-20120427.diff | patch -p1
+
+
+2°) Make sure you have everything ready to compile lm32-binutils-mmu
+
+	sudo aptitude install m4 patch build-essential texinfo cvs libncurses5-dev libgmp3-dev libmpfr-dev libmpc-dev autoconf autotools-dev automake flex bison
+
+3°) Compile it
+
+	mkdir b-binutils
+	cd b-binutils
+	../lm32-binutils-mmu/configure --target=lm32-rtems4.11 --prefix=/opt/rtems-4.11/
+	make all
+	make info
+	sudo make install
+
+4°) Add somewhere in your .bashrc/zshrc/.profile : 
+
+	export PATH=/opt/rtems-4.11/bin:$PATH
+
+5°) Restart your GNOME/KDE/Mac OS/awesome/whatever session
+
+
+Project Description:
+Modified version of GNU binutils 2.22 for Milkymist LM32 MMU project
+
+README:
+How to install Milkymist LM32-MMU modified version of binutils
+
+1°) Clone source repository and patch it
+
+	git clone git://github.com/fallen/lm32-binutils-mmu.git
+	wget http://www.rtems.org/ftp/pub/rtems/SOURCES/4.11/binutils-2.22-rtems4.11-20120427.diff
+	cd lm32-binutils-mmu
+	cat ../binutils-2.22-rtems4.11-20120427.diff | patch -p1 --dry-run
+	# If the previous command says no error you can continue
+	cat ../binutils-2.22-rtems4.11-20120427.diff | patch -p1
+
+
+2°) Make sure you have everything ready to compile lm32-binutils-mmu
+
+	sudo aptitude install m4 patch build-essential texinfo cvs libncurses5-dev libgmp3-dev libmpfr-dev libmpc-dev autoconf autotools-dev automake flex bison
+
+3°) Compile it
+
+	mkdir b-binutils
+	cd b-binutils
+	../lm32-binutils-mmu/configure --target=lm32-rtems4.11 --prefix=/opt/rtems-4.11/
+	make all
+	make info
+	sudo make install
+
+4°) Add somewhere in your .bashrc/zshrc/.profile : 
+
+	export PATH=/opt/rtems-4.11/bin:$PATH
+
+5°) Restart your GNOME/KDE/Mac OS/awesome/whatever session

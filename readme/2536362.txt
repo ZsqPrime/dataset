@@ -1,0 +1,7 @@
+Project Description:
+document models
+
+README:
+# DocModel
+
+The c# implementation of LDA

@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Blog: http://me4bruno.wordpress.com/2012/01/22/location-picker-auf-basis-von-openstreetmap/

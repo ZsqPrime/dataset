@@ -1,0 +1,5 @@
+Description:
+Extended version of the SourceMod MapChooser
+
+README:
+README not available

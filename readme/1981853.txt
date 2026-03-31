@@ -1,0 +1,55 @@
+Netsoc server setup scripts
+
+
+These are scripts to setup services/daemons/whatever 
+
+List of services 
+
+Finished:
+*ssh server  (includes banner and allowed users/groups setup)
+*ldap client (run on servers you want to enable logging in with ldap on)
+*ldap server
+*web-wordpress (main website www.netsoc.dit.ie)
+
+Working on:
+*web-forum
+*Firewall 
+
+Planned:
+*web-wiki 
+ -(see mediawiki-test branch) - mediawiki is not final solution
+*dns server
+ - we have a separate repo for bind. The reason for this being that we can make changes on
+  the server and push up without trying to push to the main serversetup repo.
+
+
+
+
+
+Project Description:
+scripts to setup services 
+
+README:
+Netsoc server setup scripts
+
+
+These are scripts to setup services/daemons/whatever 
+
+List of services 
+
+Finished:
+*ssh server  (includes banner and allowed users/groups setup)
+*ldap client (run on servers you want to enable logging in with ldap on)
+*ldap server
+*web-wordpress (main website www.netsoc.dit.ie)
+
+Working on:
+*web-forum
+*Firewall 
+
+Planned:
+*web-wiki 
+ -(see mediawiki-test branch) - mediawiki is not final solution
+*dns server
+ - we have a separate repo for bind. The reason for this being that we can make changes on
+  the server and push up without trying to push to the main serversetup repo.

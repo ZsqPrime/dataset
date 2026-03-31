@@ -1,0 +1,34 @@
+What this is:
+
+A tool for dataflow tomography of tainted String data in Java applications (focusing on web applications).
+Essentially it allows tagging interesting data in an application (such as what is read from databases), and 
+tracking the complete flow of that data through the application.
+
+Included are tools to visualize and analyze the data collection from the tracking, to suggest useful optimizations
+for the application.
+
+---
+
+How to set it up:
+
+-Pending...
+
+
+Project Description:
+Everything is DICE
+
+README:
+What this is:
+
+A tool for dataflow tomography of tainted String data in Java applications (focusing on web applications).
+Essentially it allows tagging interesting data in an application (such as what is read from databases), and 
+tracking the complete flow of that data through the application.
+
+Included are tools to visualize and analyze the data collection from the tracking, to suggest useful optimizations
+for the application.
+
+---
+
+How to set it up:
+
+-Pending...

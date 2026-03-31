@@ -1,0 +1,8 @@
+This plugin needs Hudson 3.0.0-M0-1 or later to build
+
+
+Project Description:
+Hudson Plugin to provide JCaptcha support for Security Real User Sign Up
+
+README:
+This plugin needs Hudson 3.0.0-M0-1 or later to build

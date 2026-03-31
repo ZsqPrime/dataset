@@ -1,0 +1,35 @@
+# Elo2 - Elektronik 2
+
+[![Build Status](https://travis-ci.org/HSR-Stud/Elo2.svg?branch=short)](https://travis-ci.org/HSR-Stud/Elo2)
+
+## License
+CC by-nc-sa
+
+## Branches in diesem Repo:
+ * **master**: Lange Version der Zusammenfassung
+ * **short**: Kurze Version der Zusammenfassung, für die Prüfung
+
+
+Project Description:
+Elektronik 2
+
+README:
+# Elo2 - Elektronik 2
+
+
+
+[![Build Status](https://travis-ci.org/HSR-Stud/Elo2.svg?branch=short)](https://travis-ci.org/HSR-Stud/Elo2)
+
+
+
+## License
+
+CC by-nc-sa
+
+
+
+## Branches in diesem Repo:
+
+ * **master**: Lange Version der Zusammenfassung
+
+ * **short**: Kurze Version der Zusammenfassung, für die Prüfung

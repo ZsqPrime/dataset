@@ -1,0 +1,9 @@
+Project Description:
+Game Of Life Implementation using clojurescript
+
+README:
+
+          README
+
+Game of life implementation using
+clojurescript.

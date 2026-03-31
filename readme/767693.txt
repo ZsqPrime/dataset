@@ -1,0 +1,34 @@
+== krypt-provider-openssl
+
+C implementation of the krypt-provider API using OpenSSL.
+
+== krypt
+
+For more information about krypt, please have a
+look at the project and its wiki at
+
+https://github.com/krypt/krypt
+
+Copyright (c) 2011-2013
+Hiroshi Nakamura <nahi@ruby-lang.org>
+Martin Bosslet <Martin.Bosslet@gmail.com>
+
+
+Project Description:
+C implementation of the krypt-provider API using OpenSSL. The official repo has moved to
+
+README:
+== krypt-provider-openssl
+
+C implementation of the krypt-provider API using OpenSSL.
+
+== krypt
+
+For more information about krypt, please have a
+look at the project and its wiki at
+
+https://github.com/krypt/krypt
+
+Copyright (c) 2011-2013
+Hiroshi Nakamura <nahi@ruby-lang.org>
+Martin Bosslet <Martin.Bosslet@gmail.com>

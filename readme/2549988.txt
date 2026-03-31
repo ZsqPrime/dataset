@@ -1,0 +1,7 @@
+Project Description:
+Rails plugin
+
+README:
+= ActsAsViewable
+
+This project rocks and uses MIT-LICENSE.

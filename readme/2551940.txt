@@ -1,0 +1,4 @@
+Project Description:
+Un DSL en Groovy pour envoyer des email
+
+README:

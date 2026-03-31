@@ -1,0 +1,8 @@
+Project Description:
+Structural Motifs Using Random Fields, stochastic search implementation in Haskell
+
+README:
+This is a Haskell implementation of the SMURF2 algorithm (stochastic search-based).
+
+Docs for cmdargs (which is very nice):
+  http://hackage.haskell.org/packages/archive/cmdargs/latest/doc/html/System-Console-CmdArgs-Implicit.html

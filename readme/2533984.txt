@@ -1,0 +1,58 @@
+Project Description:
+
+
+README:
+# VIM Header {{{
+# vim:fdm=marker
+#}}}
+
+##Usage####{{{1
+
+When used as:
+
+      cmb <command> [args]
+
+It will execute the command and quit
+
+
+When used as:
+      cmd
+
+It run in a interactive mode. First it asks for a command line, and then parse and execute it.
+Avalable commands:
+
+  "h"  :  There's not and help now
+  "fd [FrameNum]"
+       :  Find the first different MB between the 2 YUV
+       :  If  FrameNum is given, the specified frame is checked
+       :  Else All Frame are checked from the first to the last
+  "q"  :  Quit the dead loop of asking for command and execute
+  "p <WhichFile> <FrameNum> <MbX> <MbY>"
+       :  print a particular MB of a particular file.
+  "nc" :  Stands for "no command"
+
+  "sf <WhichFile> FrameNum"
+       :  use PIL Image to show a Frame, YCbCr image was used and U & V components were upsampled.
+
+
+### Future plan {{{1
+
+add other useful functionality to both interactive and no-interactive mode.
+
+###Functions {{{1
+### old getMB, shouldn't use
+def getMB(MBLine,stride,offset, numofline, numofcolumn):
+### print 16x16MbData
+def printMB(MbData):
+### print diff of 2 MB
+def printDiff(MbData1,MbData2):
+### read one frame into memory
+def readOneFrame(Params, FrameNum, FileNum):
+### read one MB from Frame
+def getOneMBFromFrame(Params, MbX, MbY, FrameData):
+### print All MBs of a specified file
+def printAllMBs(Params,WhichFile):
+### find first diff
+def findFirstDiff(Params):
+### parse cfg file
+def parseCfgFile():

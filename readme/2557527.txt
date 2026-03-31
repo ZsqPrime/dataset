@@ -1,0 +1,17 @@
+Project Description:
+I have avoided the obvious portmanteau so as to provide an informative Project Name
+
+README:
+# tictactoe
+
+FIXME: write description
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.

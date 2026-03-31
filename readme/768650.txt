@@ -1,0 +1,5 @@
+Description:
+flowStats: algorithms for flow cytometry data analysis using BioConductor tools
+
+README:
+README not available

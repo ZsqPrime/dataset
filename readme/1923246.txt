@@ -1,0 +1,78 @@
+* DBKindle -- a style package for [[http://dblatex.sourceforge.net/][Dblatex]]
+  DBKindle is designed to generate PDF documents optimized for e-readers:
+- No margins, page numbers, or page headers
+- Memoir document class for professional text layout
+- Advanced microtypography provided by Microtype package
+- Wrapping text around small figures
+- Examples on configuring fonts and styles for section titles and bridgeheads
+- Mappings for many Unicode symbols
+- Cover page images for books
+- Dropped capitals for sections' beginnings
+
+** Installation
+   - Working Dblatex is required. See [[http://dblatex.sourceforge.net/doc/manual/sec-install.html]]
+   - Create "specs" file for Dblatex or use sample kindle.specs. The file must be in Dblatex's share/latex/specs subdirectory
+** Configuration
+   The style has many configuration settings in both xsl and tex files. Please browse the files and read the comments. Some often used settings are in
+   - dbkindle_geometry.sty -- page dimensions
+   - dbkindle_font.sty -- base font selection
+   - param.xsl:18 -- base font size, all other fonts will be adjusted as well
+   - dbkindle_font.sty:90 -- size of base font only
+
+** Usage
+   #+begin_src sh
+   dblatex -T kindle book.xml
+   #+end_src
+
+** Using Dblatex and DBKindle with non-docbook files
+   The style package was designed initially to use Dblatex as a drop-in replacement for PDF-generation step of FB2DocBook FB2 to PDF convertor. E-books in many formats can be converted to FB2 using [[http://calibre-ebook.com/][Calibre]].
+   - The FB2DocBook homepage http://www.kir666.ru/fb2docbook does not seem to be available, but the most recent version can be downloaded at [[http://goo.gl/zX9zf]]
+   - Use the files in DBKindle's FB2DocBook subdirectory to replace correspondig files in FB2DocBook
+   - The configuration files expect to find Dblatex in FB2DocBook/dblatex, edit configs/dblatex.template and configs/dblatex.cmd.template to reflect your setup
+   - Run confsetup.exe to generate various scripts and a configuration file out of templates
+   - Usage:
+     #+begin_src sh
+     btransformer_py.cmd book.fb2
+     #+end_src
+
+
+Project Description:
+DBKindle is a style package for Dblatex designed to generate PDF documents optimized for e-readers
+
+README:
+* DBKindle -- a style package for [[http://dblatex.sourceforge.net/][Dblatex]]
+  DBKindle is designed to generate PDF documents optimized for e-readers:
+- No margins, page numbers, or page headers
+- Memoir document class for professional text layout
+- Advanced microtypography provided by Microtype package
+- Wrapping text around small figures
+- Examples on configuring fonts and styles for section titles and bridgeheads
+- Mappings for many Unicode symbols
+- Cover page images for books
+- Dropped capitals for sections' beginnings
+
+** Installation
+   - Working Dblatex is required. See [[http://dblatex.sourceforge.net/doc/manual/sec-install.html]]
+   - Create "specs" file for Dblatex or use sample kindle.specs. The file must be in Dblatex's share/latex/specs subdirectory
+** Configuration
+   The style has many configuration settings in both xsl and tex files. Please browse the files and read the comments. Some often used settings are in
+   - dbkindle_geometry.sty -- page dimensions
+   - dbkindle_font.sty -- base font selection
+   - param.xsl:18 -- base font size, all other fonts will be adjusted as well
+   - dbkindle_font.sty:90 -- size of base font only
+
+** Usage
+   #+begin_src sh
+   dblatex -T kindle book.xml
+   #+end_src
+
+** Using Dblatex and DBKindle with non-docbook files
+   The style package was designed initially to use Dblatex as a drop-in replacement for PDF-generation step of FB2DocBook FB2 to PDF convertor. E-books in many formats can be converted to FB2 using [[http://calibre-ebook.com/][Calibre]].
+   - The FB2DocBook homepage http://www.kir666.ru/fb2docbook does not seem to be available, but the most recent version can be downloaded at [[http://goo.gl/zX9zf]]
+   - Use the files in DBKindle's FB2DocBook subdirectory to replace correspondig files in FB2DocBook
+   - The configuration files expect to find Dblatex in FB2DocBook/dblatex, edit configs/dblatex.template and configs/dblatex.cmd.template to reflect your setup
+   - Run confsetup.exe to generate various scripts and a configuration file out of templates
+   - Usage:
+     #+begin_src sh
+     btransformer_py.cmd book.fb2
+     #+end_src

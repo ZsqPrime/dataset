@@ -1,0 +1,39 @@
+CLJBIN
+======
+
+A Clojure pastebin with code evaluation.
+
+Requirements
+------------
+
+- Leiningen
+- A running MongoDB instance.
+
+Running
+-------
+
+    $ lein deps
+    $ lein run
+
+
+
+Project Description:
+A Clojure pastebin with code evaluation.
+
+README:
+CLJBIN
+======
+
+A Clojure pastebin with code evaluation.
+
+Requirements
+------------
+
+- Leiningen
+- A running MongoDB instance.
+
+Running
+-------
+
+    $ lein deps
+    $ lein run

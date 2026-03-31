@@ -1,0 +1,16 @@
+ruby version 1.9.3
+
+rubygems
+  libxml-ruby
+  progressbar
+
+
+Project Description:
+output exam list.
+
+README:
+ruby version 1.9.3
+
+rubygems
+  libxml-ruby
+  progressbar

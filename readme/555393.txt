@@ -1,0 +1,8 @@
+This Eclipse plugin makes it possible to add messages to queues, and read messages from queues.
+
+
+Project Description:
+An Eclipse project for messaging. 
+
+README:
+This Eclipse plugin makes it possible to add messages to queues, and read messages from queues.

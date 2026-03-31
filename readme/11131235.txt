@@ -1,0 +1,5 @@
+Project Description:
+Highcharts based components for Gatling
+
+README:
+# Gatling Highcharts [![Build Status](https://github.com/gatling/gatling-highcharts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/gatling/gatling-highcharts/actions/workflows/build.yml?query=branch%3Amain) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.gatling.highcharts/gatling-charts-highcharts/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.gatling.highcharts/gatling-charts-highcharts/)

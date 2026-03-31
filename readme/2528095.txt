@@ -1,0 +1,4 @@
+Project Description:
+Javascript as a scripting language to script-code-editor. Similar to how LISP is a scripting language to emacs.
+
+README:

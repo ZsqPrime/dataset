@@ -1,0 +1,13 @@
+Project Description:
+fOSC - Open Sound Control with illogical tendencies for iPad.
+
+README:
+fOSC - another OSC interface for the iPad.
+
+
+
+TODO
+ - add gyroscope data to all of the osc messages.
+ - add accelerometer data to all of the osc messages as well.
+BUGS
+ - first finger tap does not get sent over the network

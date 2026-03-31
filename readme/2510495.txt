@@ -1,0 +1,7 @@
+Component collection for PHP game programming
+
+Project Description:
+PHP-Game-Components
+
+README:
+Component collection for PHP game programming

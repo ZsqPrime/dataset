@@ -1,0 +1,28 @@
+Description:
+Perl iRODS Client Wrapper Library
+
+README:
+
+Perl iRODS Client Wrapper Library
+
+These modules wrap several iRODS (http://www.irods.org) command line
+client programs in a Perl API.
+
+The clients wrapped are the iRODS icommand programs
+(https://wiki.irods.org/index.php/icommands) and baton programs
+(https://github.com/wtsi-npg/baton).
+
+Dependencies:
+
+Perl      https://github.com/wtsi-npg/perl-dnap-utilities
+
+          Version described in Build.PL
+
+iRODS     https://github.com/irods/irods
+
+          Versions >= 4.1.8
+
+baton     https://github.com/wtsi-npg/baton
+
+          Version >= 2.0.0 only
+

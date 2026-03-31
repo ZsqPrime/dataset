@@ -1,0 +1,4 @@
+Project Description:
+A Bukkit TWSS plugin, based on DanielRapp's twss.js
+
+README:

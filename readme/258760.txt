@@ -1,0 +1,134 @@
+Rays is a command line tool for Liferay development.
+It replaces long lines of maven archetype generators with short rails-like commands.
+Also it allows to manage different environments (development, staging ...)
+
+Some usage examples:
+
+ $ rays new <project name>
+ $ rays g portlet <portlet name>
+ $ rays deploy
+ $ rays liferay start
+
+Rays should work on any Unix-like system.
+
+Detailed user guide: https://github.com/dmitri-carpov/rays/wiki/Usage
+
+== Installation
+
+Make sure you have development tools installed (gcc -v).
+
+Ubuntu:  $ sudo apt-get install build-essential
+
+MacOS X: install XCode
+
+=== PLEASE DO NOT USE sudo DURING THE INSTALLATION
+
+=== 1. Install rvm (http://beginrescueend.com/)
+ $ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+
+Follow rvm instructions or just reopen shell window.
+
+=== 2. Install rvm packages
+ $ rvm pkg install zlib
+ $ rvm pkg install openssl
+ $ rvm pkg install readline # optional
+
+ make sure you have installed libxml2 development packages.
+ Ubuntu: $ sudo apt-get install libxslt-dev libxml2-dev
+
+=== 3. Install ruby 1.9.3-p0
+ $ rvm install 1.9.3-p0
+
+ NOTE: for XCode 4.2.x execute $ rvm install 1.9.3-p0 --with-gcc=clang
+
+Make version 1.9.3-p0 default
+ $ rvm --default use 1.9.3-p0
+
+=== 4. Install maven (http://maven.apache.org)
+- Download a bin from (http://maven.apache.org/download.html)
+- extract package somewhere (/usr/local or /opt for example)
+ $ tar -zxf apache-maven-x.x.x-bin.tar.gz
+- Create M2_HOME environment variable and add mvn to PATH
+add to ~/.bashrc or ~/.bash_profile
+ export M2_HOME=<path-to-maven>
+ export PATH=$M2_HOME/bin:$PATH
+reopen shell window and type 'mvn -v', maven information block should appear
+
+=== 5. Install rays
+ $ gem install raystool
+
+=== 6. Initialize rays
+ $ __rays_init
+
+=== 7. Use rays
+ $ rays --help
+
+
+Project Description:
+Liferay development and deployment management tool
+
+README:
+Rays is a command line tool for Liferay development.
+It replaces long lines of maven archetype generators with short rails-like commands.
+Also it allows to manage different environments (development, staging ...)
+
+Some usage examples:
+
+ $ rays new <project name>
+ $ rays g portlet <portlet name>
+ $ rays deploy
+ $ rays liferay start
+
+Rays should work on any Unix-like system.
+
+Detailed user guide: https://github.com/dmitri-carpov/rays/wiki/Usage
+
+== Installation
+
+Make sure you have development tools installed (gcc -v).
+
+Ubuntu:  $ sudo apt-get install build-essential
+
+MacOS X: install XCode
+
+=== PLEASE DO NOT USE sudo DURING THE INSTALLATION
+
+=== 1. Install rvm (http://beginrescueend.com/)
+ $ bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+
+Follow rvm instructions or just reopen shell window.
+
+=== 2. Install rvm packages
+ $ rvm pkg install zlib
+ $ rvm pkg install openssl
+ $ rvm pkg install readline # optional
+
+ make sure you have installed libxml2 development packages.
+ Ubuntu: $ sudo apt-get install libxslt-dev libxml2-dev
+
+=== 3. Install ruby 1.9.3-p0
+ $ rvm install 1.9.3-p0
+
+ NOTE: for XCode 4.2.x execute $ rvm install 1.9.3-p0 --with-gcc=clang
+
+Make version 1.9.3-p0 default
+ $ rvm --default use 1.9.3-p0
+
+=== 4. Install maven (http://maven.apache.org)
+- Download a bin from (http://maven.apache.org/download.html)
+- extract package somewhere (/usr/local or /opt for example)
+ $ tar -zxf apache-maven-x.x.x-bin.tar.gz
+- Create M2_HOME environment variable and add mvn to PATH
+add to ~/.bashrc or ~/.bash_profile
+ export M2_HOME=<path-to-maven>
+ export PATH=$M2_HOME/bin:$PATH
+reopen shell window and type 'mvn -v', maven information block should appear
+
+=== 5. Install rays
+ $ gem install raystool
+
+=== 6. Initialize rays
+ $ __rays_init
+
+=== 7. Use rays
+ $ rays --help

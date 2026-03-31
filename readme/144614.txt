@@ -1,0 +1,14 @@
+My confs and stuff
+
+Instuctions for cloning:
+./install.sh
+
+
+Project Description:
+None
+
+README:
+My confs and stuff
+
+Instuctions for cloning:
+./install.sh

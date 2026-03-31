@@ -1,0 +1,7 @@
+Project Description:
+Java-Python bridge
+
+README:
+Forked from http://svn.apache.org/repos/asf/lucene/pylucene/trunk/jcc
+and modified to disable shared mode by default, as this allows it
+to be installed by pip without modifying the environment.

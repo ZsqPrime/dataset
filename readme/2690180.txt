@@ -1,0 +1,32 @@
+Project Description:
+Implementation of the Slope One recommendation algorithm for DataMapper
+
+README:
+= dm-slope_one
+
+Implementation of the {Slope One}[http://en.wikipedia.org/wiki/Slope_One] recommendation algorithm for DataMapper
+
+=== Note
+
+* Requires ruby 1.9.x
+* Requires a SQL based backend. It has only been tested on Postgres, but may work on other RDBMS (although it doesn't currently work for SQLite3).
+
+=== Reading
+
+  http://cr3bits.wordpress.com/2010/11/13/incremental-collaborative-filtering-in-sql/
+  http://lemire.me/fr/documents/publications/lemiremaclachlan_sdm05.pdf
+  http://blog.charliezhu.com/2008/07/21/implementing-slope-one-in-t-sql/
+
+== Contributing to dm-slope_one
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Asher Van Brunt. See LICENSE.txt for further details.

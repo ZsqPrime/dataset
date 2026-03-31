@@ -1,0 +1,5 @@
+Project Description:
+A placeholder project for placeholder projects.
+
+README:
+This is just a placeholder repository for now.

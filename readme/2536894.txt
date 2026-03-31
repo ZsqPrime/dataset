@@ -1,0 +1,4 @@
+Project Description:
+jQuery/jQuery-UI plugin which turns an HTML select element into a jQuery-UI style autocomplete widget.
+
+README:

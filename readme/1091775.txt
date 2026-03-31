@@ -1,0 +1,4 @@
+Project Description:
+A wrapper for Lotus Domino's C API, designed to act mostly similarly to the LotusScript/Java API
+
+README:

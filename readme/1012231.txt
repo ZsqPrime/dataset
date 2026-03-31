@@ -1,0 +1,8 @@
+This repo has moved to https://github.com/gpc/grails-excel-import.
+
+
+Project Description:
+Excel Import & Export Plugin, Uses Apache POI Library
+
+README:
+This repo has moved to https://github.com/gpc/grails-excel-import.

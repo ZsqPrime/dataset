@@ -1,0 +1,18 @@
+README:  
+
+git add filename
+git commit -m 'update'
+git push -u origin master
+git difftool
+
+
+Project Description:
+Monte Carlo methods for calulations on Quantum Dots
+
+README:
+README:  
+
+git add filename
+git commit -m 'update'
+git push -u origin master
+git difftool

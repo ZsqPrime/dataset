@@ -1,0 +1,11 @@
+Project Description:
+Roles easy like sunday morning
+
+README:
+= DarDaDa
+
+Roles easy like sunday morning.
+
+== Copyright
+
+Copyright (c) 2009-2017 Yolk GbR. See LICENSE for details.

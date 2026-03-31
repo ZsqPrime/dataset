@@ -1,0 +1,6 @@
+Project Description:
+3d action adventure, java, groovy, mel
+
+README:
+3D adventure game project.
+For more info see homepage.

@@ -1,0 +1,8 @@
+Short and Sweet UI interactions in JS and CoffeeScript. Not actively maintaned.
+
+
+Project Description:
+(Not maintained) Short and Sweet UI interactions in JS and Coffee
+
+README:
+Short and Sweet UI interactions in JS and CoffeeScript. Not actively maintaned.

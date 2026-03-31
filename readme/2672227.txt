@@ -1,0 +1,5 @@
+Project Description:
+Project to hold snippets/solutions of project euler problems that I'll use to keep playing with scala
+
+README:
+Master project to hold project euler puzzles & solutions

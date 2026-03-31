@@ -1,0 +1,40 @@
+evidensity.js javascript
+ben@bengarvey.com
+6/20/2012
+
+Beautiful, simple charts and line graphs using HTML5 canvas
+
+Features:
+Sparklines
+Bar Graphs
+Stacked Bar Graphs
+Win / Loss Bar Graphs
+Scatterplot
+
+See http://evidensity.com/example.html
+
+License:
+See mit-license.txt
+
+
+Project Description:
+Sparklines, charts, and graphs on an html5 canvas
+
+README:
+evidensity.js javascript
+ben@bengarvey.com
+6/20/2012
+
+Beautiful, simple charts and line graphs using HTML5 canvas
+
+Features:
+Sparklines
+Bar Graphs
+Stacked Bar Graphs
+Win / Loss Bar Graphs
+Scatterplot
+
+See http://evidensity.com/example.html
+
+License:
+See mit-license.txt

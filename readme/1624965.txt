@@ -1,0 +1,79 @@
+For Fun 3D Renderer
+-------------------
+The purpose of this project is to build a programmable 3D pipeline, entirely 
+written in software, using SDL and LUA. 
+
+One of the goals is to provide clear and relatively optimized code, without 
+loosing clarity. Since the result framework will be terribly slow compared to 
+hardware accelerated alternatives such as OpenGL and DirectX, at least it 
+should serve as a solid study base for computer graphics students.
+
+The project is being constructed for Windows Platform using Visual Studio 2010.
+The code may use C++11 code, such as lambda. Portability is NOT a goal.
+
+Building
+--------
+1. Install SDL;
+2. Create an environment variable called SDL_HOME and point to SDL root;
+3. Open ForFun.sln and hit the build button. :)
+
+Backlog
+-------
+Project backlog and tracking is public available at Pivotal Tracker:
+https://www.pivotaltracker.com/projects/491379
+
+History
+---------
+29/07/2012 - Included optimized float to int conversion functions
+26/07/2012 - Replaced Color class by Vector4 class.
+24/07/2012 - Changed solution to use relative paths.
+22/07/2012 - Added triangles
+18/03/2012 - Added lines with multiple colors.
+03/03/2012 - Added tests to MathUtils, Color union and Bresenham line function.
+26/02/2012 - Added Vector4, 3D transforms and encapsulated vector fields.
+22/02/2012 - EXTREMELLY SIMPLE Renderer and Swap Chain classes.
+21/02/2012 - Added test classes.
+19/02/2012 - Added class Matrix4, reorganized project folders.
+18/02/2012 - Project created with some 2D mathematical classes.
+
+Project Description:
+For fun is a 3D software renderer that uses C++, SDL and Lua. It's useless, but we are programming it for fun. :)
+
+README:
+For Fun 3D Renderer
+-------------------
+The purpose of this project is to build a programmable 3D pipeline, entirely 
+written in software, using SDL and LUA. 
+
+One of the goals is to provide clear and relatively optimized code, without 
+loosing clarity. Since the result framework will be terribly slow compared to 
+hardware accelerated alternatives such as OpenGL and DirectX, at least it 
+should serve as a solid study base for computer graphics students.
+
+The project is being constructed for Windows Platform using Visual Studio 2010.
+The code may use C++11 code, such as lambda. Portability is NOT a goal.
+
+Building
+--------
+1. Install SDL;
+2. Create an environment variable called SDL_HOME and point to SDL root;
+3. Open ForFun.sln and hit the build button. :)
+
+Backlog
+-------
+Project backlog and tracking is public available at Pivotal Tracker:
+https://www.pivotaltracker.com/projects/491379
+
+History
+---------
+29/07/2012 - Included optimized float to int conversion functions
+26/07/2012 - Replaced Color class by Vector4 class.
+24/07/2012 - Changed solution to use relative paths.
+22/07/2012 - Added triangles
+18/03/2012 - Added lines with multiple colors.
+03/03/2012 - Added tests to MathUtils, Color union and Bresenham line function.
+26/02/2012 - Added Vector4, 3D transforms and encapsulated vector fields.
+22/02/2012 - EXTREMELLY SIMPLE Renderer and Swap Chain classes.
+21/02/2012 - Added test classes.
+19/02/2012 - Added class Matrix4, reorganized project folders.
+18/02/2012 - Project created with some 2D mathematical classes.

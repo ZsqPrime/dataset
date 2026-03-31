@@ -1,0 +1,11 @@
+Implementation of Conway's Game of Life in Ruby.
+
+The purpose of this exercise is to get more familiar with Ruby's object-oriented capabilities.
+
+Project Description:
+Implementation of Game of Life in Ruby to get more experience with Ruby OO charateristics
+
+README:
+Implementation of Conway's Game of Life in Ruby.
+
+The purpose of this exercise is to get more familiar with Ruby's object-oriented capabilities.

@@ -1,0 +1,4 @@
+Project Description:
+A social interaction site for MIST student
+
+README:

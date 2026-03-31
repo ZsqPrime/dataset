@@ -1,0 +1,8 @@
+user's guide in doc/greasy_userguide.pdf
+
+
+Project Description:
+Greasy is an HTC approach to HPC environments (HT&PC). Versatile and easy-to-use parallel framework/runtime aimed at many task computing, ideally in HPC environments. Greasy is a tool designed to make easier the deployment of embarrassingly parallel simul
+
+README:
+user's guide in doc/greasy_userguide.pdf

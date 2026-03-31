@@ -1,0 +1,119 @@
+Project Description:
+A base class for your jsonrpc client. Includes a jsonrpc implementaion over TCP connection.
+
+README:
+= rawjsonrpc
+
+rawjsonrpc is a libary to create a jsonrpc client for every type of stream. It
+also profides an server and client over tcpip. 
+This is libary is a my first try in ruby to create a gem. Its more a test how 
+gems work but i hope i can help somebody with this lib. 
+
+== load lib
+
+install libary
+
+  gem install rawjsonrpc
+
+include rawjsonrpc in your programm
+
+  require 'rawjsonrpc'
+
+== Use the TCP client 
+
+Create a client to send rpc calls.
+
+  client = RawJsonRpc::ClientSocket.new('192.168.2.10', 8080) #creates TCP client
+  ret = client.request("func1", nil)                 #calles func1 with no para
+    			     		       	     #returns result in ret
+  ret = client.request("func2", 1, 3.0, :test, "om") #calles func2 with 4 paras
+  ret = client.func3([1, 2, 3, 4])                   #calles func3 with a array
+  client.notification("noti", 1, "t")                #send notifaction no return value
+  client.close()
+
+== Use the TCP server
+
+Use the gserver to serve data over tcp ip 
+
+  server = RawJsonRpc::JSONTCPServer.new(8080)
+  server.add_method("func1", method("do_stuff1")) # adds do_stuff1 as "func1"
+  server.add_method("foo", method(:bar))          # adds bar as foo
+  server.add_block("func2"){|a,b, *c|              # adds a block with 2 args
+    #do stuff 			 		  # and args as func2
+  }
+  server.start
+  server.join
+
+== implement your own jsonclient
+ 
+Boilerplate Code to create your own client.
+
+  class superclient < RawJsonRpc::RawClientJsonRpc 
+    def initiailize(*args)
+     # init stream
+    end
+  
+    def send_request(jsonstring)
+      #send stream
+    end
+
+    def get_response
+      #return the response
+    end
+
+    def close
+      #close resources if needed
+    end
+  end
+
+== implement your server
+
+The boilerplattecode to create a new server.
+
+  class superserver
+    include RawJsonRpc::RawServerJsonRpc
+
+    def initizial(*args)
+      #init
+    end
+
+    def serve
+      #get data from client
+      response = execute(jsonstring) #transfers the string and calls function
+                                   #return response string or nil if its a notification
+      #send response
+    end
+
+    def end
+      #stuff
+    end 
+  end
+
+== known issues
+
+* Block arguments can't be checkt because they are blocks not lamdbas
+
+== Your implementations
+
+feel free to contribute your client and servers to the project.
+
+== TODO 
+* add examples
+* add doc for gserver implementation
+* add a piping server and client
+* fix block argumentchecks
+
+== Contributing to rawjsonrpc
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Alexander Schrode. See LICENSE.txt for
+further details.

@@ -1,0 +1,4 @@
+Project Description:
+Naval battle game in the spirit of Scorched Earth.
+
+README:

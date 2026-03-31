@@ -1,0 +1,15 @@
+THIS IS THE OLD REPOSITORY OF WORLD DOWNLOADER
+==============================================
+
+The new repo can be found [here](https://github.com/dslake/WorldDownloader)
+---------------------------------------------------------------------------
+
+Project Description:
+FOR OFFICIAL REPO CLICK LINK BELOW! - Clones a Minecraft multiplayer world from a remote server to your singleplayer folder.
+
+README:
+THIS IS THE OLD REPOSITORY OF WORLD DOWNLOADER
+==============================================
+
+The new repo can be found [here](https://github.com/dslake/WorldDownloader)
+---------------------------------------------------------------------------

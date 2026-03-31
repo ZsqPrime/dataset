@@ -1,0 +1,8 @@
+This is the files for Trophy's website.
+
+
+Project Description:
+Web site for Trophy
+
+README:
+This is the files for Trophy's website.

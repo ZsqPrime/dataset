@@ -1,0 +1,6 @@
+Project Description:
+Barcamp Boston Attendees Directory/Photobooth/Talk Listing App
+
+README:
+Attendees Directory and Photobooth App for barcampboston.
+Read the TODO for information on what to add.

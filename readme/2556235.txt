@@ -1,0 +1,5 @@
+Project Description:
+Ruibiks cube in clojure
+
+README:
+Rubiks cube in ruby

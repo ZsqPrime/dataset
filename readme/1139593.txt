@@ -1,0 +1,13 @@
+BubblesJS brings Captions, Subtitles and Audio Descriptions to HTML.
+
+please see here for more information and demos
+http://bubbles.childnodes.com
+
+Project Description:
+Captions, Subtitles, Accessible Audio Descriptions to HTML5
+
+README:
+BubblesJS brings Captions, Subtitles and Audio Descriptions to HTML.
+
+please see here for more information and demos
+http://bubbles.childnodes.com

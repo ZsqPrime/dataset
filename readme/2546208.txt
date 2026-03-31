@@ -1,0 +1,5 @@
+Project Description:
+Expense tracking app
+
+README:
+Simple-Money

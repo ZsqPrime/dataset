@@ -1,0 +1,7 @@
+Project Description:
+A Twitter like app
+
+README:
+[*Glitter*] 
+Glow like Twitter
+by [Sutirtha Datta](sutirthatheone@gmail.com).

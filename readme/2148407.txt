@@ -1,0 +1,12 @@
+# Begin vCard
+
+[![Travis CI Build Status](http://travis-ci.org/yrgoldteeth/begin_vcard.png)](http://travis-ci.org/yrgoldteeth/begin_vcard)
+
+
+Project Description:
+Ruby library for parsing vCard files
+
+README:
+# Begin vCard
+
+[![Travis CI Build Status](http://travis-ci.org/yrgoldteeth/begin_vcard.png)](http://travis-ci.org/yrgoldteeth/begin_vcard)

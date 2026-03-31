@@ -1,0 +1,4 @@
+Project Description:
+A mix of program and scripts for solving Euler project programs (or related)
+
+README:

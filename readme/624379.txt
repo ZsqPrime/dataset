@@ -1,0 +1,74 @@
+** How to
+First make sure you have all dependencies installed on your system.
+
+on Ubuntu I do this for installing dependencies, your system may have
+different commands.
+: sudo apt-get build-essentials
+: sudo apt-get build-dep emacs23
+
+*** usage
+- Get this repo
+- here is few ways to install Emacs.
+: ./be head            # to install from head
+: ./be -d head         # build head with for debugging (uses when emacs crashing)
+: ./be -t latest       # build latest stable release
+: ./be -t some_tag     # for eg some_tag may be emacs-24.1
+: ./be -b some_branch  # build from some_branch (local or with remote tracking)
+
+- run git commands in the repo directory
+: ./be -g git some command
+~git some command~ will be run the repo directory.
+
+For all the options, run
+: ./be --help
+
+*** Notes
+- uses git commands to maintain sources instead of bzr
+- uses mirror from repo.or.cz instead of official (to reduce load on GNU servers)
+- Create =bs.conf= for customizing build. (like installation directory,
+  configuration flags etc)
+- =post-build-hook= runs after successful build (I use it for make
+  symlinks)
+
+** License
+GPL v3 or later
+
+
+Project Description:
+Shell script to build emacs from source on GNU/linux
+
+README:
+** How to
+First make sure you have all dependencies installed on your system.
+
+on Ubuntu I do this for installing dependencies, your system may have
+different commands.
+: sudo apt-get build-essentials
+: sudo apt-get build-dep emacs23
+
+*** usage
+- Get this repo
+- here is few ways to install Emacs.
+: ./be head            # to install from head
+: ./be -d head         # build head with for debugging (uses when emacs crashing)
+: ./be -t latest       # build latest stable release
+: ./be -t some_tag     # for eg some_tag may be emacs-24.1
+: ./be -b some_branch  # build from some_branch (local or with remote tracking)
+
+- run git commands in the repo directory
+: ./be -g git some command
+~git some command~ will be run the repo directory.
+
+For all the options, run
+: ./be --help
+
+*** Notes
+- uses git commands to maintain sources instead of bzr
+- uses mirror from repo.or.cz instead of official (to reduce load on GNU servers)
+- Create =bs.conf= for customizing build. (like installation directory,
+  configuration flags etc)
+- =post-build-hook= runs after successful build (I use it for make
+  symlinks)
+
+** License
+GPL v3 or later

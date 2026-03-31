@@ -1,0 +1,8 @@
+A repository for custom GeoServer Extensions.
+
+
+Project Description:
+Custom GeoServer Extensions
+
+README:
+A repository for custom GeoServer Extensions.

@@ -1,0 +1,53 @@
+Panel plugin for X-Plane
+Copyright (c) 2011 J. Colombi
+
+This product contains resources from the X-PLANE PLUGIN SDK
+Copyright (c) 2008, Sandy Barbour and Ben Supnik
+
+This product requires the previous purchase and installation of X-Plane 9.70 or higher.
+
+Directions:
+on windows 64-bit systems put libraries into systemwow64 directory.
+
+Notes:
+
+Thanks to Joseph Poirier, William R. Good, I have completed this plugin for the Saitek Pro Flight Panels
+and MCPPro. 
+
+
+
+
+
+Project Description:
+panel plugin for xplane
+
+README:
+Panel plugin for X-Plane
+
+Copyright (c) 2011 J. Colombi
+
+
+
+This product contains resources from the X-PLANE PLUGIN SDK
+
+Copyright (c) 2008, Sandy Barbour and Ben Supnik
+
+
+
+This product requires the previous purchase and installation of X-Plane 9.70 or higher.
+
+
+
+Directions:
+
+on windows 64-bit systems put libraries into systemwow64 directory.
+
+
+
+Notes:
+
+
+
+Thanks to Joseph Poirier, William R. Good, I have completed this plugin for the Saitek Pro Flight Panels
+
+and MCPPro.

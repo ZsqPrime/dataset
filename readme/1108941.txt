@@ -1,0 +1,24 @@
+Ponify
+======
+
+Port of [Ponify][] to Safari.
+
+The current version is v0.95: [Download it now][download]
+
+[Ponify]: http://pterocorn.blogspot.com
+[download]: https://github.com/downloads/kballard/Ponify-Safari/Ponify-0.95.safariextz
+
+
+Project Description:
+Port of Ponify for Safari
+
+README:
+Ponify
+======
+
+Port of [Ponify][] to Safari.
+
+The current version is v0.95: [Download it now][download]
+
+[Ponify]: http://pterocorn.blogspot.com
+[download]: https://github.com/downloads/kballard/Ponify-Safari/Ponify-0.95.safariextz

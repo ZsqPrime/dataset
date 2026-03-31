@@ -1,0 +1,21 @@
+
+### TMUX
+
+don't forget to install TPM plugins:
+
+```
+Prefix-I (capital I)
+```
+
+Project Description:
+dotfiles
+
+README:
+
+### TMUX
+
+don't forget to install TPM plugins:
+
+```
+Prefix-I (capital I)
+```

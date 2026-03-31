@@ -1,0 +1,20 @@
+This is a derivate work from Johan Nilsson
+
+A Mono for Android port of the Android PullToRefreshList
+
+https://github.com/johannilsson/android-pulltorefresh
+
+![Screenshot](https://github.com/efontana/MonoDroid.PullToRefreshListView/raw/master/MonoAndroidPullToRefresh/android-pull-to-refresh.png)
+
+
+Project Description:
+Pull to refresh ListView like iPhone has, derived from Johan's work
+
+README:
+This is a derivate work from Johan Nilsson
+
+A Mono for Android port of the Android PullToRefreshList
+
+https://github.com/johannilsson/android-pulltorefresh
+
+![Screenshot](https://github.com/efontana/MonoDroid.PullToRefreshListView/raw/master/MonoAndroidPullToRefresh/android-pull-to-refresh.png)

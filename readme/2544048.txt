@@ -1,0 +1,7 @@
+Project Description:
+Body mass index calculator and diet suggester
+
+README:
+
+
+Project Page    http://giannisfs.github.com/bmipy/

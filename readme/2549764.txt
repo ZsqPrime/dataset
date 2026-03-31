@@ -1,0 +1,5 @@
+Project Description:
+distribute log searches across nodes
+
+README:
+This project is intended to demonstrate distributing grep searches across distributed nodes...

@@ -1,0 +1,5 @@
+Project Description:
+Mercury Wireless Software LLC, Open Source projects
+
+README:
+A simple collection of libraries used to learn and practice Ruby.

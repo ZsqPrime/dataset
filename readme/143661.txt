@@ -1,0 +1,13 @@
+AeroGear Project Collateral
+===========================
+
+This repository contains various project collateral for AeroGear.  This initially mean meeting agendas, but will likely grow to include other forms of items, notes, etc...  that don't really fit elsewhere.
+
+Project Description:
+Misc project collateral such as meeting agendas, notes, etc..
+
+README:
+AeroGear Project Collateral
+===========================
+
+This repository contains various project collateral for AeroGear.  This initially mean meeting agendas, but will likely grow to include other forms of items, notes, etc...  that don't really fit elsewhere.

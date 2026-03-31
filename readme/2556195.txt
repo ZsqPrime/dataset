@@ -1,0 +1,39 @@
+Project Description:
+different handy scripts for e.g. text processing and other common tasks
+
+README:
+A set of scripts to help with day-to-day tasks
+
+align  -  is a script that aligns columns of text in table style
+
+=====================================
+
+calc.pl
+calc.py
+hexCalc.pl
+
+are command line calculators that accept perl or pythong syntax. hexCalc.pl prints results
+in hex. 
+
+=======================================
+
+monitorTemp.sh -  useful for linux laptops for monitoring temperature
+
+mooo - Uses cowsay and fortune programs to print a welcome message on login (called from bashrc)
+
+svnvimdiff.sh - used by svn to call vimdiff when executing command "svn diff ..."
+
+
+colortest
+256colors2.pl
+
+these are scripts (copied from web), which print out terminal colors. Used to verify
+if your terminal supports 256 colors
+
+
+footprint.sh - sums the amount of memory taken by multiple instances of a process
+               e.g. run footprint.sh 'chrom*'
+
+userMem.sh -   sums and sorts the total amount of memory taken by user processes as reported by 'ps'
+               Also sums memory usage of multiple instances of same process
+               Useful to find the processes with major memory usage, e.g., google-chrome

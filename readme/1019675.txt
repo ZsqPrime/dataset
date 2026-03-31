@@ -1,0 +1,32 @@
+My implementation of zawgyi keyboard for iOS-5
+
+Do whatever you want except selling this or repackaging without author name.
+
+Update1 -
+
+Fix landscape issue
+Safari URL keyboard support
+iPad2 bug fix
+
+Update2 -
+
+Variant keys support 
+
+
+Project Description:
+replace czech keyboard with zawgyi keyboard
+
+README:
+My implementation of zawgyi keyboard for iOS-5
+
+Do whatever you want except selling this or repackaging without author name.
+
+Update1 -
+
+Fix landscape issue
+Safari URL keyboard support
+iPad2 bug fix
+
+Update2 -
+
+Variant keys support

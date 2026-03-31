@@ -1,0 +1,6 @@
+Project Description:
+Target is to identify the functionalities of git hub 
+
+README:
+Hello!!!
+Thank you hSenid & CSE!!!

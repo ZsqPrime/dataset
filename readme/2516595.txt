@@ -1,0 +1,15 @@
+A script that will poll a LyX document and notify you through Growl of your progress on it.
+
+Install the python bindings for Growl: https://github.com/kfdm/gntp/
+
+./lyx-length.py [.lyx filename] [target length of the text]
+
+Project Description:
+Get notified of your progress on LyX/Latex documents through Growl
+
+README:
+A script that will poll a LyX document and notify you through Growl of your progress on it.
+
+Install the python bindings for Growl: https://github.com/kfdm/gntp/
+
+./lyx-length.py [.lyx filename] [target length of the text]

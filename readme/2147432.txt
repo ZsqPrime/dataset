@@ -1,0 +1,8 @@
+This is a project to quickly create *real* Django projects (distinct from simple "Hello, world!" applications).
+
+
+Project Description:
+Tools to get a *real* Django project up and running speedily
+
+README:
+This is a project to quickly create *real* Django projects (distinct from simple "Hello, world!" applications).

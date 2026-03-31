@@ -1,0 +1,33 @@
+Project Description:
+Lexicographic analysis to determine authorship of a text using a multinomial probability model
+
+README:
+--categorizer.py--
+Program to identify authorship of an unknown work based on word frequency analysis. Requires at least two training sets of works by known authors. 
+
+Usage: Run 'categorizer.py' from the terminal. 
+The program expects the following directory structure:
+
+Known/
+            Author1/
+                            work1.txt
+                            work2.txt
+                            ...
+            Author2/
+                            work1.txt
+                            work2.txt
+                            ...
+            ...
+Unknown/
+                unknown1.txt
+                unknown2.txt
+                
+By default, the parent directories are named "Known/" and "Unknown/", although this can be changed by modifying the program code. The program can support any number of author groups (training sets) provided that there are at least two. The program has three functionalities:
+
+caliBrate: Try classifying the training set using a wide variety of psuedocount values, to determine which psuedocount to use.
+
+Validate: Try classifying the training set using a given psuedocount value, and report on the results.
+
+Classify: Classify the unknown documents using a given psuedocount value, and report the results.
+
+README created 2/19/2012 by Daniel Mane

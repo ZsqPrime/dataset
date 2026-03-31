@@ -1,0 +1,8 @@
+Project Description:
+MySQL related scripts
+
+README:
+MySQL related scripts:
+  * Create database
+  * Create user and grant privileges
+  * On-premise to RDS MySQL migration

@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+This a program implementing CountingSort. 
+
+You can run it Command Prompt or from any IDE.
+
+Farhan Khwaja @Code 2 Learn.

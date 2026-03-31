@@ -1,0 +1,12 @@
+Current Build is on branch Second 
+It is under loginScreen Use that build that and run it 
+list of usernames to log in are also on Second
+
+
+Project Description:
+Working build of java application for 3rd year Software engineering project
+
+README:
+Current Build is on branch Second 
+It is under loginScreen Use that build that and run it 
+list of usernames to log in are also on Second

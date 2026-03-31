@@ -1,0 +1,77 @@
+S-Node
+==================
+
+Synode ist ein Open Source Content Management Framework entwickelt von Frame AG und verfŸgbar unter der LGPL Lizenz (siehe GPL.txt and LGPL.txt fŸr mehr Information).
+
+
+Systemvoraussetzungen
+======================
+PHP 5
+-----
+- zlib 1.2.3 oder hÃ¶her
+- GD 2 oder hÃ¶her
+- FreeType 2.1.7 oder hÃ¶her
+- Zend Optimizer v3.0 oder hÃ¶her
+
+MySQL 4
+-------
+- Version 4.x oder 5.x wird unterstÃ¼tzt.
+
+Webserver
+---------
+- Apache 1.3.x oder 2.x
+  oder Microsoft Internet Information Services mit PHP UnterstŸtzung
+
+
+Installation
+============
+1. Entpacken Sie die Datei XT_Installer_xxxx.zip in ihrem Webverzeichnis.
+2. Um die Installation zu starten muss gewÃ¤hrleistet sein, dass der Benutzer des Webservers vollen
+Lese- und Schreibzugriff auf das gesammte Webverzeichnis hat.
+3. Legen Sie eine Datenbank und einen dazugehÃ¶rigen Benutzer fÃ¼r ihr S-Node an.
+4. Ã–ffnen Sie die Seite unter http://localhost und folgen den Anweisungen. Die Lizenznummer fÃ¼r die
+Demo lautet 555.(Sollten sie einen anderen Domainnamen verwenden, beispielsweise www.meinedomain.ch,
+kopieren Sie die von uns erhaltenen Lizenzen in den Ordner /xt/licenses. Ohne Lizenzierung kÃ¶nnen
+Sie S-Node nur unter localhost betreiben.)
+
+
+
+Project Description:
+Open Source CMS System
+
+README:
+S-Node
+==================
+
+Synode ist ein Open Source Content Management Framework entwickelt von Frame AG und verfŸgbar unter der LGPL Lizenz (siehe GPL.txt and LGPL.txt fŸr mehr Information).
+
+
+Systemvoraussetzungen
+======================
+PHP 5
+-----
+- zlib 1.2.3 oder hÃ¶her
+- GD 2 oder hÃ¶her
+- FreeType 2.1.7 oder hÃ¶her
+- Zend Optimizer v3.0 oder hÃ¶her
+
+MySQL 4
+-------
+- Version 4.x oder 5.x wird unterstÃ¼tzt.
+
+Webserver
+---------
+- Apache 1.3.x oder 2.x
+  oder Microsoft Internet Information Services mit PHP UnterstŸtzung
+
+
+Installation
+============
+1. Entpacken Sie die Datei XT_Installer_xxxx.zip in ihrem Webverzeichnis.
+2. Um die Installation zu starten muss gewÃ¤hrleistet sein, dass der Benutzer des Webservers vollen
+Lese- und Schreibzugriff auf das gesammte Webverzeichnis hat.
+3. Legen Sie eine Datenbank und einen dazugehÃ¶rigen Benutzer fÃ¼r ihr S-Node an.
+4. Ã–ffnen Sie die Seite unter http://localhost und folgen den Anweisungen. Die Lizenznummer fÃ¼r die
+Demo lautet 555.(Sollten sie einen anderen Domainnamen verwenden, beispielsweise www.meinedomain.ch,
+kopieren Sie die von uns erhaltenen Lizenzen in den Ordner /xt/licenses. Ohne Lizenzierung kÃ¶nnen
+Sie S-Node nur unter localhost betreiben.)

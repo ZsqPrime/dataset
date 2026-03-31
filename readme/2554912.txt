@@ -1,0 +1,41 @@
+Project Description:
+SS7 message monitoring application on top of Sangoma TDM API
+
+README:
+1. Install Dependencies
+
+	a) zeromq (> 3.x)
+
+	For more info see: http://www.zeromq.org/intro:get-the-software
+
+	b) pyzmq (ZeroMQ Python Bindings, requires >= Python 2.7)
+
+	For more info see: http://www.zeromq.org/bindings:python
+
+2. Install sng_ss7mon
+
+	# cd build/
+	# cmake ..
+	# make && make install
+
+3. Run it
+
+	# sng_ss7mon (no options to display help)
+
+	Example of session to monitor span 1 channel 1 SS7 messages in both pcap and hex text format:
+
+	# sng_ss7mon -dev s1c1 -pcap s1c1.pcap -log info -pcap_mtp2_hdr -syslog -hexdump s1c1.hex &> /dev/null &
+
+	A helper application is included to retrieve real-time statistics
+
+	Example to retrieve statistics from span 1 channel 1
+	
+	# ss7mon_cmd -d s1c1 -e stats
+
+	Example to retrieve statistics from multiple channels in span 1
+	
+	# ss7mon_cmd -s 1 -c 1,30 -e stats
+
+4. Optional Multi-Link Configuration
+
+	# TODO complete this and update this readme with markdown syntax

@@ -1,0 +1,4 @@
+Project Description:
+A html5 minimal responsive WordPress theme.
+
+README:

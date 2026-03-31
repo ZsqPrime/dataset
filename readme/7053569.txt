@@ -1,0 +1,82 @@
+Project Description:
+This is the CocoaPods search engine repo, please direct CocoaPods issues to the main CocoaPods repository.
+
+README:
+h1. Search Engine Notes
+
+* Running on Ruby 2.1.3.
+* Using "Picky":http://pickyrb.com.
+* Runs on Heroku (http://search.cocoapods.org).
+
+h2. Developing
+
+h3. Installation
+
+* @bundle install@
+* @gem install foreman@
+* Create a @trunk_cocoapods_org_test@ table in a Postgres DB.
+
+h3. Run locally with foreman
+
+* @bundle exec foreman check@
+* @bundle exec foreman start@
+
+h3. Run tests
+
+Disclaimer:
+Currently, the integration tests depend on a specific production DB dump. 
+To download these, you currently need id/secret keys for an S3 instance, which only the CP team has access to.
+However, you can run specific specs which only require @spec_helper_without_db@.
+For example: @bundle exec bacon spec/lib/models/pod_spec.rb@
+
+* All tests: @bundle exec rake@
+* A single test: @LOAD_TEST_DB=absolutely bundle exec bacon spec/...../.._spec.rb@
+
+h3. Deploying to Heroku
+
+* @git push heroku master@
+
+h3. ENV variables
+
+You need to set the HOOK_PATH env variable for the Github post-receive-hook (see below for more detail).
+
+@heroku config:set HOOK_PATH=...@
+
+We also do not load test or development.
+
+@heroku config:add BUNDLE_WITHOUT="development:test"@
+
+We tune some GC variables.
+
+@heroku config:add RUBY_GC_HEAP_INIT_SLOTS=600000@
+
+@heroku config:add RUBY_GC_HEAP_FREE_SLOTS=600000@
+
+@heroku config:add RUBY_GC_HEAP_GROWTH_FACTOR=1@
+
+@heroku config:add RUBY_GC_HEAP_GROWTH_MAX_SLOTS=300000@
+
+h4. HOOK_PATH
+
+We use one ENV variable (@HOOK_PATH@) to set the hook path we use in Trunk's post-receive-hook to update the search engine's index: @heroku config:add HOOK_PATH=some_garbled_hook_path@.
+This calls an URL on the app which causes it to update the search engine index for the updated pod from the Trunk database.
+(Note: It's not secure against brute force, man-in-the-middle etc., but a simple security to discourage DoS)
+
+To change HOOK_PATH:
+
+# @heroku config:set HOOK_PATH=some_other_garbled_hook_path@
+# Update the post-receive-hook in the Specs repo to the new garbled path.
+
+h3. Notes
+
+We have enabled memory logging using the instructions from:
+
+* @https://devcenter.heroku.com/articles/log-runtime-metrics@
+
+h3. Current Heroku Labs Features
+
+=== App Features (search-cocoapods-org)
+[ ] http-end-to-end-continue  Send 100-continue headers to the backend
+[ ] http-session-affinity     Enable session affinity for all requests
+[ ] http-shard-header         Turn shard headers on
+[+] log-runtime-metrics       Emit dyno resource usage information into app logs

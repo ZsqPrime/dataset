@@ -1,0 +1,12 @@
+Project Description:
+Connect to your HSBC France Bank account, and get the balances
+
+README:
+This is some old code, it doesn't work anymore as HSBC now requires a 2 steps auth.
+I'm leaving it here in case it helps someone.
+
+Connect to your HSBC France bank account via PHP!
+
+I used this code a long time ago to create an Android/iPhone application to connect users to their HSBC Bank account. But HSBC is about to release their own application (April 2012) so they asked me to remove mine. So I'm open sourcing the code.
+
+The example.php should provide you with all the needed information.

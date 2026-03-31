@@ -1,0 +1,4 @@
+Project Description:
+jQuery plugin to simplify using History.js
+
+README:

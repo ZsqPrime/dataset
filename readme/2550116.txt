@@ -1,0 +1,6 @@
+Project Description:
+Open Source reimplementation of the classical Pax Imperia: Eminent domain game.
+
+README:
+OpenPAX
+------------------------------------

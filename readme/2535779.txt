@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+This project is about integration of distributed queries into BaseX

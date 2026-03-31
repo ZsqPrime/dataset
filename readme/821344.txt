@@ -1,0 +1,6 @@
+
+
+Project Description:
+Teamliquid.net android application
+
+README:

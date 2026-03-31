@@ -1,0 +1,172 @@
+INTRO
+
+'procrastinate' does the process handling so you don't have to. It leaves you 
+to concentrate on what to run when, not orchestration of low level details. 
+
+This library will be ideal for quickly scheduling of a lot of long running
+tasks. You can easily control how many processes are run at any time. Your 
+main thread can continue to do useful work until it accesses the results of
+the computation, at which point it will wait for the processes to finish. 
+
+SYNOPSIS
+
+  require 'procrastinate/implicit'
+
+  class Worker
+    def do_work
+      puts "> Starting work in process #{Process.pid}"
+      sleep 2
+      puts "< Work completed in process #{Process.pid}"
+    end
+  end
+
+  worker = Procrastinate.proxy(Worker.new)
+
+  10.times do 
+    worker.do_work
+  end
+
+  Procrastinate.join
+
+The above example will output something like 
+
+  > Starting work in process 56144
+  > Starting work in process 56145
+  > Starting work in process 56146
+  > Starting work in process 56147
+  > Starting work in process 56148
+  > Starting work in process 56149
+  < Work completed in process 56144
+  < Work completed in process 56145
+  < Work completed in process 56146
+  < Work completed in process 56147
+  < Work completed in process 56148
+  < Work completed in process 56149
+  > Starting work in process 56150
+  > Starting work in process 56151
+  > Starting work in process 56152
+  > Starting work in process 56153
+  < Work completed in process 56150
+  < Work completed in process 56151
+  < Work completed in process 56152
+  < Work completed in process 56153
+  
+(The output depends on the number of cores your machine has)
+
+COMPATIBILITY
+
+This library runs with MRI Ruby >= 1.9. 
+
+Ruby 1.9-p136 users must use this patch: 
+https://gist.github.com/762807
+
+As a general remark: Interaction with Ruby versions is significant. Please 
+use the latest version available to you, since fork & threading bugs are 
+likely to be fixed there. 
+
+KNOWN BUGS
+
+Due to the way we handle signal traps, you cannot start more than one
+Scheduler. We might allow that in the future. 
+
+Also: signal traps interact with other libraries and might cause things to 
+break. This is the real world. 
+
+STATUS
+
+We're still adding features that we believe must be in 1.0. What is there 
+mostly works; Multi-{Processing, Threading} is always a difficult topic and
+we're glad to receive bug reports.  
+
+Please see the LICENSE file for license information. 
+
+(c) 2010 Kaspar Schiess, Patrick Marchi
+
+
+Project Description:
+Framework to run tasks in separate processes.
+
+README:
+INTRO
+
+'procrastinate' does the process handling so you don't have to. It leaves you 
+to concentrate on what to run when, not orchestration of low level details. 
+
+This library will be ideal for quickly scheduling of a lot of long running
+tasks. You can easily control how many processes are run at any time. Your 
+main thread can continue to do useful work until it accesses the results of
+the computation, at which point it will wait for the processes to finish. 
+
+SYNOPSIS
+
+  require 'procrastinate/implicit'
+
+  class Worker
+    def do_work
+      puts "> Starting work in process #{Process.pid}"
+      sleep 2
+      puts "< Work completed in process #{Process.pid}"
+    end
+  end
+
+  worker = Procrastinate.proxy(Worker.new)
+
+  10.times do 
+    worker.do_work
+  end
+
+  Procrastinate.join
+
+The above example will output something like 
+
+  > Starting work in process 56144
+  > Starting work in process 56145
+  > Starting work in process 56146
+  > Starting work in process 56147
+  > Starting work in process 56148
+  > Starting work in process 56149
+  < Work completed in process 56144
+  < Work completed in process 56145
+  < Work completed in process 56146
+  < Work completed in process 56147
+  < Work completed in process 56148
+  < Work completed in process 56149
+  > Starting work in process 56150
+  > Starting work in process 56151
+  > Starting work in process 56152
+  > Starting work in process 56153
+  < Work completed in process 56150
+  < Work completed in process 56151
+  < Work completed in process 56152
+  < Work completed in process 56153
+  
+(The output depends on the number of cores your machine has)
+
+COMPATIBILITY
+
+This library runs with MRI Ruby >= 1.9. 
+
+Ruby 1.9-p136 users must use this patch: 
+https://gist.github.com/762807
+
+As a general remark: Interaction with Ruby versions is significant. Please 
+use the latest version available to you, since fork & threading bugs are 
+likely to be fixed there. 
+
+KNOWN BUGS
+
+Due to the way we handle signal traps, you cannot start more than one
+Scheduler. We might allow that in the future. 
+
+Also: signal traps interact with other libraries and might cause things to 
+break. This is the real world. 
+
+STATUS
+
+We're still adding features that we believe must be in 1.0. What is there 
+mostly works; Multi-{Processing, Threading} is always a difficult topic and
+we're glad to receive bug reports.  
+
+Please see the LICENSE file for license information. 
+
+(c) 2010 Kaspar Schiess, Patrick Marchi

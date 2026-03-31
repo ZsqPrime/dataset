@@ -1,0 +1,16 @@
+fork of fb2edit 0.0.9 (http://fb2edit.lintest.ru)
+
+Distribution: source codes are distributed under the terms 
+  of GNU General Public License (GPL).
+  See LICENSE file for details.
+
+
+Project Description:
+Редактор электронных книг формата FB2
+
+README:
+fork of fb2edit 0.0.9 (http://fb2edit.lintest.ru)
+
+Distribution: source codes are distributed under the terms 
+  of GNU General Public License (GPL).
+  See LICENSE file for details.

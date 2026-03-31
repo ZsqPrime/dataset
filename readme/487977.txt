@@ -1,0 +1,64 @@
+Installation / Including
+========================
+
+Include as one would any other erlang application.  It's a simple library
+style, so there is nothing to start.  Uses erlang.mk so anything with a
+`make` file should be able to integrate this fine.
+
+Encoding
+========
+
+Pass and `iolist()` to one of the two encode functions.  `encode/1` uses the
+standard radix of 10.  Both return an `iolist()`.
+
+Decoding
+========
+
+Decoding is a bit more complex due to the nature of streams of binaries.
+`decode/1` will get one started, but unless you are guaranteed
+to always get one string at a time, is of limited use.
+
+Use `decode/2`, passing in the initial binary chunk of the stream,
+and the radix to decode the stream.  The result is a tuple:
+
+`{[binary()], #continuation{}}`
+
+For the next `decode/2` call, use the `#continuation{}`
+as the second argument.  Each successive call to `decode/2`
+should use the `#continuation{}` that was returned from the
+previous `decode`.
+
+
+Project Description:
+Module for wrapping and unwrapping binaries in netstring format.
+
+README:
+Installation / Including
+========================
+
+Include as one would any other erlang application.  It's a simple library
+style, so there is nothing to start.  Uses erlang.mk so anything with a
+`make` file should be able to integrate this fine.
+
+Encoding
+========
+
+Pass and `iolist()` to one of the two encode functions.  `encode/1` uses the
+standard radix of 10.  Both return an `iolist()`.
+
+Decoding
+========
+
+Decoding is a bit more complex due to the nature of streams of binaries.
+`decode/1` will get one started, but unless you are guaranteed
+to always get one string at a time, is of limited use.
+
+Use `decode/2`, passing in the initial binary chunk of the stream,
+and the radix to decode the stream.  The result is a tuple:
+
+`{[binary()], #continuation{}}`
+
+For the next `decode/2` call, use the `#continuation{}`
+as the second argument.  Each successive call to `decode/2`
+should use the `#continuation{}` that was returned from the
+previous `decode`.

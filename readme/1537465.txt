@@ -1,0 +1,8 @@
+richi's Pandaboard ICS repo based on AOSP master branch
+
+
+Project Description:
+Pandaboard ICS repo based on AOSP master
+
+README:
+richi's Pandaboard ICS repo based on AOSP master branch

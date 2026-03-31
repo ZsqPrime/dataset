@@ -1,0 +1,7 @@
+Project Description:
+Capybara integration testing for Rails & Test::Unit
+
+README:
+= CapybaraRails
+
+This project rocks and uses MIT-LICENSE.

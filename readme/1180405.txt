@@ -1,0 +1,22 @@
+Project Description:
+#Catacombs bot
+
+README:
+CombsBot - bot for #catacombs.
+Features:
+  o Will query wicker's database for the following requested info:
+    - IP to hostname / hostname to IP
+    - hostname / IP -> Purpose
+    - hostname / IP -> Hardware
+    - hostname / IP -> OS
+  o Commands
+    - !host $hostname/IP - gives info about a Combs box
+
+(Merging all commands into one)
+    - CombsBot:
+        o host $hostname / $IP
+        o purpose $hostname / $IP
+        o hardware $hostname / $IP
+        o os $hostname / $IP
+
+Test

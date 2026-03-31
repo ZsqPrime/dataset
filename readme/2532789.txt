@@ -1,0 +1,7 @@
+Project Description:
+A version of proteus web using the finagle API
+
+README:
+Converted Will's Akka/protobuf (api) version of Proteus Books (lift web project) over to use finagle/thrift (api)
+
+There are no compilation errors, but we might need to fill out our RandomEndPoint some more...

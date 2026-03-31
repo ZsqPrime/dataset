@@ -1,0 +1,15 @@
+LIB: http://uthash.sourceforge.net/utlist.html
+
+1) flex XXX.l -> lex.yy.c
+2) bison XXX.y –d -> XXX.tab.h, XXX.tab.c
+3) gcc –o MYCOMPILER XXX.tab.c lex.yy.c –lfl -> MYCOMPILER
+
+Project Description:
+S4
+
+README:
+LIB: http://uthash.sourceforge.net/utlist.html
+
+1) flex XXX.l -> lex.yy.c
+2) bison XXX.y –d -> XXX.tab.h, XXX.tab.c
+3) gcc –o MYCOMPILER XXX.tab.c lex.yy.c –lfl -> MYCOMPILER

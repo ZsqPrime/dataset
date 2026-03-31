@@ -1,0 +1,14 @@
+Machine Learning Project
+------------------------
+Automatic classification of morphology of C-Elegans mitochondria using
+machine learning techniques.
+
+
+Project Description:
+ML project for automatic classification of C-Elegans mitochondria
+
+README:
+Machine Learning Project
+------------------------
+Automatic classification of morphology of C-Elegans mitochondria using
+machine learning techniques.

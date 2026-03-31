@@ -1,0 +1,12 @@
+Custom theme for the SRGC website.
+
+Note: the master branch is empty.
+
+
+Project Description:
+Custom theme for Sunnyvale website
+
+README:
+Custom theme for the SRGC website.
+
+Note: the master branch is empty.

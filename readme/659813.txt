@@ -1,0 +1,4 @@
+Project Description:
+HTML5 javascript Audiolet Based web page for generating music from text.
+
+README:

@@ -1,0 +1,10 @@
+Project Description:
+STATTMEDIA game launcher
+
+README:
+STATTMEDIA GAME CONTEST LAUNCHER
+
+A tool for presenting and launching games during SGC ( http://www.02l.net/gamecontest ).
+
+Featuring also a U0Net ( http://www.02l.net/projects/interactive_set/unita_zero )
+keyboard event emulator.

@@ -1,0 +1,9 @@
+ExtendedBans plugin for TShock.
+© Rosen, 2013
+
+Project Description:
+Extended bans system.
+
+README:
+ExtendedBans plugin for TShock.
+© Rosen, 2013

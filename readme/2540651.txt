@@ -1,0 +1,6 @@
+Project Description:
+Django app for chicago transit
+
+README:
+BUSSR - Chicago transit webapp
+===============================

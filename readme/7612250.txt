@@ -1,0 +1,5 @@
+Project Description:
+Sphereflake raytracer using C++ AMP.
+
+README:
+Sphereflake ray tracer implemented using C++ AMP.

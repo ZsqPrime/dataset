@@ -1,0 +1,5 @@
+Project Description:
+The Camel Social component is a PoC to poll social data in a uniform way from social networks. Forked from http://code.google.com/p/camel-social/
+
+README:
+Forked from http://code.google.com/p/camel-social/

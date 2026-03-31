@@ -1,0 +1,7 @@
+Project Description:
+Notes and work from the SDU course.
+
+README:
+Notes, assignments and, hopefully, solutions to the course Numerical Methods.
+
+Nis Sarup <nis@sarup.dk>

@@ -1,0 +1,379 @@
+= Heidi
+
+A Continious Integration thingy. Naive, and therefor called Heidi.
+
+http://heidi-demo.organisedminds.com/images/HeidiBlue-480.png
+
+Heidi is still taking form and is sponsored by (and used at) OrganisedMinds.com
+(http://organisedminds.com) - A super useful
+flexible tool for collaborating in teams and projects across geographic
+locations. Why don't you sign up there? It's free!
+
+http://heidi-demo.organisedminds.com/images/OrganisedMinds.png
+
+== The basics
+
+Install heidi
+
+  # gem install heidi
+
+Create a new CI projects root
+
+  % heidi new ci_root
+  creating ci_root
+  creating ci_root/projects
+  creating ci_root/bin
+  creating ci_root/Gemfile
+  running bundle install
+
+Create a first project to track
+
+  % cd ci_root
+  % heidi project simple_shell git://github.com/coffeeaddict/simple_shell
+  creating projects/simple_shell
+  creating projects/simple_shell/logs
+  creating projects/simple_shell/hooks/build
+  creating projects/simple_shell/hooks/tests
+  creating projects/simple_shell/hooks/failure
+  creating projects/simple_shell/hooks/success
+  creating projects/simple_shell/hooks/before
+  filling simple_shell cache
+  git clone git://github.com/coffeeaddict/simple_shell
+  setting the name of the project to: simple_shell
+
+  Now define some hooks in projects/simple_shell/hooks/tests
+
+== Configuration
+
+The configuration for each project is stored in it's cached clone.
+(projects/$project/cached). This is done using git-config(1). See
+projects/$project/cached/.git/config to find the heidi name.
+
+The following are available for you to edit:
+
+  [heidi]
+    name = Human Readable Name
+  [heidi "build"]
+    branch = branch_to_use_for_integration
+
+And these are being set (and used) by Heidi. Please dont edit (unless...)
+
+  [heidi]
+    commit = acc53b9c5
+  [heidi "build"]
+    status = failed
+    current = acc53b9c5
+
+
+Heidi Web also provides a way to configure the projects. There is however
+no way do Access Control (yet). (But then again, exposing this stuff is
+something to concider trice)
+
+== Hooks
+
+There is a hooks directory inside your projects directory, and it has the
+following directories:
+
+  - before/
+  - build/
+  - test/
+  - success/
+  - failure/
+  - after/
+
+If you place shell scripts in these directories and make them executable,
+these scripts will be executed inside the build directory at a given time.
+
+[before]   Runs before the build starts
+[build]    After the git-project has been checked out at the right branch
+[test]     To perform tests. You must have at least 1 test hook
+[success]  Is run when the tests where performed in good order. Send huray
+           emails here
+[failure]  Is run when the tests failed. Send he-or-she-broke-it emails here.
+[after]    Runs after success or failure.
+
+=== Environment
+
+Each hook is called with a Pretty-Clean-Environment. At the very least it is
+made sure that you are not hindered by GemBundler.
+
+How Heidi hooks hold up with RVM; I'm just not sure...
+
+There is a number of Heidi variables passed into the hook as well
+
+[$HEIDI_DIR]           The project directory
+[$HEIDI_LOG_DIR]       The build's log directory (so you can write your own)
+[$HEIDI_BUILD_DIR]     The build root
+[$HEIDI_BUILD_COMMIT]  The abbrev. of the commit currently working on.
+
+==== Caveat
+
+These environment variable might be subject to change in the (near) future
+
+== History
+
+Heidi keeps history; projects/$projects/logs/* is where all the integration
+attempts live. You can remove old attempts without any problem.
+
+Any build is named after it's commit hash (5f6db178c for instance)
+
+== Tar balls
+
+Any successful integration attempt is stored in a tar-ball with the name of
+the build (5f6db178c.tar.bz2) inside projects/$project/logs/$build/
+
+== Locking
+
+Heidi locks the projects she's working on. Letting two Heidi's onto the
+mountain should not be a problem. If you believe a project's lock is stale
+just remove projects/$project/.lock
+
+== Integrating
+
+With crontab for instance...
+
+  PATH=$PATH:/usr/local/bin
+  MAILTO=icann@example.org
+
+  # m h  dom mon dow   command
+  */5 * * * 1-6   cd /path/to/heidi_root && bundle exec heidi integrate
+
+Or by hand
+
+  heidi integrate [$project]
+
+Projects that have been integrated up-to the latest commit wont be integrated
+again, unless you explicitly specify the project.
+
+== Results
+
+And off course you would like to see some results...
+
+  % cd /path/to/heidi
+  % heidi_web
+
+Just make sure to set your firewall straight
+
+
+== Heidi Web
+
+Heidi web will show you
+
+* Projects with their:
+  * Commits, with stat and diff
+  * Builds with their
+    * Logs and
+    * Tar balls
+  * Configuration
+
+For now host and port settings are very weak, and deamonizing is not done.
+
+It also fails on all cases of ACL...
+
+== Contributing to heidi
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Hartog C. de Mik. See LICENSE.txt for
+further details.
+
+
+
+Project Description:
+Heidi!
+
+README:
+= Heidi
+
+A Continious Integration thingy. Naive, and therefor called Heidi.
+
+http://heidi-demo.organisedminds.com/images/HeidiBlue-480.png
+
+Heidi is still taking form and is sponsored by (and used at) OrganisedMinds.com
+(http://organisedminds.com) - A super useful
+flexible tool for collaborating in teams and projects across geographic
+locations. Why don't you sign up there? It's free!
+
+http://heidi-demo.organisedminds.com/images/OrganisedMinds.png
+
+== The basics
+
+Install heidi
+
+  # gem install heidi
+
+Create a new CI projects root
+
+  % heidi new ci_root
+  creating ci_root
+  creating ci_root/projects
+  creating ci_root/bin
+  creating ci_root/Gemfile
+  running bundle install
+
+Create a first project to track
+
+  % cd ci_root
+  % heidi project simple_shell git://github.com/coffeeaddict/simple_shell
+  creating projects/simple_shell
+  creating projects/simple_shell/logs
+  creating projects/simple_shell/hooks/build
+  creating projects/simple_shell/hooks/tests
+  creating projects/simple_shell/hooks/failure
+  creating projects/simple_shell/hooks/success
+  creating projects/simple_shell/hooks/before
+  filling simple_shell cache
+  git clone git://github.com/coffeeaddict/simple_shell
+  setting the name of the project to: simple_shell
+
+  Now define some hooks in projects/simple_shell/hooks/tests
+
+== Configuration
+
+The configuration for each project is stored in it's cached clone.
+(projects/$project/cached). This is done using git-config(1). See
+projects/$project/cached/.git/config to find the heidi name.
+
+The following are available for you to edit:
+
+  [heidi]
+    name = Human Readable Name
+  [heidi "build"]
+    branch = branch_to_use_for_integration
+
+And these are being set (and used) by Heidi. Please dont edit (unless...)
+
+  [heidi]
+    commit = acc53b9c5
+  [heidi "build"]
+    status = failed
+    current = acc53b9c5
+
+
+Heidi Web also provides a way to configure the projects. There is however
+no way do Access Control (yet). (But then again, exposing this stuff is
+something to concider trice)
+
+== Hooks
+
+There is a hooks directory inside your projects directory, and it has the
+following directories:
+
+  - before/
+  - build/
+  - test/
+  - success/
+  - failure/
+  - after/
+
+If you place shell scripts in these directories and make them executable,
+these scripts will be executed inside the build directory at a given time.
+
+[before]   Runs before the build starts
+[build]    After the git-project has been checked out at the right branch
+[test]     To perform tests. You must have at least 1 test hook
+[success]  Is run when the tests where performed in good order. Send huray
+           emails here
+[failure]  Is run when the tests failed. Send he-or-she-broke-it emails here.
+[after]    Runs after success or failure.
+
+=== Environment
+
+Each hook is called with a Pretty-Clean-Environment. At the very least it is
+made sure that you are not hindered by GemBundler.
+
+How Heidi hooks hold up with RVM; I'm just not sure...
+
+There is a number of Heidi variables passed into the hook as well
+
+[$HEIDI_DIR]           The project directory
+[$HEIDI_LOG_DIR]       The build's log directory (so you can write your own)
+[$HEIDI_BUILD_DIR]     The build root
+[$HEIDI_BUILD_COMMIT]  The abbrev. of the commit currently working on.
+
+==== Caveat
+
+These environment variable might be subject to change in the (near) future
+
+== History
+
+Heidi keeps history; projects/$projects/logs/* is where all the integration
+attempts live. You can remove old attempts without any problem.
+
+Any build is named after it's commit hash (5f6db178c for instance)
+
+== Tar balls
+
+Any successful integration attempt is stored in a tar-ball with the name of
+the build (5f6db178c.tar.bz2) inside projects/$project/logs/$build/
+
+== Locking
+
+Heidi locks the projects she's working on. Letting two Heidi's onto the
+mountain should not be a problem. If you believe a project's lock is stale
+just remove projects/$project/.lock
+
+== Integrating
+
+With crontab for instance...
+
+  PATH=$PATH:/usr/local/bin
+  MAILTO=icann@example.org
+
+  # m h  dom mon dow   command
+  */5 * * * 1-6   cd /path/to/heidi_root && bundle exec heidi integrate
+
+Or by hand
+
+  heidi integrate [$project]
+
+Projects that have been integrated up-to the latest commit wont be integrated
+again, unless you explicitly specify the project.
+
+== Results
+
+And off course you would like to see some results...
+
+  % cd /path/to/heidi
+  % heidi_web
+
+Just make sure to set your firewall straight
+
+
+== Heidi Web
+
+Heidi web will show you
+
+* Projects with their:
+  * Commits, with stat and diff
+  * Builds with their
+    * Logs and
+    * Tar balls
+  * Configuration
+
+For now host and port settings are very weak, and deamonizing is not done.
+
+It also fails on all cases of ACL...
+
+== Contributing to heidi
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Hartog C. de Mik. See LICENSE.txt for
+further details.

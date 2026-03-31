@@ -1,0 +1,4 @@
+Project Description:
+Javascript file that can be loaded into a website to force mobile device (currently only implemented for iOS/iPhone/iPad/iPodTouch) owners to view the page either in vertical or horizontal device orientation. Forced rotation is done via css.
+
+README:

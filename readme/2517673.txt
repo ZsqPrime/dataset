@@ -1,0 +1,32 @@
+# Clojure-Marie-Interpreter
+
+FIXME: write description
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
+
+Project Description:
+A web-based interpreter for the Marie platform described in the book The Essentials of Computer Organization And Architecture by Linda Null and Julia Lobur written in Clojure using Leiningen and the web framework Noir
+
+README:
+# Clojure-Marie-Interpreter
+
+FIXME: write description
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.

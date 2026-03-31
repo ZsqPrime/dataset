@@ -1,0 +1,5 @@
+Project Description:
+Vim Configs and Plugins for porting across machines
+
+README:
+A repository for my vim configuration and plugins!

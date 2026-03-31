@@ -1,0 +1,12 @@
+<https://mhyee.com> is a site powered by [nanoc](http://nanoc.stoneship.org/).
+
+Feel free to borrow code for your own nanoc site, but the content is (obviously) mine.
+
+
+Project Description:
+The nanoc generator for mhyee.com
+
+README:
+<https://mhyee.com> is a site powered by [nanoc](http://nanoc.stoneship.org/).
+
+Feel free to borrow code for your own nanoc site, but the content is (obviously) mine.

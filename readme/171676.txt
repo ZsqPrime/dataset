@@ -1,0 +1,10 @@
+This is my diploma work. Gomel State University, ASOI, 2012.
+An another e-commerce engine.
+
+
+Project Description:
+None
+
+README:
+This is my diploma work. Gomel State University, ASOI, 2012.
+An another e-commerce engine.

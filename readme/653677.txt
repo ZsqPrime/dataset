@@ -1,0 +1,12 @@
+Some Python functions/tools to parse Wikipedia database dumps.
+
+Requirements: Python, [LXML](http://lxml.de).
+
+
+Project Description:
+Python tools for parsing Wikipedia/MediaWiki database dumps
+
+README:
+Some Python functions/tools to parse Wikipedia database dumps.
+
+Requirements: Python, [LXML](http://lxml.de).

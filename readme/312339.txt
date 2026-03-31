@@ -1,0 +1,108 @@
+////GITHUB INSTRUCTIONS////
+If you forked before 4/9, you must delete your fork and refork (click admin on your forked repo page, then scroll down).
+!!!  DO NOT MERGE UNTIL YOU HAVE THE REVISED FORK.  !!!!
+
+1.Click Fork on SORRY-PROJ page to fork to your personal page
+
+2. Clone your local repository. Look on your fork's page to get your personalized address. For example mine is git@github.com:andrewcohen/SORRY.git so in my command line I type: 
+
+	cd directoryIWantToCloneIn
+	git clone git@github.com:andrewcohen/SORRY.git
+
+This will make a copy of the repositories files in the directory specified.
+
+3. Remotes:
+	When you clone, git automatically adds a remote to that destination called 'origin'.  You also want to add 'upstream' which is our project's repository. This is done  by saying: 
+	git remote add upstream git@github.com:SORRY-Project/SORRY.git
+
+Note: Do NOT push directly upstream. This will most likely screw something up.
+
+4. When changes are made by others to the code base, use :
+	git fetch upstream 
+
+This will pull the changes from the project main repo and merge into your local codebase
+
+Bring your personal fork clone up-to-date with:
+  git checkout master && git merge upstream/master
+
+5. Making Changes:
+	When you have edited your code and are satisfied it is in working order, you want to first add the files, check the status, then make a commit to the git repository on your computer as follows: 
+	
+	git add filename       or     git add  .     (this will add all files)
+	git status   (to see what will be committed)
+	git commit -m "short description of commit"
+
+You can make multiple commits without pushing to github, as when you do push all of the past commits will be uploaded
+
+
+
+6. Pushing to GitHub
+	When you decide you have a stable version, you are ready to push to github.
+You will want to push to your fork, rather than the upstream repository.  This is done by:
+
+	git push origin master       (master references the branch)
+
+This will upload the code only to your fork.  You can then go to github.com and click the pull request button at the upper right.  This will create a request for a pull which basically merges the changes from your fork into the main project repo.  
+
+Note: In most cases you will have to pull before you can push (git pull)
+
+IMPORTANT: Verify all changes before you accept the pull request and merge.  If you are unsure if it will safely merge, DO NOT fulfill the request, ask someone else.
+ 
+	
+
+ 1.All modules will be properties of the Sorry Namespace.
+ 2.Declare the Sorry Namespace (i.e var Sorry = {};) at the top of your code. 
+   This statement will be removed when modules are integrated. 
+ 3.Module Pattern 
+   ex) Sorry.moduleName = (function() {
+
+        //dependencies
+        var uObj = MYAPP.utilities.object,
+            ulang = MYAPP.utilities.lang; 
+
+        //private variables
+        var myObj = {},
+            myArr = [];
+
+        //private methods
+        function funOne(args) {
+
+
+        }
+
+        //public methods
+        return {
+            funTwo : function() {
+          
+            },
+            funThree : function(name,date) {
+
+            }
+        }
+
+      //if you want to use the module pattern with a constructor function, 
+      //return the constructor function
+
+      })();
+   4.Public methods can be accessed as Sorry.moduleName.functionName
+   5.Camel Case for identifiers, constructors/namespaces begin with capital letter
+   6.If using jQuery, caching is great to prevent unnecessary DOM traversal if you plan on
+     accessing a particular DOM element more than once. Store your jQuery object in a variable whose
+     identifier begins with $ to let others know it's a jQuery object
+     ex) var $myElement = $(“#myElement”);
+   7.Can use Chrome Developer Tools or Firebug to debug your code. This code must be included in an
+     html file (use <script src='path'></script>) and then viewed with the browser, where
+     'path' is the URI of your .js file.
+   8. Basic html5 template for testing
+      <!DOCTYPE html>
+         <html> 
+          <head>
+           <meta charset='utf-8'/>
+           <title></title>
+           <!-- your scripts -->
+           <script src=''></script>
+           <script src=''></script>
+          </head>
+          <body>
+          </body>
+         </html>something

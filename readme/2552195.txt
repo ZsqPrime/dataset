@@ -1,0 +1,31 @@
+Project Description:
+Webbased video hiring and event management tool
+
+README:
+   EWAProject
+(temporally name)
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+event- and hiringmanagementtool
+in PHP
+
+developer:
+Quallenmann
+zeyorama
+
+developed as examination project for:
+
+Entwicklung webbasierter Software
+(Development webbased software)
+TH Mittelhessen
+MNI
+
+Martin Karry M.Sc.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Systemspecification:
+PHP.... v.5.3.10
+  mysqli-extension activated 
+MySQL.. v.5.1

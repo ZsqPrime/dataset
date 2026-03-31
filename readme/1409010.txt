@@ -1,0 +1,25 @@
+Check list of lab commits to date.
+
+Commit Lab2A.
+Commit Lab3B.
+Commit Lab4A.
+Commit Lab5A.
+Commit Lab5functions.
+Commit Lab6.
+Commit Lab7.
+Commit Lab8.
+
+Project Description:
+Intro to programming C++
+
+README:
+Check list of lab commits to date.
+
+Commit Lab2A.
+Commit Lab3B.
+Commit Lab4A.
+Commit Lab5A.
+Commit Lab5functions.
+Commit Lab6.
+Commit Lab7.
+Commit Lab8.

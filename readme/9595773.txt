@@ -1,0 +1,6 @@
+Project Description:
+Just various scripts and config files I use
+
+README:
+# bits
+Just various scripts and config files I use

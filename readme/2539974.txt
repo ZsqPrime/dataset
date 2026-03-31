@@ -1,0 +1,6 @@
+Project Description:
+An unquestionably awesome static website generation tool.
+
+README:
+
+To be written.

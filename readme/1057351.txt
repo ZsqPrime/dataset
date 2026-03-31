@@ -1,0 +1,12 @@
+# tatianna irc bot
+
+v2, Python re-write.
+
+
+Project Description:
+An irssi bot
+
+README:
+# tatianna irc bot
+
+v2, Python re-write.

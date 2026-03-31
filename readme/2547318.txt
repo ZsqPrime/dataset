@@ -1,0 +1,7 @@
+Project Description:
+Building an app everyday
+
+README:
+The idea is to build an app everyday and put it here for you build upon :)
+
+Licence: http://creativecommons.org/licenses/by-nc-sa/3.0/

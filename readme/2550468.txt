@@ -1,0 +1,4 @@
+Project Description:
+Doctrine 2 + Dojo Mobile + Zend Framework 1.11 + Rest Json (JsonP support) Web Service 
+
+README:

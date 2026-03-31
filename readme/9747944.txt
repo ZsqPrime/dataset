@@ -1,0 +1,8 @@
+Project Description:
+A module for NodeJS to advance require()
+
+README:
+RequireEx
+=========
+
+A module for NodeJS to advance require()

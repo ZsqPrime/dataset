@@ -1,0 +1,105 @@
+=Marley
+
+Marley is a framework for building RESTful web services and applications with roughly _O(n)_ lines code where _n_ is lines of DDL.
+
+It consists of several parts:
+
+* A simple Rack application that acts as request parser/router.
+* A default controller for ORM model classes.
+* A plugin system similar to Sequel's.
+* Marley Joints - A framework for creating reusable Marley resource sets.
+* Reggae - A JSON data format
+
+The point of the whole thing is to minimize the amount of non-model (non-datacentric) code that needs to be written to implement a web service/application.
+
+Please see the examples/forum.rb and the included Joints' code to get a basic idea of what a Marley application looks like.
+
+-----
+
+==Marley Resources
+
+Marley resources are constants in the Marley::Resources namespace.
+
+* A resource must respond either to a #controller method or to one or more REST verbs (#rest_get, #rest_post, #rest_put, or #rest_delete). 
+* A #controller method must return an object that responds to one or more REST verbs.
+* REST verb methods should return an object with a #to_json method.
+
+
+==The Parser/Router
+
+The parser splits the request path on '/' and treats the first part as the requested resource.  If no resource is specified in the request, it uses the default resource.  
+
+if the resource has a REST method corresponding the the request verb, the parser calls that method and sends the return value to the client.
+
+The parser also traps various errors and returns the appropriate error message to the client.
+
+:include: rdoc/plugins.rdoc
+
+==The Default Model Controller
+
+One of the things that the RestConvenience Sequel plugin does is add a #controller method to affected models.  This method instantiates and returns a ModelController object for the model in question.  At initialization, the Controller parses the request path to determine the model instances to which the request refers.  
+
+
+:include: rdoc/joints.rdoc
+
+:include: rdoc/reggae.rdoc
+
+==Jamaica
+
+The default Marley client is "Jamaica", which consists of JS/CSS for browsers.  It has now been moved to a separate repository at https://github.com/herbdaily/jamaica
+
+
+
+Project Description:
+Marley is a framework for building RESTful web services and applications with roughly O(n) lines code where n is lines of DDL
+
+README:
+=Marley
+
+Marley is a framework for building RESTful web services and applications with roughly _O(n)_ lines code where _n_ is lines of DDL.
+
+It consists of several parts:
+
+* A simple Rack application that acts as request parser/router.
+* A default controller for ORM model classes.
+* A plugin system similar to Sequel's.
+* Marley Joints - A framework for creating reusable Marley resource sets.
+* Reggae - A JSON data format
+
+The point of the whole thing is to minimize the amount of non-model (non-datacentric) code that needs to be written to implement a web service/application.
+
+Please see the examples/forum.rb and the included Joints' code to get a basic idea of what a Marley application looks like.
+
+-----
+
+==Marley Resources
+
+Marley resources are constants in the Marley::Resources namespace.
+
+* A resource must respond either to a #controller method or to one or more REST verbs (#rest_get, #rest_post, #rest_put, or #rest_delete). 
+* A #controller method must return an object that responds to one or more REST verbs.
+* REST verb methods should return an object with a #to_json method.
+
+
+==The Parser/Router
+
+The parser splits the request path on '/' and treats the first part as the requested resource.  If no resource is specified in the request, it uses the default resource.  
+
+if the resource has a REST method corresponding the the request verb, the parser calls that method and sends the return value to the client.
+
+The parser also traps various errors and returns the appropriate error message to the client.
+
+:include: rdoc/plugins.rdoc
+
+==The Default Model Controller
+
+One of the things that the RestConvenience Sequel plugin does is add a #controller method to affected models.  This method instantiates and returns a ModelController object for the model in question.  At initialization, the Controller parses the request path to determine the model instances to which the request refers.  
+
+
+:include: rdoc/joints.rdoc
+
+:include: rdoc/reggae.rdoc
+
+==Jamaica
+
+The default Marley client is "Jamaica", which consists of JS/CSS for browsers.  It has now been moved to a separate repository at https://github.com/herbdaily/jamaica

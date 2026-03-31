@@ -1,0 +1,259 @@
+Project Description:
+
+
+README:
+=head1 NAME
+
+TeaTime: a CLI and L<half|/SEE ALSO> a webapp for tracking your teatimes!
+
+
+=head1 INSTALLING DEPS
+
+This program uses Perl and a number of Perl modules.  The easiest way
+to install the modules is: (skip this first bit if you perl it up regularly)
+
+ curl -L http://cpanmin.us | perl - --sudo App::cpanminus
+ cpanm --installdeps .
+
+=head1 INSTALLATION
+
+Next, what I intially did was added /home/frew/code/teatime to my path, but
+an alias is probably more sensible:
+
+ alias t=/home/frew/code/teatime/bin/tea
+
+=head1 CONFIGURATION
+
+If you want to use all of the features of teatime you need to set up a config
+file like the one included in this repo in your home directory.  The following
+is what the various bits of the config mean:
+
+=over 2
+
+=item C<db>
+
+the connect string for your database.  You probably just want to use SQLite.
+In which case C<dbi:SQLite:dbname=$file;sqlite_unicode=1> is sufficient.
+Note that if you B<do> want to use some other database for performance or
+something that is supported.
+
+=item C<xmpp>
+
+this allows will instant message people when the tea is chosen and marked
+as ready.  C<server> is the xmpp server, C<jid> is username, and C<password> is
+the password.
+
+=item C<servers>
+
+these are urls used in the xmpp messages
+
+=item C<web_server>
+
+C<listen_on>: the ip address to listen on this is only useful
+if you want to use the C<server> command to run a perl based server locally.
+The server is performant enough for serving up to the world, but once you do
+a full on deploy you probably want to use an init script or Ubic or something
+like that.
+
+C<base_url>: this gets prepended to all the links in C<see_also>. The
+main use is for if you've set up apache to proxy to this server or something
+and you want the links to work.
+
+=back
+
+=head1 ENVIRONMENT VARIABLES
+
+=over 2
+
+=item C<TXMPP>
+
+Set this to false if you want to disable sending messages
+
+=item C<TDB>
+
+Set this to false if you want to disable writing to the database
+
+=item C<TTWEET>
+
+Set this to false if you want to disable twitter message
+
+=back
+
+=head1 USAGE
+
+For the most part the app level documentation (accessed by just running the
+program) is good enough, but I will give an overview of all the features
+here.
+
+A typical day in the use of this tool will go as follows:
+
+ # set the tea to hazelbank (send message to contacts in case they hate the tea)
+ t set_tea hazel
+
+ # start the timer after cleaning the pot etc
+ t timer
+
+ # mark the pot as ready (send message to tell people tea is ready)
+ t ready
+
+ # mark pot as empty (for statistics based on how quickly people drink tea)
+ t empty
+
+=head2 create_contact
+
+Create a contact for use with the XMPP send functions used when setting the tea
+and marking the pot as ready
+
+=head2 create_tea
+
+Create a new tea for drinking
+
+=head2 empty
+
+Mark the pot as empty
+
+=head2 event
+
+Mark the pot with an arbitrary event
+
+=head2 init
+
+Generate a database
+
+=head2 list_contacts
+
+Print out a list of contacts
+
+=head2 list_teas
+
+Print out a list of teas
+
+=head2 list_times
+
+Print out a list of tea times
+
+=head2 message
+
+Send an arbitrary message to contacts
+
+=head2 new_milk
+
+Create a new milk for expiration tracking
+
+=head2 ready
+
+Mark a pot as ready
+
+=head2 server
+
+Start the built in server
+
+=head2 set_tea
+
+Set the current tea
+
+=head2 timer
+
+Run a timer for the current tea
+
+=head2 toggle_contact
+
+Enable/disable an XMPP contact
+
+=head2 toggle_tea
+
+Enalbe/disable a tea
+
+=head2 undo
+
+Undo the last tea you set
+
+=head1 NEAT STUFF
+
+=head2 Second Steeping
+
+I haven't added second (or more) steep code to the codebase, but thanks to a
+few vanilla features and unix we can do it quite handily:
+
+ t message "Second Steeping $(t list_times | tail -n1 | cut -b13-)"
+ t event "Starting 2nd Steep"
+ TDB=0 TXMPP=0 t timer 360
+ t event "Stopped 2nd Steep"
+ t message "Second Steep of $(t list_times | tail -n1 | cut -b13-) ready"
+
+=head2 Ghetto replication for SQLite
+
+I still can't quite bring myself to deploy this on a real database.  SQLite
+is just so handy!  That means that I either need to run the CLI of teatime on a
+remote server or I need to syncronize SQLite over.  I wrote a handy shell
+function to syncronize the files over as needed.  If you do this make sure to
+run C<< ssh-copy-id $remote_host >> so that you won't have to type in a
+password all the time.
+
+ t() { tea $@ && [[ ( $1 == create_tea ) || \
+                    ( $1 == empty      ) || \
+                    ( $1 == ready      ) || \
+                    ( $1 == set_tea    ) || \
+                    ( $1 == timer      ) || \
+                    ( $1 == event      ) || \
+                    ( $1 == undo       ) \
+                 ]] && \
+       scp ~/.teadb frew@t.mitsi.com:/home/frew/.teadb }
+
+=head2 Apache and teadash
+
+My coworker made L<teadash|http://github.com/gedarling/teadash>, which is a
+handy at-a-glance tool for the tea information.  Setting it up with Apache is
+great if you want to set up an external site L<like we did|http://t.mitsi.com>.
+
+First, configure C<teatime> and C<teadash>.  They can share a configuration
+file.  The following is the config file for our web server:
+
+ {
+   "db":"dbi:SQLite:dbname=/home/frew/.teadb;sqlite_unicode=1",
+   "web_server":{
+     "listen_on":"localhost",
+     "base_url":"http://t.mitsi.com/api"
+   },
+   "dash":{
+     "spec_file":"teatime.json",
+     "api_base_url":"http://localhost:5001/",
+     "webroot":"/home/frew/code/teadash/static"
+   }
+ }
+
+Note that I'm running the servers under my user.  This works fine as Apache
+will be proxying to them.  The main things to take note of are the
+C<web_server>, and C<dash> configs.  C<webserver.base_url> is so that the urls
+will work as links if people use C<JSONView>.  C<dash.api_base_url> is whatever
+url the api web server will be running on, and C<dash.webroot> is the full path
+to the static files in dash.
+
+As for the Apache config, all I did was the following:
+
+ <VirtualHost *:80>
+   ExpiresActive On
+   ProxyRequests Off
+   <Proxy balancer://dash>
+      BalancerMember http://127.0.0.1:5000
+   </Proxy>
+   <Proxy balancer://time>
+      BalancerMember http://127.0.0.1:5001
+   </Proxy>
+   ProxyPass /api/ balancer://time/
+   ProxyPass / balancer://dash/
+
+   DocumentRoot "/home/frew/code/teadash/static"
+   <Location /static>
+      SetOutputFilter DEFLATE
+      SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+      SetHandler default-handler
+   </Location>
+
+ </VirtualHost>
+
+Works great!
+
+=head1 SEE ALSO
+
+http://github.com/gedarling/teadash for the other half

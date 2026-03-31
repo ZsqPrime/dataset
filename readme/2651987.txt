@@ -1,0 +1,6 @@
+Project Description:
+[WIP] Collaborating text editor in Ocsigen (Web server and powerfull framework in OCaml)
+
+README:
+
+OcsiDocs is an online collaborating text editor made with Ocsigen, web server and powerfull framework in OCaml.

@@ -1,0 +1,6 @@
+Project Description:
+Android App for startup thingy
+
+README:
+This is a android app quickly put togeather for a project in the summer of
+2011.

@@ -1,0 +1,276 @@
+h1. Mohiva Elixir "!https://travis-ci.org/mohiva/elixir.png!":https://travis-ci.org/mohiva/elixir
+
+Mohiva Elixir is a framework/language for building dynamic XML documents. Its main purpose is the build XML Documents which can change its structure at runtime based on external parameters. But is is also possible to build a complete template language like Twig with it.
+
+h2. Status
+
+Mohiva Elixir is under heavy development. The most lexical features are implemented. The next milestone is to implement context-aware escaping for expressions.
+
+h2. How does it work
+
+The framework provides the core of the language. The core consists of the following components:
+
+h3. The grammar
+
+All Elixir documents are valid XML documents. The grammar defines the Syntax for expressions and three kind of helpers which can be used to transform a XML document at runtime. These types of helpers are element, attribute and expression helpers. Attribute helpers can be used to affect existing XML elements. Element helpers can be used to create new content or to affect existing content as well. And last but not least, expression helpers can be used inside expression to manipulate the result of it.
+
+h3. The compiler
+
+The compiler compiles down an Elixir document into a plain old PHP class during runtime. This benefits the runtime of an Elixir Document when it comes to caching, because only the generated PHP classes will be cached. Furthermore it can make the usage of byte code caches like APC.
+
+h3. The cache layer
+
+The core ships with a simple cache layer which provides an interface to build different kinds of cache adapters. Some cache adapters, for caching documents in APC's shared memory or in plain php files, are already shipped with the core.
+
+h2. The structure of an Elixir document
+
+The following example shows the structure of a simple Elixir document.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    <sentence id="greeting" ex:Locale="en_US">Hello my name is {% user.name %}</sentence>
+    <sentence id="greeting" ex:Locale="de_DE">Hallo mein Name ist {% user.name %}</sentence>
+
+    <ex:If expr="{% system.locale == 'de_DE'">
+        <sentence id="date">{% ex:Date(date.now, 'd.m.Y') %}</sentence>
+    </ex:If>
+    <ex:ElseIf expr="{% system.locale == 'en_US'">
+        <sentence id="date">{% ex:Date(date.now, 'm-d-Y') %}</sentence>
+    </ex:ElseIf>
+    <ex:Else>
+        <sentence id="date">{% ex:Date(date.now, 'd/m/y') %}</sentence>
+    </ex:Else>
+</dictionary>
+</pre>
+
+The document is built with the following elements.
+
+h3. Namespaces
+
+XML namespaces will be used to declare helpers. The namespace prefix for a helper can be defined as one likes, even the namespace prefix for core helpers. The important thing is the namespace URI. An URI can be a normal URL like in our example or a URN which defines a PHP namespace in the form @urn:com.mohiva.helpers@. So it is very easy to extend the language with own helpers.
+
+h3. Helpers
+
+Elixir supports three kind of helpers. Helpers are normal PHP classes which must implement one of the three helper interfaces provided with the core. Please look at the following examples, for a detailed description of every type.
+
+h4. Element helpers
+
+An element helper is a normal XML tag. It starts with a namespace prefix followed by the helper name and it can have as many attributes as neccessary.
+
+In our example the @if/else if/else@ construct is a combination of three element helpers.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    <ex:If expr="" />
+    <ex:ElseIf expr="" />
+    <ex:Else />
+</dictionary>
+</pre>
+
+Element helpers can be used for any task. The main task is to influence the content of the enclosed helper. But it is also possible to manipulate the document itself, just as the @Set@ or the @Extend@ helper accomplish it.
+
+h4. Attribute helpers
+
+An attribute helper is a namespaced attribute of a XML tag. It starts with a namespace prefix followed by the helper name and it can have exactly one attribute. Attribute helpers can be mixed with element helpers as well. It is also possible to define multiple attribute helpers on a XML tag.
+
+In our example the @Locale@ helper is a attribute helper.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    <sentence ex:Locale="en_US" />
+</dictionary>
+</pre>
+
+An attribute helper can only influence the XML tag on which it's located. This means it decides on the basis of the value passed to the attribute, if the XML tag should be displayed or not. If the helper decides that the XML tag should be removed then the enclosing content of the XML tag will also be removed.
+
+h4. Expression helpers
+
+As the name says, expression helpers can be used inside expressions, to manipulate the result of such. An element helper starts with a namespace prefix followed by its name. After that, parameters can be passed by enclosing it with parentheses and separate it by commas. Expression helpers can have as many parameters as necessary.
+
+In our example the @Date@ helper is an expression helper.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    {% ex:Date(date.now, 'd.m.Y') %}
+</dictionary>
+</pre>
+
+As mentioned above element helpers can only influence the value of an expression. It is possible to use multiple expression helpers inside an expression. They can also be nested if necessary.
+
+h3. Expressions
+
+Expressions can be consist of simple variables to parse in the document up to arithmetic calculations. The next short list gives a overview over all implemented expression features.
+
+* Variable interpolation
+* Conditional expressions
+* Logical expressions
+* Arithmetic calculations
+* Helper functions
+* Context-aware escaping
+
+Expression parsing is handled by the the "Mohiva Pyramid":https://github.com/mohiva/pyramid project.
+
+h2. Installation
+
+You can install the library through "composer":http://getcomposer.org. All you need is to add it as dependency to your composer.json.
+
+<pre lang="js">
+{
+    "require": {
+        "mohiva/elixir": "dev-master"
+    }
+}
+</pre>
+
+h2. Requirements
+
+Mohiva Elixir needs PHP 5.4 to work.
+
+h2. License
+
+This project is Open Source and released under the terms of the New BSD License.
+
+
+Project Description:
+Elixir is an dynamic XML template language.
+
+README:
+h1. Mohiva Elixir "!https://travis-ci.org/mohiva/elixir.png!":https://travis-ci.org/mohiva/elixir
+
+Mohiva Elixir is a framework/language for building dynamic XML documents. Its main purpose is the build XML Documents which can change its structure at runtime based on external parameters. But is is also possible to build a complete template language like Twig with it.
+
+h2. Status
+
+Mohiva Elixir is under heavy development. The most lexical features are implemented. The next milestone is to implement context-aware escaping for expressions.
+
+h2. How does it work
+
+The framework provides the core of the language. The core consists of the following components:
+
+h3. The grammar
+
+All Elixir documents are valid XML documents. The grammar defines the Syntax for expressions and three kind of helpers which can be used to transform a XML document at runtime. These types of helpers are element, attribute and expression helpers. Attribute helpers can be used to affect existing XML elements. Element helpers can be used to create new content or to affect existing content as well. And last but not least, expression helpers can be used inside expression to manipulate the result of it.
+
+h3. The compiler
+
+The compiler compiles down an Elixir document into a plain old PHP class during runtime. This benefits the runtime of an Elixir Document when it comes to caching, because only the generated PHP classes will be cached. Furthermore it can make the usage of byte code caches like APC.
+
+h3. The cache layer
+
+The core ships with a simple cache layer which provides an interface to build different kinds of cache adapters. Some cache adapters, for caching documents in APC's shared memory or in plain php files, are already shipped with the core.
+
+h2. The structure of an Elixir document
+
+The following example shows the structure of a simple Elixir document.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    <sentence id="greeting" ex:Locale="en_US">Hello my name is {% user.name %}</sentence>
+    <sentence id="greeting" ex:Locale="de_DE">Hallo mein Name ist {% user.name %}</sentence>
+
+    <ex:If expr="{% system.locale == 'de_DE'">
+        <sentence id="date">{% ex:Date(date.now, 'd.m.Y') %}</sentence>
+    </ex:If>
+    <ex:ElseIf expr="{% system.locale == 'en_US'">
+        <sentence id="date">{% ex:Date(date.now, 'm-d-Y') %}</sentence>
+    </ex:ElseIf>
+    <ex:Else>
+        <sentence id="date">{% ex:Date(date.now, 'd/m/y') %}</sentence>
+    </ex:Else>
+</dictionary>
+</pre>
+
+The document is built with the following elements.
+
+h3. Namespaces
+
+XML namespaces will be used to declare helpers. The namespace prefix for a helper can be defined as one likes, even the namespace prefix for core helpers. The important thing is the namespace URI. An URI can be a normal URL like in our example or a URN which defines a PHP namespace in the form @urn:com.mohiva.helpers@. So it is very easy to extend the language with own helpers.
+
+h3. Helpers
+
+Elixir supports three kind of helpers. Helpers are normal PHP classes which must implement one of the three helper interfaces provided with the core. Please look at the following examples, for a detailed description of every type.
+
+h4. Element helpers
+
+An element helper is a normal XML tag. It starts with a namespace prefix followed by the helper name and it can have as many attributes as neccessary.
+
+In our example the @if/else if/else@ construct is a combination of three element helpers.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    <ex:If expr="" />
+    <ex:ElseIf expr="" />
+    <ex:Else />
+</dictionary>
+</pre>
+
+Element helpers can be used for any task. The main task is to influence the content of the enclosed helper. But it is also possible to manipulate the document itself, just as the @Set@ or the @Extend@ helper accomplish it.
+
+h4. Attribute helpers
+
+An attribute helper is a namespaced attribute of a XML tag. It starts with a namespace prefix followed by the helper name and it can have exactly one attribute. Attribute helpers can be mixed with element helpers as well. It is also possible to define multiple attribute helpers on a XML tag.
+
+In our example the @Locale@ helper is a attribute helper.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    <sentence ex:Locale="en_US" />
+</dictionary>
+</pre>
+
+An attribute helper can only influence the XML tag on which it's located. This means it decides on the basis of the value passed to the attribute, if the XML tag should be displayed or not. If the helper decides that the XML tag should be removed then the enclosing content of the XML tag will also be removed.
+
+h4. Expression helpers
+
+As the name says, expression helpers can be used inside expressions, to manipulate the result of such. An element helper starts with a namespace prefix followed by its name. After that, parameters can be passed by enclosing it with parentheses and separate it by commas. Expression helpers can have as many parameters as necessary.
+
+In our example the @Date@ helper is an expression helper.
+
+<pre lang="xml">
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary xmlns:ex="http://elixir.mohiva.com">
+    {% ex:Date(date.now, 'd.m.Y') %}
+</dictionary>
+</pre>
+
+As mentioned above element helpers can only influence the value of an expression. It is possible to use multiple expression helpers inside an expression. They can also be nested if necessary.
+
+h3. Expressions
+
+Expressions can be consist of simple variables to parse in the document up to arithmetic calculations. The next short list gives a overview over all implemented expression features.
+
+* Variable interpolation
+* Conditional expressions
+* Logical expressions
+* Arithmetic calculations
+* Helper functions
+* Context-aware escaping
+
+Expression parsing is handled by the the "Mohiva Pyramid":https://github.com/mohiva/pyramid project.
+
+h2. Installation
+
+You can install the library through "composer":http://getcomposer.org. All you need is to add it as dependency to your composer.json.
+
+<pre lang="js">
+{
+    "require": {
+        "mohiva/elixir": "dev-master"
+    }
+}
+</pre>
+
+h2. Requirements
+
+Mohiva Elixir needs PHP 5.4 to work.
+
+h2. License
+
+This project is Open Source and released under the terms of the New BSD License.

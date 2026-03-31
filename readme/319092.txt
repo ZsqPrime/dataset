@@ -1,0 +1,70 @@
+Ad Mediator for Corona
+
+This is a client side ad mediation module for Ansca Corona.
+It supports multiple ad networks and house ads out of the box
+and can be extended easily by using a simple plugin framework. 
+
+Supported Networks;
+
+   * admob
+   * inmobi
+   * inneractive
+   * tapit
+   * madvertise
+   * herewead
+
+Features;
+
+   * use many ad networks together
+   * switch to another network when there is no ad coming from current one
+   * use your own banners (houseads)
+   * change network and backfill priorities
+   * use banner animations
+   * change configuration on the server side if you wish
+   * easily extend with new networks using the module plugin system
+
+GitHub repository and documentation
+https://github.com/deniza/Ad-Mediator-for-Corona
+
+Copyright by Deniz Aydinoglu
+he2apps.com
+
+Corona® SDK is registered trademark of Ansca® Inc. Ansca, the Ansca Logo, anscamobile.com are trademarks or registered trademarks of Ansca Inc.
+
+
+Project Description:
+Client side ad mediation module for Ansca Corona
+
+README:
+Ad Mediator for Corona
+
+This is a client side ad mediation module for Ansca Corona.
+It supports multiple ad networks and house ads out of the box
+and can be extended easily by using a simple plugin framework. 
+
+Supported Networks;
+
+   * admob
+   * inmobi
+   * inneractive
+   * tapit
+   * madvertise
+   * herewead
+
+Features;
+
+   * use many ad networks together
+   * switch to another network when there is no ad coming from current one
+   * use your own banners (houseads)
+   * change network and backfill priorities
+   * use banner animations
+   * change configuration on the server side if you wish
+   * easily extend with new networks using the module plugin system
+
+GitHub repository and documentation
+https://github.com/deniza/Ad-Mediator-for-Corona
+
+Copyright by Deniz Aydinoglu
+he2apps.com
+
+Corona® SDK is registered trademark of Ansca® Inc. Ansca, the Ansca Logo, anscamobile.com are trademarks or registered trademarks of Ansca Inc.

@@ -1,0 +1,216 @@
+= Introduction
+
+Payment Manager is a convenience wrapper for the Active Merchant[http://activemerchant.org] library specifically using the Authorize.Net payment gateway.  While
+Active Merchant is an amazing library, this wrapper abstracts some of the common Authorize.Net calls into single methods, specifically simplifying interaction
+with the Automated Recurring Billing (ARB) and Customer Information Manager (CIM) APIs.
+
+= Features
+* authorize 
+* capture
+* purchase
+* verify card with 1.00 authorization, then void
+* void transaction
+* refund transaction
+* ARB: add recurring billing transaction
+* ARB: update recurring billing transaction
+* ARB: cancel recurring billing transaction
+* CIM: create customer profile
+* CIM: delete customer profile
+* CIM: create customer payment profile
+* CIM: update customer payment profile
+* CIM: charge customer payment profile
+
+= Usage
+
+== Create some objects to use in our examples below
+
+  email = "user@example.com"
+
+  customer_id = "Acme Customer ID"  #20 characters
+
+  profile_description = "Acme Company profile"
+
+  credit_card = PaymentManager.credit_card(
+    'visa', 
+    "4111111111111111", 
+    Date.parse("01/31/2015"), 
+    "111", 
+    "John", 
+    "Smith"
+  )
+
+  billing_address = PaymentManager.billing_address(
+    :first_name => "John",
+    :last_name => "Smith",
+    :address1 => "100 South 1st Street",
+    :city => "Louisville",
+    :state => "KY",
+    :zip => "40202",
+    :country => "US"
+  )
+
+== Make a purchase (authorize and charge the card all at once)
+
+  PaymentManager.purchase("1.00".to_money, credit_card, :order_id => '123456', :billing_address => billing_address, :description => 'Test Payment')
+
+== Add a recurring billing transaction
+
+  amount = "1.00".to_money
+  r_opt = PaymentManager.recurring_options(amount, credit_card, billing_address, "Test Subscription", 1, :months, Date.today + 1.year, 6000)
+  PaymentManager.add_recurring(amount, credit_card, r_opt)
+
+== Create a CIM customer profile using the information above
+
+  result = PaymentManager.create_customer_profile(
+    email, 
+    customer_id, 
+    profile_description, 
+    credit_card, 
+    billing_address
+  )
+
+== Update a given CIM customer profile
+
+  payment_profile_id = "00000002"
+  profile_id = "00000001"
+  
+  credit_card = nil
+  
+  billing_address = PaymentManager.billing_address(
+    :first_name => "John",
+    :last_name => "Smith",
+    :address1 => "815 West Market St",
+    :city => "Louisville",
+    :state => "KY",
+    :zip => "40202",
+    :country => "US"
+  )
+  
+  result = PaymentManager.update_cim_payment_profile(
+    profile_id, 
+    payment_profile_id, 
+    credit_card, 
+    billing_address
+  )
+
+== Charge the same CIM customer profile
+
+  PaymentManager.charge_customer_profile("1.00".to_money, profile_id, payment_profile_id, "test charge")
+
+= Contributors
+* Brian Webb (http://parkersmithsoftware.com) 
+
+= Legal Mumbo Jumbo
+
+Unless otherwise noted in specific files, all code in the Payment Manager project is under the copyright and license described in the included MIT-LICENSE file.
+
+
+Project Description:
+Convenience wrapper for the ruby gem active_merchant
+
+README:
+= Introduction
+
+Payment Manager is a convenience wrapper for the Active Merchant[http://activemerchant.org] library specifically using the Authorize.Net payment gateway.  While
+Active Merchant is an amazing library, this wrapper abstracts some of the common Authorize.Net calls into single methods, specifically simplifying interaction
+with the Automated Recurring Billing (ARB) and Customer Information Manager (CIM) APIs.
+
+= Features
+* authorize 
+* capture
+* purchase
+* verify card with 1.00 authorization, then void
+* void transaction
+* refund transaction
+* ARB: add recurring billing transaction
+* ARB: update recurring billing transaction
+* ARB: cancel recurring billing transaction
+* CIM: create customer profile
+* CIM: delete customer profile
+* CIM: create customer payment profile
+* CIM: update customer payment profile
+* CIM: charge customer payment profile
+
+= Usage
+
+== Create some objects to use in our examples below
+
+  email = "user@example.com"
+
+  customer_id = "Acme Customer ID"  #20 characters
+
+  profile_description = "Acme Company profile"
+
+  credit_card = PaymentManager.credit_card(
+    'visa', 
+    "4111111111111111", 
+    Date.parse("01/31/2015"), 
+    "111", 
+    "John", 
+    "Smith"
+  )
+
+  billing_address = PaymentManager.billing_address(
+    :first_name => "John",
+    :last_name => "Smith",
+    :address1 => "100 South 1st Street",
+    :city => "Louisville",
+    :state => "KY",
+    :zip => "40202",
+    :country => "US"
+  )
+
+== Make a purchase (authorize and charge the card all at once)
+
+  PaymentManager.purchase("1.00".to_money, credit_card, :order_id => '123456', :billing_address => billing_address, :description => 'Test Payment')
+
+== Add a recurring billing transaction
+
+  amount = "1.00".to_money
+  r_opt = PaymentManager.recurring_options(amount, credit_card, billing_address, "Test Subscription", 1, :months, Date.today + 1.year, 6000)
+  PaymentManager.add_recurring(amount, credit_card, r_opt)
+
+== Create a CIM customer profile using the information above
+
+  result = PaymentManager.create_customer_profile(
+    email, 
+    customer_id, 
+    profile_description, 
+    credit_card, 
+    billing_address
+  )
+
+== Update a given CIM customer profile
+
+  payment_profile_id = "00000002"
+  profile_id = "00000001"
+  
+  credit_card = nil
+  
+  billing_address = PaymentManager.billing_address(
+    :first_name => "John",
+    :last_name => "Smith",
+    :address1 => "815 West Market St",
+    :city => "Louisville",
+    :state => "KY",
+    :zip => "40202",
+    :country => "US"
+  )
+  
+  result = PaymentManager.update_cim_payment_profile(
+    profile_id, 
+    payment_profile_id, 
+    credit_card, 
+    billing_address
+  )
+
+== Charge the same CIM customer profile
+
+  PaymentManager.charge_customer_profile("1.00".to_money, profile_id, payment_profile_id, "test charge")
+
+= Contributors
+* Brian Webb (http://parkersmithsoftware.com) 
+
+= Legal Mumbo Jumbo
+
+Unless otherwise noted in specific files, all code in the Payment Manager project is under the copyright and license described in the included MIT-LICENSE file.

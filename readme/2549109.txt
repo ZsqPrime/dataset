@@ -1,0 +1,7 @@
+Project Description:
+Miscellaneous clojure examples
+
+README:
+Misc clojure examples
+
+Uses leiningen to build

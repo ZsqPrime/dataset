@@ -1,0 +1,5 @@
+Project Description:
+Biblioteca Criada para os Alunos da Disciplina Programação 1
+
+README:
+Biblioteca em Python criada com o intuito de ensinar os primeiros conceitos de programação.

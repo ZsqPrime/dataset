@@ -1,0 +1,152 @@
+Project Description:
+pastebin.com Content Monitoring Tool
+
+README:
+Introduction
+------------
+
+pastemon.pl is a script which runs in the background as a daemon and monitors pastebin.com for
+interesting content (based on regular expressions). Found information is sent to syslog
+
+The script can also generate (CEF events).
+
+More information is available here: 
+http://blog.rootshell.be/2012/01/17/monitoring-pastebin-com-within-your-siem/
+
+v1.14 - 2012/10/31
+------------------
+- [FEATURE] Added SQLite DB support to store pasties details
+  (some fields must still be implemented)
+
+v1.13 - 2012/10/24
+------------------
+- [CONTRIBUTION] Added support for multiple SMTP recipients (email addresses separared by commas)
+  Contribution from coreyroach@hotmail.com
+- [CONTRIBUTION] Added a new macro-% to specify the site name in the dump function.
+  '%S' will be replaced by the site name. Example: '%S/%Y/%M' => 'pastebin.com/2012/10'. 
+
+v1.12 - 2012/09/20
+------------------
+- [BUGFIX] Fixed FuzzyMatch() which was broken with gziped pasties.
+- [FEATURE] Email notification: The subject is now appended with the <description> field(s)
+  corresponding to the matched regex(es). This allows a better view of received emails as well
+  as filtering them.
+- [BUGFIX] Fixed FuzzyMatch() to detect properly duplicate pasties (fixed regex).
+
+v1.11 - 2012/09/14
+------------------
+- [FEATURE] Added support for nopaste.me.
+- [FEATURE] Added support for pastesite.com.
+- [FEATURE] Added configurable sleep delays per pastie website.
+
+v1.10 - 2012/08/01
+------------------
+- [FEATURE] If not configuration file is specified, pastemon.pl tries to load /etc/pastemon.conf
+  by default.
+
+- [FEATURE] pastemon.pl uses specific Perl modules like WordPress::XMLRPC or Text::JaroWinkler.
+  The script now handles properly environment without those modules. It's not required to comment
+  them in the code. If a module is missing, related configuration is automatically disabled.
+
+- [FEATURE] Added optional compression (via IO::Compress::Gzip) of dumped pasties.
+  In configuration file:
+
+	<core>
+		<compress-pasties>yes</compress-pasties>
+	</core>
+
+v1.9 - 2012/07/23
+-----------------
+- [FEATURE] pastemon can now follow (search for regex) URLs detected in pasties. This is
+  configured via the main configuration file:
+
+	<urls>
+		<follow>yes</follow>
+		<matching>(bit\.ly)</matching>
+	</urls>
+
+- [FEATURE] The regex.conf format changed to an XML format.
+  Examples:
+	<regex>
+		<search>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}</search>
+		<count>10</count>
+		<description>IP Address</description>
+	</regex>
+
+- [FEATURE] A minimum number of regex occurences can be defined to notify
+  (<count> tag in the XML file)
+
+- [FEATURE] HTTP requests are now using now a random User-Agent. 
+
+- [BUGFIX] Optimized the detection of already processed pasties. This reduces the amount of HTTP 
+  requests send to the website.
+
+v1.8 - 2012/06/25
+-----------------
+- [FEATURE] Adder for pastie.org! 
+- [FEATURE] Added multi-thread support (1 thread per website monitored)
+- [FEATURE] Added substitution macro in the dump directory. Support macros are:
+	%Y - replace with the current year
+	%M - replace with the current month
+	%D - replace with the current day
+  Directory is automatically created.
+  Example: /home/user/pastemon/%Y/%M/%D
+
+- [FEATURE] Added a new configuration directive:
+	<dump-all>yes|1</dump-all>
+  This feature enables a dump of *ALL* pastie wheter they match a regex or not.
+  This is similar to a mirror mode
+  WARNING: Huge disk space might be required by this feature!
+- [BUGFIX] Test if the provided SMTP server (for mail notifications) is available
+  (Thanks to @manuelsubredu for the patch)
+- [BUGFIX] Fixed an issue in createBlogPost() which caused an unexpected process exit.
+
+v1.7 - 2012/05/11
+-----------------
+- Added support for "included" regular expressions
+- Fixed in bug in getRegexDesc()
+- Added support for comments ('#') in the regex configuration file
+- Moved configuration parameters from command line switches to an XML file
+- Added matching regex description in dump files 
+- Added SMTP notifications
+- Added distance check to detect duplicate pasties (using Jaro-Winkler algorithm)
+
+v1.6 - 2012/02/21
+-----------------
+- Added a detection of "slow down" messages returned by Pastebin (add a small pause)
+- Added support for Wordpress XMLRPC 
+- Added support for random proxies
+- Some bug fixes
+
+v1.5 - 2012/02/19
+-----------------
+- Fixed the regex to grab pasties from the archive page. (HTML code changed)
+
+v1.4 - 2012/02/15
+-----------------
+- Fixed a bug with CEF events: custome fields start at 1 not 0! (Thanks to Heiko Hansen for the report)
+- Notify the presence of a proxy variable (HTTP_PROXY) 
+
+v1.3 - 2012/01/26
+-----------------
+- Added a '--pidfile=file' configuration switch to specify an alternative location for the PID file.
+  This allows the script to be executed with a non-root account.
+- Added a '--sample=x' configuration to display a sample a data matching a regular expression. 'x' is 
+  the number of bytes displayed before and after the matching string. This is useful to estimate the
+  value of the pastie.  Example:
+  Found in http://pastebin.com/raw.php?i=Q8pQRHKW : belgium (2 times) | Sample: g(0) ""\n  [32] => string(11) "Belgium(32)"\n  [31] => string(14) "Ne
+
+v1.2 - 2012/01/21
+-----------------
+- Fixed a bug affecting the case sensitivity search
+- New feature: an exception can be associated to a regular expression in the configuration file.
+  The syntax is: "regex1 _EXCLUDE_ regex2". This could prevent some false positive matches.
+
+v1.1 - 2012/01/20
+-----------------
+- Added a '--dump' configuration switch to save matching pasties in a directory.
+  This is to keep the pasties posted with an expiration date (example: for later review)
+
+v1.0 - 2012/01/18
+-----------------
+Initial release

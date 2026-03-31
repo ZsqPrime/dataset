@@ -1,0 +1,7 @@
+Project Description:
+Beginning Rails 3
+
+README:
+Blog application
+
+Sample app built in the book 'Beginning Rails 3'

@@ -1,0 +1,16 @@
+Unicode Literals PEP.
+
+This PEP is now on the central index:
+
+http://www.python.org/dev/peps/pep-0414/
+
+
+Project Description:
+Not yet a proposed PEP about u'' in Python 3.3 and later
+
+README:
+Unicode Literals PEP.
+
+This PEP is now on the central index:
+
+http://www.python.org/dev/peps/pep-0414/

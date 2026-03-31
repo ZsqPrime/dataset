@@ -1,0 +1,8 @@
+A gnome-shell extension that adds GTG tasks in the date/calendar panel.
+
+
+Project Description:
+None
+
+README:
+A gnome-shell extension that adds GTG tasks in the date/calendar panel.

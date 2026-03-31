@@ -1,0 +1,25 @@
+                                       _ _    _ ,           
+  -_-/             ,,         /\\,/\\, - - /  - -  -_____    
+ (_ /          _   ||   _    /| || ||    ('||  ||    ' | -,  
+(_ --_   _-_  < \, ||  < \,  || || ||   (( ||--||   /| |  |` 
+  --_ ) ||    /-|| ||  /-||  ||=|= ||   (( ||--||   || |==|| 
+ _/  )) ||   (( || || (( || ~|| || ||   (( /   ||  ~|| |  |, 
+(_-_-   \\,/  \/\\ \\  \/\\  |, \\,\\,    -___-\\,  ~-____,  
+                            _-                     (
+
+An experiment in learning Scala using the fun of building a MUD as the learning vehicle.
+
+Project Description:
+A sample project to teach myself the Scala language combined with the fun of building a MUD
+
+README:
+                                       _ _    _ ,           
+  -_-/             ,,         /\\,/\\, - - /  - -  -_____    
+ (_ /          _   ||   _    /| || ||    ('||  ||    ' | -,  
+(_ --_   _-_  < \, ||  < \,  || || ||   (( ||--||   /| |  |` 
+  --_ ) ||    /-|| ||  /-||  ||=|= ||   (( ||--||   || |==|| 
+ _/  )) ||   (( || || (( || ~|| || ||   (( /   ||  ~|| |  |, 
+(_-_-   \\,/  \/\\ \\  \/\\  |, \\,\\,    -___-\\,  ~-____,  
+                            _-                     (
+
+An experiment in learning Scala using the fun of building a MUD as the learning vehicle.

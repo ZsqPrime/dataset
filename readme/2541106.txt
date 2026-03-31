@@ -1,0 +1,4 @@
+Project Description:
+An implementation of Bandelt et al's 1999 algorithm for constructing median joining networks for inferring intraspecific phylogenies
+
+README:

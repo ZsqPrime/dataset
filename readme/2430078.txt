@@ -1,0 +1,11 @@
+# Simply - A Dashboard.
+
+Stay tuned!
+
+Project Description:
+A dashboard written in HTML, CSS and JS.
+
+README:
+# Simply - A Dashboard.
+
+Stay tuned!

@@ -1,0 +1,12 @@
+# Getting Started with Scala on Heroku/Cedar
+
+See http://devcenter.heroku.com/articles/scala
+
+
+Project Description:
+None
+
+README:
+# Getting Started with Scala on Heroku/Cedar
+
+See http://devcenter.heroku.com/articles/scala

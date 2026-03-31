@@ -1,0 +1,243 @@
+模块:
+ ☐ Array
+	☺包装增强化 2013.9.5
+	☺min  2013.8.29
+	☺max  2013.8.29
+	☺delRepeat  2013.8.29
+	☺unique  2013.8.29
+	☺contains  2013.8.29
+	☺removeAt  2013.8.29
+	☺remove  2013.8.29
+	☺resortArray  2013.8.29
+	☺merge  2013.8.29
+	☺union  2013.8.29
+	☺countToGroup  2013.8.29
+	☺flatten  2013.9.11
+ ☐ animate 2013.8.28
+	☺重构,剥离dom操作 2013.9.4
+ ☐ Browser
+	 ☺eventSupported  2013.8.27
+	 ☺addFavorite
+	 ☺setHomepage
+	 ☺ref
+	 ☺isPageMinimized
+	 ☺detectOS 2013.8.29
+	 ☺direction 2013.8.30
+	 ☺detectDevice 2013.8.30
+	 ☺browser 2013.9.4
+	 ☺cookie 2013.9.6
+	 ☺store 2013.9.6
+	 ☺swfVersion 2013.9.9
+ ☐ Connection
+	 ☺sendData(修正bug 2013.9.9)
+	 ☺addQueryUrlParam
+	 ☺o2Json
+	 ☺getUrlArgs
+	 ☺getUrlParam
+	 ☺dictAndMd5ize
+	 ☺parse
+	 ☺stringify
+	 ☺parseJSON 2013.8.28
+	 ☺parseXML 2013.8.28
+	 ☺AJAX 2013.8.29
+		☺失败重连 2013.8.29
+		☺缓存结果 2013.8.29
+		☺createXHR 2013.8.29
+		☺globalEval 2013.8.29
+	 ☺createUUID 2013.9.3
+	 ☺loadCSS 2013.9.3
+	 ☺loadJS 2013.9.3
+ ☐ Css
+	 ☺dynamicInsertCss
+	 ☺addCssRule
+	 ☺toHex
+	 ☺parseColor
+	 ☺setOpacity 2013.8.29
+	 ☺fadeIn 2013.8.29
+	 ☺fadeOut 2013.8.29
+	 ☺getRandomColor 2013.8.29
+	 ☺YFTfade 2013.9.9
+ ☐ FnHelper
+	 ☺bind 2013.10.1
+	 ☺throttle
+	 ☺uncurryThis
+	 ☺curryThis
+	 ☺connect
+	 ☺simpleAtQuene
+	 ☺memorize
+	 ☺timeTest
+	 ☺reload 2013.8.29
+ ☐ html5
+	 ☺readFile
+	 ☺Stylesheet
+ ☐ Node
+	 ☺sibling
+	 ☺replaceNode
+	 ☺swapNode
+	 ☺rmnode
+	 ☺getInnerText
+	 ☺setInnerText
+	 ☺writeIframe
+	 ☺insertAdjacentHTML
+	 ☺insertAdjacentText
+	 ☺contains
+	 ☺removeHtmlTag 2013.8.27
+	 ☺deepth 2013.8.27
+	 ☺isName 2013.8.28
+	 ☺getIframe 2013.8.29
+	 ☺hasClass 2013.8.30
+	 ☺addClass 2013.8.30
+	 ☺removeClass 2013.8.30
+	 ☺toggleClass 2013.9.2
+	 ☺parents 2013.9.3
+	 ☺nextAll 2013.9.3
+	 ☺prevAll 2013.9.3
+	 ☺getDocument 2013.9.9
+	 ☺getWindow 2013.9.9
+	 ☺cleanBlank 2013.9.11
+ ☐ NumberHelper
+	 ☺bigAdd
+	 ☺bigMutple
+	 ☺getRandom
+	 ☺isInteger
+	 ☺pad 2013.8.27
+	 ☺isEqual 2013.8.29
+	 ☺sign 2013.8.30
+	 ☺toUint32 2013.8.30
+	 ☺sqrt 2013.9.26
+ ☐ StringHelper
+ 	 ☺random36 2013.9.4
+	 ☺trim
+	 ☺ltrim
+	 ☺rtrim
+	 ☺chineseSubstr
+	 ☺chineseLen
+	 ☺camelize
+	 ☺underscored
+	 ☺escapeHTML
+	 ☺unescapeHTML
+	 ☺startsWith
+	 ☺endsWith
+	 ☺reverse
+	 ☺deleteLast 2013.8.27
+	 ☺ellipsis 2013.8.27
+	 ☺formalString 2013.9.4
+	 ☺包装增强化 2013.9.5
+	 ☺toHalfAngle 2013.9.11
+ ☐ Position
+	 ☺getScroll
+	 ☺getCoords
+	 ☺getMousePosition
+	 ☺getWholeHeight
+	 ☺windowHeight
+	 ☺selection 2013.8.27
+ ☐ Util
+	☺getType
+	☺mixin
+	☺each
+	☺isEqual 2013.8.28
+	☺isWindow 2013.8.28
+	☺isEmpty 2013.8.28
+	@namespace 2013.8.30
+	@template 2013.9.17
+	@formatDate 2013.10.8
+ ☐ Event
+ http://www.cnblogs.com/bluedream2009/archive/2010/04/07/1706564.html
+http://www.cnblogs.com/bluedream2009/archive/2010/08/23/1806865.html
+http://www.cnblogs.com/bluedream2009/archive/2010/07/11/1775216.html
+	@customEvent 2013.9.20
+ ☐ tester
+   @批量测试用例执行器 2013.10.8
+   @assert 2013.10.8
+   
+#以下为附加组件
+
+
+ ☐ hasher
+   @兼容处理hachchange的路由工具库 2013.9.20
+ ☐ loader
+   @符合amd规范的一个简单加载器实现 2013.6.8
+ ☐ jScroll
+   @移动端平滑滚动库 2013.9.25
+ ☐ quene
+   @类似jquery callback的一个实现 2013.3.2
+ ☐ validator
+   @验证插件 2013.4.5 
+   
+对象包装:
+ ☐ 考虑对象的包装
+ http://www.cnblogs.com/bluedream2009/archive/2011/07/02/2096309.html
+ 维护注释与进行测试:
+ ☐ tester
+ ☐ Array
+ ☐ Browser
+ ☐ Connection
+ ☐ Css
+ ☐ FnHelper
+ ☐ html5
+ ☐ Node
+ ☐ NumberHelper
+ ☐ StringHelper
+ ☐ Position
+ ☐ Util
+ ☐ Event
+ 
+ 还想做的:
+ 
+ async操作 http://99jty.com/?p=1152
+ promise库   http://www.silverna.org/blog/?p=279
+ http://www.raychase.net/1329
+ 
+ 
+ pjax https://github.com/welefen/pjax
+ hashchange+dataChange
+ 
+ jsonp 
+ 
+ svg操作库 
+  https://github.com/sunnylost/Swanks/blob/master/swanks.js
+ http://e.xingdian.com/image-map/test.html
+ http://petercollingridge.co.uk/data-visualisation/mouseover-effects-svgs
+ http://petercollingridge.co.uk/data-visualisation/using-javascript-control-svg
+ 
+ 
+ canvas滤镜库 http://blog.csdn.net/jia20003/article/details/9195915
+ http://www.html5rocks.com/en/tutorials/canvas/imagefilters/
+ http://www.cssha.com/javascript-image-blending-algorithm
+ 
+ 
+ 要看的参考资料:
+51js的资源 http://www.cnblogs.com/bluedream2009/archive/2009/08/07/1541152.html
+ javascript标准教程 http://javascript.ruanyifeng.com/
+ wrapper:
+ http://www.cnblogs.com/bluedream2009/archive/2011/07/02/2096309.html
+ http://www.cnblogs.com/bluedream2009/archive/2011/01/06/1926941.html
+  http://www.cnblogs.com/bluedream2009/archive/2010/04/27/1722071.html
+ 
+ 
+ esquiz http://www.cnblogs.com/bluedream2009/archive/2010/02/21/1670610.html
+
+ 
+ 要看的参考库
+ 
+ http://www.cnblogs.com/jkisjk/tag/QWrap  qwarp 解析
+ https://github.com/RubyLouvre/mass-Framework
+ http://sugarjs.com/api
+ 
+
+ https://github.com/chenmnkken/easyjs/blob/master/core/src
+ https://github.com/zhengyinhui100/handy
+ 
+ 
+ https://github.com/kriskowal/es5-shim/blob/master/es5-shim.js
+ https://github.com/xkizer/Meeveep/tree/d95db9dcf6cf9e603c2ac0e2047d60ba5893b9ce/www/node_modules/cli-color/node_modules/es5-ext
+ 已经看完了number math了
+ 
+ https://github.com/sstephenson/prototype/blob/master/src/prototype/dom/layout.js  帮助很大
+ https://github.com/dlueth/qoopido.js
+ 
+ https://github.com/acelan86/sinaads/blob/master/src/sinaadToolkit.js
+ 
+ http://www.cnblogs.com/nuysoft/
+ 
+ http://gallery.kissyui.com/coms  kissy的组件库，参考价值很高

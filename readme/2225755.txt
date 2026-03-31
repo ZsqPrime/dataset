@@ -1,0 +1,4 @@
+Project Description:
+Grails Plugin that provides all post codes of Switzerland
+
+README:

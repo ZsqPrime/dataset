@@ -1,0 +1,24 @@
+Frontend Bundle
+===============
+
+This bundle provides a Frontend environment for an AlphaLemon CMS websites
+
+Documentation
+-------------
+
+Under construction
+
+
+Project Description:
+Provides a Frontend environment for AlphaLemon CMS websites
+
+README:
+Frontend Bundle
+===============
+
+This bundle provides a Frontend environment for an AlphaLemon CMS websites
+
+Documentation
+-------------
+
+Under construction

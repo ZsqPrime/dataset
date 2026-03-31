@@ -1,0 +1,101 @@
+Project Description:
+Web forms CRUD UI with Snap framework and Redis
+
+README:
+#+SEQ_TODO: MAYBE SOMEDAY BLOCKED TODO WAITING | DONE
+
+* Overview
+  We provide generic CRUD web interface for forms, which are defined
+  as collections of fields of different types. Templating is done
+  completely on client side using JavaScript. Server backend is
+  powered by [[https://github.com/dzhus/snaplet-redson][snaplet-redson]].
+
+** Models
+
+   Form definitions (models) use JSON syntax supported by
+   [[https://github.com/dzhus/snaplet-redson][snaplet-redson]] and basically enumerate fields present in the form.
+   Homebrew basic type system is used (currently view widget for field
+   is rendered with regard to field type; form validation, when
+   implemented, could use type information as well).
+
+   Models are stored in `.js` files under `resources/models/`
+   directory.
+
+   Refer to [[https://github.com/dzhus/snaplet-redson][snaplet-redson]] for form definition syntax.
+
+** Frontend
+   
+   Our frontend code uses form defintion to build form model and view.
+   [[http://documentcloud.github.com/backbone/][Backbone]] JavaScript framework is used to implement binding model to
+   view and making automatic server requests to restore/save form
+   instance on server (see `/resources/static/js/metamodel.js`). Upon
+   loading the page, model JSON is requested from [[https://github.com/dzhus/snaplet-redson][snaplet-redson]] at
+   `/_/<formid>/model/` URL, and processed into Backbone model
+   definition. Backbone model provides fetch(), save() and destroy()
+   methods which result in appropriate requests being sent to server.
+
+   `/` serves title page (which is in fact the same for any <formid>)
+   with all the code required to process models on client side. Redson
+   snaplet is nested under `_/` URL, which provides server API
+   compatible to Backbone.sync.
+
+   `renderFormView` function builds an HTML form for model fields,
+   which is rendered to page. [[http://knockoutjs.com][Knockout]] is used to keep model data in
+   sync with form contents. [[https://github.com/kmalakoff/knockback][Knockback]] is used to bind Backbone model
+   to form.
+
+   Render function uses [[https://github.com/janl/mustache.js][Mustache.js]] coupled with templates served
+   along with index HTML page under "field-template" class in
+   "text/template" script elements. Template `id` must contain
+   `<ftype>-field-template` to be used for rendering model fields of
+   type `<ftype>`. Fields of unknown types are rendered using
+   `unknown-field-template`. Rendering is done using context of field
+   object from metamodel.
+
+   Per-field write permissions are respected during form rendering.
+
+   `/resource/static/js/load-model.js` provides utility functions to
+   instantiate Backbone model & view for form, as well as selecting
+   different form or calling its remove() method, which sends a delete
+   request to server.
+
+** Authentication
+
+   `/login` provides login screen on GET and logs user in on POST,
+   whereas `/logout` logouts user. Any attempts to access URLs under
+   `/_` require login.
+
+* To do
+
+** Snap
+** Frontend
+*** TODO Respect whole-form permissions
+    - [ ] Do not show edit buttons for read-only forms.
+    - [ ] Show error messages on unauthorized access.
+*** TODO Render form once for a model
+    Somewhy we can't just render form once and bind it to different
+    model instances using ko.applyBindings && kb.vmRelease (field get
+    blank when input starts).
+*** TODO Client settings
+    Some settings need to be served to client code (to use in JS):
+   
+    - serverSyncThrottle;
+    - serverSyncDelay;
+    - timelineUpdateInterval;
+
+** Metamodel
+*** TODO Aggregate fields
+    Certain fields should support «explosion» into several detailed
+    sub-fields which may be combined (in a custom-defined way) to
+    produce new parent field value.
+*** TODO Suckins
+    Show dynamically-loaded data when entering a field (possible
+    propose field contents completion from this data)
+*** TODO Indexed fields
+    Fields should support "index" boolean attribute, in which case
+    inverse index for that field should be created in Redis.
+
+    Consider {"name": "code", "index": true} field for `scp` model,
+    then if code field of model N is set to K, update must append N to
+    `scp:code:K` to N. This will allow faster searching by field
+    contents.

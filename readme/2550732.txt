@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+this is a learning repository for scala
+from the twitter scala school
+http://twitter.github.com/scala_school/

@@ -1,0 +1,8 @@
+20120124 Initial version inspired into TrelloScrum extension.
+
+
+Project Description:
+google chrome extension which allow link your jira issues from trello board
+
+README:
+20120124 Initial version inspired into TrelloScrum extension.

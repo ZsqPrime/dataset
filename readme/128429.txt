@@ -1,0 +1,7 @@
+Blog Aggregator
+
+Project Description:
+Blog Aggregator with DB for AppDev Univ
+
+README:
+Blog Aggregator

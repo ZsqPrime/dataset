@@ -1,0 +1,75 @@
+h2. JFlow - Interactive Source-to-source Program Transformations for Flow-Based Parallelism
+
+Emerging applications demand new parallel abstractions. Traditional parallel abstractions such as Data Parallelism and Task Parallelism, while necessary, do not fully the needs of today’s multi-threaded commercial applications. Emerging applications in the domain of recognition, mining and synthesis (RMS); image and video processing; information flow; and automatic financial trading exhibit flow-based forms of parallelism. How can we assist developers in taking advantage of such forms of parallelism?
+
+We propose a solution based on interactive source-to-source transformations. Interactive source-to-source transformations engage the developer, i.e., the domain expert in the process of parallelizing and optimizing an application. 
+
+JFlow is licensed under the Illinois/NCSA Open Source License. See LICENSE.txt for details.
+
+h2. Getting started
+
+h4. Development
+
+Prerequisites:
+
+* Install Eclipse RCP 3.8 (SR1) from http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/junosr1
+* Check out "Zest 2.0":http://marketplace.eclipse.org/content/zest from the Eclipse marketplace
+* Check out the source code from this repository using Git
+* Initialize the WALA and JDT submodule using @git submodule init@ followed by @git submodule update@
+* Import the following projects into a new Eclipse workspace
+** WALA
+*** com.ibm.wala.cast
+*** com.ibm.wala.cast.java
+*** com.ibm.wala.core
+*** com.ibm.wala.core.testdata
+*** com.ibm.wala.core.tests
+*** com.ibm.wala.core.ide
+*** com.ibm.wala.core.ide.jdt
+*** com.ibm.wala.shrike
+*** com.ibm.wala.util
+** JDT
+*** org.eclipse.jdt.core (in jdt/org.eclipse.jdt)
+*** org.eclipse.jdt.core.manipulation (in jdt/org.eclipse.jdt.ui)
+*** org.eclipse.jdt.ui (in jdt/org.eclipse.jdt.ui)
+* Follow the instructions on the "WALA wiki":http://wala.sourceforge.net/wiki/index.php/UserGuide:Getting_Started for configuring WALA for your system.
+
+
+
+Project Description:
+Interactive Source-to-source Transformations for Flow-based Applications
+
+README:
+h2. JFlow - Interactive Source-to-source Program Transformations for Flow-Based Parallelism
+
+Emerging applications demand new parallel abstractions. Traditional parallel abstractions such as Data Parallelism and Task Parallelism, while necessary, do not fully the needs of today’s multi-threaded commercial applications. Emerging applications in the domain of recognition, mining and synthesis (RMS); image and video processing; information flow; and automatic financial trading exhibit flow-based forms of parallelism. How can we assist developers in taking advantage of such forms of parallelism?
+
+We propose a solution based on interactive source-to-source transformations. Interactive source-to-source transformations engage the developer, i.e., the domain expert in the process of parallelizing and optimizing an application. 
+
+JFlow is licensed under the Illinois/NCSA Open Source License. See LICENSE.txt for details.
+
+h2. Getting started
+
+h4. Development
+
+Prerequisites:
+
+* Install Eclipse RCP 3.8 (SR1) from http://www.eclipse.org/downloads/packages/eclipse-rcp-and-rap-developers/junosr1
+* Check out "Zest 2.0":http://marketplace.eclipse.org/content/zest from the Eclipse marketplace
+* Check out the source code from this repository using Git
+* Initialize the WALA and JDT submodule using @git submodule init@ followed by @git submodule update@
+* Import the following projects into a new Eclipse workspace
+** WALA
+*** com.ibm.wala.cast
+*** com.ibm.wala.cast.java
+*** com.ibm.wala.core
+*** com.ibm.wala.core.testdata
+*** com.ibm.wala.core.tests
+*** com.ibm.wala.core.ide
+*** com.ibm.wala.core.ide.jdt
+*** com.ibm.wala.shrike
+*** com.ibm.wala.util
+** JDT
+*** org.eclipse.jdt.core (in jdt/org.eclipse.jdt)
+*** org.eclipse.jdt.core.manipulation (in jdt/org.eclipse.jdt.ui)
+*** org.eclipse.jdt.ui (in jdt/org.eclipse.jdt.ui)
+* Follow the instructions on the "WALA wiki":http://wala.sourceforge.net/wiki/index.php/UserGuide:Getting_Started for configuring WALA for your system.

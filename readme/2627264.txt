@@ -1,0 +1,5 @@
+Project Description:
+Структура папок и файлов взята из zend. Сделано очень похоже. Используется для простейших сайтов. cmf. габлонизатор прикручен smarty.
+
+README:
+This file was created by JetBrains PhpStorm 2.1.5 for binding GitHub repository

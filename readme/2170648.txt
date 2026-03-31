@@ -1,0 +1,65 @@
+18-549 Embedded Systems Capstone Project
+
+Virtual RC
+
+Requires the OpenCV library (with the python wrapper). Instructions for
+installing it on Ubuntu here:
+
+https://help.ubuntu.com/community/OpenCV
+
+Requires tons of libraries. At least(!):
+	OpenCV 2.7 (anything before doesn't have BackgroundMOGSubtractor2)
+	libboost1.46-dev
+	libbost1.46-all-dev
+	libpython2.7 (compiling from source is hard! Find the repo if you can
+			and install using aptitude)
+	cvbloblibs8.3 (need to compile from source. Compile with -fPIC (modify
+				Makefile))
+
+Compile in the top directory using make -j. game.py is the full game while
+MOGBlob is the standalone tracker
+
+TODO:
+-Move code to separate files to keep our filesize down
+-Add checks for calibration. Most importantly, have the game display where it
+thinks the corners of the map are (put visual indicators in the track image).
+-Add ability to detect too much noise. Perhaps automatically restarting the
+tracker and webcam if necessary (with different settings).
+-Add a better track (wider!) with some small curves.
+-Flush out the game (start/finish, timing, items, prevent people from cheating)
+
+
+
+Project Description:
+
+
+README:
+18-549 Embedded Systems Capstone Project
+
+Virtual RC
+
+Requires the OpenCV library (with the python wrapper). Instructions for
+installing it on Ubuntu here:
+
+https://help.ubuntu.com/community/OpenCV
+
+Requires tons of libraries. At least(!):
+	OpenCV 2.7 (anything before doesn't have BackgroundMOGSubtractor2)
+	libboost1.46-dev
+	libbost1.46-all-dev
+	libpython2.7 (compiling from source is hard! Find the repo if you can
+			and install using aptitude)
+	cvbloblibs8.3 (need to compile from source. Compile with -fPIC (modify
+				Makefile))
+
+Compile in the top directory using make -j. game.py is the full game while
+MOGBlob is the standalone tracker
+
+TODO:
+-Move code to separate files to keep our filesize down
+-Add checks for calibration. Most importantly, have the game display where it
+thinks the corners of the map are (put visual indicators in the track image).
+-Add ability to detect too much noise. Perhaps automatically restarting the
+tracker and webcam if necessary (with different settings).
+-Add a better track (wider!) with some small curves.
+-Flush out the game (start/finish, timing, items, prevent people from cheating)

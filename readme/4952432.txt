@@ -1,0 +1,5 @@
+Project Description:
+Github API binding and connect support.
+
+README:
+# spring-social-github is no longer actively maintained by VMware, Inc.

@@ -1,0 +1,5 @@
+Project Description:
+A Project for tracking a person's finances using Natural Language Processing
+
+README:
+CHECK BRANCHES FOR CODE

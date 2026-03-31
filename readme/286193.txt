@@ -1,0 +1,149 @@
+// To COPY the code from the repository on github
+
+$ git clone git@github.com:tkostreva/Mo_Ro.git
+
+// To merge REMOTE to LOCAL Repo
+
+$ git pull origin master
+
+// To commit changes to code to your LOCAL git repository (Must be done before code commit to GITHUB)
+
+$ git add ******filename to be add***********
+$ git commit -m 'message you want to attach to this particular commit'
+
+  - OR -
+
+$ git commit -a -m 'your message here'
+
+// To commit changes to the repository on GITHUB
+-- if you've never pushed to this repository --
+
+$ git remote add origin git@github.com:tkostreva/Mo_Ro
+
+-- THEN --
+
+// Pull from remote to update your commit with any changes anyone else has made
+$git pull origin master
+
+// then update the REMOTE repository with your code
+
+$ git push origin master
+
+
+COMMENT THIS CODE (see theta_cal or filter if you want to keep headers consistent )
+
+PID_Control.c		Spencer - check
+PID_Control.h		Spencer - check
+filter.c		Tim
+filter.h		Tim
+matvec.c		Spencer - check
+matvec.h		Spencer - check
+northstar.c		Jun
+northstar.h		Jun
+position.c		Jun
+position.h		Jun
+robot_assign1.c		Spencer
+theta_cal.c		Tim
+wheel_encoder.c		Jun
+wheel_encoder.h		Jun
+
+
+Project Description:
+None
+
+README:
+// To COPY the code from the repository on github
+
+
+
+$ git clone git@github.com:tkostreva/Mo_Ro.git
+
+
+
+// To merge REMOTE to LOCAL Repo
+
+
+
+$ git pull origin master
+
+
+
+// To commit changes to code to your LOCAL git repository (Must be done before code commit to GITHUB)
+
+
+
+$ git add ******filename to be add***********
+
+$ git commit -m 'message you want to attach to this particular commit'
+
+
+
+  - OR -
+
+
+
+$ git commit -a -m 'your message here'
+
+
+
+// To commit changes to the repository on GITHUB
+
+-- if you've never pushed to this repository --
+
+
+
+$ git remote add origin git@github.com:tkostreva/Mo_Ro
+
+
+
+-- THEN --
+
+
+
+// Pull from remote to update your commit with any changes anyone else has made
+
+$git pull origin master
+
+
+
+// then update the REMOTE repository with your code
+
+
+
+$ git push origin master
+
+
+
+
+
+COMMENT THIS CODE (see theta_cal or filter if you want to keep headers consistent )
+
+
+
+PID_Control.c		Spencer - check
+
+PID_Control.h		Spencer - check
+
+filter.c		Tim
+
+filter.h		Tim
+
+matvec.c		Spencer - check
+
+matvec.h		Spencer - check
+
+northstar.c		Jun
+
+northstar.h		Jun
+
+position.c		Jun
+
+position.h		Jun
+
+robot_assign1.c		Spencer
+
+theta_cal.c		Tim
+
+wheel_encoder.c		Jun
+
+wheel_encoder.h		Jun

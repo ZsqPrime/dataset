@@ -1,0 +1,20 @@
+Project Description:
+Sollten Sie diesen Quellcode selbst (weiter)verwenden wollen, fragen Sie doch einfach bei uns nach... | Autoren: staribxc, phi1010 (Phillip Kuhrt) | Facebook: https://www.facebook.com/der.vertretungsplan | IRC: irc.esper.net #vertretungsplan http://webcha
+
+README:
+Sollten Sie diesen Quellcode selbst (weiter)verwenden wollen, fragen Sie doch einfach bei uns nach...
+
+Autoren:
+--------
+staribxc
+phi1010 (Phillip Kuhrt)
+
+Facebook:
+---------
+https://www.facebook.com/der.vertretungsplan
+
+IRC:
+----
+irc.esper.net
+#vertretungsplan
+http://webchat.esper.net/?channels=#vertretungsplan

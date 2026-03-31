@@ -1,0 +1,4 @@
+Project Description:
+A fluent configuration library that can handle easy configurations and mappings to dynamics objects
+
+README:

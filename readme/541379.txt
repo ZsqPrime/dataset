@@ -1,0 +1,12 @@
+AFS misc area for odd items and generally keeping code snippets.
+
+Code is licensed under the Apache Software License unless otherwise noted.
+
+
+Project Description:
+General "bits and pieces" repository.
+
+README:
+AFS misc area for odd items and generally keeping code snippets.
+
+Code is licensed under the Apache Software License unless otherwise noted.

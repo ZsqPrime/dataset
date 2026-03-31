@@ -1,0 +1,10 @@
+Project Description:
+Getting started apps for SC
+
+README:
+==========================================================================
+Project:   GettingStarted
+Copyright: @2012 My Company, Inc.
+==========================================================================
+
+TODO: Describe Your Project

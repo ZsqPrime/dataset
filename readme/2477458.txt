@@ -1,0 +1,13 @@
+sicp
+====
+
+An ongoing quest to complete (most of) the exercises in SICP
+
+Project Description:
+An ongoing quest to complete (most of) the exercises in SICP
+
+README:
+sicp
+====
+
+An ongoing quest to complete (most of) the exercises in SICP

@@ -1,0 +1,11 @@
+Code examples created during my learning Google Guava library. 
+
+Slides and more details are available here: http://tomaszdziurko.pl/2012/02/google-guava/
+
+Project Description:
+Various examples of usage Google Guava API.
+
+README:
+Code examples created during my learning Google Guava library. 
+
+Slides and more details are available here: http://tomaszdziurko.pl/2012/02/google-guava/

@@ -1,0 +1,7 @@
+Project Description:
+Storage for CSCI 7000 final project
+
+README:
+
+2012-03-06	mh	I added my example build environment to the Windows_build
+directory. Maybe this is helpful to someone.

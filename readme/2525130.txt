@@ -1,0 +1,5 @@
+Project Description:
+Interactive educational institution simulator
+
+README:
+School Tycoon will rob you of all your money.

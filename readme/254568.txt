@@ -1,0 +1,7 @@
+Zepto window scroll plugin
+
+Project Description:
+Scroll window or DOM nodes with zepto
+
+README:
+Zepto window scroll plugin

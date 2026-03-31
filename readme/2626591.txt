@@ -1,0 +1,9 @@
+Project Description:
+A implementation of a database supporting queries with join and distinct. etc
+
+README:
+Use the attached MakeFile to create.
+Project done by:
+Abhiram J    2901-5299
+
+Implemented: Join has not been implemented yet. Distinct(q5) is running with valgrind. Other operators have been implemented.

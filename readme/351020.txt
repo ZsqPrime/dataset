@@ -1,0 +1,17 @@
+This is a simple PERL script that helps embedding resources into the CSS file using data URI scheme.
+
+USAGE:
+
+  embed.pl style.css > style_embedded.css
+
+
+
+Project Description:
+Script that embeds CSS resources using data URI.
+
+README:
+This is a simple PERL script that helps embedding resources into the CSS file using data URI scheme.
+
+USAGE:
+
+  embed.pl style.css > style_embedded.css

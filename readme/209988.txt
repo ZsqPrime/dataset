@@ -1,0 +1,12 @@
+In browser extensions and other environments where scripts are known to be local, we can use a synchronous version of the CommonJS require() function to implement CommonJS module loading. This implementation is compatible with CommonJS module without requiring any wrapping or other modification.
+
+We use [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace) to generate a stacktrace on a variety of browser platforms. This is needed so that modules can be loaded using relative paths. so you'll need to make it is loaded before loading browser-require.
+
+
+Project Description:
+Implementation of CommonJS require() function for use in client-side environments where synchronous loading is appropriate (e.g. browser extension).
+
+README:
+In browser extensions and other environments where scripts are known to be local, we can use a synchronous version of the CommonJS require() function to implement CommonJS module loading. This implementation is compatible with CommonJS module without requiring any wrapping or other modification.
+
+We use [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace) to generate a stacktrace on a variety of browser platforms. This is needed so that modules can be loaded using relative paths. so you'll need to make it is loaded before loading browser-require.

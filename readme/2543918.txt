@@ -1,0 +1,25 @@
+Project Description:
+15 puzzle is powered by ruby and shoesrb 3 (GUI) 
+
+README:
+15 puzzle is powered by ruby and shoesrb 3 (GUI).
+
+For correct puzzle work  needed:
+ruby 1.9.x or older (visit http://www.ruby-lang.org/)
+shoesrb 3 (visit http://shoesrb.com/) 
+
+Example of use:
+
+ shoes main.rb
+
+Project branches:
+
+	master - main branch. Just core files.
+	windows - branch for maintenance of windows version the game.
+	linux - branch for maintenance of linux version the game.
+	
+For more information please visit http://melnickforever.github.com/15Puzzle/
+I hope you will enjoy this app too.
+
+Thanks
+Dmitry

@@ -1,0 +1,11 @@
+Project Description:
+R and ggplot2 snippets.
+
+README:
+
+Toying around with R and ggplot2.
+
+
+brew install r
+R
+> install.packages("ggplot2")

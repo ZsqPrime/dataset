@@ -1,0 +1,12 @@
+This seems as good a place as any to store my templates.
+
+WIP - started working in the repo again, 
+
+
+Project Description:
+A set of GPL templates which make coding more funner!
+
+README:
+This seems as good a place as any to store my templates.
+
+WIP - started working in the repo again,

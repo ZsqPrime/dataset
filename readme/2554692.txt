@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+This is the expanded Math class for ActionScript 3.

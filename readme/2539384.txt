@@ -1,0 +1,28 @@
+Project Description:
+Screen-recording software for Max OS X Lion.
+
+README:
+
+  This is a Max OS X Lion application whose eventual goal is to be a fully-
+fledged screen-recording program.
+
+Todo:
+    (general)
+        optimize in any way possible
+        refactor
+        improve the UI
+    (future)
+        record a selected area of the screen, or float around it
+        different formats
+        webcam integration
+        allow it to replace file
+        internationalization
+        name of screen
+    (far future)
+        integration with docs, pics
+    (after the end of the world future)
+        Windows version
+
+Authors:
+    carlor (nathanmswan at gmail dot com)
+    want to be on this list? place a pull request!

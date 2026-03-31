@@ -1,0 +1,10 @@
+ChIP-seq data analysis with R + Bioconductor
+Itoshi NIKAIDO <dritoshi@gmail.com>
+
+
+Project Description:
+ChIP-seq data analysis with R + Bioconductor
+
+README:
+ChIP-seq data analysis with R + Bioconductor
+Itoshi NIKAIDO <dritoshi@gmail.com>

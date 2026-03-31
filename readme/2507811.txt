@@ -1,0 +1,14 @@
+smtp
+====
+
+This package provides client support for SMTP.
+
+
+Project Description:
+Haskell client support for SMTP
+
+README:
+smtp
+====
+
+This package provides client support for SMTP.

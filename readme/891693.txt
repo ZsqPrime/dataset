@@ -1,0 +1,8 @@
+# Moved to https://github.com/DBCDK/selenese-tests
+
+
+Project Description:
+repository for automatic test scripts
+
+README:
+# Moved to https://github.com/DBCDK/selenese-tests

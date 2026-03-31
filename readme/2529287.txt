@@ -1,0 +1,7 @@
+Project Description:
+This software is used to build a Healthcare Monitoring Application capable of receiving monitored data from BAWSN. The application need SOAP interface for receiving the data from the BAWSN and can used to send Alert message using SMS. However SMS module i
+
+README:
+1. The folder HealthcareApplication contains all the necessary codes for the Server based healthcare application.
+2. The folder MobileApplication contains the necessary files for sending information through SOAP to the server
+   and the basic programming codes in J2ME for GUI.

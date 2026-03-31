@@ -1,0 +1,46 @@
+= Sync =
+
+The Python Sync Server is composed of four parts:
+
+* ''server-core'': library containing various helpers. 
+* ''server-storage'': the storage server. 
+* ''server-reg'': the user registration/management server.
+* ''server-full'': a server that reunites the server and the user servers so
+you can run everything in a single box.
+
+
+= Running The Sync Server =
+
+Please refer to the online documentation at http://docs.services.mozilla.com/howtos/run-sync.html
+
+== More documentation, Feedback ==
+
+- Dev guide: http://docs.services.mozilla.com
+- IRC channel: #sync. See http://irc.mozilla.org/
+- Mailing list: https://mail.mozilla.org/admin/services-dev
+
+
+Project Description:
+Project that stitches together a full server stack for Firefox Sync
+
+README:
+= Sync =
+
+The Python Sync Server is composed of four parts:
+
+* ''server-core'': library containing various helpers. 
+* ''server-storage'': the storage server. 
+* ''server-reg'': the user registration/management server.
+* ''server-full'': a server that reunites the server and the user servers so
+you can run everything in a single box.
+
+
+= Running The Sync Server =
+
+Please refer to the online documentation at http://docs.services.mozilla.com/howtos/run-sync.html
+
+== More documentation, Feedback ==
+
+- Dev guide: http://docs.services.mozilla.com
+- IRC channel: #sync. See http://irc.mozilla.org/
+- Mailing list: https://mail.mozilla.org/admin/services-dev

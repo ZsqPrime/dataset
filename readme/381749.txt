@@ -1,0 +1,7 @@
+Code for manipulating, cleaning, analyzing, and visualizing data for the Occupy movement
+
+Project Description:
+Code for manipulating, cleaning, analyzing, and visualizing data for the Occupy movement
+
+README:
+Code for manipulating, cleaning, analyzing, and visualizing data for the Occupy movement

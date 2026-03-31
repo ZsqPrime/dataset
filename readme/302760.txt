@@ -1,0 +1,5 @@
+Description:
+Vim plugin: Provide smart input assistant
+
+README:
+README not available

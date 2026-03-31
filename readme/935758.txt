@@ -1,0 +1,12 @@
+### What is jsDICOM?
+
+It's a pure javascript library for processing DICOM files using node.js.
+
+
+Project Description:
+DICOM in pure javascript, for node.js.
+
+README:
+### What is jsDICOM?
+
+It's a pure javascript library for processing DICOM files using node.js.

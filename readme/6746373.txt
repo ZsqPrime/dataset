@@ -1,0 +1,7 @@
+Project Description:
+Benchmark and performance related projects for Service Stack's components
+
+README:
+# Northwind Benchmarks
+
+Contains all benchmarks and performance related projects and tools related to ServiceStack or any of its sub modules.

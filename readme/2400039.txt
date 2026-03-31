@@ -1,0 +1,119 @@
+
+Use the other branch for maven (simpler) project with JForex 2016 and Encog 2016 updated jar's.
+
+Trading with dukascopy and Encog Neural framework:
+
+
+Install and run from command line this little sample which :
+
+-Downloads data
+-Analyses via Elman networks , and makes a quick training / evaluation.
+
+Dependencies :
+
+Encog Framework :https://github.com/encog/encog-java-core.git
+JForex API : http://www.dukascopy.com/client/jforexlib/publicrepo/ 
+Quantisan's utils : https://github.com/Quantisan/JForex-Utilities
+
+you can run directly from the command line the compiled version in the downloads (for a quick example) by doing:
+java -jar EncogDukascopy.jar USERNAME PASSWORD 
+
+where username and password are you logins at dukascopy.
+
+
+Compiled Jar's :
+
+Dukascopy :
+http://www.dukascopy.com/client/jforexlib/JForexClientLibrary.zip
+
+Quantisan's :
+https://github.com/downloads/fxmozart/DukasCopy-Encog/JFUtil.jar
+
+Encog :
+
+https://github.com/downloads/encog/encog-java-core/encog-core-3.0.1-release.zip
+
+
+
+Contact: fxmozart@gmail.com
+
+
+Project Description:
+Trading at Dukascopy with Encog neural framework
+
+README:
+
+
+Use the other branch for maven (simpler) project with JForex 2016 and Encog 2016 updated jar's.
+
+
+
+Trading with dukascopy and Encog Neural framework:
+
+
+
+
+
+Install and run from command line this little sample which :
+
+
+
+-Downloads data
+
+-Analyses via Elman networks , and makes a quick training / evaluation.
+
+
+
+Dependencies :
+
+
+
+Encog Framework :https://github.com/encog/encog-java-core.git
+
+JForex API : http://www.dukascopy.com/client/jforexlib/publicrepo/ 
+
+Quantisan's utils : https://github.com/Quantisan/JForex-Utilities
+
+
+
+you can run directly from the command line the compiled version in the downloads (for a quick example) by doing:
+
+java -jar EncogDukascopy.jar USERNAME PASSWORD 
+
+
+
+where username and password are you logins at dukascopy.
+
+
+
+
+
+Compiled Jar's :
+
+
+
+Dukascopy :
+
+http://www.dukascopy.com/client/jforexlib/JForexClientLibrary.zip
+
+
+
+Quantisan's :
+
+https://github.com/downloads/fxmozart/DukasCopy-Encog/JFUtil.jar
+
+
+
+Encog :
+
+
+
+https://github.com/downloads/encog/encog-java-core/encog-core-3.0.1-release.zip
+
+
+
+
+
+
+
+Contact: fxmozart@gmail.com

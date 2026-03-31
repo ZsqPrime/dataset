@@ -1,0 +1,5 @@
+Project Description:
+New Lua widgets for SpringRTS
+
+README:
+New, work in progress widgets

@@ -1,0 +1,12 @@
+An experimental class to rotate (CSS transform) elements
+
+IE implementation is broken, I know.
+
+
+Project Description:
+cross browser rotation test
+
+README:
+An experimental class to rotate (CSS transform) elements
+
+IE implementation is broken, I know.

@@ -1,0 +1,117 @@
+Report Magic for Analog 2.21 Readme File
+Copyright (C) 1999-2014 Jeremy Wadsack. All Right Reserved.
+Portions copyright (C) 1999 DNS.
+
+Report Magic for Analog is an add-on formatting utility for Analog 
+web site statistics software. Report Magic uses the statistics generated 
+by Analog and formatting options set by you to make readable, presentable 
+reports of your Web site data.
+
+LICENSE
+-------
+Please see docs/license.html for details.
+
+DOCUMENTATION
+-------------
+Please see the documentation starting at docs/index.html for complete
+instructions on using Report Magic for Analog.
+
+INSTALLATION
+------------
+Installation instructions are located in the files docs/inst_src.html, 
+docs/inst_win.html and docs/inst_mac/html. They are also available on 
+the Web at http://www.reportmagic.org/.
+
+KNOWN BUGS
+----------
+Please post any issues to the GitHub project. https://github.com/jeremywadsack/reportmagic/issues
+
+LATEST VERSION
+--------------
+The latest version of Report Magic can always be found at at 
+http://www.reportmagic.org/.
+
+FEEDBACK
+--------
+Comments, questions and suggestions are always appreciated. Feedback on 
+Report Magic for Analog can be submitted to https://github.com/jeremywadsack/reportmagic/issues.
+
+
+
+Project Description:
+Report Magic makes usable statistics from your web site log file analysis.
+
+README:
+Report Magic for Analog 2.21 Readme File
+
+Copyright (C) 1999-2014 Jeremy Wadsack. All Right Reserved.
+
+Portions copyright (C) 1999 DNS.
+
+
+
+Report Magic for Analog is an add-on formatting utility for Analog 
+
+web site statistics software. Report Magic uses the statistics generated 
+
+by Analog and formatting options set by you to make readable, presentable 
+
+reports of your Web site data.
+
+
+
+LICENSE
+
+-------
+
+Please see docs/license.html for details.
+
+
+
+DOCUMENTATION
+
+-------------
+
+Please see the documentation starting at docs/index.html for complete
+
+instructions on using Report Magic for Analog.
+
+
+
+INSTALLATION
+
+------------
+
+Installation instructions are located in the files docs/inst_src.html, 
+
+docs/inst_win.html and docs/inst_mac/html. They are also available on 
+
+the Web at http://www.reportmagic.org/.
+
+
+
+KNOWN BUGS
+
+----------
+
+Please post any issues to the GitHub project. https://github.com/jeremywadsack/reportmagic/issues
+
+
+
+LATEST VERSION
+
+--------------
+
+The latest version of Report Magic can always be found at at 
+
+http://www.reportmagic.org/.
+
+
+
+FEEDBACK
+
+--------
+
+Comments, questions and suggestions are always appreciated. Feedback on 
+
+Report Magic for Analog can be submitted to https://github.com/jeremywadsack/reportmagic/issues.

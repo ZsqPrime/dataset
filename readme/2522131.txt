@@ -1,0 +1,4 @@
+Project Description:
+Game score received by rs232 is written to flash memory and returned back if needed
+
+README:

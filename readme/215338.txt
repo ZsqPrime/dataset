@@ -1,0 +1,20 @@
+=========
+BallCraft
+=========
+
+``System.out.println("Hello, ballcraft!");``
+
+*COMP3111H Project, HKUST*
+
+
+Project Description:
+An android game.
+
+README:
+=========
+BallCraft
+=========
+
+``System.out.println("Hello, ballcraft!");``
+
+*COMP3111H Project, HKUST*

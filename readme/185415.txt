@@ -1,0 +1,6 @@
+
+
+Project Description:
+Example app for Ember.js
+
+README:

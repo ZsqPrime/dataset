@@ -1,0 +1,156 @@
+GitlogParser - Converts the output of `git log` to different
+               output types
+
+Copyright (C) 2012, by:  Dennis Christ <jaed1@gmx.net>
+
+
+Explanation
+---------------------------------------------------------------
+"GitlogParser" is used for an automated build of different
+filetypes out of your `git log` command.
+
+List of current support filetypes:
+- RSS Feed
+- SQL File
+- HTML File
+
+
+Version
+---------------------------------------------------------------
+1.9
+
+
+Manual
+---------------------------------------------------------------
+* Gitlog to RSS
+Usage:
+    ./gitlog_to_rss.pl --repo /path/to/repository
+
+Options:
+    --repo REPO         Path to your Git repository
+    --count COUNT       Count of commits that shoud be parsed
+                        Default: All commits
+    --outfile FILE      Name and path of generated RSS file
+                        Default: $PWD/feed.rss
+    --title TITLE       Title of your RSS Feed
+                        Default: "Title of the RSS 2.0 Feed"
+    --desc DESC         Description of your RSS Feed
+                        Default: "RSS 2.0 feed description"
+    --link LINK         Link of your RSS Feed
+                        Default: http://dev-blog.doesntmatter.de
+    --github            Links your commits to github
+    --prompt            Prompt for input and do not use options
+    --help              Show this output
+
+* Gitlog to SQL
+Usage:
+    ./gitlog_to_sql.pl --repo /path/to/repository
+
+Options:
+    --repo REPO         Path to your Git repository
+    --count COUNT       Count of commits that shoud be parsed
+                        Default: All commits
+    --outfile FILE      Name and path of generated SQL file
+                        Default: $PWD/log.sql
+    --table TABLE       Preferred table name
+                        Default: gitlog
+    --replace           Use REPLACE statement for queries
+    --prompt            Prompt for input and do not use options
+    --help              Show this output
+
+* Gitlog to HTML
+Usage:
+    ./gitlog_to_html.pl --repo /path/to/repository
+
+Options:
+    --repo REPO         Path to your Git repository
+    --count COUNT       Count of commits that shoud be parsed
+                        Default: All commits
+    --outfile FILE      Name and path of generated SQL file
+                        Default: $PWD/log.html
+    --title TITLE       Title of your HTML page
+                        Default: "Title of the HTML Page"
+    --github            Links your commits to github
+    --prompt            Prompt for input and do not use options
+    --help              Show this output
+
+
+Project Description:
+Converts the output of `git log` to different output types
+
+README:
+GitlogParser - Converts the output of `git log` to different
+               output types
+
+Copyright (C) 2012, by:  Dennis Christ <jaed1@gmx.net>
+
+
+Explanation
+---------------------------------------------------------------
+"GitlogParser" is used for an automated build of different
+filetypes out of your `git log` command.
+
+List of current support filetypes:
+- RSS Feed
+- SQL File
+- HTML File
+
+
+Version
+---------------------------------------------------------------
+1.9
+
+
+Manual
+---------------------------------------------------------------
+* Gitlog to RSS
+Usage:
+    ./gitlog_to_rss.pl --repo /path/to/repository
+
+Options:
+    --repo REPO         Path to your Git repository
+    --count COUNT       Count of commits that shoud be parsed
+                        Default: All commits
+    --outfile FILE      Name and path of generated RSS file
+                        Default: $PWD/feed.rss
+    --title TITLE       Title of your RSS Feed
+                        Default: "Title of the RSS 2.0 Feed"
+    --desc DESC         Description of your RSS Feed
+                        Default: "RSS 2.0 feed description"
+    --link LINK         Link of your RSS Feed
+                        Default: http://dev-blog.doesntmatter.de
+    --github            Links your commits to github
+    --prompt            Prompt for input and do not use options
+    --help              Show this output
+
+* Gitlog to SQL
+Usage:
+    ./gitlog_to_sql.pl --repo /path/to/repository
+
+Options:
+    --repo REPO         Path to your Git repository
+    --count COUNT       Count of commits that shoud be parsed
+                        Default: All commits
+    --outfile FILE      Name and path of generated SQL file
+                        Default: $PWD/log.sql
+    --table TABLE       Preferred table name
+                        Default: gitlog
+    --replace           Use REPLACE statement for queries
+    --prompt            Prompt for input and do not use options
+    --help              Show this output
+
+* Gitlog to HTML
+Usage:
+    ./gitlog_to_html.pl --repo /path/to/repository
+
+Options:
+    --repo REPO         Path to your Git repository
+    --count COUNT       Count of commits that shoud be parsed
+                        Default: All commits
+    --outfile FILE      Name and path of generated SQL file
+                        Default: $PWD/log.html
+    --title TITLE       Title of your HTML page
+                        Default: "Title of the HTML Page"
+    --github            Links your commits to github
+    --prompt            Prompt for input and do not use options
+    --help              Show this output

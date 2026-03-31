@@ -1,0 +1,5 @@
+Project Description:
+A sample code for drawing on SurfaceView
+
+README:
+This is a simple sample application that I wrote to try out different things in Android SurfaceView.

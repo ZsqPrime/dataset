@@ -1,0 +1,26 @@
+Use:
+
+python htaccess-changer.py -me
+Htaccess only for your ip.
+
+python htaccess-changer.py 
+Allow htaccess for you and other ip
+
+Run program and insert info.
+Ps. You need permission to write on the folder when you run program 
+
+
+Project Description:
+Customize your htaccess with console and upload it!
+
+README:
+Use:
+
+python htaccess-changer.py -me
+Htaccess only for your ip.
+
+python htaccess-changer.py 
+Allow htaccess for you and other ip
+
+Run program and insert info.
+Ps. You need permission to write on the folder when you run program

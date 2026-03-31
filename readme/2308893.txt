@@ -1,0 +1,6 @@
+
+
+Project Description:
+This is Maven archetype that produces executable jars like NetBeans does (deps in lib/)
+
+README:

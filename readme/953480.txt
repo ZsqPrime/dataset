@@ -1,0 +1,13 @@
+device_htc_blackstone
+=====================
+
+Device config for HTC Touch HD
+
+Project Description:
+Device config for HTC Touch HD
+
+README:
+device_htc_blackstone
+=====================
+
+Device config for HTC Touch HD

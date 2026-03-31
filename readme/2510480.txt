@@ -1,0 +1,20 @@
+# Eldis Package.
+
+
+# Summary
+
+
+# Usage
+
+
+Project Description:
+A wrapper for working with the Eldis API
+
+README:
+# Eldis Package.
+
+
+# Summary
+
+
+# Usage

@@ -1,0 +1,37 @@
+Project Description:
+
+
+README:
+= Rain
+
+A lightweight CMS and text editor for Ruby on Rails.
+
+= Setup
+
+Run rake rain:install:migrations to copy migrations to your app's migrations directory,
+then run rake db:migrate as usual.
+
+= Integration with your App
+
+* Rain requires a filter called require_admin which returns true if the user is an admin and redirects
+  the user as appropriate otherwise.
+
+* Rain requires helpers called is_admin? and logged_in? which must also be included in ApplicationController.
+
+* Rain requires jQuery.
+
+* Rain requires jQuery UI.
+
+* Rain requires the Apple effect overlay from jQuery Tools. This is automatically included with Rain.
+
+* Rain requires you to run the helper method 'puddle' somewhere on your layout.
+
+* You will need to include the rain javascript in your application.js
+  (make sure it is loaded after all the jQuery libraries have been loaded)
+
+* You will need to load CKEditor. See the dummy app for an example. Internet Explorer
+  seems to have problems unless you load it first.
+
+* You will need to include the the rain stylesheet in application.css
+
+TODO: how to customize ckeditor stylesheet to match your site

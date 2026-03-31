@@ -1,0 +1,167 @@
+= Doku: solve Sudoku-like puzzles!
+
+Doku is a Ruby[http://www.rubylang.org/] gem for solving Sudoku-like puzzles using the {Dancing Links}[http://en.wikipedia.org/wiki/Dancing_Links] algorithm by Donald Knuth.
+
+Currently it supports these puzzles:
+
+* Sudoku
+* Hexadoku
+* Hexamurai
+
+== Installation
+
+At the command line, type
+
+  gem install doku
+
+You might need to prefix the command with <code>sudo</code> depending on where your gems are stored.
+
+== Example code
+
+  require 'rubygems'
+  require 'doku'
+  
+  puzzle = Doku::Sudoku.new <<END
+  ...|..8|...
+  ..7|.35|..9
+  5..|4.6|8..
+  ---+---+---
+  ...|..4|2..
+  4..|...|.37
+  8..|...|5..
+  ---+---+---
+  .9.|.67|...
+  ..3|...|1.5
+  ...|...|..3
+  END
+  
+  puts puzzle.solve || "No solutions."
+
+== Introduction
+
+This gem is designed to solve Sudoku-like puzzles.  For the purposes of this gem, a "Sudoku-like" puzzle is a defined to be a puzzle consisting of a set of glyphs (i.e. symbols), a set of squares, and a set of groups of squares.  Additionally, the number of squares in each group must be equal to the number of glyphs.  Given a partial assignment of glyphs to squares, the goal is to assign a glyph to every square such that no two squares in the same group are assigned the same glyph.
+
+For example, in Sudoku, the glyphs are the numbers 0 through 9, the squares are the squares of a 9x9 grid, and the groups consist of nine rows, nine columns, and nine 3x3 squares.
+
+Every Sudoku-like puzzle can be reduced to an {exact cover problem}[http://en.wikipedia.org/wiki/Exact_cover].  From there it can be efficiently solved with the {Dancing Links}[http://arxiv.org/abs/cs/0011047] algorithm discovered by Donald Knuth.  That is the main purpose of this gem.
+
+== Classes and Modules Overview
+
+The <b>Doku::DancingLinks</b> module contains several classes that comprise a general-purpose implementation of the Dancing Links algorithm.  This module is included in the Doku gem for convenience, but it is not specifically for solving Sudoku-like puzzles; it can be applied to any exact cover problem.
+
+The <b>Doku::Puzzle</b> class is an abstract class for working with Sudoku-like puzzles.  It implements the concepts of groups, glyphs and squares.  Each instance of this class represents a particular assignment of glyphs to squares; at its core, an instance is just a hash where the keys are squares and the values are glyphs.  This class provides <code>[]</code> and <code>[]=</code> methods for reading and modifying instances of the puzzle, and it makes <code>dup</code> and <code>clone</code> work correctly.  This class provides equality comparison and solution checking.
+
+The Puzzle class includes the <b>Doku::SolvableWithDancingLinks</b> module which provides methods for solving puzzles using Doku::DancingLinks.  The solutions returned are instances of Puzzle.  This module is the glue that connects Doku::Puzzle to Doku::DancingLinks.
+
+The <b>Doku::SquareOnGrid</b> module is useful for any Sudoku-like puzzle that can be drawn on a 2D grid.  It implements the string representations of the puzzle by providing an <code>initialize</code> method that creates puzzles from strings and a <code>to_s</code> method that creates strings from puzzles.  It also provides convenient <code>get</code> and <code>set</code> methods for reading and modifying instances of the puzzle using grid coordinates.
+
+The classes <b>Doku::Sudoku</b>, <b>Doku::Hexadoku</b>, and <b>Doku::Hexamurai</b> all inherit from Doku::Puzzle and include Doku::SquareOnGrid.  As a user of the gem, these are the classes you will probably interact with most of the time.  Because of the framework set up by Doku::Puzzle and include Doku::SquareOnGrid, the definitions of these classes are short and the methods provided by each of them are rich and consistent with eachother.
+
+== Detailed Documentation
+
+For detailed documentation of every class, module, and method go to the {rubydoc.info page}[http://rubydoc.info/github/DavidEGrayson/doku/master/frames] and look for the Class List.
+
+== Contributing
+
+You are invited to fork the {Doku github repository}[https://github.com/DavidEGrayson/doku] and work on improving the gem.
+
+There are many directions this gem could go in.  The direction will be determined by user feedback and by whatever the developers feel like working on.  Possible improvements could be:
+
+* A command-line utility for solving puzzles.  This requires us to define a file format for puzzles.
+* A C extension or a column size cache to make the Dancing Links algorithm faster.
+* Hooks for providing progress updates during the solving of hard puzzles.
+* Outputting puzzles in SVG format.  Could include SVG animations that show the process of solving the puzzle!
+* More types of puzzles that are solvable (e.g. puzzles that have groups with fewer squares than the number of glyphs).
+* Improve this page.  Ideally the method names should be linkified on the {rubydoc.info page}[http://rubydoc.info/github/DavidEGrayson/doku/master/frames], but I still want something presentable to be on the {github repository}[https://github.com/DavidEGrayson/doku].  Here's an example of a link that looks good on RubyDoc.info but not on github: {Doku::Sudoku Sudoku}.  If either YARD or Github could be configured to use a different file on the front page, that would suffice!
+
+To report bugs, use the {github issues page}[https://github.com/DavidEGrayson/doku/issues].
+
+== Philosophy
+
+This gem is meant to showcase beautiful Ruby code.  Test-driven development was used at all times during the development of this gem.  I have spent many hours reviewing the code, looking for ways to make it simpler, and refactoring it.  Every class and public method is documented.  Every method is short.  There are no ugly hacks.  All method names were chosen carefully.  At every level, the power of the Ruby language is exploited to its fullest potential.  --David Grayson
+
+Project Description:
+Ruby gem for solving Sudoku-like puzzles using the Dancing Links algorithm by Donald Knuth.
+
+README:
+= Doku: solve Sudoku-like puzzles!
+
+Doku is a Ruby[http://www.rubylang.org/] gem for solving Sudoku-like puzzles using the {Dancing Links}[http://en.wikipedia.org/wiki/Dancing_Links] algorithm by Donald Knuth.
+
+Currently it supports these puzzles:
+
+* Sudoku
+* Hexadoku
+* Hexamurai
+
+== Installation
+
+At the command line, type
+
+  gem install doku
+
+You might need to prefix the command with <code>sudo</code> depending on where your gems are stored.
+
+== Example code
+
+  require 'rubygems'
+  require 'doku'
+  
+  puzzle = Doku::Sudoku.new <<END
+  ...|..8|...
+  ..7|.35|..9
+  5..|4.6|8..
+  ---+---+---
+  ...|..4|2..
+  4..|...|.37
+  8..|...|5..
+  ---+---+---
+  .9.|.67|...
+  ..3|...|1.5
+  ...|...|..3
+  END
+  
+  puts puzzle.solve || "No solutions."
+
+== Introduction
+
+This gem is designed to solve Sudoku-like puzzles.  For the purposes of this gem, a "Sudoku-like" puzzle is a defined to be a puzzle consisting of a set of glyphs (i.e. symbols), a set of squares, and a set of groups of squares.  Additionally, the number of squares in each group must be equal to the number of glyphs.  Given a partial assignment of glyphs to squares, the goal is to assign a glyph to every square such that no two squares in the same group are assigned the same glyph.
+
+For example, in Sudoku, the glyphs are the numbers 0 through 9, the squares are the squares of a 9x9 grid, and the groups consist of nine rows, nine columns, and nine 3x3 squares.
+
+Every Sudoku-like puzzle can be reduced to an {exact cover problem}[http://en.wikipedia.org/wiki/Exact_cover].  From there it can be efficiently solved with the {Dancing Links}[http://arxiv.org/abs/cs/0011047] algorithm discovered by Donald Knuth.  That is the main purpose of this gem.
+
+== Classes and Modules Overview
+
+The <b>Doku::DancingLinks</b> module contains several classes that comprise a general-purpose implementation of the Dancing Links algorithm.  This module is included in the Doku gem for convenience, but it is not specifically for solving Sudoku-like puzzles; it can be applied to any exact cover problem.
+
+The <b>Doku::Puzzle</b> class is an abstract class for working with Sudoku-like puzzles.  It implements the concepts of groups, glyphs and squares.  Each instance of this class represents a particular assignment of glyphs to squares; at its core, an instance is just a hash where the keys are squares and the values are glyphs.  This class provides <code>[]</code> and <code>[]=</code> methods for reading and modifying instances of the puzzle, and it makes <code>dup</code> and <code>clone</code> work correctly.  This class provides equality comparison and solution checking.
+
+The Puzzle class includes the <b>Doku::SolvableWithDancingLinks</b> module which provides methods for solving puzzles using Doku::DancingLinks.  The solutions returned are instances of Puzzle.  This module is the glue that connects Doku::Puzzle to Doku::DancingLinks.
+
+The <b>Doku::SquareOnGrid</b> module is useful for any Sudoku-like puzzle that can be drawn on a 2D grid.  It implements the string representations of the puzzle by providing an <code>initialize</code> method that creates puzzles from strings and a <code>to_s</code> method that creates strings from puzzles.  It also provides convenient <code>get</code> and <code>set</code> methods for reading and modifying instances of the puzzle using grid coordinates.
+
+The classes <b>Doku::Sudoku</b>, <b>Doku::Hexadoku</b>, and <b>Doku::Hexamurai</b> all inherit from Doku::Puzzle and include Doku::SquareOnGrid.  As a user of the gem, these are the classes you will probably interact with most of the time.  Because of the framework set up by Doku::Puzzle and include Doku::SquareOnGrid, the definitions of these classes are short and the methods provided by each of them are rich and consistent with eachother.
+
+== Detailed Documentation
+
+For detailed documentation of every class, module, and method go to the {rubydoc.info page}[http://rubydoc.info/github/DavidEGrayson/doku/master/frames] and look for the Class List.
+
+== Contributing
+
+You are invited to fork the {Doku github repository}[https://github.com/DavidEGrayson/doku] and work on improving the gem.
+
+There are many directions this gem could go in.  The direction will be determined by user feedback and by whatever the developers feel like working on.  Possible improvements could be:
+
+* A command-line utility for solving puzzles.  This requires us to define a file format for puzzles.
+* A C extension or a column size cache to make the Dancing Links algorithm faster.
+* Hooks for providing progress updates during the solving of hard puzzles.
+* Outputting puzzles in SVG format.  Could include SVG animations that show the process of solving the puzzle!
+* More types of puzzles that are solvable (e.g. puzzles that have groups with fewer squares than the number of glyphs).
+* Improve this page.  Ideally the method names should be linkified on the {rubydoc.info page}[http://rubydoc.info/github/DavidEGrayson/doku/master/frames], but I still want something presentable to be on the {github repository}[https://github.com/DavidEGrayson/doku].  Here's an example of a link that looks good on RubyDoc.info but not on github: {Doku::Sudoku Sudoku}.  If either YARD or Github could be configured to use a different file on the front page, that would suffice!
+
+To report bugs, use the {github issues page}[https://github.com/DavidEGrayson/doku/issues].
+
+== Philosophy
+
+This gem is meant to showcase beautiful Ruby code.  Test-driven development was used at all times during the development of this gem.  I have spent many hours reviewing the code, looking for ways to make it simpler, and refactoring it.  Every class and public method is documented.  Every method is short.  There are no ugly hacks.  All method names were chosen carefully.  At every level, the power of the Ruby language is exploited to its fullest potential.  --David Grayson

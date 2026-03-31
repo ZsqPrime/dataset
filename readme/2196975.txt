@@ -1,0 +1,7 @@
+ActiveRecord models to work with Wordpress databases
+
+Project Description:
+ActiveRecord models to work with Wordpress databases
+
+README:
+ActiveRecord models to work with Wordpress databases

@@ -1,0 +1,16 @@
+This repository contains JSON Schema Draft 03 documents that describe JSON sent
+between NCS Navigator Field[0] and NCS Navigator Cases[1].
+
+[0]: https://github.com/NUBIC/ncs_navigator_field
+[1]: https://github.com/NUBIC/ncs_navigator_core
+
+
+Project Description:
+JSON schema and validation tools for NCS Navigator Core <-> field client communication
+
+README:
+This repository contains JSON Schema Draft 03 documents that describe JSON sent
+between NCS Navigator Field[0] and NCS Navigator Cases[1].
+
+[0]: https://github.com/NUBIC/ncs_navigator_field
+[1]: https://github.com/NUBIC/ncs_navigator_core

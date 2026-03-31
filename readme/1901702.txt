@@ -1,0 +1,81 @@
+== shoulda_create
+
+Restores should_create functionality to shoulda.
+
+I like using should_create and friends to make assertions about records coming and going in the database.
+
+Shoulda did, but doesn't any more. With this, it can again.
+
+Some ideological dispute, I guess.  I complained to one of the thoughtbot guys, and he said "that's the joy of open source, you can build your own".  Well, here it is.
+
+== Examples
+
+  context 'POST to :create' do
+    setup { post :create, :email => 'bob@example.com', :name => 'Bob Dobbs' }
+    # simple usage
+    should_create :user
+
+    # asserting records are neither created nor destroyed
+    should_not_change_record_count_of :blog_posts
+
+    # asserting a change in some state other than simple row count
+    should_change("number of Bobs", :by => 1){ User.where("name ILIKE '%bob%'").count }
+
+    # the subject can be a class rather than a symbol:
+    should_create Audited::Adapters::ActiveRecord::Audit
+
+    # ... or it can be a table name: (remember to pluralize)
+    should_create 'audits'
+    
+    # the to can be a proc: (when using factories and ids are not known at context setup time)
+    should_change('the user group', :to => lambda{ @group.id }){ @user.reload.group_id }
+  end
+
+== License
+
+shoulda_create is released under the MIT license:
+
+* http://www.opensource.org/licenses/MIT
+
+Project Description:
+Restores should_create functionality to shoulda.
+
+README:
+== shoulda_create
+
+Restores should_create functionality to shoulda.
+
+I like using should_create and friends to make assertions about records coming and going in the database.
+
+Shoulda did, but doesn't any more. With this, it can again.
+
+Some ideological dispute, I guess.  I complained to one of the thoughtbot guys, and he said "that's the joy of open source, you can build your own".  Well, here it is.
+
+== Examples
+
+  context 'POST to :create' do
+    setup { post :create, :email => 'bob@example.com', :name => 'Bob Dobbs' }
+    # simple usage
+    should_create :user
+
+    # asserting records are neither created nor destroyed
+    should_not_change_record_count_of :blog_posts
+
+    # asserting a change in some state other than simple row count
+    should_change("number of Bobs", :by => 1){ User.where("name ILIKE '%bob%'").count }
+
+    # the subject can be a class rather than a symbol:
+    should_create Audited::Adapters::ActiveRecord::Audit
+
+    # ... or it can be a table name: (remember to pluralize)
+    should_create 'audits'
+    
+    # the to can be a proc: (when using factories and ids are not known at context setup time)
+    should_change('the user group', :to => lambda{ @group.id }){ @user.reload.group_id }
+  end
+
+== License
+
+shoulda_create is released under the MIT license:
+
+* http://www.opensource.org/licenses/MIT

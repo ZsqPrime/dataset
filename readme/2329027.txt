@@ -1,0 +1,11 @@
+Project Description:
+
+
+README:
+PHP implementation of the 1.8 zabbix sender protocol
+
+http://www.zabbix.com/wiki/doc/tech/proto/zabbixsenderprotocol
+
+WARNING: This is completely untested code i had on my machine.
+I'll remove this warning and put up some docs as soon as i'm
+done with it!

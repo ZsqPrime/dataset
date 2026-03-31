@@ -1,0 +1,8 @@
+Project Description:
+C++ XML Library 
+
+README:
+Just an XML library for me to play around with some ideas.
+
+TODO:
+Namespaces

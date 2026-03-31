@@ -1,0 +1,26 @@
+AUDIO5
+
+Description :
+Audio5 est un lecteur audio utilisant HTML5 proposant une alternative Flash, il est ainsi utilisable sur tout les navigateurs.
+
+Instruction d'installation dans le Wiki AUDIO5 : 
+https://github.com/FreePostPas/AUDIO5/wiki
+
+
+Project Description:
+Script PHP permettant en 4 lignes d'avoir un code HTML5 video ou audio ciblé par navigateur avec une alternative FLASH : DewPlayer ou DewTube.
+
+README:
+AUDIO5
+
+
+
+Description :
+
+Audio5 est un lecteur audio utilisant HTML5 proposant une alternative Flash, il est ainsi utilisable sur tout les navigateurs.
+
+
+
+Instruction d'installation dans le Wiki AUDIO5 : 
+
+https://github.com/FreePostPas/AUDIO5/wiki

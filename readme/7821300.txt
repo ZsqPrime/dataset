@@ -1,0 +1,9 @@
+Project Description:
+Python script to renew a PlanetLab slice using the PLCAPI.
+
+README:
+Renews a PlanetLab slice using the PLCAPI.
+
+To get started:
+
+> python plc_slice_renew.py -h

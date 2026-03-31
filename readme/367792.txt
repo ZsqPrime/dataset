@@ -1,0 +1,11 @@
+== Softball
+
+This is an application to help with scheduling for the West Cobb Girls Softball Association
+
+Project Description:
+None
+
+README:
+== Softball
+
+This is an application to help with scheduling for the West Cobb Girls Softball Association

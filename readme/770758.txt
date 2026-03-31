@@ -1,0 +1,12 @@
+# Ian's WebGL Tests
+
+Written in early 2012 before ThreeJS became the de facto standard...
+
+
+Project Description:
+(OUTDATED - 2011) Experiments with GLGE
+
+README:
+# Ian's WebGL Tests
+
+Written in early 2012 before ThreeJS became the de facto standard...

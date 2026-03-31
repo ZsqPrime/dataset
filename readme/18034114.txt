@@ -1,0 +1,27 @@
+# MScanner
+
+## What it does
+
+MScanner retrieves Medline abstracts using machine learning. The input is a list of PubMed IDs of articles on some topic, and the output is a page of articles most relevant  to the topic as inferred from the examples. 
+
+It provides both a library for evaluating ML classification algorithms used for retrieval, and a web interface for interacting with it as a retrieval service.
+
+## Background
+
+I wrote MScanner for my Masters Thesis  "[Rapid statistical classification on the Medline database of biomedical literature](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=b395162e3e7e5419a032d377c8ded17ec793a8bf)", submitted in June 2008, with an earlier version of the algorithm published in BMC as "[MScanner: a classifier for retrieving Medline citations](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-108)"
+
+## Archival
+
+The code was written over 2006-2008, last updated in 2012, and was written in Python 2.5 to run on a Solaris box.
+
+MScanner's library dependencies such as path.py and Gnuplot-py are similarly ancient, and unavailable on Python 2.7.
+
+The code will not run on Python 2.7 without first replacing those dependencies, and so is now Archived.
+
+## How Mscanner works
+
+MScanner uses Naive Bayes classification on features extracted from the Medline citation database. 
+
+I am proud of finding a mathematical improvement to Laplace Smoothing for feature count regularization (see Page 51-52 of the thesis), which yields unbiased estimates of model parameters even with radically different class sizes in training. For example, providing 10 positive examples of relevant citations, and using the other 16 million articles in Medline as implied negative/irrelevant examples for training purposes.
+
+MScanner uses some search engine techniques to speed up classification, including numerical feature coding with variable-length integers, and wass able to rank about 500k abstracts per second in single-threaded operation on a 2005-era Solaris box.

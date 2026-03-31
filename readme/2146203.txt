@@ -1,0 +1,8 @@
+Update this with stuff
+
+
+Project Description:
+An Android application for the University of Western Ontario Engineering faculty.
+
+README:
+Update this with stuff

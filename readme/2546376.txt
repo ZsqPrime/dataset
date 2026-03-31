@@ -1,0 +1,5 @@
+Project Description:
+[B]asic Sh[ell]: A shell that aims to be small, fast, simple, and fully POSIX compliant.
+
+README:
+bell is a [b]asic sh[ell] for the POSIX Environment.

@@ -1,0 +1,7 @@
+Ohai!
+
+Project Description:
+AN ENVIRONMENT UNFRIENDLY GAME : A web based game developed by Team Awesome at Montreal hackaton in Jan 2012.
+
+README:
+Ohai!

@@ -1,0 +1,7 @@
+Project Description:
+Projektowanie kompleksowych systemow komputerowych v2
+
+README:
+Prjekt na zajecie z Projektowanie kompleksowych systemow komputerowych
+Ma robic MES dla temperatury
+Będzie w cocoa na Mac

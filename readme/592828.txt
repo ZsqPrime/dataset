@@ -1,0 +1,128 @@
+DDL - D(eimos) Dynamic Loader
+=============================
+
+The D(eimos) Dynamic Loader allows loading dynamic C libraries at run time.
+Consult its [API documentation](http://jkm.github.com/ddl/ddl.html) for more
+information.
+
+Dependencies
+============
+
+On Posix systems you need to link against libdl. libdl's license must permit
+linking considering ddl's license. A libdl implementation licensed under LGPL is
+fine.
+
+There are no dependencies on Windows systems.
+
+Configure and Build
+===================
+
+Don't forget to update the submodules if you haven't cloned recursively.
+
+	$ git submodule init; git submodule update;
+
+Use [premake4](https://bitbucket.org/goughy/premake-dev-d/) to configure ddl.
+
+	$ premake4 gmake
+	$ make
+
+Testing
+=======
+
+See directory tests/ for some usage examples.
+
+The tests assume that there is the standard C library and the OpenSSL library
+installed on your system. Thus, the tests may fail for good reason on your
+system. But please report any problem.
+
+	$ make config=tests
+
+Cleaning
+========
+
+Clean created binaries
+
+	$ make clean
+
+Clean all created files
+
+	$ premake4 clean
+
+Issues
+======
+
+Check for [issues](https://github.com/jkm/ddl/issues) on github.
+Please report any issues you encounter.
+
+Licence
+=======
+
+This software is released under the [Boost License
+1.0](http://www.boost.org/LICENSE_1_0.txt).
+
+
+Project Description:
+D(eimos) Dynamic Loader
+
+README:
+DDL - D(eimos) Dynamic Loader
+=============================
+
+The D(eimos) Dynamic Loader allows loading dynamic C libraries at run time.
+Consult its [API documentation](http://jkm.github.com/ddl/ddl.html) for more
+information.
+
+Dependencies
+============
+
+On Posix systems you need to link against libdl. libdl's license must permit
+linking considering ddl's license. A libdl implementation licensed under LGPL is
+fine.
+
+There are no dependencies on Windows systems.
+
+Configure and Build
+===================
+
+Don't forget to update the submodules if you haven't cloned recursively.
+
+	$ git submodule init; git submodule update;
+
+Use [premake4](https://bitbucket.org/goughy/premake-dev-d/) to configure ddl.
+
+	$ premake4 gmake
+	$ make
+
+Testing
+=======
+
+See directory tests/ for some usage examples.
+
+The tests assume that there is the standard C library and the OpenSSL library
+installed on your system. Thus, the tests may fail for good reason on your
+system. But please report any problem.
+
+	$ make config=tests
+
+Cleaning
+========
+
+Clean created binaries
+
+	$ make clean
+
+Clean all created files
+
+	$ premake4 clean
+
+Issues
+======
+
+Check for [issues](https://github.com/jkm/ddl/issues) on github.
+Please report any issues you encounter.
+
+Licence
+=======
+
+This software is released under the [Boost License
+1.0](http://www.boost.org/LICENSE_1_0.txt).

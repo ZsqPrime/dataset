@@ -1,0 +1,8 @@
+this project will post funny message when build red or green
+
+
+Project Description:
+post weibo or twitter from ci
+
+README:
+this project will post funny message when build red or green

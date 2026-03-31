@@ -1,0 +1,9 @@
+Project Description:
+A dumb classes to do rice and beans; but dumb.
+
+README:
+This is a Dumb classes package that do the rice and beans.
+
+Like the package says, it's all dumb... we have a better way to do this, but it was more easy and fast to code.
+
+fuck off ;)

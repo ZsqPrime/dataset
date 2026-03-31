@@ -1,0 +1,9 @@
+== agilex.persistence
+Some handy classes to implement the repository pattern for use with FluentNHibernate
+
+Project Description:
+Set of classes to ease use of repository pattern with fluent nhibernate
+
+README:
+== agilex.persistence
+Some handy classes to implement the repository pattern for use with FluentNHibernate

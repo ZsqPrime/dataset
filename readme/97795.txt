@@ -1,0 +1,8 @@
+See https://github.com/timrdf/DataFAQs/wiki
+
+
+Project Description:
+LINKED DATA QUALITY REPORTS
+
+README:
+See https://github.com/timrdf/DataFAQs/wiki

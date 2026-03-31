@@ -1,0 +1,5 @@
+Project Description:
+Search API for Arabic in ActionScript 3
+
+README:
+ActionScript 3 Search API for Arabic text using regular expressions.

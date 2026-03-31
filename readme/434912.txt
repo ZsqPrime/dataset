@@ -1,0 +1,5 @@
+Project Description:
+Bukkit Plugin to change Display Names.
+
+README:
+DispNameChanger or DNC for short is a Bukkit.org plugin that allows a user to change their display name. It has Spout integration so a user can change the Display Name above their head.

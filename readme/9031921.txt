@@ -1,0 +1,4 @@
+Project Description:
+Community4WCF (C4W) -  Standalone Application (WCF 1)
+
+README:

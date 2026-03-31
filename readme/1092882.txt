@@ -1,0 +1,6 @@
+
+
+Project Description:
+Static Rails application through Heroku to use as a footnote to blog posts to disclaim having any idea what I'm saying
+
+README:

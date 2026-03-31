@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+See README in Mash1_SC.  This is the rerun using cat files chip_export.txt and SC_input_export.txt

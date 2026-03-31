@@ -1,0 +1,18 @@
+Project Description:
+Universion audio downloader in Python
+
+README:
+Welcome to open-source VK audio downloader!
+This command-line utility can help you easy to download music from vk.com.
+
+Requirements:
+1. Windows NT
+2. Python 2.7
+
+Installation:
+1. Copy files on your PC
+2. Double-click on "run.bat" file or "vk_download.py" file
+
+
+UPDATE:
+The project is out of date! Not supported!

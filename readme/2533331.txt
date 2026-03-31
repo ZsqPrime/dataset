@@ -1,0 +1,4 @@
+Project Description:
+A Broadcast Plugin For Bukkit Enhanced By Spout.
+
+README:

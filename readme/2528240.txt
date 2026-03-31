@@ -1,0 +1,4 @@
+Project Description:
+Posts new top songs (new as #1) for the month automatically to /r/music and in the future, twitter, facebook, etc.
+
+README:

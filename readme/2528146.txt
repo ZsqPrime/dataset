@@ -1,0 +1,24 @@
+Project Description:
+Character counter and enforcer for input and textarea; jQuery plugin
+
+README:
+This aim to be jQuery plugin that adds a COUNTER for INPUT and TEXTAREA, and also adds maxlenght, in a simple to use way, for both static and dynamicly added input fields.
+
+The use is simple as:
+
+    $.InputLimitCounter().run()
+
+Or using configurations:
+
+    $.InputLimitCounter({
+      attr     : 'data-input-limit',  // any string that may be HTML attribute
+      position : 'after',             // OR 'before'
+      classes  : 'limit_input',       // any valid class= attribute like 'counter blue'
+      tag      : 'span',              // any valid tag, 'div', 'p', etc
+      template : "(CUR/MAX)",         // may use reserved words CUR, MAX, REM, [S]. The last being plural for remaining
+    }).run()
+
+See form-limit.html for practical example and better understanding!
+
+* chose by default 'data-input-limit' attribute over 'maxlength', so only selected fields will have the counter added
+* textarea maxlength is only enforced on browsers that properly support this HTML5 attribute

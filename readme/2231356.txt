@@ -1,0 +1,14 @@
+Project Description:
+ALPV optional exercise 12 
+
+README:
+Pong Clone for more than 2 players with network support
+
+We will use the Lightweight Java Game Library (LWJGL) for this project.
+LWJGL project site ->	http://lwjgl.org/
+
+##Milestones##
+[X]	prototype 2 player offline
+[ ]	more than 2 players support
+[X]	network support server/client
+[ ]	applet/browser support

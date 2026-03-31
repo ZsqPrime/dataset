@@ -1,0 +1,7 @@
+Contains all the applications, demo, test related to Phonegap
+
+Project Description:
+phonegap sample applications
+
+README:
+Contains all the applications, demo, test related to Phonegap

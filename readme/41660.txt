@@ -1,0 +1,10 @@
+See:
+  http://cockatoo.jp/view/Capkg
+
+
+Project Description:
+Deployment tool based on capistrano
+
+README:
+See:
+  http://cockatoo.jp/view/Capkg

@@ -1,0 +1,13 @@
+Project Description:
+
+
+README:
+svn checkout http://closure-library.googlecode.com/svn/trunk/ hwt/static/closure-library
+
+cd ./genericdiffmap
+cabal install
+cd ../hwt
+cabal build
+runhaskell HWT.Tests
+
+-> localhost:8080

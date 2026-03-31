@@ -1,0 +1,16 @@
+Bobura & Tetengo2 Readme
+Copyright (C) 2007-2019 kaoru
+$Id$
+
+Bobura and Tetengo2 are under construction now...
+
+
+Project Description:
+Some software about railways.
+
+README:
+Bobura & Tetengo2 Readme
+Copyright (C) 2007-2019 kaoru
+$Id$
+
+Bobura and Tetengo2 are under construction now...

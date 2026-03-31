@@ -1,0 +1,6 @@
+Project Description:
+Open Flash Chart 2 Symfony Bundle
+
+README:
+
+This project is under construction. Detailed readme will come with the first stable version.

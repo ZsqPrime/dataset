@@ -1,0 +1,58 @@
+XBMC-XML2PO 0.96 by Team XBMC 2012
+
+This command-line utility is for converting XBMC strings.xml files into strings.po
+and strings.pot files used from XBMC Frodo and can be used directly in
+any web based community driven translation system, like Transifex.
+
+Usage: xbmc-xml2po -s <sourcedirectoryname> (-p <projectname>) (-v <version>)
+ -s <name> for source root language directory, which contains the language dirs
+
+The source directory for addons should be where the addon.xml file exists
+For core language file, use the main xbmc source tree as a directory
+
+Note for Windows users: In case you have whitespace or any special character
+in any of the arguments, please use apostrophe around them. For example:
+xbmc-xml2po.exe -s "C:\xbmc dir\"
+
+With any issues, please report to alanwww1@xbmc.org
+
+Version History:
+0.8  - Initial version, working on Linux, Windows with batch convert capabilities
+0.9  - Addded automatic conversion to utf8, format long lines with breaking them,
+       write plural form into language file.
+0.95 - Handle new format (id in msgctx field) PO files, reverted line breaking
+0.96 - Parsing of addon.xml file to automatic get of project data
+       Handling of addons with no translatable files
+       Processing language files in alphabetical order
+
+
+Project Description:
+A converter utility in C++for converting xbmc language xmls to po and potfiles.
+
+README:
+XBMC-XML2PO 0.96 by Team XBMC 2012
+
+This command-line utility is for converting XBMC strings.xml files into strings.po
+and strings.pot files used from XBMC Frodo and can be used directly in
+any web based community driven translation system, like Transifex.
+
+Usage: xbmc-xml2po -s <sourcedirectoryname> (-p <projectname>) (-v <version>)
+ -s <name> for source root language directory, which contains the language dirs
+
+The source directory for addons should be where the addon.xml file exists
+For core language file, use the main xbmc source tree as a directory
+
+Note for Windows users: In case you have whitespace or any special character
+in any of the arguments, please use apostrophe around them. For example:
+xbmc-xml2po.exe -s "C:\xbmc dir\"
+
+With any issues, please report to alanwww1@xbmc.org
+
+Version History:
+0.8  - Initial version, working on Linux, Windows with batch convert capabilities
+0.9  - Addded automatic conversion to utf8, format long lines with breaking them,
+       write plural form into language file.
+0.95 - Handle new format (id in msgctx field) PO files, reverted line breaking
+0.96 - Parsing of addon.xml file to automatic get of project data
+       Handling of addons with no translatable files
+       Processing language files in alphabetical order

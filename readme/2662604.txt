@@ -1,0 +1,7 @@
+Project Description:
+JBoss Tools Source Lookup
+
+README:
+JBoss Tools Source Lookup
+
+See https://issues.jboss.org/browse/JBIDE-9309 - Easily adding full JBoss AS source

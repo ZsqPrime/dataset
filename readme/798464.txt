@@ -1,0 +1,7 @@
+Caution: This application execute "pm disable/enable" to system applications. If you don't understand this mean, Don't builed/install/execute this program. It's very dangerous.
+
+Project Description:
+list and backup android system apps.
+
+README:
+Caution: This application execute "pm disable/enable" to system applications. If you don't understand this mean, Don't builed/install/execute this program. It's very dangerous.

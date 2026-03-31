@@ -1,0 +1,8 @@
+Little snippets of code through which I learn or experiment with something. Pop them from my head and kept them here as a further reference.
+
+
+Project Description:
+Pieces of code for me to learn, experiment or keep further reference.
+
+README:
+Little snippets of code through which I learn or experiment with something. Pop them from my head and kept them here as a further reference.

@@ -1,0 +1,76 @@
+Project Description:
+Code for Seeeduino-based tricopter, now retired in favor of osuar_control
+
+README:
+
+Code for Seeeduino-based tricopter.
+
+The control system works something like this:
+
+################################################################################
+#                                                                              #
+# **************************                                                   #
+# * BMA180                 * --------.                                         #
+# * (3-axis accelerometer) *         |                                         #
+# **************************         |                                         #
+#                                    |                                         #
+# *****************               ***********************************          #
+# * ITG-3200      * ------------- * IMU (inertial measurement unit) *          #
+# * (3-axis gyro) *               ***********************************          #
+# *****************                              |                             #
+#                                                |                             #
+#                                      *************************************** #
+#                                      *                                     * #
+# *************************            *                                     * #
+# * Other peripherals     *            *                                     * #
+# * (not yet implemented) *            *                                     * #
+# *   - Sensors           * ---------- *          MAIN SOFTWARE LOOP         * #
+# *   - Camera            *            *                                     * #
+# *   - GPS               *            *                  ON                 * #
+# *   - Lights            *            *                                     * #
+# *************************            *            SEEEDUINO MEGA           * #
+#                             .------- *                                     * #
+#                             |        *                                     * #
+# ************                | .----- *                                     * #
+# * Watchdog * ---------------' |      *                                     * #
+# ************                  |      *************************************** #
+#                               |                                              #
+# *********                     |                                              #
+# * Pilot * --------------------'                                              #
+# *********                                                                    #
+#       |                                                                      #
+#       |                                                                      #
+#       |                                                                      #
+#       '------------------------------.                                       #
+#                                      |                                       #
+#                                      |                                       #
+#                                      |                                       #
+#                                 ************                                 #
+#                                 * DOWNLINK *                                 #
+#                                 ************                                 #
+#                                                                              #
+################################################################################
+
+
+Calculations are done at 100 Hz.
+Controls are sent at 40 Hz.
+
+
+Some todos:
+* Seeeduino should keep a logfile.
+* Looks like I'm going to use pidquadcontroller code for IMU (http://code.google.com/p/picquadcontroller/source/browse/trunk/imu.h?r=7) and AeroQuad code for PID. Make these work.
+
+
+
+Robot Operating System (ROS)
+
+ROS is a meta-operating system developed by Willow Garage that facilitates the integration of various software systems developed by different teams. 
+
+
+
+
+
+
+
+
+http://pyopengl.sourceforge.net/documentation/manual/

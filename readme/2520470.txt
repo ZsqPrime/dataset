@@ -1,0 +1,6 @@
+Project Description:
+A Racket (Lisp) program to find out all possible ways to manipulate four integers so that the end result is 24.
+
+README:
+This is a learning project for myself.
+I am teching myself about programing in scheme.

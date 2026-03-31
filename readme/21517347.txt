@@ -1,0 +1,7 @@
+Project Description:
+A custom rails admin field
+
+README:
+= RailsAdminThumbnailLimitedMultiselectField
+
+This project rocks and uses MIT-LICENSE.

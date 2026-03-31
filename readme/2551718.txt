@@ -1,0 +1,8 @@
+Project Description:
+Trabajo Final - Fundamentos
+
+README:
+Trabajo Final de Fundamentos en Python
+
+Diaz Gaston
+Leschevich German

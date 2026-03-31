@@ -1,0 +1,8 @@
+Project Description:
+ExtJS-based administration building framework
+
+README:
+extAdmin - ExtJS-based administration building framework
+========================================================
+
+This is an early development version not intended for general use.

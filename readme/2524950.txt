@@ -1,0 +1,12 @@
+Project Description:
+A randomic generator project for all lotteries in Brazil.
+
+README:
+Lottery Generator v0.1 Pre-Alpha.
+
+STARTING UP
+===========
+
+    For a while, if you want use Lottery Generator you must have installed on your machine:
+        - Python 2.6.x
+        - GTK+ and PyGTK

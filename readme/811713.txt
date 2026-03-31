@@ -1,0 +1,38 @@
+Project Description:
+Density of events around objects on a genome
+
+README:
+Density of events around objects
+
+== Build ==
+
+$ make
+
+or
+
+$ make DEBUG=1
+
+== Run ==
+
+# bin size: 100bp
+# number of bins either side of objects: 200
+
+$ ./density_around 100 200 objects.csv events.csv
+
+== Notes ==
+
+Convert ensGene.txt to .bed file:
+
+> awk '{print $3"\t"$5"\t"$6"\t"$4}' ensGene.txt > ensGene.bed
+
+== Development ==
+
+Short term goals
+- none - please suggest some
+
+long term
+- add binary search ?
+  * sort start positions
+  * sort end positions
+  * binary search to find start position in both arrays when looping
+- probably not -- performance is very good

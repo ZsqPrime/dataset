@@ -1,0 +1,14 @@
+this is the existing repository, reinitialized again to be on github. 
+It's a web site for my uncle alon
+Dudi is a very good friend and i owe him my life.
+nir: trying to add some new features.
+
+
+Project Description:
+The diamonds gallery for alon's site
+
+README:
+this is the existing repository, reinitialized again to be on github. 
+It's a web site for my uncle alon
+Dudi is a very good friend and i owe him my life.
+nir: trying to add some new features.

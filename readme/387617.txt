@@ -1,0 +1,17 @@
+Kohana ArmREST
+===============
+a Kohana 3 module to integrate ORM and REST
+-------------------------------------------
+
+Relies on Kresful
+
+Project Description:
+Kohana 3 module that integrates ORM and REST
+
+README:
+Kohana ArmREST
+===============
+a Kohana 3 module to integrate ORM and REST
+-------------------------------------------
+
+Relies on Kresful

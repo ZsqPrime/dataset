@@ -1,0 +1,6 @@
+
+
+Project Description:
+Library of functional methods for Client and Nodejs
+
+README:

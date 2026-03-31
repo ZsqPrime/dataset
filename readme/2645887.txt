@@ -1,0 +1,7 @@
+Project Description:
+A genealogy tree viewer and redactor
+
+README:
+A genealogy tree web application.
+Uses mongo database.
+Based upon RESTAS, mongo-cl-driver.

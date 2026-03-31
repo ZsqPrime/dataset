@@ -1,0 +1,8 @@
+https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+WAR+Size+Tracker
+
+
+Project Description:
+Jenkins WAR Size Tracker
+
+README:
+https://wiki.jenkins-ci.org/display/JENKINS/Jenkins+WAR+Size+Tracker

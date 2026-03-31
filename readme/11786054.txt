@@ -1,0 +1,8 @@
+Project Description:
+A USB HID library for C#.
+
+README:
+HIDUSBLib
+=========
+
+Library to communicate with USB HID devices using C#.

@@ -1,0 +1,138 @@
+Project Description:
+resourceful routes for mojolicious
+
+README:
+NOTE: use the latest Github version of mojolicious, as code is changing quickly!
+
+
+ResourcefulRoutes
+---------------------------
+
+The ResourcefulRoutes plugin is part of MojoX Scaffold. For more information
+go to:
+
+https://github.com/forwardever/mojox-scaffold/blob/master/lib/Mojolicious/Plugin/ResourcefulRoutes.pm
+
+
+MojoX Scaffold Summary
+---------------------------
+
+In many cases, you have to create the same template and route structures and controller methods again and again.
+
+For example, in order to manage a list of users, you need routes, controller methods and templates to
+    - to list all users,
+    - to display information on a single user and
+    - to create, update and delete users.
+
+MojoX Scaffold helps you to set up a controller, template files and routes with a few commands.
+
+
+MojoX Scaffold in action
+---------------------------
+
+1.) Install MojoX Scaffold, using cpanminus, this is just
+
+    cpanm https://github.com/forwardever/mojox-scaffold/tarball/master
+
+2.) Create a Mojolicious app:
+
+    mojo generate app Test
+
+3.) Switch to the newly created Test app:
+
+    cd Test
+
+4.) Set the correct namespace
+
+Information on routes can now be found in the Test.pm file in the /lib folder.
+Now set the desired namespace for the controller files. As we want all of our
+controllers to be located under
+
+    /lib/Test/Controllers (namespace Test::Controllers)
+
+we add
+
+    $self->routes->namespace("Test::Controllers");
+
+to the beginning of the startup method in the routes file.
+
+Also remove the existing sample routes!
+
+5.) Create a resource named "users"
+
+Make sure that you are still in the Test folder (NOT the lib folder).
+
+    perl script/test generate scaffold
+
+Enter the required information step by step.
+
+At the end, some manual corrections are required.
+
+Add to your startup method (in case you used dbi):
+
+    ### Plugins
+    $self->plugin('resourceful_routes');
+    $self->plugin('model_instance', namespace => 'Test::DBI', method => 'dbh');
+
+    ### Resources
+    $self->resources('users');
+
+Make sure that you put the correct config data in the database BASE file:
+    lib/Test/DBI.pm
+
+and also add a table to your database (there will be an sql command generated
+for this which works fine on mysql, but might have to be modified on other db systems)
+
+
+$self->resources('users') automatically generates the following routes
+on each start of your app:
+
+        # GET /users/new - form to create a user
+        $r->route('/users/new')->via('get')
+          ->to(controller => 'users', action => 'new_form')
+          ->name('users_new_form');
+
+        # GET /users/123 - show user with id 123
+        $r->route('/users/:id')->via('get')
+          ->to(controller => 'users', action => 'show')->name('users_show');
+
+        # GET /users/123/edit - form to update a user
+        $r->route('/users/:id/edit')->via('get')
+          ->to(controller => 'users', action => 'edit_form')
+          ->name('users_edit_form');
+
+        # GET /users - list of all users
+        $r->route('/users')->via('get')
+          ->to(controller => 'users', action => 'index')
+          ->name('users_index');
+
+        # POST /users - create new user
+        $r->route('/users')->via('post')
+          ->to(controller => 'users', action => 'create')
+          ->name('users_create');
+
+        # PUT /users/123 - update an existing user
+        $r->route('/users/:id')->via('put')
+          ->to(controller => 'users', action => 'update')
+          ->name('users_update');
+
+        # DELETE /users/123 - delete an existing user
+        $r->route('/users/:id')->via('delete')
+          ->to(controller => 'users', action => 'delete')
+          ->name('users_delete');
+
+
+7.) Start your app:
+
+    perl script/test daemon --reload
+
+    Also start your database (e.g. mysql).
+
+8.) Enter the following URL to see the result:
+
+    http://localhost:3000/users
+
+9.) Note: as PUT and DELETE methods are not supported by old HTML standard, you
+have to add a hidden parameter in your update and delete forms:
+<input type="hidden" name="_method" value="put" />
+<input type="hidden" name="_method" value="delete" />

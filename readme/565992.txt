@@ -1,0 +1,12 @@
+libtoolize -if
+autoreconf -if
+./configure
+
+
+Project Description:
+app store for gnome applications
+
+README:
+libtoolize -if
+autoreconf -if
+./configure

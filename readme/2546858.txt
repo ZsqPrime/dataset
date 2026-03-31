@@ -1,0 +1,9 @@
+Project Description:
+Sitio web donde cada banda pueda subir y vender su música.
+
+README:
+My Play Band
+========================
+
+Un sitio web en el que todas las bandas locales, nacionales, regionales, 
+internacionales... puedan subir y vender su musica libremente.

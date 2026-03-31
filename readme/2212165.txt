@@ -1,0 +1,97 @@
+= tumblr
+
+A Ruby wrapper for Tumblr API. Highly inspired by Twitter gem.
+
+== Installation
+You can use latest gem:
+  gem install tumblr-ruby
+
+or in Gemfile:
+  gem 'tumblr-ruby'
+
+== Usage
+  client = Tumblr::Client.new do |client|
+    client.consumer_key = your_consumer_key
+    client.consumer_secret = your_consumer_secret
+    client.oauth_token = your_oauth_token
+    client.oauth_token_secret = oauth_token_secret
+  end
+
+Return posts from a blog
+  client.posts("example.tumblr.com")
+
+Create text post
+  client.text("example.tumblr.com", "Hello, World!")
+
+Return user's account information
+  client.user_info
+
+Use this method to retrieve the dashboard
+  client.dashboard
+
+== Contributing to tumblr
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Max Golovnia. See LICENSE.txt for
+further details.
+
+
+
+Project Description:
+A Ruby wrapper for Tumblr REST API
+
+README:
+= tumblr
+
+A Ruby wrapper for Tumblr API. Highly inspired by Twitter gem.
+
+== Installation
+You can use latest gem:
+  gem install tumblr-ruby
+
+or in Gemfile:
+  gem 'tumblr-ruby'
+
+== Usage
+  client = Tumblr::Client.new do |client|
+    client.consumer_key = your_consumer_key
+    client.consumer_secret = your_consumer_secret
+    client.oauth_token = your_oauth_token
+    client.oauth_token_secret = oauth_token_secret
+  end
+
+Return posts from a blog
+  client.posts("example.tumblr.com")
+
+Create text post
+  client.text("example.tumblr.com", "Hello, World!")
+
+Return user's account information
+  client.user_info
+
+Use this method to retrieve the dashboard
+  client.dashboard
+
+== Contributing to tumblr
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2011 Max Golovnia. See LICENSE.txt for
+further details.

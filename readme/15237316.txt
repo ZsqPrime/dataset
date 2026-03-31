@@ -1,0 +1,9 @@
+Project Description:
+fret board diagram maker
+
+README:
+Fretboard
+=========
+
+fret board diagram maker for cocoa
+----------------------------------

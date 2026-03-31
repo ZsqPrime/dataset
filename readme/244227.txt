@@ -1,0 +1,11 @@
+An incomplete engine for the board game Puerto Rico written in python.
+
+once the engine is complete it will be used a testing platform for Puerto Rico AIs, and the basis of android and web based games
+
+Project Description:
+Computer version of popular board game Puerto Rico
+
+README:
+An incomplete engine for the board game Puerto Rico written in python.
+
+once the engine is complete it will be used a testing platform for Puerto Rico AIs, and the basis of android and web based games

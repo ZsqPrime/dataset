@@ -1,0 +1,7 @@
+Project Description:
+Wpf email client
+
+README:
+X Mail - A Wpf/Xaml email client
+
+Currently very limited functionality.

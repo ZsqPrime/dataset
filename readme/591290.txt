@@ -1,0 +1,11 @@
+## Cattle Inventory App
+
+[![TravisCI Build Status](https://secure.travis-ci.org/messuti-edd/cattle-inventory-app.png)](http://travis-ci.org/messuti-edd/cattle-inventory-app)
+
+Project Description:
+Ruby on Rails app for cattle inventory management
+
+README:
+## Cattle Inventory App
+
+[![TravisCI Build Status](https://secure.travis-ci.org/messuti-edd/cattle-inventory-app.png)](http://travis-ci.org/messuti-edd/cattle-inventory-app)

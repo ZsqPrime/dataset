@@ -1,0 +1,102 @@
+This is experimental software intended for developers only, you have been warned.
+
+To build things, we have waf, which should be way awesome fun, because waf 
+is perfect and everything always builds everywhere, as we all know.
+
+If you have not used waf, it works like this:
+
+./waf configure
+./waf
+sudo ./waf install
+
+./waf clean and ./waf distclean can be usefull
+
+Need to add option builds currently all deps need to be met for tools.
+
+["vorbis", "speex", "speexdsp", "opus", "sdl", "orc-0.4", "schroedinger-1.0", "gtk+-3.0", 
+ "gl", "glu", "flac", "libpulse", "jack", "alsa", "vpx", "libswscale", "libavutil"]
+
+These are for the tools only, krad ebml library has no deps.
+
+ubuntu hint:
+
+sudo apt-get install libspeex-dev libspeexdsp-dev libsdl1.2-dev libasound2-dev libpulse-dev libvorbis-dev \
+gtk-3.0 libswscale-dev libflac-dev libschroedinger-dev libavutil-dev libjack-dev libvpx-dev build-essential
+
+
+And install opus from git: http://opus-codec.org/downloads/
+
+git clone http://git.xiph.org/opus.git
+sudo apt-get install build-essential autoconf git-core libtool
+./autogen.sh
+./configure
+make
+sudo make install && sudo ldconfig
+
+ubutntu vpx did not give me a pkg-config file so to compile that..
+
+git clone http://git.chromium.org/webm/libvpx.git
+sudo apt-get install yasm
+make
+sudo make install
+
+
+It will create a subdir called build in this directory, where you will find the results of its doing.
+
+And most importantly...
+
+-David Richards Jan 29, 2012
+
+
+Project Description:
+None
+
+README:
+This is experimental software intended for developers only, you have been warned.
+
+To build things, we have waf, which should be way awesome fun, because waf 
+is perfect and everything always builds everywhere, as we all know.
+
+If you have not used waf, it works like this:
+
+./waf configure
+./waf
+sudo ./waf install
+
+./waf clean and ./waf distclean can be usefull
+
+Need to add option builds currently all deps need to be met for tools.
+
+["vorbis", "speex", "speexdsp", "opus", "sdl", "orc-0.4", "schroedinger-1.0", "gtk+-3.0", 
+ "gl", "glu", "flac", "libpulse", "jack", "alsa", "vpx", "libswscale", "libavutil"]
+
+These are for the tools only, krad ebml library has no deps.
+
+ubuntu hint:
+
+sudo apt-get install libspeex-dev libspeexdsp-dev libsdl1.2-dev libasound2-dev libpulse-dev libvorbis-dev \
+gtk-3.0 libswscale-dev libflac-dev libschroedinger-dev libavutil-dev libjack-dev libvpx-dev build-essential
+
+
+And install opus from git: http://opus-codec.org/downloads/
+
+git clone http://git.xiph.org/opus.git
+sudo apt-get install build-essential autoconf git-core libtool
+./autogen.sh
+./configure
+make
+sudo make install && sudo ldconfig
+
+ubutntu vpx did not give me a pkg-config file so to compile that..
+
+git clone http://git.chromium.org/webm/libvpx.git
+sudo apt-get install yasm
+make
+sudo make install
+
+
+It will create a subdir called build in this directory, where you will find the results of its doing.
+
+And most importantly...
+
+-David Richards Jan 29, 2012

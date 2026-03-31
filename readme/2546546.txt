@@ -1,0 +1,4 @@
+Project Description:
+A customized PHP CMS designed for class websites with notes management, a calendar and Facebook Connect.
+
+README:

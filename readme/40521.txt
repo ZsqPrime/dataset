@@ -1,0 +1,38 @@
+mr is a Multiple Repository management tool for Mercurial and Git
+
+Author: Joey Hess
+Homepage: http://kitenet.net/~joey/code/mr/
+
+mr is intended to be very self-contained, since it might be useful to check
+it into ~/bin when keeping your home in version control. It has no
+dependencies aside from basic perl.
+
+Just copy mr into your PATH somewhere, if it isn't already, and set up
+~/.mrconfig
+
+----
+
+webcheckout has more dependencies, specifically the LWP::Simple and
+HTML::Parser CPAN modules, and optionally the URI module.
+
+
+Project Description:
+The mr(1) command can checkout, update, or perform other actions on a set of repositories as if they were one combined respository. It supports any combination of subversion, git, cvs, mercurial, bzr, darcs, cvs, and fossil repositories, and support for o
+
+README:
+mr is a Multiple Repository management tool for Mercurial and Git
+
+Author: Joey Hess
+Homepage: http://kitenet.net/~joey/code/mr/
+
+mr is intended to be very self-contained, since it might be useful to check
+it into ~/bin when keeping your home in version control. It has no
+dependencies aside from basic perl.
+
+Just copy mr into your PATH somewhere, if it isn't already, and set up
+~/.mrconfig
+
+----
+
+webcheckout has more dependencies, specifically the LWP::Simple and
+HTML::Parser CPAN modules, and optionally the URI module.

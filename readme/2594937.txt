@@ -1,0 +1,23 @@
+Project Description:
+a front-end for the new dtv guide
+
+README:
+This project is currently only views. The small backend is for providing sample data
+
+==== SETUP ====
+
+cp config/database.yml.sample config/database.yml
+bundle
+rake db:create
+rake db:schema:load db:seed
+rails s
+
+==== TODO ====
+
+- tag#show page (default)
+- tag#show page (actor/ppl)
+
+==== Things to workout ====
+- really simple auth without any hassle (google account signup?)
+- api protection, probably using devise for this (https://github.com/plataformatec/devise)
+- Connect dtv-api to dtv-client for series data

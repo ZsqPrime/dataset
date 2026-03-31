@@ -1,0 +1,5 @@
+Project Description:
+Bg Info Box
+
+README:
+Property of Dusan Novakovic (ndusan@gmail.com)

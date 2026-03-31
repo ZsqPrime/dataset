@@ -1,0 +1,6 @@
+
+
+Project Description:
+A RubyGem to associate parent and child classes through a common suffixing system.
+
+README:

@@ -1,0 +1,3 @@
+==About
+
+既存のTV番組を拡張する。Augmented TV Program の一種

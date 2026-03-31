@@ -1,0 +1,12 @@
+Project Description:
+Presentación hecha en sinatra y el plugin de jquery jpresenter. La presentación trata del retiro de código organizado en la Universidad Simón Bolívar el 7 y 8 de Enero.
+
+README:
+h1. Presentación de Retiro de Código para aprender Rails
+
+La presentación esta hecha en *sinatra* apoyándose casi en la totalidad del demo del plugin de jquery "jpresenter":http://jsantell.com/presentr.
+
+h2. Para más información acerca del retiro de código: 
+
+* "Articulo en Coders Venezuela":http://www.codersvenezuela.com/post/ruby-on-rails-code-retreat/117.
+* "Idea detrás del retiro de código":http://e3matheus.tumblr.com/post/14587649945/aprender-con-code-retreats

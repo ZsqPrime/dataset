@@ -1,0 +1,8 @@
+Project Description:
+JQuery 
+
+README:
+Just a place to try out some JQuery, Angular, Jasmine with jsTestDriver.
+
+Probably nothing to see here, however, the "demos" folder is where I am
+putting examples of the functionality I am seeking.

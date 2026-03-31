@@ -1,0 +1,12 @@
+# DesignMode for Rails 3.1+ (still under development)
+
+What is DesignMode? DesignMode is open-source, lightweight and really pretty-looking wysiwyg editor written with JQuery.
+
+
+Project Description:
+HTML5 WYSIWYM editor with few cool things
+
+README:
+# DesignMode for Rails 3.1+ (still under development)
+
+What is DesignMode? DesignMode is open-source, lightweight and really pretty-looking wysiwyg editor written with JQuery.

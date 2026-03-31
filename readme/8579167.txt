@@ -1,0 +1,5 @@
+Project Description:
+Python module to persistently cache results of functions using decorators.
+
+README:
+New project home: https://hg.sr.ht/~obensonne/percache

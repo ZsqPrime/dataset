@@ -1,0 +1,269 @@
+ActionScript 3 Social Network API - универсальная библиотека для работы с API соцсетей из Flash-приложений. 
+
+
+ЛИЦЕНЗИЯ 
+
+BSD 
+
+
+ОСНОВНЫЕ ВОЗМОЖНОСТИ
+
+На данный момент реализованы базовые функции API: 
+* получение друзей; 
+* получение друзей в приложении; 
+* получение своего профиля; 
+* отображение окна приглашения друзей. 
+Из документации имеется код приложения sandbox (в репозитории) :)
+
+Список поддерживаемых соцсетей: 
+* http://vk.com - Вконтакте;
+* http://my.mail.ru - Мой мир;
+* http://odnoklassniki.ru - Одноклассники;
+* http://facebook.com - Facebook (черновая реализация);
+* mock - тестовая offline-сеть на основе конфиг-файла. Имеется возможность сделать сделать снимок данных с любой из вышеперечисленных сетей и использовать их оффлайн для отладки через mock сеть.
+В ближайших планах расширение этого списка.
+ 
+
+ОСОБЕНОСТИ
+
+Основные идеи заложенные в as3snapi:
+* использовать единый swf файл приложения для всех соцсетей;
+* предоставлять возможность запуска приложения без изменений через iframe и непосредсвенно swf (my.mail.ru, vk.com)
+* определять доступную соцсеть автоматически, на основе flashvars;
+* включать в приложение код только для используемых сетей;
+* максимально повторно использовать код внутри библиотеки;
+* предоставлять общий интерфейс для схожего API разлиных сетей;
+* оставлять возможность прямого доступа к специфичным функциям соцсети;
+* предоставлять возможность работы в offline-режиме (mock-сеть);
+* быть "готовой ко всему". В экзотических соцсетях любая привычная функция может отсутствовать (нет окна приглашения друзей, нет функции загрузки всех друзей, нет функции загрузки профиля по id и т.д.), код приложения должен быть готов к этому и иметь возможность проверить доступность функционала.
+
+Особенности реализации:
+* Доступ к возможностям соцсетей осуществялется через механизм 'фич' (обычный ActionScript interface) подключаемых к общей 'шине' (примитивный IoC-контейнер);
+* Имеется набор базовых 'фич', которые поддерживаются большинством сетей (получить профиль, список друзей, пригласить друзей, и т.д.);
+* Для доступа к специфичным возможностям модуль соцсети вводит свои собственные дополнительные 'фичи'; 
+* Модули сетей реализованы в виде отдельных плагинов. 
+
+
+ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ
+
+Собраную песочницу можно скачать отсюда:
+https://bitbucket.org/nitrobin/as3snapi/downloads
+http://cdn.bitbucket.org/nitrobin/as3snapi/downloads/as3snapi-sandbox-1.0.4-SNAPSHOT.swf
+Без параметров приложение запуститься в режиме mock;
+
+Пример на ActionScript3 инициализации API и загрузки своего профиля:
+
+// as3snapi-sandbox/src/HelloWorld.as
+public class HelloWorld extends Sprite {
+    private var tf:TextField = new TextField();
+
+    public function HelloWorld() {
+        tf.width = 400;
+        tf.height = 400;
+        tf.wordWrap = true;
+        addChild(tf);
+
+        // Подключение и настройка требуемых соцсетей
+        var factory:IConnectionFactory = new ConnectionFactory(
+                stage.loaderInfo.parameters, // Передача FlashVars
+                new <INetworkConfig>[ // Настройки соцсетей
+                    new ConfigVkcom(),
+                    new ConfigMock().setData(MOCK_DATA), // Указываем снимок данных
+                ],
+                new <INetworkModule>[ // Подключение модулей соцсетей
+                    new ModuleVkcom(),
+                    new ModuleMock(),
+                ],
+                new <IBusModule>[ // Подключение дополнительных модуле
+                    new BusModuleLogTrace() // Включаем выдачу внутренних логов через trace
+                ]
+        );
+
+        // Подключаемся к API
+        factory.createConnection(new NetworkConnectHandler(onSuccess, onFail));
+
+        function onFail(result:Object):void {
+            tf.text = "FAIL";// Неудача
+        }
+
+        function onSuccess(connection:INetworkConnection):void {
+            tf.text = "READY";// API готово
+            // Получаем фичу для загрузки своего профиля
+            var feature:IFeatureSelfProfile = connection.getFeature(IFeatureSelfProfile)
+            if (feature != null) {
+                // фича доступна, загружаем профиль
+                feature.getSelfProfile(
+                        new OneProfileHandler(function (profile:IProfile):void {
+                            // Обрабатываем полученный профиль
+                            tf.text = "Hello, " + profile.getFullName() + "!\n" +
+                                    "Your profile: " + JsonUtils.encode(profile);
+                        }, function (result:Object):void {
+                            // Ошибка при получении профиля
+                            tf.text = "FAIL: " + JsonUtils.encode(result);
+                        }));
+            } else {
+                // фича недоступна.. :(
+                tf.text = "IFeatureSelfProfile - UNSUPPORTED";
+            }
+        }
+    }
+
+    // Фиксированные данные для выдачи через Mock API
+    private static const MOCK_DATA:Object = {
+        shortNetworkId:"mock",
+        userId:1,
+        inviterId:2,
+        appId:123,
+        profiles:{1:{fullName:"Jimmy"}, 2:{fullName:"Pavel"}, 3:{fullName:"Mark"}},
+        appFriendsUids:[2],
+        friendsUids:[2, 3]
+    };
+}
+
+
+ГДЕ ИСПОЛЬЗУЕТСЯ?
+
+Изначально библиотека разработана с прицелом на использование в домашних экспериментальных проектах, но нашла применение и за их пределами. :) 
+В настоящее время используется в проекте "Мастера войны" (http://vk.com/app2699907) компании "Igrostar" (http://igrostar.com)
+
+
+АВТОР
+2012 (c) Евгений Веретенников ["nitro.bin","gmail.com"].join("@")
+
+
+
+Project Description:
+None
+
+README:
+ActionScript 3 Social Network API - универсальная библиотека для работы с API соцсетей из Flash-приложений. 
+
+
+ЛИЦЕНЗИЯ 
+
+BSD 
+
+
+ОСНОВНЫЕ ВОЗМОЖНОСТИ
+
+На данный момент реализованы базовые функции API: 
+* получение друзей; 
+* получение друзей в приложении; 
+* получение своего профиля; 
+* отображение окна приглашения друзей. 
+Из документации имеется код приложения sandbox (в репозитории) :)
+
+Список поддерживаемых соцсетей: 
+* http://vk.com - Вконтакте;
+* http://my.mail.ru - Мой мир;
+* http://odnoklassniki.ru - Одноклассники;
+* http://facebook.com - Facebook (черновая реализация);
+* mock - тестовая offline-сеть на основе конфиг-файла. Имеется возможность сделать сделать снимок данных с любой из вышеперечисленных сетей и использовать их оффлайн для отладки через mock сеть.
+В ближайших планах расширение этого списка.
+ 
+
+ОСОБЕНОСТИ
+
+Основные идеи заложенные в as3snapi:
+* использовать единый swf файл приложения для всех соцсетей;
+* предоставлять возможность запуска приложения без изменений через iframe и непосредсвенно swf (my.mail.ru, vk.com)
+* определять доступную соцсеть автоматически, на основе flashvars;
+* включать в приложение код только для используемых сетей;
+* максимально повторно использовать код внутри библиотеки;
+* предоставлять общий интерфейс для схожего API разлиных сетей;
+* оставлять возможность прямого доступа к специфичным функциям соцсети;
+* предоставлять возможность работы в offline-режиме (mock-сеть);
+* быть "готовой ко всему". В экзотических соцсетях любая привычная функция может отсутствовать (нет окна приглашения друзей, нет функции загрузки всех друзей, нет функции загрузки профиля по id и т.д.), код приложения должен быть готов к этому и иметь возможность проверить доступность функционала.
+
+Особенности реализации:
+* Доступ к возможностям соцсетей осуществялется через механизм 'фич' (обычный ActionScript interface) подключаемых к общей 'шине' (примитивный IoC-контейнер);
+* Имеется набор базовых 'фич', которые поддерживаются большинством сетей (получить профиль, список друзей, пригласить друзей, и т.д.);
+* Для доступа к специфичным возможностям модуль соцсети вводит свои собственные дополнительные 'фичи'; 
+* Модули сетей реализованы в виде отдельных плагинов. 
+
+
+ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ
+
+Собраную песочницу можно скачать отсюда:
+https://bitbucket.org/nitrobin/as3snapi/downloads
+http://cdn.bitbucket.org/nitrobin/as3snapi/downloads/as3snapi-sandbox-1.0.4-SNAPSHOT.swf
+Без параметров приложение запуститься в режиме mock;
+
+Пример на ActionScript3 инициализации API и загрузки своего профиля:
+
+// as3snapi-sandbox/src/HelloWorld.as
+public class HelloWorld extends Sprite {
+    private var tf:TextField = new TextField();
+
+    public function HelloWorld() {
+        tf.width = 400;
+        tf.height = 400;
+        tf.wordWrap = true;
+        addChild(tf);
+
+        // Подключение и настройка требуемых соцсетей
+        var factory:IConnectionFactory = new ConnectionFactory(
+                stage.loaderInfo.parameters, // Передача FlashVars
+                new <INetworkConfig>[ // Настройки соцсетей
+                    new ConfigVkcom(),
+                    new ConfigMock().setData(MOCK_DATA), // Указываем снимок данных
+                ],
+                new <INetworkModule>[ // Подключение модулей соцсетей
+                    new ModuleVkcom(),
+                    new ModuleMock(),
+                ],
+                new <IBusModule>[ // Подключение дополнительных модуле
+                    new BusModuleLogTrace() // Включаем выдачу внутренних логов через trace
+                ]
+        );
+
+        // Подключаемся к API
+        factory.createConnection(new NetworkConnectHandler(onSuccess, onFail));
+
+        function onFail(result:Object):void {
+            tf.text = "FAIL";// Неудача
+        }
+
+        function onSuccess(connection:INetworkConnection):void {
+            tf.text = "READY";// API готово
+            // Получаем фичу для загрузки своего профиля
+            var feature:IFeatureSelfProfile = connection.getFeature(IFeatureSelfProfile)
+            if (feature != null) {
+                // фича доступна, загружаем профиль
+                feature.getSelfProfile(
+                        new OneProfileHandler(function (profile:IProfile):void {
+                            // Обрабатываем полученный профиль
+                            tf.text = "Hello, " + profile.getFullName() + "!\n" +
+                                    "Your profile: " + JsonUtils.encode(profile);
+                        }, function (result:Object):void {
+                            // Ошибка при получении профиля
+                            tf.text = "FAIL: " + JsonUtils.encode(result);
+                        }));
+            } else {
+                // фича недоступна.. :(
+                tf.text = "IFeatureSelfProfile - UNSUPPORTED";
+            }
+        }
+    }
+
+    // Фиксированные данные для выдачи через Mock API
+    private static const MOCK_DATA:Object = {
+        shortNetworkId:"mock",
+        userId:1,
+        inviterId:2,
+        appId:123,
+        profiles:{1:{fullName:"Jimmy"}, 2:{fullName:"Pavel"}, 3:{fullName:"Mark"}},
+        appFriendsUids:[2],
+        friendsUids:[2, 3]
+    };
+}
+
+
+ГДЕ ИСПОЛЬЗУЕТСЯ?
+
+Изначально библиотека разработана с прицелом на использование в домашних экспериментальных проектах, но нашла применение и за их пределами. :) 
+В настоящее время используется в проекте "Мастера войны" (http://vk.com/app2699907) компании "Igrostar" (http://igrostar.com)
+
+
+АВТОР
+2012 (c) Евгений Веретенников ["nitro.bin","gmail.com"].join("@")

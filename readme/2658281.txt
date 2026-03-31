@@ -1,0 +1,9 @@
+Project Description:
+feature extractor library for torch7
+
+README:
+Feature Extractor Library for Torch7
+
+To use SIFT feature extractor
+lena = fex.lena()
+slena = fex.dsift(lena)

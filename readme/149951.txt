@@ -1,0 +1,16 @@
+The service was shutdown and currently there are no plans to continue it.
+
+This is the Kreuzverweis Smart Keywording Plugin for ResourceSpace.
+Download and installation instructions are in the Github wiki:
+https://github.com/kreuzverweis/smartkeywording_rs/wiki
+
+
+Project Description:
+[Discontinued] Smart Keywording Plugin for ResourceSpace
+
+README:
+The service was shutdown and currently there are no plans to continue it.
+
+This is the Kreuzverweis Smart Keywording Plugin for ResourceSpace.
+Download and installation instructions are in the Github wiki:
+https://github.com/kreuzverweis/smartkeywording_rs/wiki

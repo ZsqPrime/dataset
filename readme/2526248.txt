@@ -1,0 +1,7 @@
+Project Description:
+Rails app to track the results of Settlers' games
+
+README:
+== Hall of Catan
+
+Rails3 app for my friends and I to keep track of Settlers of Catan games.

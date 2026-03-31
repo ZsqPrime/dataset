@@ -1,0 +1,41 @@
+Project Description:
+This is a C library of Arduino.
+
+README:
+Arduino is a great project, which let many non-professional programmer enjoy 
+embedded programming. Most of its source code are provided as C++, which is 
+not neccessary in real applications writing.
+
+In this project, I would like to practice the following things..
+
+1) Learn to write the project building system with cmake scripts
+
+2) Rewrite and test the important CPP library to C library for effeciency...
+
+3) Emulated thread prgramming 
+
+4) Realtime OS for MCU: freertos or femtoos
+
+
+Current objective will be
+----------------------------------------
+\--avrduinolibs
+   \--corlibs # the major soure code folder
+      \--xxx.c
+      \--xxx.cpp
+
+    \--test  # sample projects
+       \--proj1  
+          \--cmakesettings
+          \--realcode.c or .cpp
+
+-The general compiling setting for avr-gcc/g++ should be in the main foder
+-We should be able to specify the MCU type, working frequency
+-We can set the programmer communication protocol
+-It should provide make readfuse, make writefuse
+-It should provide command make upload
+-make release/debug support
+
+The major benefit of this method over eclipse avrplugins is
+-Light-weight
+-Natual git support

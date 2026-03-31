@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+My name is written in my_name
+Attempted to move whole git repo down one folder

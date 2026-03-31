@@ -1,0 +1,18 @@
+
+Installation:
+Craft a floppy. Place it in a drive so it gets a folder created relative to its damage value id. Once you done this, hover the mouse over the disk and look at its id# "floppy disk 4256:1" means that is disk 1 and its path is .minecraft/saves/(yourworldname)/computer/disk/1/ <--
+Put the files there. Put the disk in a drive connected to a terminal and reboot if necessary and the setup should autorun :)
+
+The options onscreen are self explanatory.
+
+
+Project Description:
+Redworks addon for ComputerCraft-CraftOS system. This is a floppy version that can install to a terminal, rather then the main rom, which effects all computers.
+
+README:
+
+Installation:
+Craft a floppy. Place it in a drive so it gets a folder created relative to its damage value id. Once you done this, hover the mouse over the disk and look at its id# "floppy disk 4256:1" means that is disk 1 and its path is .minecraft/saves/(yourworldname)/computer/disk/1/ <--
+Put the files there. Put the disk in a drive connected to a terminal and reboot if necessary and the setup should autorun :)
+
+The options onscreen are self explanatory.

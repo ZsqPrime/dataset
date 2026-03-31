@@ -1,0 +1,8 @@
+web store powered by django
+
+
+Project Description:
+None
+
+README:
+web store powered by django

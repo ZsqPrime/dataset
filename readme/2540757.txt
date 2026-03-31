@@ -1,0 +1,5 @@
+Project Description:
+allows us to use hugin to stitch images and apply same stitching to a video sequence
+
+README:
+simple function that allow us to use hugin to stitch a set of images one, and apply this stitching to a video

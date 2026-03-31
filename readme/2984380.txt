@@ -1,0 +1,23 @@
+Project Description:
+
+
+README:
+mysql_secure_installation is a script originally developed by MYSQL AB and
+Jeremy Cole at 2002. It wasn't make for automatizatic installation so I little
+bend it.
+
+Official webpage: 
+http://dev.mysql.com/doc/refman/5.6/en/mysql-secure-installation.html
+
+Usage: mysql_secure_installation [OPTION]
+This program enables you to improve the security of your MySQL installation.
+Without any OPTION it runs in standard (and recomended) way.
+
+  -h, --help        display this help and exit
+  -n, --norootpw    don't check and ask for setup of new root password
+  -y, --yes         say 'yes' to all questios within root password
+           
+Examples:
+  mysql_secure_installation
+  mysql_secure_installation -y
+  mysql_secure_installation -n -y

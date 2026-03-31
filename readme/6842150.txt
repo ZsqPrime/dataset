@@ -1,0 +1,7 @@
+Project Description:
+DIY synthesizer breakout board in Arduino form factor
+
+README:
+5/22/2018
+
+Moved to https://github.com/fluxly/Fluxamasynth

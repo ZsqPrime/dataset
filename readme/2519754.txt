@@ -1,0 +1,12 @@
+Project Description:
+Greasemonkey Scripts that I've developed
+
+README:
+Greasemonkey Scripts
+====================
+
+Google News Headline Ticker
+---------------------------
+Injects a google news headline ticker onto the google homepage
+
+![screenshot](https://github.com/mburman/Greasemonkey-Scripts/raw/master/screenshot.png)

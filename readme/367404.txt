@@ -1,0 +1,12 @@
+Read the documentation in qemu-doc.html or on http://wiki.qemu-project.org
+
+- QEMU team
+
+
+Project Description:
+A standard QEMU tree with KVM for ARM patches
+
+README:
+Read the documentation in qemu-doc.html or on http://wiki.qemu-project.org
+
+- QEMU team

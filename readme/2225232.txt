@@ -1,0 +1,22 @@
+This is all based on the make_app.sh and xulrunner.c files from http://conkeror.org/InstallationOSX
+
+Requirements:
+ a compiler
+ git
+
+To create and install the bundle as Conkeror.app, simply run:
+ ./install.sh
+
+
+Project Description:
+Create a Mac AppBundle for Conkeror, the "keyboard-oriented, highly-customizable, highly-extensible web browser".
+
+README:
+This is all based on the make_app.sh and xulrunner.c files from http://conkeror.org/InstallationOSX
+
+Requirements:
+ a compiler
+ git
+
+To create and install the bundle as Conkeror.app, simply run:
+ ./install.sh

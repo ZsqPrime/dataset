@@ -1,0 +1,48 @@
+Use Java's MIDI interface to play some guitar chords.
+Testing Koh's ability to make java programs.
+
+Resources that may be useful:
+
+http://docs.oracle.com/javase/tutorial/sound/index.html
+
+http://docs.oracle.com/javase/1.4.2/docs/api/javax/sound/midi/MidiChannel.html
+
+https://github.com/focusaurus/smartears/blob/master/src/java/com/peterlyons/smartears/MidiSoundEngine.java
+
+http://grantmuller.com/projects/midireference/
+
+http://www.phys.unsw.edu.au/jw/notes.html
+
+http://www.contrabass.com/pages/frequency.html
+
+Some terms that are useful to understand:
+Synthesizer - makes sounds
+Sequencer - performs sounds by sending MIDI messages to devices
+Soundbank - contains instructions for emulating sounds of instruments
+
+
+Project Description:
+Rock Lion, Rock
+
+README:
+Use Java's MIDI interface to play some guitar chords.
+Testing Koh's ability to make java programs.
+
+Resources that may be useful:
+
+http://docs.oracle.com/javase/tutorial/sound/index.html
+
+http://docs.oracle.com/javase/1.4.2/docs/api/javax/sound/midi/MidiChannel.html
+
+https://github.com/focusaurus/smartears/blob/master/src/java/com/peterlyons/smartears/MidiSoundEngine.java
+
+http://grantmuller.com/projects/midireference/
+
+http://www.phys.unsw.edu.au/jw/notes.html
+
+http://www.contrabass.com/pages/frequency.html
+
+Some terms that are useful to understand:
+Synthesizer - makes sounds
+Sequencer - performs sounds by sending MIDI messages to devices
+Soundbank - contains instructions for emulating sounds of instruments

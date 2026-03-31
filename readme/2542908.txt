@@ -1,0 +1,5 @@
+Project Description:
+A ID3 Tag library for .NET
+
+README:
+**This project is not in a functioning state yet!**

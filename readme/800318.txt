@@ -1,0 +1,76 @@
+= RightField
+
+Authors::    {Stuart Owen}[https://orcid.org/0000-0003-2130-0865], {Matthew Horridge}[http://www.cs.man.ac.uk/~horridgm]
+Contact::    https://rightfield.org.uk/contact_us.html
+Licence::    BSD (See LICENCE or http://www.opensource.org/licenses/bsd-license.php)
+Copyright::  (c) 2009-2020 The University of Manchester, UK
+
+Website::    http://www.rightfield.org.uk
+
+
+== Support our development
+
+RightField is open source and free to use, and will remain so. To help support RightField, and its future development, please take a moment to register your interest or use of it at http://www.rightfield.org.uk/registration
+
+== Description
+
+RightField is an open-source tool for adding ontology term selection to Excel spreadsheets. For each annotation field, RightField can specify a range of allowed terms from a chosen ontology (subclasses, individuals or combinations). The resulting spreadsheet presents these terms to the users as a simple drop-down list. This reduces the adoption barrier for using community ontologies as the annotation is made by the scientist that generated the data rather than a third party, and the annotation is collected at the time of data collection.
+
+For more information please visit http://www.rightfield.org.uk
+
+== Configuring and Compiling
+
+If you wish your build of RightField to work with BioPortal you need an API key. To obtain an API key, register (if you have not already) and login with BioPortal[http://bioportal.bioontology.org/account] and go to "Account" where your API key will be displayed.
+This key should then be placed in a
+text file located at src/main/resources/bioportal_api_key (unfortunately we are unable to include this key with the source code).
+
+To compile RightField you are required to have both {Apache Maven2}[http://maven.apache.org/] and the {Java 1.8 JDK}[http://www.oracle.com/technetwork/java/javase/downloads/index.html] installed. 
+
+  >mvn assembly:directory  
+  
+This will create an unzipped distribution directory in the <em>target/rightfield-{version}/</em> directory.
+
+To create a zipped package run
+
+  >mvn assembly:assembly
+
+
+Project Description:
+RightField is an open-source tool for adding ontology term selection to Excel spreadsheets. RightField is used by a 'Template Creator' to create semantically aware Excel spreadsheet templates. The Excel templates are then reused by Scientists to collect a
+
+README:
+= RightField
+
+Authors::    {Stuart Owen}[https://orcid.org/0000-0003-2130-0865], {Matthew Horridge}[http://www.cs.man.ac.uk/~horridgm]
+Contact::    https://rightfield.org.uk/contact_us.html
+Licence::    BSD (See LICENCE or http://www.opensource.org/licenses/bsd-license.php)
+Copyright::  (c) 2009-2020 The University of Manchester, UK
+
+Website::    http://www.rightfield.org.uk
+
+
+== Support our development
+
+RightField is open source and free to use, and will remain so. To help support RightField, and its future development, please take a moment to register your interest or use of it at http://www.rightfield.org.uk/registration
+
+== Description
+
+RightField is an open-source tool for adding ontology term selection to Excel spreadsheets. For each annotation field, RightField can specify a range of allowed terms from a chosen ontology (subclasses, individuals or combinations). The resulting spreadsheet presents these terms to the users as a simple drop-down list. This reduces the adoption barrier for using community ontologies as the annotation is made by the scientist that generated the data rather than a third party, and the annotation is collected at the time of data collection.
+
+For more information please visit http://www.rightfield.org.uk
+
+== Configuring and Compiling
+
+If you wish your build of RightField to work with BioPortal you need an API key. To obtain an API key, register (if you have not already) and login with BioPortal[http://bioportal.bioontology.org/account] and go to "Account" where your API key will be displayed.
+This key should then be placed in a
+text file located at src/main/resources/bioportal_api_key (unfortunately we are unable to include this key with the source code).
+
+To compile RightField you are required to have both {Apache Maven2}[http://maven.apache.org/] and the {Java 1.8 JDK}[http://www.oracle.com/technetwork/java/javase/downloads/index.html] installed. 
+
+  >mvn assembly:directory  
+  
+This will create an unzipped distribution directory in the <em>target/rightfield-{version}/</em> directory.
+
+To create a zipped package run
+
+  >mvn assembly:assembly

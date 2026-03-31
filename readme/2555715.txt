@@ -1,0 +1,4 @@
+Project Description:
+Google Feed API via PHP/CURL
+
+README:

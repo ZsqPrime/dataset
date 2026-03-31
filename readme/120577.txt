@@ -1,0 +1,30 @@
+*** CLOUDLESS ***
+
+To use Cloudless:
+
+1. Get a PiCloud account: http://www.picloud.com
+
+2. Do its installation procedure.
+
+3. Run the Cloudless tests, which use a cloud simulator.
+
+4. Start doing stochastic inference.
+
+
+   
+
+Project Description:
+Distributed computational science made easy, in Python
+
+README:
+*** CLOUDLESS ***
+
+To use Cloudless:
+
+1. Get a PiCloud account: http://www.picloud.com
+
+2. Do its installation procedure.
+
+3. Run the Cloudless tests, which use a cloud simulator.
+
+4. Start doing stochastic inference.

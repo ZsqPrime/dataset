@@ -1,0 +1,14 @@
+shapediff will be a command line tool to diff shapefiles.
+
+shapediff runs uses the python module Fiona to read shape files.
+https://github.com/sgillies/Fiona
+
+
+Project Description:
+A python powered command line tool to diff shapefiles
+
+README:
+shapediff will be a command line tool to diff shapefiles.
+
+shapediff runs uses the python module Fiona to read shape files.
+https://github.com/sgillies/Fiona

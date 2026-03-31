@@ -1,0 +1,27 @@
+DISREGARD THAT GITZONE FUCKING ROCKS
+
+Basic functionality exists at this point, it does need some healthy exception handling.
+
+This project requires the 'dnsruby' and 'git' ruby gems.
+
+gitzone.rb - pulls a DNZ zone via AXFR and commits it to a specified git repository.
+  It is required that the repository exist and files already be added to it.
+
+config.yaml - configuration file, provides the directory to store the zone files as well as the domains and nameservers they are pulled from.
+ 
+
+
+Project Description:
+Perform an AXFR of a selection of DNS zones to maintain backups up them in Git
+
+README:
+DISREGARD THAT GITZONE FUCKING ROCKS
+
+Basic functionality exists at this point, it does need some healthy exception handling.
+
+This project requires the 'dnsruby' and 'git' ruby gems.
+
+gitzone.rb - pulls a DNZ zone via AXFR and commits it to a specified git repository.
+  It is required that the repository exist and files already be added to it.
+
+config.yaml - configuration file, provides the directory to store the zone files as well as the domains and nameservers they are pulled from.

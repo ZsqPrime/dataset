@@ -1,0 +1,12 @@
+Tracks changes affecting IRC users/channels
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Keeps track of everything that is user- or channel-related on IRC for Erebot
+
+README:
+Tracks changes affecting IRC users/channels
+
+Package detailed description here (found in README)

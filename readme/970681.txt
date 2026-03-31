@@ -1,0 +1,14 @@
+JavaHelper
+==========
+
+A collection of useful classes used in my Java projects. A kind of java version of boost - in inspiration at least.
+
+
+Project Description:
+General java functions handy for many projects
+
+README:
+JavaHelper
+==========
+
+A collection of useful classes used in my Java projects. A kind of java version of boost - in inspiration at least.

@@ -1,0 +1,19 @@
+This is an app/website for showcasing my portfolio.
+
+This is also my first real foray into the Rails framework.
+Once completed, I will include documentation on all the new things I have implemented.
+
+
+Rishi Ghan
+
+Project Description:
+portfolio on rails.
+
+README:
+This is an app/website for showcasing my portfolio.
+
+This is also my first real foray into the Rails framework.
+Once completed, I will include documentation on all the new things I have implemented.
+
+
+Rishi Ghan

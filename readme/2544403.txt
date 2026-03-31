@@ -1,0 +1,9 @@
+Project Description:
+A Python based Nagios dashboard.
+
+README:
+pynagdash is a Nagios (http://www.nagios.org/) dashboard written using Flask (http://flask.pocoo.org/), jQuery (http://jquery.com/), and DataTables (http://datatables.net/).
+
+Development is still in progress and merge requests are welcome.
+
+Example nagdash.cfg and nagdash.wsgi files are included.  You'll need to customize both for your environment.  Be sure to change the SECRET_KEY in nagdash.cfg.  Failing to do so can result in users faking their authentication details.

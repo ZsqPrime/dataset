@@ -1,0 +1,5 @@
+Project Description:
+Google Chrome extension that prevents social widgets and plugins from slowing down your web experience.
+
+README:
+social web, y u no leave me alone?

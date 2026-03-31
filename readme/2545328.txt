@@ -1,0 +1,6 @@
+Project Description:
+Utilities for ICTP RegCM model
+
+README:
+# 2012-02-01  Project Init #
+## Michal Belda ##

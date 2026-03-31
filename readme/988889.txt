@@ -1,0 +1,11 @@
+# Ruby Tesseract
+
+No longer supported - use https://github.com/meh/ruby-tesseract-ocr
+
+Project Description:
+No longer supported see - https://github.com/meh/ruby-tesseract-ocr
+
+README:
+# Ruby Tesseract
+
+No longer supported - use https://github.com/meh/ruby-tesseract-ocr

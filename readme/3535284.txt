@@ -1,0 +1,21 @@
+Project Description:
+Chrome extension which gives you the word/alphabet/line count of any highlighted text
+
+README:
+Chrome extension.
+
+Gets you the word/line/alphabet count of any selected text. 
+
+Very simple to use, highlight required text, and click on "Word Count" Extension icon.
+Gives you a count of all the words, lines and number of alphabets.
+
+Open Source.
+
+To Install, download and unzip the repo. Load it up in your extensions tab chrome://settings/extensions by loading an "unpacked" extension.
+
+
+Publicity
+
+Email: phalgun_g@yahoo.com
+Twitter: @phalgun_g
+Web: phalgun.tumblr.com

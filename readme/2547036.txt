@@ -1,0 +1,21 @@
+Project Description:
+An interface to make the Gecode constraint library friendly for interpreted languages.
+
+README:
+Build Requirements:
+
+* CMake
+* Gecode (it is recommended to configure Gecode with the --prefix=/usr and --enable-gist parameters)
+* Qt
+
+Follow these steps to clone and build the library:
+
+$ git clone git@github.com:ggutierrez/gecodert.git
+$ mkdir build
+$ cd build
+$ cmake ../gecodert
+$ make
+
+Now you can test some examples:
+$ ./money
+$ ./queens

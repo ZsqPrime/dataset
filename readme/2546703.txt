@@ -1,0 +1,4 @@
+Project Description:
+AVR-based automatic GSM-based (Nokia FBus) GPS locator built in AVR Studio 4
+
+README:

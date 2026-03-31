@@ -1,0 +1,8 @@
+Project Description:
+rename folders based on date taken info of photos within the folder
+
+README:
+Renamer
+=======
+
+Rename folders based on date taken info of photos within the folder

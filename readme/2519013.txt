@@ -1,0 +1,9 @@
+Project Description:
+Initial app 
+
+README:
+===== Genesis =====
+
+This project us a testing application. 
+
+CanCan + Devise + Static Pages + Roles + i18

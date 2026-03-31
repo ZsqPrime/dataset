@@ -1,0 +1,5 @@
+Project Description:
+various utils for C++ and C (beginner)
+
+README:
+Just some beginner stuff to help me learn about redis and c.  The string and split functions are not mine, just forgot where I got them from.

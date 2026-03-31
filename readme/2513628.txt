@@ -1,0 +1,6 @@
+
+
+Project Description:
+A utility script I used in conjunction with wget to get copyright information from a website.
+
+README:

@@ -1,0 +1,8 @@
+This repository contains common files that I use when setting up an environment.
+
+
+Project Description:
+Place to put little bits that I use often when building new machines, etc.
+
+README:
+This repository contains common files that I use when setting up an environment.

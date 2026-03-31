@@ -1,0 +1,106 @@
+Project Description:
+Update multiple WordPress installs using SVN
+
+README:
+Usage: wpupdate [OPTIONS]
+Upgrade a WordPress install (or a list of installs) to the latest version of WordPress.
+
+Example: wpupdate -f /home/wp-versions 
+This would update all of the installs listed in wp-versions to the latest version of WordPress.
+
+Example: wpupdate
+Updates the WordPress installation in the current directory (if it is one) to the latest version of WordPress.
+
+Example: wpupdate -h 
+Prints out this help message.
+
+
+
+OPTIONS:
+ -b     use the branches, can not be used with -t (tags) option. Used with -u
+        [svn update] or -w [svn switch].
+
+ -c     Do not use the wp-config.php file to grab the database user name and
+        password. Default is to use the wp-config.php file. Scipt always uses
+        wp-config.php to get the database name unless the -d flag is used.
+
+ -d     supply the database name to use. Use only when updating a single
+        install
+
+ -f [/path/to/filename]
+        path to a file containing a list of paths to WordPress installs, can
+        not be used with -i (single install) option. File must consist of full
+        paths in the form "/wwwroot/sites/mossiso.com/blog/" each on a separate
+        line. A ";" semi-colon designates a commented line. If file exists in
+        the directory you are running wpupdate from, then only the filename is
+        needed.
+
+ -h     display this help info
+
+ -i     path to  a single WordPress install. Can not be used with -f (versions file)
+        option 
+
+ -k     skip backing up the wp-content folder and database
+
+ -m     Set the temp path, /tmp by default.
+
+ -n     run as a normal user, do not use sudo
+
+ -o [/path/to/filename]     
+        path to output file containing report of svn update. File will be
+        created if it does not exist. The directories must already exist. The
+        default is to save it to your home directory.
+
+ -p     turn off the steps to secure and protect WP. Steps include removing
+        the install.php file, adding rules to the htaccess file to protect
+        the wp-config.php file, the .svn directories, and the
+        wp-content/uploads directory. These steps are done by default.
+
+ -v     outputs version information and exits
+
+ -V [#.#]
+        The WordPress version number used for the upgrade/downgrade.
+
+ -r     output the default SVN repo used and exit
+
+ -s [http://svn.url.com]
+        svn URL to use for updates (defaults to http://core.svn.wordpress.org).
+        Used with -u [svn update] or -w [svn switch].
+
+ -u     use "svn update", can not be used with -w (switch) option. Required for
+        SVN update, default is to use WordPress latest.zip and cp command.
+
+ -w     use "svn switch", can not be used with -u (update) option. Required for
+        SVN update, default is to use WordPress latest.zip and cp command.
+
+ -t     use the tags, can not be used with -b (branches) option. Used with -u
+        [svn update] or -w [svn switch].
+
+ -x     skip fixing permissions and owners
+
+
+WHAT IT DOES:
+    First the wpupudate program makes a backup copy of the MySQL database and
+    the wp-contents/ directory. It places these backups in a temporary
+    directory.
+    
+
+THINGS TO KNOW:
+    By default the program runs as sudo. To run as normal user, pass the -n
+    flag. This user must have absolute privileges over all files in the
+    WordPress installation directory.
+
+    The location is updated to the latest version of WordPress by default, use
+    the -V flag to change the WordPress version.
+
+    If the -f or -i flags are not given on the command line, the program will
+    attempt to update the current directory.
+
+    The script attempts to use the wp-config.php file for MySQL database
+    account and connection information. If it can not find the information, the
+    script prompts for a MySQL user and password.
+
+    The script saves a copy of the downloaded WordPress version in the home
+    directory when run without sudo, or in the /tmp directory when run with
+    sudo (default), so that subsequent calls to the script use the already
+    downloaded version.

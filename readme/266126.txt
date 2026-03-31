@@ -1,0 +1,36 @@
+== cranelift
+
+=== Referências
+
+Twitter Bootstrap SCSS
+  http://railsapps.github.com/twitter-bootstrap-rails.html
+
+Simple-form c/ Bootstrap
+  https://github.com/plataformatec/simple_form
+
+Alguma documentação dos bindings SVN
+  http://www.cs.toronto.edu/~james/svn/ruby_docs.html
+
+Datepicker p/ bootstrap
+  http://www.eyecon.ro/bootstrap-datepicker/
+
+
+Project Description:
+Deploy web service
+
+README:
+== cranelift
+
+=== Referências
+
+Twitter Bootstrap SCSS
+  http://railsapps.github.com/twitter-bootstrap-rails.html
+
+Simple-form c/ Bootstrap
+  https://github.com/plataformatec/simple_form
+
+Alguma documentação dos bindings SVN
+  http://www.cs.toronto.edu/~james/svn/ruby_docs.html
+
+Datepicker p/ bootstrap
+  http://www.eyecon.ro/bootstrap-datepicker/

@@ -1,0 +1,7 @@
+Project Description:
+Solutions for USACO training problems.
+
+README:
+# USACO
+
+My solutions for the problems at http://train.usaco.org/usacogate .

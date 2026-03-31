@@ -1,0 +1,7 @@
+Project Description:
+The online home of me. Powered by Octopress.
+
+README:
+# [ethnt.me](http://ethnt.me)
+
+My own website.

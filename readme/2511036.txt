@@ -1,0 +1,18 @@
+Sample application using NodeJs, Sammy.js, KnockoutJs, Amplify.js
+
+run npm install to get packages installed
+run npm test with selenium (need jar file, etc...)
+
+todo next: validation
+
+
+Project Description:
+building a sample knockoutjs single page application
+
+README:
+Sample application using NodeJs, Sammy.js, KnockoutJs, Amplify.js
+
+run npm install to get packages installed
+run npm test with selenium (need jar file, etc...)
+
+todo next: validation

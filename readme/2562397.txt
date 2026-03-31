@@ -1,0 +1,7 @@
+Project Description:
+PHP 5.3+ Rest Http Client
+
+README:
+Simple / Basic HTTP Rest Client for php 5.3+
+
+See examples.php for sample requests.

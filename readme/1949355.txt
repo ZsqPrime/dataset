@@ -1,0 +1,14 @@
+visShadow
+=========
+
+Program for master thesis. Need jogl2 to run.
+
+
+Project Description:
+Program for master thesis. Need jogl2 to run.
+
+README:
+visShadow
+=========
+
+Program for master thesis. Need jogl2 to run.

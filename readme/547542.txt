@@ -1,0 +1,389 @@
+h1. rah_post_versions
+
+p. Store and revive old versions of articles, categories, sections, forms and pages. Rah_post_versions embeds revision control to "Textpattern's":http://www.textpattern.com admin-side user interface. The plugin monitors changes made from the web-based admin interface and stores the reversions in a repository.
+
+h2. List of features
+
+* Tracks changes made via Textpattern's interface.
+* By default the plugin tracks edits and saves of articles, pages, forms, preferences, categories, sections, styles, discussion and links. The plugin's tracking can be extended to other areas from the plugin's preferences.
+* Ability to revert edits to a previous revision.
+
+h2. Basic concept
+
+p. The rah_post_versions tracks the changes made via Textpattern's interface. Instead it tracking the database, it tracks the data sent by your browser and received by the server. After it has collected the appropriate data and filtered it to be valid, it starts identifying process. After it has the exact info what the change is and where it should go, it stores the information to the revision control, threaded under appropriate item. 
+
+h2. Requirements
+
+p. Rah_post_versions' minimum requirements:
+
+* Textpattern 4.5.0 or newer.
+* PHP 5.2.0 or newer.
+
+h2. Installation
+
+p. The general behavior stands:
+
+# Go to your Textpattern installation's admin panel.
+# Navigate to _Admin / Plugins_.
+# Download and open the plugin code.
+# Copy the plugin code to the install plugin box.
+# Click install and go thru the automated installation process.
+# After installation find the plugin from the plugin list and click Activate.
+# Now the plugin is installed and ready to be used. The plugin's interface can be now found from _Extensions/Post Versions_.
+
+h2. Interface
+
+p. After a successful installation you can find rah_post_versions' interface under _Extensions/Post Versions_. The interface is divided to two main areas; _Subversion repository browser_, that is the _main_ tab, and _Preferences_.
+
+h3. The Main area, repository browser
+
+p. When you open the Main area you will see the default view; a list of items. The list consists the items that have been modified or saved, and revisioned. When you click one of these items, the item's changeset will expand, and you will see the list of individual changes made to that specific item. The changes can be viewed too.
+
+h3. Preferences panel
+
+p. Preferences panel lets the user change some of the common settings. These include exclude form fields from tracking, exclude changes made by specific authors, set which pages, or events, to track, and set identification code. When you open the Preferences panel, you will see that the _identification code_ is small PHP snippet. It will generate the required identification for a posted change. Without proper ID, a change can not be threaded to correct set of changes.
+
+h2. Preferences and configuration
+
+p. Preferences panel lets the user change some of the common settings. Available settings are as follows.
+
+h3. Compress repository data?
+
+p. If set to yes, created repository data is compressed using Gzip.
+
+h3. Ignored authors
+
+p. Changes done by authors listed are not stored in the version control system. They field takes comma-separated list of login names. By default no authors are ignored.
+
+h3. Path to repository directory
+
+p. Needs description.
+
+h2. For Developers
+
+p. As of version 1.0, rah_post_versions has provided tools for developers. These tools, an API and added hooking points, allow developers to extend plugin's functionality, and for instance, create revisions directly from their code, as easily as calling single class method.
+
+h3. API
+
+p. The API allows picking up changes (commits), and creating new revisions directly from plugins, and other PHP code snippets. The API can be used to make rah_post_versions to keep track of the changes done via plugin's editor interface.
+
+p. Creating a new revision is as easy as calling a single class method, *rah_post_versions::create_revision(mixed $grid, string $title, string $author, string $event, string $step, array $data)*. The arguments are as follows.
+
+p. *grid* (string, 1-255 bytes, required)
+Is a unique ID which is used together with @event@ to detect which item the revision belongs to. The @grid@'s value can be any string between 1-255 bytes, as long as it helps to detect the item correctly. Otherwise the revision doesn't know which item it belongs to.
+
+p. *title* (string, 1-255 bytes, required)
+Item's title/name. It's the thing that is shown as the item's name in the repository browser.
+
+p. *author* (string, 1-64 bytes, required)
+Revision's author. The @author@ will need to be a valid username. Uses login names.T here is no limitation to set which user group the user has belong to, but it will have to be a real user.
+
+p. *event* (string, 1-255 bytes, required)
+Admin-side event the revision comes from or belongs to. Usually the @event@ would be a admin-side panel's name/event, but it can really be anything. If the commit comes from an admin-side pane (admin-side plugin etc), use the pane's event, if elsewhere, use what sounds most appropriate, unique, and most recognizable.
+
+p. *step* (string, 1-255 bytes, required)
+Admin-side step the revision comes from, or action committed (delete, save, create etc). Same rules apply as to the @event@ above.
+
+p. *data* (array, up to 4 GB, required)
+The @data@ is the actual committed revision data. The @data@ take's an array map, containing @FieldName => FieldData@ property pairs.
+
+p. @rah_post_versions::create_revision()@ returns @FALSE@ on error, and @TRUE@ on success or when new revision isn't needed. New revision isn't needed if committed data matches last revision.
+
+p. *Basic usage*
+
+bc.. /* Some data for the revision */
+
+$data = array(
+	'content' => 'Hello World!',
+	'active' => 1,
+	'sky' => 'Blue',
+	'parent_item' => 'Universe',
+);
+
+/* Create the revision */
+
+rah_post_versions::get()->create_revision('my_item_specific_id', 'Item Name', 'loginname', 'xxx_myplugin_event', 'save', $data);
+
+h3. Hooking and callbacks
+
+p. Other way of extending plugin's functionality and possibilities are the hooks. The callback functionality uses Textpattern 4.x's regular way of handling callbacks, the same stuff used in "Pluggable UI and other callback registering":http://textpattern.net/wiki/index.php?title=Plugin_Development_Guidelines#Callbacks. Rah_post_version's callbacks are as follows.
+
+p. *rah_post_versions.revision_created*
+Is called when a new revision is successfully created. Revision data is passed to the hooked function. The revision data is the same array map as passed to the "rah_post_version::create_revision":#rah_post_versions-create_revision method.
+
+h2. Limitations
+
+p. There are some limitations, because the way the plugin works is what it is. Most obvious is that it will only track the form submits. If some interface doesn't use form submits, or works outside your browser (desktop client or similar), it won't track it. Neither the plugin is informed about delete, and renaming forms, or pages will start a new set of changes under a new item.
+
+h2. Changelog
+
+h3. Version 1.0 - upcoming
+
+* Fixed: Trims item name from unneeded whitespace before saving the revision. Fixes issue where a nameless item could potentially be added to the revision browser.
+* Fixed: issue where admin-side @step@ was used directly in links' target. In some cases some links could become invalid, or cause extra unneeded processing while still working.
+
+* Added: API and hooking points for developers. Extra functionality can be added by hooking to callback events, and developers can create revisions directly from their code (plugins etc) with a single class method.
+* Added: Optional support for storing revision data in static files, leaving only less storage space requiring meta data to the database table.
+* Added: CSRF protection.
+* Added: Doesn't save a revision if nothing changed from the latest revision.
+* Added: Admin-side interface uses language strings. The interface is translatable using Textpattern's Textpacks.
+* Added: Remembers lists' sorting and filtering options across sessions.
+* Added: Renaming an item is reflected in the main item listing, instead of the item keeping the original name.
+* Added: Lists can now be arranged by clicking column headings.
+* Added: Group permission integration. For instance, now only Publishers can remove items, and only appropriate interface elements are shown to users with different permissions.
+* Added: Direct link to diff tool on individual item's page. Makes it easier to compare changes to the older revision.
+* Changed: Integrated plugin's preferences to Textpattern's native admin-side preferences panel. As such, editing preferences is restricted by group permissions.
+* Changed: Diff tool now takes newest and oldest revision from the selection, instead of the first two.
+* Changed: Doesn't carry sorting options in URLs.
+* Improved: Styling, JavaScript and HTML markup structure in general.
+* Improved: Reduced continues @htmlspecialchars()@ calls caused by the diff algorithm.
+* Improved: Database query efficiency. New installs get some new indexes too.
+* Removed: Emailing feature. Relatively pointless, and didn't do anything.
+* Removed: Filtering bar. All the options are integrated to elsewhere, to appropriate locations. As such, separate clunky filtering bar isn't needed.
+* Removed: preference fields, including identification code, excluded- and hidden-fields and tracked events.
+* Re-written in PHP5-level OOP. Takes advantage of chaining and so on.
+* Now requires Textpattern version 4.5.0 or newer.
+
+h3. Version 0.9 - 2011/06/18
+
+* Fixed: Doesn't spit out extra content to the top of the page if JavaScript is disabled.
+* Fixed: Error in condition that chose if JavaScript should be added to the page or not.
+* Added: Now informs the user if removing items from the database failed.
+* Added: Uninstaller that is ran when plugin is deleted. Drops plugin specific tables.
+* Changed: New database tables get UTF-8 as their charset by default instead of using server default.
+* Changed: Make sure selection isn't empty.
+* Changed: Improved JavaScript based multi-edit script.
+* Now compatible with Textpattern 4.4.1 and newer; supports CSRF protection added in 4.4.1, from now on doesn't store tokens and uses tokens when reverting to older version.
+
+h3. Version 0.8 - 2010/10/19
+
+* Added tool-tips to the pagination's jump links (_Go to the first page_ and _Go to the last page_).
+* Removed username from showing up in the mails.
+* Unified conditional statements; now all use @||@ and @&&@ operators instead of synonym mashmixmess.
+
+h3. Version 0.7 - 2010/06/21
+
+* Fix/change: Diff tool shows/compares array data as blocks. Array's are imploded and values are separated with line breaks.
+
+h3. Version 0.6 - 2010/06/20
+
+* Fixed: instances of missing HTML escaping (POST keys).
+* Fixed: now the plugin checks if the revisioned data contains an array (@<input name="foo[bar]" />@ etc) and shows it correctly. "Thank you for reporting, TJ":http://forum.textpattern.com/viewtopic.php?pid=230541#p230541.
+
+h3. Version 0.5 - 2010/06/15
+
+* Removed twice presented conditional.
+
+h3. Version 0.4 - 2010/06/11
+
+* Added diff tool. The feature is found from the list view's multiedit: check two revisions and select _"Diff"_ from the drop-down. The diff feature uses "Paul Butler's":http://www.paulbutler.org "Simple Diff Algorithm":http://paulbutler.org/archives/a-simple-diff-algorithm-in-php/.
+* Added _Are you sure?_ checks to the multiedit.
+
+h3. Version 0.3 - 2010/06/09
+
+* Fixed: no longer unsets ID and Title from the forms. These were leftovers from the development period. "Thank you for reporting, Jan":http://forum.textpattern.com/viewtopic.php?pid=229943#p229943.
+
+h3. Version 0.2 - 2010/06/07
+
+* Updated original installer to add more monitored pages. "Thank you for re-posting, Dale":http://forum.textpattern.com/viewtopic.php?pid=229852#p229852. Current users can add to the field following code: @article:edit, article:create, article:publish, article:save, page:page_create, page:page_edit, page:page_save, form:form_create, form:form_edit, form:form_save, prefs:prefs_save, prefs:advanced_prefs_save, category:cat_article_create, category:cat_image_create, category:cat_file_create, category:cat_link_create, category:cat_article_save, category:cat_image_save, category:cat_file_save, category:cat_link_save, section:section_create, section:section_save, link:link_post, link:link_save, discuss:discuss_save, image:image_save, file:file_save, css:css_save@
+
+h3. Version 0.1 - 2010/06/07
+
+* Initial release.
+
+Project Description:
+Revision control for Textpattern CMS
+
+README:
+h1. rah_post_versions
+
+p. Store and revive old versions of articles, categories, sections, forms and pages. Rah_post_versions embeds revision control to "Textpattern's":http://www.textpattern.com admin-side user interface. The plugin monitors changes made from the web-based admin interface and stores the reversions in a repository.
+
+h2. List of features
+
+* Tracks changes made via Textpattern's interface.
+* By default the plugin tracks edits and saves of articles, pages, forms, preferences, categories, sections, styles, discussion and links. The plugin's tracking can be extended to other areas from the plugin's preferences.
+* Ability to revert edits to a previous revision.
+
+h2. Basic concept
+
+p. The rah_post_versions tracks the changes made via Textpattern's interface. Instead it tracking the database, it tracks the data sent by your browser and received by the server. After it has collected the appropriate data and filtered it to be valid, it starts identifying process. After it has the exact info what the change is and where it should go, it stores the information to the revision control, threaded under appropriate item. 
+
+h2. Requirements
+
+p. Rah_post_versions' minimum requirements:
+
+* Textpattern 4.5.0 or newer.
+* PHP 5.2.0 or newer.
+
+h2. Installation
+
+p. The general behavior stands:
+
+# Go to your Textpattern installation's admin panel.
+# Navigate to _Admin / Plugins_.
+# Download and open the plugin code.
+# Copy the plugin code to the install plugin box.
+# Click install and go thru the automated installation process.
+# After installation find the plugin from the plugin list and click Activate.
+# Now the plugin is installed and ready to be used. The plugin's interface can be now found from _Extensions/Post Versions_.
+
+h2. Interface
+
+p. After a successful installation you can find rah_post_versions' interface under _Extensions/Post Versions_. The interface is divided to two main areas; _Subversion repository browser_, that is the _main_ tab, and _Preferences_.
+
+h3. The Main area, repository browser
+
+p. When you open the Main area you will see the default view; a list of items. The list consists the items that have been modified or saved, and revisioned. When you click one of these items, the item's changeset will expand, and you will see the list of individual changes made to that specific item. The changes can be viewed too.
+
+h3. Preferences panel
+
+p. Preferences panel lets the user change some of the common settings. These include exclude form fields from tracking, exclude changes made by specific authors, set which pages, or events, to track, and set identification code. When you open the Preferences panel, you will see that the _identification code_ is small PHP snippet. It will generate the required identification for a posted change. Without proper ID, a change can not be threaded to correct set of changes.
+
+h2. Preferences and configuration
+
+p. Preferences panel lets the user change some of the common settings. Available settings are as follows.
+
+h3. Compress repository data?
+
+p. If set to yes, created repository data is compressed using Gzip.
+
+h3. Ignored authors
+
+p. Changes done by authors listed are not stored in the version control system. They field takes comma-separated list of login names. By default no authors are ignored.
+
+h3. Path to repository directory
+
+p. Needs description.
+
+h2. For Developers
+
+p. As of version 1.0, rah_post_versions has provided tools for developers. These tools, an API and added hooking points, allow developers to extend plugin's functionality, and for instance, create revisions directly from their code, as easily as calling single class method.
+
+h3. API
+
+p. The API allows picking up changes (commits), and creating new revisions directly from plugins, and other PHP code snippets. The API can be used to make rah_post_versions to keep track of the changes done via plugin's editor interface.
+
+p. Creating a new revision is as easy as calling a single class method, *rah_post_versions::create_revision(mixed $grid, string $title, string $author, string $event, string $step, array $data)*. The arguments are as follows.
+
+p. *grid* (string, 1-255 bytes, required)
+Is a unique ID which is used together with @event@ to detect which item the revision belongs to. The @grid@'s value can be any string between 1-255 bytes, as long as it helps to detect the item correctly. Otherwise the revision doesn't know which item it belongs to.
+
+p. *title* (string, 1-255 bytes, required)
+Item's title/name. It's the thing that is shown as the item's name in the repository browser.
+
+p. *author* (string, 1-64 bytes, required)
+Revision's author. The @author@ will need to be a valid username. Uses login names.T here is no limitation to set which user group the user has belong to, but it will have to be a real user.
+
+p. *event* (string, 1-255 bytes, required)
+Admin-side event the revision comes from or belongs to. Usually the @event@ would be a admin-side panel's name/event, but it can really be anything. If the commit comes from an admin-side pane (admin-side plugin etc), use the pane's event, if elsewhere, use what sounds most appropriate, unique, and most recognizable.
+
+p. *step* (string, 1-255 bytes, required)
+Admin-side step the revision comes from, or action committed (delete, save, create etc). Same rules apply as to the @event@ above.
+
+p. *data* (array, up to 4 GB, required)
+The @data@ is the actual committed revision data. The @data@ take's an array map, containing @FieldName => FieldData@ property pairs.
+
+p. @rah_post_versions::create_revision()@ returns @FALSE@ on error, and @TRUE@ on success or when new revision isn't needed. New revision isn't needed if committed data matches last revision.
+
+p. *Basic usage*
+
+bc.. /* Some data for the revision */
+
+$data = array(
+	'content' => 'Hello World!',
+	'active' => 1,
+	'sky' => 'Blue',
+	'parent_item' => 'Universe',
+);
+
+/* Create the revision */
+
+rah_post_versions::get()->create_revision('my_item_specific_id', 'Item Name', 'loginname', 'xxx_myplugin_event', 'save', $data);
+
+h3. Hooking and callbacks
+
+p. Other way of extending plugin's functionality and possibilities are the hooks. The callback functionality uses Textpattern 4.x's regular way of handling callbacks, the same stuff used in "Pluggable UI and other callback registering":http://textpattern.net/wiki/index.php?title=Plugin_Development_Guidelines#Callbacks. Rah_post_version's callbacks are as follows.
+
+p. *rah_post_versions.revision_created*
+Is called when a new revision is successfully created. Revision data is passed to the hooked function. The revision data is the same array map as passed to the "rah_post_version::create_revision":#rah_post_versions-create_revision method.
+
+h2. Limitations
+
+p. There are some limitations, because the way the plugin works is what it is. Most obvious is that it will only track the form submits. If some interface doesn't use form submits, or works outside your browser (desktop client or similar), it won't track it. Neither the plugin is informed about delete, and renaming forms, or pages will start a new set of changes under a new item.
+
+h2. Changelog
+
+h3. Version 1.0 - upcoming
+
+* Fixed: Trims item name from unneeded whitespace before saving the revision. Fixes issue where a nameless item could potentially be added to the revision browser.
+* Fixed: issue where admin-side @step@ was used directly in links' target. In some cases some links could become invalid, or cause extra unneeded processing while still working.
+
+* Added: API and hooking points for developers. Extra functionality can be added by hooking to callback events, and developers can create revisions directly from their code (plugins etc) with a single class method.
+* Added: Optional support for storing revision data in static files, leaving only less storage space requiring meta data to the database table.
+* Added: CSRF protection.
+* Added: Doesn't save a revision if nothing changed from the latest revision.
+* Added: Admin-side interface uses language strings. The interface is translatable using Textpattern's Textpacks.
+* Added: Remembers lists' sorting and filtering options across sessions.
+* Added: Renaming an item is reflected in the main item listing, instead of the item keeping the original name.
+* Added: Lists can now be arranged by clicking column headings.
+* Added: Group permission integration. For instance, now only Publishers can remove items, and only appropriate interface elements are shown to users with different permissions.
+* Added: Direct link to diff tool on individual item's page. Makes it easier to compare changes to the older revision.
+* Changed: Integrated plugin's preferences to Textpattern's native admin-side preferences panel. As such, editing preferences is restricted by group permissions.
+* Changed: Diff tool now takes newest and oldest revision from the selection, instead of the first two.
+* Changed: Doesn't carry sorting options in URLs.
+* Improved: Styling, JavaScript and HTML markup structure in general.
+* Improved: Reduced continues @htmlspecialchars()@ calls caused by the diff algorithm.
+* Improved: Database query efficiency. New installs get some new indexes too.
+* Removed: Emailing feature. Relatively pointless, and didn't do anything.
+* Removed: Filtering bar. All the options are integrated to elsewhere, to appropriate locations. As such, separate clunky filtering bar isn't needed.
+* Removed: preference fields, including identification code, excluded- and hidden-fields and tracked events.
+* Re-written in PHP5-level OOP. Takes advantage of chaining and so on.
+* Now requires Textpattern version 4.5.0 or newer.
+
+h3. Version 0.9 - 2011/06/18
+
+* Fixed: Doesn't spit out extra content to the top of the page if JavaScript is disabled.
+* Fixed: Error in condition that chose if JavaScript should be added to the page or not.
+* Added: Now informs the user if removing items from the database failed.
+* Added: Uninstaller that is ran when plugin is deleted. Drops plugin specific tables.
+* Changed: New database tables get UTF-8 as their charset by default instead of using server default.
+* Changed: Make sure selection isn't empty.
+* Changed: Improved JavaScript based multi-edit script.
+* Now compatible with Textpattern 4.4.1 and newer; supports CSRF protection added in 4.4.1, from now on doesn't store tokens and uses tokens when reverting to older version.
+
+h3. Version 0.8 - 2010/10/19
+
+* Added tool-tips to the pagination's jump links (_Go to the first page_ and _Go to the last page_).
+* Removed username from showing up in the mails.
+* Unified conditional statements; now all use @||@ and @&&@ operators instead of synonym mashmixmess.
+
+h3. Version 0.7 - 2010/06/21
+
+* Fix/change: Diff tool shows/compares array data as blocks. Array's are imploded and values are separated with line breaks.
+
+h3. Version 0.6 - 2010/06/20
+
+* Fixed: instances of missing HTML escaping (POST keys).
+* Fixed: now the plugin checks if the revisioned data contains an array (@<input name="foo[bar]" />@ etc) and shows it correctly. "Thank you for reporting, TJ":http://forum.textpattern.com/viewtopic.php?pid=230541#p230541.
+
+h3. Version 0.5 - 2010/06/15
+
+* Removed twice presented conditional.
+
+h3. Version 0.4 - 2010/06/11
+
+* Added diff tool. The feature is found from the list view's multiedit: check two revisions and select _"Diff"_ from the drop-down. The diff feature uses "Paul Butler's":http://www.paulbutler.org "Simple Diff Algorithm":http://paulbutler.org/archives/a-simple-diff-algorithm-in-php/.
+* Added _Are you sure?_ checks to the multiedit.
+
+h3. Version 0.3 - 2010/06/09
+
+* Fixed: no longer unsets ID and Title from the forms. These were leftovers from the development period. "Thank you for reporting, Jan":http://forum.textpattern.com/viewtopic.php?pid=229943#p229943.
+
+h3. Version 0.2 - 2010/06/07
+
+* Updated original installer to add more monitored pages. "Thank you for re-posting, Dale":http://forum.textpattern.com/viewtopic.php?pid=229852#p229852. Current users can add to the field following code: @article:edit, article:create, article:publish, article:save, page:page_create, page:page_edit, page:page_save, form:form_create, form:form_edit, form:form_save, prefs:prefs_save, prefs:advanced_prefs_save, category:cat_article_create, category:cat_image_create, category:cat_file_create, category:cat_link_create, category:cat_article_save, category:cat_image_save, category:cat_file_save, category:cat_link_save, section:section_create, section:section_save, link:link_post, link:link_save, discuss:discuss_save, image:image_save, file:file_save, css:css_save@
+
+h3. Version 0.1 - 2010/06/07
+
+* Initial release.

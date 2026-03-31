@@ -1,0 +1,17 @@
+Project Description:
+
+
+README:
+== Amble - Victoria in your pocket
+
+This is the source code to our entry for the 2010 App My State Competition 
+in Victoria, Australia.
+
+Amble is a cross platform mobile web application that is designed to replace
+a paper based city guide. It returns stunning images of tourist locations
+that are close by allowing the user to add them as favourites and share them
+with friends via facebook and twitter.
+
+## License 
+
+MIT. (c) Percolate Studio, maintained by Tom Coleman (@tmeasday).

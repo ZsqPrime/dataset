@@ -1,0 +1,10 @@
+Right now this project changes too much for me to reliably document. 
+For more info please contact me and I will tell you all about it.
+
+Project Description:
+An experiment with Ruby and Gosu
+
+README:
+Right now this project changes too much for me to reliably document. 
+
+For more info please contact me and I will tell you all about it.

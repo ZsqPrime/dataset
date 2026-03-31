@@ -1,0 +1,5 @@
+Project Description:
+Due to a confusing name, this project was renamed and moved to:
+
+README:
+Due to a confusing name, this project was renamed and moved to https://github.com/mattetti/Weasel-Diesel

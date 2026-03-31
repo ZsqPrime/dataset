@@ -1,0 +1,5 @@
+Project Description:
+video talk through vp8
+
+README:
+The code implements the video transmit through the Wifi, the codec is vp8. the event lib is libevent-12-stable.

@@ -1,0 +1,14 @@
+Imagination
+===========
+
+The documentation is available at http://readthedocs.org/docs/imagination/.
+
+
+Project Description:
+JavaBeans-inspired reusable component framework
+
+README:
+Imagination
+===========
+
+The documentation is available at http://readthedocs.org/docs/imagination/.

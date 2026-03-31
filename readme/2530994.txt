@@ -1,0 +1,16 @@
+Project Description:
+A CardDAV/CalDAV server
+
+README:
+==========================
+ Calypso - CalDAV Server
+==========================
+
+--------
+ README
+--------
+
+The Calypso Project is a free and open-source CalDAV calendar server.
+
+For complete documentation, please visit the `Calypso online documentation
+<http://www.calypso.org/documentation>`_

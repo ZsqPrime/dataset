@@ -1,0 +1,8 @@
+Project Description:
+first person shooter using webgl and nodejs
+
+README:
+Gladiators
+==========
+
+first person shooter using webgl and nodejs

@@ -1,0 +1,12 @@
+Project Description:
+Zipf's law in Ruby
+
+README:
+## Zipf's law in Ruby
+
+### Run
+
+```
+bundle install
+bundle exec rake example
+```

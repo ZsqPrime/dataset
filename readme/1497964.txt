@@ -1,0 +1,29 @@
+Puppet configurations
+---------------------
+
+auth.conf
+  authentication for REST API endpoints
+
+puppet.conf
+  client and server (if applicable configuration)
+
+modules/
+  puppet modules, may be distributed as submodules
+
+
+
+Project Description:
+superproject for puppet configurations
+
+README:
+Puppet configurations
+---------------------
+
+auth.conf
+  authentication for REST API endpoints
+
+puppet.conf
+  client and server (if applicable configuration)
+
+modules/
+  puppet modules, may be distributed as submodules

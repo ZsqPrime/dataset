@@ -1,0 +1,19 @@
+Sword2Ruby gem
+==================
+
+THIS IS NO LONGER THE ACTIVE DEVELOPMENT BRANCH. SEE:
+
+https://github.com/swordapp/sword2ruby
+
+
+
+Project Description:
+THIS IS NO LONGER THE ACTIVE DEVELOPMENT BRANCH. SEE:  https://github.com/swordapp/sword2ruby
+
+README:
+Sword2Ruby gem
+==================
+
+THIS IS NO LONGER THE ACTIVE DEVELOPMENT BRANCH. SEE:
+
+https://github.com/swordapp/sword2ruby

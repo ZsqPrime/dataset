@@ -1,0 +1,28 @@
+Project Description:
+
+
+README:
+%% Intro
+A new erlang application called reverse_proxy
+
+
+%% Testing
+Run tests from the command line like this:
+./rebar eunit
+
+Note that after running tests, I get:
+=ERROR REPORT==== 30-Jan-2012::22:49:03 ===
+** Generic server inet_gethost_native_sup terminating 
+** Last message in was {'EXIT',<0.71.0>,killed}
+** When Server state == {state,inet_gethost_native,undefined,<0.71.0>,
+                               {local,inet_gethost_native_sup}}
+** Reason for termination == 
+** killed
+
+This should be fixed by:
+https://github.com/basho/rebar/pull/168
+
+
+%% Debugging
+The rebar.config file has debugging enabled by default.  See also
+http://stackoverflow.com/questions/6808610/start-erlang-with-user-defined-variable-using-rebar

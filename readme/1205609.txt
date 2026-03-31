@@ -1,0 +1,11 @@
+Project Description:
+updated from the upstream Xperia 2011 kernel
+
+README:
+This is my repo for my X kernel DoomKernel based kernel patched with incemental patch to the lates 2.6.32 kernel
+added features (besides features from DoomKernel):
+- Added Zram driver from faux123
+- Support Gzip, Bzip, LZO, LZMA, XZ kernel compression
+- other performance patches (I just open my GitHub so I can track witch patch I applied :( )
+
+known bug: the FM Radio doesn't work (please let me know you find what caused it)

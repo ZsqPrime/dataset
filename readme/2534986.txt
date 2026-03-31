@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+Como executar uma query polimórfica através de interface.
+
+URL do artigo: http://renanreismartins.blogspot.com/2012/02/query-polimorfica-com-interfaces.html

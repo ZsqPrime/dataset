@@ -1,0 +1,6 @@
+Project Description:
+An array list written in C that doesn't move objects once there is a "hole" between slots. BSD licensed.
+
+README:
+
+.. figure:: doc/farraylist.png

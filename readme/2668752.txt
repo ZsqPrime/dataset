@@ -1,0 +1,4 @@
+Project Description:
+This project is developing Android app that collecting a log of network connectivity.
+
+README:

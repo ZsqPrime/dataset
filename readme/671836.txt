@@ -1,0 +1,7 @@
+**See [Recovering From SugarSync Merge Failures Over Source Control Repositories](http://blog.maximzaslavsky.com/recovering-from-sugarsync-merge-failures-over-source-control-repositories/).**
+
+Project Description:
+Fixes SugarSync merge failures.
+
+README:
+**See [Recovering From SugarSync Merge Failures Over Source Control Repositories](http://blog.maximzaslavsky.com/recovering-from-sugarsync-merge-failures-over-source-control-repositories/).**

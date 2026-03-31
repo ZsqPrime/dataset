@@ -1,0 +1,9 @@
+Project Description:
+Miscellaneous things not worth creating individual projects for
+
+README:
+The Miscellaneous 'project' is where I put things I want to share, but on their own don't deserve a project. 
+
+
+
+/TSG/ contains things done for The Speed Gamers and/or their community.

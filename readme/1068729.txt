@@ -1,0 +1,26 @@
+PLUG Notes
+
+Transforming your Android phone into a notebook. Take pictures instead of typing out text and covert them to digital, editable text.
+
+Current OCR being used is Tesseract. Will be migrating to web-based OCR given the time.
+
+Tech:
+1. Paperless note-taking
+2. Integrated OCR (Optical Character Recognition) engine
+3. Cloud storage for notes (see plug-notes-web)
+
+
+Project Description:
+IT Project
+
+README:
+PLUG Notes
+
+Transforming your Android phone into a notebook. Take pictures instead of typing out text and covert them to digital, editable text.
+
+Current OCR being used is Tesseract. Will be migrating to web-based OCR given the time.
+
+Tech:
+1. Paperless note-taking
+2. Integrated OCR (Optical Character Recognition) engine
+3. Cloud storage for notes (see plug-notes-web)

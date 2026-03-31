@@ -1,0 +1,4 @@
+Project Description:
+Provides client-side positioning (aka localization) in non-GPS environments through collaborative RF-fingerprint sharing.  This is the server component.
+
+README:

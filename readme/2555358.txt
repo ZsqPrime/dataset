@@ -1,0 +1,7 @@
+Project Description:
+An infrequently-tweaked set of slides on the Git DVCS.
+
+README:
+Slides for a guest lecture given at Plymouth State University.
+
+http://code.sixohthree.com/version-control-git/

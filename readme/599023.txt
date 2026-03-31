@@ -1,0 +1,106 @@
+=Tfoo
+
+== About
+An implementation of {Five in a Row}[http://en.wikipedia.org/wiki/Gomoku] game done in {Haskell}[http://www.haskell.org/] and {Yesod}[http://www.yesodweb.com/] with {Server-sent Events}[http://caniuse.com/eventsource].
+
+Demo: http://tfoo.herokuapp.com
+{<img src="http://i.imgur.com/fW4Wu.png" />}[http://tfoo.herokuapp.com]
+
+It is based on a previous project of mine, {takefive}[https://github.com/nbartlomiej/takefive], which is a minimal Five in a Row implementation. If you're new to Haskell and would like to see sample code, inspect {takefive's source code}[https://github.com/nbartlomiej/takefive/blob/master/takefive.hs].
+
+Tfoo is an attempt to create simple, modern and useful Haskell web application. It doesn't require any database setup (because it doesn't use database) and its deployment is relatively easy (see: {Deploying Tfoo and other Haskell applications to Heroku}[http://nbartlomiej.com/2012/03/29/deploying-tfoo-and-other-haskell-applications-to-heroku/] ). Some people say that it is also an enjoyable game.
+
+==Helpful links
+
+* {Yesod book}[http://www.yesodweb.com/book]
+* {Deploying Tfoo and other Haskell applications to Heroku}[http://nbartlomiej.com/2012/03/29/deploying-tfoo-and-other-haskell-applications-to-heroku/]
+* Blog post about this project is in the works. If you'd like to know more on a specific topic - drop me a line.
+
+==Project structure
+    Tfoo/*.hs          : Most basic, non-IO data and functions.
+    Tfoo/Handlers/*.hs : Only topmost Handler functions.
+    Tfoo/Helpers/*.hs  : IO functions built on top of Tfoo/*.hs code; these
+                         helper functions are used in Handlers.
+    Main.hs            : Main entry point.
+
+==Dependencies
+The project lacks Cabal file. I'll add one in my free time (pull requests
+welcome too!). Below, for quick reference, a list of all dependencies.
+
+    wai-eventsource (1.1.0.1)
+    yesod (0.10.2)
+    yesod-static (0.10.1)
+    yesod-default (0.6.1)
+    blaze-builder (0.3.1.0)
+    shakespeare-js (0.11.2)
+    shakespeare-css (0.10.8)
+    hamlet (0.10.9.1)
+
+== ToDo
+(pull requests welcome)
+
+* Add cabal file.
+* Improve AI (make it faster; implement minimax).
+* Create a mobile view.
+* Create a (public) dashboard that would show current games (real-time).
+* There is a bug that causes Server-sent Events not being propagated after ~3 minutes of client (Safari browser) waiting. Investigate and fix.
+
+==License
+
+MIT, see LICENSE file for details.
+
+
+Project Description:
+Five-in-a-Row online with Haskell and Server-sent Events
+
+README:
+=Tfoo
+
+== About
+An implementation of {Five in a Row}[http://en.wikipedia.org/wiki/Gomoku] game done in {Haskell}[http://www.haskell.org/] and {Yesod}[http://www.yesodweb.com/] with {Server-sent Events}[http://caniuse.com/eventsource].
+
+Demo: http://tfoo.herokuapp.com
+{<img src="http://i.imgur.com/fW4Wu.png" />}[http://tfoo.herokuapp.com]
+
+It is based on a previous project of mine, {takefive}[https://github.com/nbartlomiej/takefive], which is a minimal Five in a Row implementation. If you're new to Haskell and would like to see sample code, inspect {takefive's source code}[https://github.com/nbartlomiej/takefive/blob/master/takefive.hs].
+
+Tfoo is an attempt to create simple, modern and useful Haskell web application. It doesn't require any database setup (because it doesn't use database) and its deployment is relatively easy (see: {Deploying Tfoo and other Haskell applications to Heroku}[http://nbartlomiej.com/2012/03/29/deploying-tfoo-and-other-haskell-applications-to-heroku/] ). Some people say that it is also an enjoyable game.
+
+==Helpful links
+
+* {Yesod book}[http://www.yesodweb.com/book]
+* {Deploying Tfoo and other Haskell applications to Heroku}[http://nbartlomiej.com/2012/03/29/deploying-tfoo-and-other-haskell-applications-to-heroku/]
+* Blog post about this project is in the works. If you'd like to know more on a specific topic - drop me a line.
+
+==Project structure
+    Tfoo/*.hs          : Most basic, non-IO data and functions.
+    Tfoo/Handlers/*.hs : Only topmost Handler functions.
+    Tfoo/Helpers/*.hs  : IO functions built on top of Tfoo/*.hs code; these
+                         helper functions are used in Handlers.
+    Main.hs            : Main entry point.
+
+==Dependencies
+The project lacks Cabal file. I'll add one in my free time (pull requests
+welcome too!). Below, for quick reference, a list of all dependencies.
+
+    wai-eventsource (1.1.0.1)
+    yesod (0.10.2)
+    yesod-static (0.10.1)
+    yesod-default (0.6.1)
+    blaze-builder (0.3.1.0)
+    shakespeare-js (0.11.2)
+    shakespeare-css (0.10.8)
+    hamlet (0.10.9.1)
+
+== ToDo
+(pull requests welcome)
+
+* Add cabal file.
+* Improve AI (make it faster; implement minimax).
+* Create a mobile view.
+* Create a (public) dashboard that would show current games (real-time).
+* There is a bug that causes Server-sent Events not being propagated after ~3 minutes of client (Safari browser) waiting. Investigate and fix.
+
+==License
+
+MIT, see LICENSE file for details.

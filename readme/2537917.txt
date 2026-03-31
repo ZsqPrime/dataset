@@ -1,0 +1,12 @@
+Project Description:
+
+
+README:
+Program drugi na pracownię z algorytmów ewolucyjnych
+autorzy: Jakub Kowalski, Marcin Januszkiewicz
+
+Program rozwiązuje problem inverse kinematics rozszerzonego do pelnych drzew binarnych za pomocą algorytmu IDEA.
+Wersja wykonywalna programu znajduje się w folderze "Program " w katalogu głównym archiwum.
+Wszystkie pliki źródłowe są w postaci projektu Microsoft Visual Studio, w 
+języku C# i znajdują się w folderze InverseCinematics.
+Dokumentacja znajduje się w folderze "Documentation"

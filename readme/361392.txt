@@ -1,0 +1,8 @@
+# Moved to https://github.com/DBCDK/selenese-runner
+
+
+Project Description:
+scripted execution of selenese scripts
+
+README:
+# Moved to https://github.com/DBCDK/selenese-runner

@@ -1,0 +1,64 @@
+This is a pong game in Python, made by SmartViking.
+
+Packages required to play (*nix users):
+python 2.x (NOTE - Python 3 users, use python2 Crazy_China_Pong.py to play)
+python-pygame.
+
+WINDOWS USERS:
+If you don't already have Python installed, get the Windows binary here (either 32 or 64 bit is fine) - http://www.python.org/getit/
+After you have installed Python, get the appropriate pygame Windows binary here (install 32 or 64 bit, depending on which version of python you installed: http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame
+MAC USERS:
+You should already have Python installed, just download a version of python-pygame - http://pygame.org/download.shtml
+
+Testing done:
+- Tested with python 2.6 to python 2.7
+- Tested with pygame 1.8.1 to pygame 1.9.1
+- Tested with Arch Linux, Debian 6, Fedora 15 and Ubuntu, should work for all.
+- Tested on Windows 7 x64, with Python 2.7 x64 with pygame 1.9.2 pre. 
+- Tested on latest OS X with python 2.6 and pygame 1.9.2 pre
+- Does NOT currently work with Python 3.x.
+
+TODO:
+    * Some type of powerups, I'm thinking simple but effective. 
+
+Command line arguments:
+    * --novideo          : Start the game without the intro video.
+    * --version/-v       : Show version number.
+    * --credits          : Credits.
+    * --debug/-d         : Enable debugging mode.
+    * --fullscreen/-f    : Play in fullscreen(well almost).
+
+
+Project Description:
+A pong game made in python
+
+README:
+This is a pong game in Python, made by SmartViking.
+
+Packages required to play (*nix users):
+python 2.x (NOTE - Python 3 users, use python2 Crazy_China_Pong.py to play)
+python-pygame.
+
+WINDOWS USERS:
+If you don't already have Python installed, get the Windows binary here (either 32 or 64 bit is fine) - http://www.python.org/getit/
+After you have installed Python, get the appropriate pygame Windows binary here (install 32 or 64 bit, depending on which version of python you installed: http://www.lfd.uci.edu/~gohlke/pythonlibs/#pygame
+MAC USERS:
+You should already have Python installed, just download a version of python-pygame - http://pygame.org/download.shtml
+
+Testing done:
+- Tested with python 2.6 to python 2.7
+- Tested with pygame 1.8.1 to pygame 1.9.1
+- Tested with Arch Linux, Debian 6, Fedora 15 and Ubuntu, should work for all.
+- Tested on Windows 7 x64, with Python 2.7 x64 with pygame 1.9.2 pre. 
+- Tested on latest OS X with python 2.6 and pygame 1.9.2 pre
+- Does NOT currently work with Python 3.x.
+
+TODO:
+    * Some type of powerups, I'm thinking simple but effective. 
+
+Command line arguments:
+    * --novideo          : Start the game without the intro video.
+    * --version/-v       : Show version number.
+    * --credits          : Credits.
+    * --debug/-d         : Enable debugging mode.
+    * --fullscreen/-f    : Play in fullscreen(well almost).

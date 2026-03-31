@@ -1,0 +1,115 @@
+
+*** PROGRAMME de Modélisation et Simulation d'un scintillateur ***
+by Vincent V
+
+I. Utilisation
+./simulation.sh
+Certains paramètres de simulation sont modifiable dans ce script
+
+II. Les différents fichiers
+II.1 main
+corps du programme
+
+II.2 experiment
+création et déroulement de l'expérience
+
+II.3 random
+définition des générateurs aléatoires
+
+II.4 source
+définition de la source
+
+II.5 particle
+définition des particules
+
+II.6 collimator
+Définition du collimateur
+
+II.7 enclosure
+Définition de l'enceinte du détecteur
+
+II.8 detector
+définition du détecteur
+
+II.9 interaction_data
+chargements des données de l'experience et définition de certains paramètres physiques
+
+II.10 histo_maker
+création des histogrammes
+
+II.11 file_maker
+création des fichiers de sortie
+
+III. Post traitement
+Le programme crée deux fichiers de sortie au format CSV :
+*** histo_result.csv : l'histogramme du nombre d'événements en fonction de l'energie.
+première colonne : énergie.
+deuxième colonne : nombre d'événements
+
+le graph est tracé avec gnuplot grace au script gnuplot : postprocessing.gp
+
+*** raw_result.csv
+Dans le fichier file_maker.cpp il est possible de commenter le morceau de code permettant de créer ce second fichier de sortie CSV à une seule colonne contenant la charge déposée.
+
+On peut alors utiliser le programme postprocessing, qui utilise ROOT pour tracer et représenter l'histogramme à partir de raw_result.csv
+
+
+
+Project Description:
+
+
+README:
+
+*** PROGRAMME de Modélisation et Simulation d'un scintillateur ***
+by Vincent V
+
+I. Utilisation
+./simulation.sh
+Certains paramètres de simulation sont modifiable dans ce script
+
+II. Les différents fichiers
+II.1 main
+corps du programme
+
+II.2 experiment
+création et déroulement de l'expérience
+
+II.3 random
+définition des générateurs aléatoires
+
+II.4 source
+définition de la source
+
+II.5 particle
+définition des particules
+
+II.6 collimator
+Définition du collimateur
+
+II.7 enclosure
+Définition de l'enceinte du détecteur
+
+II.8 detector
+définition du détecteur
+
+II.9 interaction_data
+chargements des données de l'experience et définition de certains paramètres physiques
+
+II.10 histo_maker
+création des histogrammes
+
+II.11 file_maker
+création des fichiers de sortie
+
+III. Post traitement
+Le programme crée deux fichiers de sortie au format CSV :
+*** histo_result.csv : l'histogramme du nombre d'événements en fonction de l'energie.
+première colonne : énergie.
+deuxième colonne : nombre d'événements
+
+le graph est tracé avec gnuplot grace au script gnuplot : postprocessing.gp
+
+*** raw_result.csv
+Dans le fichier file_maker.cpp il est possible de commenter le morceau de code permettant de créer ce second fichier de sortie CSV à une seule colonne contenant la charge déposée.
+
+On peut alors utiliser le programme postprocessing, qui utilise ROOT pour tracer et représenter l'histogramme à partir de raw_result.csv

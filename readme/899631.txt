@@ -1,0 +1,5 @@
+Project Description:
+Hacker News stories ranked by the Wilson Score Confidence Interval.
+
+README:
+Temporary readme before I deploy.

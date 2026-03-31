@@ -1,0 +1,13 @@
+# Templated Scheduling #
+## Idea for faculty scheduling using templates ##
+
+ISIS-related spike
+
+Project Description:
+Another possible direction for the ISIS project
+
+README:
+# Templated Scheduling #
+## Idea for faculty scheduling using templates ##
+
+ISIS-related spike

@@ -1,0 +1,8 @@
+## Fongo has been moved to [fakemongo/fongo](https://github.com/fakemongo/fongo)
+
+
+Project Description:
+faked out in-memory mongo for java
+
+README:
+## Fongo has been moved to [fakemongo/fongo](https://github.com/fakemongo/fongo)

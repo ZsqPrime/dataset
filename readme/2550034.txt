@@ -1,0 +1,7 @@
+Project Description:
+This is a cellular automata implement in matlab. The rule used is "IF neuron model"
+
+README:
+Spiking Cellular Automata
+==========================
+This is my final year project. I introduce spiking neuron model and STDP learning rule to cellular automata.

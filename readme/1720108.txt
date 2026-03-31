@@ -1,0 +1,6 @@
+
+
+Project Description:
+python addon for Blender for batch-baking textures for groups of objects
+
+README:

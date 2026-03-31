@@ -1,0 +1,5 @@
+Project Description:
+OCaml buildpack for Heroku
+
+README:
+vulcan build -v -s $pkg/ocaml-3.12.1 -p /tmp/ocaml -c 'mkdir /tmp/ocaml && ./configure --prefix /tmp/ocaml && make world.opt && make install'

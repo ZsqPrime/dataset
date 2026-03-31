@@ -1,0 +1,6 @@
+Project Description:
+JSON library as a CommonJS module for Kanso
+
+README:
+A thin Kanso package wrapper around the json2 javascript library.
+See http://www.json.org/js.html

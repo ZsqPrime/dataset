@@ -1,0 +1,7 @@
+Project Description:
+Has packages up common association patterns.
+
+README:
+= Has
+
+This project rocks and uses MIT-LICENSE.

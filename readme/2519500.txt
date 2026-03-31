@@ -1,0 +1,5 @@
+Project Description:
+Ett Fem i Rad spel. 
+
+README:
+This is a test project for a "Fem i Rad" for IOS via Corona SDK.

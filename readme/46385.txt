@@ -1,0 +1,8 @@
+skbtrace - generate traces of the networking traffic
+
+
+Project Description:
+A blktrace like utility for Linux networking subsystem, this is the user space side
+
+README:
+skbtrace - generate traces of the networking traffic

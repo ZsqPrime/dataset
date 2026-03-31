@@ -1,0 +1,29 @@
+Project Description:
+Set::IntSpan::Partition Perl module
+
+README:
+Set-IntSpan-Partition
+
+=====================
+
+
+
+Please see `perldoc lib/Set/IntSpan/Partition.pm` for details.
+
+
+
+INSTALLATION
+
+
+
+To install this module type the following:
+
+
+
+   perl Makefile.PL
+
+   make
+
+   make test
+
+   make install

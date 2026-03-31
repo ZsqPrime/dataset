@@ -1,0 +1,12 @@
+== Welcome to BookWeb
+
+BookWeb is simply social kind website that allows you to add your books, compare with friends and talk about them.
+
+
+Project Description:
+
+
+README:
+== Welcome to BookWeb
+
+BookWeb is simply social kind website that allows you to add your books, compare with friends and talk about them.

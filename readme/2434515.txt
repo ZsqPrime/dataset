@@ -1,0 +1,7 @@
+This is an alternative reader for reddit.  For YUI practice.
+
+Project Description:
+Reddit Reader using YUI
+
+README:
+This is an alternative reader for reddit.  For YUI practice.

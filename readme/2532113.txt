@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+Syndicate Framework
+A scatternet based communication framework built on top JSR-82 (Java Bluetooth APIs)

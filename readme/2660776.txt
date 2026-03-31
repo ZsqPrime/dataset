@@ -1,0 +1,5 @@
+Project Description:
+Enonic CMS Content type editor
+
+README:
+This is a work in progress. It uses ExtJS 4 to try to make a contenttype editor for Enonic CMS.

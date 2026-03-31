@@ -1,0 +1,6 @@
+
+
+Project Description:
+Plymouth State MIS' child theme for the popular P2 WordPress theme.
+
+README:

@@ -1,0 +1,10 @@
+Project Description:
+Smoke-free bars in Zagreb (list and map with geolocation)
+
+README:
+# List of smoke-free bars in Zagreb
+
+Location
+  - pulled from Foursquare: `FsqBar`
+  - edited, reviewed data saved in `SavedLocation`
+  - needed? FsqBar -> CachedLocation syncing layer

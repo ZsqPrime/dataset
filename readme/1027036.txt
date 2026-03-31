@@ -1,0 +1,12 @@
+A perl script with a set of regular expressions to abbreviate short texts for use in SMS.
+
+I used this algorithm for another script which texts me Craigslist subject lines which match certain criteria. To save characters in the text, words are abbreviated thus.
+
+
+Project Description:
+Abbreviation for short texts
+
+README:
+A perl script with a set of regular expressions to abbreviate short texts for use in SMS.
+
+I used this algorithm for another script which texts me Craigslist subject lines which match certain criteria. To save characters in the text, words are abbreviated thus.

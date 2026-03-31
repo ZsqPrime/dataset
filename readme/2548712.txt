@@ -1,0 +1,12 @@
+Project Description:
+Academic project intended to measure the performances of an operating system.
+
+README:
+Small academic project writtent for a graduate class at UCSD.
+This project is intended to measure performances of an operating system
+and of the hardware components.
+
+This work is largely inspired from the '96 lmbench paper accessible online :
+http://www.bitmover.com/lmbench/
+
+It used to compile under Solaris and Linux.

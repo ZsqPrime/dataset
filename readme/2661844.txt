@@ -1,0 +1,5 @@
+Project Description:
+Pobegni iz labirinta. Krožek na Gimnaziji Vič.
+
+README:
+Git repozitorij za projekt pri krožku na Gimnaziji Vič.

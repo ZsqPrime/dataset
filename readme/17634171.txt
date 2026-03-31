@@ -1,0 +1,5 @@
+Project Description:
+Parse Velo Bleu (www.velobleu.org) website data and expose it as REST web service
+
+README:
+codeigniter application to parse velobleu.org geo data and expose it as REST Service.

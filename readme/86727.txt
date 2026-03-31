@@ -1,0 +1,10 @@
+This is the NetXStudio Project 
+Christophe Bouhier 2013
+
+
+Project Description:
+NetXStudio Community Edition
+
+README:
+This is the NetXStudio Project 
+Christophe Bouhier 2013

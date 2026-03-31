@@ -1,0 +1,44 @@
+========
+Dotfiles
+========
+
+A work in progress.
+Forever.
+
+Install
+-------
+
+.. code-block:: sh
+
+   $ git clone --recursive https://github.com/Julian/dotfiles ~/.dotfiles
+   $ mkdir ~/Development
+   $ cd ~/.dotfiles && ./install
+
+   $ brew analytics off
+
+* Generate a certificate for irssi certauth and /msg *certauth add it
+
+
+Project Description:
+A work in progress. Forever.
+
+README:
+========
+Dotfiles
+========
+
+A work in progress.
+Forever.
+
+Install
+-------
+
+.. code-block:: sh
+
+   $ git clone --recursive https://github.com/Julian/dotfiles ~/.dotfiles
+   $ mkdir ~/Development
+   $ cd ~/.dotfiles && ./install
+
+   $ brew analytics off
+
+* Generate a certificate for irssi certauth and /msg *certauth add it

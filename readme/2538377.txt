@@ -1,0 +1,17 @@
+Project Description:
+
+
+README:
+My name is Jim, and I specialize in programming websites in Ruby on Rails, Python & Django, and JavaScript.
+
+I like to do online coding challenges. The code in this repository is from this site:
+
+http://codeeval.com
+
+You can find my online profile on the CodeEval site here:
+
+http://codeeval.com/public/e22f26994c534314e460ec16da81288840f53de6/
+
+You can get in touch with me by email:
+
+jpmcgaw@gmail.com

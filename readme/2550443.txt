@@ -1,0 +1,5 @@
+Project Description:
+Androind version of the game
+
+README:
+This is proprietary code and copyrighted set of assets (graphics, sound). Copying or distribution is not allowed.

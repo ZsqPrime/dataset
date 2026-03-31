@@ -1,0 +1,6 @@
+
+
+Project Description:
+A wrapper for PDO that adds connection retries, singletons and safer transactions
+
+README:

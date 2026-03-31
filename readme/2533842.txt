@@ -1,0 +1,4 @@
+Project Description:
+A GUI to work with LogBlock data.
+
+README:

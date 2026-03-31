@@ -1,0 +1,82 @@
+=head1 REVISTA IMPACTO
+
+This system will be managing Impacto's inventory, product catalogue, client database, etc.
+
+=head2 INSTALL
+
+Using your CPAN client of choice, install Dist::Zilla.
+
+    $ cpanm Dist::Zilla
+
+Then, install the project dependencies:
+
+    $ dzil listdeps --missing | cpanm
+
+Download Dojo Toolkit libs:
+
+    $ ./script/impacto_get_dojo.sh
+
+Install the database schema (currently only PostgreSQL supported):
+
+    $ psql -U username -f schema.sql database
+
+Copy the config (and customize it, using real usernames and passwords):
+
+    $ cp impacto-example.conf impacto_local.conf
+
+And finally:
+
+    $ plackup -Ilib -a impacto.psgi
+
+To test the server.
+
+=head2 COPYRIGHT
+
+This software is copyright (c) 2011 by Andre Walker <andre@andrewalker.net>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+
+Project Description:
+Impacto management system
+
+README:
+=head1 REVISTA IMPACTO
+
+This system will be managing Impacto's inventory, product catalogue, client database, etc.
+
+=head2 INSTALL
+
+Using your CPAN client of choice, install Dist::Zilla.
+
+    $ cpanm Dist::Zilla
+
+Then, install the project dependencies:
+
+    $ dzil listdeps --missing | cpanm
+
+Download Dojo Toolkit libs:
+
+    $ ./script/impacto_get_dojo.sh
+
+Install the database schema (currently only PostgreSQL supported):
+
+    $ psql -U username -f schema.sql database
+
+Copy the config (and customize it, using real usernames and passwords):
+
+    $ cp impacto-example.conf impacto_local.conf
+
+And finally:
+
+    $ plackup -Ilib -a impacto.psgi
+
+To test the server.
+
+=head2 COPYRIGHT
+
+This software is copyright (c) 2011 by Andre Walker <andre@andrewalker.net>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.

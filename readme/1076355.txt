@@ -1,0 +1,15 @@
+** Simple one page site for the "HTML5 Training day"
+and over time a good place to presentations 
+for events like: http://oreillynet.com/pub/e/2295v - webcast on mobile web app stack
+
+
+
+
+
+Project Description:
+minimal promo site for a training day on html5
+
+README:
+** Simple one page site for the "HTML5 Training day"
+and over time a good place to presentations 
+for events like: http://oreillynet.com/pub/e/2295v - webcast on mobile web app stack

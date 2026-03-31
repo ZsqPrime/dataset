@@ -1,0 +1,9 @@
+This is translation files for MIUI Firmware Builder
+Translation version 2.6.1
+
+Project Description:
+MIUI v4 Russian Translation
+
+README:
+This is translation files for MIUI Firmware Builder
+Translation version 2.6.1

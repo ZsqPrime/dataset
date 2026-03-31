@@ -1,0 +1,6 @@
+
+
+Project Description:
+Gives all the possibilities of reaching the exit of a given matrix
+
+README:

@@ -1,0 +1,138 @@
+COMPILATION
+To compile on *NIX, you need the following libraries, including their headers
+(Debian/Ubuntu package names are in parentheses):
+o asio          (libasio-dev)
+o boost         (libboost-dev)
+o sdl           (libsdl-dev, or libsdl1.2-dev, etc)
+o sdlimg        (libsdl-image1.2-dev or other version)
+o libgmp        (libgmp-dev)
+o OpenGL        (libgl1-mesa-dev or proprietary video driver headers)
+o tcl8.5        (tcl8.5-dev)
+o itcl3.4       (itcl3-dev)
+o tcllib        (tcllib)
+o libpng        (libpng12-dev or other version)
+o libpng++      (libpng++-dev)
+You also need ImageMagick for building some data files. It is usually found in
+a package named imagemagick. pkg-config is used for detecting the packages, so
+you need it as well.
+
+On Ubuntu, you can install everything you need with the following command (copy
+all three lines at once):
+  sudo apt-get install build-essential g++ libasio-dev libboost-dev \
+    libsdl1.2-dev libsdl-image1.2-dev libgmp-dev libgl1-mesa-dev \
+    tcl8.5-dev itcl3-dev tcllib libpng++-dev imagemagick pkg-config
+
+To compile, do
+  ./configure
+  make
+
+If your OpenGL headers do not supply GL extension functions, instead use
+  ./configure --disable-gl21 --disable-gl32
+You may also need the --disable-gl32 and possibly --disable-gl21 if your
+OpenGL library does not have the necessary functions.
+
+If you want to be able to record gameplay footage, you will also need
+libdrachen to be installed, which you can get here:
+  https://github.com/AltSysrq/libdrachen
+To use the recorder, start Abendstern, then run
+  frame_recorder_enable
+in the "Tcl" box. After that, at any point, you may press Pause (aka Break,
+usually to the right of the function keys) at any point to start or stop
+recording. The details of how to work with the outputs of recording are given
+in the file
+  src/secondary/frame_recorder.hxx
+
+INSTALLING
+To install Abendstern, simply run "sudo make install" (or "make install" if you
+know you have sufficient privelages to write to $prefix).
+
+Abendstern can be uninstalled with a corresponding "make uninstall".
+
+RUNNING
+Run the game simply with the command "abendstern". You will be prompted for
+initial settings and which graphics version to run (the default is usually
+correct).
+
+The executables understand the following options:
+  -H, -Headless         Run without graphics
+  -f, -fullscreen       Run in fullscreen mode, ignoring the config file
+  -W, -Windowed         Run in windowed mode, ignoring the config file
+  -h, -height arg       Set window or resolution height to arg
+  -w, -width arg        Set window or resolution width to arg
+  -b, -bits arg         Set screen bit-depth to arg
+  -c, -cache arg        Only use up to arg MB of RAM for config data
+  -F, -Fast             Ignore wall time; assume each frame is 10 ms long
+  -prelim               Start in preliminary configuration mode
+  -?                    Print usage information
+
+
+Project Description:
+A two-dimensional space-shooter with realistic physics and user-created spacecraft
+
+README:
+COMPILATION
+To compile on *NIX, you need the following libraries, including their headers
+(Debian/Ubuntu package names are in parentheses):
+o asio          (libasio-dev)
+o boost         (libboost-dev)
+o sdl           (libsdl-dev, or libsdl1.2-dev, etc)
+o sdlimg        (libsdl-image1.2-dev or other version)
+o libgmp        (libgmp-dev)
+o OpenGL        (libgl1-mesa-dev or proprietary video driver headers)
+o tcl8.5        (tcl8.5-dev)
+o itcl3.4       (itcl3-dev)
+o tcllib        (tcllib)
+o libpng        (libpng12-dev or other version)
+o libpng++      (libpng++-dev)
+You also need ImageMagick for building some data files. It is usually found in
+a package named imagemagick. pkg-config is used for detecting the packages, so
+you need it as well.
+
+On Ubuntu, you can install everything you need with the following command (copy
+all three lines at once):
+  sudo apt-get install build-essential g++ libasio-dev libboost-dev \
+    libsdl1.2-dev libsdl-image1.2-dev libgmp-dev libgl1-mesa-dev \
+    tcl8.5-dev itcl3-dev tcllib libpng++-dev imagemagick pkg-config
+
+To compile, do
+  ./configure
+  make
+
+If your OpenGL headers do not supply GL extension functions, instead use
+  ./configure --disable-gl21 --disable-gl32
+You may also need the --disable-gl32 and possibly --disable-gl21 if your
+OpenGL library does not have the necessary functions.
+
+If you want to be able to record gameplay footage, you will also need
+libdrachen to be installed, which you can get here:
+  https://github.com/AltSysrq/libdrachen
+To use the recorder, start Abendstern, then run
+  frame_recorder_enable
+in the "Tcl" box. After that, at any point, you may press Pause (aka Break,
+usually to the right of the function keys) at any point to start or stop
+recording. The details of how to work with the outputs of recording are given
+in the file
+  src/secondary/frame_recorder.hxx
+
+INSTALLING
+To install Abendstern, simply run "sudo make install" (or "make install" if you
+know you have sufficient privelages to write to $prefix).
+
+Abendstern can be uninstalled with a corresponding "make uninstall".
+
+RUNNING
+Run the game simply with the command "abendstern". You will be prompted for
+initial settings and which graphics version to run (the default is usually
+correct).
+
+The executables understand the following options:
+  -H, -Headless         Run without graphics
+  -f, -fullscreen       Run in fullscreen mode, ignoring the config file
+  -W, -Windowed         Run in windowed mode, ignoring the config file
+  -h, -height arg       Set window or resolution height to arg
+  -w, -width arg        Set window or resolution width to arg
+  -b, -bits arg         Set screen bit-depth to arg
+  -c, -cache arg        Only use up to arg MB of RAM for config data
+  -F, -Fast             Ignore wall time; assume each frame is 10 ms long
+  -prelim               Start in preliminary configuration mode
+  -?                    Print usage information

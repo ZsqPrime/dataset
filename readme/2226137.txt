@@ -1,0 +1,6 @@
+
+
+Project Description:
+Core fordrop, including XMPP federation
+
+README:

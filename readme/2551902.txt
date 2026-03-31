@@ -1,0 +1,4 @@
+Project Description:
+Better Wolfram Alpha for Opera!
+
+README:

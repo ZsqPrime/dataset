@@ -1,0 +1,290 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3914
+
+DESCRIPTION
+Via 'completefunc' and the i_CTRL-X_CTRL-U command, it is possible to define
+custom complete-functions. To write extensions or alternatives to the
+built-in completion functions, you often need to derive the completion
+candidates from Vim's buffers and windows. This plugin offers generic
+functions around extraction and handling of completion matches (something that
+Vim doesn't yet expose to Vimscript), so that building your own custom
+completion is quick and simple.
+
+SEE ALSO
+The following custom completions use this plugin:
+
+AlphaComplete:          Completes any sequence of alphabetic characters.
+(vimscript #4912)
+BidiComplete:           Considers text before AND AFTER the cursor.
+(vimscript #4658)
+
+CamelCaseComplete:      Expands CamelCaseWords and underscore_words based on
+(vimscript #3915)       anchor characters for each word fragment.
+
+EntryComplete:          Completes whole lines from designated files or
+(vimscript #5073)       buffers.
+
+InnerFragmentComplete:  Completes (and expands CamelCaseWord) fragments inside
+(vimscript #4804)       words.
+
+LineComplete:           Completes entire lines with looser matching that the
+(vimscript #4911)       built-in i_CTRL-X_CTRL-L.
+
+MotionComplete:         Completes a chunk covered by queried {motion} or text
+(vimscript #4265)       object.
+                        Derivatives:
+    BracketComplete     Completes text inside various brackets.
+    (vimscript #4266)
+
+    LineEndComplete     Completes the rest of the line.
+    (vimscript #4267)
+
+MultiWordComplete:      Completes a sequence of words based on anchor
+(vimscript #4805)       characters for each word.
+
+PatternComplete:        Completes matches of queried {pattern} or last search
+(vimscript #4248)       pattern.
+
+PrevInsertComplete:     Recall and insert mode completion for previously
+(vimscript #4185)       inserted text.
+
+SameFiletypeComplete:   Completion from buffers with the same filetype.
+(vimscript #4242)
+
+SnippetComplete:        Completes defined abbreviations and other snippets.
+(vimscript #2926)
+
+SpecialLocationComplete:Completes special, configurable custom patterns.
+(vimscript #5120)
+
+RELATED WORKS
+- Mark Weber's vim-addon-completion library
+  (https://github.com/MarcWeber/vim-addon-completion) has some functions to
+  switch between completions and to do CamelCase matching.
+
+USAGE
+The options.complete attribute specifies what is searched, like the 'complete'
+option for built-in completions. The following (comma-separated) option values
+are currently supported:
+    - "." current buffer
+    - "w" buffers from other windows
+    - "b" other loaded buffers that are in the buffer list
+    - "u" unloaded buffers that are in the buffer list
+    - "U" buffers that are not in the buffer list
+
+This plugin defines several functions. The following is an overview; you'll
+find the details directly in the implementation files in the .vim/autoload/
+directory.
+
+CompleteHelper#FindMatches( matches, pattern, options )
+
+The main helper function that finds all matches of a:pattern in buffers
+specified by a:options, and returns them in the List a:matches that can be
+returned as-is to Vim.
+
+CompleteHelper#Find( matches, Funcref, options )
+
+A generic alternative that doesn't prescribe using a regular expression match.
+Instead, a Funcref is passed to find and extract matches, reusing the window
+and buffer iteration functionality provided by this plugin.
+
+CompleteHelper#ExtractText( startPos, endPos, matchObj )
+
+Low-level function for extracting text from the current buffer. This is the
+default extractor used by CompleteHelper#FindMatches().
+
+CompleteHelper#Abbreviate#Word( matchObj )
+
+Processes the match objects to make them prettier to display. Usually
+map()ed over the matches returned from CompleteHelper#FindMatches().
+
+CompleteHelper#JoinMultiline( text )
+
+Can be used in CompleteHelper#FindMatches()'s a:options.processor if you want
+to flatten multi-line matches, as the current default behavior of Vim is not
+what users expect. (Newlines are inserted literally as ^@.)
+
+CompleteHelper#Repeat#TestForRepeat()
+
+Some built-in completions support the repetition of a completion, so that
+subsequent words from the completion source are appended. This function allows
+to implement such a repetition for custom completions, too.
+
+DEBUGGING
+To help you with developing your own plugins, you can make the plugin save the
+last used pattern(s) in a global variable, if it is defined:
+    :let g:CompleteHelper_DebugPatterns = []
+    " Trigger custom completion.
+    :echo g:CompleteHelper_DebugPatterns
+
+EXAMPLE
+Here is a simple completion that completes the keywords in front of the cursor
+from the current file, like the built-in compl-current does. From the
+completion base, it constructs a regexp matching all keywords that start with
+the base, and delegates the entire work of finding the matches and building
+the appropriate match objects to CompleteHelper#FindMatches().
+
+    function! SimpleComplete( findstart, base )
+        if a:findstart
+            " Locate the start of the keyword.
+            let l:startCol = searchpos('\k*\%#', 'bn', line('.'))[1]
+            if l:startCol == 0
+                let l:startCol = col('.')
+            endif
+            return l:startCol - 1 " Return byte index, not column.
+        else
+            " Find matches starting with a:base.
+            let l:matches = []
+            call CompleteHelper#FindMatches( l:matches, '\V\<' . escape(a:base, '&#039) . '\k\+', {'complete': '.'} )
+            return l:matches
+        endif
+    endfunction
+
+    inoremap <C-x><C-z> <C-o>:set completefunc=SimpleComplete<CR><C-x><C-u>
+
+
+Project Description:
+Generic functions to support custom insert mode completions. 
+
+README:
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3914
+
+DESCRIPTION
+Via 'completefunc' and the i_CTRL-X_CTRL-U command, it is possible to define
+custom complete-functions. To write extensions or alternatives to the
+built-in completion functions, you often need to derive the completion
+candidates from Vim's buffers and windows. This plugin offers generic
+functions around extraction and handling of completion matches (something that
+Vim doesn't yet expose to Vimscript), so that building your own custom
+completion is quick and simple.
+
+SEE ALSO
+The following custom completions use this plugin:
+
+AlphaComplete:          Completes any sequence of alphabetic characters.
+(vimscript #4912)
+BidiComplete:           Considers text before AND AFTER the cursor.
+(vimscript #4658)
+
+CamelCaseComplete:      Expands CamelCaseWords and underscore_words based on
+(vimscript #3915)       anchor characters for each word fragment.
+
+EntryComplete:          Completes whole lines from designated files or
+(vimscript #5073)       buffers.
+
+InnerFragmentComplete:  Completes (and expands CamelCaseWord) fragments inside
+(vimscript #4804)       words.
+
+LineComplete:           Completes entire lines with looser matching that the
+(vimscript #4911)       built-in i_CTRL-X_CTRL-L.
+
+MotionComplete:         Completes a chunk covered by queried {motion} or text
+(vimscript #4265)       object.
+                        Derivatives:
+    BracketComplete     Completes text inside various brackets.
+    (vimscript #4266)
+
+    LineEndComplete     Completes the rest of the line.
+    (vimscript #4267)
+
+MultiWordComplete:      Completes a sequence of words based on anchor
+(vimscript #4805)       characters for each word.
+
+PatternComplete:        Completes matches of queried {pattern} or last search
+(vimscript #4248)       pattern.
+
+PrevInsertComplete:     Recall and insert mode completion for previously
+(vimscript #4185)       inserted text.
+
+SameFiletypeComplete:   Completion from buffers with the same filetype.
+(vimscript #4242)
+
+SnippetComplete:        Completes defined abbreviations and other snippets.
+(vimscript #2926)
+
+SpecialLocationComplete:Completes special, configurable custom patterns.
+(vimscript #5120)
+
+RELATED WORKS
+- Mark Weber's vim-addon-completion library
+  (https://github.com/MarcWeber/vim-addon-completion) has some functions to
+  switch between completions and to do CamelCase matching.
+
+USAGE
+The options.complete attribute specifies what is searched, like the 'complete'
+option for built-in completions. The following (comma-separated) option values
+are currently supported:
+    - "." current buffer
+    - "w" buffers from other windows
+    - "b" other loaded buffers that are in the buffer list
+    - "u" unloaded buffers that are in the buffer list
+    - "U" buffers that are not in the buffer list
+
+This plugin defines several functions. The following is an overview; you'll
+find the details directly in the implementation files in the .vim/autoload/
+directory.
+
+CompleteHelper#FindMatches( matches, pattern, options )
+
+The main helper function that finds all matches of a:pattern in buffers
+specified by a:options, and returns them in the List a:matches that can be
+returned as-is to Vim.
+
+CompleteHelper#Find( matches, Funcref, options )
+
+A generic alternative that doesn't prescribe using a regular expression match.
+Instead, a Funcref is passed to find and extract matches, reusing the window
+and buffer iteration functionality provided by this plugin.
+
+CompleteHelper#ExtractText( startPos, endPos, matchObj )
+
+Low-level function for extracting text from the current buffer. This is the
+default extractor used by CompleteHelper#FindMatches().
+
+CompleteHelper#Abbreviate#Word( matchObj )
+
+Processes the match objects to make them prettier to display. Usually
+map()ed over the matches returned from CompleteHelper#FindMatches().
+
+CompleteHelper#JoinMultiline( text )
+
+Can be used in CompleteHelper#FindMatches()'s a:options.processor if you want
+to flatten multi-line matches, as the current default behavior of Vim is not
+what users expect. (Newlines are inserted literally as ^@.)
+
+CompleteHelper#Repeat#TestForRepeat()
+
+Some built-in completions support the repetition of a completion, so that
+subsequent words from the completion source are appended. This function allows
+to implement such a repetition for custom completions, too.
+
+DEBUGGING
+To help you with developing your own plugins, you can make the plugin save the
+last used pattern(s) in a global variable, if it is defined:
+    :let g:CompleteHelper_DebugPatterns = []
+    " Trigger custom completion.
+    :echo g:CompleteHelper_DebugPatterns
+
+EXAMPLE
+Here is a simple completion that completes the keywords in front of the cursor
+from the current file, like the built-in compl-current does. From the
+completion base, it constructs a regexp matching all keywords that start with
+the base, and delegates the entire work of finding the matches and building
+the appropriate match objects to CompleteHelper#FindMatches().
+
+    function! SimpleComplete( findstart, base )
+        if a:findstart
+            " Locate the start of the keyword.
+            let l:startCol = searchpos('\k*\%#', 'bn', line('.'))[1]
+            if l:startCol == 0
+                let l:startCol = col('.')
+            endif
+            return l:startCol - 1 " Return byte index, not column.
+        else
+            " Find matches starting with a:base.
+            let l:matches = []
+            call CompleteHelper#FindMatches( l:matches, '\V\<' . escape(a:base, '&#039) . '\k\+', {'complete': '.'} )
+            return l:matches
+        endif
+    endfunction
+
+    inoremap <C-x><C-z> <C-o>:set completefunc=SimpleComplete<CR><C-x><C-u>

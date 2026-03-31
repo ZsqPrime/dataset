@@ -1,0 +1,7 @@
+Project Description:
+Example using test framework for web application
+
+README:
+Using web test framework
+- htmlunit: http://htmlunit.sourceforge.net/
+- nekohtml: http://nekohtml.sourceforge.net/

@@ -1,0 +1,118 @@
+The Glorious Alan Compiler
+==========================
+
+This is the source tree for GAC, a compiler for
+the Alan programming language.
+
+For more information, visit:
+
+  http://courses.softlab.ntua.gr/compilers/
+
+
+Getting the Source
+==================
+
+  The recommended way is to get the repos using git
+
+    $ git clone https://github.com/iliastsi/gac.git
+
+
+Building & Installing
+=====================
+
+First you need GHC installed in order to build GAC, because the compiler
+is itself written in Haskell. Hugs is supposed to work but it hasn't been
+tested. You will also need Alex [2] and Happy [3] Meta-Compilers.
+
+
+Quick start:  the following gives you a default build:
+
+    $ ./configure
+    $ make
+
+These steps give you the default build (an executable file
+named gac, placed in dist/) which includes everything
+optimised and built in various ways. It can take a long time.
+To customise the build, see the file HACKING.
+
+If you want to install the package type:
+
+    $ make install
+
+For more informations about installing the package see INSTALL
+
+
+References
+==========
+
+ [1] http://courses.softlab.ntua.gr/compilers/          Course's Home Page
+ [2] http://www.haskell.org/alex/                       Alex
+ [3] http://www.haskell.org/happy/                      Happy
+
+
+Contributors
+============
+
+  Ilias Tsitsimpis
+
+
+Project Description:
+A compiler for Alan language written in Haskell
+
+README:
+The Glorious Alan Compiler
+==========================
+
+This is the source tree for GAC, a compiler for
+the Alan programming language.
+
+For more information, visit:
+
+  http://courses.softlab.ntua.gr/compilers/
+
+
+Getting the Source
+==================
+
+  The recommended way is to get the repos using git
+
+    $ git clone https://github.com/iliastsi/gac.git
+
+
+Building & Installing
+=====================
+
+First you need GHC installed in order to build GAC, because the compiler
+is itself written in Haskell. Hugs is supposed to work but it hasn't been
+tested. You will also need Alex [2] and Happy [3] Meta-Compilers.
+
+
+Quick start:  the following gives you a default build:
+
+    $ ./configure
+    $ make
+
+These steps give you the default build (an executable file
+named gac, placed in dist/) which includes everything
+optimised and built in various ways. It can take a long time.
+To customise the build, see the file HACKING.
+
+If you want to install the package type:
+
+    $ make install
+
+For more informations about installing the package see INSTALL
+
+
+References
+==========
+
+ [1] http://courses.softlab.ntua.gr/compilers/          Course's Home Page
+ [2] http://www.haskell.org/alex/                       Alex
+ [3] http://www.haskell.org/happy/                      Happy
+
+
+Contributors
+============
+
+  Ilias Tsitsimpis

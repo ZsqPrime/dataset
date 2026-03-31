@@ -1,0 +1,14 @@
+* ipython RC
+
+A basic iPython configuration file to enable automatic logging with separate,
+dated files for each session. Also gets rid of the annoying iPython banner.
+
+
+Project Description:
+A config file to keep up with the endless updates from the iPython team.
+
+README:
+* ipython RC
+
+A basic iPython configuration file to enable automatic logging with separate,
+dated files for each session. Also gets rid of the annoying iPython banner.

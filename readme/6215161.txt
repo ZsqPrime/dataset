@@ -1,0 +1,10 @@
+Project Description:
+A Bezier Patch animation tool
+
+README:
+patchanim
+=========
+
+A Bezier Patch animation tool
+
+See patchanim.sf.net for details.

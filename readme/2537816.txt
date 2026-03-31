@@ -1,0 +1,5 @@
+Project Description:
+Various interesting odds and ends.  Scraps of Ruby code.
+
+README:
+Check out files in the worthy_snippets folder.

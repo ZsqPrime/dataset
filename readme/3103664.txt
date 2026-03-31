@@ -1,0 +1,5 @@
+Project Description:
+Full featured API for myGengo translation service.
+
+README:
+Full featured API for myGengo translation service.

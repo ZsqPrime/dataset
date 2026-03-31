@@ -1,0 +1,21 @@
+sample application for solving interviewstreet.com logo resize challenge.
+accepts the following GET params:
+image: image URL
+width
+height
+padding
+
+The app identifies the logo, resize it inside width x height with padding and fills the background with the logo's background
+
+Project Description:
+
+
+README:
+sample application for solving interviewstreet.com logo resize challenge.
+accepts the following GET params:
+image: image URL
+width
+height
+padding
+
+The app identifies the logo, resize it inside width x height with padding and fills the background with the logo's background

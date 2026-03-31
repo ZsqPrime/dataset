@@ -1,0 +1,48 @@
+Project Description:
+CoffeeCup provides inheritable utilities for CoffeeScript classes.
+
+README:
+CoffeeCup provides inheritable utilities for CoffeeScript classes under Rails 3.2 
+
+h2. Usage
+
+Include CoffeeCup in your Gemfile. 
+
+<pre>
+gem "coffee_cup"
+</pre>
+
+Include CoffeeCup in your application.js manifest file. 
+
+<pre>
+//= require coffee_cup
+</pre>
+
+Extend CoffeeCup in your own classes.
+
+<pre>
+class window.Testing extends CoffeeCup
+
+  default_options:
+    name: 'Frank'
+
+  init: ->
+    # Initialize stuff here
+
+  welcome: ->
+    @log "Welcome #{@options.name}!"
+
+</pre>
+
+Instantiate your objects like normal. 
+
+<pre>
+$ -> 
+  
+  test = new Testing( { debug: true, name: "Bob" } )
+  test.welcome()
+
+  # outputs the following...
+  # Testing.log > Welcome Bob!
+
+</pre>

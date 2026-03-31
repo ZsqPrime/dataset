@@ -1,0 +1,66 @@
+Project Description:
+An (unofficial) attempt of localizing Stack Exchange sites into Japanese, with a focus on the Japanese Language and Usage site.
+
+README:
+About:
+======
+
+An unofficial attempt of localizing Stack Exchange sites into Japanese, 
+with a focus on the Japanese Language and Usage site. 
+
+For more information, please see:
+http://stackapps.com/questions/2978/japanese-stack-exchange-localization
+
+Licensed under the Creative Commons CC0 1.0 Universal license in the hope 
+that either the script itself or the translations themselves can later be 
+used for internationalizing the JLU site or other Stack Exchange sites 
+into Japanese (http://creativecommons.org/publicdomain/zero/1.0/)
+
+Supported browsers:
+===================
+
+Currently testing it only on Chromium and Firefox with Greasemonkey, 
+but I intend to support other browsers later.
+
+What's currently translated:
+============================
+
+* Most of the tag names on the JLU website (about 4/6 pages, 
+  the detailed descriptions aren't translated).
+
+* A majority of the badge names and descriptions.
+
+* Most of the tabs, UI elements etc on the main page, questions page, 
+  tags page, users page and unanswered page.
+
+* The Stack Exchange dropdown's tabs, e-mail settings, the inbox and 
+  notifications tabs, and most of the site names have been localized, 
+  but the descriptions of the sites haven't.
+
+* I've only translated some of the notification messages in the 
+  notifications tab as I can only localize them when I see them.
+  
+* The "user reputation changes" changes popup at the top has been done.
+
+* I've translated some of the WMD editor's tooltips and redirected to 
+  a brief editing guide in Japanese for now (the "mini JavaScript help" 
+  and "detailed help" haven't been translated).
+
+* The user profile pages and the tabs in them are mostly localized.
+
+* The "close" dialog has mostly been done, but the "flag" dialog hasn't.
+  The messages on the closed questions, e.g. "closed as not a real 
+  question by xxx" need to be done.
+
+* Some parts of the "community moderator tools" have been localized, but 
+  the "review" page hasn't been yet. 
+
+* A lot of the unregistered user messages, like "Please make sure you 
+  answer the question" and hints to the right of the question screens 
+  "We prefer questions that can be answered..." and "How to Format" etc
+  need to be done.
+
+* The names of the privileges have been done, but I don't intend to 
+  translate the about page, FAQ or the rest of the privileges page
+  for now. There are separate efforts to write Japanese documentation at 
+  http://meta.japanese.stackexchange.com/questions/625/

@@ -1,0 +1,48 @@
+安装步骤：
+1，安装依赖软件包。
+    npm install -d
+2，修改配置文件，将config/config.js-dist重新命名为config/config.js,并修改相应配置项。
+
+配置说明：
+exports.config = {
+  //定期轮询队列的时间间隔，单位：毫秒
+  "interval": 1000,
+
+  //子进程数量
+  "worker_number": 5,
+
+  //数据库信息
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "root",
+    "pass": "",
+    "database": "stock_radar"
+  },
+
+  //队列地址
+  "queue": "http://127.0.0.1:3000/queue",
+
+  //php路径
+  "php": "/usr/local/php/bin/php",
+
+  //是否开启调试信息输出
+  "debug": true,
+
+  //请求数据库的异步等待的超时时长
+  "query_timeout":10,
+
+  //子进程的内存限制，超过后会关闭并重启子进程
+  "memory_limit": 60,
+
+  "max_buffer":2,
+
+  //tidy处理的策略设置，默认是default
+  "tidy_strategy":{
+    "szse.bulllist":"original"
+  }
+}
+
+3，启动程序。
+    node main.js
+

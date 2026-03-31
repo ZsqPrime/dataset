@@ -1,0 +1,15 @@
+Selenium Boostrap
+=================
+
+This is example of selenium based integration test
+
+
+
+Project Description:
+Selenium
+
+README:
+Selenium Boostrap
+=================
+
+This is example of selenium based integration test

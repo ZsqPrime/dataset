@@ -1,0 +1,7 @@
+Retrieve articles from PubMed Central's OAI service, convert them and process them.
+
+Project Description:
+
+
+README:
+Retrieve articles from PubMed Central's OAI service, convert them and process them.

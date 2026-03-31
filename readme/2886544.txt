@@ -1,0 +1,26 @@
+Project Description:
+Displays an icon to control xscreensaver.
+
+README:
+
+screensaver-icon
+================
+
+This small daemon serves two basic functions:
+ * Provides a status-bar icon with one-click enabling and disabling of the
+   screensaver.
+ * Attempts to set an Away message in pidgin when the screensaver locks the
+   screen and reverts to previous status message on unlock.
+
+Installation
+============
+
+Install:
+
+    sudo pip install screensaver-icon
+
+Execute:
+
+    screensaver-icon
+
+For a description of (optional) command-line arguments, see --help.

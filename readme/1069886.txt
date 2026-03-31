@@ -1,0 +1,22 @@
+Project Description:
+various OpenFramework examples
+
+README:
+This is a collection of examples of various types for Openframework:
+
+- fboRenderToTexture shows how to apply an FBO to an object through a 3d texture. Projects for linux32 Codeblocks are included.
+
+- FractalFloatTerrainExample is an improved floatingPointImageExample example, a terrain with texture maps, normal maps, specular maps. Tangents and binormals are calculated by the shader. Projects for linux32 Codeblocks are included. All the textures ( texture map, normal map, specular map and height map) where made with L3DT terrain editor http://www.bundysoft.com/L3DT/ after exporting the height map was converted from .png to .exr in Photoshop (Remember: you must convert to 32bit format before exporting to .exr format).  
+
+- pointPPLShaderExample and pointlightShaderExample_swiftless are two example of shader lighting inside OpenFramework.
+
+- Sinewave_openCL_Book is an example of using openCL inside linux. (after trying to use without success MSAopenCL...) . Wait for examples using libstdcl : https://github.com/browndeer/coprthr and 
+  http://www.browndeertechnology.com/
+
+- ShadowMap example of shadow mapping in OF 007 adapted from Akira Hayasaka example http://forum.openframeworks.cc/index.php?topic=4529.0
+
+- ClassicNoise2Dexample is based on a Glsl shader taken from : https://github.com/ashima/webgl-noise/wiki very useful resource for Noise shader.
+
+-MultiLightShaderExample is an example of multilight with a Glsl shader, at the moment spotLight not completely supported.
+
+kalwaltart 09122012

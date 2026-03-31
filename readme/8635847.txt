@@ -1,0 +1,63 @@
+LTTngTop
+Julien Desfossez <jdesfossez@efficios.com>
+June 2015
+
+Lttngtop is an ncurses interface for reading and browsing traces recorded by
+the LTTng tracer and displaying various statistics.
+As of now, the cpu usage, per file/process I/O bandwidth and perf counters are
+displayed. This release is the first one that handles live sessions as well as
+offline sessions.
+
+USAGE
+-----
+
+The manpage located in the doc folder of this source tree documents the usage
+of LTTngTop.
+
+BUILDING
+--------
+
+	./bootstrap (skip if using tarball)
+	./configure
+	make
+	make install
+
+DEPENDENCIES
+------------
+
+To compile Babeltrace and lttngtop, you need:
+
+	gcc 3.2 or better
+	libc6 development librairies
+	  (Debian : libc6, libc6-dev)
+	  (Fedora : glibc, glibc)
+	glib 2.22 or better development libraries
+	  (Debian : libglib2.0-0, libglib2.0-dev)
+	  (Fedora : glib2, glib2-devel)
+	libpopt >= 1.13 development libraries
+	  (Debian : libpopt-dev)
+	  (Fedora : popt)
+	ncurses development libraries
+	  (Debian : libncurses5-dev)
+	babeltrace = 1.2.4 development library
+	  (Debian : libbabeltrace-dev, libbabeltrace-ctf-dev)
+
+To use the local live tracing feature, you need:
+	lttng-tools >= 2.4
+	lttng-modules >= 2.4
+	babeltrace = 1.2.4
+
+For developers using the git tree:
+
+This source tree is based on the autotools suite from GNU to simplify
+portability. Here are some things you should have on your system in order to
+compile the git repository tree :
+
+- GNU autotools (automake >=1.10, autoconf >=2.50, autoheader >=2.50)
+  (make sure your system wide "automake" points to a recent version!)
+- GNU Libtool >=2.2
+  (for more information, go to http://www.gnu.org/software/autoconf/)
+
+If you get the tree from the repository, you will need to use the "bootstrap"
+script in the root of the tree. It calls all the GNU tools needed to prepare the
+tree configuration.

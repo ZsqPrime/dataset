@@ -1,0 +1,9 @@
+Owner: Marcin (login: marcin-mini-pw)
+Content: Project for Neural Network Course
+
+Project Description:
+Projekt nr 1 na przedmiot sieci neuronowe
+
+README:
+Owner: Marcin (login: marcin-mini-pw)
+Content: Project for Neural Network Course

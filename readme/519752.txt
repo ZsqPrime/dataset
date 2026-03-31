@@ -1,0 +1,22 @@
+Play
+====
+
+Before building this project, you should 
+
+	git submodule update --init --recursive
+
+after cloning.
+
+
+Project Description:
+Play is an application for playing and managing audio files on Mac OS X. 
+
+README:
+Play
+====
+
+Before building this project, you should 
+
+	git submodule update --init --recursive
+
+after cloning.

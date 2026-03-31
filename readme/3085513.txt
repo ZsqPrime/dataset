@@ -1,0 +1,7 @@
+Project Description:
+Pistoia Wireless auth application for Android devices
+
+README:
+Pistoia Wireless Auth 1.0
+
+Pistoia Wireless Auth permette di loggarsi facilmente alla rete wifi libera di Pistoia gestita dal PtLUG. E' possibile inoltre creare l'utente e utilizzare lo user menu. L'applicazione è distribuita sotto licenza GPL3.

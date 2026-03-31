@@ -1,0 +1,14 @@
+Project Description:
+
+
+README:
+== Welcome to Gel
+
+== Ideas
+
+* Capture log output for all steps of deploying a branch and make it available
+* Detect failures (just return codes for starters)
+* Suspend vagrant vms after build?
+* Deploy gel on gel
+* Push/Poll updates to the browser (no need to browser refresh) (backbone.js, eventmachine/thin, ?)
+* Extract Provisioner API (Vagrant, AWS, fog?)

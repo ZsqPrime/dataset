@@ -1,0 +1,30 @@
+citation, logging and multi-purpose archive = clmpr
+a minimal bookmarking engine
+
+clmpr allows you to save urls simply
+
+running on http://clmpr.com
+
+requirements:
+- php
+- mysql
+
+see TODO for progress
+
+
+Project Description:
+Citation, Logging and Multi-Purpose Archive: A bookmarking website engine (think: delicious, pinboard)
+
+README:
+citation, logging and multi-purpose archive = clmpr
+a minimal bookmarking engine
+
+clmpr allows you to save urls simply
+
+running on http://clmpr.com
+
+requirements:
+- php
+- mysql
+
+see TODO for progress

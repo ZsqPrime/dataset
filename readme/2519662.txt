@@ -1,0 +1,5 @@
+Project Description:
+WordPress integration for Incrwd
+
+README:
+See incrwd/readme.txt for more information.

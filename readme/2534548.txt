@@ -1,0 +1,5 @@
+Project Description:
+A bookmarklet for saving bits of the web to TiddlySpace
+
+README:
+A bookmarklet that lets you save pages and images from around the web into your TiddlySpace space. It works a bit like the Tumblr bookmarklet.

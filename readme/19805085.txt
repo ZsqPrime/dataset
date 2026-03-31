@@ -1,0 +1,9 @@
+Project Description:
+Python utilities for log parsing
+
+README:
+Log utilties
+
+Based on code samples from
+
+    http://www.dabeaz.com/generators/

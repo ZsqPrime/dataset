@@ -1,0 +1,69 @@
+Supporting materials for "Making Musical Apps" by Peter Brinkmann
+
+Useful links
+   * libpd at GitHub: https://github.com/libpd
+   * libpd community site: http://libpd.cc/ (still under construction)
+   * Get the ebook: http://shop.oreilly.com/product/0636920022503.do
+   * Get a printed copy: http://www.amazon.com/dp/1449314902
+   * Author's blog: http://nettoyeur.noisepages.com/
+   * Author's twitter feed: https://twitter.com/nettoyeurny
+   * MIDI over Bluetooth for Android: https://github.com/nettoyeurny/btmidi
+
+Sample patches
+
+The patches directory contains some sample patches from Chapter 2 of the
+book.
+
+Sample projects
+
+The sample projects for Android and iOS are set up with the assumption
+that this repository has been cloned into the same parent directory as
+pd-for-android and pd-for-ios.  For example, you can clone them all into
+your Documents directory.
+
+When importing the sample project for Android into Eclipse, make sure to
+select "Import -> General -> Existing Projects into Workspace".  If you
+see spurious errors, have Eclipse clean and rebuilt your workspace.
+
+RjDj scenes
+
+The scenes directory contains sample RjDj scenes, used with generous
+permission from Frank Barknecht and Roman Haefeli.
+
+
+
+Project Description:
+Resources for the O'Reilly book "Making Musical Apps"
+
+README:
+Supporting materials for "Making Musical Apps" by Peter Brinkmann
+
+Useful links
+   * libpd at GitHub: https://github.com/libpd
+   * libpd community site: http://libpd.cc/ (still under construction)
+   * Get the ebook: http://shop.oreilly.com/product/0636920022503.do
+   * Get a printed copy: http://www.amazon.com/dp/1449314902
+   * Author's blog: http://nettoyeur.noisepages.com/
+   * Author's twitter feed: https://twitter.com/nettoyeurny
+   * MIDI over Bluetooth for Android: https://github.com/nettoyeurny/btmidi
+
+Sample patches
+
+The patches directory contains some sample patches from Chapter 2 of the
+book.
+
+Sample projects
+
+The sample projects for Android and iOS are set up with the assumption
+that this repository has been cloned into the same parent directory as
+pd-for-android and pd-for-ios.  For example, you can clone them all into
+your Documents directory.
+
+When importing the sample project for Android into Eclipse, make sure to
+select "Import -> General -> Existing Projects into Workspace".  If you
+see spurious errors, have Eclipse clean and rebuilt your workspace.
+
+RjDj scenes
+
+The scenes directory contains sample RjDj scenes, used with generous
+permission from Frank Barknecht and Roman Haefeli.

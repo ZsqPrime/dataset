@@ -1,0 +1,44 @@
+This is an events calendar app written for the [Elefant CMS](http://github.com/jbroadway/elefant).
+Uses the [FullCalendar](http://arshaw.com/fullcalendar/) jQuery plugin.
+
+To install, unzip it into your apps folder and you'll see
+"Events (click to install)" appear in the Elefant Tools menu.
+Click that link to complete the install process.
+
+Once installed, you'll see "Events" in your tools menu, which is
+where you can create and manage your events.
+
+You can see your calendar at `/events` on your website.
+
+To do:
+
+* Event registration payments
+* View registrations
+* Print guest lists
+* iCalendar output
+* Social buttons
+
+
+Project Description:
+Events calendar app for the Elefant CMS
+
+README:
+This is an events calendar app written for the [Elefant CMS](http://github.com/jbroadway/elefant).
+Uses the [FullCalendar](http://arshaw.com/fullcalendar/) jQuery plugin.
+
+To install, unzip it into your apps folder and you'll see
+"Events (click to install)" appear in the Elefant Tools menu.
+Click that link to complete the install process.
+
+Once installed, you'll see "Events" in your tools menu, which is
+where you can create and manage your events.
+
+You can see your calendar at `/events` on your website.
+
+To do:
+
+* Event registration payments
+* View registrations
+* Print guest lists
+* iCalendar output
+* Social buttons

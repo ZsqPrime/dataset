@@ -1,0 +1,7 @@
+![HangoutcanopyPromo](https://lh3.googleusercontent.com/-2EuYy8dbg-g/Ts1rIS6X5EI/AAAAAAAAAF8/ZfH_yjwLR1A/s440/hangout_canopy_small_tile.png)
+
+Project Description:
+Hangout Canopy is a real time discovery extensions for Google Chrome that allows you to find and join Hangouts in Google+
+
+README:
+![HangoutcanopyPromo](https://lh3.googleusercontent.com/-2EuYy8dbg-g/Ts1rIS6X5EI/AAAAAAAAAF8/ZfH_yjwLR1A/s440/hangout_canopy_small_tile.png)

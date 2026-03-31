@@ -1,0 +1,6 @@
+Project Description:
+Extjs 4 with openlayers
+
+README:
+Stop working
+please see https://github.com/geoext/geoext2 for support extjs 4

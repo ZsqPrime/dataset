@@ -1,0 +1,120 @@
+name: xmlenv
+author:  Miroslav Safr <miroslav.safr@gmail.com> 
+thanks to: Matusz for help with version XSLT transformation - Dezso Denes <denes.dezco@gmail.com>
+web: http://safrm.net/projects/xmlenv
+description: multiplatformal/distribution system  dumping and comparation
+
+content: 
+ xmlenv  ..................... main linux dump/show bash script
+ compare-pkgs.xsl ............ template for XSLT comparation 
+ pkglist-extra-installed.xsl . template for package lists comparations 
+
+ example/base.xml ............ base system dump
+ example/report-short.html ... short comparation report (to "current" system dump - ./pkgversions.xml)
+ example/report-full.html .... full comparation report (to "current" system dump - ./pkgversions.xml)
+
+ install.sh .............. executes installation to /urs/bin /usr/share/xmlenv/ directories
+
+usage:
+./xmlenv help .................... shows help
+./xmlenv show .................... show the records
+./xmlenv dump .................... create pkgversions.xml
+./xmlenv compare-report .......... creates pkgversions.xml dump, compares it with base.xml and writes it to report.html
+./xmlenv compare-installed-pkgs .. prints list of added packages from base state 
+./xmlenv compare-removed-pkgs .... prints list of removed packages from base state 
+./xmlenv check ................... checks system parameters given by commandline comma separated array
+./xmlenv backup .................. dumps  pkgversions.xml to ~/.xmlenv/pkgversions_<timestamp>.xml
+
+example1: generate default (short) comparation report:
+xmlenv compare -b example/base.xml -o example/result-short.html 
+
+example2: generate full comparation report:
+xmlenv compare -v -b example/base.xml -o example/result-full.html --full
+-v .............. script verbose output
+-b <xml-file> ... dumped base xml file which we compare to
+-or <html-file> . save report to somewhere else
+--full .......... show in report 1.equal and 2.current unique(additional) packages
+
+example3: dump with comment
+xmlenv dump -c "before installing dev env"
+
+
+example4: check installed packages
+./xmlenv check pkglist gcc,gdb  .. returns 0
+./xmlenv check pkglist gcc,gdb,not-existing .. returns 1
+
+example5: remote backup dumping
+ssh user@host 'bash /dev/stdin backup' < /usr/bin/xmlenv
+scp -r user@host:.xmlenv .
+
+example6: external comparation
+./xmlenv compare-installed-pkgs -b ./first.xml -x ./second.xml -dd -r ./my-report.html
+
+example7: state saving (to ~/.xmlenv/)
+xmlenv backup -m "installed base image"
+
+example8: package count from files
+xmlenv show pkgcount -x pkgversions.xml
+
+
+Project Description:
+os environment dump and comparations
+
+README:
+name: xmlenv
+author:  Miroslav Safr <miroslav.safr@gmail.com> 
+thanks to: Matusz for help with version XSLT transformation - Dezso Denes <denes.dezco@gmail.com>
+web: http://safrm.net/projects/xmlenv
+description: multiplatformal/distribution system  dumping and comparation
+
+content: 
+ xmlenv  ..................... main linux dump/show bash script
+ compare-pkgs.xsl ............ template for XSLT comparation 
+ pkglist-extra-installed.xsl . template for package lists comparations 
+
+ example/base.xml ............ base system dump
+ example/report-short.html ... short comparation report (to "current" system dump - ./pkgversions.xml)
+ example/report-full.html .... full comparation report (to "current" system dump - ./pkgversions.xml)
+
+ install.sh .............. executes installation to /urs/bin /usr/share/xmlenv/ directories
+
+usage:
+./xmlenv help .................... shows help
+./xmlenv show .................... show the records
+./xmlenv dump .................... create pkgversions.xml
+./xmlenv compare-report .......... creates pkgversions.xml dump, compares it with base.xml and writes it to report.html
+./xmlenv compare-installed-pkgs .. prints list of added packages from base state 
+./xmlenv compare-removed-pkgs .... prints list of removed packages from base state 
+./xmlenv check ................... checks system parameters given by commandline comma separated array
+./xmlenv backup .................. dumps  pkgversions.xml to ~/.xmlenv/pkgversions_<timestamp>.xml
+
+example1: generate default (short) comparation report:
+xmlenv compare -b example/base.xml -o example/result-short.html 
+
+example2: generate full comparation report:
+xmlenv compare -v -b example/base.xml -o example/result-full.html --full
+-v .............. script verbose output
+-b <xml-file> ... dumped base xml file which we compare to
+-or <html-file> . save report to somewhere else
+--full .......... show in report 1.equal and 2.current unique(additional) packages
+
+example3: dump with comment
+xmlenv dump -c "before installing dev env"
+
+
+example4: check installed packages
+./xmlenv check pkglist gcc,gdb  .. returns 0
+./xmlenv check pkglist gcc,gdb,not-existing .. returns 1
+
+example5: remote backup dumping
+ssh user@host 'bash /dev/stdin backup' < /usr/bin/xmlenv
+scp -r user@host:.xmlenv .
+
+example6: external comparation
+./xmlenv compare-installed-pkgs -b ./first.xml -x ./second.xml -dd -r ./my-report.html
+
+example7: state saving (to ~/.xmlenv/)
+xmlenv backup -m "installed base image"
+
+example8: package count from files
+xmlenv show pkgcount -x pkgversions.xml

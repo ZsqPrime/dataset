@@ -1,0 +1,14 @@
+CIBlog
+==========
+
+Una applicazione di esempio per mostrare come configurare una build con Jenkins
+
+
+Project Description:
+Progetto di esempio per Continuous Integration con Jenkins e Phing
+
+README:
+CIBlog
+==========
+
+Una applicazione di esempio per mostrare come configurare una build con Jenkins

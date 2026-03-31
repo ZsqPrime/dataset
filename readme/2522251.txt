@@ -1,0 +1,5 @@
+Project Description:
+Samples of how to use X-Stream.ly
+
+README:
+This contains a collection of samples of how to use the X-Stream.ly service

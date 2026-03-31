@@ -1,0 +1,10 @@
+
+This is just something I've been wanting to start....
+
+
+Project Description:
+a tool to aggregate recent activity of many users from several different sources (twitter, github, etc.)
+
+README:
+
+This is just something I've been wanting to start....

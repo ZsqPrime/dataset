@@ -1,0 +1,16 @@
+Archivos de la charla de sphinxsearch para el primer Mysql meetup MVD / UY 
+
+http://www.meetup.com/The-Montevideo-MySQL-Meetup-Group/
+
+ver online en http://centra.com.uy/sphinx
+
+
+Project Description:
+Charla sobre sphinxsearch para la primer meetup de mysql en UY.
+
+README:
+Archivos de la charla de sphinxsearch para el primer Mysql meetup MVD / UY 
+
+http://www.meetup.com/The-Montevideo-MySQL-Meetup-Group/
+
+ver online en http://centra.com.uy/sphinx

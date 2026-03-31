@@ -1,0 +1,71 @@
+MENUS WORKING
+
+Get retry button working DONE
+Get instructions button working DONE
+
+
+
+COLLISION MODEL
+
+Make coordinates calculate from the centre DONE
+Fix offset bug DONE
+Shrink snake width DONE
+Test capture functionality DONE
+
+
+
+SCORING SYSTEM
+
+Give points for captures DONE
+add levels DONE
+Make moons translucent
+
+
+
+GAMEPLAY TWEAKS
+
+Add sound effects for captures
+Add sound effects for taking damage
+Make bg music loop - reopened
+Add boundaries to screen DONE
+Add penalty for staying at maximum size DONE
+Make score appear on the game over scene DONE
+Give a reason for game overs
+
+Project Description:
+GGJ Vancouver 2012
+
+README:
+MENUS WORKING
+
+Get retry button working DONE
+Get instructions button working DONE
+
+
+
+COLLISION MODEL
+
+Make coordinates calculate from the centre DONE
+Fix offset bug DONE
+Shrink snake width DONE
+Test capture functionality DONE
+
+
+
+SCORING SYSTEM
+
+Give points for captures DONE
+add levels DONE
+Make moons translucent
+
+
+
+GAMEPLAY TWEAKS
+
+Add sound effects for captures
+Add sound effects for taking damage
+Make bg music loop - reopened
+Add boundaries to screen DONE
+Add penalty for staying at maximum size DONE
+Make score appear on the game over scene DONE
+Give a reason for game overs

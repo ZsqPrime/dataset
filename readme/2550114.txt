@@ -1,0 +1,5 @@
+Project Description:
+Pass it a query and it'll build you a table.
+
+README:
+// pass tabler a query and it'll build a table for you!

@@ -1,0 +1,8 @@
+Project Description:
+This is a very tiny libc
+
+README:
+tiny_crt
+========
+
+This is a very tiny libc

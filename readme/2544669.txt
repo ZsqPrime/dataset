@@ -1,0 +1,43 @@
+Project Description:
+Combining the Scanning function with the Search function of Cart
+
+README:
+/****************
+ ** SaS README **
+ ****************/
+ SaS is a project folder that contains the development
+
+== PROJECTS ==
+/**BALANCE
+ Written for Froyo, Android version 2.2, API Level 8
+ Contains final APK export for Thesis Project
+
+/**Cart
+ Written for Froyo, Android version 2.2, API Level 8
+ Tested on Motorola Droid, Samsung GalaxyS and Android emulator with success.
+ Proof of concept prototype that allows users to track the nutritional contents of their grocery cart through a visualization.
+
+/**TabletCart
+ Written for ICS, Android v 4.03, API Level 14. 
+ Incomplete Wireframe for project.
+
+/**Inputs
+ Written for Froyo, Android version 2.2, API Level 8
+ Includes barcode scanning and plu input. Databases consist of 
+ internal sqlite db containing nutrition information from USDA, and PLU barcode db
+ 
+/**Fragments
+ Written for Honeycomb, Android version 3.2, API Level 13
+ Consists of simple fragment test
+
+== LIBRARIES ==
+/**ZXING Scanning: http://code.google.com/p/zxing/
+/**Android XML-RPC: http://code.google.com/p/android-xmlrpc/
+/**Android-Actionbar: https://github.com/johannilsson/android-actionbar
+
+== DATASOURCES ==
+/**USDA nutrition info: http://www.ars.usda.gov/Services/docs.htm?docid=22113
+/**PLU Code tables: http://www.plucodes.com/
+/**USDA nutrient information: http://fnic.nal.usda.gov/
+/**National Institutes of Health: http://ods.od.nih.gov/factsheets/
+/**Dietary Intakes: http://www.nutrition.gov/smart-nutrition-101/dietary-reference-intakes-rdas

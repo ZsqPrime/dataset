@@ -1,0 +1,260 @@
+= Sisow
+{<img src="https://secure.travis-ci.org/marceldegraaf/sisow.png" />}[http://travis-ci.org/marceldegraaf/sisow]
+
+This gem provides an interface to interact with the Sisow payment provider. Sisow offers payments through the iDeal (Dutch),
+Bancontact/Mister Cash (Belgian) and Sofort (German) online payment systems.
+
+To use this gem, you'll need a payment account at Sisow (you'll need your <tt>merchant key</tt> and <tt>merchant id</tt>).
+The gem is aimed at Rails 3.2 but it should work on older Rails versions as well as in non-Rails apps.
+
+== Installation
+
+To install this gem, simply do <tt>gem install sisow</tt> or add it to your Gemfile:
+
+  gem 'sisow'
+
+And update your bundle with <tt>bundle install</tt>
+
+== Usage
+
+=== Configuration
+
+To be able to use the gem, you must first configure it. If you're on Rails, insert the following code in <tt>config/initializers/sisow.rb</tt>:
+
+  Sisow.configure do |config|
+    config.merchant_key = 'your-merchant-key'
+    config.merchant_id  = 'your-merchant-id'
+
+    #
+    # The following settings are optional
+    #
+    config.test_mode    = false   # default: false
+    config.debug_mode   = false   # default: false
+  end
+
+That's it. Once you restart your Rails application (or open a Rails console) you should be able to communicate with
+the Sisow API.
+
+=== Getting a list of issuers
+
+To set up a payment, your user needs to choose an issuer (a bank) that will fulfill the payment. To fetch a list of Issuers, use the following command:
+
+  Sisow::Issuer.list
+
+This will return a list of <tt>Sisow::Issuer</tt> objects that have an <tt>id</tt> and a <tt>name</tt>. The <tt>id</tt> is needed
+to set up the payment in the following step.
+
+Optionally you can also retrieve a list of issuers by supplying the merchant_id and merchant_key directly to the method.
+
+  Sisow::Issuer.list(merchant_id: 1, merchant_key: 'abcd')
+
+=== Setting up a payment
+
+After choosing an issuer, your user must be redirected to the payment page for that issuer. For that to happen, you'll have to
+set up a payment through the Sisow API, after which you'll be given a URL to redirect your user to.
+
+Setting up a payment looks like this:
+
+  payment_attributes = {
+    :merchant_id    => 1,                       # optional: set if you don't want to use a global configuration
+    :merchant_key   => 'abcd',                  # optional: set if you don't want to use a global configuration
+    :purchase_id    => '2012-01-28-33558',      # for your own reference
+    :issuer_id      => '99',                    # the issuer id from the previous step
+    :description    => 'Acme Inc. payment',     # description of this payment
+    :amount         => 1299,                    # amount in Euro in cents
+    :entrance_code  => 'foobarfoxtrot',         # internal verification code of your choice
+    :return_url     => 'http://example.com',    # where the user is sent after the payment
+    :cancel_url     => 'http://example.com',    # where the user is sent when he cancels the payment
+    :callback_url   => 'http://example.com',    # where a failed (not cancelled) payment will be reported
+    :notify_url     => 'http://example.com',    # where the payment status will be reported
+    :locale         => 'GB'                     # for Paypal payments. Only GB and US are currently valid.
+                                                # Any other option (or leaving it out entirely) will default
+                                                # to a Dutch payment page
+  }
+
+  payment = Sisow::IdealPayment.new(payment_attributes)
+  redirect_url   = payment.payment_url
+  transaction_id = payment.transaction_id # this value corresponds with Sisow's "trxid"
+
+=== Supported payment methods
+
+This gem supports payments through iDeal, Bancontact/Mister Cash and Sofort. Each of these payment methods have their own class. Payment attributes are the same for each payment method, so in the example above you should only need to switch <tt>Sisow::IdealPayment</tt> for one of the other classes. These are the available class names:
+
+  Sisow::IdealPayment       # for iDeal payments
+  Sisow::BancontactPayment  # for Bancontact/Mister Cash payments
+  Sisow::SofortPayment      # for Sofort payments
+
+=== Validity checks
+
+The Sisow API has a few safety measures built in, to prevent malicious users from tampering with your payments. These checks are documented in the Sisow API documentation and are implemented in the gem.
+
+=== Callbacks
+
+As documented in the Sisow API documentation, four callbacks are available. When setting up your payment, each of these callbacks can be assigned a URL. These are: <tt>return_url</tt>, <tt>cancel_url</tt>, <tt>callback_url</tt> and <tt>notify_url</tt>. After a successful or failed payment, or when the payment timeout has been reached, the Sisow API will attempt to perform a GET request on the URL's you defined.
+
+The <tt>Sisow::Api::Callback</tt> can handle these callbacks for you. To initialize such an instance you should provide the following query parameters (which are given by Sisow in the request):
+
+  callback = Sisow::Api::Callback.new(
+    :merchant_id    => 1,                       # optional: set if you don't want to use a global configuration
+    :merchant_key   => 'abcd',                  # optional: set if you don't want to use a global configuration
+    :transaction_id => params[:trxid],
+    :entrance_code  => params[:ec],
+    :status         => params[:status],
+    :sha1           => params[:sha1]
+  )
+
+After initializing a <tt>Sisow::Api::Callback</tt> instance, you can check the validity of the callback and check the transaction status:
+
+  callback.validate!  # Will raise a Sisow::Exception unless the callback is valid
+  callback.valid?     # Will return a boolean to indicate the validity of the callback
+  callback.success?   # True if the transaction was successful
+  callback.expired?   # True if the transaction has expired
+  callback.cancelled? # True if the transaction was cancelled
+  callback.failure?   # True if the transaction has failed
+
+== Development
+
+Your contributions are more than welcome. To contribute to this gem, follow these steps:
+
+1. Fork the repository from Github
+2. Clone your fork on your development machine
+3. Install the dependencies with <tt>bundle install</tt>
+4. Copy <tt>.env.example</tt> to <tt>.env</tt> and enter your own Sisow credentials
+5. Verify your clone is working by running <tt>rspec</tt>
+6. Hack away
+7. Run the specs with <tt>rspec</tt>
+8. Verify spec coverage by opening <tt>coverage/index.html</tt>
+9. If all is good: send me a pull request
+
+
+Project Description:
+Implementation of the Sisow payment provider API
+
+README:
+= Sisow
+{<img src="https://secure.travis-ci.org/marceldegraaf/sisow.png" />}[http://travis-ci.org/marceldegraaf/sisow]
+
+This gem provides an interface to interact with the Sisow payment provider. Sisow offers payments through the iDeal (Dutch),
+Bancontact/Mister Cash (Belgian) and Sofort (German) online payment systems.
+
+To use this gem, you'll need a payment account at Sisow (you'll need your <tt>merchant key</tt> and <tt>merchant id</tt>).
+The gem is aimed at Rails 3.2 but it should work on older Rails versions as well as in non-Rails apps.
+
+== Installation
+
+To install this gem, simply do <tt>gem install sisow</tt> or add it to your Gemfile:
+
+  gem 'sisow'
+
+And update your bundle with <tt>bundle install</tt>
+
+== Usage
+
+=== Configuration
+
+To be able to use the gem, you must first configure it. If you're on Rails, insert the following code in <tt>config/initializers/sisow.rb</tt>:
+
+  Sisow.configure do |config|
+    config.merchant_key = 'your-merchant-key'
+    config.merchant_id  = 'your-merchant-id'
+
+    #
+    # The following settings are optional
+    #
+    config.test_mode    = false   # default: false
+    config.debug_mode   = false   # default: false
+  end
+
+That's it. Once you restart your Rails application (or open a Rails console) you should be able to communicate with
+the Sisow API.
+
+=== Getting a list of issuers
+
+To set up a payment, your user needs to choose an issuer (a bank) that will fulfill the payment. To fetch a list of Issuers, use the following command:
+
+  Sisow::Issuer.list
+
+This will return a list of <tt>Sisow::Issuer</tt> objects that have an <tt>id</tt> and a <tt>name</tt>. The <tt>id</tt> is needed
+to set up the payment in the following step.
+
+Optionally you can also retrieve a list of issuers by supplying the merchant_id and merchant_key directly to the method.
+
+  Sisow::Issuer.list(merchant_id: 1, merchant_key: 'abcd')
+
+=== Setting up a payment
+
+After choosing an issuer, your user must be redirected to the payment page for that issuer. For that to happen, you'll have to
+set up a payment through the Sisow API, after which you'll be given a URL to redirect your user to.
+
+Setting up a payment looks like this:
+
+  payment_attributes = {
+    :merchant_id    => 1,                       # optional: set if you don't want to use a global configuration
+    :merchant_key   => 'abcd',                  # optional: set if you don't want to use a global configuration
+    :purchase_id    => '2012-01-28-33558',      # for your own reference
+    :issuer_id      => '99',                    # the issuer id from the previous step
+    :description    => 'Acme Inc. payment',     # description of this payment
+    :amount         => 1299,                    # amount in Euro in cents
+    :entrance_code  => 'foobarfoxtrot',         # internal verification code of your choice
+    :return_url     => 'http://example.com',    # where the user is sent after the payment
+    :cancel_url     => 'http://example.com',    # where the user is sent when he cancels the payment
+    :callback_url   => 'http://example.com',    # where a failed (not cancelled) payment will be reported
+    :notify_url     => 'http://example.com',    # where the payment status will be reported
+    :locale         => 'GB'                     # for Paypal payments. Only GB and US are currently valid.
+                                                # Any other option (or leaving it out entirely) will default
+                                                # to a Dutch payment page
+  }
+
+  payment = Sisow::IdealPayment.new(payment_attributes)
+  redirect_url   = payment.payment_url
+  transaction_id = payment.transaction_id # this value corresponds with Sisow's "trxid"
+
+=== Supported payment methods
+
+This gem supports payments through iDeal, Bancontact/Mister Cash and Sofort. Each of these payment methods have their own class. Payment attributes are the same for each payment method, so in the example above you should only need to switch <tt>Sisow::IdealPayment</tt> for one of the other classes. These are the available class names:
+
+  Sisow::IdealPayment       # for iDeal payments
+  Sisow::BancontactPayment  # for Bancontact/Mister Cash payments
+  Sisow::SofortPayment      # for Sofort payments
+
+=== Validity checks
+
+The Sisow API has a few safety measures built in, to prevent malicious users from tampering with your payments. These checks are documented in the Sisow API documentation and are implemented in the gem.
+
+=== Callbacks
+
+As documented in the Sisow API documentation, four callbacks are available. When setting up your payment, each of these callbacks can be assigned a URL. These are: <tt>return_url</tt>, <tt>cancel_url</tt>, <tt>callback_url</tt> and <tt>notify_url</tt>. After a successful or failed payment, or when the payment timeout has been reached, the Sisow API will attempt to perform a GET request on the URL's you defined.
+
+The <tt>Sisow::Api::Callback</tt> can handle these callbacks for you. To initialize such an instance you should provide the following query parameters (which are given by Sisow in the request):
+
+  callback = Sisow::Api::Callback.new(
+    :merchant_id    => 1,                       # optional: set if you don't want to use a global configuration
+    :merchant_key   => 'abcd',                  # optional: set if you don't want to use a global configuration
+    :transaction_id => params[:trxid],
+    :entrance_code  => params[:ec],
+    :status         => params[:status],
+    :sha1           => params[:sha1]
+  )
+
+After initializing a <tt>Sisow::Api::Callback</tt> instance, you can check the validity of the callback and check the transaction status:
+
+  callback.validate!  # Will raise a Sisow::Exception unless the callback is valid
+  callback.valid?     # Will return a boolean to indicate the validity of the callback
+  callback.success?   # True if the transaction was successful
+  callback.expired?   # True if the transaction has expired
+  callback.cancelled? # True if the transaction was cancelled
+  callback.failure?   # True if the transaction has failed
+
+== Development
+
+Your contributions are more than welcome. To contribute to this gem, follow these steps:
+
+1. Fork the repository from Github
+2. Clone your fork on your development machine
+3. Install the dependencies with <tt>bundle install</tt>
+4. Copy <tt>.env.example</tt> to <tt>.env</tt> and enter your own Sisow credentials
+5. Verify your clone is working by running <tt>rspec</tt>
+6. Hack away
+7. Run the specs with <tt>rspec</tt>
+8. Verify spec coverage by opening <tt>coverage/index.html</tt>
+9. If all is good: send me a pull request

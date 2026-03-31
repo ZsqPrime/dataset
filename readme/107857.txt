@@ -1,0 +1,48 @@
+mcMMOIRC is a Bukkit plugin to integrate the mcMMO chat system with CraftIRC.
+
+mcMMOIRC will not just "work" by simple dropping mcMMOIRC.jar in the
+server's "plugins" directory. mcMMOIRC itself will need to be configured
+along with CraftIRC. Refer to the example configuration files provided
+to configure mcMMOIRC correctly.
+
+Example mcMMOIRC configuration:
+  https://github.com/CraftIRC/CraftIRC3/blob/master/config.yml
+
+Example CraftIRC configuration:
+  https://github.com/jgeboski/mcMMOIRC/blob/master/config.craftirc.yml
+
+
+Commands:
+  - mcmmoirc - Manage mcMMOIRC
+    - Aliases: mirc
+    - Usage: /<command> reload
+
+Permissions:
+  - mcmmoirc.reload - Reload mcMMOIRC
+
+
+Project Description:
+Bukkit plugin to integrate the mcMMO chat system with CraftIRC
+
+README:
+mcMMOIRC is a Bukkit plugin to integrate the mcMMO chat system with CraftIRC.
+
+mcMMOIRC will not just "work" by simple dropping mcMMOIRC.jar in the
+server's "plugins" directory. mcMMOIRC itself will need to be configured
+along with CraftIRC. Refer to the example configuration files provided
+to configure mcMMOIRC correctly.
+
+Example mcMMOIRC configuration:
+  https://github.com/CraftIRC/CraftIRC3/blob/master/config.yml
+
+Example CraftIRC configuration:
+  https://github.com/jgeboski/mcMMOIRC/blob/master/config.craftirc.yml
+
+
+Commands:
+  - mcmmoirc - Manage mcMMOIRC
+    - Aliases: mirc
+    - Usage: /<command> reload
+
+Permissions:
+  - mcmmoirc.reload - Reload mcMMOIRC

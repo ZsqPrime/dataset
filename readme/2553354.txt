@@ -1,0 +1,5 @@
+Project Description:
+Exercícios sobre lentes esféricas em óptica geométrica
+
+README:
+Objeto de aprendizagem destinado ao treinamento das construções geométricas envolvidas no problema dos espelhos esféricos, segundo a óptica geométrica.

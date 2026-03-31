@@ -1,0 +1,488 @@
+Project Description:
+Data Structures for Ruby
+
+README:
+= DS - Data Structures for Ruby
+
+{<img src="https://travis-ci.org/knife/ds.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/knife/ds]
+
+DS provides some popular data structures not implemented in Ruby natively.
+
+Data structures included in this gem:
+
+* Pair
+* Stacks
+  * Stack
+* Queues
+  * SimpleQueue
+  * PriorityQueue
+* Lists
+  * List
+* Trees
+  * Tree
+  * BinaryTree
+  * BinaryHeap
+  * RedBlackTree
+  * Trie
+* Matrixes
+  * Array2D
+  * ExpandableArray
+  * TriMatrix
+* Sets
+  * IndexedSet
+
+
+== Instalation
+
+  gem install ds
+
+== Usage
+
+  require 'ds'
+  stack = DS::Stack.new
+
+To not have to type "DS::" before each class, use:
+
+  include DS
+  stack = Stack.new
+
+=== Pair
+
+Pair is simple key-value data structure.
+
+Creating new Pair
+  p = Pair.new(3, 9)
+
+Accessors defined on Pair object:
+
+  p.key #=> 3
+  p.value #=> 9
+  p.value = 27
+
+  p.first #=> 3
+  p.second #=> 9
+  p.second = 27
+
+=== Stack
+
+Stack is very simple data structure which allows access only to the top element.
+More: {Stack}[http://en.wikipedia.org/wiki/Stack_(abstract_data_type)]
+
+Creating new Stack (implemented as Array).
+  stack = Stack.new
+with initial values:
+  s = Stack.new(:first, :second)
+
+Creating new Stack (implemented as List).
+  stack = Stack.create
+
+The following methods are available on a Stack:
+
+* push
+* pop
+* peek
+* size
+* empty?
+
+Examples:
+  stack.empty? #=> true
+  stack.push :first
+  stack.push :second
+  stack.size #=> 2
+  stack.peek #=> :second
+  stack.empty? #=> false
+  stack.pop #=> :second
+  stack.size #=> 1
+
+
+=== Queues
+
+Queue is First-In-First-Out (FIFO) data structure.
+Which means that first element added to the queue will be the first one to be removed.
+More: {Queue}[http://en.wikipedia.org/wiki/Queue_(data_structure)]
+
+
+==== SimpleQueue
+
+Creating new SimpleQueue (implemented as Array).
+  q = SimpleQueue.new
+with initial values:
+  q = SimpleQueue.new(1, 2, 3)
+
+Creating new SimpleQueue (implemented as List)
+  q1 = SimpleQueue.create
+
+The following methods are available on a Queue:
+
+* enqueue or push
+* dequeue or shift
+* peek
+* length or size
+* empty?
+
+Examples:
+  q.enqueue :first
+  q.push :second
+  q.peek #=> :first
+  q.length #=> 2
+  q.empty? #=> false
+  q.dequeue #=> :first
+  q.shift #=> :second
+  q.empty? #=> true
+
+
+==== Priority Queue
+
+In opposite to simple Queue, in PriorityQueue each element is associated with a "priority".
+More: {Priority Queue}[http://en.wikipedia.org/wiki/Priority_queue]
+
+Creating new Priority Queue (implemented as BinaryHeap)
+
+  q = PriorityQueue.new
+
+By default higher value means higher priority but you can define own priority
+order by passing block to constructor:
+
+  PriorityQueue.new { |a, b| a < b }
+
+
+To add new element to priority queue use #unshift or #push method:
+  q.push(value, priority)
+
+To remove element from priority queue use #shift or #pop method. The interface
+is very similar to SimpleQueue.
+
+Examples:
+  q.push(:important, 3)
+  q.push(:very_important, 5)
+  q.push(:nevermind, 1)
+
+  q.shift #=> :very_important
+  q.peek #=> :important
+  q.length #=> 2
+  q.shift  #=> :important
+  q.peek  #=> :nevermind
+
+
+==== Indexed Priority Queue
+
+Indexed Priority Queue is special form of PriorityQueue with constant access to any element.
+Additionaly you can easily change priority of any element stored on queue.
+
+Creating new Indexed Priority Queue
+  q = IndexedPriorityQueue.new
+or
+  IndexedPriorityQueue.new { |a, b| a.key < b.key }
+
+IndexedPriorityQueue inherits from PriorityQueue so all methods from PriorityQueue are available.
+
+Examples:
+  q.push(:important, 3)
+  q.push(:very_important, 5)
+  q.push(:nevermind, 1)
+
+  q.peek #=> :very_important
+
+  q.change(:nevermind, 10)
+  q.peek #=> :nevermind
+
+Elements stored on priority queue are wrapped in Pair object, when you call get method this object is returned:
+  q.get(:very_important) #=> Pair.new(5, :very_important)
+  q.include?(:very_important) #=> true
+
+=== Lists
+
+=== List
+
+List is an ordered collection of values. Each element of list has pointer to the next
+element (last element points to nil). This implementation uses doubly linked
+list underhood.
+More: {List}[http://en.wikipedia.org/wiki/List_(data_structure)]
+
+Creating new List
+  l = List.new
+  l.append(2)
+or
+  list = List.new(1, 2, 3, 4)
+
+Examples:
+
+Simple operations on lists
+  list.length #=> 4
+  list.append(5).to_a #=> [1, 2, 3, 4, 5]
+  list.unshift(0).to_a #=> [0, 1, 2, 3, 4, 5]
+  list.remove(list.head).to_a #=> [1, 2, 3, 4, 5]
+  list.shift #=> 1
+
+Accessing first and last element
+  list.head.data #=> 2
+  list.tail.data #=> 5
+
+  list.first #=> 2
+  list.last #=> 5
+
+Accessing by index
+  list[2].data #=> 2
+  list.at(2).data #=> 2
+  list[-1].data #=> 4
+  list[1..2].map(&:data) #=> [2, 3]
+  list[1,3].map(&:data) #=> [2, 3, 4]
+
+Modifying elements on given index:
+  list[2].data = 8
+  list[2].data #=> 8
+  list[2] = [9, 10] #=> [1, 2, 9, 10, 4]
+  list[0,1] = 0 #=> [0, 2, 3, 4]
+  list[2..3] = ['x', 'x'] #=> [1, 2, 'x', 'x']
+
+
+Checking if given element exists on list
+  list.get(el) #=> el or nil
+  list.get!(el) #=> raises Exception if not found
+
+Reversing
+  list.reverse!.to_a #=> [5, 4, 3, 1, 0]
+
+Enumerable methods are also available
+
+  list.map{ |e| e.data } #=> [1, 2, 3, 4]
+  list.inject(0){ |a, e|  a + e.data } #=> 10
+
+Append one list to other list
+  list1.concat(list2)
+
+Comparable module is included so you can:
+
+Check if lists are equal
+  list1 == list2
+
+Check if one list is greater than other (same rules as in Array class)
+  list1 > list2
+
+
+Other operations
+* clone
+* clear
+* insert_before
+* insert_after
+* zip?
+* looped?
+* cycle_size
+* to_s
+
+=== Trees
+
+==== Tree
+
+A tree is a data structure with nodes organised in hierarchy.
+More: {Tree}[http://en.wikipedia.org/wiki/Tree_(data_structure)]
+
+Building Tree
+
+  t = Tree.new(2)
+  c1 = t << 5
+  c2 = t << 8
+  t << 9
+
+  c1 << 4
+  c1 << 10
+  c3 = c2 << 3
+
+Methods:
+  t.leaf? #=> false
+  c3.leaf? #=> true
+
+  c1.sibblings.map &:data #=> [8, 9]
+  c1.parent.data #=> 2
+
+  t.height #=> 3
+  t.width #=> 3
+  t.leaf_count #=> 4
+
+  t.levels #=> {1=>1, 2=>3, 3=>3}
+
+Other methods
+* get_leaves
+* isometric?
+* mirror!
+
+Enumerable Module is also included.
+  t.map { |node| node.data } #=> [2, 5, 8, 9, 4, 10, 3]
+
+
+==== Binary Tree
+
+BinaryTree is sublass of Tree. In BinaryTree each node can have at most two children.
+More: {BinaryTree}[http://en.wikipedia.org/wiki/Binary_tree]
+
+Building tree
+  bin_tree = BinaryTree.new
+  [2, 5, 8, 9, 11, 12, 14].each { |x| bin_tree.insert(x) } #builds complete binary Tree
+
+Accessors defined on BinaryTree object:
+  bin_tree.left.data #=> 5
+  bin_tree.right.data #=> 8
+
+
+==== Red Black Tree
+
+Red-black tree is symbol table data structure. It's very simmilar to hash, but internally
+uses tree (perfect balanced binary tree) and not depends on hash function. Red
+black trees aren't as fast as hashes but supports ordered operations.
+
+    rb = RedBlackTree.new
+    rb.insert(:z, 3)
+    rb.insert(:p, 2)
+    rb.insert(:a, 1)
+    rb.get(:a) #=> 1
+
+You can also create RBT by passing hash to constructor
+  rb = RedBlackTree.new(a: 1, p: 2, z: 3)
+
+Hash like accessors are defined
+
+  rb[:z] = 3
+  rb[:z] #=> 3
+
+You can convert RedBlackTree to Hash with to_h method:
+  rb.to_h #=> {a: 1, p: 2, z: 3}
+
+Enumerable is included and traversing is ordered by key
+    rb.map(&:key) #=> [:a, :p, :z]
+
+==== Binary Heap
+
+BinaryHeap is tree in which every node satisfies heap property. Binary Heap allows very fast
+access to maximum or minimum element of the tree (const access).
+More: {Binary Heap}[http://en.wikipedia.org/wiki/Binary_heap]
+
+Creating
+
+Maximum Binary Heap
+  max_heap = BinaryHeap.new(9, 8, 4, 5, 11, 6)
+or
+  max_heap = BinaryHeap.max(9, 8, 4, 5, 11, 6)
+
+Minimum Binary Heap
+  min_heap = BinaryHeap.min(9, 8, 4, 5, 11, 6)
+or
+  BinaryHeap.new(9, 8, 4, 5, 11, 6){ |parent, child| parent < child }
+
+You can set heap relation by passing block to BinaryHeap constructor.
+
+Examples
+  max_heap.shift #returns max element (11)
+  max_heap.to_a #=> [9, 8, 6, 5, 4]
+  max_heap.insert 15
+  max_heap.shift #=> 15
+
+  min_heap.shift #returns min element (4)
+
+
+==== Trie
+
+Trie is an ordered tree data structure which allows very quick search: O(k), where k is word length.
+More: {Trie}[http://en.wikipedia.org/wiki/Trie]
+
+Creating
+  trie = Trie.new
+
+Setting custom alphabet (memory usage depends on alphabet size)
+  trie.alphabet = %w(a b c d)
+
+Examples
+  trie.insert('thing', true);
+  trie.find('thing')  # =>  true
+  trie.delete('thing')
+or
+  trie['one'] = 'thing'
+  trie['one']  # =>  'thing'
+
+Enumerable module is included so you can iterate through trie:
+ trie.map { |k, v| [k, v] } # => [['he', true], ['hello', true], ['help', true]]
+
+Finding all words matching given prefix:
+  trie.with_prefix('th') # =>  ['the', 'thing']
+  trie.with_prefix('yeti') # =>  []
+
+Alternatively you can pass block to this method:
+  trie.with_prefix('th'){ |word, val| res[word] = val } # =>  {'the' => true, 'thing' => true}
+
+==== Tree Traversals
+
+  b = BinaryTree.new
+  [2, 5, 8, 9, 11, 12, 14].each{ |x| b.insert(x) }
+
+  walker = TreeWalker.new(b)
+
+Iterating in postorder
+  walker.traverse(:postorder) #=> [9, 11, 5, 12, 14, 8, 2]
+Iterating in inorder
+  walker.traverse(:inorder) #=> [9, 5, 11, 2, 12, 8, 14]
+Iterating in preorder
+  walker.traverse(:preorder) #=> [2, 5, 9, 11, 8, 12, 14]
+
+Iterating in BFS order
+  walker.each{ |x| x } #=> [2, 5, 8, 9, 11, 12, 14]
+
+
+You can also pass block to traverse method
+  walker.traverse(:inorder){ |n| n.data**2 }
+
+If you want to change value of tree nodes, use recalculate! method
+  walker.recalculate!(b, :preorder, 0) { |e, a| a + e.data }
+
+
+=== Arrays
+
+==== Array2D
+
+Simple two dimensional array(matrix).
+Array2D extends automatically like simple Array.
+
+Creating
+  discrete_matrix = Array2D.new(2, 0)
+
+First argument is size of row(or column) and second is default value of matrix.
+
+Examples
+  discrete_matrix.to_a  #=> [[0, 0], [0, 0]]
+  discrete_matrix[3, 3] #=> 0
+
+
+==== ExpandableArray
+
+Automaticaly fills empty slots with custom value:
+
+  arr = ExpandableArray.new(0, 0)
+  arr[4]  = 1 #=> [0, 0, 0, 0, 4]
+
+
+==== TriMatrix
+Triangular matrix is a special kind of matrix where M[x,y] = M[y,x].
+More: {Triangular Matrix}[http://en.wikipedia.org/wiki/Triangular_matrix]
+
+Creating
+  tri_matrix = TriMatrix.new
+  tri_matrix[0, 1] = true
+  tri_matrix[0, 2] = true
+
+Examples
+  tri_matrix[0, 1] == tri_matrix[1, 0] #=> true
+
+
+
+=== Sets
+
+==== IndexedSet
+IndexedSet is a set whose elements are indexed. In opposite to Array, duplicates
+are not allowed. Internally uses hash for fast access and array for ordering.
+
+Creating new Indexed Set
+  set = IndexedSet.new
+
+Examples
+  set.push(:first)  #=>  0
+  set.push(:second) #=> 1
+  set.index(:first) #=> 0
+  set.to_a #=> [:first, :second]

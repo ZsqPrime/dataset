@@ -1,0 +1,11 @@
+I am a chef newbie
+As I learn and implement Chef , I am putting all my code here.
+
+
+
+Project Description:
+
+
+README:
+I am a chef newbie
+As I learn and implement Chef , I am putting all my code here.

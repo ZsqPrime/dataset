@@ -1,0 +1,99 @@
+= bliss
+{<img src="https://gemnasium.com/krakatoa/bliss.png" alt="Dependency Status" />}[https://gemnasium.com/krakatoa/bliss]
+{<img src="https://secure.travis-ci.org/krakatoa/bliss.png?branch=master" alt="Build Status" />}[http://travis-ci.org/krakatoa/bliss]
+
+  require 'rubygems'
+  require 'bliss'
+
+  path = 'http://www.yourdomain.com/input.xml' # it supports tar.gz too!
+
+  parser = Bliss::Parser.new(path, 'output.xml') # outputs read xml
+  count = 0
+  parser.on_max_unhandled_bytes(20000) {
+    puts 'Stopped parsing caused content data for tag was too big!'
+    parser.close
+  }
+  parser.on_tag_open('ads/ad') { |depth|
+    puts depth.inspect
+  }
+  parser.on_tag_close('ads/ad') { |hash, depth|
+    count += 1
+    puts hash.inspect
+    if count == 4
+      parser.close
+    end
+  }
+
+  parser.on_timeout(5) {
+    puts 'Timeout!'
+  }
+  
+  parser.parse
+
+== Contributing to bliss
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Fernando Alonso. See LICENSE.txt for
+further details.
+
+
+
+Project Description:
+Streamed XML parsing tool
+
+README:
+= bliss
+{<img src="https://gemnasium.com/krakatoa/bliss.png" alt="Dependency Status" />}[https://gemnasium.com/krakatoa/bliss]
+{<img src="https://secure.travis-ci.org/krakatoa/bliss.png?branch=master" alt="Build Status" />}[http://travis-ci.org/krakatoa/bliss]
+
+  require 'rubygems'
+  require 'bliss'
+
+  path = 'http://www.yourdomain.com/input.xml' # it supports tar.gz too!
+
+  parser = Bliss::Parser.new(path, 'output.xml') # outputs read xml
+  count = 0
+  parser.on_max_unhandled_bytes(20000) {
+    puts 'Stopped parsing caused content data for tag was too big!'
+    parser.close
+  }
+  parser.on_tag_open('ads/ad') { |depth|
+    puts depth.inspect
+  }
+  parser.on_tag_close('ads/ad') { |hash, depth|
+    count += 1
+    puts hash.inspect
+    if count == 4
+      parser.close
+    end
+  }
+
+  parser.on_timeout(5) {
+    puts 'Timeout!'
+  }
+  
+  parser.parse
+
+== Contributing to bliss
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2012 Fernando Alonso. See LICENSE.txt for
+further details.

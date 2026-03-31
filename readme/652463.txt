@@ -1,0 +1,71 @@
+# Jmeter wrapper
+
+## Vision
+
+This is not meant for single-user, command-line usage. It's meant to be used in scripts - to provide a more easily programmable, user-friendly, readable API to jmeter. In Ruby.
+
+
+## Product
+
+This must be able to launch Jmeter, whether a single instance or many slaves, and dynamically support the possible -D and -G options which can change the behavior of the jmeter profile if set by the user. System-level constraints, like SSH keys, are probably implementation details
+
+### Versions, features
+
+Examine github. Bug @Trevoke.
+
+Example of usage (object names are not marked in stone):
+
+```ruby
+jmeter = Jmeter::Wrapper.new :plan => 'TestPlan.jmx', :threads => 1000, :duration => 300, :remote_servers => ['remote1', 'remote2']
+jmeter.start # => possibly replaces the current process with the jmeter process - or daemonizes it. This process does not need to exist anymore.
+```
+
+
+### Constraints
+
+The following options are passed as command-line options and must be stored as User-defined variables in jmeter, like such:
+```
+${__P(duration,1800)}
+```
+* duration (in seconds)
+* target_host
+* rampup
+* delay
+
+Project Description:
+A gem to launch jmeter more easily.
+
+README:
+# Jmeter wrapper
+
+## Vision
+
+This is not meant for single-user, command-line usage. It's meant to be used in scripts - to provide a more easily programmable, user-friendly, readable API to jmeter. In Ruby.
+
+
+## Product
+
+This must be able to launch Jmeter, whether a single instance or many slaves, and dynamically support the possible -D and -G options which can change the behavior of the jmeter profile if set by the user. System-level constraints, like SSH keys, are probably implementation details
+
+### Versions, features
+
+Examine github. Bug @Trevoke.
+
+Example of usage (object names are not marked in stone):
+
+```ruby
+jmeter = Jmeter::Wrapper.new :plan => 'TestPlan.jmx', :threads => 1000, :duration => 300, :remote_servers => ['remote1', 'remote2']
+jmeter.start # => possibly replaces the current process with the jmeter process - or daemonizes it. This process does not need to exist anymore.
+```
+
+
+### Constraints
+
+The following options are passed as command-line options and must be stored as User-defined variables in jmeter, like such:
+```
+${__P(duration,1800)}
+```
+* duration (in seconds)
+* target_host
+* rampup
+* delay

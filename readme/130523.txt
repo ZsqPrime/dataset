@@ -1,0 +1,8 @@
+All of the modules that used to be in here have been moved into [scalatra](https://github.com/scalatra/scalatra)
+
+
+Project Description:
+Contains extra contributed modules for scalatra
+
+README:
+All of the modules that used to be in here have been moved into [scalatra](https://github.com/scalatra/scalatra)

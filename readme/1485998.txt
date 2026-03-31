@@ -1,0 +1,5 @@
+Project Description:
+PHP Foosball league scripts
+
+README:
+Foosball league implemented in PHP

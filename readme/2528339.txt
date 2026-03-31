@@ -1,0 +1,61 @@
+Project Description:
+Generate random strings from a configuration file
+
+README:
+patternize
+==========
+
+  This program generates random strings from a collection of patterns
+  and substitutions given in a configuration file.
+
+Installation
+============
+
+  See INSTALL for full instructions.  In brief:
+
+    ./autogen.sh     # only if you don't have configure already
+    ./configure
+    make
+    sudo make install
+    man patternize
+
+  See 'tumblr.patterns' for an example configuration.
+
+  For web (CGI) use, see README.cgi.
+
+Bug Reports
+===========
+
+  Send bug reports to:
+    Richard Kettlewell <rjk@terraraq.org.uk>
+
+Inspirations
+============
+
+  Inspirations include:
+    http://kimjongillookingatthings.tumblr.com/
+    http://omgcatsinspace.tumblr.com/
+    http://princessesgonewild.tumblr.com/
+    http://xmenwithgooglyeyes.tumblr.com/
+    http://sadetsykids.tumblr.com/
+    http://lookatmyfuckingredtrousers.blogspot.com/
+    http://gothsuptrees.tumblr.com/
+    ...and many many more.
+
+Copyright
+=========
+
+  patternize © 2011, 2014 Richard Kettlewell
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http:www.gnu.org/licenses/>.

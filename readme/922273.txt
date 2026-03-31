@@ -1,0 +1,19 @@
+Hip - the Haskell Inductive Prover
+==================================
+
+This repository is outdated.
+
+Hip is now developed as a part of the [HipSpec](http://github.com/danr/hipspec) project.
+
+
+
+Project Description:
+Haskell Inductive Prover - uses automated theorem provers to automatically verify equational properties of Haskell programs
+
+README:
+Hip - the Haskell Inductive Prover
+==================================
+
+This repository is outdated.
+
+Hip is now developed as a part of the [HipSpec](http://github.com/danr/hipspec) project.

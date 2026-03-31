@@ -1,0 +1,6 @@
+Project Description:
+Runescape Emulator in Coffeescript
+
+README:
+# Usage
+...

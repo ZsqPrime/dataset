@@ -1,0 +1,10 @@
+Project Description:
+Like a blog, but with maps!
+
+README:
+This is a quick and dirty project I wrote to track my travel in Europe.
+This is a Google App Engine application using the Google Maps API. If you want to see it in action, check out http://whereismattak.appspot.com.
+
+The code is very basic and I do intend to extend it to be more extensible. Feel free to fork it and have your own data displayed! Just make sure to go through the main.py file and update everything in between the < and > tags.
+
+The code itself is super basic and hacked together, so I apologize for that :) At some point, I'll go through and make it awesome-er.

@@ -1,0 +1,431 @@
+= correios-sro-xml
+
+Tracking Objects System from Correios - SRO (Sistema de Rastreamento de Objetos dos Correios), using SRO XML Web Service, that allows to query up to 50 orders simultaneously.
+
+http://prodis.net.br/images/ruby/2011/correios_logo.png
+
+{<img src="https://badge.fury.io/rb/correios-sro-xml.png" alt="Gem Version" />}[http://badge.fury.io/rb/correios-sro-xml]
+{<img src="https://travis-ci.org/prodis/correios-sro-xml.png?branch=master" alt="Build Status" />}[https://travis-ci.org/prodis/correios-sro-xml]
+{<img src="https://coveralls.io/repos/prodis/correios-sro-xml/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/prodis/correios-sro-xml]
+{<img src="https://codeclimate.com/github/prodis/correios-sro-xml.png" alt="Code Climate" />}[https://codeclimate.com/github/prodis/correios-sro-xml]
+{<img src="https://gemnasium.com/prodis/correios-sro-xml.png" alt="Dependency Status" />}[https://gemnasium.com/prodis/correios-sro-xml]
+
+== Warning
+  Previous versions of version 0.4.0 don't work anymore. See issue #4 for more details.
+
+In order to use SRO XML in production environment, it is necessary to request to Correios access data (user and password) for your company, as described in {Correios' Blog}[http://blog.correios.com.br/comercioeletronico/?p=218].
+
+For development environment you can use follow access data:
+  user: ECT
+  password: SRO
+
+== Installing
+
+=== Gemfile
+  gem 'correios-sro-xml'
+
+=== Direct installation
+  $ gem install correios-sro-xml
+
+
+== Using
+
+  require 'correios-sro-xml'
+
+  sro = Correios::SRO::Tracker.new(user: "ECT", password: "SRO")
+
+Tracking a single object:
+  object = sro.get("SI047624825BR")
+  object.number                   # => "SI047624825BR"
+  object.events.first.date        # => "26/12/2011"
+  object.events.first.hour        # => "15:22"
+  object.events.first.place       # => "AC CENTRAL DE SAO PAULO"
+  object.events.first.description # => "Entregue"
+
+Tracking many objects:
+  objects = sro.get("SI047624825BR", "SX104110463BR")
+
+  objects["SI047624825BR"].number                   # => "SI047624825BR"
+  objects["SI047624825BR"].events.first.date        # => "26/12/2011"
+  objects["SI047624825BR"].events.first.hour        # => "15:22"
+  objects["SI047624825BR"].events.first.place       # => "AC CENTRAL DE SAO PAULO"
+  objects["SI047624825BR"].events.first.description # => "Entregue"
+
+  objects["SX104110463BR"].number                   # => "SX104110463BR"
+  objects["SX104110463BR"].events.first.date        # => "08/12/2011"
+  objects["SX104110463BR"].events.first.hour        # => "09:30"
+  objects["SX104110463BR"].events.first.place       # => "CEE JUNDIAI"
+  objects["SX104110463BR"].events.first.description # => "Entregue"
+
+=== Tracker result mode
+
+One object can have one or more events.
+For <b>default</b>, the tracker result mode will be return the <b>last object event</b>.
+  sro.result_mode # => :last
+
+  object = sro.get("SI047624825BR")
+  object.events.size # => 1
+
+You can configure to return <b>all</b> events in the object.
+  sro.result_mode = :all
+
+  object = sro.get("SI047624825BR")
+  object.events.size # => 5
+
+=== Tracker query type
+
+There are two ways to query objects in tracker:
+
+==== List of objects
+Where all the object numbers will be requested (the default).
+  sro.query_type # => :list
+
+  objects = sro.get("PB996681660BR", "PB996681700BR")
+  objects.keys # => ["PB996681660BR", "PB996681700BR"]
+
+==== Range of objects
+In which you supplie the first and last objects numbers of an interval.
+  sro.query_type = :range
+
+  objects = sro.get("PB996681660BR", "PB996681700BR")
+  objects.keys # => ["PB996681660BR", "PB996681673BR", "PB996681687BR", "PB996681695BR", "PB996681700BR"]
+
+
+== Configurations
+
+Use <b>Correios::SRO</b> module to set all available gem configuration.
+
+=== Access data
+
+You can supply SRO XML Web Service user and password in configuration instead of each instance of <b>Correios::SRO::Tracker</b> class.
+  Correios::SRO.configure do |config|
+    config.user = "ECT"
+    config.password = "SRO"
+  end
+
+=== Timeout
+
+For default, the timeout for a request to SRO XML Web Service is <b>5 seconds</b>. If SRO XML Web Service does not respond, a <b>Timeout::Error</b> exception will be raised.
+  Correios::SRO.configure do |config|
+    config.request_timeout = 3 # It configures timeout to 3 seconds
+  end
+
+=== Log
+
+For default, each request to SRO XML Web service is logged to STDOUT, with <b>:info</b> log level, using the gem {LogMe}[http://github.com/prodis/log-me].
+
+Log example:
+  I, [2012-08-17T00:55:10.531780 #22692]  INFO -- : [Correios::SRO] Request:
+  POST http://websro.correios.com.br/sro_bin/sroii_xml.eventos
+  Usuario=ECT&Senha=SRO&Tipo=L&Resultado=U&Objetos=PB996681660BR
+
+  I, [2012-08-17T00:55:10.750308 #22692]  INFO -- : [Correios::SRO] Response:
+  HTTP/1.1 200 OK
+  <?xml version="1.0" encoding="iso-8859-1" ?>
+  <sroxml>
+     <versao>1.0</versao>
+     <qtd>1</qtd>
+     <TipoPesquisa>Lista de Objetos</TipoPesquisa>
+     <TipoResultado>Último evento</TipoResultado>
+       <objeto>
+         <numero>PB996681660BR</numero>
+         <evento>
+            <tipo>BDE</tipo>
+            <status>01</status>
+            <data>05/07/2012</data>
+            <hora>21:11</hora>
+            <descricao>Entregue</descricao>
+            <recebedor>                         </recebedor>
+            <documento>                         </documento>
+            <comentario>                         </comentario>
+            <local>CDD VILA ANDRADE</local>
+            <codigo>05724970</codigo>
+            <cidade>SAO PAULO</cidade>
+            <uf>SP</uf>
+            <sto>72824000</sto>
+        </evento>
+       </objeto>
+  </sroxml>
+
+You can disable the log and configure other log output.
+  Correios::SRO.configure do |config|
+    config.log_enabled = false   # It disables the log
+    config.logger = Rails.logger # It uses Rails logger
+  end
+
+=== Configuration example
+
+  Correios::SRO.configure do |config|
+    config.user = "ECT"
+    config.password = "SRO"
+    config.logger = Rails.logger
+    config.request_timeout = 3
+  end
+
+== Author
+- {Fernando Hamasaki de Amorim (prodis)}[http://prodis.blog.br]
+
+== Collaborators
+- {Lennon Manchester (lemanchester)}[https://github.com/lemanchester]
+- {Rinaldi Fonseca (rinaldifonseca)}[https://github.com/rinaldifonseca]
+- {Thiago Ganzarolli (tganzarolli)}[https://github.com/tganzarolli]
+
+== Contributing to correios-sro-xml
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Don't forget to rebase with branch master in main project before submit the pull request.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+
+== Copyright
+
+(The MIT License)
+
+{Prodis a.k.a. Fernando Hamasaki}[http://prodis.blog.br]
+
+http://prodis.net.br/images/prodis_150.gif
+
+Copyright (c) 2012-2014 Prodis
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+Project Description:
+Tracking Objects System from Correios - SRO (Sistema de Rastreamento de Objetos dos Correios)
+
+README:
+= correios-sro-xml
+
+Tracking Objects System from Correios - SRO (Sistema de Rastreamento de Objetos dos Correios), using SRO XML Web Service, that allows to query up to 50 orders simultaneously.
+
+http://prodis.net.br/images/ruby/2011/correios_logo.png
+
+{<img src="https://badge.fury.io/rb/correios-sro-xml.png" alt="Gem Version" />}[http://badge.fury.io/rb/correios-sro-xml]
+{<img src="https://travis-ci.org/prodis/correios-sro-xml.png?branch=master" alt="Build Status" />}[https://travis-ci.org/prodis/correios-sro-xml]
+{<img src="https://coveralls.io/repos/prodis/correios-sro-xml/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/prodis/correios-sro-xml]
+{<img src="https://codeclimate.com/github/prodis/correios-sro-xml.png" alt="Code Climate" />}[https://codeclimate.com/github/prodis/correios-sro-xml]
+{<img src="https://gemnasium.com/prodis/correios-sro-xml.png" alt="Dependency Status" />}[https://gemnasium.com/prodis/correios-sro-xml]
+
+== Warning
+  Previous versions of version 0.4.0 don't work anymore. See issue #4 for more details.
+
+In order to use SRO XML in production environment, it is necessary to request to Correios access data (user and password) for your company, as described in {Correios' Blog}[http://blog.correios.com.br/comercioeletronico/?p=218].
+
+For development environment you can use follow access data:
+  user: ECT
+  password: SRO
+
+== Installing
+
+=== Gemfile
+  gem 'correios-sro-xml'
+
+=== Direct installation
+  $ gem install correios-sro-xml
+
+
+== Using
+
+  require 'correios-sro-xml'
+
+  sro = Correios::SRO::Tracker.new(user: "ECT", password: "SRO")
+
+Tracking a single object:
+  object = sro.get("SI047624825BR")
+  object.number                   # => "SI047624825BR"
+  object.events.first.date        # => "26/12/2011"
+  object.events.first.hour        # => "15:22"
+  object.events.first.place       # => "AC CENTRAL DE SAO PAULO"
+  object.events.first.description # => "Entregue"
+
+Tracking many objects:
+  objects = sro.get("SI047624825BR", "SX104110463BR")
+
+  objects["SI047624825BR"].number                   # => "SI047624825BR"
+  objects["SI047624825BR"].events.first.date        # => "26/12/2011"
+  objects["SI047624825BR"].events.first.hour        # => "15:22"
+  objects["SI047624825BR"].events.first.place       # => "AC CENTRAL DE SAO PAULO"
+  objects["SI047624825BR"].events.first.description # => "Entregue"
+
+  objects["SX104110463BR"].number                   # => "SX104110463BR"
+  objects["SX104110463BR"].events.first.date        # => "08/12/2011"
+  objects["SX104110463BR"].events.first.hour        # => "09:30"
+  objects["SX104110463BR"].events.first.place       # => "CEE JUNDIAI"
+  objects["SX104110463BR"].events.first.description # => "Entregue"
+
+=== Tracker result mode
+
+One object can have one or more events.
+For <b>default</b>, the tracker result mode will be return the <b>last object event</b>.
+  sro.result_mode # => :last
+
+  object = sro.get("SI047624825BR")
+  object.events.size # => 1
+
+You can configure to return <b>all</b> events in the object.
+  sro.result_mode = :all
+
+  object = sro.get("SI047624825BR")
+  object.events.size # => 5
+
+=== Tracker query type
+
+There are two ways to query objects in tracker:
+
+==== List of objects
+Where all the object numbers will be requested (the default).
+  sro.query_type # => :list
+
+  objects = sro.get("PB996681660BR", "PB996681700BR")
+  objects.keys # => ["PB996681660BR", "PB996681700BR"]
+
+==== Range of objects
+In which you supplie the first and last objects numbers of an interval.
+  sro.query_type = :range
+
+  objects = sro.get("PB996681660BR", "PB996681700BR")
+  objects.keys # => ["PB996681660BR", "PB996681673BR", "PB996681687BR", "PB996681695BR", "PB996681700BR"]
+
+
+== Configurations
+
+Use <b>Correios::SRO</b> module to set all available gem configuration.
+
+=== Access data
+
+You can supply SRO XML Web Service user and password in configuration instead of each instance of <b>Correios::SRO::Tracker</b> class.
+  Correios::SRO.configure do |config|
+    config.user = "ECT"
+    config.password = "SRO"
+  end
+
+=== Timeout
+
+For default, the timeout for a request to SRO XML Web Service is <b>5 seconds</b>. If SRO XML Web Service does not respond, a <b>Timeout::Error</b> exception will be raised.
+  Correios::SRO.configure do |config|
+    config.request_timeout = 3 # It configures timeout to 3 seconds
+  end
+
+=== Log
+
+For default, each request to SRO XML Web service is logged to STDOUT, with <b>:info</b> log level, using the gem {LogMe}[http://github.com/prodis/log-me].
+
+Log example:
+  I, [2012-08-17T00:55:10.531780 #22692]  INFO -- : [Correios::SRO] Request:
+  POST http://websro.correios.com.br/sro_bin/sroii_xml.eventos
+  Usuario=ECT&Senha=SRO&Tipo=L&Resultado=U&Objetos=PB996681660BR
+
+  I, [2012-08-17T00:55:10.750308 #22692]  INFO -- : [Correios::SRO] Response:
+  HTTP/1.1 200 OK
+  <?xml version="1.0" encoding="iso-8859-1" ?>
+  <sroxml>
+     <versao>1.0</versao>
+     <qtd>1</qtd>
+     <TipoPesquisa>Lista de Objetos</TipoPesquisa>
+     <TipoResultado>Último evento</TipoResultado>
+       <objeto>
+         <numero>PB996681660BR</numero>
+         <evento>
+            <tipo>BDE</tipo>
+            <status>01</status>
+            <data>05/07/2012</data>
+            <hora>21:11</hora>
+            <descricao>Entregue</descricao>
+            <recebedor>                         </recebedor>
+            <documento>                         </documento>
+            <comentario>                         </comentario>
+            <local>CDD VILA ANDRADE</local>
+            <codigo>05724970</codigo>
+            <cidade>SAO PAULO</cidade>
+            <uf>SP</uf>
+            <sto>72824000</sto>
+        </evento>
+       </objeto>
+  </sroxml>
+
+You can disable the log and configure other log output.
+  Correios::SRO.configure do |config|
+    config.log_enabled = false   # It disables the log
+    config.logger = Rails.logger # It uses Rails logger
+  end
+
+=== Configuration example
+
+  Correios::SRO.configure do |config|
+    config.user = "ECT"
+    config.password = "SRO"
+    config.logger = Rails.logger
+    config.request_timeout = 3
+  end
+
+== Author
+- {Fernando Hamasaki de Amorim (prodis)}[http://prodis.blog.br]
+
+== Collaborators
+- {Lennon Manchester (lemanchester)}[https://github.com/lemanchester]
+- {Rinaldi Fonseca (rinaldifonseca)}[https://github.com/rinaldifonseca]
+- {Thiago Ganzarolli (tganzarolli)}[https://github.com/tganzarolli]
+
+== Contributing to correios-sro-xml
+
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Don't forget to rebase with branch master in main project before submit the pull request.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+
+== Copyright
+
+(The MIT License)
+
+{Prodis a.k.a. Fernando Hamasaki}[http://prodis.blog.br]
+
+http://prodis.net.br/images/prodis_150.gif
+
+Copyright (c) 2012-2014 Prodis
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

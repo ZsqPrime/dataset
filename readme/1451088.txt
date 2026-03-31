@@ -1,0 +1,48 @@
+This is just a inital installation to prepare the enviroment for use
+installing the graisl 1.3.7 and grails2 || mysql5.1 || and java
+
+to successfully complete your installation
+you need to give chmod +x initial_installation.sh
+run file with ./initial_installation.sh
+
+after all instalations 
+you need to edit bashrc 
+	example: vi /home/user/.bashrc
+and add the editbashrc content into the bashrc file
+
+after all, to use the grails version 1.3.7
+just type grails1
+
+to use the version 2
+just type grails2
+
+ps: its not for windows any version
+
+bye
+
+
+Project Description:
+Just a sh file to prepare the enviroment with groovy, grails, java, mysq and sshfs 
+
+README:
+This is just a inital installation to prepare the enviroment for use
+installing the graisl 1.3.7 and grails2 || mysql5.1 || and java
+
+to successfully complete your installation
+you need to give chmod +x initial_installation.sh
+run file with ./initial_installation.sh
+
+after all instalations 
+you need to edit bashrc 
+	example: vi /home/user/.bashrc
+and add the editbashrc content into the bashrc file
+
+after all, to use the grails version 1.3.7
+just type grails1
+
+to use the version 2
+just type grails2
+
+ps: its not for windows any version
+
+bye

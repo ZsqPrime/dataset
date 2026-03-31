@@ -1,0 +1,26 @@
+Quality
+Bugs - year to date, total bugs open by iteration, bugs remaining open by iteration, bugs by user story, bug weekly trend
+
+Commits - lines of code vs lines of test
+
+Performance
+WPO - time series chart for http requests, total page size in kb, ms to page loaded for series of urls
+
+Delivery
+Treemap of stories per iteration, commit vs complete analysis
+
+
+Project Description:
+
+
+README:
+Quality
+Bugs - year to date, total bugs open by iteration, bugs remaining open by iteration, bugs by user story, bug weekly trend
+
+Commits - lines of code vs lines of test
+
+Performance
+WPO - time series chart for http requests, total page size in kb, ms to page loaded for series of urls
+
+Delivery
+Treemap of stories per iteration, commit vs complete analysis

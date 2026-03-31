@@ -1,0 +1,16 @@
+# Kanpress is no longer hosted here #
+
+### New Kanpress home page: http://wordpress.org/extend/plugins/kanpress ###
+### Subversion repository: http://plugins.svn.wordpress.org/kanpress/ ###
+### Support: http://wordpress.org/support/plugin/kanpress ###
+
+
+Project Description:
+Kanpress has been moved to Wordpress subversion: http://plugins.svn.wordpress.org/kanpress/
+
+README:
+# Kanpress is no longer hosted here #
+
+### New Kanpress home page: http://wordpress.org/extend/plugins/kanpress ###
+### Subversion repository: http://plugins.svn.wordpress.org/kanpress/ ###
+### Support: http://wordpress.org/support/plugin/kanpress ###

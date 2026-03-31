@@ -1,0 +1,7 @@
+Project Description:
+Publish EventBrite data into the Sentinel
+
+README:
+# Sentinel Pub
+
+Publish Eventbrite events into the Sentinel. w00t

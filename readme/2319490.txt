@@ -1,0 +1,12 @@
+TV schedules
+
+Package detailed description here (found in README)
+
+
+Project Description:
+TV schedules for Erebot
+
+README:
+TV schedules
+
+Package detailed description here (found in README)

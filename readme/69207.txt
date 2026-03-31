@@ -1,0 +1,23 @@
+#nproj
+=======
+
+Empty node project generator.
+
+## installation
+
+    > npm install nproj -g
+
+
+
+Project Description:
+bare bones node project generator
+
+README:
+#nproj
+=======
+
+Empty node project generator.
+
+## installation
+
+    > npm install nproj -g

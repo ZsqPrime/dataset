@@ -1,0 +1,5 @@
+Project Description:
+A SPATE implementation in groovy
+
+README:
+http://labs.dendiz.com/blogengine/post/show/12

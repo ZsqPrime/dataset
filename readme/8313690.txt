@@ -1,0 +1,14 @@
+Project Description:
+Router and Controller Micro Framework for PHP
+
+README:
+
+Concordia
+=========
+
+Welcome to Concordia, a
+Router and Controller Micro Framework for PHP.
+
+Concordia is a PHP Micro Framework consisting of just one
+class that offers a static routing method as well as some
+controller functionality.

@@ -1,0 +1,5 @@
+Project Description:
+A Management frontend of Gitolite
+
+README:
+Management Frontend for Gitolite

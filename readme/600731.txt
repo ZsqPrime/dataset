@@ -1,0 +1,36 @@
+= i18n_namespace
+
+    I18n.namespace = :administrator
+
+    # with a namespace set, these are the lookup keys
+    # administrator.home.index.content
+    # home.index.content
+    t('home.index.content')
+
+    # your namespace can be an array too
+    I18n.namespace = [:administrator, :special_club]
+
+    # administrator.special_club.home.index.content
+    # administrator.home.index.content
+    # home.index.content
+
+
+Project Description:
+I18n namespace injection with fallback functionality
+
+README:
+= i18n_namespace
+
+    I18n.namespace = :administrator
+
+    # with a namespace set, these are the lookup keys
+    # administrator.home.index.content
+    # home.index.content
+    t('home.index.content')
+
+    # your namespace can be an array too
+    I18n.namespace = [:administrator, :special_club]
+
+    # administrator.special_club.home.index.content
+    # administrator.home.index.content
+    # home.index.content

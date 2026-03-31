@@ -1,0 +1,15 @@
+Message queue module for Kohana 3.2
+Works with Bootstrap 2
+@link http://twitter.github.com/bootstrap/
+
+Passing message(s) to a queue and then render it using Bootstrap.
+
+Project Description:
+Message queue module with a nice looking Twitter style alerts.
+
+README:
+Message queue module for Kohana 3.2
+Works with Bootstrap 2
+@link http://twitter.github.com/bootstrap/
+
+Passing message(s) to a queue and then render it using Bootstrap.

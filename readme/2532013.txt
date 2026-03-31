@@ -1,0 +1,11 @@
+Project Description:
+new nakuron
+
+README:
+new nakuron
+
+for Supercomputing Contest
+http://www.gsic.titech.ac.jp/supercon/
+
+nakuron is the Final Round Problem of SuperCon2011
+http://www.gsic.titech.ac.jp/supercon/main/attwiki/index.php?Supercomputing%20Contest%202011

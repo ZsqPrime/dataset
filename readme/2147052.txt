@@ -1,0 +1,23 @@
+################################################################################
+# README
+################################################################################
+
+This project will explore vertexing: taking lines in a volume and finding 
+the intersection point. 
+
+We will also investigate GPU solutions. 
+
+
+
+Project Description:
+Educational project to learn how to to computational vertexing and how to adapt this to a GPU environment. This is a project within Northern Illinois University Physics department.
+
+README:
+################################################################################
+# README
+################################################################################
+
+This project will explore vertexing: taking lines in a volume and finding 
+the intersection point. 
+
+We will also investigate GPU solutions.

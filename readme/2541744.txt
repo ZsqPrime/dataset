@@ -1,0 +1,4 @@
+Project Description:
+SibunLabs NMR is an application designed to view, process, analyze and print NMR data and is written in python with a graphical interface in qt. It used numpy and scipy to process the high amount of data points in a short time. It's intended to be a free 
+
+README:

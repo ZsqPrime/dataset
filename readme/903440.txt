@@ -1,0 +1,92 @@
+This is a simple linear algebra library for golang, intended solely for 3D graphics.  It defines structs and functions for points, vectors, and small matrices.
+
+This package is currently under construction, and it's by no means complete.  While the name of the git repository is *govmath*, the name of the actual go package is *vmath*.
+
+vmath defines six types, each of which has a tiny two-character name:
+
+| *V3* | Vector in 3-space |
+| *V4* | Homogeneous vector |
+| *P3* | Point in 3-space; similar to a *V4* with w=1 |
+| *M3* | Represents rotation and scale |
+| *T3* | 4x3 matrix for affine transformations; adds translation to *M3* |
+| *M4* | Homogeneous transform (suitable for perpective projection) |
+
+Matrices are stored in row-major order but they can be easily transposed (e.g., for consumption by GLSL).
+
+When vectors are premultiplied with matrices, as in @V.Mul(M)@, they are treated as row vectors.  When postmultipled, as in @M.Mul(V)@, they are treated as column vectors.
+
+*M4* provides construction methods for right-handed and left-handed projections.
+
+Vectors and points are distinct concepts; a *V3* added to a *P3* yields another *P3*:
+
+<pre>
+v := vmath.V3{0, 0, 1}
+p := vmath.P3{1, 0, 0}
+p = p.Add(v)
+</pre>
+
+Vectors can be added to points, but points cannot be added vectors.  Adding a *V3* to another *V3* yields a *V3*:
+
+<pre>
+v1 := vmath.V3{0, 0, 1}
+v2 := vmath.V3{1, 0, 0}
+var v vmath.V3 = v1.Add(v2)
+</pre>
+
+Unlike go's own math package, vmath is designed for 32-bit floats rather than doubles.  This is mostly for OpenGL compatibility:
+
+<pre>
+v := vmath.V3{1, 1, 1}
+glVertexAttrib3fv(mySlot, &v.X)
+</pre>
+
+All non-method functions are prefixed with the type they return (e.g., *M3Identity*).  Functions also sometimes have a type suffix:
+
+<pre>
+p1 := P3FromV3(a)
+p2 := P3FromV4(b)
+m := M4Translate(1, 0, 0)
+ᴨ := float32(math.Atan(1) * 4)
+t := T3RotateX(ᴨ/2)
+</pre>
+
+Matrix methods and functions operate on pointers, while vectors and points operate on values:
+
+<pre>
+//todo
+</pre>
+
+You can always modify a vector or matrix by accessing its struct members, but all methods and functions treat them as *immutable*:
+
+<pre>
+var m M4 = M4Translate(0, 0, 1)
+m.Transpose() // this does nothing
+m2 := m.Transpose() // better!
+</pre>
+
+The concept of equality is dodgy with floating-point vectors, but you can always call *Equivalent* with an epsilon of your choice:
+
+<pre>
+var ε float32 = 1e-4
+i := vmath.V3{1, 0, 0}
+j := vmath.V3{0, 1, 0}
+k := vmath.V3{0, 0, 1}
+if !i.Cross(j).Equivalent(k, ε) {
+    panic
+}
+</pre>
+
+h2. Installation
+
+<pre>
+git clone git@github.com:prideout/govmath
+cd govmath
+export GOPATH=$GOPATH:$PWD
+go install ./src/vmath
+go test ./src/vmath
+</pre>
+
+TODO:
+
+* Create a clean filter ala http://progit.org/book/ch7-2.html
+* gofmt -tabs=false -tabwidth=4 -w=true *.go

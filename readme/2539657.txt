@@ -1,0 +1,8 @@
+Project Description:
+Plugin for Nightingale, which allows user to publish on social networks what is played in Nightingale
+
+README:
+Social Networks plugin for Nightingale
+v1.1
+
+by Dark_Angry_Casimir

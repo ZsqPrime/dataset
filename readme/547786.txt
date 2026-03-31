@@ -1,0 +1,6 @@
+
+
+Project Description:
+Resize images with php (create thumbnails)
+
+README:

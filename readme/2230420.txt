@@ -1,0 +1,53 @@
+###Bachelor Thesis: Causal Inference Simulator (CIS)
+
+Our software provides an algorithm to calculate out of coincidence tables causal graphs. You can enter a coincidence table, a minimal theory or
+generate a random graph. The implemented algorithm is described in Baumgartner, "Uncovering deterministic causal structures: a Boolean approach",
+2009. If a non exhaustive coincidence table is the input, this algorithm is able to calculate ambiguous causal graphs. Our software is a 
+webapplication based on the Play! Framework (http://www.playframework.org/) and completely written in Java.
+ 
+####Authors  
+Jonas Ruef & Felix Langenegger (University of Berne, Switzerland)
+ 
+####License
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Project Description:
+Causal Inference Simulator (CIS)
+
+README:
+###Bachelor Thesis: Causal Inference Simulator (CIS)
+
+Our software provides an algorithm to calculate out of coincidence tables causal graphs. You can enter a coincidence table, a minimal theory or
+generate a random graph. The implemented algorithm is described in Baumgartner, "Uncovering deterministic causal structures: a Boolean approach",
+2009. If a non exhaustive coincidence table is the input, this algorithm is able to calculate ambiguous causal graphs. Our software is a 
+webapplication based on the Play! Framework (http://www.playframework.org/) and completely written in Java.
+ 
+####Authors  
+Jonas Ruef & Felix Langenegger (University of Berne, Switzerland)
+ 
+####License
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.

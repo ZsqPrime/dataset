@@ -1,0 +1,8 @@
+ByteStrings as type synonyms of Storable Vectors of Word8s.
+
+
+Project Description:
+ByteStrings as type synonyms of Vectors
+
+README:
+ByteStrings as type synonyms of Storable Vectors of Word8s.

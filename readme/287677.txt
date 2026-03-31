@@ -1,0 +1,8 @@
+My current Firefox patch queues.
+
+
+Project Description:
+None
+
+README:
+My current Firefox patch queues.

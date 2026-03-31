@@ -1,0 +1,8 @@
+Quick and dirty programs to validate random thoughts.
+
+
+Project Description:
+This works is available in public domain.
+
+README:
+Quick and dirty programs to validate random thoughts.

@@ -1,0 +1,32 @@
+Usage
+=====
+
+```js
+var pos = $('textarea').getCaretPosition();
+
+// now you can use left, top(they are relative position)
+
+$my_tip.css({
+	left: this.offsetLeft + pos.left,
+	top: this.offsetTop + pos.top
+});
+```
+
+
+Project Description:
+you can get the cursor caret offset position(i.e.x,y) by this plugin, even included index getter.
+
+README:
+Usage
+=====
+
+```js
+var pos = $('textarea').getCaretPosition();
+
+// now you can use left, top(they are relative position)
+
+$my_tip.css({
+	left: this.offsetLeft + pos.left,
+	top: this.offsetTop + pos.top
+});
+```

@@ -1,0 +1,62 @@
+# What is beanseye ?
+
+Beanseye is proxy and monitor for beansdb, written in Go.
+
+# How to build
+
+Install Go first, then 
+``` bash
+$ git clone URL
+$ cd beanseye
+$ make
+```
+
+# How to run 
+
+prepare your configuration, according to conf/example.ini
+``` bash
+$ ./bin/proxy -conf conf/example.yaml -basepath the_path_has_static
+```
+
+# Proxy
+
+You can access whole beansdb cluster throught localhost:7905
+as configured, by any memcached client.
+
+# Monitor
+
+There is a web monitor on http://localhost:7908/ at default.
+
+
+Project Description:
+Proxy and monitor for beansdb in Go
+
+README:
+# What is beanseye ?
+
+Beanseye is proxy and monitor for beansdb, written in Go.
+
+# How to build
+
+Install Go first, then 
+``` bash
+$ git clone URL
+$ cd beanseye
+$ make
+```
+
+# How to run 
+
+prepare your configuration, according to conf/example.ini
+``` bash
+$ ./bin/proxy -conf conf/example.yaml -basepath the_path_has_static
+```
+
+# Proxy
+
+You can access whole beansdb cluster throught localhost:7905
+as configured, by any memcached client.
+
+# Monitor
+
+There is a web monitor on http://localhost:7908/ at default.

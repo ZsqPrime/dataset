@@ -1,0 +1,7 @@
+Project Description:
+TP d'ANREC
+
+README:
+TP d'ANREC !
+Marc LAURENT & Antoine RICHARD
+Sujet : algorithme k-means

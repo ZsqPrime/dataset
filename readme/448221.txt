@@ -1,0 +1,392 @@
+Dependency injection with Windows Workflow Foundation 4 can be very complex. 
+
+This extension allows to use property injection on Windows Workflow Activities. 
+
+Let us quickly dive into an example how this extension can be useful. Imagine you have a workflow which does the following:
+
+	(1) Observes a given folder for file changes. When a new file arrives in the observed folder the workflow is resumed.
+	(2) The new file which is indicated by the file changed event is opened and parsed by an IParser implementation
+	(3) The result is passed to the client which invoked the workflow.
+	
+We have the following key problems now with classical Windows Workflow Foundation:
+
+	(1) How to get IFolderWatcher into the step which observes a given folder for file changes.
+	(2) How to get IParser into the step which parses the file
+	(3) For event processing we need extensions which might need external dependencies.
+	(4) How to unit test WorkflowInvoker and WorkflowApplication events like Completed, Faulted etc.
+
+The workflow	
+	
+    public class FileInputTransformationWorkflow : Activity
+    {
+        [RequiredArgument]
+        public InArgument<string> Filter { get; set; }
+
+		[RequiredArgument]
+        public InArgument<string> Folder { get; set; }
+
+        protected override Func<Activity> Implementation
+        {
+            get
+            {
+                return () =>
+                    {
+                        var path = new Variable<string>();
+                        var parsedValues = new Variable<IDictionary<string, double>>();
+
+                        return new Sequence
+                            {
+                                Variables = { path, parsedValues },
+                                Activities =
+                                    {
+                                        new ObserveFolderStep
+                                            {
+                                                Folder = new InArgument<string>(env => env.GetValue(this.Folder)),
+                                                Filter = new InArgument<string>(env => env.GetValue(this.Filter)),
+                                                Path = new OutArgument<string>(path),
+                                            },
+                                        new ParseDataStep
+                                            {
+                                                FilePath = new InArgument<string>(path),
+                                                ParsedValues = new OutArgument<IDictionary<string, double>>(parsedValues),
+                                            },
+										...
+                                    }
+                            };
+                    };
+            }
+
+            set
+            {
+                base.Implementation = value;
+            }
+        }
+    }
+	
+    public sealed class ObserveFolderStep : NativeActivity
+    {
+        [RequiredArgument]
+        public InArgument<string> Filter { get; set; }
+
+
+        [RequiredArgument]
+        public InArgument<string> Folder { get; set; }
+
+        public OutArgument<string> Path { get; set; }
+
+        [Inject]
+        public IFolderWatcher FolderWatcher { get; set; }
+
+        protected override bool CanInduceIdle
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        protected override void CacheMetadata(NativeActivityMetadata metadata)
+        {
+            // Tell the runtime that we need this extension
+            metadata.RequireExtension(typeof(IObserveFolderExtension));
+
+            base.CacheMetadata(metadata);
+        }
+
+        protected override void Execute(NativeActivityContext context)
+        {
+            var observeExtension = context.GetExtension<IObserveFolderExtension>();
+
+            this.FolderWatcher.Folder = this.Folder.Get(context);
+            this.FolderWatcher.Filter = this.Filter.Get(context);
+
+            observeExtension.AddFileChangedCallback(this.FolderWatcher);
+
+            this.FolderWatcher.StartObservation();
+
+            context.CreateBookmark(observeExtension.Bookmark, this.OnFileChanged);
+        }
+
+        private void OnFileChanged(ActivityContext context, Bookmark bookmark, object value)
+        {
+            this.FolderWatcher.StopObservation();
+
+            this.Path.Set(context, (string)value);
+        }
+	}
+	
+    public sealed class ParseDataStep : CodeActivity
+    {
+        [RequiredArgument]
+        public InArgument<string> Path { get; set; }
+
+        public OutArgument<IDictionary<string, double>> ParsedValues { get; set; }
+
+        [Inject]
+        public IParser Parser { get; set; }    
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            var filePath = this.Path.Get(context);
+
+            var result = this.Parser.Parse(filePath);
+
+            this.ParsedValues.Set(context, result);
+        }
+    }
+	
+Workflow Hosting
+
+	var workflow = this.kernel.Get<IWorkflowApplication>();
+
+	// or use dictionary<string,object>
+	var inputs = new { Folder = @"C:\temp\", Filter = "*.txt" };
+
+	workflow.Initialize(new FileInputTransformationWorkflow(), inputs);
+	
+	// The binding for extensions must be transient to profit from the workflow foundation scoping.
+	workflow.AddTransientExtension<IObserveFolderExtension>();	
+	workflow.AddSingletonExtension<ISomeOtherExtension>();	
+	
+Conditional bindings?
+
+Activities can be reused. In the example the ParseDataStep could not only be used in FileInputTransformationWorkflow it might also be used in a SlightlyDifferentInputTransformationWorkflow which uses
+another IParser implementation. Therefore you would need to define a binding to IParser depending on in which workflow the ParseDataStep would be reused. This is possible with the
+BindingWhenSyntaxExtensions!
+
+this.Bind<IParser>().To<Parser>().WhenInjectedIntoActivity(typeof(FileInputTransformationWorkflow));
+this.Bind<IParser>().To<SlightlyDifferentParser>().WhenInjectedIntoActivity(typeof(SlightlyDifferentInputTransformationWorkflow));
+
+or even more fancier stuff like
+
+this.Bind<IParser>().To<Parser>().WhenInjectedIntoActivity(root => fancyCondition: bool);
+this.Bind<IParser>().To<SlightlyDifferentParser>().WhenInjectedIntoActivity(root => anotherFancyCondition: bool);
+	
+How to hook into the injection chain?
+
+In some cases you want to perform additional stuff on the activities. For example register certain activities on an Event Broker etc.
+This can be achieved by implementing IActivityInjectorExtension. With CanProcess the extension must indicate whether it likes to
+process a certain activity or not. In the Process method the actual operation such as registering on event broker etc. can be done.
+
+this.Bind<IActivityInjectorExtension>().To<YourExtension>();
+
+The extensions are collected upon creation of the IActivityInjector. The order of the extension invocation is not predictable.	
+
+Possible side effects?
+
+The default activity resolver uses WorkflowInspectionServices.GetActivities recursively to retrieve all activities under a certain root activity.
+This can have the following side effects (extract from MSDN):
+
+To retrieve a specific activity instead of enumerating all of the activities, 
+Resolve is used. Both Resolve and GetActivities perform metadata caching if
+WorkflowInspectionServices.CacheMetadata has not been previously called. 
+If CacheMetadata has been called then GetActivities is based on the existing metadata.
+Therefore, if tree changes have been made since the last call to CacheMetadata, 
+GetActivities might give unexpected results. If changes have been made to the workflow 
+after calling GetActivities, metadata can be re-cached by calling the ActivityValidationServices Validate
+method. Caching metadata is discussed in the next section.
+
+You know it better?
+
+If you have a smarter idea how to resolve all activities then you can swap out the internals of the extension. Simply rebind IActivityResolver.
+
+this.Rebind<IActivityResolver>().To<YourSmarterComponent>();
+
+
+Project Description:
+Ninject extension for Windows Workflow Foundation 4
+
+README:
+Dependency injection with Windows Workflow Foundation 4 can be very complex. 
+
+This extension allows to use property injection on Windows Workflow Activities. 
+
+Let us quickly dive into an example how this extension can be useful. Imagine you have a workflow which does the following:
+
+	(1) Observes a given folder for file changes. When a new file arrives in the observed folder the workflow is resumed.
+	(2) The new file which is indicated by the file changed event is opened and parsed by an IParser implementation
+	(3) The result is passed to the client which invoked the workflow.
+	
+We have the following key problems now with classical Windows Workflow Foundation:
+
+	(1) How to get IFolderWatcher into the step which observes a given folder for file changes.
+	(2) How to get IParser into the step which parses the file
+	(3) For event processing we need extensions which might need external dependencies.
+	(4) How to unit test WorkflowInvoker and WorkflowApplication events like Completed, Faulted etc.
+
+The workflow	
+	
+    public class FileInputTransformationWorkflow : Activity
+    {
+        [RequiredArgument]
+        public InArgument<string> Filter { get; set; }
+
+		[RequiredArgument]
+        public InArgument<string> Folder { get; set; }
+
+        protected override Func<Activity> Implementation
+        {
+            get
+            {
+                return () =>
+                    {
+                        var path = new Variable<string>();
+                        var parsedValues = new Variable<IDictionary<string, double>>();
+
+                        return new Sequence
+                            {
+                                Variables = { path, parsedValues },
+                                Activities =
+                                    {
+                                        new ObserveFolderStep
+                                            {
+                                                Folder = new InArgument<string>(env => env.GetValue(this.Folder)),
+                                                Filter = new InArgument<string>(env => env.GetValue(this.Filter)),
+                                                Path = new OutArgument<string>(path),
+                                            },
+                                        new ParseDataStep
+                                            {
+                                                FilePath = new InArgument<string>(path),
+                                                ParsedValues = new OutArgument<IDictionary<string, double>>(parsedValues),
+                                            },
+										...
+                                    }
+                            };
+                    };
+            }
+
+            set
+            {
+                base.Implementation = value;
+            }
+        }
+    }
+	
+    public sealed class ObserveFolderStep : NativeActivity
+    {
+        [RequiredArgument]
+        public InArgument<string> Filter { get; set; }
+
+
+        [RequiredArgument]
+        public InArgument<string> Folder { get; set; }
+
+        public OutArgument<string> Path { get; set; }
+
+        [Inject]
+        public IFolderWatcher FolderWatcher { get; set; }
+
+        protected override bool CanInduceIdle
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        protected override void CacheMetadata(NativeActivityMetadata metadata)
+        {
+            // Tell the runtime that we need this extension
+            metadata.RequireExtension(typeof(IObserveFolderExtension));
+
+            base.CacheMetadata(metadata);
+        }
+
+        protected override void Execute(NativeActivityContext context)
+        {
+            var observeExtension = context.GetExtension<IObserveFolderExtension>();
+
+            this.FolderWatcher.Folder = this.Folder.Get(context);
+            this.FolderWatcher.Filter = this.Filter.Get(context);
+
+            observeExtension.AddFileChangedCallback(this.FolderWatcher);
+
+            this.FolderWatcher.StartObservation();
+
+            context.CreateBookmark(observeExtension.Bookmark, this.OnFileChanged);
+        }
+
+        private void OnFileChanged(ActivityContext context, Bookmark bookmark, object value)
+        {
+            this.FolderWatcher.StopObservation();
+
+            this.Path.Set(context, (string)value);
+        }
+	}
+	
+    public sealed class ParseDataStep : CodeActivity
+    {
+        [RequiredArgument]
+        public InArgument<string> Path { get; set; }
+
+        public OutArgument<IDictionary<string, double>> ParsedValues { get; set; }
+
+        [Inject]
+        public IParser Parser { get; set; }    
+
+        protected override void Execute(CodeActivityContext context)
+        {
+            var filePath = this.Path.Get(context);
+
+            var result = this.Parser.Parse(filePath);
+
+            this.ParsedValues.Set(context, result);
+        }
+    }
+	
+Workflow Hosting
+
+	var workflow = this.kernel.Get<IWorkflowApplication>();
+
+	// or use dictionary<string,object>
+	var inputs = new { Folder = @"C:\temp\", Filter = "*.txt" };
+
+	workflow.Initialize(new FileInputTransformationWorkflow(), inputs);
+	
+	// The binding for extensions must be transient to profit from the workflow foundation scoping.
+	workflow.AddTransientExtension<IObserveFolderExtension>();	
+	workflow.AddSingletonExtension<ISomeOtherExtension>();	
+	
+Conditional bindings?
+
+Activities can be reused. In the example the ParseDataStep could not only be used in FileInputTransformationWorkflow it might also be used in a SlightlyDifferentInputTransformationWorkflow which uses
+another IParser implementation. Therefore you would need to define a binding to IParser depending on in which workflow the ParseDataStep would be reused. This is possible with the
+BindingWhenSyntaxExtensions!
+
+this.Bind<IParser>().To<Parser>().WhenInjectedIntoActivity(typeof(FileInputTransformationWorkflow));
+this.Bind<IParser>().To<SlightlyDifferentParser>().WhenInjectedIntoActivity(typeof(SlightlyDifferentInputTransformationWorkflow));
+
+or even more fancier stuff like
+
+this.Bind<IParser>().To<Parser>().WhenInjectedIntoActivity(root => fancyCondition: bool);
+this.Bind<IParser>().To<SlightlyDifferentParser>().WhenInjectedIntoActivity(root => anotherFancyCondition: bool);
+	
+How to hook into the injection chain?
+
+In some cases you want to perform additional stuff on the activities. For example register certain activities on an Event Broker etc.
+This can be achieved by implementing IActivityInjectorExtension. With CanProcess the extension must indicate whether it likes to
+process a certain activity or not. In the Process method the actual operation such as registering on event broker etc. can be done.
+
+this.Bind<IActivityInjectorExtension>().To<YourExtension>();
+
+The extensions are collected upon creation of the IActivityInjector. The order of the extension invocation is not predictable.	
+
+Possible side effects?
+
+The default activity resolver uses WorkflowInspectionServices.GetActivities recursively to retrieve all activities under a certain root activity.
+This can have the following side effects (extract from MSDN):
+
+To retrieve a specific activity instead of enumerating all of the activities, 
+Resolve is used. Both Resolve and GetActivities perform metadata caching if
+WorkflowInspectionServices.CacheMetadata has not been previously called. 
+If CacheMetadata has been called then GetActivities is based on the existing metadata.
+Therefore, if tree changes have been made since the last call to CacheMetadata, 
+GetActivities might give unexpected results. If changes have been made to the workflow 
+after calling GetActivities, metadata can be re-cached by calling the ActivityValidationServices Validate
+method. Caching metadata is discussed in the next section.
+
+You know it better?
+
+If you have a smarter idea how to resolve all activities then you can swap out the internals of the extension. Simply rebind IActivityResolver.
+
+this.Rebind<IActivityResolver>().To<YourSmarterComponent>();

@@ -1,0 +1,6 @@
+
+
+Project Description:
+SQLite driver for Kohana v3 Database module.
+
+README:

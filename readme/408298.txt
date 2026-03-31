@@ -1,0 +1,270 @@
+= typed
+
+A Ruby library for Typed variables
+
+
+== DESCRIPTION:
+
+No more "NoMethodError: undefined method"!
+We need some typed variables to avoid silly and stealth mistakes.
+
+  # Ruby
+  irb> name = "foo"
+  irb> name = 10
+
+  # Scala
+  scala> var name = "foo"
+  scala> name = 10
+  <console>:8: error: type mismatch;
+
+  # Ruby + typed.gem
+  irb> vars = Typed::Hash.new
+  irb> vars[:name] = "foo"
+  irb> vars[:name] = 10
+  TypeError: name(String) got Fixnum: 10
+
+
+== SYNOPSIS:
+
+  >> vars = Typed::Hash.new
+  => {}
+
+  # Class/Module means not values but type definitions
+  >> vars[:num] = Numeric
+  >> vars[:num] = 10
+  => 10
+  >> vars[:num] = "a"
+  TypeError: num(Numeric) got String: "a"
+
+  # Types are automatically guessed
+  >> vars[:foo] = 10
+  => 10
+  >> vars[:foo] = "a"
+  TypeError: foo(Fixnum) got String: "a"
+
+  # Referrence without assigned raises error
+  >> vars[:xxx]
+  Typed::NotDefined: 'xxx' is not initialized
+
+  # Hash/Array can be used for complex schema.
+  >> vars[:services] = {Integer => [{Symbol => String}]}
+  >> vars[:services] = {
+       21 => [{:tcp => "ftp"}, {:udp => "fsp"}],
+       25 => [{:tcp => "smtp"}],
+     }
+  => {25=>[{:tcp=>"smtp"}], 21=>[{:tcp=>"ftp"}, {:udp=>"fsp"}]}
+  >> vars[:services] = {22 => {:tcp => "ssh"}}
+  TypeError: services({Integer=>[{Symbol=>String}]}) got {Fixnum=>{Symbol=>String}}: {22=>{:tcp=>"ssh"}}
+
+
+== Changes
+
+  # changes object tells whether a key is changed or not
+  >> vars = Typed::Hash.new
+  >> vars.changes.keys
+  => [] 
+  >> vars[:a] = 1
+  >> vars.changes.keys
+  => ["a"] 
+  >> vars.changes.reset
+  >> vars.changes.keys
+  => [] 
+
+
+== Events
+
+  # events allows user to use callback about :read,:write
+  >> vars = Typed::Hash.new
+  >> vars[:a] = 1
+  >> vars.events.on(:read){|k,v| puts "reading #{k}"}
+  >> vars[:a]
+  reading a
+  => 1
+
+
+== Experimental : Typed::Scala
+
+Love 'val', 'var' of Scala!!
+
+  # [NOTE] val and var must be written in source files.
+  % cat user.rb
+  class User
+    include Typed::Scala
+    val nick  = String
+    var pass  = String
+  end
+  % bundle exec irb -r typed -r user
+  >> u = User.new
+  >> u.nick
+  Typed::NotDefined: 'nick' is not initialized
+  >> u.nick = "maiha"
+  >> u.nick = "no name"
+  => Typed::FixedValue: reassignment to nick
+
+
+== REQUIREMENTS:
+
+* activesupport gem
+* must gem
+
+
+== CAUTIONS:
+
+* Typed::Hash can't assign Class/Module cause they are treated as type definitions
+* must gem adds Object#must method
+* All keys are forced to String [since: verson 0.2.0]
+
+
+== INSTALL:
+
+  sudo gem install typed
+
+
+== DOCUMENT:
+
+* http://github.com/maiha/typed
+
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2012 maiha@wota.jp
+
+
+Project Description:
+A Ruby library for Typed variables
+
+README:
+= typed
+
+A Ruby library for Typed variables
+
+
+== DESCRIPTION:
+
+No more "NoMethodError: undefined method"!
+We need some typed variables to avoid silly and stealth mistakes.
+
+  # Ruby
+  irb> name = "foo"
+  irb> name = 10
+
+  # Scala
+  scala> var name = "foo"
+  scala> name = 10
+  <console>:8: error: type mismatch;
+
+  # Ruby + typed.gem
+  irb> vars = Typed::Hash.new
+  irb> vars[:name] = "foo"
+  irb> vars[:name] = 10
+  TypeError: name(String) got Fixnum: 10
+
+
+== SYNOPSIS:
+
+  >> vars = Typed::Hash.new
+  => {}
+
+  # Class/Module means not values but type definitions
+  >> vars[:num] = Numeric
+  >> vars[:num] = 10
+  => 10
+  >> vars[:num] = "a"
+  TypeError: num(Numeric) got String: "a"
+
+  # Types are automatically guessed
+  >> vars[:foo] = 10
+  => 10
+  >> vars[:foo] = "a"
+  TypeError: foo(Fixnum) got String: "a"
+
+  # Referrence without assigned raises error
+  >> vars[:xxx]
+  Typed::NotDefined: 'xxx' is not initialized
+
+  # Hash/Array can be used for complex schema.
+  >> vars[:services] = {Integer => [{Symbol => String}]}
+  >> vars[:services] = {
+       21 => [{:tcp => "ftp"}, {:udp => "fsp"}],
+       25 => [{:tcp => "smtp"}],
+     }
+  => {25=>[{:tcp=>"smtp"}], 21=>[{:tcp=>"ftp"}, {:udp=>"fsp"}]}
+  >> vars[:services] = {22 => {:tcp => "ssh"}}
+  TypeError: services({Integer=>[{Symbol=>String}]}) got {Fixnum=>{Symbol=>String}}: {22=>{:tcp=>"ssh"}}
+
+
+== Changes
+
+  # changes object tells whether a key is changed or not
+  >> vars = Typed::Hash.new
+  >> vars.changes.keys
+  => [] 
+  >> vars[:a] = 1
+  >> vars.changes.keys
+  => ["a"] 
+  >> vars.changes.reset
+  >> vars.changes.keys
+  => [] 
+
+
+== Events
+
+  # events allows user to use callback about :read,:write
+  >> vars = Typed::Hash.new
+  >> vars[:a] = 1
+  >> vars.events.on(:read){|k,v| puts "reading #{k}"}
+  >> vars[:a]
+  reading a
+  => 1
+
+
+== Experimental : Typed::Scala
+
+Love 'val', 'var' of Scala!!
+
+  # [NOTE] val and var must be written in source files.
+  % cat user.rb
+  class User
+    include Typed::Scala
+    val nick  = String
+    var pass  = String
+  end
+  % bundle exec irb -r typed -r user
+  >> u = User.new
+  >> u.nick
+  Typed::NotDefined: 'nick' is not initialized
+  >> u.nick = "maiha"
+  >> u.nick = "no name"
+  => Typed::FixedValue: reassignment to nick
+
+
+== REQUIREMENTS:
+
+* activesupport gem
+* must gem
+
+
+== CAUTIONS:
+
+* Typed::Hash can't assign Class/Module cause they are treated as type definitions
+* must gem adds Object#must method
+* All keys are forced to String [since: verson 0.2.0]
+
+
+== INSTALL:
+
+  sudo gem install typed
+
+
+== DOCUMENT:
+
+* http://github.com/maiha/typed
+
+
+== LICENSE:
+
+(The MIT License)
+
+Copyright (c) 2012 maiha@wota.jp

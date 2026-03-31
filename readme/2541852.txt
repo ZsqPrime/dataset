@@ -1,0 +1,5 @@
+Project Description:
+Experiments on the asp.net mvc platform bundled
+
+README:
+see deployed at http://mvcexperiments.apphb.com/

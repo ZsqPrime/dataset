@@ -1,0 +1,114 @@
+= Oil
+
+http://github.com/ender672/oil
+
+== DESCRIPTION:
+
+Oil is a Ruby extension for resizing JPEG and PNG images. It aims for fast
+performance and low memory use.
+
+== INSTALLATION:
+
+  $ gem install oil
+
+  # when using homebrew w/ jpeg-turbo
+  $ gem install oil --with-ldflags=-L/usr/local/opt/jpeg-turbo/lib --with-cflags=-I/usr/local/opt/jpeg-turbo/include
+
+== SYNOPSIS:
+
+  require 'oil'
+
+  # Oil uses IO objects for input & output.
+  io_in = File.open('image.jpg', 'rb')
+  io_out = File.open('image_resized.jpg', 'w')
+
+  # Read the source image header and prepare to fit it into a 200x300 box.
+  img = Oil.new(io_in, 200, 300)
+
+  # Write the resized image to disk
+  img.each { |data| io_out << data }
+
+== REQUIREMENTS:
+
+  * libjpeg-turbo
+  * libpng
+
+Installing libjpeg and libpng headers (Debian/Ubuntu):
+
+  $ sudo apt-get install libjpeg-dev libpng-dev
+
+== COMPILING & TESTING:
+
+Compile & run unit tests. Should show no warnings and no failing tests:
+
+  $ rake compile
+  $ rake test
+
+Valgrind should not complain (ruby-1.9.3p125, compiled with -O3):
+
+  $ valgrind /path/to/ruby -Iext:test test/test_jpeg.rb
+  $ valgrind /path/to/ruby -Iext:test test/test_png.rb
+
+Changes to the interpolator should be analyzed using ResampleScope:
+
+  https://github.com/jsummers/resamplescope
+
+
+Project Description:
+Oil resizes JPEG and PNG images
+
+README:
+= Oil
+
+http://github.com/ender672/oil
+
+== DESCRIPTION:
+
+Oil is a Ruby extension for resizing JPEG and PNG images. It aims for fast
+performance and low memory use.
+
+== INSTALLATION:
+
+  $ gem install oil
+
+  # when using homebrew w/ jpeg-turbo
+  $ gem install oil --with-ldflags=-L/usr/local/opt/jpeg-turbo/lib --with-cflags=-I/usr/local/opt/jpeg-turbo/include
+
+== SYNOPSIS:
+
+  require 'oil'
+
+  # Oil uses IO objects for input & output.
+  io_in = File.open('image.jpg', 'rb')
+  io_out = File.open('image_resized.jpg', 'w')
+
+  # Read the source image header and prepare to fit it into a 200x300 box.
+  img = Oil.new(io_in, 200, 300)
+
+  # Write the resized image to disk
+  img.each { |data| io_out << data }
+
+== REQUIREMENTS:
+
+  * libjpeg-turbo
+  * libpng
+
+Installing libjpeg and libpng headers (Debian/Ubuntu):
+
+  $ sudo apt-get install libjpeg-dev libpng-dev
+
+== COMPILING & TESTING:
+
+Compile & run unit tests. Should show no warnings and no failing tests:
+
+  $ rake compile
+  $ rake test
+
+Valgrind should not complain (ruby-1.9.3p125, compiled with -O3):
+
+  $ valgrind /path/to/ruby -Iext:test test/test_jpeg.rb
+  $ valgrind /path/to/ruby -Iext:test test/test_png.rb
+
+Changes to the interpolator should be analyzed using ResampleScope:
+
+  https://github.com/jsummers/resamplescope

@@ -1,0 +1,10 @@
+Cart plugin
+===========
+
+
+Project Description:
+E-commerce shopping cart plugin for the SEOTOASTER 2.0
+
+README:
+Cart plugin
+===========

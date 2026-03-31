@@ -1,0 +1,6 @@
+Project Description:
+GWT + Spring + Hibernate - Server Library for GWT approach 
+
+README:
+GWT 2.4 + Spring MVC 3.0 (+ Hibernate) 
+using http://code.google.com/p/gwt-sl

@@ -1,0 +1,7 @@
+This addon was developed in service of [Genia](http://genia.com/), who kindly allowed me to open-source it.
+
+Project Description:
+Polls for new conversations and alerts every 60 seconds
+
+README:
+This addon was developed in service of [Genia](http://genia.com/), who kindly allowed me to open-source it.

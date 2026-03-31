@@ -1,0 +1,4 @@
+Project Description:
+RPM-package for GIMP DDS plugin
+
+README:

@@ -1,0 +1,24 @@
+Project Description:
+
+
+README:
+These are all the shell scripts I carry around with myself so I can have a
+consistant user experience
+
+Notes:
+TODO: Automatically install emacs packages
+TODO: Prevent emacs from being linked multiple times
+TODO: Automatically setup VS Code
+TODO: Configure iTerm
+TODO: compaudit warnings
+	There are insecure directories:
+	/usr/local/share/zsh/site-functions
+	/usr/local/share/zsh
+
+
+FYI at this point:
+http://azaleasays.com/2013/07/05/setting-up-mac-os-x-and-iterm2-for-emacs/
+
+Enable the following in iTerm:
+General>Preferences>Load preferences ...
+from: /Users/solarmist/config_stuff/macos/macos_themes

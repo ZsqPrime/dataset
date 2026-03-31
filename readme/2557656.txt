@@ -1,0 +1,45 @@
+Project Description:
+Customizable file and log parser designed for support professionals. Python (GNU)
+
+README:
+SIFT is an open source block parser. It's useful in probing a stream for 
+
+sequences or blocks of data in order to automate, monitor or report status
+
+based on content. It is possible to create complex interdependant block parsers.
+
+A demo is in the bin directory called sift.py
+
+
+
+It's design is intended to be used by support personel who are fimilar 
+
+with the basics of python programming, but simple enough that a new parser 
+
+should be easy enough to create in 30 minutes. The design should also make 
+
+multiple custom log parsers easy to manage.
+
+
+
+The framework is licensed under the Lesser GPL giving rights to propritery 
+
+users of the framework.
+
+
+
+The SIFT framework is Copyright of Peter Moore 2012. 
+
+
+
+This library is free software; you can redistribute it and/or
+
+modify it under the terms of the GNU Lesser General Public
+
+License as published by the Free Software Foundation; either
+
+version 3 of the License, or any later version.
+
+
+
+A copy of the license is available here http://www.gnu.org/licenses/lgpl.html

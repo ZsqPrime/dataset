@@ -1,0 +1,4 @@
+Project Description:
+Helper library for doing async io in .net
+
+README:

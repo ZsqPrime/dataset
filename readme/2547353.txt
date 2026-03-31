@@ -1,0 +1,5 @@
+Project Description:
+Aplicación casera para ver, grabar y programar grabaciones con la sintonizadora de video.
+
+README:
+Aplicación casera para ver, grabar y programar grabaciones con la sintonizadora de video.

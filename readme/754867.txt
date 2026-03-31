@@ -1,0 +1,18 @@
+SleekMVC: A Simple PHP MVC Framework
+===
+
+This is the core of the SleekMVC framework. For documentation and a sample application, visit the sleekmvc-app repo:
+
+https://github.com/tlhunter/sleekmvc-app
+
+
+Project Description:
+Lightweight & Beginner Friendly PHP MVC Framework
+
+README:
+SleekMVC: A Simple PHP MVC Framework
+===
+
+This is the core of the SleekMVC framework. For documentation and a sample application, visit the sleekmvc-app repo:
+
+https://github.com/tlhunter/sleekmvc-app

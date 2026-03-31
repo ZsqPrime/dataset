@@ -1,0 +1,7 @@
+RPG, factions and settlements
+
+Project Description:
+RPG, factions and settlements for bukkit
+
+README:
+RPG, factions and settlements

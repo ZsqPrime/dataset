@@ -1,0 +1,5 @@
+Project Description:
+Gentoo Linux overlay for N8x0 tablets
+
+README:
+See https://github.com/slonopotamus/n8x0-overlay/wiki/main

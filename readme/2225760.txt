@@ -1,0 +1,18 @@
+Examples:
+
+$ ruby fetchais.rb
+
+    PapaMau just noticed the cargo vessel Hokuetsu Century, she's a Singapore [SG] flagged vessel 
+    on her way to Long beach. She's currently 88.3 km away from PapaMau.
+
+
+Project Description:
+download, parse & store data from LR PacX ocean crossing
+
+README:
+Examples:
+
+$ ruby fetchais.rb
+
+    PapaMau just noticed the cargo vessel Hokuetsu Century, she's a Singapore [SG] flagged vessel 
+    on her way to Long beach. She's currently 88.3 km away from PapaMau.

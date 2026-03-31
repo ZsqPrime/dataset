@@ -1,0 +1,432 @@
+Project Description:
+A wikish calendar and schedule application
+
+README:
+=== README ===
+
+Sked -- The wikish schedule - http://wikisked.sourceforge.net/
+
+
+== About ==
+
+Sked is a personal organizer, calendar, schedule and braindump application
+with a wiki-like syntax for text formatting and organization. It is easier
+think of it as the result of the merge of a calendar with a desktop wiki.
+
+Sked is designed to optimize your workflow and everything is tailored to speed
+up editing operations: links and styles are unobtrusively inferred from the
+syntax, entries are automatically saved after a few seconds, almost all
+commands have keyboard shortcuts, it is possible to create keyboard macros for
+frequently used text fragments, and the last entries are kept in a history.
+Also, the wiki code is *not* hidden from the editing interface -- this makes
+editing easier, avoids the create/view/change cycle, and allows you to copy
+and paste text among other applications without loss of information. An
+user-defined delay is given before the text reformatting, so its appearance
+will not change while you are typing.
+
+All entries are stored in a compressed and encrypted Berkeley DB4 database in
+your $HOME directory. The encryption aims protect the information even from a
+skilled adversary (but I am not a cryptologist and have not done any extensive
+analysis of the DB4's crypto implementation -- it is a standard 128 bit AES).
+Users wanting a higher security level should use full volume encryption for
+the $HOME directory.
+
+
+
+== News ==
+
+  * The default content of new pages and the redirect pages created by
+    the rename command are now customizable.
+  * It is now possible to hide the sidebar.
+  * A command to delete an entry from the history was added. Just press
+    the key "Delete" with the give entry selected in the side panel.
+
+= News in version 0.5 =
+
+  * Sked now have keyboard macros for frequently used text fragments. These
+    macros are simple word expansions called by pressing Ctrl+Space with the
+    cursor placed just after a macro. The replacement strings may have some
+    format tokens for automatic insertion of common data.
+  * It is now possible to hide the sidepanel.
+  * Sked now uses the DBus system to handle multiple instances (ie. it now
+    shows the current window instead of refusing to open).
+  * It is possible to select which page will be open on startup (thanks
+    Vyacheslav Slobodyan for this suggestion).
+
+= News in version 0.4 =
+
+  * The search system now allows finding entries with names near to a given
+    search term.
+  * Sked can now export configuration and history to the XML files. It is
+    also possible to select what kind of data will be exported or imported.
+  * The commands to add formatting codes now toggles the tags in the borders
+    of the selection. The commands to add section headers also are a bit
+    more clever now, removing other header tags if necessary.
+  * When format commands are issued with some text selected, the cursor is
+    moved to the end of the selection, and the selection is removed. If no
+    text is selected, the cursor is placed between the format tags.
+  * It is now possible to follow links by pressing Control+Enter.
+
+= News in version 0.3 =
+
+Sked internals were redesigned in version 0.3, preparing the code for some
+new features and interface changes in the future version 0.4. The database
+format was also changed, so, please read the section "Installation and upgrade"
+before upgrading your existing installation. A summary of the changes include:
+
+  * The local search function is now case-insensitive;
+  * Some bugs in the undo/redo command were fixed;
+  * The position of the cursor is saved now (thanks Vyacheslav Slobodyan for
+    this suggestion);
+  * The wiki-code interpreter was improved to prevent misformating;
+  * Now it is possible to disable the password protection of the database;
+  * A small margin was added to the main text box for better readability;
+
+
+
+
+== System requirements ==
+
+Sked is designed to work in any modern Linux/Unix system, but it also works
+in the most recent Windows versions, provided that the following packages
+and its dependencies are installed. All they are common place in Linux
+systems (except possibly python-Levenshtein) and any inconsistencies are
+normally solved automatically by the package manager when Sked is installed
+from DEB or RPM packages. The following packages are required:
+
+  * Python >= 2.6
+  * PyGTK+ >= 2.10
+  * python-Levenshtein >= 0.10.0 is required for the name similarity search.
+    It is available in the most popular desktop Linux distributions and in
+    http://pypi.python.org/pypi/python-Levenshtein/
+  * python-dbus >= 0.83 is required for some usability features (e.g. handle
+    several instances gracefully)
+
+Sked may be installed without python-Levenshtein or python-dbus, but the
+correspondent features will be disabled.
+
+
+
+
+== Installation and upgrade ==
+
+Sked is provided in several formats and the installation procedures varies.
+The .tar.gz package works for every supported system, but requires manual
+installation -- these archives must be unpacked in the final installation
+directory, like /opt/sked/, and you must create your own menu entries. The
+installation of Debian packages is simpler: just call them up with "dpkg" or
+double-click it to install with your distribution's default package manager.
+An similar process my be used to install it from the RPM packages.
+
+It is also possible to install using the script "setup.py", but it is mainly
+intended to generate packages for Linux systems. For instructions, just call
+the script with "./setup.py --help".
+
+A special caution is needed when upgrading from a previous version of Sked,
+since new versions may bring incompatible changes to the database format. The
+best way to ensure a successful upgrade is to export the database as XML and
+import it back. The procedure is:
+
+  1. In the menu "File", select "Export..." and give a file name to export
+     the current database to a XML file;
+  2. Remove the old database (stored in ~/.local/share/sked/sked2.db);
+  3. Upgrade Sked;
+  4. Open the new version. Sked will create a new database;
+  5. In the menu "File", select "Import..." and select the file give in the
+     first step.
+
+See "Importing and exporting data" below for more information.
+
+
+
+== Usage ==
+
+Once installed, Sked adds an entry to the "Applications/Office" menu in the
+desktop environment of any contemporary general purpose Linux distro. If you
+have installed Sked manually, you must also create some desktop entry. This
+also happens on Windows -- since there is no automatic installation in
+Windows, you must create a shortcut somewhere.
+
+When called for the first time, Sked asks a password to encrypt the database.
+You may leave it blank if you do not want to protect it; It is possible to
+change this later. There is no way to access your data without this password,
+so, chose it wisely.
+
+Sked also frees you of wondering where a given entry was saved by using a
+single database per user account per system, i.e., there is no "Open" or
+"Close" commands in the interface. You must consider this if you use
+several accounts or if several people share one account on the same computer
+(this last behavior is more common on Windows). The database file is
+physically stored in the path dictated by "XDG_DATA_HOME", according to the
+FreeDesktop Base Directory Specification -- which usually translates to
+"~/.local/share/sked/" unless you have changed it.
+
+Despite the centralized approach to the "default" database, it is possible
+to select an alternative database file through the command line (eg.
+"sked /some/other/database/file.db"). This is mainly intended to allow
+tests, maintenance, and experimentation without risking your real data. You
+may, of course, keep several production databases and select one of them
+with this method, but it just happens that Sked was not designed to work
+this way and keeping several databases is not much different than keeping a
+lot of text files, one of the problems Sked was created to solve.
+
+
+
+= Basic usage =
+
+Everything in Sked is tailored for speed and agility -- it means automating
+whatever is possible and avoiding non-productive operations. When opened,
+Sked jumps to the page of the day (unless another one was selected in the
+preferences), which usually contains your daily appointments and links to
+other pages. The "Index" page is intended to store your non-daily links,
+like any desktop wiki, and can also be accessed through the "Home" button,
+the menus or keyboard shortcut (Alt+Home).
+
+It is possible to change pages through the calendar (which creates and jumps
+through pages with standardized names in the format YYYY-MM-DD), the menu
+"Go", the history, the "Page Name" text field, or through links in the
+current page. Following a link to a new page automatically creates that page
+with a standard header and a backlink to the current one (the format may be
+customized, see "New and renamed page templates" bellow). References to the
+most recently visited pages are kept in the history and it is possible to
+use the Back/Forward commands as in a web browser.
+
+All edits are saved automatically when you leave the page and after a few
+seconds of inactivity (for the exact values, see "File/Preferences"). Sked
+does not format the text until you stop typing for a while, which prevents
+possibly awful changes in the text appearance during the typing -- but it
+is a configurable behavior, you may adjust or remove the delay in the
+preferences.
+
+
+= Wiki syntax =
+
+Sked wiki dialect is designed for fast typing and good readability as text,
+while keeping some similarities with the MediaWiki syntax and the conventions
+used in email. The following tokens are recognized:
+
+  === Header 1 ===
+  == Header 2 ==
+  = Header 3 =
+
+  *bold*
+  _underline_
+  //italic//
+  [[Link]]
+  ||| Preformated text |||
+
+  Notes:
+    * URLs are parsed intelligently;
+    * Dates in the formats DD/MM/YYYY and YYYY-MM-DD recognized automatically;
+    * No other text are allowed in the same line as the headers.
+
+
+
+
+= Searching =
+
+Sked have two types of search: Local (for searching text in the current page),
+and Global. Local search is simpler and accessible in the menu "Edit/Local
+search" or with Ctrl+F. Once open, it will show a search bar in the bottom of
+the main window that you can use to navigate among the search results.
+
+The global search commands are located in the side menu and have some extra
+options -- it is possible to search for some words, all words, or the exact
+phrase in the full text or only in the names of the pages. It is also
+possible to search the database for ages with names near to a given search
+term, sorting the results by similarity.
+
+
+
+= Insert page and templates =
+
+The command "Insert Page" pastes the content of another page into the current
+one. It solves the frequent need for a template system for storing blocks of
+text common to several pages that share the same structure. Just put the text
+in a new page and use this command to insert it in the desired location. The
+"Insert Page" dialog box have its own history and will remember the pages
+inserted frequently. For smaller pieces of text, check the "Keyboard macros"
+bellow.
+
+
+
+= Importing and exporting data =
+
+It is possible to export the Sked database to a XML file suitable for backup
+and long term storage -- this information may be imported in previous/later
+versions of Sked and reused by other applications.
+
+Usually you will export "complete" files (ie. files including all pages,
+history and configuration options), but is also possible to selectively
+export only part of this data -- for example, you may want to export your
+configuration and import it in another database, keeping the pages and
+history intact.
+
+It is also possible to selectively import data, despite the data available
+in the exported file. For example, if you have a complete file but only want
+to import the pages, ignoring the configuration, just select the file type
+"Sked XML, pages only" in the "Import" dialog box: the pages will be imported
+and all other data will be ignored.
+
+Since the XML files are NOT encrypted, all data stored will be readable by
+anyone with access to the files. You may want to use another encryption
+tool before transmitting/storing these files (eg. GnuPG).
+
+Note: Sked versions 0.3 or older can not read the "complete" XML files (with
+history and configuration data) used by later versions. To export data to
+these versions, it is necessary to select the option "Sked XML, pages only"
+in the "Export" dialog box. If you exported a "complete" file by mistake and
+need to import it in a older Sked, you may: (1) import the file in a current
+version and export it again in the right format or (2) edit the files in a
+text editor to remove the new information.
+
+
+
+= Keyboard macros =
+
+Keyboard macros are shortcuts for frequently used text fragments. They can
+be configured in the "Macros" tab in the preferences window. After set, just
+type the name of the macro in the main text field, keep the cursor after it
+and press Ctrl+Space; the name will be replaced with the substitute string.
+It is possible to create a macro to enter your name and email when you type
+your initials, for example.
+
+Sked macros may also have "tokens", ie., small codes which are replaced by
+some relevant information upon insertion. There are two kind of these tokens:
+text tokens (prefixed by "\") and date tokens (prefixed by "%").  The text
+tokens are listed bellow:
+
+    \a  The name of the current page;
+    \p  The name of the last page visited, according to the history;
+    \P  The same as \p, but automatically formatted as a link if necessary,
+        e.g. [[Some page]] or 2010-02-03;
+    \c  The contents of the clipboard (only if text);
+    \n  A newline character;
+    \t  A tab character;
+    \\  A literal '\' character.
+
+Date tokens format the current date and time according to the "strftime"
+syntax. This format is also used used by several other programs, so, it is
+possible that you already know them. Below follows a list with some of these
+tokens -- please note that this is just an excerpt of the manpage, there are
+many other tokens available. Check "strftime(3)" for more information.
+
+    %F  Date in the ISO 8601 format (YYYY-MM-DD), recognized by Sked;
+    %x  The current date, as configured in your locale preferences;
+    %X  The current time, as configured in your locale preferences;
+    %d  The day of the month as a decimal number;
+    %m  The month as a decimal number;
+    %y  The two-digit year, without the century (eg. 10);
+    %Y  The four-digit year, including the century (eg. 2010);
+    %H  The hour as a number using a 24-hour clock;
+    %I  The hour as a number using a 12-hour clock;
+    %M  The minute as a decimal number;
+    %S  The second as a decimal number;
+    %R  The time in 24-hour notation (%H:%M);
+    %T  The time in 24-hour notation (%H:%M:%S);
+    %p  Either 'AM' or 'PM', or the translation for the current locale;
+    %n  A newline character;
+    %t  A tab character;
+    %%  A literal '%' character.
+
+Note that '%n' and '%t' are equivalent to '\n' and '\t' -- many applications
+already use one of these syntaxes, so, it makes some sense to support both.
+
+These tokens can, or course, be mixed together. For example, it is possible
+to define a macro "Source: \c - Retrieved: %F" to automatically paste URLs
+with the access date in your notes. These tokens allows the creation of very
+practical (despite initially not obvious) time-saving automations.
+
+
+= New and renamed page templates =
+
+Sked also allows you to customize the default text of a new page (created
+through a click to a non-existing page) and the text of the redirect pages
+created by te rename command when the option "Create a redirect page" is
+selected. These templates can be changed in the tab "Templates" in the
+preferences dialog.
+
+These templates accept the same date tokens available to the keyboard
+macros and the following backlash tokens:
+
+    \a  The name of the new page;
+    \A  The name of the new page formatted as a link if necessary,
+         e.g. [[Some page]] or 2010-02-03;
+    \p  The name of the old page (for rename only);
+    \P  The same as \p, but automatically formatted as a link if
+        necessary (for rename only);
+    \c  The contents of the clipboard (only if text);
+    \n  A newline character;
+    \t  A tab character;
+    \\  A literal '\' character.
+
+
+= Database security: Encryption =
+
+Sked saves your data in an encrypted Berkeley DB4 database locked with a
+password. The encryption aims to protect user information even from a very
+skilled adversary. For technical information on this subject, see
+http://www.oracle.com/technology/documentation/berkeley-db/db/ref/env/encrypt.html.
+
+There is no way to access the database without the password. If you forget
+it, all your entries will be lost forever! Of course, as the backups are not
+encrypted, you may delete the database, create a new one and re-import your
+data.
+
+
+
+= Database safety: Backups =
+
+Every piece of data saved in your computer MUST have a backup, and your Sked
+database is no exception. It is possible to backup your database by copying
+the database file to the storage medium, but this is a sub-optimal approach:
+since the database format is subject to changes between Sked versions, you
+may need the exact same version to restore it -- something impractical if you
+need to restore a specific entry deleted years ago.
+
+It is better to backup your data by exporting the database as a XML file,
+which can be used with any Sked version or even without Sked. For that,
+simply export your data in using the format "Sked XML, complete". For more
+information on these formats, read "Importing and exporting data" above.
+
+
+
+== To Do ==
+
+  * Port the user interface to use GtkActions;
+  * A multilingual interface;
+  * Better/faster search system;
+  * Printing.
+
+
+
+== Know bugs ==
+
+  * Find and replace is a no-op;
+  * In Windows, the application leaves stray lockfiles in the event of an
+    OS crash or power failure. This does not happen in Linux, Mac or other
+    Unix systems.
+
+
+
+== License ==
+
+This program is free software; you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation; either version 2 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program; if not, write to the Free Software Foundation, Inc., 59 Temple
+Place - Suite 330, Boston, MA 02111-1307, USA.
+
+
+
+== Author and contact ==
+
+Sked was written by Alexandre Erwin Ittner <alexandre #at# ittner.com.br>.
+See http://wikisked.sourceforge.net/ for more information.

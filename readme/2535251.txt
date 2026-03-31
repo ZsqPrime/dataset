@@ -1,0 +1,4 @@
+Project Description:
+Calculates the tenant share of the power bill
+
+README:

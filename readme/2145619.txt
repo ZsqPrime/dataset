@@ -1,0 +1,34 @@
+erl_json_test
+=====
+This is a benchmark of various JSON libraries for Erlang:
+
+* Jsone
+* Jiffy
+* Mochijson2
+* JSX
+* Yawsjson2
+
+Running
+-----
+
+    $ ./start.sh
+
+
+Project Description:
+a little test of various Erlang JSON libraries
+
+README:
+erl_json_test
+=====
+This is a benchmark of various JSON libraries for Erlang:
+
+* Jsone
+* Jiffy
+* Mochijson2
+* JSX
+* Yawsjson2
+
+Running
+-----
+
+    $ ./start.sh

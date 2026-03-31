@@ -1,0 +1,5 @@
+Project Description:
+Files that our uploaded and changed
+
+README:
+Added code to queue.py for connecting clients directly to the choosen server without an ui

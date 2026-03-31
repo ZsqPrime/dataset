@@ -1,0 +1,5 @@
+Project Description:
+Timer app for Android
+
+README:
+Coming soon..

@@ -1,0 +1,13 @@
+
+                 kueue - keep track of your SR queue
+           (C) 2011-2014 Stefan Bogner <sbogner@novell.com>
+
+
+
+Project Description:
+SR queue manager
+
+README:
+
+                 kueue - keep track of your SR queue
+           (C) 2011-2014 Stefan Bogner <sbogner@novell.com>

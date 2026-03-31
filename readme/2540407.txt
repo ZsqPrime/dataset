@@ -1,0 +1,9 @@
+Project Description:
+geekli.st API V1 Ruby Wrapper
+
+README:
+# geeklist
+
+## STATUS
+
+[![Build Status](https://secure.travis-ci.org/jonstorer/geeklist.png)](http://travis-ci.org/jonstorer/geeklist)

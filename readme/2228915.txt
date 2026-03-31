@@ -1,0 +1,16 @@
+Most recent documentation: http://www.aaronholmes.net/KReport/
+
+KReport is a Kohana module for Open Flash Chart 2 ( http://teethgrinder.co.uk/open-flash-chart-2/ ).
+
+The aim of this module is to integrate cleanly into Kohana as well as to provide a more friendly inteface to the OFC2 libraries, while adding or correcting functionality in the OFC2 libraries.
+
+
+Project Description:
+Open Flash Chart 2 Kohana Module
+
+README:
+Most recent documentation: http://www.aaronholmes.net/KReport/
+
+KReport is a Kohana module for Open Flash Chart 2 ( http://teethgrinder.co.uk/open-flash-chart-2/ ).
+
+The aim of this module is to integrate cleanly into Kohana as well as to provide a more friendly inteface to the OFC2 libraries, while adding or correcting functionality in the OFC2 libraries.

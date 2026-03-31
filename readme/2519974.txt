@@ -1,0 +1,6 @@
+Project Description:
+Rails app I wrote as the website of a friend
+
+README:
+I wrote this simple Rails app as the website for my friend Johannes Held. 
+It is hosted http://www.johannes-c-held.com.

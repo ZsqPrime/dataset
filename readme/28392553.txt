@@ -1,0 +1,5 @@
+Dünyanın en çok kullanılan hosting billing çözümü WHMCS için geliştirilen bu modül ile MaestroPanel'i kendi sisteminize kolaylıkla entegre etmeniz mümkün.
+
+Kurulum
+
+http://wiki.maestropanel.com/maestropanel-whmcs-modulu-kurulumu/

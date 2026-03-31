@@ -1,0 +1,5 @@
+Project Description:
+Proyecto sobre una libreria en web utilizando JPA y Spring MVC 
+
+README:
+It's a Spring - JPA Web project.

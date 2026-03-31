@@ -1,0 +1,8 @@
+Project Description:
+Timeline JS has moved to https://github.com/VeriteCo/TimelineJS
+
+README:
+Timeline
+========
+
+Timeline JS has moved to https://github.com/VeriteCo/TimelineJS

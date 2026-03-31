@@ -1,0 +1,10 @@
+St. John's Core PHP Modules
+===========================
+
+
+Project Description:
+Core libraries to be used on various projects
+
+README:
+St. John's Core PHP Modules
+===========================

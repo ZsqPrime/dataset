@@ -1,0 +1,4 @@
+Project Description:
+Bukkit plugin that makes the last option of the enchanting table always max possible enchanting level
+
+README:

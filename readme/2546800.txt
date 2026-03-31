@@ -1,0 +1,28 @@
+Project Description:
+Sound Speed Adjuster
+
+README:
+This algorithm breaks speech up into adjacent pitch periods of equal size, and
+ovelap-and-adds them to create a single period of sound that can play back on
+itself smoothly.  It then moves forward in the speech stream by a step size
+which currently is just the period, though it can be a fraction of a period or a
+multiple.  It then repeats, creating another loop-able speech sample at the new
+position.  Playing speech at any speed is simple a matter of shifting from
+playing one loop to the next at the desired speed, overlap-adding to transition
+between them smoothly.  Speeds from 0 to 10X are easily covered by this
+algorithm.
+
+This algorithm works great.  It's not quite as good as sonic, but almost.  It
+takes a good ear to hear the high-frequency distortion introduced relative to
+using sonic, but it's there.  I believe this is due to the multiple mixing steps
+over multiple pitch periods.  There is also some pretty clear distortion on
+word-ending vowels because the pitch changes rapidly there, and pitch estimation
+errors are significant.  So, for real-world speech speed-up/slow-down, the best
+algorithm I know is still sonic, but this is a close second.
+
+The success of this algorithm leads me to believe that a "sound" based TTS and
+speech recognition engine could be built, where we use an HMM that has a
+different sound at each node.  I believe this could help eliminate the "LPC"
+buzz we always hear in TTS synths like MBROLA, ico, and Mary TTS, which use
+fixed-size frame-based samples rather than something that's pitch-synchronous
+and truly a good epresentation of the sound.

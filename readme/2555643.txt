@@ -1,0 +1,19 @@
+Project Description:
+Pic Virtual Maschine
+
+README:
+The Goal of this Project is to write a prototype of an VM that will later run on a PIC microcontroller. The prototype will be written in Python.
+
+Usecases:
+
+- A way to test the bytecode design
+- Test compiler output
+- Abstract some of the low level problems like how to map VM registers to PIC Registers and Memory
+
+Links:
+
+BASIC-Stamp Language Definition
+    http://www.parallax.com/tabid/440/Default.aspx
+    
+PIC18F13K50 Datasheet
+    http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en533925#1

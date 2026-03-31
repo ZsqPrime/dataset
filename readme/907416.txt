@@ -1,0 +1,6 @@
+
+
+Project Description:
+Java Serialisation without the recursive limits
+
+README:

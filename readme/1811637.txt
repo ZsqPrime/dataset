@@ -1,0 +1,6 @@
+
+
+Project Description:
+StrawberryCore is an open source World of Warcraft emulator for Cataclysm, based on Mangos. Supported patch: 4.3.0a (In development)
+
+README:

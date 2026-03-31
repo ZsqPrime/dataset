@@ -1,0 +1,11 @@
+= Horseman
+
+Headless HTTP crawler/scraper
+
+Project Description:
+Headless HTTP crawler/scraper
+
+README:
+= Horseman
+
+Headless HTTP crawler/scraper

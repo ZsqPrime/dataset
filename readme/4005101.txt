@@ -1,0 +1,2 @@
+FucksTech员工快捷查询的手机版
+主要服务于ios上的safari，android上的默认浏览器

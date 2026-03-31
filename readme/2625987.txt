@@ -1,0 +1,6 @@
+Project Description:
+Exercise solutions from SICP
+
+README:
+A bunch of exercise solutions from SICP (Structure and
+Interpretation of Computer Programs) in Scheme.

@@ -1,0 +1,8 @@
+DEPRECATED: See https://github.com/hallison/git-lighttp
+
+
+Project Description:
+Git Smart HTTP Ruby/Sinatra implementation with useful features
+
+README:
+DEPRECATED: See https://github.com/hallison/git-lighttp

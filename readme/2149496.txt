@@ -1,0 +1,69 @@
+				README
+
+Fonctionnement :
+  Les données sont découpées et distribuées selon le principe du RAID et les 
+  meta-données sont réparties puis répliquées sur chaque paires dans une bases
+  de données Sqlite.
+
+Prérequi :
+ - python
+ - python-webpy
+ - python-sqlite
+ - bibliotheque Debogue (voir le github correspondant)
+ - Genexe (voir le github correspondant)
+
+Architecture
+  pony2pony
+    |
+    |_ objet
+    |
+    |_ init
+    |    |_ objet
+    |
+    |_ client
+    |    |_ urllib2, xml
+    |
+    |_ serveur
+         |_ web
+
+Convention :
+  chemin => URI absolu d'une resource (comprenant son nom & extention)
+  rep => répertoire absolu d'une resource (sans son nom donc)
+  
+
+
+Project Description:
+PoC de stockage distribué en botnet.
+
+README:
+				README
+
+Fonctionnement :
+  Les données sont découpées et distribuées selon le principe du RAID et les 
+  meta-données sont réparties puis répliquées sur chaque paires dans une bases
+  de données Sqlite.
+
+Prérequi :
+ - python
+ - python-webpy
+ - python-sqlite
+ - bibliotheque Debogue (voir le github correspondant)
+ - Genexe (voir le github correspondant)
+
+Architecture
+  pony2pony
+    |
+    |_ objet
+    |
+    |_ init
+    |    |_ objet
+    |
+    |_ client
+    |    |_ urllib2, xml
+    |
+    |_ serveur
+         |_ web
+
+Convention :
+  chemin => URI absolu d'une resource (comprenant son nom & extention)
+  rep => répertoire absolu d'une resource (sans son nom donc)

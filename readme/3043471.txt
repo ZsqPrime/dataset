@@ -1,0 +1,10 @@
+Project Description:
+notes, ideas, and implementations
+
+README:
+========================================
+phd -- notes, ideas, and implementations
+========================================
+:Author: Jared Flatow
+
+A somewhat random collection of models.

@@ -1,0 +1,5 @@
+Project Description:
+Monografia para a obtencao de grau de bacharel em Ciencia da Computacao na Universidade Federal Fluminense
+
+README:
+Monografia de conclusão de curso. Requisito parcial para a obtencao do grau de bacharel em Ciencia da Computacao pela Universidade Federal Fluminense.

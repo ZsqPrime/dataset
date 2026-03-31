@@ -1,0 +1,11 @@
+# CIBuddy.com Website project
+
+This project contains the website for CIBuddy.
+
+Project Description:
+homepage for cibuddy
+
+README:
+# CIBuddy.com Website project
+
+This project contains the website for CIBuddy.

@@ -1,0 +1,83 @@
+Project Description:
+Script for configuring your *NIX Network System
+
+README:
+#------------------------------COPYRIGHT------------------------------#
+# FireNix Versi 0.3 R1 (Configure your network in interactive shell)
+# Copyright (C) 2012 Krisan Alfa Timur A.K.A blusp10it
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#------------------------------COPYRIGHT------------------------------#
+
+Project 0.3 R1
+===============================
+Add:
+1. Fedora can perform this script
+Fix:
+1. Action verbose
+2. Check dependency
+3. Loop issue
+
+Project 0.3
+===============================
+Add:
+1. Tabel interface
+Fix:
+1. Loop issue
+2. Alur program mudah dipahami
+3. Typo issue
+Remove:
+1. Banner
+
+Project 0.2 R1
+===============================
+Add:
+1. Menangani interrupt CTRL+C
+Fix:
+1. Membersihkan temporary file sebelum program exit
+2. Memperbaiki tampilan daftar port yang terbuka
+
+Project 0.2
+===============================
+Add:
+1. Menambahkan menu credit dan versi file
+Fix:
+1. Mempersimpel skrip
+
+Project 0.1 r3
+===============================
+Added:
+1. Mengurutkan PORT berdasarkan nomor, PID, dan Proc Name
+Fix issue:
+1. Issue automatic install dependency
+
+Project 0.1 r2
+===============================
+Added:
+1. Otomatis menginstall dependency tanpa keluar dari program (arptables dan iptables)
+
+Project 0.1 r1
+===============================
+Added:
+1. Menutup port
+Fix issue:
+1. Menjalankan script jika user tidak menginstall paket iptables
+
+Project 0.1
+===============================
+Add:
+1. Set firewall
+2. Reset firewall
+3. View firewall configuration
+4. Block IP and Mac attacker

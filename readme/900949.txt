@@ -1,0 +1,28 @@
+# Mspire::Lipid
+
+Identify and quantify (shotgun) lipidomics samples.
+
+## Installation
+
+    gem 'mspire-lipid'
+
+## Usage
+
+TBD
+
+
+Project Description:
+for working with mass spectrometry lipidomics data (right now shotgun style data)
+
+README:
+# Mspire::Lipid
+
+Identify and quantify (shotgun) lipidomics samples.
+
+## Installation
+
+    gem 'mspire-lipid'
+
+## Usage
+
+TBD

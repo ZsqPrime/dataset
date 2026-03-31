@@ -1,0 +1,46 @@
+Stack 
+    - Html5Boiler Plate
+    - Modernizr
+    - Foundation
+    - Compass
+    - Jquery
+- SEO friendly Semantic HTML5 Structure
+- Accessibility - Wai-Aria
+    - Links
+    - Images
+    - Navigation
+    - Menu
+    - Forms
+    - Accordion
+    - Tabs
+    - TagCloud
+    - ToolTip
+    - Hidden descriptors
+- Responsive Design
+- Multi Themed Site
+
+
+Project Description:
+html5Boilerplate, Modernizr, Foundation, Compass (scss)
+
+README:
+Stack 
+    - Html5Boiler Plate
+    - Modernizr
+    - Foundation
+    - Compass
+    - Jquery
+- SEO friendly Semantic HTML5 Structure
+- Accessibility - Wai-Aria
+    - Links
+    - Images
+    - Navigation
+    - Menu
+    - Forms
+    - Accordion
+    - Tabs
+    - TagCloud
+    - ToolTip
+    - Hidden descriptors
+- Responsive Design
+- Multi Themed Site

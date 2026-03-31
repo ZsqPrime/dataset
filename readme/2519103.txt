@@ -1,0 +1,5 @@
+Project Description:
+PHP Version of the veritable Frommers Feed Digester (FrommersDigester)
+
+README:
+Simple PHP Project for parsing Frommers Unlimited XML Feeds

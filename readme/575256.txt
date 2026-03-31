@@ -1,0 +1,30 @@
+FFmpeg README
+-------------
+
+1) Documentation
+----------------
+
+* Read the documentation in the doc/ directory.
+
+2) Licensing
+------------
+
+* See the LICENSE file.
+
+
+Project Description:
+ffmpeg library migrated onto iOS
+
+README:
+FFmpeg README
+-------------
+
+1) Documentation
+----------------
+
+* Read the documentation in the doc/ directory.
+
+2) Licensing
+------------
+
+* See the LICENSE file.

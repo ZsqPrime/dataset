@@ -1,0 +1,11 @@
+To run the performance and concurrency tests use the "benchmark" maven profile
+
+mvn clean verify -P benchmark
+
+Project Description:
+Database for storing & retrieving entity descriptions across multiple graphs
+
+README:
+To run the performance and concurrency tests use the "benchmark" maven profile
+
+mvn clean verify -P benchmark

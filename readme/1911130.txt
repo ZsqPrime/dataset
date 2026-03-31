@@ -1,0 +1,39 @@
+
+
+
+./bootstrap
+
+will fetch and compile the boost.m4 and jansson submodules.
+
+It requires Mercurial (hg) to me installed for at least one library.
+
+you'll also need to compile 
+
+http://threadpool.sourceforge.net/
+
+this yourself. extract it to <tree-root>/threadpool
+
+and the default configure settings will find it on their own
+
+
+
+Project Description:
+
+
+README:
+
+
+
+./bootstrap
+
+will fetch and compile the boost.m4 and jansson submodules.
+
+It requires Mercurial (hg) to me installed for at least one library.
+
+you'll also need to compile 
+
+http://threadpool.sourceforge.net/
+
+this yourself. extract it to <tree-root>/threadpool
+
+and the default configure settings will find it on their own

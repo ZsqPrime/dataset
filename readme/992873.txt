@@ -1,0 +1,20 @@
+JavaScript ViewState Parser
+======
+
+
+Thanks
+---
+New handlers and code improvements from Pavel Kankovsky.
+
+
+Project Description:
+Parse unencrypted .NET ViewState objects with JavaScript
+
+README:
+JavaScript ViewState Parser
+======
+
+
+Thanks
+---
+New handlers and code improvements from Pavel Kankovsky.

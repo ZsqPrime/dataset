@@ -1,0 +1,6 @@
+
+
+Project Description:
+Sliding Labels jQuery Plugin
+
+README:

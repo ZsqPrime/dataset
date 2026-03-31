@@ -1,0 +1,121 @@
+Project Description:
+None
+
+README:
+== This app should do the following:
+
+- retrieve yesterdays in messages from the prd environment and use them to make a soap call to the webservice on the acc environment
+- compare in and out messages as they are stored in the acc and prd databases
+- create a daily task to process new messages automatically
+- show the results in a web app: http://cvzlact001:9000
+
+== Attributes to compare:
+
+PRD:
+  id                      : value will always be different
+  identificatieAanlevering: V
+  codeEI                  : V
+  zender                  : V
+  ontvanger               : V
+  berichtnaam             : V
+  bericht                 : attribute doesn't exist in acc db
+  gelezen                 : attribute doesn't exist in acc db
+  gearchiveerd            : attribute doesn't exist in acc db
+  betreftRetourbericht    : V
+  postbusId               : value will always be different
+  aangemaaktOp            : value will always be different
+  aangemaaktDoor          : value will always be different
+  gewijzigdOp             : value will always be different
+  gewijzigdDoor           : value will always be different
+  versienummer            : attribute doesn't exist in acc db
+  volledigeinhoud         : attribute doesn't exist in acc db
+  zenderType              : V
+  ontvangerType           : V
+  externId                : value will always be different
+  status                  : value will always be different
+  versie                  : attribute doesn't exist in acc db
+  tekenset                : value will always be different
+  bericht_uuid            : V
+  bericht_type            : V
+  bericht_versie          : V
+  conversatie_uuid        : V
+  referentie_uuid         : V
+  beschrijving            : V
+  ontvanger_identificatie : V
+  zender_identificatie    : V
+  verzonden_op            : value will always be different
+
+ACC:
+  id                      : value will always be different
+  identification          : V
+  codeEI                  : V
+  senderUzovi             : V
+  receiverUzovi           : V
+  retourMessage           : V
+  postbusId               : value will always be different
+  creationDate            : value will always be different
+  createdBy               : value will always be different
+  changedDate             : value will always be different
+  changedBy               : value will always be different
+  senderType              : V
+  receiverType            : V
+  externId                : value will always be different
+  status                  : value will always be different
+  characterSet            : value will always be different
+  messageId               : V
+  messageName             : V
+  messageType             : V
+  messageVersion          : V
+  converationId           : V
+  refMessageId            : V
+  messageDescription      : V
+  sender                  : V
+  receiver                : V
+  sentDate                : value will always be different
+  tennant_sender          : attribute doesn't exist in prd db
+  tennant_receiver        : attribute doesn't exist in prd db
+
+== Attribute Mapping:
+
+  PRD:                       ACC:
+  content                 => content
+  codeEI                  => codeEI
+  zender                  => senderUzovi
+  ontvanger               => receiverUzovi
+  berichtnaam             => messageName
+  betreftRetourbericht    => retourMessage
+  postbusId               => postbusId
+  zenderType              => senderType
+  ontvangerType           => receiverType
+  externId                => externId
+  tekenset                => characterSet
+  bericht_uuid            => messageId
+  bericht_type            => messageType
+  bericht_versie          => messageVersion
+  conversatie_uuid        => converationId
+  referentie_uuid         => refMessageId
+  beschrijving            => messageDescription
+  ontvanger_identificatie => receiver
+  zender_identificatie    => sender
+
+== Sender Mapping
+
+Each sender has to use it's own password to get access to the acc webservice. The password of the sender is
+determined based on the following (possibly incomplete) mapping:
+
+  Uzovi:                           Webservice username and password:
+  5503,5504,5510,5513,5514,5521,5000 => Achmea-portaalgebruiker
+  5506,5509,5511,5515                => Agis-portaalgebruiker
+  5518,5523,5525,5526,5529,5531      => CZ-portaalgebruiker
+  5502                               => DeFriesland-portaalgebruiker
+  5519,5522                          => DSW-portaalgebruiker
+  5501,5505,5507                     => Menzis-portaalgebruiker
+  5532                               => Salland-portaalgebruiker
+  5516,5517                          => ZorgZekerheid
+  5508,5512,5520,5524,5527,5528,5530 => UVIT
+In all other cases, 'CVZ-portaalgebruiker' is used.
+
+== Cron Task:
+
+Add this line to /etc/crontab:
+  0 0 * * * cvzprj /bin/bash /home/cvzprj/mailbox_tester/current/lib/process_messages.cron > /home/cvzprj/mailbox_tester/shared/log/cron.log 2>&1

@@ -1,0 +1,18 @@
+Project Description:
+Manages backlight timeouts based on AC/Lid/Battery status
+
+README:
+Backlight daemon for Zipit Z2
+
+2010-04-26 Tal Stokes
+2012-02-20 Joe Honold <mozzwald@mozzwald.com>
+2012-03-08 mcmajeres  	  -- added seperate timer for keyboard -- works in conjunction with ebindkeys
+2012-03-23 mcmajeres      -- changed blanking control to the framebuffer and added posix timers -- still have a polling loop :(
+
+Manages screen and keyboard backlights:
+  -turns them off when lid is closed and on when lid is opened
+  -dims them when on battery and brightens them when on AC (or reverse)
+  -respects changes made to brightness while running
+
+Thanks to Russell K. Davis for lid switch and AC
+plug detection routines, and help

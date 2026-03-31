@@ -1,0 +1,12 @@
+== Excercises
+
+You should document your project here.
+
+
+Project Description:
+repository for school purposes
+
+README:
+== Excercises
+
+You should document your project here.

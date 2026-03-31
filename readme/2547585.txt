@@ -1,0 +1,23 @@
+Project Description:
+Twitter Favorites for Blackberry Playbook
+
+README:
+Twitter Favorites for Blackberry Playbook - 0.4.0
+Simple Adobe Flex app to browse your favorites from Twitter and check URLs in awesome Playbook browser.
+You can also unfavorite particular tweets.
+
+Requirements:
+- as3-signals - https://github.com/robertpenner/as3-signals
+- DestroyFramework - https://github.com/imrahil/DestroyFramework
+- TwitterAspirin - https://github.com/imrahil/TwitterAspirin
+- oauth-as3 - http://code.google.com/p/oauth-as3/
+
+Uses VectorCollection from DigitalPrimates - http://www.digitalprimates.net/author/codeslinger/2010/05/18/vectorcollection/
+
+Application icon from http://www.iconfinder.com/icondetails/32131/128/ball_cute_favorites_icon
+
+SkinnableAlert based on Eskimo's one - http://e-skimo.com/
+
+TODO:
+- migrate to Robotlegs!
+- splash screen for different aspect ratios

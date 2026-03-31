@@ -1,0 +1,19 @@
+
+DEPENDENCIES
+	* pip 
+		django-social-auth
+		
+INSTALLATION INSTRUCTIONS
+The installation process for 
+
+Project Description:
+None
+
+README:
+
+DEPENDENCIES
+	* pip 
+		django-social-auth
+		
+INSTALLATION INSTRUCTIONS
+The installation process for

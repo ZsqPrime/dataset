@@ -1,0 +1,858 @@
+GETTING STARTED
+======================
+
+
+RamseyScript is a high-level scripting language for recursively
+generating long pattern-free objects. It is case-insensitive, so
+it ignores capitalization, and also does not distinguish between
+'-' and '_'.
+
+
+Essentially, every script does the same thing:
+
+  1. Start with some seed object (e.g. the empty sequence)
+
+  2a. Attempt to extend the object.
+
+  2b. Check that the object is still pattern-free (as defined by
+      a set of filters given by the script). If it's still good,
+      repeat (2a) on the extended object.
+
+  2c. Otherwise, try a different extension and repeat (2b). If
+      there are no more possible extensions, quit.
+
+  3. Output the longest pattern-free extension found.
+
+
+As a concrete example, consider the calculation of the van der Waerden
+number w(3; 2), the longest 3-AP-free 2-coloring of the interval [1, n].
+The script would be
+
+  set n-colors 2
+  filter no-3-aps
+  search colorings
+
+The effect of the final line is to:
+
+  1. Start with the empty coloring.
+
+  2a. Attempt to add the next number, colored red. (On the first
+      iteration, the "next number" is 1.)
+
+  2b. If the coloring is monochromatic-3-AP-free, repeat (2a).
+
+  2c. Otherwise, try making the next number blue and repeat (2b).
+
+  3. Output the longest monochromatic-3-AP-free extension found (which
+     will be some 2-coloring of [1, 8]). Conclude that every 2-coloring
+     of [1, 9] has a monochromatic 3-AP, and therefore that w(2;3) is 9.
+
+
+Advanced features are:
+
+  1. Change the final output. This is done by the "target" command, as
+
+       target any-length
+
+     This will output every object found; the default target, max-length,
+     only outputs the longest object.
+
+     To remove all targets, use "target clear". To see a list of all
+     available targets, just type "target".
+
+
+  2. Output auxiliary data. This is done by the "dump" command, as
+
+       dump iters-per-length
+
+     This will also output a list which counts the number of objects
+     found at each recursion depth, to allow for data analysis/plotting.
+
+
+  3. Start with a non-trivial seed. For example, typing
+
+       search sequences [1,3,7,9]
+
+     would search through the space of sequences beginning in 1,3,7,9.
+     The special seed "random" will create a random seed:
+
+       set random-length 5
+       search colorings random
+
+
+  4. Run in quiet mode. By default RamseyScript outputs a lot of human
+     readable information which is inappropriate for automated scripts.
+     To prevent any output, add the command "quiet" to a script before
+     running it. To see the status of your targets, run "state".
+
+
+  5. Split up a problem for parallel processing. RamseyScript uses only
+     one thread, one processor, which is inefficient if parallelizable
+     hardware is available. The special target "fork" will output lines
+     of the form "search [space] [seed]" suitable for creating extra
+     scripts (which can then be run in separate RamseyScript instances).
+     It is used as such:
+
+       set max-depth 11
+       set fork-depth 10
+       target clear    # remove the default max-depth target
+       target fork
+       filter no-double-3-aps
+       search colorings
+
+
+   6. Manually iterate. If you have a split-up problem as in the previous
+      step, you will wind up with candidate solutions from every instance
+      of RamseyScript. To combine these (e.g., to find the -real- maximum
+      length object), use the command "process", like so:
+
+        quiet
+        process [[1, 2, 4, 7, 8] [3, 5, 6, 9, 10]]
+        process [[1, 3, 4, 7, 9, 10, 12] [2, 5, 6, 8, 11, 13]]
+        process [[1, 3, 6, 8, 9, 11, 14, 16] [2, 4, 5, 7, 10, 12, 13, 15]]
+        state
+
+      (If you do not use "quiet" and "state" as explained in item (4) above,
+       you will get a bunch of extraneous output.)
+
+
+
+DETAILED LANGUAGE SPECIFICATION
+=======================
+
+
+===============
+Variables
+===============
+
+  set <variable> <value>
+
+Sets a variable. Not all variables are effective for each search space.
+``variable'' should be one of:
+
+      alphabet: The alphabet to use when searching words. Specified in the
+                format [c1 c2 c3 ... cn].
+                Default value: (none)
+
+     ap_length: The length of AP's filtered out by the no-double-n-ap filter
+                Default value: (none)
+
+ base_sequence: A sequence that will be used instead of 1, 2, 3, ... when
+                creating colorings. If unset, the positive integers will be
+                used.
+
+     dump-file: The file to output dump output (see 'dump'), or "-" to use
+                stdout.
+                Default value: -
+
+       gap-set: The set of allowable gap sizes when searching sequences or
+                colorings. For sequences, the value must be a 1D sequence
+                of the form [x y z] containing the allowable gap sizes.
+
+                For colorings, if the gap-set is a sequence, this sequence
+                defines the allowable gap sizes for each color. Alternately,
+                if the gap-set is a coloring (i.e., a sequence of sequences)
+                then each color of the gap-set defines the allowable gap
+                sizes for the respective colors in the search space.
+                Default value: (none)
+
+     max-depth: The maximum depth to search the space.
+                Default value: (none)
+
+  max-run-time: The maximum time (in seconds) to search before stopping.
+                Default value: (none)
+
+max-iterations: The number of iterations to run before stopping.
+                Default value: (none)
+
+      n-colors: The number of colors to use when searching colorings.
+                Default value: 3
+
+    prune-tree: Whether or not the search tree should be pruned; i.e., if some
+                element is filtered out, should new elements be built from it?
+
+                For example, if a sequence S contains a double-3-AP, then every
+                sequence starting with S will too, so we would set prune-tree
+                to nonzero.
+
+                But if a permutation P contains a double-3-AP, it still might
+                be that permutations built from P could be double-3-AP-free,
+                so we would set prune-tree to 0.
+           
+                Default value: 1
+
+ random-length: If the seed is set to RANDOM on a supported space, this
+                sets the length of the generated seed.
+                Default value: 10
+
+   stall-after: Like max-iterations, but resets its counter every time a target
+                (e.g., new object of maximum length) is reached.
+                Default value: (none)
+
+
+
+  get <variable>
+
+Prints the value of <variable>.
+
+
+
+  unset <variable>
+
+Unsets a previously-set variable. If the variable does not exist, does nothing.
+
+
+
+===============
+Filters
+===============
+
+  filter <filter>
+
+Adds a filter on the space to be searched. Multiple filters may be
+used. To delete filters, use "filter clear" and re-add the ones you
+want kept. ``filter'' should be one of:
+
+             no-3-aps: Only recurse on objects with no 3-AP's
+
+             no-n-aps: Only recurse on objects with no n-AP's, with
+                       n set by "set ap-length"
+
+      no-double-3-aps: Only recurse on objects with no double-3-AP's
+
+      no-double-n-aps: Only recurse on objects with no double-AP's of
+                       length n, with n set by "set ap-length".
+
+       no-rainbow-aps: Only recurse on colorings with no rainbow-AP's
+                       (i.e., arithmetic progressions with one entry
+                       of each color). Note that this filter must be
+                       used with a different filter, since by itself,
+                       it simply tells the program to color every
+                       number the same.
+
+   no-odd-lattice-aps: No arithmetic progressions on lattices, with
+                       length equal to the number of columns on the
+                       lattice. (So named because if the lattice has
+                       4 columns, all 4-AP's with odd gap size will
+                       appear as straight lines through grid points.)
+
+  no-additive-squares: Only recurse on words with no additive squares
+
+no-pythagorean-triples: Only recurse on objects with no solutions to
+                        X^2 + Y^2 = Z^2.
+
+   no-schur-solutions: Only recurse on objects with no solutions to
+                       X + Y = Z.
+
+
+
+  filter clear
+
+Removes all set filters.
+
+
+===============
+Search Spaces
+===============
+
+  search <space> [seed]
+
+Selects a search space and recursively explores it, looking for longer
+and longer elements which satisfy the given filter. There is no default
+value. If you do not specify a 'search' line, the program will do
+nothing. ``space'' should be one of:
+
+
+   colorings: The space of r-colorings of integers, for some given r.
+              For colorings, the seed may be RANDOM, in which case a
+              seed of length random-length is generated.
+              Default seed: [[1] [] []]
+
+    lattices: The space of r-colorings of integers, organized as a
+              grid of m columns (with r and m given). This allows a
+              geometric interpretation of some Ramsey-type problems.
+              Default seed: []
+
+  partitions: synonym of 'colorings'
+
+permutations: The space of permutations of [1,n]. You cannot change
+              the seed for this space.
+              Default seed: [1]
+
+   sequences: The space of strictly increasing sequences
+              Default seed: [1]
+
+       words: The space of words on some given alphabet
+              Default seed: []
+
+
+
+==============
+Targets
+==============
+
+  target <target>
+
+Chooses a goal to achieve when searching through Ramsey objects. Whenever
+a target is reached (e.g., a new object of maximal length is found), the
+current object is output. Multiple targets may be specified.
+
+By default, the "max-length" target is set. ``target'' should be one of:
+
+  max-length: Output the current object every time one is found one maximal
+              length is found.
+
+  any-length: Output every object found while recursing.
+
+
+
+  target clear
+
+Removes all set targets.
+
+
+
+===============
+Additional Output
+===============
+
+  dump <iterations-per-length>
+
+Output auxiliary data about the search space or program operation.
+
+iterations-per-length: dump the number of iterations spent at each
+                       search-space depth
+
+
+
+
+  dump clear
+
+Removes all data dumps.
+
+
+
+
+===============
+Manual Recursion
+===============
+
+It is possible to operate RamseyScript manually (i.e., when the Ramsey
+objects are obtained externally, and no recursion needs to be done, just
+filtering). This is done using the following three commands:
+
+
+  reset 
+
+Resets all output dumps and targets.
+
+
+
+  process <space> <object> 
+
+Runs filters, outputs and targets on ``object'', which is a Ramsey object
+of type ``space''. ``space'' is any valid search space (see the ``search''
+command).
+
+
+
+  state 
+
+Output all targets and run all output dumps.
+
+
+
+EXAMPLES
+===================
+
+## Look for 2-colorings of [1, N] with no double-3-ap's
+## This will find that there is no such coloring of [1, 17],
+## though there is one of [1, 16].
+
+set n-colors 2
+filter no-double-3-aps
+search colorings
+
+# (end file)
+
+
+## Explore the space of 3-colorings of [1, N] with no double-3-ap's.
+## One does exist of [1, 390], but this is all that is known so far.
+
+set n-colors 3
+filter no-double-3-aps
+set max-iterations 10000000
+
+search colorings RANDOM
+search colorings RANDOM
+search colorings RANDOM
+search colorings RANDOM
+search colorings RANDOM
+
+# (end file)
+
+
+
+## Explore the space of permutations with no 3-AP's. Output the iterations
+## at each depth (i.e., the number of valid permutations of each length)
+## to output.dump.
+
+# The resultant output will match the values computed by G.J. Simmons.
+# See American Mathematical Monthly 82 (1975) pp. 76-77.
+
+filter no-3-aps
+
+set dump-depth 25
+set dump-file output.dump
+dump iterations-per-length
+
+set max-depth 20
+search permutations
+
+# (end file)
+
+
+
+## Check some 3-colorings for double-3-aps
+
+target clear
+target any-length
+
+filter no-double-3-aps
+process colorings [[2, 5, 6, 8, 9] [1, 3, 7] [4, 10]]
+process colorings [[2, 5, 6, 8, 9] [1, 3, 7, 10] [4]]
+process colorings [[2, 5, 6] [1, 3, 7, 8, 9, 10] [4]]
+state
+
+
+
+
+Project Description:
+Explore mathematical spaces related to Ramsey-type problems.
+
+README:
+GETTING STARTED
+======================
+
+
+RamseyScript is a high-level scripting language for recursively
+generating long pattern-free objects. It is case-insensitive, so
+it ignores capitalization, and also does not distinguish between
+'-' and '_'.
+
+
+Essentially, every script does the same thing:
+
+  1. Start with some seed object (e.g. the empty sequence)
+
+  2a. Attempt to extend the object.
+
+  2b. Check that the object is still pattern-free (as defined by
+      a set of filters given by the script). If it's still good,
+      repeat (2a) on the extended object.
+
+  2c. Otherwise, try a different extension and repeat (2b). If
+      there are no more possible extensions, quit.
+
+  3. Output the longest pattern-free extension found.
+
+
+As a concrete example, consider the calculation of the van der Waerden
+number w(3; 2), the longest 3-AP-free 2-coloring of the interval [1, n].
+The script would be
+
+  set n-colors 2
+  filter no-3-aps
+  search colorings
+
+The effect of the final line is to:
+
+  1. Start with the empty coloring.
+
+  2a. Attempt to add the next number, colored red. (On the first
+      iteration, the "next number" is 1.)
+
+  2b. If the coloring is monochromatic-3-AP-free, repeat (2a).
+
+  2c. Otherwise, try making the next number blue and repeat (2b).
+
+  3. Output the longest monochromatic-3-AP-free extension found (which
+     will be some 2-coloring of [1, 8]). Conclude that every 2-coloring
+     of [1, 9] has a monochromatic 3-AP, and therefore that w(2;3) is 9.
+
+
+Advanced features are:
+
+  1. Change the final output. This is done by the "target" command, as
+
+       target any-length
+
+     This will output every object found; the default target, max-length,
+     only outputs the longest object.
+
+     To remove all targets, use "target clear". To see a list of all
+     available targets, just type "target".
+
+
+  2. Output auxiliary data. This is done by the "dump" command, as
+
+       dump iters-per-length
+
+     This will also output a list which counts the number of objects
+     found at each recursion depth, to allow for data analysis/plotting.
+
+
+  3. Start with a non-trivial seed. For example, typing
+
+       search sequences [1,3,7,9]
+
+     would search through the space of sequences beginning in 1,3,7,9.
+     The special seed "random" will create a random seed:
+
+       set random-length 5
+       search colorings random
+
+
+  4. Run in quiet mode. By default RamseyScript outputs a lot of human
+     readable information which is inappropriate for automated scripts.
+     To prevent any output, add the command "quiet" to a script before
+     running it. To see the status of your targets, run "state".
+
+
+  5. Split up a problem for parallel processing. RamseyScript uses only
+     one thread, one processor, which is inefficient if parallelizable
+     hardware is available. The special target "fork" will output lines
+     of the form "search [space] [seed]" suitable for creating extra
+     scripts (which can then be run in separate RamseyScript instances).
+     It is used as such:
+
+       set max-depth 11
+       set fork-depth 10
+       target clear    # remove the default max-depth target
+       target fork
+       filter no-double-3-aps
+       search colorings
+
+
+   6. Manually iterate. If you have a split-up problem as in the previous
+      step, you will wind up with candidate solutions from every instance
+      of RamseyScript. To combine these (e.g., to find the -real- maximum
+      length object), use the command "process", like so:
+
+        quiet
+        process [[1, 2, 4, 7, 8] [3, 5, 6, 9, 10]]
+        process [[1, 3, 4, 7, 9, 10, 12] [2, 5, 6, 8, 11, 13]]
+        process [[1, 3, 6, 8, 9, 11, 14, 16] [2, 4, 5, 7, 10, 12, 13, 15]]
+        state
+
+      (If you do not use "quiet" and "state" as explained in item (4) above,
+       you will get a bunch of extraneous output.)
+
+
+
+DETAILED LANGUAGE SPECIFICATION
+=======================
+
+
+===============
+Variables
+===============
+
+  set <variable> <value>
+
+Sets a variable. Not all variables are effective for each search space.
+``variable'' should be one of:
+
+      alphabet: The alphabet to use when searching words. Specified in the
+                format [c1 c2 c3 ... cn].
+                Default value: (none)
+
+     ap_length: The length of AP's filtered out by the no-double-n-ap filter
+                Default value: (none)
+
+ base_sequence: A sequence that will be used instead of 1, 2, 3, ... when
+                creating colorings. If unset, the positive integers will be
+                used.
+
+     dump-file: The file to output dump output (see 'dump'), or "-" to use
+                stdout.
+                Default value: -
+
+       gap-set: The set of allowable gap sizes when searching sequences or
+                colorings. For sequences, the value must be a 1D sequence
+                of the form [x y z] containing the allowable gap sizes.
+
+                For colorings, if the gap-set is a sequence, this sequence
+                defines the allowable gap sizes for each color. Alternately,
+                if the gap-set is a coloring (i.e., a sequence of sequences)
+                then each color of the gap-set defines the allowable gap
+                sizes for the respective colors in the search space.
+                Default value: (none)
+
+     max-depth: The maximum depth to search the space.
+                Default value: (none)
+
+  max-run-time: The maximum time (in seconds) to search before stopping.
+                Default value: (none)
+
+max-iterations: The number of iterations to run before stopping.
+                Default value: (none)
+
+      n-colors: The number of colors to use when searching colorings.
+                Default value: 3
+
+    prune-tree: Whether or not the search tree should be pruned; i.e., if some
+                element is filtered out, should new elements be built from it?
+
+                For example, if a sequence S contains a double-3-AP, then every
+                sequence starting with S will too, so we would set prune-tree
+                to nonzero.
+
+                But if a permutation P contains a double-3-AP, it still might
+                be that permutations built from P could be double-3-AP-free,
+                so we would set prune-tree to 0.
+           
+                Default value: 1
+
+ random-length: If the seed is set to RANDOM on a supported space, this
+                sets the length of the generated seed.
+                Default value: 10
+
+   stall-after: Like max-iterations, but resets its counter every time a target
+                (e.g., new object of maximum length) is reached.
+                Default value: (none)
+
+
+
+  get <variable>
+
+Prints the value of <variable>.
+
+
+
+  unset <variable>
+
+Unsets a previously-set variable. If the variable does not exist, does nothing.
+
+
+
+===============
+Filters
+===============
+
+  filter <filter>
+
+Adds a filter on the space to be searched. Multiple filters may be
+used. To delete filters, use "filter clear" and re-add the ones you
+want kept. ``filter'' should be one of:
+
+             no-3-aps: Only recurse on objects with no 3-AP's
+
+             no-n-aps: Only recurse on objects with no n-AP's, with
+                       n set by "set ap-length"
+
+      no-double-3-aps: Only recurse on objects with no double-3-AP's
+
+      no-double-n-aps: Only recurse on objects with no double-AP's of
+                       length n, with n set by "set ap-length".
+
+       no-rainbow-aps: Only recurse on colorings with no rainbow-AP's
+                       (i.e., arithmetic progressions with one entry
+                       of each color). Note that this filter must be
+                       used with a different filter, since by itself,
+                       it simply tells the program to color every
+                       number the same.
+
+   no-odd-lattice-aps: No arithmetic progressions on lattices, with
+                       length equal to the number of columns on the
+                       lattice. (So named because if the lattice has
+                       4 columns, all 4-AP's with odd gap size will
+                       appear as straight lines through grid points.)
+
+  no-additive-squares: Only recurse on words with no additive squares
+
+no-pythagorean-triples: Only recurse on objects with no solutions to
+                        X^2 + Y^2 = Z^2.
+
+   no-schur-solutions: Only recurse on objects with no solutions to
+                       X + Y = Z.
+
+
+
+  filter clear
+
+Removes all set filters.
+
+
+===============
+Search Spaces
+===============
+
+  search <space> [seed]
+
+Selects a search space and recursively explores it, looking for longer
+and longer elements which satisfy the given filter. There is no default
+value. If you do not specify a 'search' line, the program will do
+nothing. ``space'' should be one of:
+
+
+   colorings: The space of r-colorings of integers, for some given r.
+              For colorings, the seed may be RANDOM, in which case a
+              seed of length random-length is generated.
+              Default seed: [[1] [] []]
+
+    lattices: The space of r-colorings of integers, organized as a
+              grid of m columns (with r and m given). This allows a
+              geometric interpretation of some Ramsey-type problems.
+              Default seed: []
+
+  partitions: synonym of 'colorings'
+
+permutations: The space of permutations of [1,n]. You cannot change
+              the seed for this space.
+              Default seed: [1]
+
+   sequences: The space of strictly increasing sequences
+              Default seed: [1]
+
+       words: The space of words on some given alphabet
+              Default seed: []
+
+
+
+==============
+Targets
+==============
+
+  target <target>
+
+Chooses a goal to achieve when searching through Ramsey objects. Whenever
+a target is reached (e.g., a new object of maximal length is found), the
+current object is output. Multiple targets may be specified.
+
+By default, the "max-length" target is set. ``target'' should be one of:
+
+  max-length: Output the current object every time one is found one maximal
+              length is found.
+
+  any-length: Output every object found while recursing.
+
+
+
+  target clear
+
+Removes all set targets.
+
+
+
+===============
+Additional Output
+===============
+
+  dump <iterations-per-length>
+
+Output auxiliary data about the search space or program operation.
+
+iterations-per-length: dump the number of iterations spent at each
+                       search-space depth
+
+
+
+
+  dump clear
+
+Removes all data dumps.
+
+
+
+
+===============
+Manual Recursion
+===============
+
+It is possible to operate RamseyScript manually (i.e., when the Ramsey
+objects are obtained externally, and no recursion needs to be done, just
+filtering). This is done using the following three commands:
+
+
+  reset 
+
+Resets all output dumps and targets.
+
+
+
+  process <space> <object> 
+
+Runs filters, outputs and targets on ``object'', which is a Ramsey object
+of type ``space''. ``space'' is any valid search space (see the ``search''
+command).
+
+
+
+  state 
+
+Output all targets and run all output dumps.
+
+
+
+EXAMPLES
+===================
+
+## Look for 2-colorings of [1, N] with no double-3-ap's
+## This will find that there is no such coloring of [1, 17],
+## though there is one of [1, 16].
+
+set n-colors 2
+filter no-double-3-aps
+search colorings
+
+# (end file)
+
+
+## Explore the space of 3-colorings of [1, N] with no double-3-ap's.
+## One does exist of [1, 390], but this is all that is known so far.
+
+set n-colors 3
+filter no-double-3-aps
+set max-iterations 10000000
+
+search colorings RANDOM
+search colorings RANDOM
+search colorings RANDOM
+search colorings RANDOM
+search colorings RANDOM
+
+# (end file)
+
+
+
+## Explore the space of permutations with no 3-AP's. Output the iterations
+## at each depth (i.e., the number of valid permutations of each length)
+## to output.dump.
+
+# The resultant output will match the values computed by G.J. Simmons.
+# See American Mathematical Monthly 82 (1975) pp. 76-77.
+
+filter no-3-aps
+
+set dump-depth 25
+set dump-file output.dump
+dump iterations-per-length
+
+set max-depth 20
+search permutations
+
+# (end file)
+
+
+
+## Check some 3-colorings for double-3-aps
+
+target clear
+target any-length
+
+filter no-double-3-aps
+process colorings [[2, 5, 6, 8, 9] [1, 3, 7] [4, 10]]
+process colorings [[2, 5, 6, 8, 9] [1, 3, 7, 10] [4]]
+process colorings [[2, 5, 6] [1, 3, 7, 8, 9, 10] [4]]
+state

@@ -1,0 +1,111 @@
+What is it?
+
+A simple to use, lightweight wrapper for some minifiers, to minify and merge multiple js and css files.
+
+Used in conjunction with CSS Sprites, can get http requests right down.
+
+NOTE: So far this is untested! It works but I still consider it very much alpha. Feedback very welcome.
+
+
+Aims:
+	Simple and fully unit-tested  [ -> unit tests still to do ]
+	Allow for whole-direcotry includes of js / css or file-by-file includes [ -> whole dir reads to do ]
+	should compile, minify and compress js and css into one asset each [ done ]
+	Should allow some way to refresh cache based on last modified dates [ done ]
+	should allow different pages to include different assets. [ done, allows various implementations ]
+	if a file is listed as something.min.xx, shouldn't re-minify [ done ]
+	Only serves one js and one css file, but only re-minifies files that are changed since caching. [ done ]
+	Example use cases [ PHP example To do ]
+	Rewrite this as markdown!
+
+Usage :
+	You have three options for usage:
+	
+	Initial setup :
+		copy the assetCache folder into your application and setup the config file with your directory structure
+		(defaults are as in the repo)
+		Ensure app can write to the cache, css and javascript folders.
+	
+	HTML based site:
+		create a file 'loader.php' or similar and put it in your web root. 
+		Link to it as your css and / or js file.
+		In the loader, setup the required files (folders recursion coming shortly) and call the app
+		output the contents of the cache file
+		 	eg $cacheFile = $Handler->cacheAssets($arrayOfFileNames, 'javascript', true);
+
+			echo file_get_contents($cacheFile);
+		(see example at public_html/loader.php)
+
+	PHP based sites :
+		make sure your final output folders are inside your web-root
+		call the app where appropriate in your script
+			eg $cssCache = $Handler->cacheAssets($cssFilesArray, 'css')
+		link to the created resource in your template
+
+	CLI usage:
+		assetCache /pathTo/uncompressed/files/ /pathto/target.min.js [css|js]
+
+		This will parse the supplied uncompressed dir and compile all files with 
+		supplied extension (css or js) into to the target file. Default filetype
+		is js
+
+NOTE: for initial development I used the example files supplied with HTML 
+Kickstart. (Wanted to play with it anyways.)
+
+Project Description:
+Lightweight script for caching and minifying css and js
+
+README:
+What is it?
+
+A simple to use, lightweight wrapper for some minifiers, to minify and merge multiple js and css files.
+
+Used in conjunction with CSS Sprites, can get http requests right down.
+
+NOTE: So far this is untested! It works but I still consider it very much alpha. Feedback very welcome.
+
+
+Aims:
+	Simple and fully unit-tested  [ -> unit tests still to do ]
+	Allow for whole-direcotry includes of js / css or file-by-file includes [ -> whole dir reads to do ]
+	should compile, minify and compress js and css into one asset each [ done ]
+	Should allow some way to refresh cache based on last modified dates [ done ]
+	should allow different pages to include different assets. [ done, allows various implementations ]
+	if a file is listed as something.min.xx, shouldn't re-minify [ done ]
+	Only serves one js and one css file, but only re-minifies files that are changed since caching. [ done ]
+	Example use cases [ PHP example To do ]
+	Rewrite this as markdown!
+
+Usage :
+	You have three options for usage:
+	
+	Initial setup :
+		copy the assetCache folder into your application and setup the config file with your directory structure
+		(defaults are as in the repo)
+		Ensure app can write to the cache, css and javascript folders.
+	
+	HTML based site:
+		create a file 'loader.php' or similar and put it in your web root. 
+		Link to it as your css and / or js file.
+		In the loader, setup the required files (folders recursion coming shortly) and call the app
+		output the contents of the cache file
+		 	eg $cacheFile = $Handler->cacheAssets($arrayOfFileNames, 'javascript', true);
+
+			echo file_get_contents($cacheFile);
+		(see example at public_html/loader.php)
+
+	PHP based sites :
+		make sure your final output folders are inside your web-root
+		call the app where appropriate in your script
+			eg $cssCache = $Handler->cacheAssets($cssFilesArray, 'css')
+		link to the created resource in your template
+
+	CLI usage:
+		assetCache /pathTo/uncompressed/files/ /pathto/target.min.js [css|js]
+
+		This will parse the supplied uncompressed dir and compile all files with 
+		supplied extension (css or js) into to the target file. Default filetype
+		is js
+
+NOTE: for initial development I used the example files supplied with HTML 
+Kickstart. (Wanted to play with it anyways.)

@@ -1,0 +1,5 @@
+Project Description:
+latex resume
+
+README:
+This is my extension of res9b from http://www.rpi.edu/dept/arc/training/latex/resumes/

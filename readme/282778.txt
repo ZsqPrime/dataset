@@ -1,0 +1,8 @@
+# Android application for Juick
+
+
+Project Description:
+Juick client for Android
+
+README:
+# Android application for Juick

@@ -1,0 +1,32 @@
+This library is an implementation of ciphers from Korea Internet Security Agency.
+Copyright (c) Damian Gryski <damian@gryski.com>
+Licensed under the MIT License
+
+The library includes HIGHT, SEED, and ARIA.
+
+These ciphers are used almost exclusively inside Korea.
+
+For more information on these ciphers, please see: http://seed.kisa.or.kr/kor/main.jsp
+
+TODO:
+   SEED-192 and SEED-256 support
+   ARIA lookup table implementation
+
+
+Project Description:
+Go implementation of Block Ciphers from Korea Information Security Agency (KISA)
+
+README:
+This library is an implementation of ciphers from Korea Internet Security Agency.
+Copyright (c) Damian Gryski <damian@gryski.com>
+Licensed under the MIT License
+
+The library includes HIGHT, SEED, and ARIA.
+
+These ciphers are used almost exclusively inside Korea.
+
+For more information on these ciphers, please see: http://seed.kisa.or.kr/kor/main.jsp
+
+TODO:
+   SEED-192 and SEED-256 support
+   ARIA lookup table implementation

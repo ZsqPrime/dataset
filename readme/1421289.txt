@@ -1,0 +1,8 @@
+This is a website used for correcting terms pronunciation on IT industry.
+
+
+Project Description:
+How to read terms correctly on computer/network/IT industries.
+
+README:
+This is a website used for correcting terms pronunciation on IT industry.

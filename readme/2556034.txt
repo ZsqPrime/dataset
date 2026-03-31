@@ -1,0 +1,1 @@
+Poa, named after the genus which gives name to the Poaceae –grasses– is a custom made app designed to ouput the matrix for a meta-analysis on the role of functional traits in ecological restoration. It's based on Rails 3 and makes use of the wonderful Active Admin project.

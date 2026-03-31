@@ -1,0 +1,7 @@
+Project Description:
+serveur de plugins
+
+README:
+Romain est passé par là.*
+Théo aussi
+christiane également!

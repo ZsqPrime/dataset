@@ -1,0 +1,20 @@
+Some commonly used utilities for scala
+
+Current contents:
+  * A simple image processing library
+  * Some type pimps & helper snippets
+
+The code from these projects is free software released into the public domain.
+
+
+Project Description:
+Some commonly used utilities for scala.
+
+README:
+Some commonly used utilities for scala
+
+Current contents:
+  * A simple image processing library
+  * Some type pimps & helper snippets
+
+The code from these projects is free software released into the public domain.

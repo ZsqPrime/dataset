@@ -1,0 +1,19 @@
+This is a supporting project for FFWD that provide a template for getting started with using FFWD.
+
+See the FFWD framework for instructions on how to use this.
+
+https://github.com/fehaar/FFWD
+
+Project Description:
+This is a supporting project for FFWD that provide templates for getting started with using FFWD
+
+README:
+This is a supporting project for FFWD that provide a template for getting started with using FFWD.
+
+
+
+See the FFWD framework for instructions on how to use this.
+
+
+
+https://github.com/fehaar/FFWD

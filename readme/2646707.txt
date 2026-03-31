@@ -1,0 +1,9 @@
+Project Description:
+c++ conversion of ncutils - random linear network coding library
+
+README:
+WIP
+
+C++ conversion of ncutils. ( OMNeT++ compatible)
+
+Original Java Version: https://code.google.com/p/ncutils/

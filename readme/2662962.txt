@@ -1,0 +1,5 @@
+Project Description:
+Game of Life in Ruby
+
+README:
+An implementation of Conway's Game of Life in Ruby, to sharpen my Ruby skills.

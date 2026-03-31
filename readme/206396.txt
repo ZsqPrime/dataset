@@ -1,0 +1,7 @@
+This is the code deployed at fiks.herokuapp.com
+
+Project Description:
+Fiks frontend - without the suck
+
+README:
+This is the code deployed at fiks.herokuapp.com

@@ -1,0 +1,41 @@
+Project Description:
+A parallel 2D finite difference code 
+
+README:
+ 
+
+
+
+ By Wenqing Wang
+
+ 03.2011
+
+ 
+
+ A simple explicit FDM code for parabolic equations.
+
+ 
+
+ Feature:
+
+ Arbitrary boundary
+
+ Sparse matrix storage
+
+ Iterative solve
+
+ Parellel computing with PETSc
+
+ Flexible boundary condition definition
+
+ human readable input
+
+ 
+
+ Compilation:
+
+ Use Cmake to generate a project or makefile by command 
+
+ for sequential executable file: cmake [path to source folder] 
+
+ for parallel executable file: cmake [path to source folder] -DUSE_PETSC=ON

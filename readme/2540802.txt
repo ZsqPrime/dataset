@@ -1,0 +1,9 @@
+Project Description:
+IOC comparison mostly .Net, includes also Java, C++ and JavaScript
+
+README:
+# Another lousy IOC Benchmark :-)
+
+This time with more platforms.
+
+See presentation on http://bobris.github.com/IOCPerfTest/

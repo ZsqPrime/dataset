@@ -1,0 +1,45 @@
+Google Results Scraper behind Active Admin
+
+You can view a working demo at http://googscrape101.herokuapp.com
+The initial load may take a little while since heroku idles inactive dynos after an hour
+The user/pass is test@test.com/secret
+
+The domain specific search results is optional and may be left blank.
+
+To clone the repo do:
+
+git clone git://github.com/andr3w321/googscrape101.git
+cd googscrape101
+edit username, password and password_confirmation in db/seeds.rb to your desired user/pass
+bundle exec rake assets:precompile
+bundle exec rake db:migrate
+bundle exec rake db:seed
+rails s
+
+Navigate to http://localhost:3000
+
+
+
+Project Description:
+Google Results Scraper behind Active Admin
+
+README:
+Google Results Scraper behind Active Admin
+
+You can view a working demo at http://googscrape101.herokuapp.com
+The initial load may take a little while since heroku idles inactive dynos after an hour
+The user/pass is test@test.com/secret
+
+The domain specific search results is optional and may be left blank.
+
+To clone the repo do:
+
+git clone git://github.com/andr3w321/googscrape101.git
+cd googscrape101
+edit username, password and password_confirmation in db/seeds.rb to your desired user/pass
+bundle exec rake assets:precompile
+bundle exec rake db:migrate
+bundle exec rake db:seed
+rails s
+
+Navigate to http://localhost:3000

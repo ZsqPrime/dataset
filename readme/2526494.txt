@@ -1,0 +1,31 @@
+Project Description:
+Archetype for creating new webtest projects using parallel-webtest to drive selenium tests in Sauce Labs.
+
+README:
+**NOTE: This project has been *deprecated*. Use at your own risk!**
+
+
+Archetype used for generating webtest projects, based on webtest-quickstart.  Javadocs located at
+http://repository-dynacrongroup.forge.cloudbees.com/release/sites/webtest-quickstart-archetype/index.html
+
+The following command will generate a project using this project:
+
+mvn -DarchetypeRepository=http://repository-dynacrongroup.forge.cloudbees.com/release \
+    -DarchetypeGroupId=com.dynacrongroup \
+    -DarchetypeArtifactId=webtest-quickstart-archetype \
+    -DarchetypeVersion=1.0.1 \
+    archetype:generate
+
+If, instead, you'd prefer to add the archetype to your archetype catalog (locally in ~/.m2/archetype-catalog.xml)
+
+<?xml version="1.0" encoding="UTF-8"?><archetype-catalog>
+  <archetypes>
+    <archetype>
+      <groupId>com.dynacrongroup</groupId>
+      <artifactId>webtest-quickstart-archetype</artifactId>
+      <version>1.0.1</version>
+      <description>parallel-webtest test project archetype</description>
+      <repository>http://repository-dynacrongroup.forge.cloudbees.com/release</repository>
+    </archetype>
+  </archetypes>
+</archetype-catalog>

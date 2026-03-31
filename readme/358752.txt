@@ -1,0 +1,12 @@
+= multi_calendar
+
+Description goes here
+
+
+Project Description:
+This plugin allows creating holiday calendars and assigning them to the users.
+
+README:
+= multi_calendar
+
+Description goes here

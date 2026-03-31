@@ -1,0 +1,31 @@
+Project Description:
+Remote Canvas, 2009
+
+README:
+Remote Canvas
+~~~~~~~~~~~~~
+
+Files
+
+- server.cgi
+- proxy.php
+- client.html
+
+Usage
+
+$ chmod u+x server.cgi
+$ mkdir canvas-data
+$ your-browser path/to/client.html
+
+Git
+
+- <https://suika.suikawiki.org/gate/git/wi/web/remotecanvas-2009.git/tree>
+- <https://github.com/wakaba/remotecanvas>
+
+Author
+
+Wakaba <wakaba@suikawiki.org>.
+
+License
+
+See LICENSE.

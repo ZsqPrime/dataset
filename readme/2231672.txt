@@ -1,0 +1,15 @@
+Multitouch Gesture Recognizer using Python and PyMt
+
+Dependencies
+- Python 2.7.2
+- PyMT (http://pymt.eu/)
+
+Project Description:
+Multitouch Gesture Recognizer
+
+README:
+Multitouch Gesture Recognizer using Python and PyMt
+
+Dependencies
+- Python 2.7.2
+- PyMT (http://pymt.eu/)

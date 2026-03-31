@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+= OauthRestSecurity
+
+This project rocks and uses MIT-LICENSE.

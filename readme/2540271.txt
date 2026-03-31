@@ -1,0 +1,7 @@
+Project Description:
+A puppet module that demonstrates how to setup a minimal SQL firewall with mysql proxy
+
+README:
+mysql_proxy
+
+This is the mysql_proxy module. Documentation is in puppetdocs.

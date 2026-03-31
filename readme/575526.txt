@@ -1,0 +1,98 @@
+h1. rah_status_dropdown
+
+*Status options are rendered as a select field in current Textpattern CMS versions. This plugin is deprecated.*
+
+Rah_status_dropdown is a visual admin-side extension for "Textpattern CMS":https://textpattern.com. The plugin changes _Write_ panel's _status_ radio buttons to a select field. Changing the list of statuses to a dropdown will save some space, and hides the extra article statuses that might have no real use to a content author.
+
+h2. Changelog
+
+h3. Version 0.6.2 - 2012/10/31
+
+* Reverts 0.6.1.
+
+h3. Version 0.6.1 - 2012/10/31
+
+* Casts statuses as strings.
+
+h3. Version 0.6 - 2012/08/27
+
+* Changed plugin type to 4, which allows the plugin to load correctly on Textpattern v4.5.0.
+* Now requires Textpattern 4.5.0 or newer.
+* Is now fully compatible with Textpattern v4.5.0 release version.
+
+h3. Version 0.5 - 2012/07/30
+
+* Added: The select field is now wrapped in a paragraph.
+* Changed: Client-side dependency. Uses the pluggable_ui and server-side PHP instead of JavaScript.
+* Is now compatible with Textpattern v4.5.0 (r3650 and newer).
+
+h3. Version 0.4 - 2011/08/06
+
+* Now the plugin doesn't use PHP tie-in, and the all the action is powered by JavaScript.
+
+h3. Version 0.3 - 2011/06/29
+
+* Fixed: Don't spit out JavaScript when the browser's JavaScript support is disabled.
+
+h3. Version 0.2 - 2010/08/08
+
+* Moved the JavaScript to @<head>@.
+* Now gets the active status with plain JavaScript, not with PHP from the saved article.
+* Because of the above change, the code is now shorter and less intensive.
+* Now requires Textpattern version 4.0.7 or newer.
+
+h3. Version 0.1 - 2008/08/31
+
+* Initial release.
+
+
+Project Description:
+Changes Textpattern's Write tab's Status radio buttons to a select field
+
+README:
+h1. rah_status_dropdown
+
+*Status options are rendered as a select field in current Textpattern CMS versions. This plugin is deprecated.*
+
+Rah_status_dropdown is a visual admin-side extension for "Textpattern CMS":https://textpattern.com. The plugin changes _Write_ panel's _status_ radio buttons to a select field. Changing the list of statuses to a dropdown will save some space, and hides the extra article statuses that might have no real use to a content author.
+
+h2. Changelog
+
+h3. Version 0.6.2 - 2012/10/31
+
+* Reverts 0.6.1.
+
+h3. Version 0.6.1 - 2012/10/31
+
+* Casts statuses as strings.
+
+h3. Version 0.6 - 2012/08/27
+
+* Changed plugin type to 4, which allows the plugin to load correctly on Textpattern v4.5.0.
+* Now requires Textpattern 4.5.0 or newer.
+* Is now fully compatible with Textpattern v4.5.0 release version.
+
+h3. Version 0.5 - 2012/07/30
+
+* Added: The select field is now wrapped in a paragraph.
+* Changed: Client-side dependency. Uses the pluggable_ui and server-side PHP instead of JavaScript.
+* Is now compatible with Textpattern v4.5.0 (r3650 and newer).
+
+h3. Version 0.4 - 2011/08/06
+
+* Now the plugin doesn't use PHP tie-in, and the all the action is powered by JavaScript.
+
+h3. Version 0.3 - 2011/06/29
+
+* Fixed: Don't spit out JavaScript when the browser's JavaScript support is disabled.
+
+h3. Version 0.2 - 2010/08/08
+
+* Moved the JavaScript to @<head>@.
+* Now gets the active status with plain JavaScript, not with PHP from the saved article.
+* Because of the above change, the code is now shorter and less intensive.
+* Now requires Textpattern version 4.0.7 or newer.
+
+h3. Version 0.1 - 2008/08/31
+
+* Initial release.

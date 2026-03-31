@@ -1,0 +1,7 @@
+Project Description:
+tsinaski's snap indicator
+
+README:
+In order to get more video effects, you should install the frei0r library
+
+Packagers should add it as a recommended package.

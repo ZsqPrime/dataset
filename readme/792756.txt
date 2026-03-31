@@ -1,0 +1,6 @@
+
+
+Project Description:
+Base template structure for a mobile website
+
+README:

@@ -1,0 +1,5 @@
+Project Description:
+Project planning software
+
+README:
+PlanGoGO is a simple Project planning tool.

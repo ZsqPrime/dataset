@@ -1,0 +1,26 @@
+git-search
+==========
+
+Create a searchable index of the current repo
+
+    git search --index
+
+Search
+
+    git search <search term>
+
+
+Project Description:
+Lucene search of a git repository
+
+README:
+git-search
+==========
+
+Create a searchable index of the current repo
+
+    git search --index
+
+Search
+
+    git search <search term>

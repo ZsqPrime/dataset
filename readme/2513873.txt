@@ -1,0 +1,8 @@
+Cormen's "Introduction to Algorithms" examples done in Scala.
+
+
+Project Description:
+
+
+README:
+Cormen's "Introduction to Algorithms" examples done in Scala.

@@ -1,0 +1,16 @@
+Project Description:
+
+
+README:
+Node script for apache http server log file analysis.
+Collects amounts of url requests for resources and prints a summary.
+
+
+run it with (nodejs should be installed):
+>node main.js <filename>
+
+
+ToDo:
+
+- configureable regex
+- configureable filter function

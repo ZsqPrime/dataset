@@ -1,0 +1,7 @@
+Edited readme
+
+Project Description:
+Application to management your Weight Watchers points
+
+README:
+Edited readme

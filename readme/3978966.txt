@@ -1,0 +1,69 @@
+Project Description:
+
+
+README:
+NAME
+    HTML::LinkFilter - Changes all links in HTML
+
+SYNOPSIS
+      use HTML::LinkFilter;
+      use Data::Dumper;
+
+      my $html = do { local $/; <DATA> };
+
+      my $filter = HTML::LinkFilter->new;
+      $filter->change( $html, \&callback );
+
+      print Dumper $filter->tags;
+
+      sub callback {
+          my( $tagname, $attr, $value ) = @_;
+
+          return; # Uses original.
+      }
+
+      __DATA__
+      <!doctype html>
+      <html>
+        <head>
+          <meta charset="UTF-8" />
+        </head>
+        <body>
+          <h1><a href="/">example.com</a></h1>
+        </body>
+      </html>
+
+DESCRIPTION
+    HTML::LinkFilter can change all links in passed HTML.
+
+    This requires callback sub. The sub takes tagname, attr, value, and
+    returns new value, then it will be replaced. Or uses original when
+    returns undef.
+
+    *Note* this breaks attributes order in tag.
+
+METHODS
+    new Returns instance.
+
+    change
+        Changes html to tags by using callback filter. Callback filter is an
+        argument which changes link.
+
+        Callback filter will take args those are tagname, attr, value, and
+        return value is pushed to $self->tags as a new value.
+
+        Callback filter can tell 'use original' to parser by returns undef.
+
+    tags
+        Returns some changed HTML tags.
+
+    html
+        Returns HTML code which is parsed.
+
+AUTHOR
+    kuniyoshi kouji <kuniyoshi@cpan.org>
+
+SEE ALSO
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.

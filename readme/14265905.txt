@@ -1,0 +1,13 @@
+Project Description:
+ISO19794 Standard FingerPrint data Parsing
+
+README:
+ISO19794 Standard Signature
+
+Program to parse ISO/IEC STANDARD 19794-7 format Hex file of Signature Template.
+
+You can use this software for given sample fingerprint Hex data in the folder samples.
+
+The compilation and usage information can be found in the source.
+
+This program was developed for testing. So, this program do not gurantee perfect result.

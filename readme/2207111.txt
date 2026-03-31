@@ -1,0 +1,6 @@
+
+
+Project Description:
+Shop for ProcessWire 2.2. Frontend part of a set of modules to bring e-commerce to PW. 
+
+README:

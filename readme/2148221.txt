@@ -1,0 +1,19 @@
+= Notes = 
+
+== Homework
+Watch http://mrkn.co/f/595[Eclipse Video]
+
+== Useful links
+* http://www.screaming-penguin.com/info/android_drawables/android_drawables.html
+
+Project Description:
+Android Bootcamp January 2012
+
+README:
+= Notes = 
+
+== Homework
+Watch http://mrkn.co/f/595[Eclipse Video]
+
+== Useful links
+* http://www.screaming-penguin.com/info/android_drawables/android_drawables.html

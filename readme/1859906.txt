@@ -1,0 +1,18 @@
+Toaster VM
+==========
+By Max Foster
+max@supermaximo.com
+
+License: http://creativecommons.org/licenses/by/3.0/
+
+
+Project Description:
+A virtual machine designed for eventual use with version 1.0 of the Toast language
+
+README:
+Toaster VM
+==========
+By Max Foster
+max@supermaximo.com
+
+License: http://creativecommons.org/licenses/by/3.0/

@@ -1,0 +1,7 @@
+Project Description:
+A script to backup files to Amazon S3.
+
+README:
+# A script from:
+
+http://john.nachtimwald.com/2010/08/07/duplicity-backup-script/

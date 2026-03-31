@@ -1,0 +1,19 @@
+cad:
+A simple figure about the machine in openSCAD.
+
+doc:
+
+src:
+
+
+
+Project Description:
+Jo kis cucc
+
+README:
+cad:
+A simple figure about the machine in openSCAD.
+
+doc:
+
+src:

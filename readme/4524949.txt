@@ -1,0 +1,6 @@
+Project Description:
+World Affairs Conference 2011 website, Canada's oldest annual student-run current affairs conference.
+
+README:
+Website for information about the World Affairs Conference in 2011, Canada's oldest annual student-run current affairs conference.
+Developed in HTML and CSS, with keynote countdown in JS.

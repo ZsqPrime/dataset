@@ -1,0 +1,19 @@
+PersistenceJS Plugin to persiste encrypted data
+
+For PersistenceJs
+http://persistencejs.org
+
+For Security:
+http://code.google.com/p/crypto-js/
+
+Project Description:
+Plugin to use Crypto.js with PersistenceJs
+
+README:
+PersistenceJS Plugin to persiste encrypted data
+
+For PersistenceJs
+http://persistencejs.org
+
+For Security:
+http://code.google.com/p/crypto-js/

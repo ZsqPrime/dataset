@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Just a silly little spider for making groupon's merchant API a bit easier.

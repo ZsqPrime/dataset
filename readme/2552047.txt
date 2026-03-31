@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+== JobApp
+An application to post and find jobs.
+
+By Casey Harford
+CSU Chico, Spring 2012

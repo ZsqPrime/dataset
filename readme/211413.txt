@@ -1,0 +1,293 @@
+
+This is afio 2.5.2
+
+* WHAT IS AFIO, SHOULD I USE IT?
+
+Afio makes cpio-format archives. It deals somewhat gracefully with
+input data corruption, supports multi-volume archives during
+interactive operation, and can make compressed archives that are much
+safer than compressed tar or cpio archives. Afio is best used as an
+`archive engine' in a backup script.
+
+Afio is one of the oldest open source projects around, it started in
+1985, but it is now in 'maintenance only' mode. If you have never used
+afio as an archive engine, you should probably not start using it now.
+If you are using it: afio is expected to be compatible UNIX time_t
+extensions that will have to happen before the year 2038.
+
+* WHAT IS NEW IN VERSION 2.5.2?
+
+The main changes with respect to version 2.5.1 are:
+
+- security improvements for the handling of archives from untrusted
+  sources
+
+- when making multivolume archives, added %V feature to include the
+  volume number in subsequent volume file names
+
+- various bug and portability fixes
+
+* CONTACT INFORMATION
+
+The GitHub repository
+
+ https://github.com/kholtman/afio
+
+is now the official home page of afio, you can check there to find out
+if you have the latest version.
+
+Note: there was some useful context information about afio on
+the on the old (no longer supported) afio home page
+
+  http://members.chello.nl/k.holtman/afio.html
+
+that has not yet been copied to this GitHub repository, you can use
+
+  https://web.archive.org/web/20160526001116/http://members.chello.nl/k.holtman/afio.html
+
+to read the context information.
+
+The current maintainer is Koen Holtman (koen.holtman@ieee.org).
+
+(Alternative e-mail address for the maintainer: k.holtman@chello.nl)
+
+You can post comments, questions, and proposed patches to for afio on
+this Githubb page, but you can also mail the maintainer.  When mailing
+the maintainer, please use the word `afio' somewhere in the subject
+line, this lowers the chance that your mail will get accidentally
+deleted.
+
+Message from the current maintainer, written in 2018:
+
+Afio is now in a 'maintenance only' mode, with several years between
+formal releases.  'Maintenance only' means that I will be happy to
+answer questions, to handle bug and problem reports, and to
+incorporate patches that fix bugs, portabiliy problems, and security
+issues.  However, it is very unlikely that I will work on adding major
+new features, even if the feature request comes with a patch file
+implementing the feature.
+
+The main concern that drives my maintenance policy is to avoid
+creating new bugs that would cause the backup process to silently
+fail.  Because of this concern, I do a lot of manual reviewing and
+testing for every patch I receive.  I have concluded that I simply do
+not have the time (and interest level) anymore to do this for patches
+adding new features.  My interest has declined because since about
+2005, hard drives have become so cheap that making fault tolerant
+compressed archive files for writing to tapes of floppy disks, as afio
+can do, has become less and less relevant to the needs of average
+Linux user.  I make my personal system backups using rsync on a
+detachable hard drive.
+
+
+>> See the first lines of afio.c for licensing/redistribution information <<
+
+--------------------------------------------------------------------------
+
+Afio makes cpio-format archives.  It deals somewhat gracefully with
+input data corruption.  Supports multi-volume archives during
+interactive operation.  Afio can make compressed archives that are
+much safer than compressed tar or cpio archives.  Afio is best used as
+an `archive engine' in a backup script.
+
+Since version 2.4.8beta1, afio supports files greater than 2 GB.
+
+--------------------------------------------------------------------------
+
+See the file INSTALLATION for installation instructions.
+
+See the file SCRIPTS for more information on backup scripts that use
+afio.
+
+See the file PORTING for information on compiling afio on non-Linux
+machines.
+
+---------------------------------------------------------------------------
+
+This afio version is based on a Linux port of afio 2.3.  Since the
+original port, significant functionality has been added and some bugs
+were removed.  While primarily intended for use under Linux, this code
+should be portable to other UNIX versions.  As far as I know, there
+has been no afio development beyond 2.3 outside the Linux community.
+Thus, it should be safe to advertise ports of this code to other UNIX
+versions as ports of afio version 2.4.1.
+
+---------------------------------------------------------------------------
+
+Afio has far too many options and features (some of which are not even
+in the manual page).  Anything in afio that doesn't relate to reading
+or writing an archive from/to a simple file or pipe or backing up and
+restoring from floppies remains untested.
+
+In particular, nobody has verified if the options -p -d -e -g -h -j -l
+-m -u and -R and the special case archive name `!command' really do
+what they claim to do.
+
+Typical `tested' afio uses are
+ ... | afio -o -v -s 1440k -F -Z /dev/fd0H1440
+ afio -oZvx /tmp/pipe1 </tmp/pipe2
+ afio -i -Z -k -v -x -n /tmp/pipe1
+ ... | afio -s 512m -c 1024 -Z -T 20k -G 1 -E /backup/compressed -v -o \
+       -L /backup/LOG -z /dev/tape 2>/dev/tty8 >/var/adm/backup
+
+WARNING1: the code for -F (and -f and -K) is a complete mess.  It will
+probably work in the normal case, but don't expect it to handle a
+write/verify error correctly.  If you get such an error, best thing is
+to restart afio completely.
+
+WARNING2:The remote archive facilites (host:/file archive names) have
+not been exhaustively tested. These facilities have seen a lot of
+real-life use though.  However, there may be bugs in the code for
+error handling and error reporting with remote archives.
+
+---------------------------------------------------------------------------
+
+
+
+Project Description:
+ Archiver & backup program with fault tolerant compression
+
+README:
+
+This is afio 2.5.2
+
+* WHAT IS AFIO, SHOULD I USE IT?
+
+Afio makes cpio-format archives. It deals somewhat gracefully with
+input data corruption, supports multi-volume archives during
+interactive operation, and can make compressed archives that are much
+safer than compressed tar or cpio archives. Afio is best used as an
+`archive engine' in a backup script.
+
+Afio is one of the oldest open source projects around, it started in
+1985, but it is now in 'maintenance only' mode. If you have never used
+afio as an archive engine, you should probably not start using it now.
+If you are using it: afio is expected to be compatible UNIX time_t
+extensions that will have to happen before the year 2038.
+
+* WHAT IS NEW IN VERSION 2.5.2?
+
+The main changes with respect to version 2.5.1 are:
+
+- security improvements for the handling of archives from untrusted
+  sources
+
+- when making multivolume archives, added %V feature to include the
+  volume number in subsequent volume file names
+
+- various bug and portability fixes
+
+* CONTACT INFORMATION
+
+The GitHub repository
+
+ https://github.com/kholtman/afio
+
+is now the official home page of afio, you can check there to find out
+if you have the latest version.
+
+Note: there was some useful context information about afio on
+the on the old (no longer supported) afio home page
+
+  http://members.chello.nl/k.holtman/afio.html
+
+that has not yet been copied to this GitHub repository, you can use
+
+  https://web.archive.org/web/20160526001116/http://members.chello.nl/k.holtman/afio.html
+
+to read the context information.
+
+The current maintainer is Koen Holtman (koen.holtman@ieee.org).
+
+(Alternative e-mail address for the maintainer: k.holtman@chello.nl)
+
+You can post comments, questions, and proposed patches to for afio on
+this Githubb page, but you can also mail the maintainer.  When mailing
+the maintainer, please use the word `afio' somewhere in the subject
+line, this lowers the chance that your mail will get accidentally
+deleted.
+
+Message from the current maintainer, written in 2018:
+
+Afio is now in a 'maintenance only' mode, with several years between
+formal releases.  'Maintenance only' means that I will be happy to
+answer questions, to handle bug and problem reports, and to
+incorporate patches that fix bugs, portabiliy problems, and security
+issues.  However, it is very unlikely that I will work on adding major
+new features, even if the feature request comes with a patch file
+implementing the feature.
+
+The main concern that drives my maintenance policy is to avoid
+creating new bugs that would cause the backup process to silently
+fail.  Because of this concern, I do a lot of manual reviewing and
+testing for every patch I receive.  I have concluded that I simply do
+not have the time (and interest level) anymore to do this for patches
+adding new features.  My interest has declined because since about
+2005, hard drives have become so cheap that making fault tolerant
+compressed archive files for writing to tapes of floppy disks, as afio
+can do, has become less and less relevant to the needs of average
+Linux user.  I make my personal system backups using rsync on a
+detachable hard drive.
+
+
+>> See the first lines of afio.c for licensing/redistribution information <<
+
+--------------------------------------------------------------------------
+
+Afio makes cpio-format archives.  It deals somewhat gracefully with
+input data corruption.  Supports multi-volume archives during
+interactive operation.  Afio can make compressed archives that are
+much safer than compressed tar or cpio archives.  Afio is best used as
+an `archive engine' in a backup script.
+
+Since version 2.4.8beta1, afio supports files greater than 2 GB.
+
+--------------------------------------------------------------------------
+
+See the file INSTALLATION for installation instructions.
+
+See the file SCRIPTS for more information on backup scripts that use
+afio.
+
+See the file PORTING for information on compiling afio on non-Linux
+machines.
+
+---------------------------------------------------------------------------
+
+This afio version is based on a Linux port of afio 2.3.  Since the
+original port, significant functionality has been added and some bugs
+were removed.  While primarily intended for use under Linux, this code
+should be portable to other UNIX versions.  As far as I know, there
+has been no afio development beyond 2.3 outside the Linux community.
+Thus, it should be safe to advertise ports of this code to other UNIX
+versions as ports of afio version 2.4.1.
+
+---------------------------------------------------------------------------
+
+Afio has far too many options and features (some of which are not even
+in the manual page).  Anything in afio that doesn't relate to reading
+or writing an archive from/to a simple file or pipe or backing up and
+restoring from floppies remains untested.
+
+In particular, nobody has verified if the options -p -d -e -g -h -j -l
+-m -u and -R and the special case archive name `!command' really do
+what they claim to do.
+
+Typical `tested' afio uses are
+ ... | afio -o -v -s 1440k -F -Z /dev/fd0H1440
+ afio -oZvx /tmp/pipe1 </tmp/pipe2
+ afio -i -Z -k -v -x -n /tmp/pipe1
+ ... | afio -s 512m -c 1024 -Z -T 20k -G 1 -E /backup/compressed -v -o \
+       -L /backup/LOG -z /dev/tape 2>/dev/tty8 >/var/adm/backup
+
+WARNING1: the code for -F (and -f and -K) is a complete mess.  It will
+probably work in the normal case, but don't expect it to handle a
+write/verify error correctly.  If you get such an error, best thing is
+to restart afio completely.
+
+WARNING2:The remote archive facilites (host:/file archive names) have
+not been exhaustively tested. These facilities have seen a lot of
+real-life use though.  However, there may be bugs in the code for
+error handling and error reporting with remote archives.
+
+---------------------------------------------------------------------------

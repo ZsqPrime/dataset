@@ -1,0 +1,7 @@
+This file was created by IntelliJ IDEA 11.0.2 for binding GitHub repository
+
+Project Description:
+None
+
+README:
+This file was created by IntelliJ IDEA 11.0.2 for binding GitHub repository

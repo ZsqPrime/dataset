@@ -1,0 +1,12 @@
+Description:
+The Visualization of Protein-Ligand Graphs software that powers the PTGL webserver at http://ptgl.uni-frankfurt.de/. One of my PhD projects.
+
+README:
+
+I do not work on this project anymore, and the repo was handed over the Molecular Bioinformatics Group (MolBI) at Goethe University Frankfurt.
+
+I will NOT accept pull requests against this repo. Please use this fork instead: https://github.com/MolBIFFM/vplg
+
+
+Tim
+

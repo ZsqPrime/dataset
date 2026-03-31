@@ -1,0 +1,112 @@
+h1. foo-tunes
+
+Project is aimed to help foobar2000 users update their iPods with minimum usage of iTunes. Features are:
+
+* Bidirectional playback statistics update between iPod/iTunes and foobar2000
+* Tag mappings support (meaningful album sort by year, iTunes compilation tag based on album artist value are included)
+* Album art is attached on-the-fly
+* Separate folder for iPod music (you should put files to be sent to iPod there)
+* Uses iTunes COM interface to interact with iPod, so further updates to iTunes should not break `foo-tunes`
+
+h2. Motivation
+
+There are lots of iPod sync software on the market but most/all of those use some reverse engineered libraries to access iPod. Major iPod software updates often brake those libs. On the other hand there's a lack of tools that allow precise control on what is done to your music. Among those tools are excellent `foobar2000` media player and its great component for syncing with iPods `foo_dop`. After release of iOS 5 it stopped working, so I decided to write a tool of my own. It uses (and launches) iTunes automatically but minimum effort is required.
+
+h2. Prerequisites
+
+* Windows (tested on Windows XP)
+* "iTunes 10.5.2+":http://www.apple.com/itunes/download/
+* "foobar2000 1.1.10+":http://www.foobar2000.org/download
+* run `prerequisites/register.bat` to register dll component allowing reading data from clipboard
+* install these foobar2000 components and set them up as below
+** "Masstagger 1.8.4":http://www.foobar2000.org/components/view/foo_masstag
+** "Run Command 1.1":http://www.foobar2000.org/components/view/foo_runcmd
+** "Playback Statistics 3.0.2":http://www.foobar2000.org/components/view/foo_playcount
+** "Text Tools 1.0.5":http://www.foobar2000.org/components/view/foo_texttools
+* in foobar2000 create command named `iTunesSync` for the `foo_texttools` plugin with the following content:
+
+<pre>
+{"Location": "%path%", "Rating": "%rating%", "PlayedCount": "%play_count%", "PlayedDate": "%last_played%", "DateAdded": "%added%"},
+</pre>
+
+h2. Internals
+
+Main script is `foo-tunes.js` (modify variables in the first lines - at least `musicTrackedPath`, `musicNotTrackedPath` and `foobar2000Path`). Run it with `sync.cmd`.
+
+You can pretty easily find what's going on under the covers by examining `foo-tunes.js` - there's only very high level logic (for deep internals see files located in `inc` and `lib` folders).
+
+Feel free to modify sources and see what happens. I use "oleview":http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=7007 tool to explore iTunes COM interfaces. I'll be pleased to know if you can find a better/cleaner/faster way to do things this script performs.
+
+h2. Recommended workflow
+
+Set up foobar2000 converter component to convert music to `musicNotTrackedPath` folder (or file operations component if you do not want to convert - but I recommend using Nero AAC Encoder as aac provides better quality at a lower bitrate than mp3). Do not forget to copy *.jpg along with music files (there is such option in converter).
+
+Actually you may not use a separate folder but in this case your tags will get modifed by `foo-tunes` (album art added if none, tags mapped if set and playback statistics is first synced to file tags and then imported). Also I would not expect iTunes not to mess up with your library. So keeping a separate folder is a way to go.
+
+Add `musicTrackedPath` as foobar2000 media library folder. This is required if you wish to sync playback statistics with iPod. Stats is synced based on full filename and internal iTunes track id (see `foo-tunes-db.txt` generated after sync).
+
+Before syncing all files are moved from `musicNotTrackedPath` to `musicTrackedPath` and when sync is over back to `musicNotTrackedPath` so you won't see duplicates in your foobar2000 library.
+
+h2. Changelog
+
+* "0.0.2":https://github.com/kompot/foo-tunes/issues?milestone=1&state=closed Fixed file system compatibility bugs and made database preserving more robust.
+* 0.0.1 First public version. Lots of bugs are to be found and fixed. Use with caution.
+
+
+Project Description:
+Set of scripts and techniques to sync foobar2000 media library with iPod bidirectionally
+
+README:
+h1. foo-tunes
+
+Project is aimed to help foobar2000 users update their iPods with minimum usage of iTunes. Features are:
+
+* Bidirectional playback statistics update between iPod/iTunes and foobar2000
+* Tag mappings support (meaningful album sort by year, iTunes compilation tag based on album artist value are included)
+* Album art is attached on-the-fly
+* Separate folder for iPod music (you should put files to be sent to iPod there)
+* Uses iTunes COM interface to interact with iPod, so further updates to iTunes should not break `foo-tunes`
+
+h2. Motivation
+
+There are lots of iPod sync software on the market but most/all of those use some reverse engineered libraries to access iPod. Major iPod software updates often brake those libs. On the other hand there's a lack of tools that allow precise control on what is done to your music. Among those tools are excellent `foobar2000` media player and its great component for syncing with iPods `foo_dop`. After release of iOS 5 it stopped working, so I decided to write a tool of my own. It uses (and launches) iTunes automatically but minimum effort is required.
+
+h2. Prerequisites
+
+* Windows (tested on Windows XP)
+* "iTunes 10.5.2+":http://www.apple.com/itunes/download/
+* "foobar2000 1.1.10+":http://www.foobar2000.org/download
+* run `prerequisites/register.bat` to register dll component allowing reading data from clipboard
+* install these foobar2000 components and set them up as below
+** "Masstagger 1.8.4":http://www.foobar2000.org/components/view/foo_masstag
+** "Run Command 1.1":http://www.foobar2000.org/components/view/foo_runcmd
+** "Playback Statistics 3.0.2":http://www.foobar2000.org/components/view/foo_playcount
+** "Text Tools 1.0.5":http://www.foobar2000.org/components/view/foo_texttools
+* in foobar2000 create command named `iTunesSync` for the `foo_texttools` plugin with the following content:
+
+<pre>
+{"Location": "%path%", "Rating": "%rating%", "PlayedCount": "%play_count%", "PlayedDate": "%last_played%", "DateAdded": "%added%"},
+</pre>
+
+h2. Internals
+
+Main script is `foo-tunes.js` (modify variables in the first lines - at least `musicTrackedPath`, `musicNotTrackedPath` and `foobar2000Path`). Run it with `sync.cmd`.
+
+You can pretty easily find what's going on under the covers by examining `foo-tunes.js` - there's only very high level logic (for deep internals see files located in `inc` and `lib` folders).
+
+Feel free to modify sources and see what happens. I use "oleview":http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=7007 tool to explore iTunes COM interfaces. I'll be pleased to know if you can find a better/cleaner/faster way to do things this script performs.
+
+h2. Recommended workflow
+
+Set up foobar2000 converter component to convert music to `musicNotTrackedPath` folder (or file operations component if you do not want to convert - but I recommend using Nero AAC Encoder as aac provides better quality at a lower bitrate than mp3). Do not forget to copy *.jpg along with music files (there is such option in converter).
+
+Actually you may not use a separate folder but in this case your tags will get modifed by `foo-tunes` (album art added if none, tags mapped if set and playback statistics is first synced to file tags and then imported). Also I would not expect iTunes not to mess up with your library. So keeping a separate folder is a way to go.
+
+Add `musicTrackedPath` as foobar2000 media library folder. This is required if you wish to sync playback statistics with iPod. Stats is synced based on full filename and internal iTunes track id (see `foo-tunes-db.txt` generated after sync).
+
+Before syncing all files are moved from `musicNotTrackedPath` to `musicTrackedPath` and when sync is over back to `musicNotTrackedPath` so you won't see duplicates in your foobar2000 library.
+
+h2. Changelog
+
+* "0.0.2":https://github.com/kompot/foo-tunes/issues?milestone=1&state=closed Fixed file system compatibility bugs and made database preserving more robust.
+* 0.0.1 First public version. Lots of bugs are to be found and fixed. Use with caution.

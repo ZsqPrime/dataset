@@ -1,0 +1,13 @@
+A bukkit Plugin for Minecraft Servers:
+This plugin lets you broadcast messages from the server. With style.
+
+Download the plugin http://dev.bukkit.org/server-mods/tcaster/
+
+Project Description:
+A bukkit plugin that lets you broadcast a server-wide message, but with a custom name, and not [Server].
+
+README:
+A bukkit Plugin for Minecraft Servers:
+This plugin lets you broadcast messages from the server. With style.
+
+Download the plugin http://dev.bukkit.org/server-mods/tcaster/

@@ -1,0 +1,22 @@
+= rollout_rest_api
+
+A sinatra app that exposes a REST API for rollout.
+
+== Copyright
+
+Copyright (c) 2012 James Golick. See LICENSE.txt for
+further details.
+
+
+Project Description:
+A sinatra app that exposes a REST API for rollout.
+
+README:
+= rollout_rest_api
+
+A sinatra app that exposes a REST API for rollout.
+
+== Copyright
+
+Copyright (c) 2012 James Golick. See LICENSE.txt for
+further details.

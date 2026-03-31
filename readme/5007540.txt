@@ -1,0 +1,4 @@
+Project Description:
+Turbogears website for social experiment in which participants play the Ultimatum economic game (and possibly the Dictator game).
+
+README:

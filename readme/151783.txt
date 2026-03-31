@@ -1,0 +1,15 @@
+Works on ruby 1.8.7 (2010-04-19 patchlevel 253) [x86_64-linux] 
+Non use any frame work small web app for study to Ruby.
+
+1. $ruby rdiet.rb
+2. Access to http://localhost/rdiet.rb
+
+Project Description:
+[Pure ruby] Manage calorie and foods. I was challenge the Rails one day, work the sample. To start developing at that time just finally, I noticed that I do not know Ruby.
+
+README:
+Works on ruby 1.8.7 (2010-04-19 patchlevel 253) [x86_64-linux] 
+Non use any frame work small web app for study to Ruby.
+
+1. $ruby rdiet.rb
+2. Access to http://localhost/rdiet.rb

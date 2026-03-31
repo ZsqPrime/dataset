@@ -1,0 +1,5 @@
+Project Description:
+BLAST algorithm using Parallel Java
+
+README:
+Parallel Java version of BLAST

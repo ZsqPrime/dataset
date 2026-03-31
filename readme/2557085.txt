@@ -1,0 +1,7 @@
+Project Description:
+CMS based on Rails engines
+
+README:
+= EtabliocmsCore
+
+This project rocks and uses MIT-LICENSE.

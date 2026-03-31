@@ -1,0 +1,54 @@
+[![Build Status](https://secure.travis-ci.org/ka8725/neday.png)](http://travis-ci.org/ka8725/neday)
+
+# Neday
+This is a social network wich helps to organize sport events. You can
+manage your events, find opponents and etc.
+
+## Requirements
+
+- postgresql
+- ruby 1.9.3
+
+## Installation
+- clone repository
+- create config for **database.yml**
+- `bundle install`
+- `bundle exec rake db:create`
+- `bundle exec rake db:migrate`
+- `bundle exec rails s`
+- `bundle exec rake db:seed`
+
+## Test Driven Development (TDD)
+If you are going to make any change please write tests before. Using tests is very simple: just type command `guard` in terminal
+and write tests/code, make any changes and see results of your work in terminal. For every change **guard** will be restart test
+and you can see results immediately in shell.
+
+
+Project Description:
+None
+
+README:
+[![Build Status](https://secure.travis-ci.org/ka8725/neday.png)](http://travis-ci.org/ka8725/neday)
+
+# Neday
+This is a social network wich helps to organize sport events. You can
+manage your events, find opponents and etc.
+
+## Requirements
+
+- postgresql
+- ruby 1.9.3
+
+## Installation
+- clone repository
+- create config for **database.yml**
+- `bundle install`
+- `bundle exec rake db:create`
+- `bundle exec rake db:migrate`
+- `bundle exec rails s`
+- `bundle exec rake db:seed`
+
+## Test Driven Development (TDD)
+If you are going to make any change please write tests before. Using tests is very simple: just type command `guard` in terminal
+and write tests/code, make any changes and see results of your work in terminal. For every change **guard** will be restart test
+and you can see results immediately in shell.

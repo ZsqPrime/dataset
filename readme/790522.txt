@@ -1,0 +1,106 @@
+= vurl.me
+
+A simple URL-shortening app that was live-coded during Jax Code Camp 2007 as part of my Distributed, Rapid Application Development with git and Ruby On Rails talk.
+
+== API Access
+
+Use VURL as your custom URL shortening service in clients like Tweetie. You can submit an html or a json request to the service.
+
+  http://vurl.me/shorten?url=http://mycrazylongurlthat/desperately/needs/shortening
+
+will return a plain text response with the shortened url:
+
+  http://vurl.me/OMG
+
+Or use json:
+
+  http://vurl.me/shorten.json?url=http://mycrazylongurlthat/desperately/needs/shortening
+
+will return a json response with the shortened url:
+
+  {:shortUrl => 'http://vurl.me/OMG'}
+
+Optionally, include an api token to associate the new vurl with your user account:
+
+  http://vurl.me/shorten?url=http://google.com/&api_token=a56fc453
+
+== Tracker
+
+You can view development efforts by visiting Vurl's Tracker project at {http://www.pivotaltracker.com/projects/12552}[http://www.pivotaltracker.com/projects/12552]
+
+== Development requirements
+
+The screenshot code requires the wkthmltoimage executable. You can find more information at the Google Code page (http://vurl.me/TLA). If you don't have wkhtmltoimage the site will work normally, but you won't have any screenshots generated.
+
+Screenshots and metadata are fetched out of process - you'll need redis and resque running to process those. After installing redis, you can start it with the following command:
+
+  redis-server /usr/local/etc/redis.conf
+
+... and run resque via the rake task:
+
+  rake environment resque:work
+
+== Apostles of Veezus and His URL Shortener (or, Credits)
+
+* Credit for the original design goes to Alex Daskalov (@andpersand)
+* Tweetie endpoints graciously donated by Wes Gibbs (@wesgibbs / github: wgibbs)
+* Stats page and bug fixes supplied by Corey Haines (@coreyhaines / github: coreyhaines)
+* Initial implementation of twitter searching by Jim Remsik (@jremsikjr / github: bigtiger)
+* Bugfixes and conversion to bundler by Paul Elliott (@p_elliott / github: paulelliott)
+* Database indexes and performance tuning by Rafa Garcia (@leptom / github: rgo)
+
+
+Project Description:
+Veez's url shortener
+
+README:
+= vurl.me
+
+A simple URL-shortening app that was live-coded during Jax Code Camp 2007 as part of my Distributed, Rapid Application Development with git and Ruby On Rails talk.
+
+== API Access
+
+Use VURL as your custom URL shortening service in clients like Tweetie. You can submit an html or a json request to the service.
+
+  http://vurl.me/shorten?url=http://mycrazylongurlthat/desperately/needs/shortening
+
+will return a plain text response with the shortened url:
+
+  http://vurl.me/OMG
+
+Or use json:
+
+  http://vurl.me/shorten.json?url=http://mycrazylongurlthat/desperately/needs/shortening
+
+will return a json response with the shortened url:
+
+  {:shortUrl => 'http://vurl.me/OMG'}
+
+Optionally, include an api token to associate the new vurl with your user account:
+
+  http://vurl.me/shorten?url=http://google.com/&api_token=a56fc453
+
+== Tracker
+
+You can view development efforts by visiting Vurl's Tracker project at {http://www.pivotaltracker.com/projects/12552}[http://www.pivotaltracker.com/projects/12552]
+
+== Development requirements
+
+The screenshot code requires the wkthmltoimage executable. You can find more information at the Google Code page (http://vurl.me/TLA). If you don't have wkhtmltoimage the site will work normally, but you won't have any screenshots generated.
+
+Screenshots and metadata are fetched out of process - you'll need redis and resque running to process those. After installing redis, you can start it with the following command:
+
+  redis-server /usr/local/etc/redis.conf
+
+... and run resque via the rake task:
+
+  rake environment resque:work
+
+== Apostles of Veezus and His URL Shortener (or, Credits)
+
+* Credit for the original design goes to Alex Daskalov (@andpersand)
+* Tweetie endpoints graciously donated by Wes Gibbs (@wesgibbs / github: wgibbs)
+* Stats page and bug fixes supplied by Corey Haines (@coreyhaines / github: coreyhaines)
+* Initial implementation of twitter searching by Jim Remsik (@jremsikjr / github: bigtiger)
+* Bugfixes and conversion to bundler by Paul Elliott (@p_elliott / github: paulelliott)
+* Database indexes and performance tuning by Rafa Garcia (@leptom / github: rgo)

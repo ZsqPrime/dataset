@@ -1,0 +1,20 @@
+⚠️ **GitHub now automatically [creates a table of contents](https://twitter.com/natfriedman/status/1375430850620256257?s=21) in README.md files!** This repository is now archived — it was actually not longer maintained for 9 years 😉.
+
+# Lengthy
+
+**Lengthy** is a [Google Chrome](https://www.google.com/chrome)/[Chromium](http://www.chromium.org/) extension that adds a table of contents to `README` files on [GitHub](https://github.com/).
+
+## Installation
+
+To install this extension, you can either:
+
+* Install it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/lfcdhodeomecbfhglhjaaknnaffnpgfp)
+* Open a `dist/crx/lengthy-*.crx` file with Google Chrome/Chromium
+* Enable Chrome’s developer mode, click on **Load unpacked extension** and select the `src` directory
+
+## Screenshot
+
+Here is a before/after screenshot of what the table of contents looks like. The table is hidden by default and can be shown by clicking on the arrow in the top-right corner.
+
+![image](http://i.imgur.com/kcRcm.png)
+

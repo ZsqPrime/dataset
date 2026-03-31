@@ -1,0 +1,34 @@
+Project Description:
+A recorder for Perl. A recorder is a 0-conf, simple, logging utility aimed at code debugging.
+
+README:
+EerieSoft-RecThis version 0.01
+==============================
+
+RecThis is a very simple recorder (or wrongly refered to as Logger). It
+is aimed at developers who want a fast debug tool that records messages
+to a file descriptor (or STDERR), including variable dumps. It has a 0-conf
+attitude with the option to set each default option, which aren't many.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  Data::Dumper
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2012 by EerieSoftronics
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.12.3 or,
+at your option, any later version of Perl 5 you may have available.

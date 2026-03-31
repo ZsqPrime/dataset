@@ -1,0 +1,94 @@
+= Ngineer
+
+Ngineer is a configuration and management tool for Rack applications using Nginx and Foreman.
+
+== Requirements
+
+https://github.com/mxcl/homebrew/wiki/installation
+
+The gem is tested with:
+
+* Ruby (MRI) 2.0.0
+* Ruby (MRI) 1.9.3
+* Ruby (MRI) 1.9.2
+* Ruby (MRI) 1.8.7
+* Ruby (REE) 1.8.7
+* JRuby 1.7.2
+* Rubinius 1.2.4
+
+== Required
+
+  brew install nginx
+
+== Optional
+
+  brew install solr redis memcached imagemagick couchdb mongodb cassandra mysql postgres
+
+== Installation
+
+  gem install ngineer
+  ngineer initialize
+
+== Usage
+
+  cd ~/Sites/cookie.monster
+  ngineer link --as cookie.monster
+  open https://cookie.monster/
+
+== Status
+
+{<img src="http://travis-ci.org/ksylvest/ngineer.png" />}[http://travis-ci.org/ksylvest/ngineer]
+
+== Copyright
+
+Copyright (c) 2010 - 2012 Kevin Sylvestre. See LICENSE for details.
+
+
+Project Description:
+A configuration and management tool for Rack applications using Nginx and Foreman.
+
+README:
+= Ngineer
+
+Ngineer is a configuration and management tool for Rack applications using Nginx and Foreman.
+
+== Requirements
+
+https://github.com/mxcl/homebrew/wiki/installation
+
+The gem is tested with:
+
+* Ruby (MRI) 2.0.0
+* Ruby (MRI) 1.9.3
+* Ruby (MRI) 1.9.2
+* Ruby (MRI) 1.8.7
+* Ruby (REE) 1.8.7
+* JRuby 1.7.2
+* Rubinius 1.2.4
+
+== Required
+
+  brew install nginx
+
+== Optional
+
+  brew install solr redis memcached imagemagick couchdb mongodb cassandra mysql postgres
+
+== Installation
+
+  gem install ngineer
+  ngineer initialize
+
+== Usage
+
+  cd ~/Sites/cookie.monster
+  ngineer link --as cookie.monster
+  open https://cookie.monster/
+
+== Status
+
+{<img src="http://travis-ci.org/ksylvest/ngineer.png" />}[http://travis-ci.org/ksylvest/ngineer]
+
+== Copyright
+
+Copyright (c) 2010 - 2012 Kevin Sylvestre. See LICENSE for details.

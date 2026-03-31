@@ -1,0 +1,7 @@
+This repository contains publicly available documents regarding the Bridges Laboratory.
+
+Project Description:
+None
+
+README:
+This repository contains publicly available documents regarding the Bridges Laboratory.

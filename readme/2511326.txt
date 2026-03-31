@@ -1,0 +1,8 @@
+This is an attempt to design a HTML5 based framework that allows you rapidly create native applications that embed html5 pages. The applications should be cross-platform or easily portable.
+
+
+Project Description:
+A quick and dirty way to use HTML5 in native apps
+
+README:
+This is an attempt to design a HTML5 based framework that allows you rapidly create native applications that embed html5 pages. The applications should be cross-platform or easily portable.

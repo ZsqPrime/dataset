@@ -1,0 +1,14 @@
+Project Description:
+Generating all the roads for you since 2012
+
+README:
+Make a map just like this one:
+
+![roads](http://propublica.github.com/simple-tiles/docs/us-roads.png)
+
+Usage:
+
+    $ sh ./gimme-streets.sh
+    $ sh ./gimme-database.sh
+    $ make
+    $ ./all_roads

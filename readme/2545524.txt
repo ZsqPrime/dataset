@@ -1,0 +1,4 @@
+Project Description:
+A tool to automate primer design for ChIP-PCR, using BioPython
+
+README:

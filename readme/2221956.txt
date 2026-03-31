@@ -1,0 +1,8 @@
+Putting together the basics for a dxf generation project using the dxfwrite library
+
+
+Project Description:
+dxf generation project
+
+README:
+Putting together the basics for a dxf generation project using the dxfwrite library

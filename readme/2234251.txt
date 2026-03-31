@@ -1,0 +1,20 @@
+# ffinder - Files Finder
+# started by gogoprog @ gmail . com
+
+## Description
+
+ffinder filters recursively files from a directory and open them with specified launcher.
+
+
+
+
+Project Description:
+Files finder and launcher
+
+README:
+# ffinder - Files Finder
+# started by gogoprog @ gmail . com
+
+## Description
+
+ffinder filters recursively files from a directory and open them with specified launcher.

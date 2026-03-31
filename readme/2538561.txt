@@ -1,0 +1,22 @@
+Project Description:
+Xplosive CTF bukkit plugin
+
+README:
+--------------------------------
+--- BOMBERMINE Bukkit plugin ---
+--------------------------------
+
+VERSION 0.2
+	Game:
+	* Each team owns colored block of wool (a.k.a flag)
+	* Configure home and team spawns
+	* Players can interract with flags (pick up & drop on death)
+	
+VERSION 0.1
+	Game:
+	* Join a team manualy or with autobalance
+	* Cooldown respawn
+	
+	Features:
+	* Explosives Traps with chaining
+	* Sprint accelerator blocs

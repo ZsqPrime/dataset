@@ -1,0 +1,95 @@
+Project Description:
+
+
+README:
+Random tools for interacting with a Condor pool -
+
+job_rates.sh will give exit rate information, providing information
+about how many jobs are completed by a condor_schedd per second, and
+if the schedd is getting backed up.
+
+LogTimeGap.awk will find gaps in log files, typically not something
+you'll see in a busy pool. Try using it with tail -F.
+
+NegotiatorLog.awk will provide performance information for a
+negotiation cycle. Note, in versions of Condor >=7.6, many of these
+statistics can be found on the condor_negotiator's ad, via
+condor_status -negotiator -long.
+
+utilization.sh will calculate pool utilization from slot data. For
+example,
+          Unavailable Available    Total     Used:  Avail   Total
+   Slots         5857      5597    11454     4766  85.15%  41.60%
+   Cpus          6339      5913    12252     5087  86.03%  41.51%
+   Memory    14330280  11786518 26116798 10698334  90.76%  40.96%
+
+utilization_for_opentsdb.sh generates the same data as utilization.sh,
+but provides it in a form suitable for publishing to OpenTSDB
+(http://opentsdb.net).
+
+clock_skew.sh will display machines whose clock skew is outside a 60
+second window from the Collector. NTP is your friend.
+
+limits_usage.sh will display concurrency limits that are in use and
+information about their usage.
+
+group_share.sh will display current AccountingGroup usage from slot
+data. For example,
+   Used ( Avail) Group
+      2 ( 0.73%) 
+      3 ( 1.09%) jane.lover
+     10 ( 3.65%) jane.hater
+     15 ( 5.47%) jeff.freakout
+     19 ( 6.93%) sally.normal
+     20 ( 7.30%) patrick.normal
+     21 ( 7.66%) steve.normal
+     24 ( 8.76%) jane.mad
+     61 (22.26%) steve.longwinded
+     63 (22.99%) susan.normal
+    238  86.86% - Total
+
+condor_jobrates will display statistics for condor_schedds with
+running jobs in a pool. For example,
+          Schedd    Job    Job    Current Historical    Current Historical
+                 Starts  Compl   Runtimes   Runtimes   Idletime   Idletime
+                   /sec   /sec      (sec)      (sec)      (sec)      (sec)
+    eeyore.local   3.95   4.38       36.7       45.5        8.8      990.4
+
+schedd_stats_for_opentsdb.sh generates the condor_jobrates data, plus
+total idle/running/held counts, and provides it in a form suitable for
+publishing to OpenTSDB (http://opentsdb.net).
+
+group_line.rb will display AccountingGroup usage, combined with
+configured shares and current job load. For example,
+  Group          Used    Avail   Config     Diff    Idle
+  sally            68   27.31%     0.0%    27.31       0 *
+   `-normal        68  100.00%     0.0%   100.00       0 *
+  susan            26   10.44%     0.0%    10.44       0 *
+   `-normal        26  100.00%     0.0%   100.00       0 *
+  steve            25   10.04%    33.0%   -22.96      24 
+   `-normal         9   36.00%     0.0%    36.00      24 *
+   `-longwinded    16   64.00%     0.0%    64.00       0 *
+  php               0    0.00%     7.0%    -7.00       0 
+  java              0    0.00%     8.0%    -8.00       0 
+  jane             34   13.65%     0.0%    13.65      37 *
+   `-lover          0    0.00%     0.0%     0.00       0 *
+   `-normal        11   32.35%     0.0%    32.35       0 *
+   `-mad           23   67.65%     0.0%    67.65       0 *
+   `-hater          0    0.00%     0.0%     0.00      37 *
+  cpp               0    0.00%     4.0%    -4.00       0 
+   `-new            0    0.00%    25.0%   -25.00       0 
+   `-old            0    0.00%    75.0%   -75.00       0 
+  c                 0    0.00%     7.0%    -7.00       0 
+  jeff             16    6.43%     0.0%     6.43      12 *
+   `-freakout      10   62.50%     0.0%    62.50       0 *
+   `-awkward        6   37.50%     0.0%    37.50      12 *
+  patrick          18    7.23%     0.0%     7.23       0 *
+   `-normal        18  100.00%     0.0%   100.00       0 *
+  python            0    0.00%     9.0%    -9.00       0 
+  javascript        0    0.00%    20.0%   -20.00       0 
+  perl              0    0.00%     5.0%    -5.00       0 
+  ruby              0    0.00%    15.0%   -15.00       0 
+   `-fancy          0    0.00%    50.0%   -50.00       0 
+  shell             0    0.00%     8.0%    -8.00       0 
+          Total   187   75.10%                        74
+  * = no quota defined, freeloader

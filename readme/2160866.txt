@@ -1,0 +1,10 @@
+# DTUBeerMachine
+Se [wiki'en](https://github.com/izym/BeerMachine/wiki) for information.
+
+Project Description:
+A beer service program for the introduction trips on DTU
+
+README:
+# DTUBeerMachine
+
+Se [wiki'en](https://github.com/izym/BeerMachine/wiki) for information.

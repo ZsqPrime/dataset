@@ -1,0 +1,8 @@
+Project Description:
+Knite's dotvim
+
+README:
+Still recursing!
+My vim add on heavily copied from everyone.
+
+No copyrights.

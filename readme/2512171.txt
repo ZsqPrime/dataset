@@ -1,0 +1,9 @@
+IMAP email client developed in ruby on rails..
+by Rq Bukhari
+
+Project Description:
+A ruby on rails email client
+
+README:
+IMAP email client developed in ruby on rails..
+by Rq Bukhari

@@ -1,0 +1,8 @@
+http://slinq.com/software/fadeover
+
+
+Project Description:
+Mouseover effect with fades
+
+README:
+http://slinq.com/software/fadeover

@@ -1,0 +1,5 @@
+Project Description:
+information retrieval: homework 1
+
+README:
+#MSCI 541: Information Retrieval Homework 1

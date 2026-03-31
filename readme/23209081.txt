@@ -1,0 +1,5 @@
+Project Description:
+Shows how to host many WCF services in one Windows managed service, base address is shared
+
+README:
+This project shows how to host multiple WCF services in one Windows managed service and how to share base address

@@ -1,0 +1,4 @@
+Project Description:
+Python 2.4 spec file for centos6
+
+README:

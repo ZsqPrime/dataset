@@ -1,0 +1,5 @@
+Project Description:
+This repository contains config files I use on multiple computers. Config files for vim, unicorn, nginx and others
+
+README:
+Some common config files. Noting special here

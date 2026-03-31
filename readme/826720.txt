@@ -1,0 +1,5 @@
+Project Description:
+Picture gallery with backend section to manage images and text.
+
+README:
+This file was created by JetBrains PhpStorm 3.0 for binding GitHub repository

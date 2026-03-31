@@ -1,0 +1,5 @@
+Project Description:
+jQuery based JavaScript Shell with AJAX backend
+
+README:
+Naive jQuery based interactive shell using AJAX to execute server-side commands.

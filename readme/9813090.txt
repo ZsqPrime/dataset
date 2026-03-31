@@ -1,0 +1,5 @@
+Project Description:
+Linux Handbrake batch encode shell script
+
+README:
+Scripts and bits...

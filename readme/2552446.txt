@@ -1,0 +1,5 @@
+Project Description:
+Distributed event emission over TCP with autodiscovery via mDNS or Redis
+
+README:
+![](http://i.imgur.com/TJEJp.gif)

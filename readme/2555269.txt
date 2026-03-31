@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+This is homework project for programming languages course in SpbAU.
+Participants: Sorokin Artem, Korovin Alexey, Opeykin Alexander, Bandurin Dmitry, Savelev Vladislav.

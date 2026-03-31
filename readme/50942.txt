@@ -1,0 +1,8 @@
+little exe to transform .net config files using web config transform syntax
+
+
+Project Description:
+little exe to transform .net config files using web config transform syntax
+
+README:
+little exe to transform .net config files using web config transform syntax

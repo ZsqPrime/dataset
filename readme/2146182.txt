@@ -1,0 +1,10 @@
+Crossword Mojo is web based object-oriented crossword generator written in Perl.
+It supports UTF-8 encoding and word database loading from MySQL or text source.
+
+
+Project Description:
+
+
+README:
+Crossword Mojo is web based object-oriented crossword generator written in Perl.
+It supports UTF-8 encoding and word database loading from MySQL or text source.

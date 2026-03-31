@@ -1,0 +1,5 @@
+Project Description:
+Ciprian Mocanu's fantastic OO-MySQL connector
+
+README:
+Based on Ciprian Mocanu's fantastic object-oriented MySQL PHP class. Dead simple, dead elegant.

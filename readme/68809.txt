@@ -1,0 +1,14 @@
+OSMViewer
+=========
+
+Offline iOS openstreetmap (OSM) map viewer. View openstreetmap.org maps offline.
+
+
+Project Description:
+Offline iOS openstreetmap (OSM) map viewer. View openstreetmap.org maps offline.
+
+README:
+OSMViewer
+=========
+
+Offline iOS openstreetmap (OSM) map viewer. View openstreetmap.org maps offline.

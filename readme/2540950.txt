@@ -1,0 +1,4 @@
+Project Description:
+Drupal 7 module[s]: Verdant Share rideshare and perhaps other sharing for events
+
+README:

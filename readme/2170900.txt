@@ -1,0 +1,9 @@
+--== 1816 Scouting - Data Entry ==--
+A Scouting program in development for 1816
+
+Project Description:
+
+
+README:
+--== 1816 Scouting - Data Entry ==--
+A Scouting program in development for 1816

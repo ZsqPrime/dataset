@@ -1,0 +1,25 @@
+Check out from git and add as a project in Eclipse and enable Maven dependency management, you should be able to start a REPL in server.clj and have your app load up on localhost:8080
+
+Requirements:
+
+Eclipse
+
+Maven and M2 Eclipse plugin
+
+Counterclockwise plugin
+
+
+
+Project Description:
+Template for a Noir app for Eclipse and Counterclockwise
+
+README:
+Check out from git and add as a project in Eclipse and enable Maven dependency management, you should be able to start a REPL in server.clj and have your app load up on localhost:8080
+
+Requirements:
+
+Eclipse
+
+Maven and M2 Eclipse plugin
+
+Counterclockwise plugin

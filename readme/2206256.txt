@@ -1,0 +1,16 @@
+slingrpm
+========
+
+a lightweight manager for pushing, removing, and promoting rpms in a remote
+yum repository
+
+
+Project Description:
+Sling RPMS around like a mo
+
+README:
+slingrpm
+========
+
+a lightweight manager for pushing, removing, and promoting rpms in a remote
+yum repository

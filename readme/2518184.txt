@@ -1,0 +1,14 @@
+
+WIP
+
+[![Build Status](https://secure.travis-ci.org/dodo/node-valvestream.png)](http://travis-ci.org/dodo/node-valvestream)
+
+
+Project Description:
+control data flow of a stream at a single point
+
+README:
+
+WIP
+
+[![Build Status](https://secure.travis-ci.org/dodo/node-valvestream.png)](http://travis-ci.org/dodo/node-valvestream)

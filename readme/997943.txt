@@ -1,0 +1,6 @@
+
+
+Project Description:
+Connection Pooling Library for Apache NMS
+
+README:

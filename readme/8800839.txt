@@ -1,0 +1,8 @@
+Project Description:
+Port of the Ravenscar runtime on a stm32f4 discovery board
+
+README:
+To build and install gcc/ravenscar for stm32f4 DISCOVERY Board, update the
+installation path in Makefile (first line) and run "make".
+
+For more information, see http://www.telecom-robotics.org/

@@ -1,0 +1,22 @@
+This repo contains all the prepared documents for the "Smart Email using automatic
+email classification and email thread summarization"
+The collaborators:
+1) Ahmed El-Sharkasy
+2) Ahmed Kotb
+3) Amr Sharaf
+4) Mohammad Kotb
+5) Moustafa Mahmoud
+
+
+Project Description:
+
+
+README:
+This repo contains all the prepared documents for the "Smart Email using automatic
+email classification and email thread summarization"
+The collaborators:
+1) Ahmed El-Sharkasy
+2) Ahmed Kotb
+3) Amr Sharaf
+4) Mohammad Kotb
+5) Moustafa Mahmoud

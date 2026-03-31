@@ -1,0 +1,19 @@
+Terradue trax components 
+
+= Data casting, schemas and transformations  =
+
+This project presents a set of transient services to perform data casting, validate feeds and perform transformations.
+It focuses on geo-spatial data and OGC Services.
+
+
+
+Project Description:
+XSL transformations: from dclite4g-RDF to ATOM, OGC Web Services Capabilities to RDF, ATOM to JSON, ISO19115/19 to ATOM and much more  
+
+README:
+Terradue trax components 
+
+= Data casting, schemas and transformations  =
+
+This project presents a set of transient services to perform data casting, validate feeds and perform transformations.
+It focuses on geo-spatial data and OGC Services.

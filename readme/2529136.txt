@@ -1,0 +1,5 @@
+Project Description:
+grails application for the storage of a/v metadata
+
+README:
+AVCore is a datastore for audiovisual metadata. It is based on pbCore and implemented in Grails.

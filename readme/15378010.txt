@@ -1,0 +1,6 @@
+Project Description:
+OLD ACCOUNTS TOOL -- replaced by https://github.com/ocf/ocfweb
+
+README:
+# Old Account Tools
+## See [ocfweb](https://github.com/ocf/ocfweb) for its replacement.

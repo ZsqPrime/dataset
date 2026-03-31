@@ -1,0 +1,6 @@
+Project Description:
+Sphinx theme in black and white colours.
+
+README:
+Minimalistic theme for Sphinx documentation tool. See
+http://jsonpublish.readthedocs.org/ for the example.

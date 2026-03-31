@@ -1,0 +1,5 @@
+Project Description:
+Django comments app
+
+README:
+A django comments app.

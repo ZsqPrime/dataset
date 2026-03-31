@@ -1,0 +1,14 @@
+Dive into C++11 community book
+==============================
+
+A small book for learning how to use the new features of C++11
+
+
+Project Description:
+Book to describe the C++11 features
+
+README:
+Dive into C++11 community book
+==============================
+
+A small book for learning how to use the new features of C++11

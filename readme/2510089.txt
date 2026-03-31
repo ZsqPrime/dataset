@@ -1,0 +1,11 @@
+Implementation of server application storing scrobbling data using Spring-data + JPA2.
+
+NOTE: DOES NOT WORK YET. Work in progress.
+
+Project Description:
+Server side, Spring-based interface for handling data from Spotify scrobbler app
+
+README:
+Implementation of server application storing scrobbling data using Spring-data + JPA2.
+
+NOTE: DOES NOT WORK YET. Work in progress.

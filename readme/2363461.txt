@@ -1,0 +1,16 @@
+This is the senseo add-on.  It contains:
+
+* A program (lib/main.js).
+* A few tests.
+* Some meager documentation.
+
+
+Project Description:
+SenSEO Firefox Extension
+
+README:
+This is the senseo add-on.  It contains:
+
+* A program (lib/main.js).
+* A few tests.
+* Some meager documentation.

@@ -1,0 +1,74 @@
+# OMF
+
+[![Build Status](http://img.shields.io/travis/mytestbed/omf.svg?style=flat)](http://travis-ci.org/mytestbed/omf)
+![Gem Version](http://img.shields.io/gem/v/omf_common.svg?style=flat)
+
+## Note
+
+_This is OMF version 6. If are looking for the previous generation of OMF (5.x), please see the installation guides [here](https://omf.orbit-lab.org/wiki/OMF)_.
+
+## Introduction to OMF
+
+OMF is a framework for controlling, instrumenting, and managing experimental platforms (testbeds).
+
+* Researchers use OMF to describe, instrument, and execute their experiments.
+
+* Testbed providers use OMF to make their resources discoverable, control access to them, optimise their utilisation through virtualisation, and federation with other testbeds.
+
+Please visit our [official website](https://omf.orbit-lab.org) for more information.
+
+##  Installation
+
+Follow our detailed {file:doc/INSTALLATION.mkd Installation Guide}.
+
+## Developers
+
+Design documents and developer tutorials are available in our {file:doc/DEVELOPERS.mkd Developer Guide}. OMF is a community effort, and we welcome your contributions. Please refer to the {file:doc/CONTRIBUTING.mkd Contribution Guide} on how to participate.
+
+## Support
+
+If you find a bug, please send your bug report [via email](mailto:omf-issues@orbit-lab.org) (does not require an account). Please attach log files and describe which version of OMF and what platform you are using.
+
+## License & Copyright
+
+{file:LICENSE.mkd}
+
+
+Project Description:
+OMF is a Testbed Control, Measurement and Management Framework
+
+README:
+# OMF
+
+[![Build Status](http://img.shields.io/travis/mytestbed/omf.svg?style=flat)](http://travis-ci.org/mytestbed/omf)
+![Gem Version](http://img.shields.io/gem/v/omf_common.svg?style=flat)
+
+## Note
+
+_This is OMF version 6. If are looking for the previous generation of OMF (5.x), please see the installation guides [here](https://omf.orbit-lab.org/wiki/OMF)_.
+
+## Introduction to OMF
+
+OMF is a framework for controlling, instrumenting, and managing experimental platforms (testbeds).
+
+* Researchers use OMF to describe, instrument, and execute their experiments.
+
+* Testbed providers use OMF to make their resources discoverable, control access to them, optimise their utilisation through virtualisation, and federation with other testbeds.
+
+Please visit our [official website](https://omf.orbit-lab.org) for more information.
+
+##  Installation
+
+Follow our detailed {file:doc/INSTALLATION.mkd Installation Guide}.
+
+## Developers
+
+Design documents and developer tutorials are available in our {file:doc/DEVELOPERS.mkd Developer Guide}. OMF is a community effort, and we welcome your contributions. Please refer to the {file:doc/CONTRIBUTING.mkd Contribution Guide} on how to participate.
+
+## Support
+
+If you find a bug, please send your bug report [via email](mailto:omf-issues@orbit-lab.org) (does not require an account). Please attach log files and describe which version of OMF and what platform you are using.
+
+## License & Copyright
+
+{file:LICENSE.mkd}

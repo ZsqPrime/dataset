@@ -1,0 +1,35 @@
+Project Description:
+Code for analyzing language variation in the OLdPhras-project
+
+README:
+Baumgartner/Hafner/Marques
+
+Dateien:
+--------
+* korpus_bastler.py: Erstellt aus XML-Dateien der Digitalen Bibliothek Literatur Korpora in rund 50-Jahresabschnitten (ohne Gedichte)
+** Ressourcen: http://www.textgrid.de/fileadmin/TextGrid/digitale-bibliothek/Digitale-Bibliothek-Literatur-nur-Texte.zip
+* korpus_splitter.py: Erstellt kreuzvalidierte Dateien aus den oben generierten Korpora, mit Testsätzen:Trainingssätzen im Verhältnis
+20:80
+* langMod.py: Betreibt Sprachidentifikation mit n-gram-Modellen (1-6, wort- und zeichenbasiert)
+** auch eine nimrod-Implementation für mehr Speed verfügbar
+* .nim-Files: Erledigt die Arbeit von langMod.py - aber in Nimrod
+
+Verwendung 1 (mit Nimrod-Code; schneller):
+------------------------------------------
+1. wget http://www.textgrid.de/fileadmin/TextGrid/digitale-bibliothek/Digitale-Bibliothek-Literatur-nur-Texte.zip
+2. unzip Digitale-Bibliothek-Literatur-nur-Texte.zip
+3. ./korpus_bastler.py Digitale-Bibliothek-Literatur
+4. ./korpus_splitter.py 10 # default-mässig: 10-fache Kreuzvalidierung
+5. nimrod installieren (sehe https://github.com/Araq/Nimrod/wiki/Bootstrapping )
+6. nimrod c korpusgenerator
+7. nimrod c evaluator
+8. optional: nimrod ist nicht unicode-aware, aber sollte eigentlich keine so grosse Rolle spielen
+  for file in {train,test}*; do iconv -f utf8 -t ISO-8859-1 -c < $file | sponge > $file; done
+9. ./evaluator
+10. grep correct result* # es wird jedes Resultat einzeln gedumpt, für weitere Analysen
+
+Verwendung 2 (nur mit Python-Code; weniger schnell):
+----------------------------------------------------
+1. bis 4. wie oben
+5. ./langMod.py schaffePyObj # Genaues Argument egal
+6. ./langMod.py # Ohne Argument; liefert Ergebnisse

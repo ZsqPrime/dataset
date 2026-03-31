@@ -1,0 +1,16 @@
+ATTENTION
+=======
+This Project does not exist anymore. 
+
+Please use https://github.com/tabacha/ProSafeLinux instead.
+
+
+Project Description:
+Client to Configure Netgear Prosafe Plus Switches
+
+README:
+ATTENTION
+=======
+This Project does not exist anymore. 
+
+Please use https://github.com/tabacha/ProSafeLinux instead.

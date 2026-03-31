@@ -1,0 +1,13 @@
+Project Description:
+This toolkit provides wrapper methods to invoke the Box.net REST API.  Provides method for downloading,uploading,collaboration contactinfo,adding new user and many more
+
+README:
+==========================
+Apex-Library-for-Box-API
+==========================
+==================================================================================================================
+Description : This toolkit provides wrapper methods to invoke the Box.net REST API. 
+			 Provides method for downloading,uploading,collaboration contactinfo,adding new user and many more
+			 
+Installation URL : https://login.salesforce.com/packaging/installPackage.apexp?p0=04t900000009SS5
+==================================================================================================================

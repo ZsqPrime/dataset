@@ -1,0 +1,260 @@
+Project Description:
+Google Chrome-style tabbed panes for Java!
+
+README:
+     ___________________
+
+____/ Welcome to Jhrome \__________________________________________________
+
+
+
+This is Jhrome, a Google Chrome-style tabbed pane library for Java.
+
+
+
+     ______________
+
+____/ License Info \_______________________________________________________
+
+
+
+Jhrome is free software: you can redistribute it and/or modify
+
+it under the terms of the GNU Lesser General Public License as published by
+
+the Free Software Foundation, either version 3 of the License, or
+
+(at your option) any later version.
+
+
+
+Jhrome is distributed in the hope that it will be useful,
+
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+
+GNU Lesser General Public License for more details.
+
+
+
+You should have received a copy of the GNU Lesser General Public License
+
+along with Jhrome.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+     _________________
+
+____/ Getting Started \____________________________________________________
+
+
+
+See org/sexydock/tabs/demos/GettingStarted.java.  Here's a snippet:
+
+
+
+// To turn on Google Chrome-style tabs for all JTabbedPanes in an existing
+
+// application, simply put the following code in your application startup:
+
+
+
+UIManager.getDefaults( ).put( "TabbedPaneUI" , JhromeTabbedPaneUI.class.getName( ) );
+
+
+
+final JTabbedPane tabbedPane = new JTabbedPane( );
+
+
+
+// Or, just set the tabbed pane's UI directly:
+
+
+
+tabbedPane.setUI( new JhromeTabbedPaneUI( ) );
+
+
+
+// Now the tabbed pane will look like Google Chrome, but besides letting
+
+// you reorder its tabs, it won't let you do anything special beyond
+
+// BasicTabbedPaneUI behavior.
+
+
+
+// To turn on tab close buttons, do this:
+
+
+
+tabbedPane.putClientProperty( JhromeTabbedPaneUI.TAB_CLOSE_BUTTONS_VISIBLE , true );
+
+
+
+// But how to make the window close when the user closes the last tab? Use this:
+
+
+
+tabbedPane.addContainerListener( new DefaultTabsRemovedHandler( ) );
+
+
+
+// To turn on the new tab button, do this:
+
+
+
+tabbedPane.putClientProperty( JhromeTabbedPaneUI.NEW_TAB_BUTTON_VISIBLE , true );
+
+
+
+// Not so fast! The new tab button won't work yet. You have to define how the
+
+// content of new tabs is created. Here's how: (see GettingStarted.java to continue)
+
+
+
+..................
+
+
+
+For an example of a basic full-featured tabbed application, see
+
+org/sexydock/tabs/demos/NotepadDemo.java.
+
+				
+
+To see all examples, run org.sexydock.tabs.demos.SexyTabsDemos.  The program
+
+displays source code for the examples and allows you to launch them.
+
+
+
+If you have other questions, check the Javadocs in org.sexydock.tabs.TabbedPane, 
+
+or send me an e-mail.
+
+ 
+     _______________________________________
+
+____/ Todo / Unsupported functions / Issues \______________________________
+
+
+
+The following are known to be issues:
+
+
+
+-There may be memory leaks caused by JhromeTabbedPaneUI that prevent 
+
+disposed
+
+windows from being garbage collected/allowing the VM to shut down
+
+automatically when the last window is closed.
+
+-The ghost drag image window doesn't work on some systems (as it
+
+depends on AWTUtilities window transparency controls).  I need to add a
+
+check to automatically disable window transparency when not supported.
+
+
+
+The following JTabbedPane functions are currently known to be unsupported
+
+by JhromeTabbedPaneUI:
+
+
+
+-JTabbedPane.setForeground/BackgroundAt( int , Color ) (planned)
+
+-JTabbedPane.addTab( 0 , null ) (not planning to support null tab content)
+
+-keyboard navigation except for mnemonics (arrow keys etc. are not yet 
+
+supported)
+
+-left and right tab placement (planned)
+
+
+
+The following need to be done eventually:
+
+
+
+-A nice TabUI that *doesn't* look like Google Chrome
+
+-Detailed color customization
+
+-Custom tab reordering policies (to allow you to force a specific tab to
+
+stay at one end, etc.
+
+
+
+     ___________
+
+____/ Compiling \__________________________________________________________
+
+
+
+The use of window transparency depends on Java SE 6 Update 10.
+
+
+
+Other than that, if you want to compile src/test, you'll need 
+
+fest-swing-1.2 and its dependencies.  I haven't Mavenized this process yet.
+
+
+
+     ________
+
+____/ Status \_____________________________________________________________
+
+
+
+This project is currently in beta stage.  It works very well, but there are
+
+no automated tests, it needs more documentation, and it needs more polish
+
+in areas like look and feel workflow and allowing access to tab DnD state.
+
+
+
+I'm going ahead and releasing it because I'm quite busy at the moment, and
+
+if I wait until it's polished enough for a first release, well, I'll never
+
+get around to it.  On the other hand, if I do release it now, I'll probably
+
+be more motivated to polish it up in the future.
+
+
+
+The root package is org.sexydock.tabs because I may make an entire docking
+
+framework based around this, if I feel like it.  If so, that framework will
+
+be called SexyDock, and this project will be called SexyTabs, or 
+
+SexyDock.Tabs, or whatever. In the package scheme, Jhrome refers 
+
+specifically to the Google Chrome look in the org.sexydock.jhrome package.  
+
+I'm releasing this project as "Jhrome" because I think the name will catch 
+
+on better.
+
+
+
+     _________
+
+____/ Contact \____________________________________________________________
+
+
+
+Jhrome was created by James ("Andy") Edwards.
+
+e-mail: andy@jedwards.name

@@ -1,0 +1,6 @@
+Project Description:
+Creates graphs and tables bassed on the statusupdates of goodreads http://kirmuriel.alwaysdata.net/
+
+README:
+* Install feed parser
+`npm install feedparser`

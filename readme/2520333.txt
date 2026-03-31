@@ -1,0 +1,148 @@
+= Konjac
+
+A Ruby command-line utility for translating files using a YAML wordlist
+
+Homepage::      http://www.brymck.com
+Documentation:: brymck.github.com/konjac/[http://brymck.github.com/konjac/]
+Author::        Bryan McKelvey
+Copyright::     (c) 2012 Bryan McKelvey
+License::       MIT
+
+== Features
+
+* <b>Fuzzy matching</b> - Konjac can make suggestions for similar words based on
+  their similarity.
+* <b>Whitespace handling</b> - It's still pretty lazy but at least functional
+* <b>One-way translation</b> - For example, you would always convert full-width
+  letters and numbers in Japanese to their half-width counterparts in English.
+  The converse is not necessarily true.
+* <b>Regular expressions</b> - Stuff like
+  <tt>/(\d+)年(\d+)月(\d+)日/\2\/\3\/\1/</tt> (i.e. <tt>1984年11月23日 # =>
+  11/23/1984</tt>)
+* <b>Importing/exporting text from/to Office documents</b> - Currently only
+  working on Mac (support for Word planned, but for *nix it's probably too
+  difficult).
+
+== Installation
+
+=== Stable
+
+With {Ruby}[http://www.ruby-lang.org/en/downloads/] installed, run the
+following in your terminal:
+
+  gem install konjac
+
+=== Development
+
+With Ruby, {Git}[http://help.github.com/set-up-git-redirect] and
+{Bundler}[http://gembundler.com/] installed, navigate in your command line to a
+directory of your choice, then run:
+
+  git clone git://github.com/brymck/konjac.git
+  cd konjac
+  bundle update
+  rake install
+
+== Usage
+
+Translate all text files in the current directory from Japanese into English:
+
+  konjac translate *.txt --from japanese --to english
+  konjac translate *.txt -f ja -t en
+
+Use multiple dictionaries:
+
+  konjac translate financial_report_en.txt --to japanese --using {finance,fluffery}
+  konjac translate financial_report_en.txt -t ja -u {finance,fluffery}
+
+Extract text from a .docx? document (creates a plain-text <tt>test.konjac</tt>
+file from <tt>test.docx</tt>):
+
+  konjac export test.doc
+  konjac export test.docx
+
+Extract text from a .docx document and process with a dictionary
+
+  konjac export test.docx --from japanese --to english --using pre
+  konjac export test.docx -f ja -t en -u pre
+
+Import tags file back into .docx document (for .doc files, this opens the file
+in word and imports the changes; for .docx files this outputs a new file named
+<tt>test_imported.docx</tt>):
+
+  konjac import test.doc
+  konjac import test.docx
+
+Add a word to your dictionary:
+
+  konjac add --original dog --from english --translation 犬 --to japanese
+  konjac add -o dog -f en -r 犬 -t ja
+
+Translate a word using your dictionary:
+
+  konjac translate dog --from english --to japanese --word
+  konjac translate dog -f en -t ja -w
+
+Suggest a word using your dictionary:
+
+  konjac suggest dog --from english --to japanese
+  konjac suggest dog -f en -t ja
+
+=== Ruby
+
+Create a Suggestor object:
+
+  require "konjac"
+  Konjac::Dictionary.add_word :from => :en, :original => "word",
+                              :to => :ja, :translation => "言葉"
+  s = Konjac::Suggestor.new(:en, :ja)
+  s.suggest "word" # => [[1.0, "word", "言葉"]]
+
+== Dictionary Format
+
+Store terms in <tt>~/.konjac/dict.yml</tt>.
+
+<em>Simple (two-way equivalent terms)</em> - English "I" is equivalent to Spanish
+"yo":
+
+  -
+    en: I
+    es: yo
+
+<em>Not as simple</em> - Japanese lacks a plural, therefore both "dog" and "dogs"
+translate as 犬:
+
+  -
+    en: dog
+    ja:
+      ja: 犬
+      en: dogs?
+      regex: true  # i.e. the regular expression /dogs?/
+
+== Documentation
+
+Should be simple enough to generate yourself:
+
+  rm -rf konjac
+  git clone git://github.com/brymck/konjac
+  cd konjac
+  bundle update
+  rake rdoc
+  rm -rf !(doc)
+  mv doc/rdoc/* .
+  rm -rf doc
+
+== Supplementary Stuff
+
+* {Vim plugin}[https://github.com/brymck/konjac_vim]
+* {My dictionaries}[https://github.com/brymck/konjac_yml]
+
+== Name
+
+<em>Hon'yaku</em> means "translation" in Japanese. This utility relies on a
+<b>YAM</b>L wordlist. <em>Konnyaku</em> (Japanese for
+"{konjac}[http://en.wikipedia.org/wiki/Konjac]") rhymes with <em>hon'yaku</em>
+and is a type of <b>yam</b>. Also,
+{Doraemon}[http://en.wikipedia.org/wiki/Doraemon] had something called a
+<em>hon'yaku konnyaku</em> that allowed him to speak every language. IIRC it
+worked with animals too. But I digress.

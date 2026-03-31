@@ -1,0 +1,8 @@
+Project Description:
+sisyphus.ru redirector to packages.altlinux.org
+
+README:
+h1. Welcome
+
+!https://gemnasium.com/biow0lf/sisyphus_ru.svg(Dependency Status)!:https://gemnasium.com/biow0lf/sisyphus_ru
+!https://secure.travis-ci.org/biow0lf/sisyphus_ru.svg(Build Status)!:http://travis-ci.org/biow0lf/sisyphus_ru

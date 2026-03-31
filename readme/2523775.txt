@@ -1,0 +1,24 @@
+Project Description:
+Automagic Migration Interface
+
+README:
+Ami
+===
+
+Introduction goes here.
+
+Example
+=======
+
+> ami!
+
+TODO
+=======
+Find a way to override model generator.
+For now:
+
+cd RAILS_ROOT
+mkdir -p lib/templates/active_record/model/
+cp {vendor/plugins/ami/,}lib/templates/active_record/model/model.rb
+
+Copyright (c) 2011 Marcin Raczkowski, released under the MIT license

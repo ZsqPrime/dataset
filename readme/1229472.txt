@@ -1,0 +1,15 @@
+Project Ansible
+(c) 2011 Elias Karakoulakis <elias.karakoulakis@gmail.com>
+
+A home automation scripting framework for Ruby
+
+
+
+Project Description:
+a home automation scripting framework for Ruby
+
+README:
+Project Ansible
+(c) 2011 Elias Karakoulakis <elias.karakoulakis@gmail.com>
+
+A home automation scripting framework for Ruby

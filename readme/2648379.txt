@@ -1,0 +1,9 @@
+Project Description:
+Mönsterdesignshjälp // Knitting pattern helper
+
+README:
+Stitch
+
+--------------------------------------------------
+
+For designing knitting patterns.

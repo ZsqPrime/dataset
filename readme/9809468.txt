@@ -1,0 +1,12 @@
+Project Description:
+Teach Yourself To Code
+
+README:
+== Teach Yourself To Code
+
+== To Do
+- allow editing of links (edit description, add or remove tags, etc)
+- make Rails error messages completely custom
+- improve insane Tag Load on links#index
+- let users add email
+- meta: write REAL documentation. and comments

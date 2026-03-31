@@ -1,0 +1,12 @@
+Project Description:
+
+
+README:
+Checks to see if your site is running the most up to date version of wordpress.
+
+This likes to break very easily.
+
+Example: python wpgetversion.py -w routescribe.com 3fives.com
+
+Example with email: python wpgetversion.py -e FROM@example.com TO@example.com -w routescribe.com 3fives.com
+This will not send an email if all sites are up to date.

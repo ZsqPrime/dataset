@@ -1,0 +1,16 @@
+Project Description:
+
+
+README:
+
+Ticketee: 
+The Australian slang for a person who checks tickets on trains. 
+
+This project is a ticket-tracking application, and a Rails application, at that.
+
+Design Goals:
+* Track tickets and group them into projects
+* Provide a way to restrict users to certain projects
+* Allow users to upload files to tickets
+* Let users tag tickets so they are easy to find
+* Provide an API on which users can base development of their own applications

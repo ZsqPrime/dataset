@@ -1,0 +1,5 @@
+Project Description:
+various experiments/toy projects that don't deserve a dedicated repo
+
+README:
+hi there

@@ -1,0 +1,47 @@
+Generates Recommendations and Predictions using Collaborative Filtering (CF) 
+Approaches including, Item-based Memory, User-based Memory, SVD Item Based,
+SVD User Based and Incremental SVD.
+
+Copyright (c) 2012 Serdar Yildirim [me@serdaryildirim.com]
+Blog post: http://serdaryildirim.net/ai/recommender-systems-collaborative-filtering-approach.html
+
+licence? MIT
+
+notes
+- MovieLens data files are not included. Only change is made for 100K dataset as follows:
+Value separation characters are changed from space (' ') to "|" (u.data, ua.base, ua.test files)
+
+credits
+MovieLens data: http://www.grouplens.org/node/73
+Incremental SVD Algorithm: http://sifter.org/~simon/journal/20061211.html
+
+requirements
+linalg: This gem should be installed for matrix operations.
+For Mac Os X installation, please check: 
+http://www.quora.com/Installation-Instructions/How-do-I-install-Ruby-linalg-library-on-Mac
+
+Project Description:
+Collaborative Filtering Recommendation System Implementations in Ruby, including SVD and Incremental SVD
+
+README:
+Generates Recommendations and Predictions using Collaborative Filtering (CF) 
+Approaches including, Item-based Memory, User-based Memory, SVD Item Based,
+SVD User Based and Incremental SVD.
+
+Copyright (c) 2012 Serdar Yildirim [me@serdaryildirim.com]
+Blog post: http://serdaryildirim.net/ai/recommender-systems-collaborative-filtering-approach.html
+
+licence? MIT
+
+notes
+- MovieLens data files are not included. Only change is made for 100K dataset as follows:
+Value separation characters are changed from space (' ') to "|" (u.data, ua.base, ua.test files)
+
+credits
+MovieLens data: http://www.grouplens.org/node/73
+Incremental SVD Algorithm: http://sifter.org/~simon/journal/20061211.html
+
+requirements
+linalg: This gem should be installed for matrix operations.
+For Mac Os X installation, please check: 
+http://www.quora.com/Installation-Instructions/How-do-I-install-Ruby-linalg-library-on-Mac

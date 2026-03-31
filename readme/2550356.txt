@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Instructions for usage and initial commit instructions for erlang learning

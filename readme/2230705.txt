@@ -1,0 +1,61 @@
+/////////
+//TO-DO//
+/////////
+   NAVIGATION BAR //Mantas
+    namai
+    proceduru perziura
+    kalendorius
+    nustatymai
+    ????
+    logout
+   
+1. Front page
+	b. Design //????
+	c. Login stuff here too?
+2. User Login/registration - Edvardas
+	a. Fix elements
+	b. Finish functionality (login/register)
+3. Calendar - Edvardas
+	a. Some more CSS
+	b. Javascript functions
+	c. Queries
+4. View Appointments //Petras
+????
+PROFIT
+
+
+
+ADD IT, FIX IT COMMENT IT!
+
+Project Description:
+Belovo savarankiška užduotis
+
+README:
+/////////
+//TO-DO//
+/////////
+   NAVIGATION BAR //Mantas
+    namai
+    proceduru perziura
+    kalendorius
+    nustatymai
+    ????
+    logout
+   
+1. Front page
+	b. Design //????
+	c. Login stuff here too?
+2. User Login/registration - Edvardas
+	a. Fix elements
+	b. Finish functionality (login/register)
+3. Calendar - Edvardas
+	a. Some more CSS
+	b. Javascript functions
+	c. Queries
+4. View Appointments //Petras
+????
+PROFIT
+
+
+
+ADD IT, FIX IT COMMENT IT!

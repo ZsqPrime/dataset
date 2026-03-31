@@ -1,0 +1,5 @@
+Project Description:
+Non-blocking checkpoint/restart library
+
+README:
+libnbcr: Non blocking Checkpint/Restart

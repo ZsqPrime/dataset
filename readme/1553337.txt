@@ -1,0 +1,7 @@
+OpenMRS module for importing IQChart data
+
+Project Description:
+OpenMRS module for importing IQChart data
+
+README:
+OpenMRS module for importing IQChart data

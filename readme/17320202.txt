@@ -1,0 +1,11 @@
+Project Description:
+A 3d game produced by Dixie State College - http://maleficiumgame.com/
+
+README:
+Credits:
+
+UI:
+Michael Byrd
+
+Github configuration:
+Michael Byrd

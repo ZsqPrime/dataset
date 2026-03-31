@@ -1,0 +1,11 @@
+# DEPRECATED
+_These APIs are deprecated and no longer maintained and may be taken down at any moment._
+
+
+Project Description:
+Markit On Demand - Market Data APIs
+
+README:
+# DEPRECATED
+
+_These APIs are deprecated and no longer maintained and may be taken down at any moment._

@@ -1,0 +1,7 @@
+Project Description:
+Talk from The Digital Barn
+
+README:
+# Slides from "Writing Testable PHP"
+
+Talk given at The Digital Barn (http://thedigitalbarn.co.uk/) on 2012-02-11.

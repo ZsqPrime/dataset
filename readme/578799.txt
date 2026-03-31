@@ -1,0 +1,83 @@
+# Instance methods
+
+*	length()
+*	get(index)
+*	find(selector)
+*	each(callback)
+*	delegate(type, callback)
+*	replaceWith()
+*	prepend()
+*	append()
+*	remove()
+*	text()
+*	empty()
+*	value()
+*	html()
+*	getHtml()
+*	getValue()
+*	getText()
+*	addClass()
+*	removeClass()
+*	hasClass()
+*	hide()
+*	show()
+*	css()
+*	on()
+*	off()
+*	click()
+*	attr()
+*	attributes()
+*	data()
+*	isChecked()
+
+# Static methods
+
+*	fn(name, fn)
+*	getStyle(elem, name)
+*	el(tagName, className = false, props = {})
+*	extend(origin, mixedIn)
+*	ready(fn)
+
+Project Description:
+Lightweight dom manipulation library targeted to mobile browsers
+
+README:
+# Instance methods
+
+*	length()
+*	get(index)
+*	find(selector)
+*	each(callback)
+*	delegate(type, callback)
+*	replaceWith()
+*	prepend()
+*	append()
+*	remove()
+*	text()
+*	empty()
+*	value()
+*	html()
+*	getHtml()
+*	getValue()
+*	getText()
+*	addClass()
+*	removeClass()
+*	hasClass()
+*	hide()
+*	show()
+*	css()
+*	on()
+*	off()
+*	click()
+*	attr()
+*	attributes()
+*	data()
+*	isChecked()
+
+# Static methods
+
+*	fn(name, fn)
+*	getStyle(elem, name)
+*	el(tagName, className = false, props = {})
+*	extend(origin, mixedIn)
+*	ready(fn)

@@ -1,0 +1,8 @@
+Common Models in Zelig (candidates for move to core)
+
+
+Project Description:
+Common models (mostly survival)
+
+README:
+Common Models in Zelig (candidates for move to core)

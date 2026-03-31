@@ -1,0 +1,5 @@
+Project Description:
+Companion project to 'HTML5 Games: Creating Fun with HTML5, CSS3, and WebGL'
+
+README:
+Companion project to HTML5 Games: Creating Fun with HTML5, CSS3, and WebGL

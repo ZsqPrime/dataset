@@ -1,0 +1,12 @@
+This extension is only of historical interest and is not actively maintained.
+
+Udacity is now offering official downloads of their lecture videos at https://www.udacity.com/wiki/downloads
+
+
+Project Description:
+A Google Chrome extension to download Udacity.com videos for offline watching
+
+README:
+This extension is only of historical interest and is not actively maintained.
+
+Udacity is now offering official downloads of their lecture videos at https://www.udacity.com/wiki/downloads

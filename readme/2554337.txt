@@ -1,0 +1,7 @@
+Project Description:
+some custom redmine plugin to follow project advancement
+
+README:
+= dncs_opti
+
+Description goes here

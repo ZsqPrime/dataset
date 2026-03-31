@@ -1,0 +1,5 @@
+Project Description:
+An android app to track attendance in multiple subjects
+
+README:
+Attendance tracker app

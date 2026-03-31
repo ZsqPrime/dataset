@@ -1,0 +1,61 @@
+Tekijä:
+
+	Ville Heikkinen
+	ville.heikkinen@cs.helsinki.fi
+	013969523
+
+Aihe: Matopeli
+
+  	Yksinkertainen matopeli. Matopelissä on ainakin yksi pelaaja ja
+	enintään kolme pelaajaa kerrallaan. 
+
+	Pelaajamäärävalinta suoritetaan pelin alkuvalikosta, jossa valintaa
+	muutetaan näppäimistön nuolinäppäimillä, ja säädettäviä määriä, kuten
+	pelaajamäärää ja pelikenttää, vaihdetaan vasemmalla ja oikealla nuolella. 
+
+	Madon on vältettävä törmäämästä pelialueen seiniin, tai omaan
+	vartaloonsa. 
+
+Käyttäjät:
+
+	Maksimissaan kolme peli-intoista pelaaja
+
+Toiminnot:
+
+	Pelaajamäärän valinta
+	Pelikentän valinta
+	Pelin uudelleenaloitus
+
+
+
+Project Description:
+ohjelmoinnin harjoitustyö
+
+README:
+Tekijä:
+
+	Ville Heikkinen
+	ville.heikkinen@cs.helsinki.fi
+	013969523
+
+Aihe: Matopeli
+
+  	Yksinkertainen matopeli. Matopelissä on ainakin yksi pelaaja ja
+	enintään kolme pelaajaa kerrallaan. 
+
+	Pelaajamäärävalinta suoritetaan pelin alkuvalikosta, jossa valintaa
+	muutetaan näppäimistön nuolinäppäimillä, ja säädettäviä määriä, kuten
+	pelaajamäärää ja pelikenttää, vaihdetaan vasemmalla ja oikealla nuolella. 
+
+	Madon on vältettävä törmäämästä pelialueen seiniin, tai omaan
+	vartaloonsa. 
+
+Käyttäjät:
+
+	Maksimissaan kolme peli-intoista pelaaja
+
+Toiminnot:
+
+	Pelaajamäärän valinta
+	Pelikentän valinta
+	Pelin uudelleenaloitus

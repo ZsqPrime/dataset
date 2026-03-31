@@ -1,0 +1,7 @@
+Project Description:
+Java Spring based Dashboard to show what is happening within code bases
+
+README:
+A Project for a Spring based dashboard with Dr Ben Bennett
+ [Shaun Hare]: http://shaunhare.co.uk
+Licence http://shaun.mit-license.org/

@@ -1,0 +1,7 @@
+inthebox toolkit for haxe.
+
+Project Description:
+InTheBox - Haxe Library
+
+README:
+inthebox toolkit for haxe.

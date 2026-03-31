@@ -1,0 +1,10 @@
+# HN: Who is Hiring
+A searchable version of the popular monthly 'Who is Hiring?' threads on Hacker News.
+
+
+Project Description:
+Beautified/Searchable HN Who Is Hiring
+
+README:
+# HN: Who is Hiring
+A searchable version of the popular monthly 'Who is Hiring?' threads on Hacker News.

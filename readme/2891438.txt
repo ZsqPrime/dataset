@@ -1,0 +1,5 @@
+Project Description:
+Конфигурационные файлы для поднятия PHP5 FastCGI и RubyOnRails серверов на базе NginX
+
+README:
+Файлы для поднятия PHP5 FastCGI и RubyOnRails серверов на базе NginX

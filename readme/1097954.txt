@@ -1,0 +1,18 @@
+Project Description:
+DSL for team FC deployment configuration
+
+README:
+CONFIGURATION PARAMETERS:
+  - module: IMBS, IMAS, QS
+  - item: conf, data, bin
+  - group: ps, ns
+  - platform: e0, e1 ... e<n>
+
+FC CONFIG TERMS:
+  - operation: a file operation - create, modify
+  - action: a entry action - add, upd, del
+  - action bundle: a collection of actions within one operation
+  - action bundle chain: a collection of action bundles from multiple operations
+  - entry:
+    - yaml: key + block (contains elements)
+    - conf: key + value

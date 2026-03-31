@@ -1,0 +1,8 @@
+JMeter plugin for translating AMF protocol.
+
+
+Project Description:
+JMeter-плагин для декодирования AMF протокола
+
+README:
+JMeter plugin for translating AMF protocol.

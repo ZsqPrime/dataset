@@ -1,0 +1,7 @@
+A demonstration of how to post data from a PhoneGap app to a server and handle the request using PHP.
+
+Project Description:
+An iOS PhoneGap app that demonstrates how to submit data to a server.
+
+README:
+A demonstration of how to post data from a PhoneGap app to a server and handle the request using PHP.

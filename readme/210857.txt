@@ -1,0 +1,8 @@
+A php script for sending sms when new PU notice comes.
+
+
+Project Description:
+A php script for sending sms when new PU notice comes.
+
+README:
+A php script for sending sms when new PU notice comes.

@@ -1,0 +1,4 @@
+Project Description:
+A WordPress plug-in to do cool stuff with products in a Google Products feed. A project I'm doing for LR Industries, but it should be compatible with any Google Products feed.
+
+README:

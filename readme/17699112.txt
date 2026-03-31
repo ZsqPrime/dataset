@@ -1,0 +1,5 @@
+Description:
+The content from this repository has been moved to https://github.com/chocolatey/docs.  If you have found an issue, or want to submit a fix, then please open an issue, or a PR, on that repository.
+
+README:
+README not available

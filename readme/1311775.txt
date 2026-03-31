@@ -1,0 +1,6 @@
+
+
+Project Description:
+Buildscripts for building packages and applications for the WCF with jenkins
+
+README:

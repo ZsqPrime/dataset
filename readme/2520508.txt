@@ -1,0 +1,7 @@
+Project Description:
+Mass post parser from different sources
+
+README:
+#Toxic
+
+Automatic mass parser with gui

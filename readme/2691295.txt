@@ -1,0 +1,4 @@
+Project Description:
+a software update tool, compare the file change and copy into specify folder
+
+README:

@@ -1,0 +1,51 @@
+Project Description:
+openstack-swift SAIO install script
+
+README:
+
+- INFO
+    - Tested under 10.04 LTS, 10.10 and 11.10 ubuntu w/python 2.6/2.7:
+        1.2, 1.3, 1.4.1+
+
+    - PLEASE NOTE: 
+        * The latest master version will default to installing using github packages for swift
+        * Read the ChangeLog file for more information
+        * swift logging is now available
+
+
+- INSTRUCTIONS 
+
+    1. Obtain the code 
+        - GITHUB TRUNK:
+            git clone git://github.com/btorch/swift-saio.sh.git
+
+        - GITHUB TAG:
+            git clone git://github.com/btorch/swift-saio.sh.git TAG_VALUE
+
+        - Or download a tagged version as a compressed archive from github
+
+    2. After clonning the github repo or unconpressing the archive 
+        - cd into the swift-saio.sh directory 
+
+    3. Go over the swift-saio.cfg file and make any needed changes
+        - Note that some Variables MUST be changed 
+
+    4. Once you have edited the swift-saio.cfg file to your needs, proceed 
+        - Now execute the main script from within the "swift-saio.sh" directory as the root user
+
+        For swift specific version :
+        - ./swift-saio.sh -r VERSION_HERE
+
+
+    PLEASE NOTE: 
+        * If -r flag is not specified it will default to 1.4.1 version 
+
+        * SWIFT_DEPLOYMENT variable within the .cfg file default to package installation. 
+          Packages are only built for Ubuntu 10.04 LTS (lucid)
+
+        * If you would like to install from source please change SWIFT_DEPLOYMENT to "source" instead of "package"
+
+        * The -6 flag will setup a full IPv6 swift SAIO setup. It will only work if the machine/VM uses 
+          IPv6 global or ULA addresses. LocalLink addresses are not acceptable. 
+
+        * This should be run on a clean/new virtual machine OR plain machine (not used for anything else)

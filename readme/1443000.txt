@@ -1,0 +1,13 @@
+RHEA Mock Services
+==================
+
+This is a MuleStudio application that provides mock services for use with the OpenHIM (https://github.com/jembi/openhim).
+
+Project Description:
+Mock serrvices for the RHEA project, to be used with the OpenHIM
+
+README:
+RHEA Mock Services
+==================
+
+This is a MuleStudio application that provides mock services for use with the OpenHIM (https://github.com/jembi/openhim).

@@ -1,0 +1,6 @@
+
+
+Project Description:
+A conditional slideshow for mobile-first responsive web design
+
+README:

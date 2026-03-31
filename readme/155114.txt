@@ -1,0 +1,9 @@
+The awesome irc bot we are currently creating in python.
+
+
+
+Project Description:
+Der hammermäßige IRC Bot des Computerlinguisten 
+
+README:
+The awesome irc bot we are currently creating in python.

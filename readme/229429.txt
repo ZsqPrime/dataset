@@ -1,0 +1,10 @@
+required libraries:
+lua5.2 (-llua)
+
+
+Project Description:
+fpde2
+
+README:
+required libraries:
+lua5.2 (-llua)

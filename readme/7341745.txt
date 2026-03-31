@@ -1,0 +1,5 @@
+Project Description:
+Just like a doodle but for pizzas
+
+README:
+The preliminary steps for a Hack Aarhus pizzaorder webthingy

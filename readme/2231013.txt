@@ -1,0 +1,22 @@
+Projet de TER M1 à l'Université Montpellier 2 intitulé :
+Analyse et conception d'algorithmes économes en énergie dans les réseaux de capteurs
+encadré par Anne-Élisabeth Baert
+réalisé par :
+- Chloé Desdouits
+- Zahir Kali
+- Rabah Laouadi
+- Samuel Rouquie
+
+
+Project Description:
+TER M1
+
+README:
+Projet de TER M1 à l'Université Montpellier 2 intitulé :
+Analyse et conception d'algorithmes économes en énergie dans les réseaux de capteurs
+encadré par Anne-Élisabeth Baert
+réalisé par :
+- Chloé Desdouits
+- Zahir Kali
+- Rabah Laouadi
+- Samuel Rouquie

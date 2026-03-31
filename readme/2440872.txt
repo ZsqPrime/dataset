@@ -1,0 +1,8 @@
+Sources of SpikeSort website
+
+
+Project Description:
+Sources of SpikeSort website. This is not the source code of the library. For the Python code, go to SpikeSort repository
+
+README:
+Sources of SpikeSort website

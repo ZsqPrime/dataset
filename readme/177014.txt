@@ -1,0 +1,12 @@
+# Deprecated
+
+This package is now maintained by @jhasse, at https://github.com/jhasse/sublime-rust. Please go there instead.
+
+
+Project Description:
+A package to add support for the Rust programming language to Sublime Text 2
+
+README:
+# Deprecated
+
+This package is now maintained by @jhasse, at https://github.com/jhasse/sublime-rust. Please go there instead.

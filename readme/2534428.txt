@@ -1,0 +1,8 @@
+Project Description:
+http://projecteuler.net/ code challenges
+
+README:
+This is a repository of all successful Project Euler challenges
+completed so far.
+
+David Timm

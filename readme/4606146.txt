@@ -1,0 +1,13 @@
+Project Description:
+gm_script
+
+README:
+takamario's gm script
+
+  - Rakuten Mail Magazine Unchecker:
+    uncheck mail magazine subscription checkbox at Rakuten Ichiba's Cart Page.
+    Last updated: 2012-02-26
+
+  - Simplenote monospace font
+    use monospace font at Simplenote.
+    Last updated: 2012-02-26

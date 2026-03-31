@@ -1,0 +1,70 @@
+
+
+Projektbeschrieb:
+
+https://github.com/NikiH/KnallFixHermes/wiki
+
+Source Control-Zusammenarbeit:
+
+- git nat�rlich!
+- Chef-Repo git://github.com/NikiH/KnallFixHermes.git
+
+Build Tool:
+
+- maven!
+
+Sicherstellung der Kompilierf�higkeit:
+
+- Relevant f�rs Builden ist das pom. Wir sehen vor, einen git precommit-hook zu bauen, der jeweils mvn compile sausenl�sst.
+
+Laufenlassen der Testsuite:
+
+mvn test
+
+Checkout:
+git pull
+
+Checkin:
+git add -A
+git commit -m 'hier message'
+git push
+
+
+
+
+
+
+Project Description:
+Knall Fix Hermes
+
+README:
+
+
+Projektbeschrieb:
+
+https://github.com/NikiH/KnallFixHermes/wiki
+
+Source Control-Zusammenarbeit:
+
+- git nat�rlich!
+- Chef-Repo git://github.com/NikiH/KnallFixHermes.git
+
+Build Tool:
+
+- maven!
+
+Sicherstellung der Kompilierf�higkeit:
+
+- Relevant f�rs Builden ist das pom. Wir sehen vor, einen git precommit-hook zu bauen, der jeweils mvn compile sausenl�sst.
+
+Laufenlassen der Testsuite:
+
+mvn test
+
+Checkout:
+git pull
+
+Checkin:
+git add -A
+git commit -m 'hier message'
+git push

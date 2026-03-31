@@ -1,0 +1,12 @@
+WARLOCKS!
+
+Remake of the Warcraft 3 Custom Map Warlocks using Panda3D game engine
+
+
+Project Description:
+Remake of Warlocks WC3 custom Map using Panda3D game engine
+
+README:
+WARLOCKS!
+
+Remake of the Warcraft 3 Custom Map Warlocks using Panda3D game engine

@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Placcidents is a WIP rails application that will provide a dynamic visualization of about 77,000 rows of plane accident data.

@@ -1,0 +1,9 @@
+Project Description:
+The Profile module for OpenSim created by Fly-Man-
+
+README:
+This is the Opensim - Profile implementation originally created by Fly-Man-
+
+
+
+Updates for this branch will be applied when needed

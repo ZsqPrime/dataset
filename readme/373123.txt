@@ -1,0 +1,8 @@
+This is a system for the StudentY Christian organisation at UCT.
+
+
+Project Description:
+StudentY student admin
+
+README:
+This is a system for the StudentY Christian organisation at UCT.

@@ -1,0 +1,58 @@
+.::Crear::. arte y tecnologia 
+http://www.elarteylatecnologia.com.ar
+
+Comenzamos a realizar un Proyecto hibrido entre guitarra electrica y diodos emisores de luz basado en GuitArduino originalmente construido por http://guitarduino.blogspot.com  (un proyecto de A TwoGuysOneBit.com)
+
+ShiftLCD Library from 
+http://cjparish.blogspot.com/2010/01/controlling-lcd-display-with-shift.html
+
+Flash (vars to FLASH) Library from
+http://arduiniana.org/libraries/flash/
+
+Plugin para vim
+http://www.vim.org/scripts/script.php?script_id=2654
+
+Para compilar desde consola usamos arscons 
+http://code.google.com/p/arscons/
+
+cd guitarra_vas_a_llorar
+./compilar
+./compilar upload
+
+Ojo en el compilar esta hardcoded mi path de la ide de arduino
+Para subir al arduino agregar upload.
+
+Arduino UNO specs: http://arduino.cc/en/Main/ArduinoBoardUno
+
+
+
+
+Project Description:
+Proyecto hibrido entre guitarra electrica y diodos emisores de luz basado en GuitArduino http://guitarduino.blogspot.com
+
+README:
+.::Crear::. arte y tecnologia 
+http://www.elarteylatecnologia.com.ar
+
+Comenzamos a realizar un Proyecto hibrido entre guitarra electrica y diodos emisores de luz basado en GuitArduino originalmente construido por http://guitarduino.blogspot.com  (un proyecto de A TwoGuysOneBit.com)
+
+ShiftLCD Library from 
+http://cjparish.blogspot.com/2010/01/controlling-lcd-display-with-shift.html
+
+Flash (vars to FLASH) Library from
+http://arduiniana.org/libraries/flash/
+
+Plugin para vim
+http://www.vim.org/scripts/script.php?script_id=2654
+
+Para compilar desde consola usamos arscons 
+http://code.google.com/p/arscons/
+
+cd guitarra_vas_a_llorar
+./compilar
+./compilar upload
+
+Ojo en el compilar esta hardcoded mi path de la ide de arduino
+Para subir al arduino agregar upload.
+
+Arduino UNO specs: http://arduino.cc/en/Main/ArduinoBoardUno

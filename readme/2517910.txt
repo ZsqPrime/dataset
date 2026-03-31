@@ -1,0 +1,118 @@
+This is an attempt at an app to transfer files between an Android devices and
+computers without having to configure a separate FTP server.
+
+It includes:
+  - the Android app
+  - the utility (see util/README)
+
+It is able to transfer files from:
+  - Android device <-> Android device
+  - computer <-> Android device
+  - computer <-> computer
+
+========== Building ==========
+
+1. Download the Android SDK. Let `SDKDIR` be wherever
+   you installed it.
+
+2. Run `SDKDIR/tools/android update project --path .` from this directory.
+
+3. Run `ant debug`, and copy the APK over to the device. For the first build,
+   the reccomended way to do this is via FTP. The app and utility are now
+   stable enough to transfer the APK of all further builds using the app 
+   itself.
+
+See util/README on how to build the utility.
+
+========== Usage ==========
+
+NOTE: There are 2 GUI frontends for PC's.
+
+Using the program is simple on two Android devices:
+  1. Get onto the device which is to __recieve__ the file. Choose a port number 
+     (generally, 2000-60000), and an output file. Press "Recieve File" - the 
+     app will print "Starting...".
+
+  2. Then, go onto the device which is to __send__ the file. Enter the IP 
+     address of the first device, the port chosen earlier, and the file to 
+     send. Press "Send File" - this device should print "Starting...". When it 
+     is done sending the data, the app should print "Starting... Finished".
+
+Similarly, to go PC -> Android:
+  1. Repeat step 1 above.
+
+  2. Open the command line, go to the util/build subdirectory, and run 
+     `java -jar GUI.jar`. Enter the IP address to send to, the port number selected
+      in step 1 and select a file to save to. Click 'Send File' - the button should
+      "stick" while sending the file.
+
+Finally, sending PC -> PC:
+  1. On the first computer, go to the util/ subdirectory, and run 
+  `java -jar GUI.jar`. Enter a port number, and a file to read. Click
+  `Read File`. The button should "stick" while waiting.
+
+  2. Repeat step 2 above.
+
+(Licensed under the GNU GPLv3)
+
+
+Project Description:
+An attempt at an Android file transfer program
+
+README:
+This is an attempt at an app to transfer files between an Android devices and
+computers without having to configure a separate FTP server.
+
+It includes:
+  - the Android app
+  - the utility (see util/README)
+
+It is able to transfer files from:
+  - Android device <-> Android device
+  - computer <-> Android device
+  - computer <-> computer
+
+========== Building ==========
+
+1. Download the Android SDK. Let `SDKDIR` be wherever
+   you installed it.
+
+2. Run `SDKDIR/tools/android update project --path .` from this directory.
+
+3. Run `ant debug`, and copy the APK over to the device. For the first build,
+   the reccomended way to do this is via FTP. The app and utility are now
+   stable enough to transfer the APK of all further builds using the app 
+   itself.
+
+See util/README on how to build the utility.
+
+========== Usage ==========
+
+NOTE: There are 2 GUI frontends for PC's.
+
+Using the program is simple on two Android devices:
+  1. Get onto the device which is to __recieve__ the file. Choose a port number 
+     (generally, 2000-60000), and an output file. Press "Recieve File" - the 
+     app will print "Starting...".
+
+  2. Then, go onto the device which is to __send__ the file. Enter the IP 
+     address of the first device, the port chosen earlier, and the file to 
+     send. Press "Send File" - this device should print "Starting...". When it 
+     is done sending the data, the app should print "Starting... Finished".
+
+Similarly, to go PC -> Android:
+  1. Repeat step 1 above.
+
+  2. Open the command line, go to the util/build subdirectory, and run 
+     `java -jar GUI.jar`. Enter the IP address to send to, the port number selected
+      in step 1 and select a file to save to. Click 'Send File' - the button should
+      "stick" while sending the file.
+
+Finally, sending PC -> PC:
+  1. On the first computer, go to the util/ subdirectory, and run 
+  `java -jar GUI.jar`. Enter a port number, and a file to read. Click
+  `Read File`. The button should "stick" while waiting.
+
+  2. Repeat step 2 above.
+
+(Licensed under the GNU GPLv3)

@@ -1,0 +1,5 @@
+Project Description:
+Tools for object oriented and event driven development.
+
+README:
+[Here is some documentation](https://github.com/mateuszwozniak/jstools/wiki)

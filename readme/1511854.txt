@@ -1,0 +1,26 @@
+# Perl module App::IsGitSynced
+
+This is source code for Perl module App::IsGitSynced.
+
+## I want to use it!
+
+The GitHub repo https://github.com/bessarabov/App-IsGitSynced contaings the
+source code for the module App::IsGitSynced. Before going to CPAN the source
+code is being converted, so if you need to use the module you should take it
+from CPAN: https://metacpan.org/module/App::IsGitSynced
+
+
+Project Description:
+script to find out if the local git repos are fully synced
+
+README:
+# Perl module App::IsGitSynced
+
+This is source code for Perl module App::IsGitSynced.
+
+## I want to use it!
+
+The GitHub repo https://github.com/bessarabov/App-IsGitSynced contaings the
+source code for the module App::IsGitSynced. Before going to CPAN the source
+code is being converted, so if you need to use the module you should take it
+from CPAN: https://metacpan.org/module/App::IsGitSynced

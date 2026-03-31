@@ -1,0 +1,22 @@
+Setup:
+
+    $ curl -s http://getcomposer.org/installer | php
+    $ php composer.phar install
+
+Export:
+
+    $ ./export.sh
+
+
+Project Description:
+This is in German. webdevbuch trägt Wissen über Web-Entwicklung unter einer freien Lizenz zusammen. Die Inhalte sollen möglichst unkompliziert zu bearbeiten und zu vervielfältigen sein. Fragen und so sehr gerne formlos an marc@ermshaus.org.
+
+README:
+Setup:
+
+    $ curl -s http://getcomposer.org/installer | php
+    $ php composer.phar install
+
+Export:
+
+    $ ./export.sh

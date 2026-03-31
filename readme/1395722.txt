@@ -1,0 +1,24 @@
+This color theme for iTerm2 is made to match the theme with similar name in TextMate.
+To use it, simply clone into the repo, or download the file under "Download". When you have the `Espresso Libre.itermcolors` file on your hard drive, double click to install in iTerm.
+
+This code is offered under public domain. Use it, modify it, redistribute it or do what ever you feel like doing with XML.
+
+It looks like this:
+![colours](https://github.com/mbadolato/iTerm2-Color-Schemes/raw/master/screenshots/espresso_libre.png)
+
+Created by jurgemaister
+
+
+Project Description:
+Espresso Libre color theme for iTerm2 matching the colors of the Espresso Libre theme in TextMate
+
+README:
+This color theme for iTerm2 is made to match the theme with similar name in TextMate.
+To use it, simply clone into the repo, or download the file under "Download". When you have the `Espresso Libre.itermcolors` file on your hard drive, double click to install in iTerm.
+
+This code is offered under public domain. Use it, modify it, redistribute it or do what ever you feel like doing with XML.
+
+It looks like this:
+![colours](https://github.com/mbadolato/iTerm2-Color-Schemes/raw/master/screenshots/espresso_libre.png)
+
+Created by jurgemaister

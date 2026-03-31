@@ -1,0 +1,78 @@
+Project Description:
+
+
+README:
+﻿Proto-derivat 
+-------------
+
+A central repository of files (the proto repository). 
+Collections of files in the repository may be subscribed to (as prototypes). 
+Local files are only changed when requested. 
+Differences between the local files and the repository files may be viewed. 
+
+* proto
+List all local prototypes. 
+
+* proto fetch
+For each prototype fetch proto files that are not yet installed. 
+
+* proto diff
+For each prototype display a 'diff' of all prototype files against the proto files in repository. 
+
+* proto apply
+For each prototype overwrite the prototype files with files from repository. 
+
+* proto  «prototype» diff
+Display a 'diff' of all prototype files against the proto files in repository. 
+
+* proto  «prototype» fetch
+Fetch prototype files that are not yet installed. 
+
+* proto  «prototype» apply
+Overwrite prototype files with proto files from repository. 
+
+* proto «prototype» init «proto-repository» [apply]
+Import a collection of files (the prototype) from the proto-repository.
+This is a tree of files that are added to the top of the local git repository.
+If apply is not given only shows what would be done.
+The current directory must contain a directory '.git'.
+Files that already exists locally are ignored.
+Files that do not exist locally are fetched from the prototype repository.
+«proto-repository» is an absolute PATH.
+Env[ PROTOREPO ] = basepath to add to proto-repository path. 
+
+FILES 
+-----
+
+.derivats/«prototypename» 
+Each prototype has its own file. The file contains 1. repository-path 2. a list of paths. 
+
+«repo» 
+«path» 
+
+«repo»/«prototype-definition»
+«path1» 
+.. 
+«pathN» 
+
+REPOSITORY 
+----------
+
+A proto-repository must contain a ".proto-repository" file that contains a name and/or a short description of this proto repository. A recommendation is that it also is version controlled.
+
+TEMPLATES
+---------
+
+Basic support for making templates is implemented.
+If your prototype includes the file 'X', you make a companion file 'X.sed'.
+When proto applies the file 'X' it will use each line of 'X.sed' as input to "sed -i".
+
+Example:
+File t.txt:
+configoption=OPT1
+
+File t.txt.sed:
+s/OPT1/actualconfigtext/
+
+When applying the prototype 't.txt' will first be copied verbatim.
+Then "sed -i 's/OPT1/actualconfigtext/' t.txt" will be run.

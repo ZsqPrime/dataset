@@ -1,0 +1,11 @@
+Project Description:
+shared TODO list manager, filesystem backed
+
+README:
+Require:
+    - nodejs
+    - coffeescript (coffee executable in PATH)
+Usage:
+    - setup accounts in users.json
+    - npm install jade connect formatdate
+    - launch "coffee todoweb.coffee"

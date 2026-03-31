@@ -1,0 +1,13 @@
+﻿Photo Diary
+===========
+
+A university project for the course "Programming with Ruby". A photo management website :)
+
+Project Description:
+None
+
+README:
+﻿Photo Diary
+===========
+
+A university project for the course "Programming with Ruby". A photo management website :)

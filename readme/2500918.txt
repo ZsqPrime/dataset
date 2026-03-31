@@ -1,0 +1,33 @@
+This program will fix a tv file name based on a given regular expression and 
+move the corrected file to a specified directory.
+
+Run:
+python rename.py 
+
+All necessary paths need to be stored in config.txt
+
+These paths include:
+-Location of the title list file
+-Where to save the log File 
+-Location of where new files are stored
+-Location of where fixed files are to be saved
+
+
+
+Project Description:
+
+
+README:
+This program will fix a tv file name based on a given regular expression and 
+move the corrected file to a specified directory.
+
+Run:
+python rename.py 
+
+All necessary paths need to be stored in config.txt
+
+These paths include:
+-Location of the title list file
+-Where to save the log File 
+-Location of where new files are stored
+-Location of where fixed files are to be saved

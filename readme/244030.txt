@@ -1,0 +1,8 @@
+`RMActionSheet` is deprecated. Use [`UIAlertController`](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/doc/uid/TP40014538) instead.
+
+
+Project Description:
+Blocks-based replacement for UIActionSheet and UIAlertView
+
+README:
+`RMActionSheet` is deprecated. Use [`UIAlertController`](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIAlertController_class/index.html#//apple_ref/doc/uid/TP40014538) instead.

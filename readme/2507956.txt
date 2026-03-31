@@ -1,0 +1,8 @@
+A Java Library for the RackspaceCloud Servers
+
+
+Project Description:
+Little Library for the Rackspace Cloud Servers API
+
+README:
+A Java Library for the RackspaceCloud Servers

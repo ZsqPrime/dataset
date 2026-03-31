@@ -1,0 +1,6 @@
+Project Description:
+Cadcorp SIS plugin that creates a user definable grid over a selected item.
+
+README:
+Credits
+Icons by Yusuke Kamiyamane. All rights reserved. Licensed under a Creative Commons Attribution 3.0 License.

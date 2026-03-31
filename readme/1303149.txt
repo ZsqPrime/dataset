@@ -1,0 +1,22 @@
+For documentation, see:
+
+    Resources/doc/index.md
+    
+    
+License:
+    
+    Resources/meta/LICENSE
+
+
+Project Description:
+Bundle for creating publications (news article, page)
+
+README:
+For documentation, see:
+
+    Resources/doc/index.md
+    
+    
+License:
+    
+    Resources/meta/LICENSE

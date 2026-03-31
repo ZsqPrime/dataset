@@ -1,0 +1,12 @@
+A multiplayer trivia game, based on IRC trivia bots.
+
+Mainly just a way to test out Node.js and Socket.IO.
+
+
+Project Description:
+Trivia game
+
+README:
+A multiplayer trivia game, based on IRC trivia bots.
+
+Mainly just a way to test out Node.js and Socket.IO.

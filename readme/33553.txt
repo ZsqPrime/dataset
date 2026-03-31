@@ -1,0 +1,9 @@
+Project Description:
+A script to build bitcoind 0.6+ on CentOS / Redhat
+
+README:
+This project helps you build bitcoind on CentOS / Redhat and consists of a makefile and bash script. There is no need to modify the username in the makefile as the shell script takes care of it.
+
+This was tested on both 32 and 64-bit versions of CentOS 5.
+
+For reference: https://bitcointalk.org/index.php?topic=65818

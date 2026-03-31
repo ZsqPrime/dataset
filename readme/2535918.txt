@@ -1,0 +1,5 @@
+Project Description:
+Reads a chess board diagram
+
+README:
+A chess board reader

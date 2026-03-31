@@ -1,0 +1,4 @@
+Project Description:
+bamboo task plugin to execute a rundeck job using the Rundeck client API
+
+README:

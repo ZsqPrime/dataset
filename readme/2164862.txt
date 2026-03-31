@@ -1,0 +1,7 @@
+Project voor R&D2 over proximity graphs.
+
+Project Description:
+R&D2-project
+
+README:
+Project voor R&D2 over proximity graphs.

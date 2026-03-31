@@ -1,0 +1,5 @@
+Project Description:
+Working through the book "Agile Web Development with Rails."
+
+README:
+Working through the book "Agile Web Development with Rails."

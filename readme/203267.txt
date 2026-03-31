@@ -1,0 +1,239 @@
+# Stop and read before you blindly try this tool
+
+What is this tool good for:
+
+* Learn about how the Linux page cache works, and what syscalls exist to
+  interfere with its normal operation.
+* Learn what hacks are necessary to intercept syscalls via their libc wrappers.
+
+What this tool is **not** good for:
+
+* Controlling how your page cache is used
+  * Why do you think some random tool you found on GitHub can do better than
+    the Linux Kernel?
+* Defending against cache thrashing
+  * Use cgroups to bound the amount of memory a process has. See below or
+    search the internet, this is widely known, works reliably, and does not
+    introduce performance penalties or potentially dangerous behavior like this
+    tool does.
+* Making a binary run faster
+  * `nocache` intercepts a bunch of syscalls and does lots of speculative work;
+    it will slow down your binary.
+
+So then why does this tool exist?
+
+* It was written in 2012, when cgroups, containerization etc. were all new
+  things. A decade+ on, they aren’t any more.
+
+## How to run a process and its children in a memory-bounded cgroup
+
+Do this if you e.g. want to run a backup but don’t want your system to slow
+down due to page cache thrashing.
+
+### If you use systemd
+
+If your distro uses `systemd`, this is very easy. Systemd allows to run a
+process (and its subprocesses) in a “scope”, which is a cgroup, and you can
+specify parameters that get translated to cgroup limits.
+
+When I run my backups, I do:
+
+```sh
+$ systemd-run --scope --property=MemoryLimit=500M -- backup command
+```
+
+The effect is that cache space stays bounded by an additional max 500MiB:
+
+Before:
+
+```
+$ free -h
+              total        used        free      shared  buff/cache   available
+Mem:           7.5G        2.4G        1.3G        1.0G        3.7G        3.7G
+Swap:          9.7G         23M        9.7G
+
+```
+
+During (notice how buff/cache only goes up by ~300MiB):
+
+```
+free -h
+              total        used        free      shared  buff/cache   available
+Mem:           7.5G        2.5G        1.0G        1.1G        4.0G        3.6G
+Swap:          9.7G         23M        9.7G
+```
+
+#### How does this work?
+
+Use `systemd-cgls` to list the cgroups systemd creates. On my system, the above
+command creates a group called `run-u467.scope` in the `system.slice` parent
+group; you can inspect its memory settings like this:
+
+```
+$ mount | grep cgroup | grep memory
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec latime,memory)
+
+$ cat /sys/fs/cgroup/memory/system.slice/run-u467.scope/memory.limit_in_bytes
+524288000
+```
+
+### The hard way
+
+Install `cgroup-tools` and be prepared to enter your root password to initially
+create cgroups.
+
+```
+sudo env ppid=$$ sh -c '
+    cgcreate -g memory:backup ;
+    echo 500M > /sys/fs/cgroup/memory/backup/memory.limit_in_bytes ;
+    echo $ppid > /sys/fs/cgroup/memory/backup/tasks ;
+'
+```
+
+After entering this, your shell is a member of that cgroup, and any new process
+spawned will belong to that cgroup, too, and inherit the memory limit. The
+cgroups created like this won’t be cleaned up automatically.
+
+More info: https://www.kernel.org/doc/Documentation/cgroup-v1/memory.txt
+
+# nocache - minimize filesystem caching effects
+
+The `nocache` tool tries to minimize the effect an application has on
+the Linux file system cache. This is done by intercepting the `open`
+and `close` system calls and calling `posix_fadvise` with the
+`POSIX_FADV_DONTNEED` parameter. Because the library remembers which
+pages (ie., 4K-blocks of the file) were already in file system cache
+when the file was opened, these will not be marked as "don't need",
+because other applications might need that, although they are not
+actively used (think: hot standby).
+
+## Installation and Usage
+
+Just type `make`. Then, prepend `./nocache` to your command:
+
+```sh
+./nocache cp -a ~/ /mnt/backup/home-$(hostname)
+```
+
+The command `make install` will install the shared library, man
+pages and the `nocache`, `cachestats` and `cachedel` commands
+under `/usr/local`. You can specify an alternate prefix by using
+`make install PREFIX=/usr`.
+
+Debian packages are available, see https://packages.qa.debian.org/n/nocache.html.
+
+Please note that `nocache` will only build on a system that has
+support for the `posix_fadvise` syscall and exposes it, too. This
+should be the case on most modern Unices, but kfreebsd notably has no
+support for this as of now.
+
+## Testing
+
+For testing purposes, I included two small tools:
+
+* `cachedel` calls `posix_fadvise(fd, 0, 0, POSIX_FADV_DONTNEED)` on
+  the file argument. Thus, if the file is not accessed by any other
+  application, the pages will be eradicated from the fs cache.
+  Specifying -n <number> will repeat the syscall the given number of
+  times which can be useful in some circumstances (see below).
+* `cachestats` has three modes: In quiet mode (`-q`), the exit status
+  is 0 (success) if the file is fully cached. In normal mode,
+  the number of cached vs. not-cached pages is printed. In verbose
+  mode (`-v`), an actual map is printed out, where each page that is
+  present in the cache is marked with `x`.
+
+It looks like this:
+
+```
+$ cachestats -v ~/somefile.mp3
+pages in cache: 85/114 (74.6%)  [filesize=453.5K, pagesize=4K]
+
+cache map:
+     0: |x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+    32: |x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|
+    64: |x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x|x| | | | | | | | | | | | |
+    96: | | | | | | | | | | | | | | | | | |x|
+```
+
+Also, you can use `vmstat 1` to view cache statistics.
+
+For debugging purposes, you can specify a filename that `nocache` should log
+debugging messages to via the `-D` command line switch, e.g. use `nocache
+-D /tmp/nocache.log …`. Note that for simple testing the file `/dev/stderr`
+might be a good choice.
+
+## Example run
+
+Without `nocache`, the file will be fully cached when you copy it
+somewhere:
+
+    $ ./cachestats ~/file.mp3
+    pages in cache: 154/1945 (7.9%)  [filesize=7776.2K, pagesize=4K]
+    $ cp ~/file.mp3 /tmp
+    $ ./cachestats ~/file.mp3
+    pages in cache: 1945/1945 (100.0%)  [filesize=7776.2K, pagesize=4K]
+
+With `nocache`, the original caching state will be preserved.
+
+    $ ./cachestats ~/file.mp3
+    pages in cache: 154/1945 (7.9%)  [filesize=7776.2K, pagesize=4K]
+    $ ./nocache cp ~/file.mp3 /tmp
+    $ ./cachestats ~/file.mp3
+    pages in cache: 154/1945 (7.9%)  [filesize=7776.2K, pagesize=4K]
+
+
+## Limitations
+
+The pre-loaded library tries really hard to catch all system calls
+that open or close a file. This happens by "hijacking" the libc
+functions that wrap the actual system calls. In some cases, this may
+fail, for example because the application does some clever wrapping.
+(That is the reason why `__openat_2` is defined: GNU `tar` uses this
+instead of a regular `openat`.)
+
+However, since the actual `fadvise` calls are performed right before
+the file descriptor is closed, this may not happen if they are left
+open when the application exits, although the destructor tries to do
+that.
+
+There are timing issues to consider, as well. If you consider `nocache
+cat <file>`, in most (all?) cases the cache will not be restored. For
+discussion and possible solutions see <http://lwn.net/Articles/480930/>.
+My experience showed that in many cases you could "fix" this by doing
+the `posix_fadvise` call *twice*. For both tools `nocache` and
+`cachedel` you can specify the number using `-n`, like so:
+
+    $ nocache -n 2 cat ~/file.mp3
+
+This actually only sets the environment variable `NOCACHE_NR_FADVISE`
+to the specified value, and the shared library reads out this value.
+If test number 3 in `t/basic.t` fails, then try increasing this number
+until it works, e.g.:
+
+    $ env NOCACHE_NR_FADVISE=2 make test
+
+
+One could also consider that the fact pages are kept mean the kernel
+considers they are hot, and decide the overhead of allocating one byte
+per page for mincore and the actual mincore calls are not worth it when
+the kernel actually does keep some pages when it wants to.
+
+In this case you can either run `nocache` with `-f` or set the
+`NOCACHE_FLUSHALL` environment variable to 1, e.g.:
+
+    $ nocache -f cat ~/file.mp3
+    $ env NOCACHE_FLUSHALL=1 make test
+
+By default `nocache` will only keep track of file descriptors less than `2^20`
+that are opened by your application, in order to bound its memory
+consumption. If you want to change this threshold, you can supply the
+environment variable `NOCACHE_MAX_FDS` and set it to a higher (or lower) value.
+It should specify a value one greater than the maximum file descriptor that
+will be handled by `nocache`.
+
+## Acknowledgements
+
+Most of the application logic is from Tobias Oetiker's patch for
+`rsync` <http://insights.oetiker.ch/linux/fadvise.html>. Note however,
+that `rsync` uses sockets, so if you try a `nocache rsync`, only
+the local process will be intercepted.

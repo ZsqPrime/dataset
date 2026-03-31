@@ -1,0 +1,18 @@
+Project Description:
+makes dispensers place tnt
+
+README:
+This plugin makes dispensers put tnt in front of them, instead of
+dropping it.
+Installation is easy, just place the jar in your plugins folder.
+Configuration is like this:
+worldname:
+  enabled: true
+worldname2:
+  enabled: false
+
+If you have any questions, just send me an email
+itissohardtothinkofagoodemail@gmail.com
+
+
+I believe this plugin does not work in bukkit 1.2+, but I am not sure

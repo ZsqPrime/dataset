@@ -1,0 +1,10 @@
+Project Description:
+Ghetto Version Control System
+
+README:
+GVC - Ghetto Version Control System Command Line Client
+by Michael Craft
+
+Command line client for the Ghetto Version Control System (GVCLib).
+
+Released under the MIT License.

@@ -1,0 +1,18 @@
+# README #
+================
+
+## External Libraries ##
+
+* [Epublib](http://www.siegmann.nl/epublib)
+
+
+Project Description:
+A web-based epub reader
+
+README:
+# README #
+================
+
+## External Libraries ##
+
+* [Epublib](http://www.siegmann.nl/epublib)

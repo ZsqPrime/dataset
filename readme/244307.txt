@@ -1,0 +1,13 @@
+# DEAD DEVELOPMENT
+
+Development of this lib moved to [mbj/to_source](https://github.com/mbj/to_source) and was rewritten with more features and higher stability.
+
+
+
+Project Description:
+to_source is a reverse parser: it transforms Rubinius' AST nodes back to source code.
+
+README:
+# DEAD DEVELOPMENT
+
+Development of this lib moved to [mbj/to_source](https://github.com/mbj/to_source) and was rewritten with more features and higher stability.

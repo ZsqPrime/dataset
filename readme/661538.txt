@@ -1,0 +1,18 @@
+PyFTN
+
+Fido node software written in python3.
+Based on storing messages in Postgresql database.
+
+Вольное сочинение на тему "Как не надо использовать базы данных".
+
+
+Project Description:
+None
+
+README:
+PyFTN
+
+Fido node software written in python3.
+Based on storing messages in Postgresql database.
+
+Вольное сочинение на тему "Как не надо использовать базы данных".

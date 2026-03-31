@@ -1,0 +1,4 @@
+Project Description:
+Work in progress - defining a set of standards for use when coding at Clock
+
+README:

@@ -1,0 +1,163 @@
+jquery based Planboard viewer with events and callbacks for managing planning schedules of many kinds.
+
+
+How can I see this working:
+--------------------------
+- checkout from github
+- build (For more details on satisfying the dependencies see section "Build Dependencies")
+- open src/test/webenv/basic.html in a browser
+
+note:
+When using chrome be sure to add the switch: --allow-file-access-from-files 
+the current in-browser use of loaded local ajax files requires that.
+
+Read this docs to understand how to do that on the windows platform:
+* http://www.chromium.org/developers/how-tos/run-chromium-with-flags
+* http://peter.sh/experiments/chromium-command-line-switches/
+
+
+
+Current state:
+-------------
+WORKING:
+  - visualization of grid, dates, allocations and special periods
+    - including scrolling and resizing effects
+  - possibility to add dates in front and at the back
+  - allow to navigate to a certain date
+  - allow to select a new allocation to commit
+  - grow and reposition the selection using keyboard events
+  - callback methods for clicks on existing allocations or new ones
+
+
+NOT WORKING:
+
+
+DOCS:
+see https://github.com/marc-portier/jquery-planboard/wiki
+
+
+YOU:
+  - feel free to share your comments, suggestions and contributions
+
+
+NEXT/TODO:
+  - see javascript file...
+
+
+Build Dependencies:
+-------------------
+On Ubuntu:
+  $ sudo apt-get install make nodejs node-less node-uglify
+  $ sudo ln -s /usr/bin/nodejs /usr/bin/node
+  $ make 
+
+Note: if people have trouble building this distro they can politely ask me (or somebody else) to it for them.
+Somewhere down the line I suspect a ready-build distro will be made available.
+(I just need to figure out how to best use tags and built-in distribution features on github.com to get the most out of that: ideas welcome)
+
+
+
+This project is Using:
+---------------------
+jQuery from
+    github: https://github.com/jquery/jquery
+
+jScrollPane from http://jscrollpane.kelvinluck.com/
+    github: https://github.com/vitch/jScrollPane
+    
+less.js from http://lesscss.org
+    github: https://github.com/cloudhead/less.js
+
+uritemplates (Implementation of RFC 6570)
+    github: https://github.com/marc-portier/uri-templates
+
+
+Special credits to:
+------------------
+css-button-generator at http://www.cssbuttongenerator.com/
+    for the css techniques to produce glowing 3D buttons in pure css3
+
+
+
+Project Description:
+A jquery plugin implementing a planning-board tool.
+
+README:
+jquery based Planboard viewer with events and callbacks for managing planning schedules of many kinds.
+
+
+How can I see this working:
+--------------------------
+- checkout from github
+- build (For more details on satisfying the dependencies see section "Build Dependencies")
+- open src/test/webenv/basic.html in a browser
+
+note:
+When using chrome be sure to add the switch: --allow-file-access-from-files 
+the current in-browser use of loaded local ajax files requires that.
+
+Read this docs to understand how to do that on the windows platform:
+* http://www.chromium.org/developers/how-tos/run-chromium-with-flags
+* http://peter.sh/experiments/chromium-command-line-switches/
+
+
+
+Current state:
+-------------
+WORKING:
+  - visualization of grid, dates, allocations and special periods
+    - including scrolling and resizing effects
+  - possibility to add dates in front and at the back
+  - allow to navigate to a certain date
+  - allow to select a new allocation to commit
+  - grow and reposition the selection using keyboard events
+  - callback methods for clicks on existing allocations or new ones
+
+
+NOT WORKING:
+
+
+DOCS:
+see https://github.com/marc-portier/jquery-planboard/wiki
+
+
+YOU:
+  - feel free to share your comments, suggestions and contributions
+
+
+NEXT/TODO:
+  - see javascript file...
+
+
+Build Dependencies:
+-------------------
+On Ubuntu:
+  $ sudo apt-get install make nodejs node-less node-uglify
+  $ sudo ln -s /usr/bin/nodejs /usr/bin/node
+  $ make 
+
+Note: if people have trouble building this distro they can politely ask me (or somebody else) to it for them.
+Somewhere down the line I suspect a ready-build distro will be made available.
+(I just need to figure out how to best use tags and built-in distribution features on github.com to get the most out of that: ideas welcome)
+
+
+
+This project is Using:
+---------------------
+jQuery from
+    github: https://github.com/jquery/jquery
+
+jScrollPane from http://jscrollpane.kelvinluck.com/
+    github: https://github.com/vitch/jScrollPane
+    
+less.js from http://lesscss.org
+    github: https://github.com/cloudhead/less.js
+
+uritemplates (Implementation of RFC 6570)
+    github: https://github.com/marc-portier/uri-templates
+
+
+Special credits to:
+------------------
+css-button-generator at http://www.cssbuttongenerator.com/
+    for the css techniques to produce glowing 3D buttons in pure css3

@@ -1,0 +1,15 @@
+MIPS Emulator
+=============
+
+This is an emulator for the MIPS instruction set.
+
+
+
+Project Description:
+A attempt to create a MIPS simulator
+
+README:
+MIPS Emulator
+=============
+
+This is an emulator for the MIPS instruction set.

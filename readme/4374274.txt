@@ -1,0 +1,7 @@
+Project Description:
+jackowscy
+
+README:
+project for my fried as for art gallery
+
+[visible here](http://jackowscy.herokuapp.com/)

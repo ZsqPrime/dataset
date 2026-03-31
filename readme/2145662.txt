@@ -1,0 +1,15 @@
+Project Description:
+A postgresql driver for eventmachine
+
+README:
+Async PostgreSQL driver for Ruby/EventMachine
+
+Requires pg
+
+To run the specs, you will need rspec, run "rspec spec/postgres_spec.rb"
+
+
+TODOS:
+get a working java driver
+ability to use different MRI postgres drivers (postgres-pr, pg, postgres)
+add working adaptors for activerecord and sequel

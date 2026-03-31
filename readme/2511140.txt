@@ -1,0 +1,6 @@
+
+
+Project Description:
+An XCB X composite manager
+
+README:

@@ -1,0 +1,5 @@
+Project Description:
+Matrix Library for Java
+
+README:
+This is a simple, efficient, and multithreaded matrix library.

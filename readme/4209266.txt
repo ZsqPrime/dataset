@@ -1,0 +1,18 @@
+Project Description:
+Clojure wrapper around Google API's
+
+README:
+# gdata-clj
+
+Wrapper for the Google Calendar API and the gdata Contacts API
+
+## Usage
+
+see tests
+
+
+## License
+
+Copyright (C) 2012 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.

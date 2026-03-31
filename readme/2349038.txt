@@ -1,0 +1,42 @@
+This is a graphical interface to install skype on Mandriva 2011.
+
+- It will auto-detect your architecture and install needed dependencies if it detects a 64bit system.
+- It installs skype under /opt/skype, creates symlinks and menu shortcuts, it also has a uninstaller.
+
+INSTALL
+You will need have Make installed(urpmi make).
+Just paste the following 4 commands on terminal:
+
+wget https://github.com/downloads/bedi1982/Get-Stuff/Get-Stuff.tar.bz2
+tar -xvf Get-Stuff.tar.bz2
+cd Get-Stuff/
+make
+
+Now, since we are copying the files to /opt(which requires root), you need change to root(or use sudo), then run:
+./get_stuff
+
+After that, you will have a menu entry for skype.
+
+
+Project Description:
+Flash,  skype and faad codec installer for Mandriva 2011, this is a try to implement a GTK interface on the console version.
+
+README:
+This is a graphical interface to install skype on Mandriva 2011.
+
+- It will auto-detect your architecture and install needed dependencies if it detects a 64bit system.
+- It installs skype under /opt/skype, creates symlinks and menu shortcuts, it also has a uninstaller.
+
+INSTALL
+You will need have Make installed(urpmi make).
+Just paste the following 4 commands on terminal:
+
+wget https://github.com/downloads/bedi1982/Get-Stuff/Get-Stuff.tar.bz2
+tar -xvf Get-Stuff.tar.bz2
+cd Get-Stuff/
+make
+
+Now, since we are copying the files to /opt(which requires root), you need change to root(or use sudo), then run:
+./get_stuff
+
+After that, you will have a menu entry for skype.

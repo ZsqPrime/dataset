@@ -1,0 +1,12 @@
+You can get the pdf at 
+
+   http://wstein.org/papers/sqrt5/sqrt5.pdf
+
+
+Project Description:
+Paper on Elliptic Curves over Q(sqrt(5))
+
+README:
+You can get the pdf at 
+
+   http://wstein.org/papers/sqrt5/sqrt5.pdf

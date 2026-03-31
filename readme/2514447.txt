@@ -1,0 +1,11 @@
+GooglePlus connectors for Bonita.
+
+If you want to run the unit tests, you must set a system property that corresponds to your Google+ API Key : -DapiKey=<your_api_key>
+
+Project Description:
+GooglePlus connectors for Bonita
+
+README:
+GooglePlus connectors for Bonita.
+
+If you want to run the unit tests, you must set a system property that corresponds to your Google+ API Key : -DapiKey=<your_api_key>

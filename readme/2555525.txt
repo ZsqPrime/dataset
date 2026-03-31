@@ -1,0 +1,59 @@
+Project Description:
+Generate a RSS feed file from a Twitter search by given hash tag(s).
+
+README:
+# tweetfeed [![Build Status](https://secure.travis-ci.org/madhatter/tweetfeed.png?branch=master)](http://travis-ci.org/madhatter/tweetfeed)
+
+tweetfeed searches the twitter stream for defined hashtags and generates a rss feed (XML file) for your 
+reading pleasures in your feedreader.
+
+[![endorse](http://api.coderwall.com/madhatter/endorsecount.png)](http://coderwall.com/madhatter)
+
+## Installation
+
+Installation is easy. Just clone the repository:
+
+```git clone git://github.com/madhatter/tweetfeed.git```
+
+Change to the tweetfeed directory and execute
+
+```bundle install```
+
+If you have no bundler installed, install it via gem
+
+```gem install bundler```
+
+## Configuration
+
+There is only one configuration file _config/tweetfeed.yml_ which looks
+like this:
+	hashtags: hadoop, cloudera, hbase
+	outfile: /home/madhatter/htdocs/tweetfeed.xml
+	loglevel: 1
+	last_id: 168708216706973696
+Normally it will be enough to configure only the first to parameters to
+your needs.
+
+* Set ```hashtags``` to a list of hashtags you like to
+search for on the Twitter public timeline.
+* Set ```outfile``` to the path where you want the RSS feed file to be
+stored (including the filename).
+
+## Start tweetfeed
+You can choose between running tweetfeed as a Ruby script by executing
+```./bin/tweetfeed.rb``` or starting it as a daemon by ```./bin/tweetfeed_daemon.rb start```
+Logging information will be send to standard-out or to a logfile called ```tweetfeedd.output```.
+
+## Changelog
+* Version 0.1: Initial release.
+* Version 0.2: Combine fresh items with old items from the last run(s).
+
+## TODO
+* Remove dublicate URLs from feed
+* Set limits to reduce processing time at first run
+* Set the interval how often the search should be executed
+* Exclusion list (exclude hashtags or maybe even domains in the links)
+
+If you miss some features not on the list above, just let me know by a short [email][].
+
+[email]: mailto://madhatter@nostalgix.org

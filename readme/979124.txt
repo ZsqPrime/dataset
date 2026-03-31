@@ -1,0 +1,16 @@
+This is my duplicity script to perform encrypted compressed and incremental backups.
+
+Simply go over config_example.py and run it as cron job:
+
+./duplicity-backup.py config_file 2>&1 | mail -s 'Daily Backup' you@your_email.com
+
+
+Project Description:
+Duplicity backup script
+
+README:
+This is my duplicity script to perform encrypted compressed and incremental backups.
+
+Simply go over config_example.py and run it as cron job:
+
+./duplicity-backup.py config_file 2>&1 | mail -s 'Daily Backup' you@your_email.com

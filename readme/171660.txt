@@ -1,0 +1,17 @@
+Serelex
+=======
+
+The project was moved to [https://github.com/jgc128/DefVectors](https://github.com/jgc128/DefVectors)
+
+
+Project Description:
+A tool for semantic relation extraction. The program finds pairs of semantically related words based on the text definitions coming from the Wikipedia articles (other texts may be also used). The extraction method implemented in this system is based on th
+
+README:
+Serelex
+
+=======
+
+
+
+The project was moved to [https://github.com/jgc128/DefVectors](https://github.com/jgc128/DefVectors)

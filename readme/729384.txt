@@ -1,0 +1,17 @@
+Starter kit for front-end development.Thanks to html5 boilerplate https://github.com/h5bp/html5-boilerplateIE9.js :http://code.google.com/p/ie7-js/downloads/listjQuery :http://docs.jquery.com/Downloading_jQuery#Current_Releaseoriginal normalize.css :https://github.com/necolas/normalize.css
+
+Project Description:
+Starter kit for front end development
+
+README:
+Starter kit for front-end development.
+Thanks to html5 boilerplate https://github.com/h5bp/html5-boilerplate
+
+IE9.js :
+http://code.google.com/p/ie7-js/downloads/list
+
+jQuery :
+http://docs.jquery.com/Downloading_jQuery#Current_Release
+
+original normalize.css :
+https://github.com/necolas/normalize.css

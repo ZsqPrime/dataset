@@ -1,0 +1,12 @@
+This is sample mixi page app using catalyst.
+
+usage : TBD
+
+
+Project Description:
+mixi page app sample using catalyst
+
+README:
+This is sample mixi page app using catalyst.
+
+usage : TBD

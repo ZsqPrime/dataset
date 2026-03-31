@@ -1,0 +1,20 @@
+### build
+
+```
+npm install
+bower install
+gulp
+```
+
+
+Project Description:
+Javascript card game framework. This is a work in progress, it doesn't work properly yet.
+
+README:
+### build
+
+```
+npm install
+bower install
+gulp
+```

@@ -1,0 +1,9 @@
+Project Description:
+Enhancement for django's admin with strong ties to Ella
+
+README:
+Newman is a heavily customized version of Django's admin built for Ella.
+
+Still in early beta.
+
+At this time requires https://github.com/czervenka/ella_two_ports lib to work.

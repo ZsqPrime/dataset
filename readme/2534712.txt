@@ -1,0 +1,19 @@
+Project Description:
+A screen saver that shows ancestors faces and places
+
+README:
+I plan on searching for photos "related" to people's ancestors, ex:
+
+your g-gpa was born in new brunswick 1890
+
+so it will use flickr's api to search for photos of new brunswick around that time, and then display them as "flying images" in a screen saver saying "this is what things looked like for your great grandpa!"
+
+To run, download/install jruby
+
+$ git clone https://github.com/rdp/family-history-screen-saver.git
+$ cd family-history-screen-saver
+$ git submodule update --init
+
+
+$ jruby bin/screen_saver --help # to see available options
+$ jruby bin/screen_saver ... # to run

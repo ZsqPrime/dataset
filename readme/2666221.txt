@@ -1,0 +1,33 @@
+Project Description:
+Genomic Peptide Finder
+
+README:
+h1. Synopsis
+
+The Genomic Peptide Finder is a tool that matches de novo predicted amino acid sequences to the genomic DNA sequence of an organism. The matching procedure is error-tolerant to accomodate possible sequencing errors due to individual missing fragment ions. In addition, spliced peptides can be deduced.
+
+GPF has been devised by Jens Allmer and Michael Hippler in 2003, with subsequent design changes and reimplementation by Michael Specht starting in 2007.
+
+For detailed information, have a look at the "GPF website":http://specht.github.com/gpf/.
+
+h2. Building GPF
+
+GPF requires Qt 4.6+, and building is straightforward:
+
+<pre>
+$ git submodule update --init
+
+$ cd projects/gpfindex
+$ qmake
+$ make release
+
+$ cd ../gpfquery
+$ qmake
+$ make release
+</pre>
+
+h2. References
+
+# Allmer J, Markert C, Stauber EJ, Hippler M. 2004. "A new approach that allows identification of intron-split peptides from mass spectrometric data in genomic databases.":http://linkinghub.elsevier.com/retrieve/pii/S0014579304002121 FEBS Letters 562:202-206.
+# Allmer J, Naumann B, Markert C, Zhang M, Hippler M. 2006. "Mass spectrometric genomic data mining: novel insights into bioenergetic pathways in chlamydomonas reinhardtii.":http://www3.interscience.wiley.com/journal/113447913/abstract Proteomics 6:6207-6220.
+# Specht M, Stanke M, Terashima M, Naumann-Busch B, Janßen I, Höhner R, Hom EFY, et al. 2011. "Concerted action of the new Genomic Peptide Finder and AUGUSTUS allows for automated proteogenomic annotation of the Chlamydomonas reinhardtii genome.":http://dx.doi.org/10.1002/pmic.201000621 Proteomics 11:1814-1823.

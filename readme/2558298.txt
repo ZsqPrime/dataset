@@ -1,0 +1,11 @@
+Project Description:
+
+
+README:
+compile magix
+
+compile the client static
+g++ -static -o client client.cpp window.cpp -lzmq -lncurses -lpthread -luuid -lrt
+
+compile the server static
+g++ -static -o server server.cpp -lzmq -lpthread -luuid -lrt

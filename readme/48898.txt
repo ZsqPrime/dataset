@@ -1,0 +1,16 @@
+Lowland
+=======
+
+Copyright (C) 2012 Sebastian Fastner, Mainz, Germany, mail@sebastianfastner.de
+MIT-style license, see license.md
+
+
+Project Description:
+Low level system based on core
+
+README:
+Lowland
+=======
+
+Copyright (C) 2012 Sebastian Fastner, Mainz, Germany, mail@sebastianfastner.de
+MIT-style license, see license.md

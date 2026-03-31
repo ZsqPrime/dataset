@@ -1,0 +1,5 @@
+Project Description:
+Sample code used in the Xamarin Seminars
+
+README:
+Xamarin Seminar code examples: http://xamarin.com/seminars

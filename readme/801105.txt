@@ -1,0 +1,6 @@
+
+
+Project Description:
+For the lecture autumn semester 2011, this project tries to build a web interface in order to start a customizable workflow of cloudenabled Bioinformatics software.
+
+README:

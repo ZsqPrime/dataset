@@ -1,0 +1,8 @@
+#This project was rewritten.  The rewrite can be found [here](http://github.com/Wollw/cellular-polymaton).#
+
+
+Project Description:
+Cellular Automaton for AVR  -- This project is superceded by the "Cellular Polymaton" project which is a complete rewrite.
+
+README:
+#This project was rewritten.  The rewrite can be found [here](http://github.com/Wollw/cellular-polymaton).#

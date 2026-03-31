@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+UDPMessenger is a xcode-project.
+This iPhone application provides the control of the Arduino software with a RedFly shield. The communication is based on UDP - messages. For the work with the UDP sockets, I used the GCDAsyncUdpSocket class found here:
+https://github.com/robbiehanson/CocoaAsyncSocket

@@ -1,0 +1,6 @@
+Project Description:
+pYthon mYsql BALancer
+
+README:
+yybal is a yet another MySQL balancer written in Python using gevent library and greenlets
+yybal tries to remove failing backends using some query statistics

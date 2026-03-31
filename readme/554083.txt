@@ -1,0 +1,13 @@
+Para rodar use:
+  cmake .
+  make
+  ./matriz
+
+Project Description:
+None
+
+README:
+Para rodar use:
+  cmake .
+  make
+  ./matriz

@@ -1,0 +1,10 @@
+Network chat. Server.
+Pairs with chat-client repo.
+
+
+Project Description:
+Network Chat. Server.
+
+README:
+Network chat. Server.
+Pairs with chat-client repo.

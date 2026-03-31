@@ -1,0 +1,35 @@
+Class to access your Amazon Kindle hightlights which are accessible from http://kindle.amazon.com/ when 
+highlighted via the kindle app on the likes of iPhone, Mac etc...
+
+When a highlighted selection of text has a note associated with it, such as tweet in this case, the class extracts
+the associated highlight, thus making it available for further action such as sharing on a social network.
+
+@todo
+1. Save book related details to a database.
+2. Hook in Twitter and Facebook for proper sharing.
+
+Notes:
+This class is highly reliant on amazon not changing their login methods on http://kindle.amazon.com and the associated 
+site structure. So if this fails to work, please feel free to fix or let me know! 
+
+-- Have fun!
+
+Project Description:
+Use the Kindle app on your devices and want to share your highlights? Then this is for you.
+
+README:
+Class to access your Amazon Kindle hightlights which are accessible from http://kindle.amazon.com/ when 
+highlighted via the kindle app on the likes of iPhone, Mac etc...
+
+When a highlighted selection of text has a note associated with it, such as tweet in this case, the class extracts
+the associated highlight, thus making it available for further action such as sharing on a social network.
+
+@todo
+1. Save book related details to a database.
+2. Hook in Twitter and Facebook for proper sharing.
+
+Notes:
+This class is highly reliant on amazon not changing their login methods on http://kindle.amazon.com and the associated 
+site structure. So if this fails to work, please feel free to fix or let me know! 
+
+-- Have fun!

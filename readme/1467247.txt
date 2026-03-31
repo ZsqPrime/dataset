@@ -1,0 +1,7 @@
+A homework(Rich) assigned by thoughtworks xi'an office in spring festival 2011.
+
+Project Description:
+Homework of TW
+
+README:
+A homework(Rich) assigned by thoughtworks xi'an office in spring festival 2011.

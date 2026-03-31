@@ -1,0 +1,87 @@
+The Program is designed only for G-series. Support for other mice like X7-series is incomplete, but some functions may work.
+If you have an "oscar" mouse please use wireshark and virtualbox with windows to capture and compare bytes that are sent by original program.
+
+!!! Use at your own risk. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, ETC DAMAGES (c) The BSD 2-Clause License !!!
+
+Do not use the code from "old" folder, it's only for development and testing and might be dangerous.
+
+BUILD:
+cd libgmouse
+make
+cd ../a4tool
+make
+
+
+Usage:
+
+a4tool pair <list | new | del <ID> | disable <ID> | enable <ID>>  // pairing with another g-mouses and keyboards
+a4tool channel <get | set chan>                   // chan - [1-14, 0-auto]
+a4tool distance <get | set (15 | 20)>             // operating distance
+a4tool sleep <get | set wake_by time>             // wake_by=[click | move] time=3..10min
+a4tool mrr <get | set (125 | 250 | 500)>          // read rate
+a4tool profile <get | set (1 | 2 |3 |4 | 5)>
+a4tool bat                                        // get mouse and keyboard bat level
+a4tool siglevel                                   // get RF-signal level
+a4tool dump <file>                                // dump dongle memory to file
+a4tool init                                       // switch multifunctional button
+
+
+Power checker:
+Copy files from "a4toold" into /usr/share/a4tool and a4tool binary to /usr/bin.
+Add a4toold.sh to user DE/WM autorun, after copy a4toold.conf to /etc/ and configure it.
+
+
+Udev and user permissions:
+cp udev/10-a4tech-usb-devices.rules /etc/udev/rules.d/
+groupadd gmouse
+useradd -G gmouse YOUR_USER_NAME
+
+
+TODO:
+profile configuring and scripts parser
+
+Project Description:
+Tools for control your smart mouse. A4Tech G10-700F, and other "Oscar mouse's".
+
+README:
+The Program is designed only for G-series. Support for other mice like X7-series is incomplete, but some functions may work.
+If you have an "oscar" mouse please use wireshark and virtualbox with windows to capture and compare bytes that are sent by original program.
+
+!!! Use at your own risk. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, ETC DAMAGES (c) The BSD 2-Clause License !!!
+
+Do not use the code from "old" folder, it's only for development and testing and might be dangerous.
+
+BUILD:
+cd libgmouse
+make
+cd ../a4tool
+make
+
+
+Usage:
+
+a4tool pair <list | new | del <ID> | disable <ID> | enable <ID>>  // pairing with another g-mouses and keyboards
+a4tool channel <get | set chan>                   // chan - [1-14, 0-auto]
+a4tool distance <get | set (15 | 20)>             // operating distance
+a4tool sleep <get | set wake_by time>             // wake_by=[click | move] time=3..10min
+a4tool mrr <get | set (125 | 250 | 500)>          // read rate
+a4tool profile <get | set (1 | 2 |3 |4 | 5)>
+a4tool bat                                        // get mouse and keyboard bat level
+a4tool siglevel                                   // get RF-signal level
+a4tool dump <file>                                // dump dongle memory to file
+a4tool init                                       // switch multifunctional button
+
+
+Power checker:
+Copy files from "a4toold" into /usr/share/a4tool and a4tool binary to /usr/bin.
+Add a4toold.sh to user DE/WM autorun, after copy a4toold.conf to /etc/ and configure it.
+
+
+Udev and user permissions:
+cp udev/10-a4tech-usb-devices.rules /etc/udev/rules.d/
+groupadd gmouse
+useradd -G gmouse YOUR_USER_NAME
+
+
+TODO:
+profile configuring and scripts parser

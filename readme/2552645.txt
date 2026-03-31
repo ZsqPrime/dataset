@@ -1,0 +1,15 @@
+Project Description:
+Bot for game "Robocode"
+
+README:
+//== move round with GaussFactor Targeling ==//
+
+
+// my help info
+newX = distance*sin(heading);
+newY = distance*cos(heading);
+
+//==== ??==
+
+double enemyHeading = Utils.normalAbsoluteAngleDegrees(getHeading() + e.getBearing());	
+double radarTurn = enemyHeading - getRadarHeading();

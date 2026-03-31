@@ -1,0 +1,58 @@
+Flexi Panda
+=============
+
+Features
+-------
+
+* [display text](http://qemistry.us) -- `some code`
+
+
+Contributing
+------------
+
+
+### Commands
+
+
+Installation
+-----------
+
+//
+Usage
+-----
+
+
+Contributing
+------------
+
+
+Project Description:
+A responsive, event-driven dropdown menu jQuery plugin
+
+README:
+Flexi Panda
+=============
+
+Features
+-------
+
+* [display text](http://qemistry.us) -- `some code`
+
+
+Contributing
+------------
+
+
+### Commands
+
+
+Installation
+-----------
+
+//
+Usage
+-----
+
+
+Contributing
+------------

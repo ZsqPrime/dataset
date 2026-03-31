@@ -1,0 +1,22 @@
+Python Socket Documentation:
+http://docs.python.org/library/socket.html
+
+Tutorial:
+http://docs.python.org/howto/sockets.html
+
+Simple example:
+http://ilab.cs.byu.edu/python/socket/echoserver.html
+
+
+Project Description:
+Python implementation of Gnutella for CS 114 P2P systems
+
+README:
+Python Socket Documentation:
+http://docs.python.org/library/socket.html
+
+Tutorial:
+http://docs.python.org/howto/sockets.html
+
+Simple example:
+http://ilab.cs.byu.edu/python/socket/echoserver.html

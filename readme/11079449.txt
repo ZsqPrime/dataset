@@ -1,0 +1,5 @@
+Project Description:
+A Python implementation of the block cipher PRINTcipher
+
+README:
+http://about.bozhu.me

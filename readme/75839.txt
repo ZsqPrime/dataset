@@ -1,0 +1,10 @@
+This is a working prototype of a system to search, comment, and tag articles in an existing,
+in-house database of journal articles, books, patents, etc.
+
+
+Project Description:
+None
+
+README:
+This is a working prototype of a system to search, comment, and tag articles in an existing,
+in-house database of journal articles, books, patents, etc.

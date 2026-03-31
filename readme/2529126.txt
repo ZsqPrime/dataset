@@ -1,0 +1,25 @@
+Project Description:
+
+
+README:
+* Scala for Scripting
+** Shortcuts for operations on files
+#+BEGIN_SRC scala
+import scripting.file._
+
+val file = "test.txt".f
+file.exists                   // false
+file.getAbsolutePath          // /projects/scripting/test.txt
+
+import scala.sys.process._
+
+"ls" #> file !
+val infile = "infile.txt".f
+val outfile = "outfile.txt".f
+file.renameTo(infile)
+"cat" #< infile #> outfile !
+#+END_SRC
+* PLEAC-Scala
+  A work in progress...
+  - [[https://gist.github.com/1613243][Process Management and Communication]]
+  - [[https://gist.github.com/1616304][File Access]]

@@ -1,0 +1,11 @@
+A Minimal Portal based on the circuits framework.
+
+Starting with version 0.4 this project requires circuits 3.x.
+
+Project Description:
+A minimal portal based on circuits
+
+README:
+A Minimal Portal based on the circuits framework.
+
+Starting with version 0.4 this project requires circuits 3.x.

@@ -1,0 +1,8 @@
+config files for easy updates
+
+
+Project Description:
+vimrc and some stuff
+
+README:
+config files for easy updates

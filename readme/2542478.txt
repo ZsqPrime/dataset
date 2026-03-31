@@ -1,0 +1,4 @@
+Project Description:
+script to convert from a JSON array to PNG using HTML5 canvas
+
+README:

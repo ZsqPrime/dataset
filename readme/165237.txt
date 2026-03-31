@@ -1,0 +1,9 @@
+All disscussion about this project: https://groups.google.com/group/xlog-dev
+
+
+
+Project Description:
+distribute log system
+
+README:
+All disscussion about this project: https://groups.google.com/group/xlog-dev

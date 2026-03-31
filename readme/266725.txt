@@ -1,0 +1,17 @@
+nette-web-sokol
+===============
+
+Sokol Veterov web page
+
+
+Project Description:
+Website of local football team
+
+README:
+nette-web-sokol
+
+===============
+
+
+
+Sokol Veterov web page

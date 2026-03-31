@@ -1,0 +1,12 @@
+Project Description:
+cyher's vim setting and some toolkits
+
+README:
+initalize version.
+what should I say?
+It's just cyher's linux coding toolkit, not for everyone....
+
+
+Guide:
+
+$ ./setup.sh

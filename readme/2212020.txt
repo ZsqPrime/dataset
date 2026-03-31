@@ -1,0 +1,8 @@
+Test project for custom components
+
+
+Project Description:
+MyFaces Codi Ebean Jetty App Stack
+
+README:
+Test project for custom components

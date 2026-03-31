@@ -1,0 +1,5 @@
+Project Description:
+Infrastructure code to support DNA pipeline
+
+README:
+Basic infrastructure code for Ruffus pipelines.

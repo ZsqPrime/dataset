@@ -1,0 +1,57 @@
+Project Description:
+Scripts for SpaceBukkit!
+
+README:
+ ====================
+ == installrtk.sh ===
+ ====================
+
+ This script file is intended for all linux systems.
+ It interactively ask for ram information and sets everything up.
+
+ Invocation:
+
+ sh installrtk.sh
+   This installs RTK and SpaceModule after confirmation in the folder 
+   you have chosen.
+
+
+ ====================
+ ==== install.sh ====
+ ====================
+
+ This script file is intended for all linux systems.
+ It has the possibility to check for dependencies (to a certain point),
+ to fully install a SpacePanel in the current directory and to
+ upgrade the SpacePanel in the current directory.
+
+ Invocation:
+
+ sh install.sh
+   This installs a SpacePanel inside the current diretory,
+   overwriting any existing SpacePanels.
+
+ sh install.sh -u
+   This upgrades a SpacePanel and the install.sh script inside
+   the current directory and preserves configuration of SpacePanels.
+   Attention: this will delete every data inside the current directory!
+
+
+ ====================
+ == mac_install.sh ==
+ ====================
+
+ This script file is intended for all Mac/BSD systems.
+ It has the possibility to fully install a SpacePanel in the current
+ directory and to upgrade the SpacePanel in the current directory.
+
+ Invocation:
+
+ sh mac_install.sh
+   This installs a SpacePanel inside the current diretory,
+   overwriting any existing SpacePanels.
+
+ sh mac_install.sh -u
+   This upgrades a SpacePanel and the mac_install.sh script inside
+   the current directory and preserves configuration of SpacePanels.
+   Attention: this will delete every data inside the current directory!

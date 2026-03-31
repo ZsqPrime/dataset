@@ -1,0 +1,17 @@
+Project Description:
+Kirby will swallow all your pastes
+
+README:
+Kirby Paste Server
+==================
+
+Kirby will swallow anything you paste to him.
+
+Kirby has taken quite some code from the Lodge It project:
+
+    http://www.pocoo.org/projects/lodgeit/
+
+Kirby uses:
+
+    -   Flask
+    -   Pygments

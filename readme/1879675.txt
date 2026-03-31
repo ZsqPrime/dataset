@@ -1,0 +1,11 @@
+This is the current subset of Boost necessary to build Cinder.
+http://libcinder.org
+
+
+
+Project Description:
+Boost subset for Cinder
+
+README:
+This is the current subset of Boost necessary to build Cinder.
+http://libcinder.org

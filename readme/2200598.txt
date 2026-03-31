@@ -1,0 +1,62 @@
+# Created:	Daniele Mondello
+# Web:		www.danielemondello.it
+# Email:	mondello@olomedia.it
+# Date:		18/02/12
+# Time:		21:21
+
+English:
+
+With "redmine fields permissions" plugin you can enable/disable the view of 5 fields for some users or groups:
+
+- Assigned to
+- Start date
+- Due date
+- Estimated hours
+- Priority
+
+Italiano:
+
+Con il plugin "redmine fields permissions" è possibile abilitare/disabilitare la vista di 5 campi agli utenti o a gruppi di utenti:
+
+- Assegnato
+- Data Inizio
+- Scadenza
+- Ore stimate
+- Priorità
+
+
+Daniele  Mondello website:www.danielemondello.it
+
+
+Project Description:
+Plugin for Redmine 
+
+README:
+# Created:	Daniele Mondello
+# Web:		www.danielemondello.it
+# Email:	mondello@olomedia.it
+# Date:		18/02/12
+# Time:		21:21
+
+English:
+
+With "redmine fields permissions" plugin you can enable/disable the view of 5 fields for some users or groups:
+
+- Assigned to
+- Start date
+- Due date
+- Estimated hours
+- Priority
+
+Italiano:
+
+Con il plugin "redmine fields permissions" è possibile abilitare/disabilitare la vista di 5 campi agli utenti o a gruppi di utenti:
+
+- Assegnato
+- Data Inizio
+- Scadenza
+- Ore stimate
+- Priorità
+
+
+Daniele  Mondello website:www.danielemondello.it

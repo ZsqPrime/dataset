@@ -1,0 +1,8 @@
+Automatically detect connections to wifi hotspots (captive portals) and use configured credentials to keep you logged in.
+
+
+Project Description:
+Automatically detect connections to wifi hotspots (captive portals) and use configured credentials to keep you logged in.
+
+README:
+Automatically detect connections to wifi hotspots (captive portals) and use configured credentials to keep you logged in.

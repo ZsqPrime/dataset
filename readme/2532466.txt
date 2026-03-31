@@ -1,0 +1,7 @@
+Project Description:
+This gem provides, together with a very_nice_menu a DSL for building and rendering beautiful html menus.
+
+README:
+= VeryNiceRailsMenu
+
+This project rocks and uses MIT-LICENSE.

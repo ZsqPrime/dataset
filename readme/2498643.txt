@@ -1,0 +1,12 @@
+# Quick Links for Stud.IP
+
+This plugin adds an easy-to-access link list each user can adjust to his personal needs.
+
+
+Project Description:
+Quicklink plugin for Stud.IP
+
+README:
+# Quick Links for Stud.IP
+
+This plugin adds an easy-to-access link list each user can adjust to his personal needs.

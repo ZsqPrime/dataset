@@ -1,0 +1,5 @@
+Project Description:
+A restartless add-on based on gist by Paul Rouget https://gist.github.com/2145830
+
+README:
+This repository contains the source code of the add-on Magnifier

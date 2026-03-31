@@ -1,0 +1,22 @@
+Project Description:
+The Inq Language and Environment
+
+README:
+Welcome to Inq
+
+Inq is a scripting language and execution environment for
+enterprise client/server applications. Its server manages
+database persistence, transactions events, locks and
+processes. Its client supports rapid GUI building and
+full MVC for easy state-driven applications.
+
+Inq makes heavy use of reification, so an application
+developer writes almost no boilerplate at all. Everything
+is a map, meaning relationships are defined at runtime and
+applications are more easily maintained.
+
+Please see http://www.inqwell.com for more information
+
+---------------------------------------------------------
+
+Build Instructions: mvn package -DskipTests

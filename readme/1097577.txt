@@ -1,0 +1,14 @@
+knockout-node (depricated)
+==========================
+
+This is now in [Knockout](https://github.com/knockout/knockout)
+
+
+Project Description:
+NodeJs Module for the KnockoutJs MVVM Library (Useful for unit tests via NodeJs)
+
+README:
+knockout-node (depricated)
+==========================
+
+This is now in [Knockout](https://github.com/knockout/knockout)

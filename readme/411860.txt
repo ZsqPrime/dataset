@@ -1,0 +1,7 @@
+DynamicEconomy
+
+Project Description:
+A Virtual Economy for your Minecraft Server
+
+README:
+DynamicEconomy

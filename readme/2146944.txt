@@ -1,0 +1,47 @@
+#Step 1
+git git@github.com:qiguyu/hangqingreciever.git
+
+#Step 2
+cd hangqingreciever
+
+#Step 3
+npm install -d
+
+#Step 4
+cd etc
+cp settings.original.json settings.json
+vi settings.json
+
+#Step 5
+#settings.json 说明
+{
+    "queue" : {
+        "host" : "http://127.0.0.1:3000/queue", //队列地址
+        "contentqueue":"weibo_send"             //队列名称
+    },
+    "mysql" : {
+        "host":"172.16.33.237",
+        "port":3306,  	
+        "user" : "stockradar",
+        "password" : "stockradar",
+        "database": "stock_radar" 
+    },
+    "redis" : {
+        "host":"localhost",
+        "port":6379
+    },
+    "log" : {
+        "file" : "log/reciever.log"
+    },
+    "zjlx" : {
+        "api" : "http://172.16.39.102/interface_zjlxjiekou.php?slishi=1&block=1&sday=1&code=", //资金流向接口地址
+        "image" : "http://172.16.33.147/zjlxImage.php?stockcode="  //资金流向图片地址
+    },
+    "pic" : {
+        "folder" : "image" //微博图片保存地址，需确保该目录存在。第一个字符为“/”时表示绝对路径处理，否则表示项目所在目录下的子目录
+    }
+}
+
+
+#Step 6
+node receiver.js

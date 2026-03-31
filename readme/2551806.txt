@@ -1,0 +1,5 @@
+Project Description:
+A Java-Based Craftbukkit Plugin Auto-Updater!
+
+README:
+Crumb is a up-and-coming Craftbukkit plugin updater! Currently in planning stages.

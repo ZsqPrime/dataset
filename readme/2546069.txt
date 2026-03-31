@@ -1,0 +1,10 @@
+Project Description:
+An rs-485 driven LED project based on Paul Stoffregen's hardware and code from Mykle's light bar.
+
+README:
+The pinout is:
+
+VCC [closest to the micro controller]
+B
+A
+GND

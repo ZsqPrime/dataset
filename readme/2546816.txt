@@ -1,0 +1,5 @@
+Project Description:
+Webapp (WAR) Verification Library (and DeploymentManager binding)
+
+README:
+NO LONGER RELEVANT WITH NEWER OPENJDK

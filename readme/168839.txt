@@ -1,0 +1,130 @@
+This repository moved to sourcehut: https://git.sr.ht/~tomterl/zshorg
+
+* My literate =zsh= configuration.
+
+This is my zsh configuration as [[http://orgmode.org/][org-mode]] document, based off of my
+previous [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]] setup. So the setup presented here is at the moment
+almost completly owed to the crazy and wonderful croud assambled
+there. And to Sven Guckes and Julius Plenz -- their book "zsh - Die
+magische Shell" is a helpful resource in setting up zsh.
+
+Not everything is explained in prose yet, but I'll get there, for my
+own good.
+
+This is, and will be, a work in progress. And somtime I hope a work of
+beauty.
+
+The whole configuration setup is in =zshrc.org=, the file is split
+during tangling.
+
+** Prerequisites
+- emacs 24
+- org-mode >= 7.8.03 (exported after 23d january 2012)
+- make
+
+** Installation
+- Clone the github repository
+  #+BEGIN_SRC sh
+    cd $HOME
+    git clone git://github.com/tomterl/zshorg.git .zshorg
+  #+END_SRC
+
+- Read the file =zshrc.org= and tinker with the settings.
+   
+- Backup your existing config
+  #+BEGIN_SRC sh
+    mkdir -p ~/Backups
+    tar cfvz ~/Backups/zsh-config-$(date +"%F-%T") ~/.zshrc ~/.zsh.d
+  #+END_SRC
+- Generate the new config
+  Either =C-c C-v C-t= while visiting the file =zshrc.org= in emacs, or
+  #+BEGIN_SRC sh
+    cd ~/.zshorg
+    make tangle
+  #+END_SRC
+  this will overwrite =~/.zshrc= and a couple of files in =~/.zsh.d=;
+  make sure you have backups. If you use the makefile, you have to
+  tweak the =ORGINSTALL= variable or provide it at the commandline
+  #+BEGIN_SRC sh
+    cd ~/.zshorg
+    make tangle ORGINSTALL=your/actual/path/to/the/org/elc/files
+  #+END_SRC
+- Install external addons
+  #+BEGIN_SRC sh
+    make externals
+  #+END_SRC
+** External addons
+Addons resp. plugins are managed using ~antibody~.  To update them issue ~make update-externals~.
+
+** =org-mode= config                                         :ingnoreExport:
+#+STARTUP: indent
+#+STARTUP: content
+#+EXPORT_EXCLUDE_TAGS: ignoreExport
+
+
+Project Description:
+org-mode literate programming zsh config 
+
+README:
+This repository moved to sourcehut: https://git.sr.ht/~tomterl/zshorg
+
+* My literate =zsh= configuration.
+
+This is my zsh configuration as [[http://orgmode.org/][org-mode]] document, based off of my
+previous [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]] setup. So the setup presented here is at the moment
+almost completly owed to the crazy and wonderful croud assambled
+there. And to Sven Guckes and Julius Plenz -- their book "zsh - Die
+magische Shell" is a helpful resource in setting up zsh.
+
+Not everything is explained in prose yet, but I'll get there, for my
+own good.
+
+This is, and will be, a work in progress. And somtime I hope a work of
+beauty.
+
+The whole configuration setup is in =zshrc.org=, the file is split
+during tangling.
+
+** Prerequisites
+- emacs 24
+- org-mode >= 7.8.03 (exported after 23d january 2012)
+- make
+
+** Installation
+- Clone the github repository
+  #+BEGIN_SRC sh
+    cd $HOME
+    git clone git://github.com/tomterl/zshorg.git .zshorg
+  #+END_SRC
+
+- Read the file =zshrc.org= and tinker with the settings.
+   
+- Backup your existing config
+  #+BEGIN_SRC sh
+    mkdir -p ~/Backups
+    tar cfvz ~/Backups/zsh-config-$(date +"%F-%T") ~/.zshrc ~/.zsh.d
+  #+END_SRC
+- Generate the new config
+  Either =C-c C-v C-t= while visiting the file =zshrc.org= in emacs, or
+  #+BEGIN_SRC sh
+    cd ~/.zshorg
+    make tangle
+  #+END_SRC
+  this will overwrite =~/.zshrc= and a couple of files in =~/.zsh.d=;
+  make sure you have backups. If you use the makefile, you have to
+  tweak the =ORGINSTALL= variable or provide it at the commandline
+  #+BEGIN_SRC sh
+    cd ~/.zshorg
+    make tangle ORGINSTALL=your/actual/path/to/the/org/elc/files
+  #+END_SRC
+- Install external addons
+  #+BEGIN_SRC sh
+    make externals
+  #+END_SRC
+** External addons
+Addons resp. plugins are managed using ~antibody~.  To update them issue ~make update-externals~.
+
+** =org-mode= config                                         :ingnoreExport:
+#+STARTUP: indent
+#+STARTUP: content
+#+EXPORT_EXCLUDE_TAGS: ignoreExport

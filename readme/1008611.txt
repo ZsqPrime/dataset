@@ -1,0 +1,9 @@
+Project Description:
+Ruby application for managing and visualizing input and output files for the FHI-AIMS code
+
+README:
+
+Required Gems:
+
+ruby-opengl >= 0.60.1
+wxruby

@@ -1,0 +1,15 @@
+Project Description:
+
+
+README:
+Create new project
+mkproject gmailapi
+
+Install Tools
+
+pip install -r REQUIREMENTS
+
+start programm:
+python calendar.py
+
+Examples for Using in calendar_example.py

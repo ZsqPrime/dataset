@@ -1,0 +1,6 @@
+
+
+Project Description:
+When the new version is released, I'm going to make an entirely new repository for files compatible with the new version, so there won't be any confusion. (If you're looking for the magic 8 ball widget, look in the folder labeled "contentfolder".).
+
+README:

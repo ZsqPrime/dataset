@@ -1,0 +1,102 @@
+Getting started
+===============
+
+1. Make sure you have GNUstep installed
+
+2. Type 'make' ... to build the code and the documentation
+
+3. Read the documentation (point your web browser at the ECCL subdirectory)
+
+4. (optional) Customise (see local.make) and do 'make clean'.
+
+5. Install it (type 'make install') and try it out.
+
+Key points ...
+
+1. You may want to use 'defaults write NSGlobalDomain EcvEffectiveUser xxx'
+where 'xxx' is your username, to tell the system it should be running as you.
+
+2. Debug files are written in ~xxx/DebugLogs ...
+look there to diagnose problems.
+
+3. Configuration is in ~xxx/Data.  Specifically, you need to configure
+~xxx/Data/Command/Control.plist, ~xxx/Data/Command/Operators.plist, and
+~xxx/Data/Command/AlertConfig.plist before the Control server will start.
+There are examples in the same directory as this README
+
+The Control server reads the configuration information and acts as a central
+point to which Command servers running on different hosts will connect (in
+order to obtain configuration and in order to report problems to a central
+point).  The Control server is also contacted by Console processes, which
+provide a command line to control the operation of the system as a whole.
+The Control server acts as an alarm destination for the entire system and
+interfaces to SNMP.  It also provides email alerting facilities according
+to alert rules defined in AlertConfig.plist 
+
+The Command server handles launching and shutting down of processes and
+monitoring their state.  When a process starts up it registers itself with
+the Command server, and when it shuts down it unregisters itself.
+A process is considered stable if it starts up, registers itself, and then
+responds to the 'pings' that the Command server sends to it at intervals.
+A process has to be working and registered with the Command server for some
+time before it is considered stable.
+
+In connection with this process management, the server will raise and clear
+some alarms.
+These alarms are all created with the 'processingError' event type
+and the 'softwareProgramError' probable cause.  The alarms will have managed
+object values consisting of the host the server is running on, the process
+name 'Command', an empty instance value, and a component value consisting
+of the full name of the process (process name and instance) to which they
+apply.
+
+The individual specific problems are:
+
+Launch failed
+  Raised when a process should have launched but has failed to do so within
+  the permitted time (currently hard coded to 30 seconds).
+  This can be immediately on attempting to launch (eg if the configuration
+  is wrong, so there is no executable to launch), very shortly after launch
+  (eg if the program crashes immediately), or at the end of the permitted
+  time (eg the program fails to connect to and register itself with the
+  Command server).
+  This alarm should be cleared automatically once the process launches or if
+  the process is told to quit from the Console.
+
+Process hung
+  Raised when a process which was working ceases to respond to the Command
+  server.  This may be due to the process hanging up due to an internal
+  problem, or may be due to some very slow operation (a temporary hangup)
+  such as a long slow database query.  If the process recovers (and becomes
+  stable), this alarm should automatically be cleared.
+  If the process is manually quit it should also be cleared.
+
+Process lost
+  Raised when a process which was working ceases to exist (eg crashes) without
+  cleanly shutting down (ie without telling the Command server it is shutting
+  down before it does so).
+  If the process is started again (and becomes stable), the alarm should
+  automatically be cleared.
+
+Started (audit information)
+  An audit alarm clear, generated whenever a process launch completes, as an
+  informational message.  The additional text part says why the process started:
+
+  autolaunch
+  Console launch command
+  Console restart command
+  started externally
+  remote API request
+
+Stopped (audit information)
+  An audit alarm clear, generated whenever a process shutdown completes, as an
+  informational message.  The additional text part says why the process stopped:
+
+  process disabled in config
+  Console quit command
+  Console restart command
+  quit all instruction
+  stopped externally
+  stopped (process lost)
+  stopped (died with signal X)
+

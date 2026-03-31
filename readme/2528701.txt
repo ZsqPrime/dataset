@@ -1,0 +1,7 @@
+Project Description:
+Arduino experimentation
+
+README:
+Arduino Uno experiments. 
+
+Builds with CrossPack: http://www.obdev.at/products/crosspack/index.html

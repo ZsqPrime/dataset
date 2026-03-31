@@ -1,0 +1,12 @@
+_Code for the Geo Photo Rails server is available at https://github.com/heroku/devcenter-ios-geophoto-api_
+
+Location-based mobility apps are a central part of any modern product's strategy more than ever before. Heroku's simple deployment process and handling of server-side complexities makes it an ideal platform for the backing APIs that power these types of apps.
+
+
+Project Description:
+Companion code for the Heroku Dev Center Article "Building an iOS Photo-sharing and Geolocation Mobile Client and API"
+
+README:
+_Code for the Geo Photo Rails server is available at https://github.com/heroku/devcenter-ios-geophoto-api_
+
+Location-based mobility apps are a central part of any modern product's strategy more than ever before. Heroku's simple deployment process and handling of server-side complexities makes it an ideal platform for the backing APIs that power these types of apps.

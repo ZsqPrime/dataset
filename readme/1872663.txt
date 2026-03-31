@@ -1,0 +1,130 @@
+To install from source you can use:
+
+sudo python ./setup.py install
+
+-------------------------------
+
+usage: picasasync [-h] [-n] [-D] [-v] [-m NUMBER] [-u] [-d] [-r]
+                  [-t [THREADS]] [-o ORIGINS] [--max-size MAX_SIZE]
+                  [--force-update [{full,metadata}]] [--delete-photos]
+                  [--strip-exif] [--transform TRANSFORMS] [--delete-albums]
+                  PATH [PATH ...]
+
+Sync one or more directories with your Picasa Web account. If only one
+directory is given and it doesn't contain any supported file, it is assumed to
+be the parent of all the local albums.
+
+positional arguments:
+  PATH                  Parent directory of the albums to sync
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n, --dry-run         Do everything except creating or deleting albums and
+                        photos
+  -D, --debug           Debug Picasa API usage
+  -v, --verbose         Verbose output (can be given more than once)
+  -m NUMBER, --max-photos NUMBER
+                        Maximum number of photos in album (limited to 1000)
+  -u, --upload          Upload missing remote photos
+  -d, --download        Download missing local photos
+  -r, --update          Update changed local or remote photos
+  -t [THREADS], --threads [THREADS]
+                        Multithreaded operation. Set number of threads to use
+                        on album processing. If not given defaults to 1, if
+                        given without argument, defaults to number of CPU
+                        cores (4 in this system).
+  -o ORIGINS, --origin ORIGINS
+                        Timestamp origin. ORIGINS is a comma separated list of
+                        values "filename", "exif" or "stat" which will be
+                        probed in order. Default is "exif,stat".
+
+DANGEROUS:
+  Dangerous options that should be used with care
+
+  --max-size MAX_SIZE   Maximum size of photo when using --transform=resize.
+                        Default is 2048,2048.
+  --force-update [{full,metadata}]
+                        Force updating photos regardless of modified status
+                        (Assumes --update). If no argument given, it assumes
+                        full.
+  --delete-photos       Delete remote or local photos not present on the other
+                        album
+  --strip-exif          Strip EXIF data from your photos on upload.
+  --transform TRANSFORMS
+                        Transform the local files before uploading them.
+                        TRANSFORMS is a list of transformations to apply, from
+                        "raw", "rotate" and "resize".
+
+VERY DANGEROUS:
+  Very dangerous options that should be used with extreme care
+
+  --delete-albums       Delete remote or local albums not present on the other
+                        system
+
+
+Project Description:
+Synchronize a local directory of albums with your picasa account
+
+README:
+To install from source you can use:
+
+sudo python ./setup.py install
+
+-------------------------------
+
+usage: picasasync [-h] [-n] [-D] [-v] [-m NUMBER] [-u] [-d] [-r]
+                  [-t [THREADS]] [-o ORIGINS] [--max-size MAX_SIZE]
+                  [--force-update [{full,metadata}]] [--delete-photos]
+                  [--strip-exif] [--transform TRANSFORMS] [--delete-albums]
+                  PATH [PATH ...]
+
+Sync one or more directories with your Picasa Web account. If only one
+directory is given and it doesn't contain any supported file, it is assumed to
+be the parent of all the local albums.
+
+positional arguments:
+  PATH                  Parent directory of the albums to sync
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n, --dry-run         Do everything except creating or deleting albums and
+                        photos
+  -D, --debug           Debug Picasa API usage
+  -v, --verbose         Verbose output (can be given more than once)
+  -m NUMBER, --max-photos NUMBER
+                        Maximum number of photos in album (limited to 1000)
+  -u, --upload          Upload missing remote photos
+  -d, --download        Download missing local photos
+  -r, --update          Update changed local or remote photos
+  -t [THREADS], --threads [THREADS]
+                        Multithreaded operation. Set number of threads to use
+                        on album processing. If not given defaults to 1, if
+                        given without argument, defaults to number of CPU
+                        cores (4 in this system).
+  -o ORIGINS, --origin ORIGINS
+                        Timestamp origin. ORIGINS is a comma separated list of
+                        values "filename", "exif" or "stat" which will be
+                        probed in order. Default is "exif,stat".
+
+DANGEROUS:
+  Dangerous options that should be used with care
+
+  --max-size MAX_SIZE   Maximum size of photo when using --transform=resize.
+                        Default is 2048,2048.
+  --force-update [{full,metadata}]
+                        Force updating photos regardless of modified status
+                        (Assumes --update). If no argument given, it assumes
+                        full.
+  --delete-photos       Delete remote or local photos not present on the other
+                        album
+  --strip-exif          Strip EXIF data from your photos on upload.
+  --transform TRANSFORMS
+                        Transform the local files before uploading them.
+                        TRANSFORMS is a list of transformations to apply, from
+                        "raw", "rotate" and "resize".
+
+VERY DANGEROUS:
+  Very dangerous options that should be used with extreme care
+
+  --delete-albums       Delete remote or local albums not present on the other
+                        system

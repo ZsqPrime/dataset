@@ -1,0 +1,14 @@
+A C/C++ port of the Osu! game.  Should be mostly cross platform compatible.
+
+
+Work in progress.
+
+
+Project Description:
+a version of osu ... because why not?
+
+README:
+A C/C++ port of the Osu! game.  Should be mostly cross platform compatible.
+
+
+Work in progress.

@@ -1,0 +1,10 @@
+# roboJar
+A ttfm bot that I wrote
+
+
+Project Description:
+turntable.fm bot
+
+README:
+# roboJar
+A ttfm bot that I wrote

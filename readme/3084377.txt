@@ -1,0 +1,61 @@
+Project Description:
+David Dart's Piratebox scripts reformed for laptop usage.
+
+README:
+ 
+##########################################################################
+## PirateBox-Manager (By Cale Black)
+##########################################################################
+## Quick installer / manager for the Laptop PirateBox project
+## For both advanced and basic users
+## created by Cale Black (cablack@rams.colostate.edu)  2012-05-05
+## Liscenced by GPL
+## Changes: (0.8.0)
+## Added Color to splash screen
+## Added quick change for SSID and Channel Number
+## Added clear upload / download folder in config (may move it to main menu)
+## Updated download only for script version .4
+
+More info and updates at: CyberNihilism.net
+and			  forum.daviddarts.com
+
+TODO:
+	Finalize Menu
+	Add a splash screen with ASCII PirateBox logo
+	Add manage files (opens PB folder in nautilaus)
+	Add Manual	
+	Create a Config option
+	Add Debugging
+	Interface for managing files (may wait until GUI)
+
+	LiveCD Fork
+##########################################################################
+## PirateBox for Laptops Scripts (By Matthias Strubel)
+##########################################################################
+## Piratebox for debian laptops --> scripts
+##   created by Matthias Strubel (matthias.strubel@aod-rpg.de)  2011-02-22
+##   licenced by gpl ;; please feel for improvements or feedback :)
+##  Changes:
+##
+
+Complete Download-Package and more Infos on: http://piratebox.aod-rpg.de
+
+Packages contains only scripts based PirateBox scripts without any webserver.
+PirateBox scripts can:
+   * Setup WLAN Interface via iw
+   * Setup hotspot functionality (hostapd)
+   * Setup IP Adresses of wlan interface
+   * Can add wlan interface to an existing bridge
+   * Sets Up a DHCP Server with redirect to wlan-interface IP
+   * Upload landing page
+   * Browse Uploaded files
+   * Announce "Internet yes" for iOS
+   * ShoutBox
+   * Optional small python Forum
+
+For lighttpd Version see: https://github.com/MaStr/PirateBoxScripts_Webserver 
+
+  
+REFERENCES:
+  - The PirateBox project:
+      http://wiki.daviddarts.com/PirateBox_DIY

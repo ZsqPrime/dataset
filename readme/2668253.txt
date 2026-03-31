@@ -1,0 +1,4 @@
+Project Description:
+Application to manage the economy on a shared flat
+
+README:

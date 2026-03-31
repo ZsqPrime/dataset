@@ -1,0 +1,11 @@
+#jqListeningTo
+
+jQuery plugin that gets your recently played tracks from Last.FM - view in use at [bradbenvenuti.com](http://bradbenvenuti.com/#find)
+
+Project Description:
+jQuery plugin that gets recently played tracks from Last.FM
+
+README:
+#jqListeningTo
+
+jQuery plugin that gets your recently played tracks from Last.FM - view in use at [bradbenvenuti.com](http://bradbenvenuti.com/#find)

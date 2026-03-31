@@ -1,0 +1,9 @@
+Implement syscall and scheduler.
+
+
+
+Project Description:
+BSD-like OS for CSE521. Moved to **https://bitbucket.org/forkloop/os161**.
+
+README:
+Implement syscall and scheduler.

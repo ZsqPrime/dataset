@@ -1,0 +1,12 @@
+Project Description:
+
+
+README:
+This repository powers http://passwordsoup.com/
+
+Dependencies:
+- Python
+- Python packages:
+  - Django
+  - Django-Articles
+- Database system

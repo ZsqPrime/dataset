@@ -1,0 +1,5 @@
+Project Description:
+Arquivos comuns dos Projetos
+
+README:
+Repositorio com os arquivos utilizados em meus projetos.

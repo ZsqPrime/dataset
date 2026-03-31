@@ -1,0 +1,28 @@
+Project Description:
+some useful scripts to make much usefull and friendly reverse vnc configuration for end users
+
+README:
+This software package is designed to simplify the procedures of 
+configuring the end-users reverce vnc server.
+
+The ideology is:
+1 - Included software in the package must be free for personal use (at 
+least).
+2 - The package mustwork on many types of Windows servers and 
+workstations.
+3 - System and brain requirements to run client-side software (the 
+reverce VNC server) must be extremely small.
+
+THis package is creating for make the remote technical support much 
+easy. Technical engineer must only run something like /vncviewer 
+--listen/ an send prepared .exe package to user. All configurations 
+must be hardcoded in the .exe
+
+How does it work?
+The very first variant of this program is running RealVNC as server and 
+connects it sequencelly to remote vnc clients. This variant could 
+optionally work through http(s) proxy server too.
+
+Known issues.
+Only console window of end user's PC could be shared.
+Only http(s) proxies with CONNECT directive are supported in poxy mode.

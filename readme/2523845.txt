@@ -1,0 +1,9 @@
+Project Description:
+A souped up Brick clone, written in Python
+
+README:
+To run EmBall:
+
+1. Install pygame (pygame.org)
+
+2. python EmBall.py

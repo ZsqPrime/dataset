@@ -1,0 +1,5 @@
+Project Description:
+A little I18N app with one model
+
+README:
+A little app showing internationalization and BDD.

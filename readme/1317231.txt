@@ -1,0 +1,18 @@
+An FBReader for Android plugin.
+
+Adds advanced settings to FBReader:
+  ** key bindings
+  ** tap zones
+  ** format settings
+
+
+Project Description:
+None
+
+README:
+An FBReader for Android plugin.
+
+Adds advanced settings to FBReader:
+  ** key bindings
+  ** tap zones
+  ** format settings

@@ -1,0 +1,14 @@
+# RedJS - color your javascript
+
+{новая документация в процессе}
+{старая в другой ветке}
+
+
+Project Description:
+javascript library
+
+README:
+# RedJS - color your javascript
+
+{новая документация в процессе}
+{старая в другой ветке}

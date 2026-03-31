@@ -1,0 +1,5 @@
+Project Description:
+A player experiment with WPF and quartz
+
+README:
+A player experiment with WPF and quartz

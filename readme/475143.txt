@@ -1,0 +1,7 @@
+Experiment doing oblique projection on an HTML canvas
+
+Project Description:
+HTML5 canvas oblique projection
+
+README:
+Experiment doing oblique projection on an HTML canvas

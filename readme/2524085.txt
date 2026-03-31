@@ -1,0 +1,28 @@
+Project Description:
+Linux firmware tool for the Cypress EZ-OTG / EZ-HOST USB controller chip.
+
+README:
+Linux firmware tool for the Cypress EZ-OTG / EZ-Host / ScanLogic SL11R.
+The EZ-* chip is found, among other places, on the Xilinx ML501.
+ScanLogic SL11R-IDE is an old USB-to-IDE adapter.
+
+This little tool replaces 'QTUI2C.EXE', which the supposedly Linux-friendly Cypress SDK shipped with.
+
+
+To Build:
+
+Simply enter 'make'. There is only one dependency: libusb 0.1 (development package is requred, e.g. libusb-dev in Debian).
+
+
+Usage:
+
+To burn 'firmware.bin' into your CY7C67300:
+
+	./ezotgdbg -w firmware.bin
+
+To upgrade SL11R-IDE firmware, use:
+
+	./ezotgdbg -m cide26c.bin
+
+
+If you have something other than a CY7C67300 that you believe is compatible (say, a 67200) - add your USB and Product IDs to device_table[] in ezotgdbg.c.

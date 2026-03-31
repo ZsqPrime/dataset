@@ -1,0 +1,8 @@
+Project Description:
+A Simple, configurable cronometer for exercise
+
+README:
+JNekounter
+==========
+
+A Simple, configurable cronometer for exercise workouts like tabata.

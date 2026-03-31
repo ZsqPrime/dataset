@@ -1,0 +1,6 @@
+
+
+Project Description:
+Univ. of MN Simultaneous Audio Recording Interface Software and Firmware
+
+README:

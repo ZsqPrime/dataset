@@ -1,0 +1,16 @@
+# Coffeetag
+
+Wraps a text input element and creates "tags" as you type.
+
+jQuery/ZeptoJS and CoffeeScript.
+
+
+Project Description:
+Wraps a text input element and creates tags as you type.
+
+README:
+# Coffeetag
+
+Wraps a text input element and creates "tags" as you type.
+
+jQuery/ZeptoJS and CoffeeScript.

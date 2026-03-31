@@ -1,0 +1,14 @@
+This is a simple PHP CMS application I am doing while learning PHP. 
+
+\\==\\==\\==\\==\\==\\==\\==\\==\\==\\
+THIS PROJECT IS FOR EDUCATIONAL PURPOSE ONLY
+
+
+Project Description:
+This is a cms application from where you can start and create a good one.
+
+README:
+This is a simple PHP CMS application I am doing while learning PHP. 
+
+\\==\\==\\==\\==\\==\\==\\==\\==\\==\\
+THIS PROJECT IS FOR EDUCATIONAL PURPOSE ONLY

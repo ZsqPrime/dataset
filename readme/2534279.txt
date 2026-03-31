@@ -1,0 +1,5 @@
+Project Description:
+for study
+
+README:
+my study project use Yii framework 1.1.8 and ExtJS4.

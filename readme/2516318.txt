@@ -1,0 +1,11 @@
+== Clouud: Minimalist Chat
+
+A simple chat program that is a work in progress.
+
+Project Description:
+The simplest chat program you could imagine.
+
+README:
+== Clouud: Minimalist Chat
+
+A simple chat program that is a work in progress.

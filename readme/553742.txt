@@ -1,0 +1,5 @@
+Description:
+Dynamic access to installed application list, their icons and simple preferences panes
+
+README:
+README not available

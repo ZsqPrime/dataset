@@ -1,0 +1,16 @@
+== Stay tuned
+
+=== Setup
+
+To setup Kennel make <tt>rake db:seed</tt>
+
+
+Project Description:
+CMS для сайта питомника
+
+README:
+== Stay tuned
+
+=== Setup
+
+To setup Kennel make <tt>rake db:seed</tt>

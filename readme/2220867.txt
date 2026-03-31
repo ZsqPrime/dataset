@@ -1,0 +1,16 @@
+Welcome to CMUSV's Considerate Audio MEdiating Oracle (CAMEO)
+
+There is no guarantee that the provided code will compile, but if you are interested in doing so you'll want to buy a couple headsets and start with these:
+http://clam-project.org/
+http://jackaudio.org/
+
+
+Project Description:
+Considerate AI Teleconference System Facilitator 
+
+README:
+Welcome to CMUSV's Considerate Audio MEdiating Oracle (CAMEO)
+
+There is no guarantee that the provided code will compile, but if you are interested in doing so you'll want to buy a couple headsets and start with these:
+http://clam-project.org/
+http://jackaudio.org/

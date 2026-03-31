@@ -1,0 +1,402 @@
+h1. Welcome to the CoreJet BDD Framework
+
+CoreJet is a business friendly BDD framework, designed to provide confidence and insight for users and product owners, whilst allowing developers to turn requirements into automated BDD tests with minimal fuss.  The framework focuses on providing requirements traceability and coverage analysis allowing for better visibility of progress towards business goals. 
+
+Learn more on the "http://corejet.org":http://corejet.org website.
+
+h2. Getting started
+
+1. Download the CoreJet source and install it in your local maven repository.
+
+bc. mvn clean install
+
+or configure maven to download artifacts from the Maven Central Repository.
+
+2. Add your chosen test implementation and story repository dependency to your maven project e.g.
+
+bc. <dependency>
+    <groupId>org.corejet</groupId>
+    <artifactId>corejet-junit-runner</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.corejet</groupId>
+  <artifactId>jira-story-repository</artifactId>
+</dependency>
+
+Or, if you're using gradle:
+
+bc. compile group: 'org.corejet', name: 'corejet-junit-runner', version:'0.28'
+compile group: 'org.corejet', name: 'jira-story-repository', version:'0.28'
+
+3. Create epic and story tickets in JIRA (or your chosen story repository).
+
+4. Populate all stories with their appropriate number of story points.
+
+5. Create or use an existing field in your story tickets to link them to your epics.
+
+6. Create or use an existing field in your story tickets to contain your acceptance criteria in the form of scenarios.  Scenarios should be written in BDD form e.g.
+
+bc. Scenario: User can downloads the latest version of CoreJet
+Given a user on the CoreJet.org website
+When they download the framework
+Then they are provided with the latest version
+
+7. Create a filter to list the the stories to be tested.
+
+8. In your src/test/recources folder, create a corejet.properties file to point to your story repository e.g.
+
+bc. jira.soap.wsdl.url=https://myproject.jira.com/rpc/soap/jirasoapservice-v2?wsdl
+jira.username=username
+jira.password=password
+default.project=My Project Name
+jira.filter.id=12345
+jira.storypoints.fieldid=10060
+jira.epic.fieldid=
+jira.acceptancecriteria.fieldid=10088
+corejet.report.directory=${project.build.directory}/corejet
+
+9. Migrate your stories into test classes. This can be done using the "CoreJet-JIRA-Chrome-plugin":https://github.com/corejet/CoreJet-JIRA-Chrome-plugin examples can be seen in SimpleBddTest.java.
+
+10. In order to generate the reports, add either the maven plugin or the gradle plugin to your project.
+
+To add the maven plugin, add the following to your pom.xml.
+
+bc. <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <configuration>
+    <testFailureIgnore>true</testFailureIgnore>
+  </configuration>
+</plugin>
+<!-- Generate a corejet report from the test run output -->
+<plugin>
+  <groupId>org.corejet</groupId>
+  <artifactId>corejet-maven-plugin</artifactId>
+  <version>${corejet.version}</version>
+  <executions>
+    <execution>
+      <phase>prepare-package</phase>
+      <goals>
+        <goal>generate-report</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+
+To apply the gradle plugin using the new plugins DSL for Gradle 2.1 and higher, add the following to your build.gradle.
+
+bc. plugins {
+    id 'org.corejet.gradle-plugin' version '0.28'
+}
+
+To apply it using the traditional buildscript block method, do:
+
+bc. buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath group: 'org.corejet', name: 'corejet-gradle-plugin', version: '0.28'
+    }
+}
+apply plugin: 'org.corejet.gradle-plugin'
+
+Applying the gradle plugin will add a generateHtmlReport task to your build. You can then have that run as part of your build with:
+
+bc. build.runAfter generateHtmlReport
+
+Your build.gradle file should also include 'org.corejet:corejet-visualization:0.28' as a compile dependency.
+
+11. Reports are output to the target directory as corejet-report.html and can be viewed from any HTML5 capable browser.
+
+h2. CoreJet Modules
+
+CoreJet is made up of several distinct components designed to maximise the extensibility of the framework
+
+* corejet-core : The underlying test framework
+* corejet-jira-story : a JIRA specific implementation of the StoryRepository model
+* corejet-junit-runner : a JUnit specific implementation of the test runner
+* corejet-pageobject-support : support for UI testing through the Selenium 2.0 WebDriver framework
+* corejet-vizualisation : JavaScript and CSS to support the HTML reports
+* corejet-maven-plugin : Maven plugin that generates the web report
+* corejet-gradle-plugin : Gradle plugin that generates the web report
+
+h2. Annotations
+
+Annotations are used in the framework to map test code to requirements as well as to track the progress of scenario development.
+
+Key annotations include:
+
+* @Story - Identifies a class as representing a BDD story
+* @StorySource - Maps the story to the StoryRepository implementation
+* @Scenario - Identifies an individual scenario within a story
+* @Given, @When, @Then - The steps that make up a scenario
+* @NotImplementedYet - A default annotation used to identify that the implementation of a scenario has not been completed
+* @NotAutomatable - Identifies a scenario that can not be tested using the framework
+* @AwaitingFunctionality - Identifies a scenario where a test has been written but the functionality has not been delivered yet
+* @Defect - Stops a particular scenario from running due to a known defect
+* @WebDriverPageProvider - (part of corejet-pageobject-support) designates a WebDriver instance variable within a story class that should be used by Corejet when instantiating page objects
+* @ElementLocatorFactory - (part of corejet-pageobject-support) designates an optional ElementLocatorFactory instance variable within a story class that should be used by Corejet when looking up elements within a page object e.g. an instance of the AjaxElementLocatorFactory
+* @CopyFromParent - Allows developers to share instance variables between stories and scenarios. Put this annotation on instance variables in the scenario class, and Corejet will copy (by reference) the instance variable with the same name from the outer Story class. Mainly used in conjunction with @WebDriverPageProvider, to use the same WebDriver object in all scenarios.
+
+See Javadocs and examples for more details.
+
+h2. Online/Offline JIRA configuration
+
+By default CoreJet will re-generate the requirements repository by processing your JIRA issue filter every time tests are run. However, it is possible to configure CoreJet to cache a local version of the repository to allow running of tests offline. This is particularly useful when internet access is not available or the connection is slow.
+
+To enable offline mode, add the following property to your corejet.properties file, specifying a sensible name and location for the generated requirements xml file: 
+
+bc. corejet.cached.requirements.file=src/test/resources/corejet-cached-requirements.xml
+
+By default a corejet-requirements.xml file is generated in the 'target/corejet/test-output' directory, which means the file is not cached.  If the file is not cached, it is not possible to work offline, so choose a location outside of a generated code directory.
+
+This configuration alone causes CoreJet to work in a mixed online/offline mode, which is ideal during a typical development phase. If the cached file exists, and has been modified within the last hour, tests will be run offline, using the cached file to process the requirements.  If the cached file does not exist, or if it does exist but has not been modified within the last hour, the tests will be run in online mode and a new cached -requirements.xml file will be generated to allow for offline working against the latest requirements.
+
+It is possible to work exclusively in online or offline mode.
+
+To work exclusively in offline mode, set the following system property:
+
+bc. corejet.repository.offline=true
+
+To work exclusively in online mode (i.e. force an update of the requirements from JIRA), set the following system property:
+
+bc. corejet.repository.nevercache=true
+
+It is possible to set system properties in the maven-surefire-plugin:
+
+bc. <configuration>
+  <systemPropertyVariables>
+    <corejet.repository.offline>true</corejet.repository.offline>
+    <corejet.repository.nevercache>false</corejet.repository.nevercache>
+  </systemPropertyVariables>
+</configuration>
+
+h2. Default Story Points
+
+We have implemented a default value for story points, in order to allow the dashboard to function for teams who have not estimated all of their stories.  
+
+bc. The default value has been set to 1.
+
+This value can be set to any integer by setting:
+
+bc. corejet.defaultpoints=<default-points>
+
+h2. Get the source
+
+Fork the project source code on "Github":http://github.com/corejet/corejet:
+
+bc. git clone git://github.com/corejet/corejet.git
+
+h2. Get the JARs
+
+CoreJet versions from 0.21 onwards will be deployed to the Maven Central Repository.  
+
+
+h2. Licence
+
+CoreJet framework is distributed under "Apache 2 licence":http://www.apache.org/licenses/LICENSE-2.0.html.
+
+
+Project Description:
+CoreJet repository
+
+README:
+h1. Welcome to the CoreJet BDD Framework
+
+CoreJet is a business friendly BDD framework, designed to provide confidence and insight for users and product owners, whilst allowing developers to turn requirements into automated BDD tests with minimal fuss.  The framework focuses on providing requirements traceability and coverage analysis allowing for better visibility of progress towards business goals. 
+
+Learn more on the "http://corejet.org":http://corejet.org website.
+
+h2. Getting started
+
+1. Download the CoreJet source and install it in your local maven repository.
+
+bc. mvn clean install
+
+or configure maven to download artifacts from the Maven Central Repository.
+
+2. Add your chosen test implementation and story repository dependency to your maven project e.g.
+
+bc. <dependency>
+    <groupId>org.corejet</groupId>
+    <artifactId>corejet-junit-runner</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.corejet</groupId>
+  <artifactId>jira-story-repository</artifactId>
+</dependency>
+
+Or, if you're using gradle:
+
+bc. compile group: 'org.corejet', name: 'corejet-junit-runner', version:'0.28'
+compile group: 'org.corejet', name: 'jira-story-repository', version:'0.28'
+
+3. Create epic and story tickets in JIRA (or your chosen story repository).
+
+4. Populate all stories with their appropriate number of story points.
+
+5. Create or use an existing field in your story tickets to link them to your epics.
+
+6. Create or use an existing field in your story tickets to contain your acceptance criteria in the form of scenarios.  Scenarios should be written in BDD form e.g.
+
+bc. Scenario: User can downloads the latest version of CoreJet
+Given a user on the CoreJet.org website
+When they download the framework
+Then they are provided with the latest version
+
+7. Create a filter to list the the stories to be tested.
+
+8. In your src/test/recources folder, create a corejet.properties file to point to your story repository e.g.
+
+bc. jira.soap.wsdl.url=https://myproject.jira.com/rpc/soap/jirasoapservice-v2?wsdl
+jira.username=username
+jira.password=password
+default.project=My Project Name
+jira.filter.id=12345
+jira.storypoints.fieldid=10060
+jira.epic.fieldid=
+jira.acceptancecriteria.fieldid=10088
+corejet.report.directory=${project.build.directory}/corejet
+
+9. Migrate your stories into test classes. This can be done using the "CoreJet-JIRA-Chrome-plugin":https://github.com/corejet/CoreJet-JIRA-Chrome-plugin examples can be seen in SimpleBddTest.java.
+
+10. In order to generate the reports, add either the maven plugin or the gradle plugin to your project.
+
+To add the maven plugin, add the following to your pom.xml.
+
+bc. <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <configuration>
+    <testFailureIgnore>true</testFailureIgnore>
+  </configuration>
+</plugin>
+<!-- Generate a corejet report from the test run output -->
+<plugin>
+  <groupId>org.corejet</groupId>
+  <artifactId>corejet-maven-plugin</artifactId>
+  <version>${corejet.version}</version>
+  <executions>
+    <execution>
+      <phase>prepare-package</phase>
+      <goals>
+        <goal>generate-report</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+
+To apply the gradle plugin using the new plugins DSL for Gradle 2.1 and higher, add the following to your build.gradle.
+
+bc. plugins {
+    id 'org.corejet.gradle-plugin' version '0.28'
+}
+
+To apply it using the traditional buildscript block method, do:
+
+bc. buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath group: 'org.corejet', name: 'corejet-gradle-plugin', version: '0.28'
+    }
+}
+apply plugin: 'org.corejet.gradle-plugin'
+
+Applying the gradle plugin will add a generateHtmlReport task to your build. You can then have that run as part of your build with:
+
+bc. build.runAfter generateHtmlReport
+
+Your build.gradle file should also include 'org.corejet:corejet-visualization:0.28' as a compile dependency.
+
+11. Reports are output to the target directory as corejet-report.html and can be viewed from any HTML5 capable browser.
+
+h2. CoreJet Modules
+
+CoreJet is made up of several distinct components designed to maximise the extensibility of the framework
+
+* corejet-core : The underlying test framework
+* corejet-jira-story : a JIRA specific implementation of the StoryRepository model
+* corejet-junit-runner : a JUnit specific implementation of the test runner
+* corejet-pageobject-support : support for UI testing through the Selenium 2.0 WebDriver framework
+* corejet-vizualisation : JavaScript and CSS to support the HTML reports
+* corejet-maven-plugin : Maven plugin that generates the web report
+* corejet-gradle-plugin : Gradle plugin that generates the web report
+
+h2. Annotations
+
+Annotations are used in the framework to map test code to requirements as well as to track the progress of scenario development.
+
+Key annotations include:
+
+* @Story - Identifies a class as representing a BDD story
+* @StorySource - Maps the story to the StoryRepository implementation
+* @Scenario - Identifies an individual scenario within a story
+* @Given, @When, @Then - The steps that make up a scenario
+* @NotImplementedYet - A default annotation used to identify that the implementation of a scenario has not been completed
+* @NotAutomatable - Identifies a scenario that can not be tested using the framework
+* @AwaitingFunctionality - Identifies a scenario where a test has been written but the functionality has not been delivered yet
+* @Defect - Stops a particular scenario from running due to a known defect
+* @WebDriverPageProvider - (part of corejet-pageobject-support) designates a WebDriver instance variable within a story class that should be used by Corejet when instantiating page objects
+* @ElementLocatorFactory - (part of corejet-pageobject-support) designates an optional ElementLocatorFactory instance variable within a story class that should be used by Corejet when looking up elements within a page object e.g. an instance of the AjaxElementLocatorFactory
+* @CopyFromParent - Allows developers to share instance variables between stories and scenarios. Put this annotation on instance variables in the scenario class, and Corejet will copy (by reference) the instance variable with the same name from the outer Story class. Mainly used in conjunction with @WebDriverPageProvider, to use the same WebDriver object in all scenarios.
+
+See Javadocs and examples for more details.
+
+h2. Online/Offline JIRA configuration
+
+By default CoreJet will re-generate the requirements repository by processing your JIRA issue filter every time tests are run. However, it is possible to configure CoreJet to cache a local version of the repository to allow running of tests offline. This is particularly useful when internet access is not available or the connection is slow.
+
+To enable offline mode, add the following property to your corejet.properties file, specifying a sensible name and location for the generated requirements xml file: 
+
+bc. corejet.cached.requirements.file=src/test/resources/corejet-cached-requirements.xml
+
+By default a corejet-requirements.xml file is generated in the 'target/corejet/test-output' directory, which means the file is not cached.  If the file is not cached, it is not possible to work offline, so choose a location outside of a generated code directory.
+
+This configuration alone causes CoreJet to work in a mixed online/offline mode, which is ideal during a typical development phase. If the cached file exists, and has been modified within the last hour, tests will be run offline, using the cached file to process the requirements.  If the cached file does not exist, or if it does exist but has not been modified within the last hour, the tests will be run in online mode and a new cached -requirements.xml file will be generated to allow for offline working against the latest requirements.
+
+It is possible to work exclusively in online or offline mode.
+
+To work exclusively in offline mode, set the following system property:
+
+bc. corejet.repository.offline=true
+
+To work exclusively in online mode (i.e. force an update of the requirements from JIRA), set the following system property:
+
+bc. corejet.repository.nevercache=true
+
+It is possible to set system properties in the maven-surefire-plugin:
+
+bc. <configuration>
+  <systemPropertyVariables>
+    <corejet.repository.offline>true</corejet.repository.offline>
+    <corejet.repository.nevercache>false</corejet.repository.nevercache>
+  </systemPropertyVariables>
+</configuration>
+
+h2. Default Story Points
+
+We have implemented a default value for story points, in order to allow the dashboard to function for teams who have not estimated all of their stories.  
+
+bc. The default value has been set to 1.
+
+This value can be set to any integer by setting:
+
+bc. corejet.defaultpoints=<default-points>
+
+h2. Get the source
+
+Fork the project source code on "Github":http://github.com/corejet/corejet:
+
+bc. git clone git://github.com/corejet/corejet.git
+
+h2. Get the JARs
+
+CoreJet versions from 0.21 onwards will be deployed to the Maven Central Repository.  
+
+
+h2. Licence
+
+CoreJet framework is distributed under "Apache 2 licence":http://www.apache.org/licenses/LICENSE-2.0.html.

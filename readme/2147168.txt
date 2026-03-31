@@ -1,0 +1,21 @@
+This is an experimental device tree for creating an Android ICS 4.0.3 image
+for the wetab tablet.
+
+device/pegatron/wetab/
+
+Its more like a Proof of Concept then production code.
+
+
+
+
+
+Project Description:
+device tree for android ICS for the wetab (exopc)
+
+README:
+This is an experimental device tree for creating an Android ICS 4.0.3 image
+for the wetab tablet.
+
+device/pegatron/wetab/
+
+Its more like a Proof of Concept then production code.

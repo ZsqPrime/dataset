@@ -1,0 +1,7 @@
+Project Description:
+Collect Stock Exchange data
+
+README:
+== Stock Exchange Collector
+
+TBD

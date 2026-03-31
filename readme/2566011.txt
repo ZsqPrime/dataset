@@ -1,0 +1,5 @@
+Project Description:
+Learning python thru an exercise and some ideas.
+
+README:
+This file was created by PyCharm 2.0.2 for binding GitHub repository

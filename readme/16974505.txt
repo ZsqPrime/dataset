@@ -1,0 +1,27 @@
+Project Description:
+This is an ITKv4 external module for performing texture analysis on images
+
+README:
+General
+------
+
+This is a module for ITK: The Insight Toolkit for Segmentation and
+Registration. It is designed to work with the ITKv4 modular system and
+to be placed in ITK/Modules/External.
+
+This module contains filters for texture analysis. It is currently
+underdevelopment it likely contains bug, and will dramatically change
+if further development occours.
+
+
+License
+-------
+
+This software is distributed under the Apache License. Please see
+LICENSE for details. 
+
+
+Author
+------
+
+Bradley Lowekamp

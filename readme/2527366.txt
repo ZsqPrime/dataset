@@ -1,0 +1,9 @@
+Project Description:
+Social game for growing up hamhei in the real world using Grow! button
+
+README:
+-hamfarm
+    Social game for growing up hamhei in the real world using Grow! button^^;
+
+
+DEMO: http://hamhei.github.com/hamfarm/

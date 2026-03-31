@@ -1,0 +1,5 @@
+Project Description:
+Hand Evaluation function for SPATE
+
+README:
+In-memory poker hand evaluator

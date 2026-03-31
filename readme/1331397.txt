@@ -1,0 +1,8 @@
+Custom AOSP vendor files. Based on CM7 vendor files.
+
+
+Project Description:
+None
+
+README:
+Custom AOSP vendor files. Based on CM7 vendor files.

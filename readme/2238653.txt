@@ -1,0 +1,8 @@
+PyRaster is a collection of Python tools for processing geospatial raster data as NumPy arrays.
+
+
+Project Description:
+Python Geospatial Image Processing
+
+README:
+PyRaster is a collection of Python tools for processing geospatial raster data as NumPy arrays.

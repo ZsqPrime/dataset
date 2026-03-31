@@ -1,0 +1,13 @@
+This updates the script developed by Howard Miller to work on a Moodle 2.0 site for those that are only just migrating the journal to online assignment now.
+
+Original source: http://cvs.moodle.org/contrib/tools/journal2assignment/
+
+Project Description:
+Converts Journal module to online assignment for users who still have them in Moodle 2.0
+
+README:
+This updates the script developed by Howard Miller to work on a Moodle 2.0 site for those that are only just migrating the journal to online assignment now.
+
+
+
+Original source: http://cvs.moodle.org/contrib/tools/journal2assignment/

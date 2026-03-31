@@ -1,0 +1,14 @@
+Grab BBC news stories from a specific day
+===
+
+Usage: ./bbc-daily-stories <date> <BING ApplicationId>
+
+
+Project Description:
+Retrieve BBC news stories from a specific day.
+
+README:
+Grab BBC news stories from a specific day
+===
+
+Usage: ./bbc-daily-stories <date> <BING ApplicationId>

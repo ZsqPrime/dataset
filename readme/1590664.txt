@@ -1,0 +1,42 @@
+Air Dryer
+
+Airbrake is great at reporting errors, but marking lots of errors as resolved requires loading a full page for each error. Air Dryer adds a "Resolved" toggle in the list view for every error and makes resolving one click.
+
+1. Installation
+---------------
+
+* Install the Air Dryer extension from the Chrome Web Store: https://chrome.google.com/webstore/detail/ikfgibklncndgbobiiobgmbnkkkkhegk/
+
+2. Usage
+---------------
+
+* Each error in the Airbrake project view will have a slider to mark it as resolved. They stay on the page after being marked as resolved until you refresh.
+* Click the "Latest" or "Count" column header to sort errors by that value.
+
+Resolve away!
+
+Icon created from http://commons.wikimedia.org/wiki/File:Hair_dryer.jpg
+
+
+Project Description:
+A Chrome Extension that makes airbrake.io a little more friendly
+
+README:
+Air Dryer
+
+Airbrake is great at reporting errors, but marking lots of errors as resolved requires loading a full page for each error. Air Dryer adds a "Resolved" toggle in the list view for every error and makes resolving one click.
+
+1. Installation
+---------------
+
+* Install the Air Dryer extension from the Chrome Web Store: https://chrome.google.com/webstore/detail/ikfgibklncndgbobiiobgmbnkkkkhegk/
+
+2. Usage
+---------------
+
+* Each error in the Airbrake project view will have a slider to mark it as resolved. They stay on the page after being marked as resolved until you refresh.
+* Click the "Latest" or "Count" column header to sort errors by that value.
+
+Resolve away!
+
+Icon created from http://commons.wikimedia.org/wiki/File:Hair_dryer.jpg

@@ -1,0 +1,14 @@
+Project Description:
+It implements thread deadlock detection of win32 api lock function
+
+README:
+1. Descryption
+this module implements deadlock detection systems.
+
+2. Theory
+module hook win32 lock function, EnterCriticalSection, LeaveCriticalSection...
+when each function is entered, module record many info. and deadlock detection thread judge deadlock state.
+it use stackwalker internally, and outputs callstack if deadlock is revealed.
+
+3. Required
+visual studio 2019

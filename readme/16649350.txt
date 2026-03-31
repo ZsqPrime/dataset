@@ -1,0 +1,114 @@
+Project Description:
+Evidence Based Scheduling Trac Plugin
+
+README:
+A plug-in that enables evidence-based scheduling in Trac.
+
+	Created: Thu Aug 12 15:47:00 EDT 2010
+	Status :
+		Done	Logging time
+		Done	Listing tickets
+		Test	Clock in / clock out
+		Test	Schedule graphs.
+
+	NOTE:
+
+	I have not audited the code to confirm that malicious input won't
+	break stuff.  We are using it in a trusted environment.
+
+	(The logic does check that the user that has authenticated (via
+	HTTPS), is the owner of the ticket before allowing data to be
+	inserted.)
+
+
+CONTENTS
+	DEPENDENCIES
+	INSTALLING THE CLIENT
+	INSTALLING THE PLUGIN
+	FILES IN THIS PROJECT
+	OTHER PROJECTS
+
+
+
+DEPENDENCIES
+
+	The plugin was developed against Trac 0.10.4, which is ancient,
+	but hopefully it will work any subsequent version.  It doesn't
+	do anything very tricky, just uses the RequestHandler interface
+	and custom ticket fields.
+
+	To use the command-line client utilities, you need to have
+	curl and python installed.
+
+
+INSTALLING THE CLIENT
+
+	Do this to book time and estimates to the Trac server.
+
+	First, look at the Makefile variables:
+
+		MANDIR=/usr/local/share/man
+		BINDIR=/usr/local/bin
+
+	and edit if necessary.
+
+	Next, install the client utilities and their man pages:
+
+		$ sudo make install-client
+
+	To test the man pages were installed correctly, type:
+
+		$ man ebsconf
+
+
+INSTALLING THE PLUGIN
+
+	Do this on the server that hosts Trac.
+
+		$ make
+		$ sudo make install
+
+	Edit your trac conf (e.g., /usr/local/trac/conf/trac.ini)
+	to enable the ebstrac component.
+
+		...
+		[components]
+		ebstrac.* = enabled
+		...
+		[ticket-custom]
+		estimatedhours = text
+		estimatedhours.label = Estimated Hours
+		estimatedhours.order = 1
+		estimatedhours.value = 0
+		actualhours = text
+		actualhours.label = Actual Hours
+		actualhours.order = 2
+		actualhours.value = 0
+		...
+
+	If you are running trac as a FastCGI daemon, you'll
+	have to kill then restart the daemon.
+
+OTHER PROJECTS
+
+	FogBugz
+	www.fogcreek.com/fogbugz
+
+		The canonical EBS app.
+
+	Pivitol Tracker
+	http://pivotaltracker.com
+
+		"Tracker is a free, award winning, agile project
+		management tool that enables real time collaboration
+		around a shared, prioritzed backlog."
+
+		They use velocity, but it's based on task points,
+		not hours.  Also, some of their task types ("Bugs",
+		"Chores", etc) don't get points.  Cool UI though.
+
+		For me, using hours is key as it connects to the
+		timesheet.  If you want process control around the
+		development process, you have to track labor.
+		People want to get paid for their time, so providing a
+		connection to timesheets seems like the simplest way.

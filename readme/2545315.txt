@@ -1,0 +1,17 @@
+Project Description:
+Offline upgrade packages for Archlinux
+
+README:
+Offline upgrade AUR's packages for Archlinux
+
+Usage
+    On host without internet:
+    ./offline-upgrade.sh -l > local_package
+    
+    then on host with internet connection:
+    ./offline-upgrade.sh -es export_dir -i local_package 
+    or 
+    ./offline-upgrade.sh -s < local_package # exports packages to ./
+
+License
+    MIT

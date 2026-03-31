@@ -1,0 +1,8 @@
+The project is all under Sasha_Twitter directory, because... because eclipse did this.
+
+
+Project Description:
+It's a python twitter markov bot talking on twitter.
+
+README:
+The project is all under Sasha_Twitter directory, because... because eclipse did this.

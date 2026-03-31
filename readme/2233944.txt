@@ -1,0 +1,6 @@
+
+
+Project Description:
+Mulitlinugal Information Retrieval with Word Sense Disambiguation of Documents
+
+README:

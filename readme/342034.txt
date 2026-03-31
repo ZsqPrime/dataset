@@ -1,0 +1,14 @@
+git-auto-vc
+===========
+
+This script automatically commits changes to the working dir using inotify
+
+
+Project Description:
+This script automatically commits changes to the working dir from tracked files
+
+README:
+git-auto-vc
+===========
+
+This script automatically commits changes to the working dir using inotify

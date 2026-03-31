@@ -1,0 +1,174 @@
+Zee
+===
+
+Zee is free software, licensed under the GNU GPL.
+
+Copyright (c) 1997-2016 Free Software Foundation, Inc.
+
+**Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.**
+
+
+INTRODUCTION
+============
+
+Zee is a lightweight editor. Zee is aimed at small footprint systems
+and quick editing sessions (it starts up and shuts down instantly).
+Zee's home page is at:
+
+  > <https://github.com/rrthomas/zee>
+
+Zee is written in Lua 5.3 using POSIX APIs, and requires these
+additional modules:
+
+ * Lua stdlib <https://github.com/rrthomas/lua-stdlib>
+ * lrexlib <http://rrthomas.github.com/lrexlib/>
+   (the rex_gnu module must be built)
+ * luaposix <https://github.com/luaposix/luaposix>
+   (the curses module must be built)
+ * alien <http://mascarenhas.github.com/alien/>
+
+For the exact versions required, see `rockspecs.lua`.
+
+
+INSTALLING
+==========
+
+The simplest way to install the latest release of Zee is to use
+[Luarocks][]
+
+  [Luarocks]: http://luarocks.org/
+
+Run:
+
+    luarocks install zee
+
+Development sources are available from the web page. You can build the
+latest development sources with:
+
+   luarocks build https://github.com/rrthomas/zee/raw/master/zee-git-1.rockspec
+
+
+REPORTING BUGS
+==============
+
+If Zee doesn't work for you, before you report the problem, please try
+upgrading to the latest released version first, to see whether your
+issue has been fixed already. If you can, please also check whether
+the latest development sources still exhibit the problem.
+
+Please file bug reports in the issue tracker at the home page (see
+above).
+
+If you're not an experienced bug reporter, please read this before
+reporting a bug:
+
+  > <http://www.chiark.greenend.org.uk/~sgtatham/bugs.html>
+
+Zee has a suite of tests in the source distribution, which you can run
+with:
+
+    make check
+
+If, when you report a bug, you can create a similar test that
+demonstrates it, the maintainers will be most grateful, and it will
+prevent them from accidentally reintroducing the bug in a subsequent
+release.
+
+
+RELATED WORK
+============
+
+[Zim][http://zim-wiki.org/]
+[Leo][http://webpages.charter.net/edreamleo/front.html]
+
+
+Project Description:
+Experimental lightweight editor
+
+README:
+Zee
+===
+
+Zee is free software, licensed under the GNU GPL.
+
+Copyright (c) 1997-2016 Free Software Foundation, Inc.
+
+**Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.**
+
+
+INTRODUCTION
+============
+
+Zee is a lightweight editor. Zee is aimed at small footprint systems
+and quick editing sessions (it starts up and shuts down instantly).
+Zee's home page is at:
+
+  > <https://github.com/rrthomas/zee>
+
+Zee is written in Lua 5.3 using POSIX APIs, and requires these
+additional modules:
+
+ * Lua stdlib <https://github.com/rrthomas/lua-stdlib>
+ * lrexlib <http://rrthomas.github.com/lrexlib/>
+   (the rex_gnu module must be built)
+ * luaposix <https://github.com/luaposix/luaposix>
+   (the curses module must be built)
+ * alien <http://mascarenhas.github.com/alien/>
+
+For the exact versions required, see `rockspecs.lua`.
+
+
+INSTALLING
+==========
+
+The simplest way to install the latest release of Zee is to use
+[Luarocks][]
+
+  [Luarocks]: http://luarocks.org/
+
+Run:
+
+    luarocks install zee
+
+Development sources are available from the web page. You can build the
+latest development sources with:
+
+   luarocks build https://github.com/rrthomas/zee/raw/master/zee-git-1.rockspec
+
+
+REPORTING BUGS
+==============
+
+If Zee doesn't work for you, before you report the problem, please try
+upgrading to the latest released version first, to see whether your
+issue has been fixed already. If you can, please also check whether
+the latest development sources still exhibit the problem.
+
+Please file bug reports in the issue tracker at the home page (see
+above).
+
+If you're not an experienced bug reporter, please read this before
+reporting a bug:
+
+  > <http://www.chiark.greenend.org.uk/~sgtatham/bugs.html>
+
+Zee has a suite of tests in the source distribution, which you can run
+with:
+
+    make check
+
+If, when you report a bug, you can create a similar test that
+demonstrates it, the maintainers will be most grateful, and it will
+prevent them from accidentally reintroducing the bug in a subsequent
+release.
+
+
+RELATED WORK
+============
+
+[Zim][http://zim-wiki.org/]
+[Leo][http://webpages.charter.net/edreamleo/front.html]

@@ -1,0 +1,5 @@
+Project Description:
+tips tricks tuts and everything learned about html/css, javascript, jquery, ruby, rails
+
+README:
+Source code of my blog hosted at [https://rohitrox.github.io/](https://rohitrox.github.io/) made with [Jekyll](https://jekyllrb.com/docs/ruby-101/)

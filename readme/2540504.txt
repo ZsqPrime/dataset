@@ -1,0 +1,5 @@
+Project Description:
+Moduł ogłoszeń dla Magnolia CMS
+
+README:
+Moduł ogłoszeń dla Magnolia CMS

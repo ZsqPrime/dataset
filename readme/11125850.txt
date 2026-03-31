@@ -1,0 +1,9 @@
+Project Description:
+Uses pyFLTK to grab proxies from xroxy.com
+
+README:
+### Proxy-Grabber
+
+## Requirements:
+- pyFLTK
+  - `sudo apt-get install python-fltk`

@@ -1,0 +1,6 @@
+
+
+Project Description:
+A ROS package with nodes that use the disparity image to select close objects
+
+README:

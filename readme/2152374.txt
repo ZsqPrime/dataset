@@ -1,0 +1,7 @@
+A Direct Digital Synthesizer using VHDL and uC/OS-II
+
+Project Description:
+
+
+README:
+A Direct Digital Synthesizer using VHDL and uC/OS-II

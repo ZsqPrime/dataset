@@ -1,0 +1,9 @@
+Project Description:
+Minecraft Mod to make it easier for users to perform common commands
+
+README:
+Welcome to the FogHelper mod! 
+
+
+FogHelper by Justin (Fogest) is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Argentina License.
+Based on a work at fogest.net16.net.

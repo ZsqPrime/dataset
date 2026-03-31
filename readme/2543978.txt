@@ -1,0 +1,64 @@
+Project Description:
+Plugin downloader and installer for rah-prefixed Textpattern plugins
+
+README:
+h1. rah_plugin_installer
+
+*This has been superseded by Composer dependency manager and "textpattern/installer":https://github.com/gocom/textpattern-installer.*
+
+p. Install and update rah-plugins directly from your "Textpattern":http://www.textpattern.com installation. Click and install, ready to go.
+
+h2. List of features
+
+* Simple install: just run the automatic plugin install. No need to upload any files nor set permissions.
+* Download and install rah-family plugin directly from your Textpattern backend.
+* Server side caching of the update list.
+* Admin panel under Textpattern > Extensions > _Plugin Installer_.
+
+h2. Requirements
+
+Rah_plugin_installer's minimum requirement:
+
+* Textpattern 4.4.1 or newer.
+* PHP 5 or newer.
+** "cURL":http://php.net/manual/en/book.curl.php library or "allow_url_fopen":http://php.net/manual/en/filesystem.configuration.php set true
+** Internet connection for communications with the server
+* Optional: Zlib library.
+
+h2. Installation and usage
+
+p. The general behavior stands: paste plugin code to the plugin installer textarea and run the automatic setup. Then just activate the plugin and you are ready to use the functionalities.
+
+p. You can download and install rah-plugins from Textpattern > Extensions > Plugin Installer.
+
+h2. Changelog
+
+h3. Version 0.4 - 2011/07/19
+
+* Fixed small bug that appeared with the action links.
+
+h3. Version 0.3 - 2011/07/19
+
+* Compatibility with Textpattern v4.4.1.
+* Added: Support for cURL library and prefers it if installed. If not installed, uses regular file functions as fallback.
+* Added: Localization and language string support. TextPacks can be used to translate the admin interface.
+* Added: Build in uninstaller.
+* Changed: Moved the preference strings to Textpattern's core txp_prefs table.
+* Changed: HTML5 ready markup, added @<tbody>@ and @<thead>@ elements to the HTML table and removed inline styles.
+* Improved: New update file format. The syntax is similar to Textpattern's language files.
+* Improved: Additional validation when downloading update files.
+* Improved: Now update files are parsed and inserted to database as individual rows instead of cached and parsed on every page request. Allows future expansions.
+* Now requires Textpattern v4.4.1 or newer.
+
+h3. Version 0.2 - 2010/06/01
+
+* Added more validity and error checks.
+* Added timeout support for update downloads. 3 seconds for update checks and 10 seconds for actual files.
+* Added option to turn automatic-updates off.
+* Cleaned the admin panel.
+* Fixed manual update check.
+* Fixed conflicts with other extension that included @txp_plugin.php@.
+
+h3. Version 0.1 - 2008/08/31
+
+* Initial release.

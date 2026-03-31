@@ -1,0 +1,107 @@
+这是一款基于SAE的轻量级模板引擎：miniTemplate
+
+关于作者：
+
+作者：李博
+作者博客：http://imlibo.com
+作者微博：http://weibo.com/imlibo
+
+
+产品特点：
+
+1.极轻量：只有一个php文件；
+2.极高效：整个核心代码只有100多行，程序效率高，可参见xhprof记录；
+3.极简单：与smarty相似的使用方法，易上手。面向对象的使用方法，极灵活；
+4.针对SAE（Sina App Engine）：由于使用memcache存储最终解析生成的文件，因此程序在存储的key中加入了APPVERSION来区分每一个应用版本；
+5.支持rewrite替换，详见template.class.php中注释；
+6.支持模板嵌套；
+7.智能更新：可以根据模板文件的变化自动更新缓存，同时支持包含文件的变化也自动更新缓存。
+
+使用注意：
+
+1.目前只支持运行于SAE（Sina App Engine http://sae.sina.com.cn/）
+2.需要开启SAE的Memcache服务，容量自定（比整个网站的模板文件大就可以）
+
+示例地址：http://minitemplate.sinaapp.com/
+
+使用方法：
+
+    后端PHP：
+
+    //包含模板引擎文件
+    include_once './template.class.php';
+
+    //实例化
+    $view = new template();
+
+    //设置是否开启debug：true开启 false关闭 默认false
+    $view->set_debug(false);
+
+    //设置是否开启缓存：0关闭 1开启 默认true （true or false也可以）
+    $view->set_cache_status(1);
+
+    //设置是否开启Rewrite：0关闭 1开启 默认true （true or false也可以）
+    $view->set_rewrite_status(1);
+
+    //设置是否开启Gzip：0关闭 1开启 默认true （true or false也可以）
+    $view->set_gzip(1);
+
+    //rewrite规则
+    $preg_searchs = array();
+    $preg_replaces = array();
+
+    $preg_searchs[] = "/index.php\?m=([a-z]+)/i";
+    $preg_replaces[] = "$1.html";
+
+    $view->set_rewrite_rules($preg_searchs, $preg_replaces);
+
+    //设置模板文件所在目录，可以是相对目录也可以是绝对目录，推荐绝对目录
+    $view->set_base_dir('./templates');
+
+    $data = array('a' => 'aaa', 'b' => 'bbb');
+    $name = 'name';
+    $flag = 1;
+
+    //把变量推送到模板中，和smarty用法很像。
+    //其中assign函数的第一个参数为变量在模板中读取时的名字（可以和变量名不同）。
+    //例如assign('test', $m);，那么在模板里$test变量表示的就是$m
+    $view->assign('data', $data);
+    $view->assign('name', $name);
+    $view->assign('flag', $flag);
+
+    //显示模板文件，和smarty用法很像
+    //这个文件在："./view/index.htm"
+    $view->display('index.htm');
+
+    模板文件：
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>The example page of miniTemplat for SAE</title>
+    </head>
+    <body>
+    <h2>单独变量示例：</h2>
+    <p>$name</p>
+    <br />
+    <h2>判断示例：</h2>
+    <!--{if $flag == 1}-->
+    <p>变量为1</p>
+    <!--{else}-->
+    <p>变量不为1</p>
+    <!--{/if}-->
+    <br />
+    <h2>循环示例：</h2>
+    <h4>foreach示例</h4>
+    <ul>
+        <!--{loop $data $key $value}-->
+        <li>$key：$value</li>
+        <!--{/loop}-->
+    </ul>
+    <h2>Rewrite示例：</h2>
+    http://example.com/index.php?m=test
+    <br />
+    <h2>包含示例：</h2>
+    {template footer.htm}
+    </body>
+    </html>

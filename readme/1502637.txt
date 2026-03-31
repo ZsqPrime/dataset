@@ -1,0 +1,13 @@
+Introduction
+============
+
+A simple script, that backups local Git repository to a CD/DVD.
+
+Project Description:
+Python tool for automatic backup of local git repositories
+
+README:
+Introduction
+============
+
+A simple script, that backups local Git repository to a CD/DVD.

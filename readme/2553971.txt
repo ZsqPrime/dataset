@@ -1,0 +1,5 @@
+Project Description:
+Testing out few things using HTML5 Canvas
+
+README:
+This is basically a Test HTML5 Canvas Appplication to be used for future purposes.

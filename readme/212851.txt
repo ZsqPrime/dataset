@@ -1,0 +1,81 @@
+= Rails, timezone from GeoIP, locale from request header or parameter sample
+
+== Guessing timezone from ip
+
+Used geoip gem, with GeoLite Country. ip => country, country => timezone(s). This is done only once when user is registrating for the first time. So, assuming GeoIP.dat file is under /lib/data, inside devise registration form:
+
+    <% country = GeoIP.new(Rails.root.join('lib','data','GeoIP.dat')).country(request.remote_ip) %>
+    <%= f.time_zone_select :time_zone, (country.ip == "127.0.0.1") ? nil : TZInfo::Country.get(country.country_code2).zones %>
+
+== Localization
+
+First, look if params exists (user may require any different locale, for any time, for any reason), next, check if current_user exists, if so, use its settings, if its public user, that try to guess from browser header, and finally set locale from default locale.
+
+    I18n.locale = params[:locale] || current_user.try(:locale) || extract_locale_from_accept_language_header
+    private
+    def extract_locale_from_accept_language_header
+      request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[en|tr]{2}/).first || I18n.default_locale
+    end
+
+== Locale scope in routes
+
+Dynamic scope for locales
+
+    scope "(:locale)", :locale => /en|tr/ do
+      devise_for :users
+      root :to => "main#index"
+    end
+
+Set locale parameter if it exists in url
+
+    def default_url_options(options={})  
+      set_locale_from_url
+      { :locale => I18n.locale }
+    end
+
+
+
+Update me!
+
+Project Description:
+Rails, timezone from GeoIP, locale from request header or parameter sample
+
+README:
+= Rails, timezone from GeoIP, locale from request header or parameter sample
+
+== Guessing timezone from ip
+
+Used geoip gem, with GeoLite Country. ip => country, country => timezone(s). This is done only once when user is registrating for the first time. So, assuming GeoIP.dat file is under /lib/data, inside devise registration form:
+
+    <% country = GeoIP.new(Rails.root.join('lib','data','GeoIP.dat')).country(request.remote_ip) %>
+    <%= f.time_zone_select :time_zone, (country.ip == "127.0.0.1") ? nil : TZInfo::Country.get(country.country_code2).zones %>
+
+== Localization
+
+First, look if params exists (user may require any different locale, for any time, for any reason), next, check if current_user exists, if so, use its settings, if its public user, that try to guess from browser header, and finally set locale from default locale.
+
+    I18n.locale = params[:locale] || current_user.try(:locale) || extract_locale_from_accept_language_header
+    private
+    def extract_locale_from_accept_language_header
+      request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[en|tr]{2}/).first || I18n.default_locale
+    end
+
+== Locale scope in routes
+
+Dynamic scope for locales
+
+    scope "(:locale)", :locale => /en|tr/ do
+      devise_for :users
+      root :to => "main#index"
+    end
+
+Set locale parameter if it exists in url
+
+    def default_url_options(options={})  
+      set_locale_from_url
+      { :locale => I18n.locale }
+    end
+
+
+
+Update me!

@@ -1,0 +1,23 @@
+Project Description:
+research project on input costs in EU agriculture
+
+README:
+This repository keeps track of an ongoing research activity that deals with the volatility of input prices in the EU agriculture
+
+FOLDER STRUCTURE
+
+- /data: data sets
+- /gams: GAMS scripts to extract time-series from CoCo/Capreg + scenario files
+- /src : source files for the statistical analysis (in R)
+
+
+
+RELATED PUBLICATIONS
+
+1. The first publication was an seminar paper for the EAAE Seminar in Dublin, 2012: "Increasing volatility of input costs in the EU agriculture"
+
+(http://ageconsearch.umn.edu/handle/122531)
+
+Website of the conference: http://www.aesi.ie/eaae2012/
+
+2. Another conference contribution followed; the research moved in the direction of a more systematic sensitivity analysis which was presented at the ECOMOD2012 conference in Seville

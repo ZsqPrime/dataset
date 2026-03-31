@@ -1,0 +1,7 @@
+Repo moved to <http://github.com/jboss-jdf/jboss-bom> - please go there :-D
+
+Project Description:
+Move to http://github.com/jboss-jdf/jboss-bom
+
+README:
+Repo moved to <http://github.com/jboss-jdf/jboss-bom> - please go there :-D

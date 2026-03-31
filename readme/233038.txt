@@ -1,0 +1,6 @@
+
+
+Project Description:
+FireGuard prevents files by restoring them automatically when they are altered or accidentally removed.
+
+README:

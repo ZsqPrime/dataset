@@ -1,0 +1,7 @@
+Arquivos fontes dos postes do meu blog http://wessdevel.blogspot.com.br/
+
+Project Description:
+Arquivos dos código do Blog
+
+README:
+Arquivos fontes dos postes do meu blog http://wessdevel.blogspot.com.br/

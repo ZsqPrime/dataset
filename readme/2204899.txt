@@ -1,0 +1,62 @@
+Sunrise前哨戦Twitterシステム
+
+目的
+ 事前に設計したデータスキームでTwitterを実装できるか検証する
+ MongoDBが使えるやつかためす
+
+使う技術
+ PHP     v5.3.8
+ MySQL   v5.5.11
+ MongoDB v2.0.0
+
+できること
+ アカウント管理
+ つぶやく
+ フォローする/される
+ タイムライン表示
+ ユーザ/つぶやき検索
+
+コーディング規約
+ Pear 標準コーディング規約を基本にしてください
+ http://pear.php.net/manual/ja/standards.php
+ 文字コードはUTF-8
+ タブは半角スペース4つ
+ キャメルケースを使用します
+
+ OKな例 ===========================
+ join(",", $ary);
+
+ for ($i = 0;$i < 10;$i++) {
+     echo $i; 
+ }
+
+ if ($n < 10) {
+    echo $ary[$n]
+ }
+
+ NGな例 ===========================
+ join(",",$ary);
+
+ for($i=0;$i<10;$i++) {
+     echo $i;
+ }
+
+ if($n<10) {
+    echo $ary[$n]
+ }
+
+URL
+ http://service.tnnsst35.com/twitter/
+ mod_rewriteの設定で/home/service/twitter/以下へのアクセスは/home/service/twitter/index.phpにリダイレクトするようにしています
+
+ディレクトリ構成
+.
+|-- README
+|-- index.php
+|-- config       設定ファイル
+|-- models       モデル
+|-- views        ビュー
+|-- controllers  コントローラ
+`-- libs         ライブラリ
+
+作成 2011年 10月11日

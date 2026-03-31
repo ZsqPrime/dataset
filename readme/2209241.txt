@@ -1,0 +1,32 @@
+# ⚠️ This repository is no longer maintained.
+## It has been moved to [Vonage/vonage-java-sdk](https://github.com/vonage/vonage-java-sdk).
+
+# Nexmo Client Library for Java
+
+[![Maven Release](https://maven-badges.herokuapp.com/maven-central/com.nexmo/client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.nexmo/client)
+
+<img src="https://developer.nexmo.com/assets/images/Vonage_Nexmo.svg" height="48px" alt="Nexmo is now known as Vonage" />
+
+<hr />
+
+## Support Notice
+This library has been End of Life since October 1st, 2021 and will no longer be supported or maintained. Users should migrate to [Vonage Java Server SDK](https://github.com/vonage/vonage-java-sdk). If you have any questions, feel free to reach out to us at devrel@vonage.com or through our Community Slack at https://developer.vonage.com/community/slack
+
+
+Project Description:
+
+
+README:
+# ⚠️ This repository is no longer maintained.
+## It has been moved to [Vonage/vonage-java-sdk](https://github.com/vonage/vonage-java-sdk).
+
+# Nexmo Client Library for Java
+
+[![Maven Release](https://maven-badges.herokuapp.com/maven-central/com.nexmo/client/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.nexmo/client)
+
+<img src="https://developer.nexmo.com/assets/images/Vonage_Nexmo.svg" height="48px" alt="Nexmo is now known as Vonage" />
+
+<hr />
+
+## Support Notice
+This library has been End of Life since October 1st, 2021 and will no longer be supported or maintained. Users should migrate to [Vonage Java Server SDK](https://github.com/vonage/vonage-java-sdk). If you have any questions, feel free to reach out to us at devrel@vonage.com or through our Community Slack at https://developer.vonage.com/community/slack

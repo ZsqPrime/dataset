@@ -1,0 +1,37 @@
+Punch is a time-tracking application.
+
+UPDATE: I started this project when I was taking an entry level SE course.
+To be honest, I mostly wanted to just play around with problem descriptions and such.
+I also wasn't certain how I wanted the application to work.
+Since then, I tried using emacs and discovered org-mode, which is a very complete plain-text
+outliner/spreadsheet/(html and LaTeX exporter)/(literate programmer).
+It also can be used as a time-tracking and -planning program.
+It can be used for [GTD](http://members.optusnet.com.au/~charles57/GTD/orgmode.html) and
+[time-tracking](http://orgmode.org/manual/Dates-and-Times.html#Dates-and-Times).
+
+I would encourage anyone to take a look at org-mode and emacs.
+The feature set is quite large so I have only scratched the surface of it.
+Org-mode also has some form of agenda and planner and diary that I haven't had time to use yet.
+I'll admit that editing in emacs isn't as smooth as in vim :P , but it's worth it to
+have a uniform environment, scripted in lisp, that includes modes like SLiME and org-mode.
+
+Project Description:
+A time-tracking program
+
+README:
+Punch is a time-tracking application.
+
+UPDATE: I started this project when I was taking an entry level SE course.
+To be honest, I mostly wanted to just play around with problem descriptions and such.
+I also wasn't certain how I wanted the application to work.
+Since then, I tried using emacs and discovered org-mode, which is a very complete plain-text
+outliner/spreadsheet/(html and LaTeX exporter)/(literate programmer).
+It also can be used as a time-tracking and -planning program.
+It can be used for [GTD](http://members.optusnet.com.au/~charles57/GTD/orgmode.html) and
+[time-tracking](http://orgmode.org/manual/Dates-and-Times.html#Dates-and-Times).
+
+I would encourage anyone to take a look at org-mode and emacs.
+The feature set is quite large so I have only scratched the surface of it.
+Org-mode also has some form of agenda and planner and diary that I haven't had time to use yet.
+I'll admit that editing in emacs isn't as smooth as in vim :P , but it's worth it to
+have a uniform environment, scripted in lisp, that includes modes like SLiME and org-mode.

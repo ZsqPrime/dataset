@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+= Terrain RPG - A Javascript/Canvas terrain generation and creature AI demo 
+
+== Frameworks
+Uses:
+* http://jawsjs.com/ JawsJS game framework

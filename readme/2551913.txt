@@ -1,0 +1,18 @@
+Project Description:
+Slightly abstract Python interface to command line version control systems.
+
+README:
+pyvcs
+==============================================================================
+
+Slightly abstract Python interface to command line version control systems.
+Currently implements git.
+
+Author: Konrad Markus <konker@gmail.com>
+
+Requires:
+    pyshellutils:
+        https://github.com/konker/pyshellutils
+
+    git installed and on the path
+        http://git-scm.com/

@@ -1,0 +1,12 @@
+Read Later
+==========
+Allows you to load Blogger.com weblogs into the DB and read them later, offline, at your pace.
+
+
+Project Description:
+Allows you to load Blogger.com weblogs into the DB and read them later, offline, at your pace.
+
+README:
+Read Later
+==========
+Allows you to load Blogger.com weblogs into the DB and read them later, offline, at your pace.

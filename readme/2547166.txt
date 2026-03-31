@@ -1,0 +1,7 @@
+Project Description:
+PHP application for interfacing with the Paypal Instant Payment Notification (IPN) system
+
+README:
+Guardian Angel - PHP IPN component
+
+See INSTALL for installation instructions

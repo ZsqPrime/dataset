@@ -1,0 +1,4 @@
+Project Description:
+A Twitter bot resembling @seikakic
+
+README:

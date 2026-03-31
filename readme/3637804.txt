@@ -1,0 +1,5 @@
+Project Description:
+Mike Lin's OCaml Genomics library
+
+README:
+Mike Lin's genomics library. Stuff for storing genomes, genome alignments and genome annotations. Relies heavily on SQLite.

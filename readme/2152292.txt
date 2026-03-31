@@ -1,0 +1,23 @@
+# Quilt
+
+
+  <em>Quilt is currently under development. All ideas expressed here are
+  subject to change.</em>
+
+  See [wiki](https://github.com/StoneyJackson/quilt/wiki) for development
+  efforts.
+
+
+
+Project Description:
+A web technology that stitches content into HTML/CSS patterns.
+
+README:
+# Quilt
+
+
+  <em>Quilt is currently under development. All ideas expressed here are
+  subject to change.</em>
+
+  See [wiki](https://github.com/StoneyJackson/quilt/wiki) for development
+  efforts.

@@ -1,0 +1,17 @@
+This project is intended to be used as a guide for Maven 3 multi-module projects and how to utilize site documentation
+
+Check out the maven produced site-docs for this project published in the gh-pages which was produced by the github maven site plugin
+
+http://mike-ensor.github.com/multi-module-site-doc-project/index.html
+
+
+
+Project Description:
+Multi module maven 3 project showing off how to incorporate site docs
+
+README:
+This project is intended to be used as a guide for Maven 3 multi-module projects and how to utilize site documentation
+
+Check out the maven produced site-docs for this project published in the gh-pages which was produced by the github maven site plugin
+
+http://mike-ensor.github.com/multi-module-site-doc-project/index.html

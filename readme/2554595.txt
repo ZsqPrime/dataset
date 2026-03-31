@@ -1,0 +1,7 @@
+Project Description:
+Aviz DB
+
+README:
+README file.
+"Aviz" project.
+27.02.2012

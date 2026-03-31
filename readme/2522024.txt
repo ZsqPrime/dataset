@@ -1,0 +1,5 @@
+Project Description:
+Hacker News speed dial extension for Opera
+
+README:
+This extension does not work with current versions of Opera. I have an updated version [here](https://github.com/ramkumarshankar/Speedy-Hacker-News).

@@ -1,0 +1,14 @@
+Exams
+=====
+
+Дуже круті шпаргалки з предмету ЛНУ Франка
+
+
+Project Description:
+Some stuff needed for exams in Ivan Franko university of Lviv, Ukraine.
+
+README:
+Exams
+=====
+
+Дуже круті шпаргалки з предмету ЛНУ Франка

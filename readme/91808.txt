@@ -1,0 +1,8 @@
+Messing around with OpenCV.
+
+
+Project Description:
+Messing around in OpenCV (the Python bindings are much improved since last time)
+
+README:
+Messing around with OpenCV.

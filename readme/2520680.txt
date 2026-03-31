@@ -1,0 +1,7 @@
+Project Description:
+Abuilds for AgiliaLinux disto created by me.
+
+README:
+Here is my abuilds for packages which stored in official AgiliaLinux repo.
+
+Table with versions of every package and last checking date is here: https://github.com/fat0troll/AgiliaLinux-abuilds/blob/master/versions.

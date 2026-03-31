@@ -1,0 +1,13 @@
+My custom responsive framework 
+====================
+
+Built off of 1140gs, animate.css, bootstrap and many other open source frameworks
+
+Project Description:
+Custom build of the 1140 Framework
+
+README:
+My custom responsive framework 
+====================
+
+Built off of 1140gs, animate.css, bootstrap and many other open source frameworks

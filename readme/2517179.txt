@@ -1,0 +1,15 @@
+# Ruby on Rails Tutorial: sample application
+
+This will be the actual exmaple for the Ruby on Rails tutorial.
+
+# USER AUTHENTICATION WORKING #
+
+Project Description:
+The actual app for the Ruby on Rails tutorial.
+
+README:
+# Ruby on Rails Tutorial: sample application
+
+This will be the actual exmaple for the Ruby on Rails tutorial.
+
+# USER AUTHENTICATION WORKING #

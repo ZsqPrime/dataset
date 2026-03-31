@@ -1,0 +1,12 @@
+##NCurses Snake##
+
+Pretty self-explanitory. I know this probably exists in 50 gazillion different ways, but this project is mostly for fun. Instead of controlling the snake with the arrow keys, the player controls it with the Vim cursor keys (h, j, k, l). Its intent is to acclimate new Vim users to the cursor keys while having fun.
+
+
+Project Description:
+A snake game written with NCurses
+
+README:
+##NCurses Snake##
+
+Pretty self-explanitory. I know this probably exists in 50 gazillion different ways, but this project is mostly for fun. Instead of controlling the snake with the arrow keys, the player controls it with the Vim cursor keys (h, j, k, l). Its intent is to acclimate new Vim users to the cursor keys while having fun.

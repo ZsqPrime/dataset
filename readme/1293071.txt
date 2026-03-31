@@ -1,0 +1,36 @@
+= DESCRIPTION:
+
+Do not use this yet! It is completely untested and the settings are in all the wrong places.
+Please wait for an annoucement on our blog about when we get this into an alpha state.
+
+= REQUIREMENTS:
+
+= ATTRIBUTES:
+
+= USAGE:
+
+
+
+Project Description:
+A cookbook for intsalling and managing modx instance and for managing modx packages.,
+
+README:
+= DESCRIPTION:
+
+
+
+Do not use this yet! It is completely untested and the settings are in all the wrong places.
+
+Please wait for an annoucement on our blog about when we get this into an alpha state.
+
+
+
+= REQUIREMENTS:
+
+
+
+= ATTRIBUTES:
+
+
+
+= USAGE:

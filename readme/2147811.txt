@@ -1,0 +1,4 @@
+Project Description:
+Android board client ( see http://linuxfr.org/board )
+
+README:

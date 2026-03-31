@@ -1,0 +1,5 @@
+Project Description:
+Social Networking for Developers
+
+README:
+An example of a simple social networking application in Ruby. This is very out of date but it works.

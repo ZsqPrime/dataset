@@ -1,0 +1,11 @@
+# Basecamp Tabber Userscript
+
+A small userscript for Greasemonkey and Chrome to display the todo lists in a more organized tabbed way in the basecamp todo list view. By default the categories are "Frontend", "Backend", "Gestaltung", "System", edit the script to use custom categories.
+
+Project Description:
+Creates tabs in the todo list view based on specific tags in the todo list names
+
+README:
+# Basecamp Tabber Userscript
+
+A small userscript for Greasemonkey and Chrome to display the todo lists in a more organized tabbed way in the basecamp todo list view. By default the categories are "Frontend", "Backend", "Gestaltung", "System", edit the script to use custom categories.

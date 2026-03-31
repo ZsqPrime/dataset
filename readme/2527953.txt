@@ -1,0 +1,8 @@
+Project Description:
+FileUtils lib in ruby
+
+README:
+FileUtils lib
+
+Feature list
+- copy files, recursively, but takes a block as a callback to provide feedback on progress

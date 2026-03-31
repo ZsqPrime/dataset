@@ -1,0 +1,139 @@
+Readme for podmin - admintools for libertree-arboristas
+(batteries not yet included)
+
+
+VERSION:
+    v0.3 - CIA - CheckItArborista!
+
+
+ATENCION! these tools are in very early alpha-state and might break
+with every commit, so please test carefully with testaccounts
+first and after every update.
+
+see docs/REAME.$tool for more info on usage of each single
+tool
+
+
+
+INSTALL
+
+    - python 2.6 or greater on any recent linux
+    - you'll need the following python-modules
+        - python-mysqldb
+        - python-xml
+        - python-mechanize
+        - python-simplejson
+        - python-yaml
+        - nltk
+
+    - as root: umask 022 && easy_install iso8601
+    - maybe you'll neede some (python) xml-modules,
+      stacktraces will tell you, which ;-)
+
+    - if you want to use ftw (federation test warrior)
+      install xvfb ( xorg-x11-Xvfb on redhat)
+      install sun-java (6.0.18 or greater)
+      install icewasel/firefox from repos ( actual version, 
+      for squeeze see http://mozilla.debian.net/
+      
+
+
+Update-Info when you want to pull from git:
+
+    - make a copy of your podmin-dir
+    - if you have demoins / cronjobs running: stop it
+    - git pull
+    - check the tools you need with ./$tool -h for
+      new or changed options
+    - test what you need
+    - start engines again
+
+
+
+
+
+
+2012-03-09 - v0.2 - FBI - FuckingBastardsInitiative
+    - rewrite apispora to use mechanize/json + login
+      for postings
+    - rewrite ftw to use mechanize for checks
+    - using users.list instead of
+
+
+2012-02-27 - v0.1 - CIA - ChickenIsAwesome
+
+    - ftw 0.1, using selenium
+    - initial release, branched out ftw
+
+
+
+Project Description:
+tools for diaspora-podmins
+
+README:
+Readme for podmin - admintools for libertree-arboristas
+(batteries not yet included)
+
+
+VERSION:
+    v0.3 - CIA - CheckItArborista!
+
+
+ATENCION! these tools are in very early alpha-state and might break
+with every commit, so please test carefully with testaccounts
+first and after every update.
+
+see docs/REAME.$tool for more info on usage of each single
+tool
+
+
+
+INSTALL
+
+    - python 2.6 or greater on any recent linux
+    - you'll need the following python-modules
+        - python-mysqldb
+        - python-xml
+        - python-mechanize
+        - python-simplejson
+        - python-yaml
+        - nltk
+
+    - as root: umask 022 && easy_install iso8601
+    - maybe you'll neede some (python) xml-modules,
+      stacktraces will tell you, which ;-)
+
+    - if you want to use ftw (federation test warrior)
+      install xvfb ( xorg-x11-Xvfb on redhat)
+      install sun-java (6.0.18 or greater)
+      install icewasel/firefox from repos ( actual version, 
+      for squeeze see http://mozilla.debian.net/
+      
+
+
+Update-Info when you want to pull from git:
+
+    - make a copy of your podmin-dir
+    - if you have demoins / cronjobs running: stop it
+    - git pull
+    - check the tools you need with ./$tool -h for
+      new or changed options
+    - test what you need
+    - start engines again
+
+
+
+
+
+
+2012-03-09 - v0.2 - FBI - FuckingBastardsInitiative
+    - rewrite apispora to use mechanize/json + login
+      for postings
+    - rewrite ftw to use mechanize for checks
+    - using users.list instead of
+
+
+2012-02-27 - v0.1 - CIA - ChickenIsAwesome
+
+    - ftw 0.1, using selenium
+    - initial release, branched out ftw

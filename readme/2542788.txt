@@ -1,0 +1,32 @@
+Project Description:
+
+
+README:
+li is a little lisp library and interpreter based on Scheme.
+
+li is the lisp interpreter. libli.a is the li library.
+
+The goal of this project is to provide a very tiny lisp library for embedded
+scripting in C applications.
+
+Syntax
+======
+If you've used a lisp before, the syntax here is nothing new.  If not, find a
+Scheme tutorial (or better yet, read SICP) as li is almost identical to Scheme
+except for the following differences:
+
+    * Vectors are of the form [...] instead of #(...).
+    * Unhygenic macros.
+
+li Reference
+============
+A reference is coming soon.
+
+C API Reference
+===============
+A reference is coming soon, but in the meantime the API is documented in li.h.
+
+Bugs
+====
+    * Syntax checking is not complete.  Bad syntax will result in unknown
+      behavior which may include unexpected termination or even segfaults.

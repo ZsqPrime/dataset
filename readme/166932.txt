@@ -1,0 +1,86 @@
+ninsd
+-----
+
+Ninsd is a little daemon which ask clients of the
+local network for IPv6 address and name. After these
+data are collected the name server is updated and
+the clients can be addressed by name. You may use
+different DNS server (dnsmasq, unbound) which allow
+some kind of updating even if they don't support
+DHCP-v6.
+
+Ninsd is to be installed on the same machine as the
+name server and on the clients you must install
+ninfod (https://github.com/yaegashi/ninfod)
+
+
+radvc
+-----
+
+The daemon rdnssd which is provided by many Linux
+distribution don't know at this time the domain search
+list, this will be added on the next version. For now
+you should use radvc on you clients.
+
+set_route
+---------
+
+This program shall be used by tinc on the client
+and you have an IPv6 tunnel over IPv6.
+
+Windows
+-------
+
+There is no support for Node Information queries
+within Windows. The directory wniqd contain a little
+server which will allow to ask the Windows systems
+for the global IPv6, the host name and possibly the
+IPv4 address. This implementation don't cover all
+specifications for RFC 4620 but is sufficient in order
+to perform an update of the name server.
+
+
+Project Description:
+DDNS utilities for local IPv6 LAN
+
+README:
+ninsd
+-----
+
+Ninsd is a little daemon which ask clients of the
+local network for IPv6 address and name. After these
+data are collected the name server is updated and
+the clients can be addressed by name. You may use
+different DNS server (dnsmasq, unbound) which allow
+some kind of updating even if they don't support
+DHCP-v6.
+
+Ninsd is to be installed on the same machine as the
+name server and on the clients you must install
+ninfod (https://github.com/yaegashi/ninfod)
+
+
+radvc
+-----
+
+The daemon rdnssd which is provided by many Linux
+distribution don't know at this time the domain search
+list, this will be added on the next version. For now
+you should use radvc on you clients.
+
+set_route
+---------
+
+This program shall be used by tinc on the client
+and you have an IPv6 tunnel over IPv6.
+
+Windows
+-------
+
+There is no support for Node Information queries
+within Windows. The directory wniqd contain a little
+server which will allow to ask the Windows systems
+for the global IPv6, the host name and possibly the
+IPv4 address. This implementation don't cover all
+specifications for RFC 4620 but is sufficient in order
+to perform an update of the name server.

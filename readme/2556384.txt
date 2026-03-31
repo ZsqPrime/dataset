@@ -1,0 +1,5 @@
+Project Description:
+Android application to check balance, collect and show meta-stats.
+
+README:
+nothing to read yet - sorry - will be updated ASAP

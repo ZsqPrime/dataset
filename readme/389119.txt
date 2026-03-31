@@ -1,0 +1,5 @@
+Description:
+Nit Plugin for Eclipse
+
+README:
+README not available

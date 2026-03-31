@@ -1,0 +1,7 @@
+This drupal7 module can perform a regex search and replace on the body field of drupals database
+
+Project Description:
+scans certain database fileds and perform regex search and replace
+
+README:
+This drupal7 module can perform a regex search and replace on the body field of drupals database

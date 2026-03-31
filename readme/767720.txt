@@ -1,0 +1,42 @@
+== krypt-core-ruby
+
+The Ruby implementation of the krypt-core API.
+
+The goal of this implementation is to provide all the aspects of krypt-core
+via pure Ruby code, therefore any interaction with the native krypt-provider
+API is accomplished using FFI (https://github.com/ffi).
+
+== krypt
+
+For more information about krypt, please have a
+look at the project and its wiki at
+
+https://github.com/krypt/krypt
+
+Copyright (c) 2011-2013
+Hiroshi Nakamura <nahi@ruby-lang.org>
+Martin Bosslet <Martin.Bosslet@gmail.com>
+
+
+Project Description:
+Ruby implementation of the krypt-core API. The official repo has moved to
+
+README:
+== krypt-core-ruby
+
+The Ruby implementation of the krypt-core API.
+
+The goal of this implementation is to provide all the aspects of krypt-core
+via pure Ruby code, therefore any interaction with the native krypt-provider
+API is accomplished using FFI (https://github.com/ffi).
+
+== krypt
+
+For more information about krypt, please have a
+look at the project and its wiki at
+
+https://github.com/krypt/krypt
+
+Copyright (c) 2011-2013
+Hiroshi Nakamura <nahi@ruby-lang.org>
+Martin Bosslet <Martin.Bosslet@gmail.com>

@@ -1,0 +1,4 @@
+Project Description:
+Konfiguracja Vim-a
+
+README:

@@ -1,0 +1,70 @@
+Taterm is a terminal emulator tailored to be used with tiling window managers.
+There may be special support for various window managers in the future.
+
+# Goals
+
+* Keep the current directory over multiple invocations
+    * Single instance via Gtk.Application
+
+* Work on Wayland (maybe, didn't test)
+
+* Use VTE3 (Don't need to reinvent the wheel and everything else around it)
+
+* No gui clutter
+    * Window, shell inside, period
+
+* No tabbing (tiling window manager, remember?)
+
+# Features
+
+* Single instance, directory is taken from last focused terminal
+* Clicking of URIs
+* Scroll lock (WIP)
+* Clean build under latest GTK (3.3.18)
+
+# Prerequisites
+
+* The Vala compiler
+* libvte-2.91-dev
+
+## LICENSE
+
+GPLv3
+
+
+Project Description:
+tiling aware terminal
+
+README:
+Taterm is a terminal emulator tailored to be used with tiling window managers.
+There may be special support for various window managers in the future.
+
+# Goals
+
+* Keep the current directory over multiple invocations
+    * Single instance via Gtk.Application
+
+* Work on Wayland (maybe, didn't test)
+
+* Use VTE3 (Don't need to reinvent the wheel and everything else around it)
+
+* No gui clutter
+    * Window, shell inside, period
+
+* No tabbing (tiling window manager, remember?)
+
+# Features
+
+* Single instance, directory is taken from last focused terminal
+* Clicking of URIs
+* Scroll lock (WIP)
+* Clean build under latest GTK (3.3.18)
+
+# Prerequisites
+
+* The Vala compiler
+* libvte-2.91-dev
+
+## LICENSE
+
+GPLv3

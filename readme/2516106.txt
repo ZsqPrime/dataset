@@ -1,0 +1,7 @@
+# ServMe Open Source Project
+
+Project Description:
+ServMe is a mobile platform for service auctions.
+
+README:
+# ServMe Open Source Project

@@ -1,0 +1,9 @@
+Inactive project, use:  https://github.com/mattbaird/hivedriver
+
+
+
+Project Description:
+Go Thrift-Hive client
+
+README:
+Inactive project, use:  https://github.com/mattbaird/hivedriver

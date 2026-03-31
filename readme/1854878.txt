@@ -1,0 +1,7 @@
+Moved to https://github.com/mattetti/sinatra-web-api-example
+
+Project Description:
+moved to https://github.com/mattetti/sinatra-web-api-example
+
+README:
+Moved to https://github.com/mattetti/sinatra-web-api-example

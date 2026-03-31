@@ -1,0 +1,15 @@
+Project Description:
+Process Next Generation Sequencing Data by python
+
+README:
+=====================================
+ Next Generation Sequencing Toolkits
+=====================================
+
+The pyngs package contain some base operation next generation sequencing:
+
+    #. fasta.py
+    #. fastq.py
+    #. util.py
+
+Last

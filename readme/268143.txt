@@ -1,0 +1,11 @@
+# Tsoi Mechanism #
+
+Tsoi Mechanism is a chemistry application made for the Software Development 2 class at GGC.
+
+Project Description:
+None
+
+README:
+# Tsoi Mechanism #
+
+Tsoi Mechanism is a chemistry application made for the Software Development 2 class at GGC.

@@ -1,0 +1,11 @@
+Project Description:
+A C# Winforms alternative to TreeView that supports variable line height, icons, and partial rich text formatting
+
+README:
+DynamicTreeView builds to the DynamicTreeView library, and DynamicTreeViewExample offers a simple demo
+
+A DynamicTreeView consists of a collection of DynamicTreeViewNodes, 
+which optionally can be forcibly parented to a root node (useful 
+for tying data to the underyling model).
+
+See IDynamicTreeNodeDataProxy for more configurable individual node behavior.

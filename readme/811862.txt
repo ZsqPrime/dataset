@@ -1,0 +1,48 @@
+Test suite for the Ray assembler.
+
+The 3 test suites are:
+
+- unit-tests (entry point: main.sh)
+
+- system-tests (entry point: ../system-tests/main-on-super-computer.sh)
+
+- robustness-tests (entry point: main.sh)
+
+
+Required data:
+
+- data-for-unit-tests is included.
+
+- data-for-system-tests is too large to be included.
+
+
+Also:
+
+Ray-Technology-Research contains various tests
+
+
+Project Description:
+None
+
+README:
+Test suite for the Ray assembler.
+
+The 3 test suites are:
+
+- unit-tests (entry point: main.sh)
+
+- system-tests (entry point: ../system-tests/main-on-super-computer.sh)
+
+- robustness-tests (entry point: main.sh)
+
+
+Required data:
+
+- data-for-unit-tests is included.
+
+- data-for-system-tests is too large to be included.
+
+
+Also:
+
+Ray-Technology-Research contains various tests

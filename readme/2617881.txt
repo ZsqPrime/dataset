@@ -1,0 +1,7 @@
+Project Description:
+an initiative manager for iStuffs
+
+README:
+# Project Setup
+
+1) npm install

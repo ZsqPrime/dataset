@@ -1,0 +1,34 @@
+Project Description:
+
+
+README:
+LibFloorplan
+
+Topological parsing and classifying of large floorplan datasets
+
+INSTALLATION
+You will need Boost Graph Library > 1.42 or equivalent
+
+WORKS:
+- Loading and saving graphs from XML, boost::serialization
+- Area and degree distributions can be generated & saved to file
+- Filtering based on size, frequency, connectivity etc.
+- Graph statistics:
+* Clustering coefficient
+* Degree distribution
+* Characteristic path length
+* Pairwise counts
+* Computing vertex-wise attributes
+TODO:
+Regarding geometric properties, the polygon layout of a room:
+- Shape (simply square or elongated)
+- Perimeter length
+- Number of vertices of the room's layout (i.e. how "zigzaggy" the perimeter
+  is)
+- Convexity measure of the room's layout (ratio of polygon's area to
+it's convex hull)
+- Average vertex angle of the room's layout
+- Door width
+
+Regarding other structure:
+- Number of windows (only available in the KTH dataset)

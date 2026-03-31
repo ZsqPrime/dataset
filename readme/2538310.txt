@@ -1,0 +1,21 @@
+Installation:
+
+    git clone git://github.com/psym/vim.git ~/.vim
+
+Create symlinks:
+
+    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s ~/.vim/vimrc ~/.gvimrc
+
+Switch to the `~/.vim` directory, and fetch submodules:
+
+    cd ~/.vim
+    git submodule init
+    git submodule update
+
+Adding bundles from repos:
+    git submodule add http://github.com/oscarh/vimerl.git bundle/vimerl
+
+
+Additional required packages:
+    pyflakes

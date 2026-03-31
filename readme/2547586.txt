@@ -1,0 +1,7 @@
+Project Description:
+Motivational app to quit smoking made using PhoneGap
+
+README:
+Motivational app to stop smoking.
+
+Built using PhoneGap

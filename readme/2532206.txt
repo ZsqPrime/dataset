@@ -1,0 +1,15 @@
+Project Description:
+A game written at Railscamp 10 to play with Easel.js and FlashCanvas
+
+README:
+## Installation
+
+Install node.js
+
+Install npm
+
+>npm install coffee-script
+
+>node app.js
+
+>open localhost:4000

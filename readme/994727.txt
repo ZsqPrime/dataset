@@ -1,0 +1,20 @@
+There is a prepaid card, accepted only in restaurants, which brazilian companies give to their empoloyees and recharge every month.
+
+Sometimes I had one (or some) more expensive lunches, and had to compensate for a week to be able to have a normal lunch for the rest of the month.
+
+It worked like this: my employee would recharge R$ 330 - R$ 15 for each working day - and one day I would have a R$ 50 lunch.
+
+Using this application, I could type in my card number and it scraped the card website for my balance, and told me how much I could spend on my lunch for the rest of the working days.
+
+
+Project Description:
+Pra calcular quanto posso gastar no VR :P
+
+README:
+There is a prepaid card, accepted only in restaurants, which brazilian companies give to their empoloyees and recharge every month.
+
+Sometimes I had one (or some) more expensive lunches, and had to compensate for a week to be able to have a normal lunch for the rest of the month.
+
+It worked like this: my employee would recharge R$ 330 - R$ 15 for each working day - and one day I would have a R$ 50 lunch.
+
+Using this application, I could type in my card number and it scraped the card website for my balance, and told me how much I could spend on my lunch for the rest of the working days.

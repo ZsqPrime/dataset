@@ -1,0 +1,22 @@
+Project Description:
+Solar System Simulator
+
+README:
+MySolarSystem
+
+About:
+Gravity simulator with possibility of custom force-vector enabled when needed (Engine simulation).
+Simulation can be saved/loaded in/from xml-file
+
+Howto:
+
+GUI:
+run "python mysolarsystem.py
+
+CLI:
+run "python mysolarsystem.py cli"
+
+You need:
+python (naturally)
+cli: pygame
+gui: pyside

@@ -1,0 +1,8 @@
+Itsy, A MongoDB Document-Object Mapper with integrated Elastic Search support.
+
+
+Project Description:
+A MongoDB Document-Object Mapper with integrated Elastic Search support.
+
+README:
+Itsy, A MongoDB Document-Object Mapper with integrated Elastic Search support.

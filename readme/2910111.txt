@@ -1,0 +1,1 @@
+動くようになった。memcached便利すぎる。jQuery（JavaScript）とJSONも便利すぎる（今更）。

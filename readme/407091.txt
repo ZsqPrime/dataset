@@ -1,0 +1,9 @@
+getpaid.pfgbuyableadapter
+=========================
+
+Project Description:
+None
+
+README:
+getpaid.pfgbuyableadapter
+=========================

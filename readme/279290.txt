@@ -1,0 +1,41 @@
+== Privileges
+
+== Contributors
+
+* Anita Patel: http://github.com/apatel/
+
+== License and Copyright
+
+This application is released under a GPLv3 license.
+
+2012 President and Fellows of Harvard College
+
+h2. System Requirements
+
+* Ruby 1.9.3 and a bunch of gems included in the Gemfile
+* A postgresql 8.x database server. Other databases MAY work (e.g. mysql), but they are untested.
+* A webserver capable of interfacing with Rails applications. Ideally, apache or nginx with mod_passenger installed.
+* Linux or OSX. Linux would be easier.
+
+Project Description:
+Privileges app
+
+README:
+== Privileges
+
+== Contributors
+
+* Anita Patel: http://github.com/apatel/
+
+== License and Copyright
+
+This application is released under a GPLv3 license.
+
+2012 President and Fellows of Harvard College
+
+h2. System Requirements
+
+* Ruby 1.9.3 and a bunch of gems included in the Gemfile
+* A postgresql 8.x database server. Other databases MAY work (e.g. mysql), but they are untested.
+* A webserver capable of interfacing with Rails applications. Ideally, apache or nginx with mod_passenger installed.
+* Linux or OSX. Linux would be easier.

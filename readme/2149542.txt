@@ -1,0 +1,8 @@
+A simple jukebox application written in python-qt.
+
+
+Project Description:
+A python-qt jukebox application
+
+README:
+A simple jukebox application written in python-qt.

@@ -1,0 +1,79 @@
+h1. Welcome to Socialite
+
+Socialite is a social news website in a box.
+We want to make it ridiculously easy to spin off a new social news website.
+
+The goal is to build a web application that will act as a social news website (think digg, reddit, or hacker news). But Socialite is meant to be more like a CMS, similar in functionality to Pligg. It will be possible to customize the web application to change its look, its managed content, and its general behavior.
+
+!https://github.com/pmcfadden/socialite/blob/master/screenshot.png?raw=true!
+
+
+h2. To deploy your own instance of Socialite
+
+  # Clone this git repo
+  # Install ruby and rubygems
+  # Install the rails gem:
+      @gem install rails@
+  # Install the bundler gem:
+      @gem install bundler@
+  # Run the following rake command and give it a username and a password for the initial administrator:
+      @rake production:initialize[username,password]@
+  # Start the webserver
+      @thin start -e production@
+  # Point your browser to "http://localhost:3000":http://localhost:3000 and set up your app through the admin section
+
+
+h2. Upcoming Features
+
+Here is a list of features we will be building soon:
+
+  * add nice styling to all pages + images (JQueryUI theme roller?)
+  * admin section to change the style (choose among all JQuery themes?)
+  * make sure the index page still displays nicely even if the title or the description of the submission is very large
+  * index page shows thumbnails of urls or videos or images (toggled on or off in the admin section?)
+  * the index page could be split into components where admins can inject custom html
+  * a bookmarklet to submit posts from the bookmark toolbar
+  * show stats like users with highest karma and stuff
+
+
+
+Project Description:
+
+
+README:
+h1. Welcome to Socialite
+
+Socialite is a social news website in a box.
+We want to make it ridiculously easy to spin off a new social news website.
+
+The goal is to build a web application that will act as a social news website (think digg, reddit, or hacker news). But Socialite is meant to be more like a CMS, similar in functionality to Pligg. It will be possible to customize the web application to change its look, its managed content, and its general behavior.
+
+!https://github.com/pmcfadden/socialite/blob/master/screenshot.png?raw=true!
+
+
+h2. To deploy your own instance of Socialite
+
+  # Clone this git repo
+  # Install ruby and rubygems
+  # Install the rails gem:
+      @gem install rails@
+  # Install the bundler gem:
+      @gem install bundler@
+  # Run the following rake command and give it a username and a password for the initial administrator:
+      @rake production:initialize[username,password]@
+  # Start the webserver
+      @thin start -e production@
+  # Point your browser to "http://localhost:3000":http://localhost:3000 and set up your app through the admin section
+
+
+h2. Upcoming Features
+
+Here is a list of features we will be building soon:
+
+  * add nice styling to all pages + images (JQueryUI theme roller?)
+  * admin section to change the style (choose among all JQuery themes?)
+  * make sure the index page still displays nicely even if the title or the description of the submission is very large
+  * index page shows thumbnails of urls or videos or images (toggled on or off in the admin section?)
+  * the index page could be split into components where admins can inject custom html
+  * a bookmarklet to submit posts from the bookmark toolbar
+  * show stats like users with highest karma and stuff

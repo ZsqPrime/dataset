@@ -1,0 +1,12 @@
+# VKQ
+
+## User voting iframe application for http://vk.com 
+
+
+Project Description:
+User rate application for vk.com
+
+README:
+# VKQ
+
+## User voting iframe application for http://vk.com

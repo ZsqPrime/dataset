@@ -1,0 +1,10 @@
+Project Description:
+A quantum dynamics simulator for quantum control problems
+
+README:
+
+============================================================
+QUDY : Qubit Dynamics Simulator 
+============================================================
+
+Insert a README later...

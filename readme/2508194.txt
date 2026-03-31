@@ -1,0 +1,8 @@
+add silent dataurl to audio tag and use popcorn.js to drive events.
+
+
+Project Description:
+build a timeline based on slience
+
+README:
+add silent dataurl to audio tag and use popcorn.js to drive events.

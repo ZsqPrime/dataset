@@ -1,0 +1,44 @@
+v.1.05 | 2013-04-27 | Branch master
+===
+
+## Name: serendipity_event_dashboard
+
+* The Serendipity Dashboard [Proof of Concept] for version 1.7.
+  PLEASE NOTE: This version 1.x will only work with Serendipity 1.7! S9y-2.0 has its own branch.
+
+* Although running stable enough as is, this plugin is still announced to have testing status, as long as there won't be some more testers and feedback!
+
+* Please test the functions and the general behaviour. Live with it for a while.
+
+* Do not mind the colours. They are customizable via CSS.
+
+* Some minor functions (i.e. help screens) are not ready and still a work in progress!
+
+* The current help screen is my development gazette, noting ideas and fixed issues to this P.o.C.
+
+* This Dashboard-Concept is strictly based to the default Backend as used in /templates/default/admin/* and /templates/bulletproof/admin/*.
+
+
+Project Description:
+a proof of concept Serendipity dashboard - DO **NOT** USE with Serendipity 2.0+
+
+README:
+v.1.05 | 2013-04-27 | Branch master
+===
+
+## Name: serendipity_event_dashboard
+
+* The Serendipity Dashboard [Proof of Concept] for version 1.7.
+  PLEASE NOTE: This version 1.x will only work with Serendipity 1.7! S9y-2.0 has its own branch.
+
+* Although running stable enough as is, this plugin is still announced to have testing status, as long as there won't be some more testers and feedback!
+
+* Please test the functions and the general behaviour. Live with it for a while.
+
+* Do not mind the colours. They are customizable via CSS.
+
+* Some minor functions (i.e. help screens) are not ready and still a work in progress!
+
+* The current help screen is my development gazette, noting ideas and fixed issues to this P.o.C.
+
+* This Dashboard-Concept is strictly based to the default Backend as used in /templates/default/admin/* and /templates/bulletproof/admin/*.

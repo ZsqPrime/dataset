@@ -1,0 +1,4 @@
+Project Description:
+DHackularEngine (dhe) is a flexible game engine being written in D.
+
+README:

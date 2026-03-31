@@ -1,0 +1,10 @@
+# BuddyStrap
+A Buddypress theme based around bootstrap from twitter
+
+
+Project Description:
+BuddyPress theme based upon Bootstrap from Twitter
+
+README:
+# BuddyStrap
+A Buddypress theme based around bootstrap from twitter

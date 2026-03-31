@@ -1,0 +1,8 @@
+An university assignment for the course of WWW technologies.
+
+
+Project Description:
+Web photo album (university assignment)
+
+README:
+An university assignment for the course of WWW technologies.

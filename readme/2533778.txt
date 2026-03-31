@@ -1,0 +1,5 @@
+Project Description:
+A presentation of Mono
+
+README:
+Mono Present is a simple presentation of Mono using impress.js

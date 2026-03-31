@@ -1,0 +1,81 @@
+Project Description:
+portable music player
+
+README:
+ This project has the following feature set:
+
+   - a smallish and spartan music player that can work for weeks between charges
+   - a 2Ah Li-poly cell and an integrated charger - 5V input
+   - decoding of ogg vorbis, mp3 files
+   - microSD (SDHC) is the storage medium. so fat32 and cards bigger than 4G.
+
+  there are 2 components in this repository:
+  avr        - contains the C source code for an Atmel-based microcontroller
+  beaglebone - contains the C source code for beagle-bone (ARMv7)-based tools
+  hardware   - open source hardware for the main board
+				the schematic is based on VLSI's Simple DSP Evaluation Board [1]
+
+  Library dependencies for the avr code:
+
+   if using the master branch:
+      none (this is a fully standalone version)
+
+   if using the old 'arduino' branch:
+      sdfatlib    http://code.google.com/p/sdfatlib/
+      vs1063      https://github.com/rodan/vs1063
+      IRremote    https://github.com/shirriff/Arduino-IRremote
+
+  Usage:
+   - an RC5 remote control provides the control (a Vishay TSOP IR receiver's output goes to PD2).
+   - by default music files are played randomly. the following buttons are configured:
+   
+    VOL-        decrease volume
+    VOL+        increase volume
+    SUBTITLES   switch between 4 levels of spatial processing (for headphones)
+    REWIND      switch to album mode
+    CHANNEL-    switch to artist mode
+    CHANNEL+    next track in either of the modes
+    STOP        sends the player in low power shutdown mode. 
+                you need to start it again to exit this.
+    NUMBERS 0-9 select artist (which directory from the root of the filesystem to play)
+    AV          disable artist selection
+    
+
+  Power consumption profile:
+   - jumper/switch open - battery connected only to the charging circuit - < 3uA
+   - normal file decoding - 30-40 mA
+   - shutdown (after STOP ir command), IR sensor active - 800uA
+   - after uC woken up by ir sensor trigger, waiting for a POWER ir sequence (for max 2 seconds) - 4.5mA (this mode has been disabled in the code)
+   - if the stereo jack is unused or if the battery level goes below safe LiPo levels then the player enters shutdown mode.
+
+  Known problems and limitations:
+   - you should format the SDcard as Fat32 with largest available cluster size
+   - no special chars must be used in the filesystem entries, only ascii alphanumeric chars
+   - there is a hardcoded MAX_PATH that only allows about 4 parent dirs to any music file
+
+  Tested with:
+   - 16G Class 10 Adata card, with ogg files over the 4G barrier
+
+
+  Author:            Petre Rodan <2b4eda@subdimension.ro>
+  Available from:    https://github.com/rodan/playa
+  Product pictures:  https://photos.app.goo.gl/nUQuD7HJvfVBpMeQ9
+  License:           GNU GPLv3
+
+
+[1]  http://www.vlsi.fi/en/support/evaluationboards/vs1053vs8053simpledspboard.html
+
+ GNU GPLv3 license:
+  
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+   
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+   
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.

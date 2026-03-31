@@ -1,0 +1,18 @@
+CleanCodeDeveloper Codeing Examples
+(C)'2012-13 Christoph Becker, tuergeist@googlemail.com 
+
+Apache License Version 2 - http://www.apache.org/licenses/LICENSE-2.0.html
+
+This is the version for the red level according to www.clean-code-developer.de
+
+
+Project Description:
+Examples for the presentation of CCD
+
+README:
+CleanCodeDeveloper Codeing Examples
+(C)'2012-13 Christoph Becker, tuergeist@googlemail.com 
+
+Apache License Version 2 - http://www.apache.org/licenses/LICENSE-2.0.html
+
+This is the version for the red level according to www.clean-code-developer.de

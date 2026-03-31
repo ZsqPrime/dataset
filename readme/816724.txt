@@ -1,0 +1,7 @@
+This repository contains drivers that call functions from MaskOperations in the Mask repository.
+
+Project Description:
+Operations involving masked regions of images
+
+README:
+This repository contains drivers that call functions from MaskOperations in the Mask repository.

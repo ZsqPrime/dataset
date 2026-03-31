@@ -1,0 +1,10 @@
+Django goodies.
+---------------
+
+
+Project Description:
+Django goodies
+
+README:
+Django goodies.
+---------------

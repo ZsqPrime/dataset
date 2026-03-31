@@ -1,0 +1,5 @@
+Project Description:
+MediaMosa EGA (Drupal theme)
+
+README:
+Readme file for the MediaMosa Site Builder theme

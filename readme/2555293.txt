@@ -1,0 +1,7 @@
+Project Description:
+OBSOLETE pure Perl version of Marpa
+
+README:
+[ THIS REPOSITORY HAS BEEN ARCHIVED ]
+This is the repository for the CPAN Marpa::PP distribution.  The
+distribution directory is the pp/ directory.

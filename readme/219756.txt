@@ -1,0 +1,6 @@
+
+
+Project Description:
+A multi-agent simulation with accent on spatial memory.
+
+README:

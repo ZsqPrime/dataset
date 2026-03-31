@@ -1,0 +1,8 @@
+** This project for some reason moved out or obsolete. **
+
+
+Project Description:
+A scalable shard-based data store middleware
+
+README:
+** This project for some reason moved out or obsolete. **

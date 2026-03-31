@@ -1,0 +1,148 @@
+Project Description:
+Asynchronous ping with AnyEvent
+
+README:
+=head1 NAME
+
+AnyEvent::Ping - ping hosts with AnyEvent
+
+=head1 SYNOPSIS
+
+    use AnyEvent;
+    use AnyEvent::Ping;
+
+    my $host  = shift || '4.2.2.2';
+    my $times = shift || 4;
+    my $package_s = shift || 56;
+    my $c = AnyEvent->condvar;
+
+    my $ping = AnyEvent::Ping->new;
+
+    print "PING $host $package_s(@{[$package_s+8]}) bytes of data\n";
+    $ping->ping($host, $times, sub {
+        my $results = shift;
+        foreach my $result (@$results) {
+            my $status = $result->[0];
+            my $time   = $result->[1];
+            printf "%s from %s: time=%f ms\n", 
+                $status, $host, $time * 1000;
+        };
+        $c->send;
+    });
+
+    $c->recv;
+    $ping->end;
+
+=head1 DESCRIPTION
+
+L<AnyEvent::Ping> is an asynchronous AnyEvent pinger.
+
+=head1 ATTRIBUTES
+
+L<AnyEvent::Ping> implements the following attributes.
+
+=head2 C<interval>
+
+    my $interval = $ping->interval;
+    $ping->interval(1);
+
+Interval between pings, defaults to 0.2 seconds.
+
+=head2 C<timeout>
+    
+    my $timeout = $ping->timeout;
+    $ping->timeout(3);
+
+Maximum response time, defaults to 5 seconds.
+
+=head2 C<error>
+
+    my $error = $ping->error;
+
+Last error message.
+
+=head1 METHODS
+
+L<AnyEvent::Ping> implements the following methods.
+
+=head2 C<new>
+
+    my $ping = AnyEvent::Ping->new(%options)
+
+Constructs AnyEvent::Ping object. Following options can be passed:
+
+=head3 C<interval>
+
+=head3 C<timeout>
+
+=head3 C<on_prepare>
+
+In some cases you need to "tune" the socket before it is used to ping (for
+exmaple, to bind it on a given IP address).
+
+    my $ping = AnyEvent::Ping->new(
+        on_prepare => sub {
+            my $socket = shift;
+            ...
+    });
+
+=head3 C<packet_generator>
+
+Generates the data to be sent.
+
+    my $ping = AnyEvent::Ping->new(
+        packet_generator => sub {
+            &AnyEvent::Ping::generate_data_random($packet_size);
+    });
+
+=head3 C<packet_size>
+
+You can set the number of data bytes to be sent, if packet generation function
+is not set. The default is 56, which translates into 64 ICMP data bytes when
+combined with the 8 bytes of ICMP header data.
+
+    my $ping = AnyEvent::Ping->new(packet_size => 56);
+
+Each packet will be generated with generate_data_random() like this:
+
+    &AnyEvent::Ping::generate_data_random($packet_size);
+
+=head2 C<ping>
+
+    $ping->ping($ip, $n => sub {
+        my $results = shift;
+
+        foreach my $result (@$results){
+            my ($status, $time) = @$result;
+            ...
+        };
+    });
+
+Perform a ping of a given $ip address $n times.
+
+=head2 C<end>
+
+    $ping->end;
+
+Ends all pings and releases resources.
+
+=head1 SEE ALSO
+
+L<AnyEvent>, L<AnyEvent::FastPing>
+
+=head1 AUTHOR
+
+Sergey Zasenko, C<undef@cpan.org>.
+
+=head1 CREDITS
+
+Kirill (qsimpleq)
+
+Sebastien Deseille (sdeseille)
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2012-2015, Sergey Zasenko
+
+This program is free software, you can redistribute it and/or modify it under
+the same terms as Perl 5.12.

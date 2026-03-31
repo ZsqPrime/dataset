@@ -1,0 +1,10 @@
+Project Description:
+A cube controlled by touch events for ipad
+
+README:
+#Swipey Cube
+
+This project is intended to be a web app aimed at the ipad/iphone.
+
+Anders
+^__^

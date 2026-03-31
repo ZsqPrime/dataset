@@ -1,0 +1,8 @@
+Project Description:
+Provides a Spanish translation for the Radiant admin interface
+
+README:
+= I18n Es
+
+Spanish language pack for Radiant 0.9. Translation consists of
+admin UI strings and description of radiant tags.

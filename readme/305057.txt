@@ -1,0 +1,29 @@
+h1. Scansave
+
+h3. Put those DICOMS in their place!
+
+This is going to provide a small, lightweight web interface to uploading MRI scans. We're using a GE750 scanner, so we'll be focused on that for now.
+
+h3. Components:
+
+h4. dicom_sorter
+
+A simple program that looks through a directory tree containing dicoms and sorts them into an output directory by study number, series number, and date.
+
+
+
+Project Description:
+A package for uploading and archiving MRI scans.
+
+README:
+h1. Scansave
+
+h3. Put those DICOMS in their place!
+
+This is going to provide a small, lightweight web interface to uploading MRI scans. We're using a GE750 scanner, so we'll be focused on that for now.
+
+h3. Components:
+
+h4. dicom_sorter
+
+A simple program that looks through a directory tree containing dicoms and sorts them into an output directory by study number, series number, and date.

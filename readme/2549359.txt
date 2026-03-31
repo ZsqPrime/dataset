@@ -1,0 +1,95 @@
+Project Description:
+The firmware for the Peel St Lantern controllers
+
+README:
+= Introduction =
+
+This is the firmware that will hopefully run the Peel Street Lantern.  Find
+out more about the lantern here:
+
+  http://www.hackerspace-adelaide.org.au/wiki/Peel_Street_Lantern 
+
+= Prerequisites =
+
+make, avrdude, gcc-avr, avr-libc.
+
+If you're programming an Arduino, you'll also need the Arduino IDE.  Set the
+environment variable ARDUINO_HOME to its path:
+
+  export ARDUINO_HOME=/opt/arduino-0021
+
+= Running =
+
+There's two parts to this: the host software, which runs on the computer
+driving the lantern; and the slave, which runs on the slave microcontrollers.
+
+== Host ==
+
+The host software takes data from stdin, re-formats it to the format requried
+by the slaves, then sends it to stdout as fast as possible.  The idea is you 
+connect stdout to the serial port, and stdin to whatever generates the images.
+If you send it no input, the host program continues to send the most recent
+data it received.
+
+The image generator needs to produce 36x35 raw BGR (?) images.
+
+The serial port should be an FTDI USB-to-serial adapter.  Other brands are no
+good - they can't produce the required 2Mbit/s data rate.
+
+For example:
+
+  $ stty 2000000 < /dev/lantern
+  $ ./my-image-generator | ./peel-translate > /dev/lantern
+
+== Slave ==
+
+The slave wakes up when it's addressed, then sends the next 96 bytes of data
+straight to the TLC chips.  They then adjust the shift registers to match the
+row sent in the first byte of data.  They don't store any data themselves -
+there isn't enough CPU cycles between incoming bytes to do that.
+
+Since the slave doesn't store any data, you can use any AVR that
+runs at 16MHz and has a UART - the smallest being the ATtiny2313.
+
+= Uploading =
+
+To run either the master or slave on an Arduino, just run:
+
+  make upload
+
+This assumes the Arduino is on /dev/ttyUSB0.  You can change this:
+
+  make UPLOAD_PORT=/dev/arduino upload
+
+This can also be specified using an environment variable:
+
+  export UPLOAD_PORT=/dev/buspirate
+  make upload
+
+You can use other programmers (any supported by avrdude):
+
+  make PROGRAMMER=buspirate upload
+
+These commands will only program the slave with ID 0.  For the others, upload
+the code like this:
+
+  make SLAVE_ID=4 clean upload
+
+You need to clean each time you change the slave ID - the slave ID is
+hard-coded to save CPU cycles.
+
+There are a few other parameters in the Makefile that you might need to change:
+
+ - MCU_TARGET is the AVR chip you're using (see the avrdude docs)
+ - UPLOAD_SPEED is the serial speed.  For the Decimilia, you need to use 19200.
+
+The Makefile supports unit testing using cunit, which is what the TEST_OBJECTS
+property is for and why the AVR files are compiled with .avr.o.  This project
+doesn't have unit tests at the moment.
+
+= Debugging =
+
+If you're using an Arduino Mega, you can read debugging information from the
+USB port:
+
+  $ stty 500000 raw ignbrk hup < /dev/ttyUSB0 && cat /dev/ttyUSB0

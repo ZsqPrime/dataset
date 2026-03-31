@@ -1,0 +1,8 @@
+These are code examples written for fun playing with eclipse
+
+
+Project Description:
+Code which I write for fun/solving random problems ~ mostly #JAVA
+
+README:
+These are code examples written for fun playing with eclipse

@@ -1,0 +1,14 @@
+# sneeu_stationary
+
+The [stationary](https://github.com/sneeu/stationary) source for
+[sneeu.com](http://sneeu.com/).
+
+
+Project Description:
+sneeu.com, as a stationary website
+
+README:
+# sneeu_stationary
+
+The [stationary](https://github.com/sneeu/stationary) source for
+[sneeu.com](http://sneeu.com/).

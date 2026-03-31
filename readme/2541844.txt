@@ -1,0 +1,4 @@
+Project Description:
+QT based GUI that displays all available JAUS resources
+
+README:

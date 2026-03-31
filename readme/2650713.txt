@@ -1,0 +1,4 @@
+Project Description:
+Hack to knitting machine KH930 and KH940
+
+README:

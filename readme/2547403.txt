@@ -1,0 +1,10 @@
+Project Description:
+A concurrent, stack-based, useless toy programming language.
+
+README:
+Nixon
+=====
+
+Nixon is a toy programming language. It is stack-based, concurrent and completely useless.
+
+    "Sock it to me!" write!

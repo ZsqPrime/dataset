@@ -1,0 +1,90 @@
+Project Description:
+Shotgun Stochastic Search (SSS) from Hans, Dobra and West (http://pubs.amstat.org/doi/abs/10.1198/016214507000000121) - wrappers written to integrate as an R package to call platform-specific executable.
+
+README:
+README DOCUMENT FOR THE sss PACKAGE
+
+AUTHOR: BRIAN M. BOT
+
+ATTRIBUTION: Hans C, Dobra A, and West M. Shotgun Stochastic Search for "Large p" Regression. Journal of the American Statistical Association 2007.
+
+Wang, Q. for the source code
+
+This current version uses pre-compiled binaries. If one's system architecture is not represented by one of these, the package will not build.
+A new version which will allow dynamic compilation is forthcoming.
+
+#######################################################################
+
+# sssVignette.R
+
+# AUTHORS
+# Erich S. Huang & Brian Bot
+# Sage Bionetworks
+# Seattle, Washington
+
+# SOURCE
+# https://github.com/Sage-Bionetworks/sss
+
+# NOTES
+# A vignette for using the new "sss" package which provides R integration for
+# Shotgun Stochastic Search by Chris Hans, Adrian Dobra and Mike West
+
+# INSTALL SSS
+# Alternative #1
+# Download from Github at https://github.com/Sage-Bionetworks/sss and 
+# "R CMD INSTALL sss" from the parent directory
+
+# Alternative #2
+# Install "devtools" from CRAN
+require(devtools)
+install_github("sss", "Sage-Bionetworks")
+
+## START MODELING
+require(sss)
+require(Biobase) # from Bioconductor
+require(breastCancerTRANSBIG) # from Bioconductor
+
+data(transbig)
+expressData <- exprs(transbig)[1:500, ] # Subset the data for convenience
+pheno <- phenoData(transbig)
+
+# CREATE TRAINING AND VALIDATION COHORTS
+set.seed(031512)
+randVec <- rbinom(dim(transbig)[2], size = 1, prob = 0.5)
+trainExpress <- expressData[ , randVec == 0]
+validExpress <- expressData[ , randVec == 1]
+trainScore <- as.numeric(pheno@data$er[randVec == 0])
+validScore <- as.numeric(pheno@data$er[randVec == 1])
+
+# BINARY MODEL OF 'ER Status' USING SSS
+sssERFit <- sss(trainScore ~ t(trainExpress))
+print(sssERFit)
+
+# print output below:
+# Type of model fit: "sssBinaryModel"
+# 
+# Call: sss(formula = trainScore ~ t(trainExpress))
+# Number of features searched : 500
+# Number of training samples  : 85
+# To test this predictive model against a validation set, pass a new feature matrix to:
+#   predict(object, newdata=newFeatureMatrix)
+# 
+# ----------------------
+#   Contains slots (class)
+# ----------------------
+#   standScore (numeric)
+# postMargProb (numeric)
+# trainPredictionSummary (numeric)
+# testPredictionSummary (numeric)
+# model (sssBinaryModel)
+# nBestFits (list)
+# p
+# score
+# indices
+# pmode
+# pvar
+# trainPrediction
+# testPrediction
+
+# PREDICT ON THE VALIDATION SET
+validScoreHat <- predict(sssERFit, newdata = t(validExpress))

@@ -1,0 +1,9 @@
+Project Description:
+6.470 project from iap2012
+
+README:
+Database not packaged within repo, please download from:
+
+http://www.govtrack.us/data/db/
+
+and then run a rails server on localhost

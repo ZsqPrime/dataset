@@ -1,0 +1,8 @@
+cap_sasl.cpp	Support SASL authentication when connecting to irc networks which support CAP SASL (Deprecated as of ZNC 1.0)
+
+
+Project Description:
+Extensions modules and scripts for the ZNC IRC proxy
+
+README:
+cap_sasl.cpp	Support SASL authentication when connecting to irc networks which support CAP SASL (Deprecated as of ZNC 1.0)

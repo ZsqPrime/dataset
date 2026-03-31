@@ -1,0 +1,48 @@
+Project Description:
+A Bash library for OAuth
+
+README:
+Bash OAuth
+==========
+
+A Bash library for OAuth.
+
+Installation
+------------
+
+Bash Oauth uses Makefile for installation, generally you may want to do this if you want to install all script into `$HOME/bin`:
+
+    $ make PREFIX=$HOME install-all
+
+### Available targets
+
+    install-all        -> all scripts
+    install            -> OAuth.sh
+    install-twitter    -> TwitterOAuth.sh    + install target
+    install-tcli       -> tcli.sh            + install-twitter target
+    install-stereomood -> StereomoodOAuth.sh + install target
+    install-basm       -> Basm.sh            + install-stereomood target
+    uninstall          -> uninstall all scripts
+
+Notes and Status
+----------------
+
+This library was written almost two years ago and has not got any updates since then. It was hosted on Google Code, mixed with other small projects, and now move to GitHub for better maintenance. Currently, this library is not under active development, it will only get updates after issues or requests are submitted.
+
+There were two scripts `GmailOAuth.sh` and `gmcli.sh` were coded in the time, but never got commited due to testing and didn't seem to work. However, they are included in this repo and may not be working.
+
+Related Old Stuff
+-----------------
+
+ * [Bash OAuth](http://blog.yjl.im/2010/05/bash-oauth.html)
+ * [Basm](http://blog.yjl.im/2010/05/basm-bash-client-for-stereomood.html)
+ * The old commits can be found on [Google Code](http://code.google.com/p/yjl/source/browse/#hg%2FBash) under the `OAuth` directory. You won't see it in the source browser since it's removed, but it's still in old revisions.
+
+License
+-------
+
+Bash OAuth is licensed under the MIT License.
+
+    Copyright (c) 2014 Mathew Paret
+    Copyright (c) 2012 Michael Nowack
+    Copyright (c) 2010, 2012 Yu-Jie Lin

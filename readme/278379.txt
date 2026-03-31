@@ -1,0 +1,12 @@
+1. Make new art or modify some
+2. Take care of CONTRIBUTING.md!
+3. Push changes :)
+
+
+Project Description:
+All graphics sources are stored here
+
+README:
+1. Make new art or modify some
+2. Take care of CONTRIBUTING.md!
+3. Push changes :)

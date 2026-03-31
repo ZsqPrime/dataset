@@ -1,0 +1,58 @@
+= OauthActiveResource
+
+Rails gem that allows you to easily interact with an Oauth secured rest API with the ActiveResource model.
+You have to provide an http-like object that signs your requests with your already retrieved access_token, like the one that the oauth gem  provides (http://oauth.rubyforge.org/rdoc/classes/OAuth/AccessToken.html)
+
+= Getting Started
+
+Assuming that you are using oauth gem:
+
+1. Add into your Gemfile:
+
+    gem 'oauth-activeresource'
+
+2. Make your models inherit from OauthActiveResource instead ActiveResource
+
+    class MyModel < OauthActiveResource::Base
+    end
+
+3. Set a before_filter in your controllers to override your connection object with your access_token object
+
+    def set_oauth
+      MyModel.oauth_connection = @access_token
+    end
+
+Where @access_token is the final object that the oauth gem uses to sign every request. More info about how to create that object here (http://oauth.rubyforge.org/) 
+
+
+
+
+Project Description:
+Rails gem that allows you to easily interact with an Oauth secured rest API with the ActiveResource model.
+
+README:
+= OauthActiveResource
+
+Rails gem that allows you to easily interact with an Oauth secured rest API with the ActiveResource model.
+You have to provide an http-like object that signs your requests with your already retrieved access_token, like the one that the oauth gem  provides (http://oauth.rubyforge.org/rdoc/classes/OAuth/AccessToken.html)
+
+= Getting Started
+
+Assuming that you are using oauth gem:
+
+1. Add into your Gemfile:
+
+    gem 'oauth-activeresource'
+
+2. Make your models inherit from OauthActiveResource instead ActiveResource
+
+    class MyModel < OauthActiveResource::Base
+    end
+
+3. Set a before_filter in your controllers to override your connection object with your access_token object
+
+    def set_oauth
+      MyModel.oauth_connection = @access_token
+    end
+
+Where @access_token is the final object that the oauth gem uses to sign every request. More info about how to create that object here (http://oauth.rubyforge.org/)

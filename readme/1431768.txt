@@ -1,0 +1,5 @@
+Project Description:
+Code examples for Arduino and Processing
+
+README:
+# Bitlace

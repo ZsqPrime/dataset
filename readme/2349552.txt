@@ -1,0 +1,81 @@
+picobgp is minimalistic not-compliant-bgp free-inspired daemon for
+subnetwork advertising and route topology update.
+
+The picobgp software was written to dynamically update the routing
+tables of some PCs of my vpns and so it doesn't want to became
+a solution for a generic problem but I hope that this code can be useful
+to someone else!
+
+USAGE EXAMPLE
+---------------
+
++---------+ eth0     vpn0 +---------+ eth0
+| LaptopA |---------------| ServerA |----------------|
++---------+               +---------+   10.0.1.0/24   
+                              |eth1
+                              +--------------|
+                                78.9.2.0/24
+
+On ServerA:
+advertise a couple of subnets and receive routing advertisements from 
+vpn0 iface:
+   picobgp -i vpn0 -s 10.0.1.0/24 -s 78.9.2.0/24
+
+On LaptopA:
+receive the routing advertisements and populate the routing table
+automatically:
+   picobgp -i eth0
+
+See also a short presentation on http://www.slideshare.net/claudiomig3/picobgp-a-simple
+
+DEVELOPMENT
+------------
+picobgp is very simple but any improvement is welcome. Feel free to drop 
+me an e-mail for bugs, suggestions, patches and general improvement
+<c.mignanti@gmail.com>
+
+Thank you for using picobgp
+
+
+
+Project Description:
+Tiny routing advertising daemon
+
+README:
+picobgp is minimalistic not-compliant-bgp free-inspired daemon for
+subnetwork advertising and route topology update.
+
+The picobgp software was written to dynamically update the routing
+tables of some PCs of my vpns and so it doesn't want to became
+a solution for a generic problem but I hope that this code can be useful
+to someone else!
+
+USAGE EXAMPLE
+---------------
+
++---------+ eth0     vpn0 +---------+ eth0
+| LaptopA |---------------| ServerA |----------------|
++---------+               +---------+   10.0.1.0/24   
+                              |eth1
+                              +--------------|
+                                78.9.2.0/24
+
+On ServerA:
+advertise a couple of subnets and receive routing advertisements from 
+vpn0 iface:
+   picobgp -i vpn0 -s 10.0.1.0/24 -s 78.9.2.0/24
+
+On LaptopA:
+receive the routing advertisements and populate the routing table
+automatically:
+   picobgp -i eth0
+
+See also a short presentation on http://www.slideshare.net/claudiomig3/picobgp-a-simple
+
+DEVELOPMENT
+------------
+picobgp is very simple but any improvement is welcome. Feel free to drop 
+me an e-mail for bugs, suggestions, patches and general improvement
+<c.mignanti@gmail.com>
+
+Thank you for using picobgp

@@ -1,0 +1,5 @@
+Project Description:
+Glork Network Sync
+
+README:
+GlorkSync provides synchronization between the server nodes and client nodes of a Glork network.

@@ -1,0 +1,22 @@
+Snowpool Mobile App
+===================
+
+This is a basic mobile application for the website [Snowpool.org](http://snowpool.org)
+
+It is designed to be used on [build.phonegap.com](http://build.phonegap.com).
+
+Contributions welcome!
+
+
+Project Description:
+Phone gap build for the snowpool.org website
+
+README:
+Snowpool Mobile App
+===================
+
+This is a basic mobile application for the website [Snowpool.org](http://snowpool.org)
+
+It is designed to be used on [build.phonegap.com](http://build.phonegap.com).
+
+Contributions welcome!

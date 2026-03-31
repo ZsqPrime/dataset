@@ -1,0 +1,9 @@
+Welcome to DiveTracker!
+DiveTracker is the ultimate dive log app developed by CJCSW.
+
+Project Description:
+CJCSW's first pet project
+
+README:
+Welcome to DiveTracker!
+DiveTracker is the ultimate dive log app developed by CJCSW.

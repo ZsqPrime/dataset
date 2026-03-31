@@ -1,0 +1,18 @@
+DBMulticast
+===========
+
+A .NET application to handle running queries against mutliple instances of SQLServer.
+
+See [wiki](https://github.com/pfarrell/DBMulticast/wiki) for install and usage info.
+
+
+Project Description:
+DBMulticast is a .NET application which can aid in running queries against multiple databases.
+
+README:
+DBMulticast
+===========
+
+A .NET application to handle running queries against mutliple instances of SQLServer.
+
+See [wiki](https://github.com/pfarrell/DBMulticast/wiki) for install and usage info.

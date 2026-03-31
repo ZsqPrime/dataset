@@ -1,0 +1,38 @@
+Project Description:
+CS 411 Group Project
+
+README:
+Application domain: 
+People who enjoy movies and want to connect to others with similar movie interests.
+ 
+Usefulness:
+
+1) Makes entertainment more easily accesible.
+
+2) Save time, rather than asking all your friends what they enjoy in movies.
+
+3) Helps users discover new movies they may be interested in.
+
+Flixter is similar to our design, however our concept is much more social media-oriented, and ours will suggest movies.
+
+Realness:
+The data is the movie information, along with the user information and reviews.  We will get the movie information from IMDB, and the user information directly from the user.
+
+Description of functionality:
+1. Basic:
+
+Insert/update/delete records to the database:
+
+We will insert the searched IMDB information into our database, along with user data/connections and user reviews; if there is some change, like a user's friend's name, we will be able to update it; we will delete friend connections when users unfriend each other, and remove movies from a user's likes, along with user's accounts all together if the user decides to remove him/herself from our database.
+
+Search the database and list or print returned results:
+
+We will support key word searching. For example, a user can search a particular keyword in a review for a movie they may like.
+
+2. Advanced:
+
+Suggest friends based on a user's movie interests.
+
+Suggest movies based on a user's movie interests.
+
+Search for a certain genre, and list users who enjoy that particular genre.

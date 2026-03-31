@@ -1,0 +1,46 @@
+The tools in this collection are for use with rk2918 devices using the
+flash write interface and the adb interface.
+
+Initially the tool support writing of images to tablets.
+
+$ rksp
+rksp tablet flasher, Copyright (C)2012 ttz642t@gmail.com
+
+Reading config file...
+adb path is: /home/stevep/bin/adb
+rkflashtool path is: /home/stevep/bin/rkflashtool
+
+1) Edit paths
+2) Flash tablet
+3) Reboot tablet
+4) Install favorite apps
+5) Create parameters from parameter
+6) ROM cooking (coming soon)...
+0) Exit
+Options ?
+
+
+Project Description:
+rk2918 flasher & cooker
+
+README:
+The tools in this collection are for use with rk2918 devices using the
+flash write interface and the adb interface.
+
+Initially the tool support writing of images to tablets.
+
+$ rksp
+rksp tablet flasher, Copyright (C)2012 ttz642t@gmail.com
+
+Reading config file...
+adb path is: /home/stevep/bin/adb
+rkflashtool path is: /home/stevep/bin/rkflashtool
+
+1) Edit paths
+2) Flash tablet
+3) Reboot tablet
+4) Install favorite apps
+5) Create parameters from parameter
+6) ROM cooking (coming soon)...
+0) Exit
+Options ?

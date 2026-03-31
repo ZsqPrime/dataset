@@ -1,0 +1,7 @@
+Hi! I edited our readme.
+
+Project Description:
+a restaurant poll web-app
+
+README:
+Hi! I edited our readme.

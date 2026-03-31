@@ -1,0 +1,30 @@
+- Gridworld
+
+All code for the gridworld experiment is in this folder.
+
+- Racetrack
+
+This folder contains the racetracks and code for simple discretized racetrack experiments.
+
+- Simulated-Car-Racing
+
+Contains all code concerning experiments for the Simulated Car Racing Championship. This includes experiments
+to build a dynamics model, the actual controller and some tests with SLAM to build a map.
+
+
+Project Description:
+
+
+README:
+- Gridworld
+
+All code for the gridworld experiment is in this folder.
+
+- Racetrack
+
+This folder contains the racetracks and code for simple discretized racetrack experiments.
+
+- Simulated-Car-Racing
+
+Contains all code concerning experiments for the Simulated Car Racing Championship. This includes experiments
+to build a dynamics model, the actual controller and some tests with SLAM to build a map.

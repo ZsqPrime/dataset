@@ -1,0 +1,45 @@
+Project Description:
+Bitcoin Pool Proxy and miner mangement.
+
+README:
+poolManager is a way to manage what pools your miners work at easily.
+
+Dependencies:
+	Pymongo
+	Tornado Web Server
+	Some Json Library
+	
+This project aims to provide a easily extensible and clean interface
+to one's bitcoin miners. The inspiration was to extend bitHopper but
+this changed to a complete rewrite from scratch as I wanted to provide
+my own features and extensions that would not work in the original
+bitHopper code thus this project was started.
+
+Features:
+	- Pool management:
+		- Username and Password changes.
+		- Address changes.
+		- Port changes.
+		- Timeout changes.
+	- Miner statistics:
+		- 15m, 1day, and 7day hash rate averages.
+		- Shares and stales per day.
+		- Estimated earnings per miner per pool.
+			- This will be a rough estimate and is dependent on
+				formula choice and pool target's.
+	- Web interface:
+		- Admin panel for changing settings on the fly.
+			- Change the pool.
+			- Ban miners.
+			- Segment miners across multiple pools.
+		- Failover pool adding.
+		- Graphs because graphs are nice.
+		- User Registration, or allocation by admin.
+		- User can add new miners to the system, if required to
+			by the admin.
+		- Users will be able to get detailed stats for their 
+			miners.
+		- Pulls stats to a CSV.
+		
+This project is not a pool hopper, although it could be extended to be
+one. The default code does not provide this functionality.

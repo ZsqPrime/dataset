@@ -1,0 +1,28 @@
+Frequently used important config files for personal usage..
+
+Free to use the files under the GPL v3.. 
+
+Licence  : `GPL V3`
+file     : `COPYING`
+
+HELP:
+go to homedir directory:
+bash$ TARGET_DIR=~/; for i in `pwd`/.[^.]*; do ln -s $i $TARGET_DIR; echo "$i --->done";echo;  done; rm $TARGET_DIR/.git; ls -la $TARGET_DIR
+
+
+
+
+Project Description:
+frequently used config files
+
+README:
+Frequently used important config files for personal usage..
+
+Free to use the files under the GPL v3.. 
+
+Licence  : `GPL V3`
+file     : `COPYING`
+
+HELP:
+go to homedir directory:
+bash$ TARGET_DIR=~/; for i in `pwd`/.[^.]*; do ln -s $i $TARGET_DIR; echo "$i --->done";echo;  done; rm $TARGET_DIR/.git; ls -la $TARGET_DIR

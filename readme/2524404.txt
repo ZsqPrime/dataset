@@ -1,0 +1,30 @@
+Project Description:
+C project: a procSI emulator
+
+README:
+ProcSI Emul is a simple ASM emulator wirtten in C and desgined with Ncurses.
+It can work on any file on your computer with the .asm extension.
+
+REQUIREMENT
+	gcc, make, cmake, ncurses
+
+COMPILATION
+	to compile and link just do:
+
+		cmake . && make
+
+EXECUTION
+	to run do:
+
+		./ProcSI
+
+	You can file some examples in the TEST asm folder
+	
+DOCUMENTATION
+	open DOC/html/index.html with your favorite web browser
+
+KNOWN BUG
+	We have corrected all the bugs we found, however there are still probably
+
+OTHER
+	You can find the latest version of the projet on https://github.com/yoda1490/procsi_emul

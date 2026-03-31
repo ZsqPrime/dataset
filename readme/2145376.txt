@@ -1,0 +1,211 @@
+=head1 Mootales version 0.8 (beta release)  
+
+=head2 about  
+
+Mootales is a reverse-engineered L<VuTales|http://vutales.com>, with a couple of changes. It is a site in which people can write blogs and share with others. People can like, comment on and share blogs. The site features a frontpage, in which the most liked blogs are shown, as well as recent ones and other stuff, including official announcements. It also has a forum, private messages and a fragment system. Admin and moderator control panels make it easier to regulate the content that is published, check the statistics of the site, ban users, etc .
+
+=head2 installation  
+
+create database, execute commands in mootales.sql.  
+
+edit .htaccess  
+edit application/bootstrap.php line 83, with trailing /  
+edit modules/database/config/database.php lines 21-24  
+
+=head2 TODO list  
+
+=begin html
+
+<b>legend:</b> <br/>
+[+] = done <br/>
+[-] = halfway-done  <br/>
+[ ] = todo  <br/>
+
+=end html
+
+=head4 SQL
+
+=begin html
+
+[+] user table  <br/>
+[+] blogs table  <br/>
+[+] votes table  <br/>
+[+] blog_comments table  <br/>
+[+] fragments table  <br/>
+[+] forum_categories table  <br/>
+[+] forum_threads table  <br/>
+[+] forum_comments table  <br/>
+[+] pings table  <br/>
+[+] mail table  <br/>
+[ ] friends table  <br/>
+
+=end html
+  
+=head4 OTHER  
+
+=begin html
+
+[+] register  <br/>
+[+] login  <br/>
+[+] logout  <br/>
+[+] create a blog <br/> 
+[+] comment on a blog <br/> 
+[+] like/unlike a blog  <br/>
+[+] create fragments  <br/>
+[+] create thread  <br/>
+[+] reply to a thread  <br/>
+[+] view blog, thread, fragment, etc  <br/>
+[+] bbcode (need to write a better engine though :S)  <br/>
+[+] frontpage  <br/>
+[+] edit blogs/threads  <br/>
+[+] delete blogs/threads/fragments  <br/>
+[+] send mail  <br/>
+[+] read mail  <br/>
+[+] dashboard (optional: tell when someone quotes)<br/>
+[+] textarea buttons  <br/>
+[+] user profiles (need to add friends though) <br/>
+[+] update user stats all the time (should filter by IP)  <br/>
+[-] manage blogs (mark as draft, rename, edit, delete)  <br/>
+[-] admin cp  <br/>
+-] quote functionality  (<u><b>need to fix</b></u> quote within a quote)<br/>
+[ ] edit comments, delete 'em  <br/>
+[
+[ ] picture blogs  <br/>
+[ ] mail functions (delete, mark as read/unread)  <br/>
+[ ] friendship  <br/>
+[ ] admin cms  <br/>
+[ ] block user  <br/>
+[ ] help page  <br/>
+[ ] contact/report bug page  <br/>
+
+=end html
+
+=head4 code-specific list
+
+=begin html
+
+[+] use array_merge instead of multiple foreach<br/>
+[+] make blog/thread does not exist error<br/>
+[+] do not display comment form if user ain't logged in<br/>
+[+] proper unicode support<br/>
+[+] pagination<br/>
+[-] prevent code repetition<br/>
+[ ] do not submit comments full of spaces (regex?)<br/>
+[ ] add info of user in views/blog.php and views/thread.php<br/>
+[ ] css tidy-up<br/>
+[ ] general code tidy-up<br/>
+[+] use table instead of... whatever that is on views/forum_category<br/>
+[+] beautify views (especially forum_category and forum_categories)<br/>
+[+] when deleting something, delete all other data that depends on it (e.g. comments and likes when deleting a blog)<br/>
+[ ] take advantage of cascading filesystem<br/>
+[-] jquery, animations, etc<br/>
+
+=end html
+
+Project Description:
+A CMS featuring a forum, blog and fragments built with Kohana framework.
+
+README:
+=head1 Mootales version 0.8 (beta release)  
+
+=head2 about  
+
+Mootales is a reverse-engineered L<VuTales|http://vutales.com>, with a couple of changes. It is a site in which people can write blogs and share with others. People can like, comment on and share blogs. The site features a frontpage, in which the most liked blogs are shown, as well as recent ones and other stuff, including official announcements. It also has a forum, private messages and a fragment system. Admin and moderator control panels make it easier to regulate the content that is published, check the statistics of the site, ban users, etc .
+
+=head2 installation  
+
+create database, execute commands in mootales.sql.  
+
+edit .htaccess  
+edit application/bootstrap.php line 83, with trailing /  
+edit modules/database/config/database.php lines 21-24  
+
+=head2 TODO list  
+
+=begin html
+
+<b>legend:</b> <br/>
+[+] = done <br/>
+[-] = halfway-done  <br/>
+[ ] = todo  <br/>
+
+=end html
+
+=head4 SQL
+
+=begin html
+
+[+] user table  <br/>
+[+] blogs table  <br/>
+[+] votes table  <br/>
+[+] blog_comments table  <br/>
+[+] fragments table  <br/>
+[+] forum_categories table  <br/>
+[+] forum_threads table  <br/>
+[+] forum_comments table  <br/>
+[+] pings table  <br/>
+[+] mail table  <br/>
+[ ] friends table  <br/>
+
+=end html
+  
+=head4 OTHER  
+
+=begin html
+
+[+] register  <br/>
+[+] login  <br/>
+[+] logout  <br/>
+[+] create a blog <br/> 
+[+] comment on a blog <br/> 
+[+] like/unlike a blog  <br/>
+[+] create fragments  <br/>
+[+] create thread  <br/>
+[+] reply to a thread  <br/>
+[+] view blog, thread, fragment, etc  <br/>
+[+] bbcode (need to write a better engine though :S)  <br/>
+[+] frontpage  <br/>
+[+] edit blogs/threads  <br/>
+[+] delete blogs/threads/fragments  <br/>
+[+] send mail  <br/>
+[+] read mail  <br/>
+[+] dashboard (optional: tell when someone quotes)<br/>
+[+] textarea buttons  <br/>
+[+] user profiles (need to add friends though) <br/>
+[+] update user stats all the time (should filter by IP)  <br/>
+[-] manage blogs (mark as draft, rename, edit, delete)  <br/>
+[-] admin cp  <br/>
+-] quote functionality  (<u><b>need to fix</b></u> quote within a quote)<br/>
+[ ] edit comments, delete 'em  <br/>
+[
+[ ] picture blogs  <br/>
+[ ] mail functions (delete, mark as read/unread)  <br/>
+[ ] friendship  <br/>
+[ ] admin cms  <br/>
+[ ] block user  <br/>
+[ ] help page  <br/>
+[ ] contact/report bug page  <br/>
+
+=end html
+
+=head4 code-specific list
+
+=begin html
+
+[+] use array_merge instead of multiple foreach<br/>
+[+] make blog/thread does not exist error<br/>
+[+] do not display comment form if user ain't logged in<br/>
+[+] proper unicode support<br/>
+[+] pagination<br/>
+[-] prevent code repetition<br/>
+[ ] do not submit comments full of spaces (regex?)<br/>
+[ ] add info of user in views/blog.php and views/thread.php<br/>
+[ ] css tidy-up<br/>
+[ ] general code tidy-up<br/>
+[+] use table instead of... whatever that is on views/forum_category<br/>
+[+] beautify views (especially forum_category and forum_categories)<br/>
+[+] when deleting something, delete all other data that depends on it (e.g. comments and likes when deleting a blog)<br/>
+[ ] take advantage of cascading filesystem<br/>
+[-] jquery, animations, etc<br/>
+
+=end html

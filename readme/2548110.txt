@@ -1,0 +1,5 @@
+Project Description:
+This is the Hartl application continued from Chapter 3 
+
+README:
+#This is the tenth(ish) attempt at pushing the Hartl App to git.

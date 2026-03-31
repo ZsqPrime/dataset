@@ -1,0 +1,5 @@
+Project Description:
+Educational project to study how to write lexers, parsers, conpilers etc.
+
+README:
+Educational application to learn how to write lexers, parsers, compilers, etc.

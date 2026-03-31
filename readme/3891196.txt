@@ -1,0 +1,4 @@
+Project Description:
+Designing and building a management sim thingie. 
+
+README:

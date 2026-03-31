@@ -1,0 +1,40 @@
+Project Description:
+a forum for creatives
+
+README:
+Decagon
+"but you've probaby never heard of it"
+
+Decagon is a forum for creatives.
+
+Beverage: Dr. Pepper Cherry
+
+Milestones
+
+31 January 2012
+5:21 pm EST
+A primitive version of Decagon is alive.
+
+7:51 pm EST
+Looks prettier now.
+
+8:37 pm EST
+rudimentary permalinking
+
+1 February 2012
+10:39 am EST
+full thread reply functionality
+
+11:16 pm EST
+there are separate boards now
+
+11:26 pm EST
+navbar!
+
+2 February 2012
+8:54 pm EST
+successfully deployed to Heroku
+it was the procfile, because I was deploying to cedar
+
+11:20 pm EST
+IT WORKS LOCALLY NOW, PRAISE ZOMBIE JESUS

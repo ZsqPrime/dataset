@@ -1,0 +1,5 @@
+Project Description:
+Simulate Trees
+
+README:
+TreeSim is a computational approach to answering the 2012 COMAP MCM problem A: The Leaves of a Tree (http://www.comap.com/undergraduate/contests/mcm/contests/2012/problems/).

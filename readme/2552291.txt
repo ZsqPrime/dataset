@@ -1,0 +1,9 @@
+Project Description:
+Geometry Visualization Library
+
+README:
+Qt + OpenGL library for geometry primitives visualization.
+
+Dependencies: Qt, Boost, "gcc --version >= 4.6".
+
+To build: "qmake && make".

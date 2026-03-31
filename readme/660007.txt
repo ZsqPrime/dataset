@@ -1,0 +1,6 @@
+
+
+Project Description:
+An authentication library for the Lift web framework.
+
+README:

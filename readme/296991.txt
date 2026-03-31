@@ -1,0 +1,22 @@
+ofaddinbox.vim
+
+カーソル行の文字列をOmniFocusのInboxへ送るvimスクリプトです。
+
+ソースコードのコメントや会議のメモなどから取り急ぎOmniFocusのInboxへ送ることを想定しています。
+そのため、ProjectやContextは設定されません。
+
+
+なにかありましたら以下の連絡先までお願いします。
+
+メール  fifnel@gmail.com
+twitter @fifnel
+
+
+キーマップは以下の通りです。
+
+,o  現在行をInboxに登録する
+
+複数行選択してから
+,o  1行1タスクでInboxに登録する
+,n  1行目をタスク、2行目以降はそのタスクのノートとして登録する
+

@@ -1,0 +1,7 @@
+Project Description:
+-- 
+
+README:
+tp3 est le client
+JBossEjb3 est le serveur
+JBossEjb3_client est le tutoriel

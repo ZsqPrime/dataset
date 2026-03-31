@@ -1,0 +1,5 @@
+Description:
+Android клиент для Лепры by Roman Abdulmanov
+
+README:
+README not available

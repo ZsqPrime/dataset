@@ -1,0 +1,12 @@
+Handles a WATCH list
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Receive notifications when friends log on/off
+
+README:
+Handles a WATCH list
+
+Package detailed description here (found in README)

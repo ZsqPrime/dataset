@@ -1,0 +1,8 @@
+Project Description:
+Nagios NRPE Tools
+
+README:
+# Ziel diese Projekt sind nrpe Plugins
+
+* Testen von Anwendungen
+* Testen der Infrastruktur

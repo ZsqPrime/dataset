@@ -1,0 +1,142 @@
+Project Description:
+
+
+README:
+Benchmarks:
+
+
+To run:
+
+   racket run-benchmarks.rkt
+
+On an initial run, the program may detect that the benchmarks are being run
+on a new machine.  If so, it'll prompt for a name to give this configuration.
+
+Measurements will be stored in data/measurements.
+
+
+
+
+======================================================================
+
+
+
+
+Benchmark design document
+
+
+Purpose: run programs under particular platforms, measuring runtime
+and making sure the output is correct.
+
+----------------------------------------------------------------------
+
+I need a few definitions.
+
+
+
+A platform is:
+
+   * old moby
+
+   * current js-vm
+
+   * original sicp compiler
+
+   * my revised sicp compiler (using the Racket machine structures)
+       - both the simulator and the javascript evaluation
+
+   * racket from the command line
+
+
+We also need to take into account the effect of the machine that
+we're running on.  Let's call this a _host_.
+
+
+A _host_ is a string that describes the machine we're on.
+e.g. "Intel(R) Core(TM)2 Quad CPU Q6600 @ 2.40GHz".  get-host-info.rkt
+will grab this for Linux systems.
+
+
+
+An _output_ is the textual content captured from standard output and
+standard error.
+
+
+A measurement has:
+
+   A date when the measurement was taken.
+   A host machine
+   A platform
+   A program
+   A time-taken in milliseconds
+   An output
+
+
+
+A program suite is a directory of programs.  That directory should
+include source code, named "program0", "program1", ..., "programN".
+The expected output should be in a file called "expected*".
+
+
+######################################################################
+
+Sample directory structure:
+
+    suite1/
+    suite1/program0.rkt
+    suite1/program1.rkt
+    suite1/expected0
+    suite1/expected1
+
+with the following contents:
+
+
+    program0
+    --------
+    #lang racket
+    (define (sum n)
+      (if (= n 0)
+          0
+          (+ n (sum (sub1 n)))))
+    (display (sum 1000))
+
+
+    program1
+    --------
+    #lang racket
+    (define (sum n)
+      (if (= n 0)
+          0
+          (+ n (sum (sub1 n)))))
+    (display (sum 10000))
+
+
+    expected0
+    ---------
+    500500
+
+
+    expected1
+    ---------
+    50005000
+
+######################################################################
+
+Each program may have a "...-desugared.sch" version.  If that exists,
+then a platform may use that.  It's expected that such a file will be
+in a simplified Scheme sublanguage to make it easy for adapting to
+different platforms.
+
+
+
+A platform should be able to _run_ a program.  A program may need to
+adapt a program to run under it.  A platform, then provides the
+following:
+
+   run: [suite-directory path] [module-name symbol] -> measurement
+
+
+
+The reason why I want to pass in the suite directory is because the
+suite may include files specific to the platform for doing the
+adaptation.

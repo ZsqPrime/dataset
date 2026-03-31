@@ -1,0 +1,8 @@
+A repository for Kendo examples using ASP.NET Web technologies
+
+
+Project Description:
+None
+
+README:
+A repository for Kendo examples using ASP.NET Web technologies

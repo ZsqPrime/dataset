@@ -1,0 +1,5 @@
+Project Description:
+Socket IO Sandbox written in node.js and jQuery.
+
+README:
+# A Socket IO and Box2D experiment

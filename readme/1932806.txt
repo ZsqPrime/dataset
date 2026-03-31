@@ -1,0 +1,8 @@
+Project Description:
+The Symfony Event Dispatcher Component ported to JS
+
+README:
+Event Dispatcher
+=========
+
+The Symfony Event Dispatcher Component ported to JS

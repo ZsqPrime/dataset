@@ -1,0 +1,6 @@
+
+
+Project Description:
+Project to post sensor data from an arduino module to nodejs server then broadcast data via websockets
+
+README:

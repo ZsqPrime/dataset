@@ -1,0 +1,53 @@
+Project Description:
+Ruby org-mode parser
+
+README:
+# Org-Mode file parser and writer
+
+One of the killer features of emacs was org-mode. A real eye
+opener what text-based to-do lists can do for you.
+
+This ruby-gem carries within all you need to work efficiently with a set of
+org-mode files.
+
+## Goal
+
+Making lightweight/fast ruby org-mode executable to parse/reformat/analyse and
+report on my org-files or the one in my buffer. And following the Unix philosopy
+making a seperate process of it.
+
+# Usage
+
+A shell script is carried along.
+
+    org-mode <org-file>
+
+## Agenda
+
+Displays scheduled items. Parses all the files configured in `.org-moderc`
+
+## Update
+
+    org-mode update <org-file>
+
+parses and updates an org file. It does the following:
+
+* archive done items
+* reformats/re-indents the complete file
+* assigns a sha-1 of the title-content for further updates and
+  quick reference
+
+## What I want
+
+* flexible parsers
+* flexible writers
+* database storage
+* org-mode website upload
+* well tested module
+* integration with vim
+* flexible reporting
+* remember mode
+
+## Code
+
+See: `lib/**/*.rb` for source and `spec/**/*.rb` for specs. Binaries not available yet.

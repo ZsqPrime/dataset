@@ -1,0 +1,10 @@
+Author: Rahul P
+Description: Codes written as part of my OS LAB course
+
+
+Project Description:
+Shell Scripts and System Call codes
+
+README:
+Author: Rahul P
+Description: Codes written as part of my OS LAB course

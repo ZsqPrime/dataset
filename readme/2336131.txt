@@ -1,0 +1,9 @@
+This is the project for my DIGITAL POV CLOCK on a 2.5" hard disk platter. Contains Arduino code and EAGLE files
+See Wiki for additional info
+
+Project Description:
+Arduino based "digital" POV clock based on hard disk drive
+
+README:
+This is the project for my DIGITAL POV CLOCK on a 2.5" hard disk platter. Contains Arduino code and EAGLE files
+See Wiki for additional info

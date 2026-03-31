@@ -1,0 +1,26 @@
+Project Description:
+Workspace api for managing workspaces and collages, based on experiences of lizard-map
+
+README:
+lizard-workspace
+==========================================
+
+Introduction
+
+- Layers describe WMS and OSM layers.
+
+- Layers can be ordened in LayerFolder.
+
+- Workspaces store your own stack of layers.
+
+- Layers can be filled using sync_layers_with_wmsserver.
+
+- 'Apps' are defined in App, display them in AppScreens. An app can
+  have different action types.
+
+- Lizard-security enabled.
+
+- Provide API for LayerFolder (called AppLayerTreeView)
+
+- Lizard-history enabled: add lizard_workspace / layerworkspace and
+  lizard_workspace / layercollage to lizard_history.monitoredmodel.

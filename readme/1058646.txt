@@ -1,0 +1,12 @@
+# jetty-nosql-memcached-xstream
+
+Repository has been merged into [jetty-nosql-memcached](https://github.com/yyuu/jetty-nosql-memcached).
+
+
+Project Description:
+memcached session manager for jetty (based on jetty-nosql); using xstream serialization
+
+README:
+# jetty-nosql-memcached-xstream
+
+Repository has been merged into [jetty-nosql-memcached](https://github.com/yyuu/jetty-nosql-memcached).

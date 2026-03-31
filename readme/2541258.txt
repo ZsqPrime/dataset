@@ -1,0 +1,7 @@
+Project Description:
+A base template to use as base for a typical Rails projects 
+
+README:
+# Rails-base
+
+Template tree to start new Rails 3 projects.

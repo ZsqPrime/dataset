@@ -1,0 +1,5 @@
+Project Description:
+Computing Astronomical Dendrograms
+
+README:
+**PLEASE NOTE:** This repository contains an old version of astrodendro. Please visit [http://www.dendrograms.org](http://www.dendrograms.org) and [https://github.com/dendrograms/astrodendro](https://github.com/dendrograms/astrodendro) for the latest version.

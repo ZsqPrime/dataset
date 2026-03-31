@@ -1,0 +1,124 @@
+SimpleFormChecker is a plugin for jquery that make the validation of forms easier.
+See full description at: http://alexju.be/archive/sfc/
+
+SimpleFormChecker is well documented script so you don't need much information to make it work.
+You can find all the information on various validators in the source, just check them there ;)
+
+
++-|CHANGELOG|--------------+----------------------------------------------------------------+
+|           |              |                                                                |
+|  Version  |  Date        |  Description                                                   |
+|           |              |                                                                |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.0    |  2011-11-08  |  Initial release                                               |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.1    |  2011-11-14  |  The checks are now objects.                                   |
+|           |              |  You can easely add more if you want.                          |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.2    |  2011-11-16  |  Added length validator.                                       |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.3    |  2011-12-02  |  Now you can check optional fields with regex on match.        |
+|           |              |  No error will be given if it's empty.                         |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.4    |  2011-12-15  |  Added a new check and finalized length validation.            |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.5    |  2011-12-16  |  New check and optimizations.                                  |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.6    |  2011-12-29  |  Global error text for the form added.                         |
+|           |  2012-01-08  |  Added to GIT                                                  |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.7    |  2012-01-09  |  Added more consistency across the code                        |
+|           |              |  Added ability to define error-message-element yourself        |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.8    |  2012-01-12  |  After some days of work, I have finally rewritten the class.  |
+|           |              |  Multiple forms on the page now can have different settings.   |
+|           |              |  Some settings were deleted as showAsterix or showError, now   |
+|           |              |  you can just pass an empty string and it won't show anything. |
+|           |  2012-01-14  |  Fixed some text replacements.                                 |
++-----------+--------------+----------------------------------------------------------------+
+|  0.1.9    |  2012-09-12  |  Refractored and added few checks and settings                 |
++-----------+--------------+----------------------------------------------------------------+
+
+Project Description:
+SimpleFormChecker is a plugin for jquery that make the validation of forms easier.
+
+README:
+SimpleFormChecker is a plugin for jquery that make the validation of forms easier.
+
+See full description at: http://alexju.be/archive/sfc/
+
+
+
+SimpleFormChecker is well documented script so you don't need much information to make it work.
+
+You can find all the information on various validators in the source, just check them there ;)
+
+
+
+
+
++-|CHANGELOG|--------------+----------------------------------------------------------------+
+
+|           |              |                                                                |
+
+|  Version  |  Date        |  Description                                                   |
+
+|           |              |                                                                |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.0    |  2011-11-08  |  Initial release                                               |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.1    |  2011-11-14  |  The checks are now objects.                                   |
+
+|           |              |  You can easely add more if you want.                          |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.2    |  2011-11-16  |  Added length validator.                                       |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.3    |  2011-12-02  |  Now you can check optional fields with regex on match.        |
+
+|           |              |  No error will be given if it's empty.                         |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.4    |  2011-12-15  |  Added a new check and finalized length validation.            |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.5    |  2011-12-16  |  New check and optimizations.                                  |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.6    |  2011-12-29  |  Global error text for the form added.                         |
+
+|           |  2012-01-08  |  Added to GIT                                                  |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.7    |  2012-01-09  |  Added more consistency across the code                        |
+
+|           |              |  Added ability to define error-message-element yourself        |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.8    |  2012-01-12  |  After some days of work, I have finally rewritten the class.  |
+
+|           |              |  Multiple forms on the page now can have different settings.   |
+
+|           |              |  Some settings were deleted as showAsterix or showError, now   |
+
+|           |              |  you can just pass an empty string and it won't show anything. |
+
+|           |  2012-01-14  |  Fixed some text replacements.                                 |
+
++-----------+--------------+----------------------------------------------------------------+
+
+|  0.1.9    |  2012-09-12  |  Refractored and added few checks and settings                 |
+
++-----------+--------------+----------------------------------------------------------------+

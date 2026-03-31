@@ -1,0 +1,8 @@
+`make install` to build and install the theme. `scss` required.
+
+
+Project Description:
+Adium message style
+
+README:
+`make install` to build and install the theme. `scss` required.

@@ -1,0 +1,14 @@
+Project Description:
+Boats, in time.
+
+README:
+Now called Paradocks.
+
+Needs coffeescript and browserify.
+
+To compile client:
+> browserify src/client.coffee -o pokki/js/timeboats.js 
+
+To run: open pokki/popup.html
+
+To package for Pokki: zip pokki/*

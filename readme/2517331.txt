@@ -1,0 +1,7 @@
+These are some haskell exercises
+
+Project Description:
+katas in haskell
+
+README:
+These are some haskell exercises

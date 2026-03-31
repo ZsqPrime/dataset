@@ -1,0 +1,80 @@
+= caplock
+
+Adds a lock file to Capistrano deployments.
+
+== Installation
+
+   $ gem install caplock
+   
+Include in your Capfile
+    require 'rubygems'
+    require 'caplock'
+    
+== Usage
+
+Define the name of your lock file in your deploy.rb
+   set :lockfile, "my.lock" # defaults to "cap.lock"
+
+The `lock:check` task is executed automatically before `deploy:update_code` (i.e. before deploy).
+If you have overridden the default deploy task, you may need to add the task with:
+   before "deploy", "lock:check"
+
+If the lockfile becomes stale (because you interrupted the deployment with CTRL-C for example)
+   cap lock:release  # or "cap production lock:release" with multistage
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2012 Dru Ibarra. See LICENSE for details.
+
+
+Project Description:
+Adds a lock file to Capistrano deployments to prevent concurrent deployments
+
+README:
+= caplock
+
+Adds a lock file to Capistrano deployments.
+
+== Installation
+
+   $ gem install caplock
+   
+Include in your Capfile
+    require 'rubygems'
+    require 'caplock'
+    
+== Usage
+
+Define the name of your lock file in your deploy.rb
+   set :lockfile, "my.lock" # defaults to "cap.lock"
+
+The `lock:check` task is executed automatically before `deploy:update_code` (i.e. before deploy).
+If you have overridden the default deploy task, you may need to add the task with:
+   before "deploy", "lock:check"
+
+If the lockfile becomes stale (because you interrupted the deployment with CTRL-C for example)
+   cap lock:release  # or "cap production lock:release" with multistage
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2012 Dru Ibarra. See LICENSE for details.

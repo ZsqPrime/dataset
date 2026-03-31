@@ -1,0 +1,21 @@
+Project Description:
+Geneious plugin for batch primer design
+
+README:
+##############################################################################
+### NovoPrime v. 0.4 (alpha)                                               ###
+### Copyright 2012 Geraldine A. Van der Auwera                             ###
+##############################################################################
+
+This project consists of a Java plugin for the desktop application Geneious
+(http://www.geneious.com/). The NovoPrime plugin allows the automation of
+custom primer design for genetic recombination-based engineering.
+
+STATUS: The plugin is functional from start to finish. Further improvements may
+be introduced following user testing.
+
+BUGS: At the end, two "file save" dialogs pop up prompting the user to select
+an output file instead of just the one. This is caused by a known bug in the
+Geneious API FileUtilities.
+
+NOTE: This plugin requires 1.6 JRE or above.

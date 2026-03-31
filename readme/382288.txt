@@ -1,0 +1,22 @@
+# FederalRegister Web
+
+This project contains the code the displays the front-end of FederalRegister.gov.
+All data is consumed from the FederalRegister API.
+
+### Attributions
+
+- Country government by Presenttas from the Noun Project (icon used on Reader Aids pages)
+
+
+Project Description:
+
+
+README:
+# FederalRegister Web
+
+This project contains the code the displays the front-end of FederalRegister.gov.
+All data is consumed from the FederalRegister API.
+
+### Attributions
+
+- Country government by Presenttas from the Noun Project (icon used on Reader Aids pages)

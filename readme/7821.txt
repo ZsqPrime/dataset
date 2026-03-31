@@ -1,0 +1,5 @@
+Project Description:
+Keeping this here for compat reason. But the project now has its own organisation :)
+
+README:
+The pelican repository moved to http://github.com/getpelican/pelican/

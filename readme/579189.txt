@@ -1,0 +1,46 @@
+This is recording and livecasting software with ability to communicate with Uniden scanners.
+
+See sample record.conf file to understand how configuration parameters work.
+
+To install software:
+
+	git clone git://github.com/ramelito/scanner-recorder.git
+	cd scanner-recorder
+	sudo ./recorder.sh --install --with-udvrls
+
+To find out usb ports:
+
+	aplay -l
+	ls -l /dev/scanners/
+
+Change parameters in recorder.sh script to match your needs
+
+hardware="omap3beagle" <<<<< builtin soundcard chipset (issue aplay -l to detect)
+do_clean="0" <<<<<< auto cleaning old records and not let free space to go to zero bytes
+format="wav" <<<<<< audio format (for arm its better to use wav)
+
+
+Project Description:
+Scanner recording scripts
+
+README:
+This is recording and livecasting software with ability to communicate with Uniden scanners.
+
+See sample record.conf file to understand how configuration parameters work.
+
+To install software:
+
+	git clone git://github.com/ramelito/scanner-recorder.git
+	cd scanner-recorder
+	sudo ./recorder.sh --install --with-udvrls
+
+To find out usb ports:
+
+	aplay -l
+	ls -l /dev/scanners/
+
+Change parameters in recorder.sh script to match your needs
+
+hardware="omap3beagle" <<<<< builtin soundcard chipset (issue aplay -l to detect)
+do_clean="0" <<<<<< auto cleaning old records and not let free space to go to zero bytes
+format="wav" <<<<<< audio format (for arm its better to use wav)

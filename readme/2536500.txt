@@ -1,0 +1,7 @@
+Project Description:
+Stop scripts, other content from social networks and search engines from tracking your browsing and search history
+
+README:
+Google Chrome Extension
+
+Stop scripts, other content from social networks and search engines from tracking your browsing and search history.

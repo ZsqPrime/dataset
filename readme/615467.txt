@@ -1,0 +1,8 @@
+I am not the author of any of the tools this script downloads. These are just a few of the tools that I commonly download and I wanted to have a central place to store this script.
+
+
+Project Description:
+A script to download the latest (possibly dev) versions of the security tools I use
+
+README:
+I am not the author of any of the tools this script downloads. These are just a few of the tools that I commonly download and I wanted to have a central place to store this script.

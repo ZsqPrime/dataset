@@ -1,0 +1,8 @@
+This is the Highstock extension for ExtJs 4
+
+
+Project Description:
+Highstock extension for ExtJs 4
+
+README:
+This is the Highstock extension for ExtJs 4

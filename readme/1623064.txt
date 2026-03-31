@@ -1,0 +1,8 @@
+![](https://dl.dropbox.com/u/10389667/AKOSIX_RSOD.png)
+
+
+Project Description:
+A hobby x86 operating system
+
+README:
+![](https://dl.dropbox.com/u/10389667/AKOSIX_RSOD.png)

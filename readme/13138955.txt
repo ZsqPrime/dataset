@@ -1,0 +1,5 @@
+Project Description:
+Code we wrote at Friendzy to do fast geospatial lookups on App Engine.
+
+README:
+see RunFileProximityQueryTests.py for usage

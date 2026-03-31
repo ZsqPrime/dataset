@@ -1,0 +1,86 @@
+Electrostatic Plasma Interaction Code (EPIC)
+
+To build:
+autoreconf -i
+./configure
+make
+
+If environmental variable CXX is set, need to do './configure CXX=' for
+mpi wrapper to be detected correctly.
+
+To force serial build do './configure --with-mpi=no'.
+
+At present, need to set library path to run, e.g.:
+export LD_LIBRARY_PATH+=:/home/chaako/epic/fmdb/fmdbSerial/lib:/home/chaako/epic/lib/vtk-5.10/:/home/chaako/epic/lib:
+
+The fmdb includes use absolute paths, so if the epic dir is moved fmdb
+should be rebuilt.
+
+
+Mesh notes:
+
+Create model in Blender and export as stl from edit mode.
+
+Import stl in engrid, flip boundaries such that green faces away from
+interior, select surface by hovering and pressing p, set boundary
+codes of the unperturbed plasma to 5 and the collecting surfaces to 4
+(to display again after setting press v), edit boundary conditions to
+create green volume, create volume mesh, and save as egc file
+(produces .vtu file as well).
+
+Load .vtu file from enGrid in VisIt, make mesh plot, export (with
+variable 'cell_code' which labels the surfaces) as MOAB VTK file
+(straight VisIt VTK export contains additional lines which crash the
+FMDB VTK reader), and change the line 'SCALARS cell_code double 1' to
+'SCALARS cell_code int' since it should be an integer tag (and the 1
+throws off the vtk reader).
+
+If a field name in [output].sms matches all the first characters of
+another field name it appears that the VisIt plugin is unable to
+distinguish them (i.e. potential and potential01 are not distinct).
+
+
+Project Description:
+Electrostatic Plasma Interaction Code
+
+README:
+Electrostatic Plasma Interaction Code (EPIC)
+
+To build:
+autoreconf -i
+./configure
+make
+
+If environmental variable CXX is set, need to do './configure CXX=' for
+mpi wrapper to be detected correctly.
+
+To force serial build do './configure --with-mpi=no'.
+
+At present, need to set library path to run, e.g.:
+export LD_LIBRARY_PATH+=:/home/chaako/epic/fmdb/fmdbSerial/lib:/home/chaako/epic/lib/vtk-5.10/:/home/chaako/epic/lib:
+
+The fmdb includes use absolute paths, so if the epic dir is moved fmdb
+should be rebuilt.
+
+
+Mesh notes:
+
+Create model in Blender and export as stl from edit mode.
+
+Import stl in engrid, flip boundaries such that green faces away from
+interior, select surface by hovering and pressing p, set boundary
+codes of the unperturbed plasma to 5 and the collecting surfaces to 4
+(to display again after setting press v), edit boundary conditions to
+create green volume, create volume mesh, and save as egc file
+(produces .vtu file as well).
+
+Load .vtu file from enGrid in VisIt, make mesh plot, export (with
+variable 'cell_code' which labels the surfaces) as MOAB VTK file
+(straight VisIt VTK export contains additional lines which crash the
+FMDB VTK reader), and change the line 'SCALARS cell_code double 1' to
+'SCALARS cell_code int' since it should be an integer tag (and the 1
+throws off the vtk reader).
+
+If a field name in [output].sms matches all the first characters of
+another field name it appears that the VisIt plugin is unable to
+distinguish them (i.e. potential and potential01 are not distinct).

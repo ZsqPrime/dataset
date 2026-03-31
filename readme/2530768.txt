@@ -1,0 +1,8 @@
+Project Description:
+
+
+README:
+#+begin_src 
+svn co http://tesla.parallel.ru/svn/magma
+svn co http://tesla.parallel.ru/svn/lapack
+#+end_src

@@ -1,0 +1,8 @@
+Copyright © 2011 Sipieter Clément <csipieter@gmail.com>
+
+
+Project Description:
+Natural Language Processing
+
+README:
+Copyright © 2011 Sipieter Clément <csipieter@gmail.com>

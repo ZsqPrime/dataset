@@ -1,0 +1,53 @@
+Adventure Quest
+===============
+
+Introduction
+------------
+
+This is a silly roguelike game I worked on over a Christmas vacation.
+Your mission is to make it to the bottom of the dungeon and kill the
+evil dragon that has been terrorizing your village.
+
+Controls
+--------
+hjkl - move (vi controls)
+HJKL - move until interesting
+a    - attack
+b    - buy (when at a shop)
+i    - view/use inventory
+d    - drop
+,    - pick up
+>    - go down stairs
+<    - go up stairs
+
+Z    - exit game
+
+
+
+Project Description:
+A silly roguelike game
+
+README:
+Adventure Quest
+===============
+
+Introduction
+------------
+
+This is a silly roguelike game I worked on over a Christmas vacation.
+Your mission is to make it to the bottom of the dungeon and kill the
+evil dragon that has been terrorizing your village.
+
+Controls
+--------
+hjkl - move (vi controls)
+HJKL - move until interesting
+a    - attack
+b    - buy (when at a shop)
+i    - view/use inventory
+d    - drop
+,    - pick up
+>    - go down stairs
+<    - go up stairs
+
+Z    - exit game

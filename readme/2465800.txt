@@ -1,0 +1,6 @@
+
+
+Project Description:
+An implementation of a textarea with atomic elements (like Mail's email address fields)
+
+README:

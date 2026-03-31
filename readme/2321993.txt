@@ -1,0 +1,31 @@
+Latex and simulation scripts for the paper:
+
+R. G. McKilliam, B. G. Quinn, and I. V. L. Clarkson. Direction estimation by minimum squared arc length. IEEE Trans. Sig. Process., 60(5):2115-2124, May 2012.
+
+Data from the simulations already exists in this repository.  If you are using bash then
+
+bash build.sh
+
+will build the pdf using this data.  The pdf is called papersm.pdf.  The code/ directory contains the source code.
+
+bash runsim.sh
+
+will run the simulations and regenerate data for the paper.  You need a working java jvm and also Scala 2.10.x or higher installed.  Depending on your machine this might take a while.  Open up the bash script and work backwards to get at the code.
+
+Project Description:
+Latex and simulation scripts for the paper 'Direction estimation by minimum squared arc length'
+
+README:
+Latex and simulation scripts for the paper:
+
+R. G. McKilliam, B. G. Quinn, and I. V. L. Clarkson. Direction estimation by minimum squared arc length. IEEE Trans. Sig. Process., 60(5):2115-2124, May 2012.
+
+Data from the simulations already exists in this repository.  If you are using bash then
+
+bash build.sh
+
+will build the pdf using this data.  The pdf is called papersm.pdf.  The code/ directory contains the source code.
+
+bash runsim.sh
+
+will run the simulations and regenerate data for the paper.  You need a working java jvm and also Scala 2.10.x or higher installed.  Depending on your machine this might take a while.  Open up the bash script and work backwards to get at the code.

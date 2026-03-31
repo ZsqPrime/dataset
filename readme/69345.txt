@@ -1,0 +1,38 @@
+Personal configuration files. (Who'd use someone else's configuration anyway?)
+Assumes installation in ~/conf, with links from e.g. ~/.vimrc to ~/conf/.vimrc .
+
+ - Safe 'rm' command with trash directory.
+ - Shared history between Bash sessions (thanks Stack Overflow!).
+ - Simple bookmarking system for Vim.
+   * Supports 'foo' -> <file>:<pattern> mappings such
+     that ':Go foo' jumps to the first line matching <pattern> in <file>.
+ - Nifty "super globbing" Bash functions that let you type e.g.
+   $ j foo bar baz
+   to cd into foobo/d/bar/abaz, with menu selection if many files match.
+ - Lots of Git helpers.
+ - Helpers for inspecting compiler output and tracing file access.
+ - All Bash functions should handle filenames that contain spaces and/or start
+   with '-' correctly.
+ - Vim-like bindings and a simple, clean index for Mutt.
+
+
+Project Description:
+None
+
+README:
+Personal configuration files. (Who'd use someone else's configuration anyway?)
+Assumes installation in ~/conf, with links from e.g. ~/.vimrc to ~/conf/.vimrc .
+
+ - Safe 'rm' command with trash directory.
+ - Shared history between Bash sessions (thanks Stack Overflow!).
+ - Simple bookmarking system for Vim.
+   * Supports 'foo' -> <file>:<pattern> mappings such
+     that ':Go foo' jumps to the first line matching <pattern> in <file>.
+ - Nifty "super globbing" Bash functions that let you type e.g.
+   $ j foo bar baz
+   to cd into foobo/d/bar/abaz, with menu selection if many files match.
+ - Lots of Git helpers.
+ - Helpers for inspecting compiler output and tracing file access.
+ - All Bash functions should handle filenames that contain spaces and/or start
+   with '-' correctly.
+ - Vim-like bindings and a simple, clean index for Mutt.

@@ -1,0 +1,6 @@
+
+
+Project Description:
+Minimalist framework for python based on RoR. Exaple application.
+
+README:

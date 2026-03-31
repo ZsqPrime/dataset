@@ -1,0 +1,6 @@
+Project Description:
+FRC Team 53 Competition Bot 2012
+
+README:
+(C) 2012 FRC Team 53 "The Alien Cow Abductors"
+For use in the 2012 First Robotics Competition

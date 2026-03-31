@@ -1,0 +1,37 @@
+This project aims to contain some useful libraries and linker/startup scripts for stm32 development.
+(Indeed, possibly any Cortex development, but that is an even bigger goal)
+
+It's not really intended that this whole project, as is, prove useful to anyone, more that pieces of it should be.
+Perhaps one day, the library and startup code could become a standalone project...
+
+This project contains code from ST's Standard Peripheral Library downloads, and was originally the "examples"
+directory from the "stlink" project, https://github.com/texane/stlink
+
+The examples really needed to be split off from that project, and I use this now also as a home for my own
+experiments.  The examples mostly target the STM32 Discovery board series.
+
+License in the original project was BSD 3 clause.  I've changed that to BSD 2 clause.  This seems to be in line with
+the original stated goals of the stlink project, though as the examples are largely built on ST provided code, and the
+startup and linker scripts largely compiled by me, I've gone further.  This is of course up for discussion.
+
+
+
+Project Description:
+(DEPRECATED OUTDATED) stm32 base scripts and examples
+
+README:
+This project aims to contain some useful libraries and linker/startup scripts for stm32 development.
+(Indeed, possibly any Cortex development, but that is an even bigger goal)
+
+It's not really intended that this whole project, as is, prove useful to anyone, more that pieces of it should be.
+Perhaps one day, the library and startup code could become a standalone project...
+
+This project contains code from ST's Standard Peripheral Library downloads, and was originally the "examples"
+directory from the "stlink" project, https://github.com/texane/stlink
+
+The examples really needed to be split off from that project, and I use this now also as a home for my own
+experiments.  The examples mostly target the STM32 Discovery board series.
+
+License in the original project was BSD 3 clause.  I've changed that to BSD 2 clause.  This seems to be in line with
+the original stated goals of the stlink project, though as the examples are largely built on ST provided code, and the
+startup and linker scripts largely compiled by me, I've gone further.  This is of course up for discussion.

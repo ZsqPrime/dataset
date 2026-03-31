@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+h1. Tint Browser Adblock Addon
+
+This project is licensed under the "GPL v3":http://www.gnu.org/licenses/gpl-3.0.en.html	license.

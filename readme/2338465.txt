@@ -1,0 +1,22 @@
+brmlab website frontend
+
+required rubygems:
+  nanoc
+  haml
+
+to compile run:
+  nanoc compile
+
+
+Project Description:
+Website frontend
+
+README:
+brmlab website frontend
+
+required rubygems:
+  nanoc
+  haml
+
+to compile run:
+  nanoc compile

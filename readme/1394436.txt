@@ -1,0 +1,4 @@
+Project Description:
+Procedurally generated album cover test.
+
+README:

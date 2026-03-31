@@ -1,0 +1,30 @@
+Project Description:
+None
+
+README:
+* Biomine TV, the LISP incarnation
+** Prepare a core for faster launch
+   #+BEGIN_EXAMPLE
+sbcl --eval '(progn (push #P"~/path-to-object-system/" asdf:*central-registry*)
+                    (push #P"~/path-to-biomine-tv-lisp/" asdf:*central-registry*)
+                    (ql:quickload "biomine-tv")
+                    (sb-ext:save-lisp-and-die "tv.core" :purify t :compression t))'
+   #+END_EXAMPLE
+** Run
+   #+BEGIN_EXAMPLE
+sbcl --core tv.core --eval '(progn (biomine-tv::main "object-system-host" object-system-port))'
+   #+END_EXAMPLE
+
+   #+BEGIN_EXAMPLE
+sbcl --load ./biomine-tv --eval '(progn (biomine-tv::main "localhost" 7890))'
+   #+END_EXAMPLE
+
+   #+BEGIN_EXAMPLE
+dx86cl --load ./biomine-tv --eval '(progn (biomine-tv::main "localhost" 7890))'
+   #+END_EXAMPLE
+** Required libraries
+   You can run the following code in your REPL (Quicklisp required) to be able
+   to load biomine-tv.lisp.
+   #+BEGIN_EXAMPLE
+(ql:quickload '("bordeaux-threads" "mcclim" "usocket" "babel"))
+   #+END_EXAMPLE

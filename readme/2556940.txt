@@ -1,0 +1,5 @@
+Project Description:
+Parkji Blog
+
+README:
+My personal web development blog

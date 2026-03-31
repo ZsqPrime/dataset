@@ -1,0 +1,40 @@
+Project Description:
+A cross platform which utility written in Go
+
+README:
+Description
+------------
+    gich is a cross platform which tool written in Go
+
+    A which utility takes a list of command names and searches 
+    the system's path for each executable file that would be run had
+    these commands actually been invoked.
+
+Compiling
+---------
+    $ hg clone bitbucket.org/jpoirier/gich
+    $ go build gich.go
+    
+    Then move the gich executable somewhere in you system path.
+
+
+Testing
+-------
+
+
+
+Usage
+-----
+    gich [-a|-s|-h|-help] file ...
+        -a  List all executable instances found rather than just the first one.
+        -s  Output 'Found' if any of the executables were found and 'None' if none were found
+        -h  Print this usage message
+        -help  Print this usage message
+
+Examples
+--------
+    nix:
+        > gich -l ls cat sh
+
+    windows:
+        > gich -l ping calc cmd

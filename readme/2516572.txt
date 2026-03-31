@@ -1,0 +1,11 @@
+// Project 1: OpenMP,
+// Project 2: MPI,
+// Project 3: CUDA programming on Content-Aware Image Resizing (Original Code is missing since my laptop crashed recently.). 
+
+Project Description:
+
+
+README:
+// Project 1: OpenMP,
+// Project 2: MPI,
+// Project 3: CUDA programming on Content-Aware Image Resizing (Original Code is missing since my laptop crashed recently.).

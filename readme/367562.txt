@@ -1,0 +1,6 @@
+
+
+Project Description:
+Userscript for http://heroeswm.ru/ that adds AP, TP, HP, craft and other info to the pl_info page
+
+README:

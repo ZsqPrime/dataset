@@ -1,0 +1,13 @@
+Project Description:
+One of university project for learning Ruby on Rails
+
+README:
+One of many Ruby on Rails projects for learning.
+
+Learned new programming features, for example,
+ - saved images into base64
+ - used facebook API
+ - used heroku cloud
+ - etc.
+ 
+Check the result online: http://newface.heroku.com

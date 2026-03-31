@@ -1,0 +1,18 @@
+KnpRadBundle
+============
+
+## This Bundle is NOT MAINTAINED anymore
+
+Please check out [our new awesome rad-components](http://knplabs.github.io/rad-components-site/)!
+
+
+Project Description:
+Rapid Application Development for Symfony2 [UNMAINTAINED]
+
+README:
+KnpRadBundle
+============
+
+## This Bundle is NOT MAINTAINED anymore
+
+Please check out [our new awesome rad-components](http://knplabs.github.io/rad-components-site/)!

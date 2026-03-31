@@ -1,0 +1,12 @@
+Read the documentation in qemu-doc.html.
+
+Fabrice Bellard.
+
+
+Project Description:
+None
+
+README:
+Read the documentation in qemu-doc.html.
+
+Fabrice Bellard.

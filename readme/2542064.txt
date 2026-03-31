@@ -1,0 +1,7 @@
+Project Description:
+MQ wrapper for Zend_Queue as Symfony 1.x plugin
+
+README:
+MQ wrapper for Zend Queue
+
+It can be used without Symfony

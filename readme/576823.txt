@@ -1,0 +1,15 @@
+# OneFileCMS
+
+This version of OneFileCMS is no longer maintained.
+
+The torch has been passed here: [https://github.com/Self-Evident/OneFileCMS](https://github.com/Self-Evident/OneFileCMS)
+
+Project Description:
+A CMS (err, text editor and file manager) all in one file.
+
+README:
+# OneFileCMS
+
+This version of OneFileCMS is no longer maintained.
+
+The torch has been passed here: [https://github.com/Self-Evident/OneFileCMS](https://github.com/Self-Evident/OneFileCMS)

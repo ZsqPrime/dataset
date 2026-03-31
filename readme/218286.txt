@@ -1,0 +1,8 @@
+toilet is an Ubuntu widget that shows the toilets' availability of Theodo's office.
+
+
+Project Description:
+Ubuntu application to check the toilets' availability of Theodo
+
+README:
+toilet is an Ubuntu widget that shows the toilets' availability of Theodo's office.

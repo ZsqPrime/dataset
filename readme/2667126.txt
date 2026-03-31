@@ -1,0 +1,22 @@
+Project Description:
+Rails app for managing Netflix Queues of multiple profiles in one account
+
+README:
+== Netflix Multi-Profile Queue Manager
+
+Provides missing functionality to Netflix accounts with multiple profiles:
+Lets you move movies between disc queues of different profiles (in the same account)
+
+Uses the following:
+* Netflix REST API (via my netflix gem [http://github.com/dholdren/netflix-ruby])
+* OAuth for access to Netflix
+* Devise
+* {Zurb Foundation}[http://foundation.zurb.com]
+
+This app is deployed at: http://netflixmanager.herokuapp.com
+
+To run yourself, you will need to get a Netflix API developer account
+and then supply the following environment variables:
+* NETFLIX_OAUTH_DEVELOPER_KEY
+* NETFLIX_OAUTH_DEVELOPER_SECRET
+* NETFLIX_OAUTH_APP_NAME

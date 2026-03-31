@@ -1,0 +1,43 @@
+Project Description:
+A quick script to generate latitudes and longitudes from a address column in a CSV and generate a corresponding KML file.
+
+README:
+Setup
+=====
+Install required gems.
+
+bundle install
+
+Usage
+=====
+
+Add column of latitudes and longtitudes for addresses in a spreadsheet and generate a corresponding KML file.
+  Usage: CSVtoKML.rb [options]
+  
+    -a ADDRESS_COLUMN_NAME,          Name of the column containing addresses.
+ Default: Address
+        --address-column-name
+    -u UTL_COLUMN_NAME,              Name of the column containing the link/url.
+ Default: href
+        --link-column-name
+    -b, --base-url BASE_URL          Base URL.
+ Default: href
+    -n NAME_COLUMN_NAME,             Name of the column containing name.
+ Default: 0
+        --name-column-name
+    -d DESCRIPTION_COLUMN_NAME,      Name of the column containing description.
+ Default: description
+        --description_column_name
+    -s SEPARATING_CHARACTER,         Separating character in the files.
+ Default: tab
+        --separating-character
+    -f, --in-file IN_FILE            File to process.
+ Default: Default.tsv
+    -m, --map-name MAP_NAME          Name of the map.
+ Default: Map
+    -e, --engine-name ENGINE_NAME    Name of the geocoding engine eg google, yahoo.
+ Default: nominatim
+    -t TEXT_TO_ADD_TO_ADDRESS,       Text to add to addresses.
+ Default: 
+        --text-to-add
+    -h, --help                       Display help functions.

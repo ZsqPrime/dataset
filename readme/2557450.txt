@@ -1,0 +1,7 @@
+Project Description:
+Agile University Coding Dojo version
+
+README:
+[![Build Status](https://secure.travis-ci.org/gphilipp/mowitnow-tdd.png)](http://travis-ci.org/gphilipp/mowitnow-tdd)
+
+Mowitnow Kata

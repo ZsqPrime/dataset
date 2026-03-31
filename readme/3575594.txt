@@ -1,0 +1,4 @@
+Project Description:
+Widget database for players. Mostly from http://widgets.springrts.de.
+
+README:

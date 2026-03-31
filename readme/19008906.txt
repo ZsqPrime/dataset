@@ -1,0 +1,11 @@
+Project Description:
+CoffeeScript Shell
+
+README:
+Complete shell written in coffeescript.
+
+Installation:
+
+sudo npm install -g coffeesh
+
+It can then be run with coffeesh

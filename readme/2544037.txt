@@ -1,0 +1,26 @@
+Project Description:
+A Chrome Extension for FFRC
+
+README:
+FFRC Kitty Cam
+==============
+
+This is a extension for the webcam of Friends of Felines' Rescue Center, which is a volunteer staffed non-profit, no-kill, cage free feline care facility located in Defiance, Ohio.
+
+## Installation
+
+Please go to its [Chrome Web Store page][webstore].
+
+[webstore]: https://chrome.google.com/webstore/detail/oagmccfmcgcenonjdlcphgpglfjccico?hl=en
+
+## Kitty Overflow
+
+A standalone page [Kitty Overflow][] is part of this extension.
+
+[Kitty Overflow]: http://livibetter.github.com//ffrc-kittycam-ce/kittyoverflow.html
+
+## License
+
+This project is licensed under the MIT License.
+
+    Copyright (c) 2012 Yu-Jie Lin

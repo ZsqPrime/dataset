@@ -1,0 +1,12 @@
+# storm-redis-pubsub
+
+A simple storm spout for redis pubsub
+
+
+Project Description:
+A Redis PubSub Spout for Storm
+
+README:
+# storm-redis-pubsub
+
+A simple storm spout for redis pubsub

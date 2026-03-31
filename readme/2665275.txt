@@ -1,0 +1,4 @@
+Project Description:
+Open data application that uses the NFC platform.
+
+README:

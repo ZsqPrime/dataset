@@ -1,0 +1,7 @@
+Project Description:
+Asset/Stock plugin for bookyt
+
+README:
+= BookytStock
+
+This project rocks and uses MIT-LICENSE.

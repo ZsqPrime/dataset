@@ -1,0 +1,9 @@
+Project Description:
+KPOP open database with API - in development
+
+README:
+# KPOP Open Database  - alpha  #
+
+RESTful API in PHP using the Slim framework.
+
+More features are being worked on.

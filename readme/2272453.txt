@@ -1,0 +1,140 @@
+This project contains analysis modules that work with the C++ framework 'psana', currently in use at the Linac Coherent Light Source (LCLS) at SLAC National Accelerator Laboratory.
+
+It consists of one package "kitty", and the following modules:
+
+kitty
+	- "discriminate"   ---   accept or reject events
+	- "correct"        ---   apply corrections to the data
+	- "assemble"       ---   create raw and assembled CSPAD images
+	- "correlate"      ---   compute correlations
+
+
+To build these modules on LCLS computers, you will need the "giraffe" library, available as a git repository at "github.com/feldkamp/giraffe".
+
+
+The release directory was on 2-Sep-2011
+(sit_release = ana-0.3.22)
+
+The release directory was on 15-Jan-2013
+(sit_release = ana-0.7.13)
+
+
+---execute the following commands on LCLS machines to create a fresh psana release directory, build an example module and test it:
+
+    kinit
+    newrel ana-current ana
+    cd ana/
+    sit_setup
+    newpkg kitty
+    mkdir kitty/src
+    mkdir kitty/include
+    codegen -l psana-module kitty correlate
+    codegen -l psana-module kitty correct
+    codegen -l psana-module kitty discriminate
+    codegen -l psana-module kitty assemble
+    scons
+    vi psana.cfg
+    psana /reg/d/ana02/cxi/cxi35711/xtc/e86-r0020-s01-c00.xtc
+
+
+---basic psana.cfg file contents:
+[psana]
+modules = PrintSeparator PrintEventId cspad_mod.CsPadCalib kitty.discriminate kitty.correct kitty.correlate kitty.assemble kitty.info kitty.makemask kitty.makegain
+[CsPadCalib]
+[kitty.discriminate]
+[kitty.correct]
+[kitty.correlate]
+[kitty.assemble]
+[kitty.info]
+[kitty.makemask]
+[kitty.makegain]
+
+---execute the following commands to update the freshly created psana release directory to the current version of kitty:
+
+in local git repository:
+    git pull
+    ./upload $CASENAME
+
+on LCLS machine (where fresh repository was created):
+    cd ana/kitty/include/
+    ln -s /reg/neh/home/feldkamp/giraffe/arrayclasses.h arrayclasses.h
+    ln -s /reg/neh/home/feldkamp/giraffe/arraydataIO.h arraydataIO.h
+    ln -s /reg/neh/home/feldkamp/giraffe/fouriertransformer.h fouriertransformer.h
+    ln -s /reg/neh/home/feldkamp/giraffe/crosscorrelator.h crosscorrelator.h
+    ln -s /reg/neh/home/feldkamp/giraffe/util.h util.h
+    cd ../../
+    scons
+    psana /reg/d/ana02/cxi/cxi35711/xtc/e86-r0020-s01-c00.xtc
+
+
+Project Description:
+Analysis modules to use with the psana framework currently in use at the Linac Coherent Light Source at SLAC National Accelerator Laboratory
+
+README:
+This project contains analysis modules that work with the C++ framework 'psana', currently in use at the Linac Coherent Light Source (LCLS) at SLAC National Accelerator Laboratory.
+
+It consists of one package "kitty", and the following modules:
+
+kitty
+	- "discriminate"   ---   accept or reject events
+	- "correct"        ---   apply corrections to the data
+	- "assemble"       ---   create raw and assembled CSPAD images
+	- "correlate"      ---   compute correlations
+
+
+To build these modules on LCLS computers, you will need the "giraffe" library, available as a git repository at "github.com/feldkamp/giraffe".
+
+
+The release directory was on 2-Sep-2011
+(sit_release = ana-0.3.22)
+
+The release directory was on 15-Jan-2013
+(sit_release = ana-0.7.13)
+
+
+---execute the following commands on LCLS machines to create a fresh psana release directory, build an example module and test it:
+
+    kinit
+    newrel ana-current ana
+    cd ana/
+    sit_setup
+    newpkg kitty
+    mkdir kitty/src
+    mkdir kitty/include
+    codegen -l psana-module kitty correlate
+    codegen -l psana-module kitty correct
+    codegen -l psana-module kitty discriminate
+    codegen -l psana-module kitty assemble
+    scons
+    vi psana.cfg
+    psana /reg/d/ana02/cxi/cxi35711/xtc/e86-r0020-s01-c00.xtc
+
+
+---basic psana.cfg file contents:
+[psana]
+modules = PrintSeparator PrintEventId cspad_mod.CsPadCalib kitty.discriminate kitty.correct kitty.correlate kitty.assemble kitty.info kitty.makemask kitty.makegain
+[CsPadCalib]
+[kitty.discriminate]
+[kitty.correct]
+[kitty.correlate]
+[kitty.assemble]
+[kitty.info]
+[kitty.makemask]
+[kitty.makegain]
+
+---execute the following commands to update the freshly created psana release directory to the current version of kitty:
+
+in local git repository:
+    git pull
+    ./upload $CASENAME
+
+on LCLS machine (where fresh repository was created):
+    cd ana/kitty/include/
+    ln -s /reg/neh/home/feldkamp/giraffe/arrayclasses.h arrayclasses.h
+    ln -s /reg/neh/home/feldkamp/giraffe/arraydataIO.h arraydataIO.h
+    ln -s /reg/neh/home/feldkamp/giraffe/fouriertransformer.h fouriertransformer.h
+    ln -s /reg/neh/home/feldkamp/giraffe/crosscorrelator.h crosscorrelator.h
+    ln -s /reg/neh/home/feldkamp/giraffe/util.h util.h
+    cd ../../
+    scons
+    psana /reg/d/ana02/cxi/cxi35711/xtc/e86-r0020-s01-c00.xtc

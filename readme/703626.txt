@@ -1,0 +1,7 @@
+Implementation of the classic game Space Invaders using HTML 5 and Javascript
+
+Project Description:
+Space Invaders HTML 5
+
+README:
+Implementation of the classic game Space Invaders using HTML 5 and Javascript

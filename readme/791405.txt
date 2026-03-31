@@ -1,0 +1,8 @@
+Adium devs killed this off a long time ago with a patch that prevents message styles from loading external resources. There's no point any more so Don't use it.
+
+
+Project Description:
+Adium message style with cute & unseemly JavaScript magic. It's a thing.
+
+README:
+Adium devs killed this off a long time ago with a patch that prevents message styles from loading external resources. There's no point any more so Don't use it.

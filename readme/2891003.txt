@@ -1,0 +1,5 @@
+Project Description:
+Processing app for magstripe data visualization + decoding
+
+README:
+![Output](https://github.com/pidge/magstripe/raw/master/screen-capture-1.png)

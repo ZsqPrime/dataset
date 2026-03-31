@@ -1,0 +1,5 @@
+Project Description:
+Integrated Circuit (IC) Reverse Engineering (RE) software.  Rough cuts for R&D.
+
+README:
+Obsolete repository: tools have been put into their own repos. Notably xystitch: https://github.com/JohnDMcMaster/xystitch/

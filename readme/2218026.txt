@@ -1,0 +1,8 @@
+The library purpose is to provide simple and intuitive access to all L-MotorShield functions, such as controlling the motor speed and it's rotation direction.
+
+
+Project Description:
+Library for L-MotorShield Arduino extension
+
+README:
+The library purpose is to provide simple and intuitive access to all L-MotorShield functions, such as controlling the motor speed and it's rotation direction.

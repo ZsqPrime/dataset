@@ -1,0 +1,20 @@
+This is a first stab at implementing an Echo State Network in Java - see here for details: http://www.scholarpedia.org/article/Echo_state_network
+
+Rather than a linear readout function, a feedforward neural network is used instead.
+
+This code makes use of the public domain numerical linear algebra library JAMA: http://math.nist.gov/javanumerics/jama/
+
+The time series is Mackey-Glass 30, from here: http://www.bme.ogi.edu/~ericwan/data.html 
+
+
+Project Description:
+None
+
+README:
+This is a first stab at implementing an Echo State Network in Java - see here for details: http://www.scholarpedia.org/article/Echo_state_network
+
+Rather than a linear readout function, a feedforward neural network is used instead.
+
+This code makes use of the public domain numerical linear algebra library JAMA: http://math.nist.gov/javanumerics/jama/
+
+The time series is Mackey-Glass 30, from here: http://www.bme.ogi.edu/~ericwan/data.html

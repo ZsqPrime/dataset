@@ -1,0 +1,8 @@
+Project Description:
+**In Progress** Prototype for Realtime Patient Feedback iPad App
+
+README:
+Realtime Patient Feedback Prototype
+Project for SI 791: Independent Study, Winter 2012
+Team: Evan Kerrigan & Munaf Assaf
+{kerrigev, munaf}@umich.edu

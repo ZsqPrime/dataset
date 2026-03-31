@@ -1,0 +1,12 @@
+# README #
+
+My development (and some personal) notes. Feel free to use them.
+
+
+Project Description:
+Developer notes
+
+README:
+# README #
+
+My development (and some personal) notes. Feel free to use them.

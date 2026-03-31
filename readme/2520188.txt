@@ -1,0 +1,5 @@
+Project Description:
+TextTwist Android Game
+
+README:
+Set compiler level to Java6 otherwise you will get Eclipse complaining about @Override annotations for interface methods.

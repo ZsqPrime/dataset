@@ -1,0 +1,10 @@
+Project Description:
+Shows Pidgin new message count in title bar.
+
+README:
+To install:
+Pidgin plugin Lib-notify must be installed.
+Add pidgin-notifier@shell-extensions.kkruit.me folder to ~/.local/share/gnome-shell/extensions/
+hit: ALT+F2
+type: r <enter>
+Profit!

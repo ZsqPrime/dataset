@@ -1,0 +1,7 @@
+This is a little R package for fitting of lattice-QCD data and calculating confidence intervals (errors) for estimated quantities.
+
+Project Description:
+Chifit is a R package with general fit routines applicable not only to fitting of correlators and ChiPT-formulae in lattice-QCD.
+
+README:
+This is a little R package for fitting of lattice-QCD data and calculating confidence intervals (errors) for estimated quantities.

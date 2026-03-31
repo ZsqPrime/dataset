@@ -1,0 +1,9 @@
+Project Description:
+Visual Object Manipulation (VOM) is a library that provides a paint-like canvas with support for visual editing like drag and drop or shapes and object manipulation.
+
+README:
+Copyright (c) Steven Houben: http://anxma.com 
+
+This library is free software; you can redistribute it and/or modify it under the terms of the GNU GENERAL PUBLIC LICENSE V3 or later, as
+published by the Free Software Foundation. Check 
+http://www.gnu.org/licenses/gpl.html for details.

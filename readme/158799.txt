@@ -1,0 +1,19 @@
+
+Discovery Environment Database Schema
+=====================================
+
+This is the relational database schema for the PostgreSQL instance used for relational storage by
+the Discovery Environment distributed system
+
+
+
+Project Description:
+Underlying Discovery Environment database schema.
+
+README:
+
+Discovery Environment Database Schema
+=====================================
+
+This is the relational database schema for the PostgreSQL instance used for relational storage by
+the Discovery Environment distributed system

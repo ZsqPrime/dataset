@@ -1,0 +1,4 @@
+Project Description:
+An iOS sample app for training purposes
+
+README:

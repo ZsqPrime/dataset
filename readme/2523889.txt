@@ -1,0 +1,7 @@
+Project Description:
+this is a repo for cs 192 project (client demography) for First Noel corp.
+
+README:
+PROJECT FOR CS192
+
+FIRST NOEL CORPORATION CLIENT DEMOGRAPHY :P

@@ -1,0 +1,7 @@
+Project Description:
+Odds and ends. Currently: SICP. Previously: K&R
+
+README:
+Random stuff that don't require their own repo. Maybe there'll be something here of interest to you...?
+
+Current: Working on K&R

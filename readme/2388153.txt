@@ -1,0 +1,25 @@
+X Server for Android
+
+You need to compile this code using SDL downloaded from
+
+https://github.com/pelya/commandergenius
+
+Compilation instructions:
+
+https://github.com/pelya/commandergenius/tree/sdl_android/project/jni/application/xserver
+
+
+
+Project Description:
+X.org server
+
+README:
+X Server for Android
+
+You need to compile this code using SDL downloaded from
+
+https://github.com/pelya/commandergenius
+
+Compilation instructions:
+
+https://github.com/pelya/commandergenius/tree/sdl_android/project/jni/application/xserver

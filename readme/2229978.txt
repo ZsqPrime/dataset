@@ -1,0 +1,8 @@
+A captcha for learning Katakana, Hiragana and Kanji
+
+
+Project Description:
+
+
+README:
+A captcha for learning Katakana, Hiragana and Kanji

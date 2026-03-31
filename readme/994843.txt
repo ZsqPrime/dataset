@@ -1,0 +1,17 @@
+a java wrapper for layar api
+
+see 
+http://layar.com/documentation/browser/api/
+
+
+Project Description:
+a java wrapper for layar api
+
+README:
+a java wrapper for layar api
+
+
+
+see 
+
+http://layar.com/documentation/browser/api/

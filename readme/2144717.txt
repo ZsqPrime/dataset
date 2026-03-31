@@ -1,0 +1,17 @@
+maven-php-plugin
+==================================================
+
+Visit http://www.php-maven.org/ for more
+informations.
+
+
+
+Project Description:
+A maven plugin for dependency management and quality assurance for PHP projects.
+
+README:
+maven-php-plugin
+==================================================
+
+Visit http://www.php-maven.org/ for more
+informations.

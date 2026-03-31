@@ -1,0 +1,10 @@
+This is a tool to take OSM-XML data downloaded via eg. XAPI requests and put it into another
+instance of rails_port
+
+
+Project Description:
+Tool to migrate from one OSM database to anoter, that is, create new ids for all objects
+
+README:
+This is a tool to take OSM-XML data downloaded via eg. XAPI requests and put it into another
+instance of rails_port

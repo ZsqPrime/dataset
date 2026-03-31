@@ -1,0 +1,10 @@
+Templates and other for Zabbix monitoring systems.
+By FB_929.
+
+
+Project Description:
+
+
+README:
+Templates and other for Zabbix monitoring systems.
+By FB_929.

@@ -1,0 +1,12 @@
+This repo just holds examples that I create while working my way 
+through SICP "Structure and Interpretation of Computer Programs"
+(http://mitpress.mit.edu/sicp/)
+
+
+Project Description:
+Examples developed while following SICP
+
+README:
+This repo just holds examples that I create while working my way 
+through SICP "Structure and Interpretation of Computer Programs"
+(http://mitpress.mit.edu/sicp/)

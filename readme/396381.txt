@@ -1,0 +1,24 @@
+Hexoboros
+
+Game created during Global Game Jam 2012
+
+Licensed under Creative Commons BY-NC-SA 3.0
+
+
+Install LÖVE framework (from http://love2d.org)
+and run start.bat or start.sh to play ...
+
+
+Project Description:
+Game created during Global Game Jam 2012
+
+README:
+Hexoboros
+
+Game created during Global Game Jam 2012
+
+Licensed under Creative Commons BY-NC-SA 3.0
+
+
+Install LÖVE framework (from http://love2d.org)
+and run start.bat or start.sh to play ...

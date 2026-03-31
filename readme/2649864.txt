@@ -1,0 +1,10 @@
+Project Description:
+For practice.
+
+README:
+Nami is a charactor in One Piece.
+
+Use this name for my first github project.
+
+## by scorpioliu
+## 2012.01.28

@@ -1,0 +1,5 @@
+Project Description:
+Deface has moved.  Official repo is now at spree/deface
+
+README:
+Deface has moved.  Official repo is now located at [spree/deface](https://github.com/spree/deface)

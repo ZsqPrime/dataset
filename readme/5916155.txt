@@ -1,0 +1,8 @@
+Project Description:
+Awesome theme
+
+README:
+Install
+
+cd ~/.config/awesome
+git clone https://github.com/Killman/Awesome.git

@@ -1,0 +1,4 @@
+Project Description:
+Demonstrates the use of prepared statements to implement a secure login 
+
+README:

@@ -1,0 +1,7 @@
+Project Description:
+An event driven database written in javascript
+
+README:
+
+sauron-js is an event driven hash like database, in the sense that is possible
+to attach functions (triggers) to a given hash cell.

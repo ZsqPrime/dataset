@@ -1,0 +1,12 @@
+This is the TimeCapsule project for GVSU's SocNet group.  It's goal
+is to create a social network in which people can create and share
+digital time capsules.
+
+
+Project Description:
+None
+
+README:
+This is the TimeCapsule project for GVSU's SocNet group.  It's goal
+is to create a social network in which people can create and share
+digital time capsules.

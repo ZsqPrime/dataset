@@ -1,0 +1,22 @@
+Project Description:
+This module manages sudo
+
+README:
+# Class: sudo
+#   This module manages sudo
+#
+# Definition:
+#   sudo::service
+#
+# Parameters:
+#   -
+#
+# Actions:
+#   Installs the sudoers etc.
+#
+# Requires:
+#   -
+#
+# Sample Usage:
+#   sudo::service { 'icinga': }
+#   sudo::service { 'nagios': }

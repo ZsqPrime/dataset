@@ -1,0 +1,11 @@
+Project Description:
+Git-Style Deployment 
+
+README:
+Rename post-receive.py to post-receive and place in the your hooks folder. 
+Then push the bottle_test folder. You will need to enter the password for the hosts in post-receive. 
+
+Things TODO
+# Integrate with SSH Keys
+# Better Logging and Error Checking
+# Create a Simple Ruby App That Will View The Logged Data

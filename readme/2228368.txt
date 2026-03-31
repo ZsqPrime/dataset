@@ -1,0 +1,9 @@
+To generate symmetry operations in a surface unit cell from the associated traditional unit cell.
+symmetry files and coordinates of atoms in surface unit cell will be generated!
+
+Project Description:
+create symmetry operations in surface unitcell
+
+README:
+To generate symmetry operations in a surface unit cell from the associated traditional unit cell.
+symmetry files and coordinates of atoms in surface unit cell will be generated!

@@ -1,0 +1,78 @@
+== Introduction ==
+
+This is the system integration tests suites for OSF. This is an exaustive set of tests that we are performing on each OSF endpoint. These tests have three main purposes:
+
+# Testing a new OSF instance to make sure that all endpoints are operating normally. If they are not, flags will be raised.
+# Testing an existing OSF instance when the server, or any server components (such as Virtuoso, Solr or MySQL) get upgraded. The tests will help uncovering any possible incompability issues.
+# Testing an existing OSF instance when OSF get modified or upgraded.
+
+These tests suites are using the PHPUnit unit testing framework. However, these are not unit tests, but really system integration tests that uses the framework to run the tests and report issues.
+
+== Notice ==
+
+Note that these tests suites are under development and they are not covering all the functionalities of OSF. This will gives a good indication of the working status of the system, but the coverage of functionalities is not yet complete.
+
+== Installation & Configuration ==
+
+You can install and configure the system integration tests using a simple shell script. You only have to perform these four four steps by copying and pasting these few commands in your shell terminal:
+
+# <code>cd /mnt/</code>
+# <code>sudo wget https://raw.github.com/StructuredDynamics/OSF-Tests-Suites/master/system-integration-tests.sh</code>
+# <code>sudo chmod 755 system-integration-tests.sh</code>
+# <code>sudo ./system-integration-tests.sh</code>
+
+== What is being tested ==
+
+Here is list of things that are tested on each endpoints. These are the standard tests accross all endpoints, but particular tests may be added to some endpoints for some specific checks.
+
+# All parameters of each endpoint get tested
+# If the tested endpoint returns some kind of resultset, a test is developed for each resultset serialization that is supported by the endpoint. Normally, they are tested for these core serializations:
+## structXML in XML (mime: text/xml)
+## structXML in JSON (mime: application/json)
+## RDF in XML (mime: application/rdf+xml)
+## RDF in N3 (mime: application/rdf+n3)
+
+'''Note 1:''' Related to the test #2 above: The validation depends if the tested query's resultset is known in advance by the testing suite or not. If it is know, then we are validating the the serialization and we make sure that the content is exactly the same that was expected. If the resultset is unknown by the testing suite, then only the serialization will be validated, and we will make sure that at least one subject exists in the resultset. But we are not validating the content of the resultset
+since the testing suite doesn't know what to expect.
+
+
+Project Description:
+System Integrations Tests Suites for structWSF
+
+README:
+== Introduction ==
+
+This is the system integration tests suites for OSF. This is an exaustive set of tests that we are performing on each OSF endpoint. These tests have three main purposes:
+
+# Testing a new OSF instance to make sure that all endpoints are operating normally. If they are not, flags will be raised.
+# Testing an existing OSF instance when the server, or any server components (such as Virtuoso, Solr or MySQL) get upgraded. The tests will help uncovering any possible incompability issues.
+# Testing an existing OSF instance when OSF get modified or upgraded.
+
+These tests suites are using the PHPUnit unit testing framework. However, these are not unit tests, but really system integration tests that uses the framework to run the tests and report issues.
+
+== Notice ==
+
+Note that these tests suites are under development and they are not covering all the functionalities of OSF. This will gives a good indication of the working status of the system, but the coverage of functionalities is not yet complete.
+
+== Installation & Configuration ==
+
+You can install and configure the system integration tests using a simple shell script. You only have to perform these four four steps by copying and pasting these few commands in your shell terminal:
+
+# <code>cd /mnt/</code>
+# <code>sudo wget https://raw.github.com/StructuredDynamics/OSF-Tests-Suites/master/system-integration-tests.sh</code>
+# <code>sudo chmod 755 system-integration-tests.sh</code>
+# <code>sudo ./system-integration-tests.sh</code>
+
+== What is being tested ==
+
+Here is list of things that are tested on each endpoints. These are the standard tests accross all endpoints, but particular tests may be added to some endpoints for some specific checks.
+
+# All parameters of each endpoint get tested
+# If the tested endpoint returns some kind of resultset, a test is developed for each resultset serialization that is supported by the endpoint. Normally, they are tested for these core serializations:
+## structXML in XML (mime: text/xml)
+## structXML in JSON (mime: application/json)
+## RDF in XML (mime: application/rdf+xml)
+## RDF in N3 (mime: application/rdf+n3)
+
+'''Note 1:''' Related to the test #2 above: The validation depends if the tested query's resultset is known in advance by the testing suite or not. If it is know, then we are validating the the serialization and we make sure that the content is exactly the same that was expected. If the resultset is unknown by the testing suite, then only the serialization will be validated, and we will make sure that at least one subject exists in the resultset. But we are not validating the content of the resultset
+since the testing suite doesn't know what to expect.

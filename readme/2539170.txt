@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+Accessible Radio
+
+Ardio is an accessible music player powered by Rdio®. This music streaming service supports an accessible interface to ensure that persons with disabilities have access to unlimited music streaming.
+
+http://ardio.phpfogapp.com/web/

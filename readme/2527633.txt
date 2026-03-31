@@ -1,0 +1,56 @@
+Project Description:
+Ruby Gem to build - you wouldn't guess - very nice menus.
+
+README:
+h1. Very Nice Menu
+
+This is a Ruby lib to create a tree of menus. Very nice. Really!
+
+BTW this document is written with a certain portion of humor (insanity).
+
+h2. Features
+
+* Deeply nestable
+* You can have menus and entries mixed on every level.
+* Simple role based access control with permission inheritance that can be optionally switched of (see @rbac_spec.rb@ for details.)
+
+h2. Test
+
+Before your dirty hands touch a single line of code be sure to run the tests by invoking
+
+bc. rspec
+
+Otherwise we'll find and punish you! Promised.
+
+h2. Roadmap - The BIG P I C T U R E
+
+* First versions are about building a valid data structure needed to create menus.
+* The data model will be enhanced with information to later support authorization and visibility decisions.
+* Internationalization will also be prepared.
+* Then the problem of rendering menus will be targeted. This might become a framework specific renderer and thus end up in a separate repository but is surely part of the big picture.
+
+h2. Usage
+
+bc. menu = VeryNiceMenu.build('Main Menu', :allowed_for => [:admin])    
+	menu.submenu("Main Menu - Submenu 1") do |submenu|        
+		submenu.entry("My Entry")
+	end
+	
+bc. submenu = menu.submenus.first
+  entry   = submenu.entries.first
+
+bc. menu.allowed_for?(:admin)
+  => true
+  menu.allowed_for?(:everyone)
+  => false
+
+bc. submenu.allowed_for?(:admin)
+  => true
+  submenu.allowed_for?(:everyone)
+  => false
+
+bc. entry.allowed_for?(:admin)
+  => true
+
+bc. entry.allowed_for?(:everyone)
+  => false

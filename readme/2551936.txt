@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Work in progress to provide a command line interface to omnifocus, using ScriptingBridge

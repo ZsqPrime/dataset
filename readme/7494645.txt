@@ -1,0 +1,4 @@
+Project Description:
+Chrome plug-in to provide a wider view of Yammer's social collaboration site.
+
+README:

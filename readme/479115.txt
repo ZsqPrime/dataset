@@ -1,0 +1,6 @@
+
+
+Project Description:
+Allows client-side paging of the children of a DOM element AND dynamically filter the results and paging links.
+
+README:

@@ -1,0 +1,9 @@
+Project Description:
+Mock http server for scala
+
+README:
+* Usage
+
+"nu.rinu" %% "mock-http-server" % "1.3.0" % "test"
+
+* Sample

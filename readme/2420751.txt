@@ -1,0 +1,5 @@
+Project Description:
+PHP that you can dance to
+
+README:
+[Rave](https://github.com/ryanve/rave) is experimental and may soon change. In the meantime see [phat](http://phat.airve.com)

@@ -1,0 +1,18 @@
+mxgame
+======
+
+mxgame is a project with snippets for game development.
+
+Maybe one day this project will become a game development library. (:
+
+
+Project Description:
+mxgame is a project with snippets for game development.
+
+README:
+mxgame
+======
+
+mxgame is a project with snippets for game development.
+
+Maybe one day this project will become a game development library. (:

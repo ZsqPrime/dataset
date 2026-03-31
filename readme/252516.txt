@@ -1,0 +1,6 @@
+
+
+Project Description:
+A Vagrantfile and some puppet scripts for an installation of a magento shop
+
+README:

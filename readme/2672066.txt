@@ -1,0 +1,11 @@
+Project Description:
+ActGen: Activation/Serial/Password code generator. Written using "Lazarus Pascal".
+
+README:
+UPDATE - Be sure to check out newer location (C#) as well:
+https://github.com/bmatthewshea/ActGen2
+
+
+Source files for "ActGen (v1-pascal)"
+
+https://www.holylinux.net/code

@@ -1,0 +1,66 @@
+Project Description:
+Scripts for building an Android SDK for developing with Cogl
+
+README:
+Download and unpack the latest android SDK
+Download and unpack ndk r7
+
+Read $ANDROID_NDK_DIR/docs/STANDALONE-TOOLCHAIN.html "3/ Invoking the
+compiler (the easy way):"
+
+Make a standalone toolchain
+
+E.g:
+build/tools/make-standalone-toolchain.sh --platform=android-9 --install-dir=$HOME/local/android-toolchain
+
+Edit the bashrc file in this directory to point to the locations for
+the Android SDK and NDK.
+
+Source the bashrc file into your shell. (Further notes assume they can
+refer to these variables.)
+
+source bashrc
+
+Build the Cogl SDK:
+
+./build.sh
+
+Build the sample application:
+
+(Note: you should change this accordingly if you selected a different
+ modules dir when running ./build.sh)
+
+export NDK_MODULE_PATH=$PWD/modules
+
+cd $NDK_MODULE_PATH/samples/hello
+
+NDK_DEBUG=1 ndk-build
+
+List sdk targets using
+
+android list
+
+Then run
+android update project -p . -t <TARGET_ID>
+
+Then build an apk using:
+ant debug
+
+Connect to a device via a usb cable
+
+Install the apk:
+$ adb install bin/TestCoglHello-debug.apk
+
+Get a shell on the device and run the test:
+adb shell am start -a android.intent.action.MAIN -n com.cogl.example.zzz.Hello/android.app.NativeActivity
+
+ndk-gdb
+NB: you may need to switch thread once connected via gdb
+
+To rebuild and re-install do something like:
+rm -fr bin libs obj && NDK_DEBUG=1 ndk-build -B && ant debug && adb install -r bin/TestCoglHello-debug.apk
+
+It shouldn't be necessary to scrap everything for each re-build but
+I've been finding that the tools don't always notice when things have
+changed and don't rebuild things when you want them too. For now I've
+resorted to scrapping everthing each re-build just to be sure.

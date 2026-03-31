@@ -1,0 +1,7 @@
+Instructions can be found at http://blog.kervinramen.com/2012/01/svn-support-for-sublime-text.html
+
+Project Description:
+SVN support for sublime text
+
+README:
+Instructions can be found at http://blog.kervinramen.com/2012/01/svn-support-for-sublime-text.html

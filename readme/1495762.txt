@@ -1,0 +1,12 @@
+This is a fork of nautilus-gksu.
+
+http://www.mate-desktop.org/
+
+
+Project Description:
+None
+
+README:
+This is a fork of nautilus-gksu.
+
+http://www.mate-desktop.org/

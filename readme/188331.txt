@@ -1,0 +1,13 @@
+# Wakanda Sample Applications
+
+* To-Do-List
+* PTO (Paid Time Off) Manager
+
+Project Description:
+Examples of web applications made with Wakanda
+
+README:
+# Wakanda Sample Applications
+
+* To-Do-List
+* PTO (Paid Time Off) Manager

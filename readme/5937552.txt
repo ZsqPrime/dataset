@@ -1,0 +1,4 @@
+Project Description:
+A minimal HTTP server with talks directly to Rack4Java
+
+README:

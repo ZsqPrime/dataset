@@ -1,0 +1,8 @@
+RPM build for Solr
+
+
+Project Description:
+RPM build files for solr server 
+
+README:
+RPM build for Solr

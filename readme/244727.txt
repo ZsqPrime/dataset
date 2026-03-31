@@ -1,0 +1,6 @@
+
+
+Project Description:
+Extends node-syslog with console commands
+
+README:

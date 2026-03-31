@@ -1,0 +1,7 @@
+I'm Dan Burton, and this is my Blog.
+
+Project Description:
+It's a blog. Insert clever Haskell type signature here.
+
+README:
+I'm Dan Burton, and this is my Blog.

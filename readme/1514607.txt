@@ -1,0 +1,7 @@
+This repository contains plugins for scoutapp.com
+
+Project Description:
+Plugins for scoutapp.com
+
+README:
+This repository contains plugins for scoutapp.com

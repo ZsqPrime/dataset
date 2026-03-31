@@ -1,0 +1,5 @@
+Project Description:
+getting english synsets of a turkish word
+
+README:
+need nltk wordnet

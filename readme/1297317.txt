@@ -1,0 +1,27 @@
+To install:
+Add the contents of QRClock.html to a web page.
+Link in the other files as well.
+
+Done.
+
+Demenstration:
+http://www.wordsare.me/QRclock/
+
+Attribution:
+This work is based on the work of Jerome Etienne which can be found at https://github.com/jeromeetienne/jquery-qrcode
+
+Project Description:
+A QR code clock
+
+README:
+To install:
+Add the contents of QRClock.html to a web page.
+Link in the other files as well.
+
+Done.
+
+Demenstration:
+http://www.wordsare.me/QRclock/
+
+Attribution:
+This work is based on the work of Jerome Etienne which can be found at https://github.com/jeromeetienne/jquery-qrcode

@@ -1,0 +1,38 @@
+paste-kde
+---------
+
+Emacs library to post text to KDE's pastebin service.
+
+Usage
+-----
+
+Just add the directory to your `load-path' and put inside your
+`~/.emacs':
+
+  (require 'paste-kde)
+
+To paste a buffer: M-x paste-kde-buffer
+
+To paste a region: M-x paste-kde-region
+
+
+Project Description:
+Paste text to KDE's pastebin service
+
+README:
+paste-kde
+---------
+
+Emacs library to post text to KDE's pastebin service.
+
+Usage
+-----
+
+Just add the directory to your `load-path' and put inside your
+`~/.emacs':
+
+  (require 'paste-kde)
+
+To paste a buffer: M-x paste-kde-buffer
+
+To paste a region: M-x paste-kde-region

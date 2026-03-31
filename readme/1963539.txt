@@ -1,0 +1,8 @@
+This is the robot software repository for Team 2342. 
+
+
+Project Description:
+Team 2342's robot software repository
+
+README:
+This is the robot software repository for Team 2342.

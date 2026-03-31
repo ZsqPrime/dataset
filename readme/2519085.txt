@@ -1,0 +1,36 @@
+Project Description:
+Obsolete - use a modern build tool such as grunt or gulp instead
+
+README:
+This is a common JavaScript build system based on jQuery's build system.
+
+
+Code: http://github.com/jollytoad/js-common-build
+
+Docs: http://www.adaptavist.com/display/jQuery/Build+System
+
+
+Features:
+
+	* Checking of JavaScript files using jslint.
+	* Concatenation of JavaScript and CSS modules.
+	* String substitution of @VERSION (from version.txt) and @DATE.
+	* Minification using YUICompressor.
+	* Copy optional JS/CSS modules into dist (including string substitution).
+	* Copy extra files into dist.
+	* Conditional Comments.
+
+----
+
+Quick ref for git import:
+(Please read docs before doing this)
+
+$ git submodule add git://github.com/jollytoad/js-common-build.git build
+
+----
+
+jslint is Copyright (c) 2002 Douglas Crockford
+see jslint/fulljslint.js for full details
+
+YUICompressor is Copyright (c) 2009, Yahoo! Inc.
+see http://developer.yahoo.com/yui/compressor/ for full details

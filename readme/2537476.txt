@@ -1,0 +1,23 @@
+Project Description:
+Session suggestion & discussion site for BT devcons (like Ruby Manor's vestibule)
+
+README:
+== BT DevCon App
+
+This is an app to allow people to propose, discuss and eventually vote on
+session proposals for BT developer conferences. It is intended to work along
+the lines of Ruby Manor's vestibule[http://vestibule.rubymanor.org/].
+
+More importantly, though, I'm using it as a guinea pig rails project to try out
+a more object-oriented, outside in approach, inspired by people like Corey
+Haines, Gary Bernhardt and Avdi Grimm. These are the rules I'm trying to follow
+(I'll add more as I come across them, and remove any that turn out to be
+impractical):
+
+* Single responsibility principle: each class has only one responsibility
+  - Persistence counts as a responsibility
+  - Service classes named for their responsibility, eg CalculatesInterest
+* Dependencies injected on construction
+* No logic in views
+* Each view only gets a single presenter object
+* Outside-in design (no speculative classes or methods)

@@ -1,0 +1,7 @@
+Project Description:
+WordPress Theme for METAspexet 2011/2012
+
+README:
+# METAspexet Wordpress Theme
+
+This is the WordPress theme used by METAspexet at metaspexet.se

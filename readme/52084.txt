@@ -1,0 +1,16 @@
+MICROGRAB
+=========
+
+A python version of a more rudimentary bash script used to download music from
+blogs.
+
+
+Project Description:
+A music downloader and playlist maker.
+
+README:
+MICROGRAB
+=========
+
+A python version of a more rudimentary bash script used to download music from
+blogs.

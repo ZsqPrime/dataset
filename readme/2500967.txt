@@ -1,0 +1,151 @@
+Virtual Library 0.2.5
+* * * * * * * * * * * * 
+by James Overton V
+
+The Vision
+* * * * * * *
+The VUI, or Virtual User Interface, IS the next generation user interface.  But the challenges of a 3d user interface have outweighed its benefits from as early as it has been attempted.  No application outside of gaming has been able to breakthrough to the mainstream with a 3D UI, mainly because few programs can:
+a) motivate and make good use of the third dimension versus a simpler 2d representation
+b) borrow real world semantics
+c) advantage computer efficiency and power
+d) solve a problem.  Enable!
+I believe that this set of qualities in an application could continue the paradigm shift that has been slowly trending dominant computer UX - away from WIMP toward a gesture and voice controlled virtual environment.
+
+The Virtual Library
+* * * * * * * * * * * * *
+The Virtual Library allows for the creation and maintenance of virtual folders - user selected collections of files or folders that are relevant to a workspace or task (i.e. - when I code this program I have these applications open, when researching this I have these tabs/docs/apps open, etc.)
+
+A virtual folder is analogous to and in support of a workspace; it essentially allows you to abstract a 'working set' of files/folders from the actual file system organization.  We typically organize our files in a contextual hierarchy - this might be deemed long term organization; a task-, project- or workspace-based organization is much more relevant in the shorter term.  A workspace might be described as a set of files that experience temporal locality of use.  The Virtual Library allows you to easily create and edit virtual folders, and interact with your files in a natural, intuitive, fun way - one that more closely parallels how one might interact with a book in a library.  Virtual Folders can be used to save the applications you have open that are dedicated to a given task; when you want to resume that task at a later time, you can use the virtual library to open those applications so that you can resume the activity as quickly as possible.
+
+                                    Milestones
+I. Console Output Prototype - 0.1.15
+Purpose - get the structure and workflow going before sexying up the view with the 3D engine
+1. Simple console view output - output one file's information
+2. Simple user interface - add a file browser (text field and button), so the user can select a file and input the directory for search
+3. Mapper algorithm - get FileSystemMapper searching a directory recursively, and return proper data structure
+   Key - determining the proper data structure.
+4. Final console view output - get console displaying 'bookcases'.  Determine a good I/F for the view, as the 3D engine will use the same I/F
+5. Advanced user interface - add a search box (text field) so the user can filter the results by simple filename match (contents search is beyond the scope of this project)
+6. Basic Menu - view settings and dispatch virtual folder CRUD events
+7. Virtual folder basic CRUD in application storage directory
+8. Advanced Menu - end to end virtual folder CRUD from the menu
+9. Virtual folder open.
+10. Initial refactor - abstract general from application-specific classes.
+11. More refactor and cleanup - cleaning house & setting the table for the 3D engine.
+# 12. Get the bash script working, and add instructions to the README on how to run (make variables so it's easy to change)
+13. Webcam navigation dispatching events and catching them only (not responding yet)
+14. Webcam motion/display tweaking 
+15. Final code cleanup!
+Output - program architecture
+
+II. 3D Engine Prototype - 0.2.11
+Purpose - replace the console view with a sexy 3D Virtual Library.
+Also - touch up the user interface (file browser and live search)
+  A. The Basics
+    1. Create the room
+    2. Room navigation - add controls for navigating the room (disable when control is in the Chrome's search field)
+        2.1. Settle on keyboard shortcuts & document them
+        2.2. Add a help menu that lists them
+        # 2.3. Simple collision detection
+    3. Very simple output - circles on a rectangle with text; a circle and text for each file (book), and a large rectangle for the bookcase
+  B. 3D Models
+    4. Replace circles with file icons
+    # 5. Create bookcase models, replace rectangles with bookcases
+    # 6. Room model
+  C. Virtual Folder CRUD - feature parity with 0.1.7
+    5. Click each file to select it, double click to open it (open menu instead?  No, just a prototype!)
+    6. Live search effects
+    * 7. Adding files to a virtual folder with drag/drop
+    8. Viewing virtual folders
+  D. Polish
+    # 9. Better/smarter room layout (bookcases in better places)
+    # 10. Animation effects (zoom to bookcases, bookcase carousel, link into webcam activity)
+    # 11. Final polish
+        11.1 Add description paragraph to help text
+        11.2 More keyboard shortcuts?
+        
+III. Analysis
+    1. Writeup & reflection
+    2. Planning versions 0.3 and 1.0
+
+
+# later
+* in progress
+
+Project Description:
+A Library interface to the file system; built with Alternativa3d engine on Adobe AIR
+
+README:
+Virtual Library 0.2.5
+* * * * * * * * * * * * 
+by James Overton V
+
+The Vision
+* * * * * * *
+The VUI, or Virtual User Interface, IS the next generation user interface.  But the challenges of a 3d user interface have outweighed its benefits from as early as it has been attempted.  No application outside of gaming has been able to breakthrough to the mainstream with a 3D UI, mainly because few programs can:
+a) motivate and make good use of the third dimension versus a simpler 2d representation
+b) borrow real world semantics
+c) advantage computer efficiency and power
+d) solve a problem.  Enable!
+I believe that this set of qualities in an application could continue the paradigm shift that has been slowly trending dominant computer UX - away from WIMP toward a gesture and voice controlled virtual environment.
+
+The Virtual Library
+* * * * * * * * * * * * *
+The Virtual Library allows for the creation and maintenance of virtual folders - user selected collections of files or folders that are relevant to a workspace or task (i.e. - when I code this program I have these applications open, when researching this I have these tabs/docs/apps open, etc.)
+
+A virtual folder is analogous to and in support of a workspace; it essentially allows you to abstract a 'working set' of files/folders from the actual file system organization.  We typically organize our files in a contextual hierarchy - this might be deemed long term organization; a task-, project- or workspace-based organization is much more relevant in the shorter term.  A workspace might be described as a set of files that experience temporal locality of use.  The Virtual Library allows you to easily create and edit virtual folders, and interact with your files in a natural, intuitive, fun way - one that more closely parallels how one might interact with a book in a library.  Virtual Folders can be used to save the applications you have open that are dedicated to a given task; when you want to resume that task at a later time, you can use the virtual library to open those applications so that you can resume the activity as quickly as possible.
+
+                                    Milestones
+I. Console Output Prototype - 0.1.15
+Purpose - get the structure and workflow going before sexying up the view with the 3D engine
+1. Simple console view output - output one file's information
+2. Simple user interface - add a file browser (text field and button), so the user can select a file and input the directory for search
+3. Mapper algorithm - get FileSystemMapper searching a directory recursively, and return proper data structure
+   Key - determining the proper data structure.
+4. Final console view output - get console displaying 'bookcases'.  Determine a good I/F for the view, as the 3D engine will use the same I/F
+5. Advanced user interface - add a search box (text field) so the user can filter the results by simple filename match (contents search is beyond the scope of this project)
+6. Basic Menu - view settings and dispatch virtual folder CRUD events
+7. Virtual folder basic CRUD in application storage directory
+8. Advanced Menu - end to end virtual folder CRUD from the menu
+9. Virtual folder open.
+10. Initial refactor - abstract general from application-specific classes.
+11. More refactor and cleanup - cleaning house & setting the table for the 3D engine.
+# 12. Get the bash script working, and add instructions to the README on how to run (make variables so it's easy to change)
+13. Webcam navigation dispatching events and catching them only (not responding yet)
+14. Webcam motion/display tweaking 
+15. Final code cleanup!
+Output - program architecture
+
+II. 3D Engine Prototype - 0.2.11
+Purpose - replace the console view with a sexy 3D Virtual Library.
+Also - touch up the user interface (file browser and live search)
+  A. The Basics
+    1. Create the room
+    2. Room navigation - add controls for navigating the room (disable when control is in the Chrome's search field)
+        2.1. Settle on keyboard shortcuts & document them
+        2.2. Add a help menu that lists them
+        # 2.3. Simple collision detection
+    3. Very simple output - circles on a rectangle with text; a circle and text for each file (book), and a large rectangle for the bookcase
+  B. 3D Models
+    4. Replace circles with file icons
+    # 5. Create bookcase models, replace rectangles with bookcases
+    # 6. Room model
+  C. Virtual Folder CRUD - feature parity with 0.1.7
+    5. Click each file to select it, double click to open it (open menu instead?  No, just a prototype!)
+    6. Live search effects
+    * 7. Adding files to a virtual folder with drag/drop
+    8. Viewing virtual folders
+  D. Polish
+    # 9. Better/smarter room layout (bookcases in better places)
+    # 10. Animation effects (zoom to bookcases, bookcase carousel, link into webcam activity)
+    # 11. Final polish
+        11.1 Add description paragraph to help text
+        11.2 More keyboard shortcuts?
+        
+III. Analysis
+    1. Writeup & reflection
+    2. Planning versions 0.3 and 1.0
+
+
+# later
+* in progress

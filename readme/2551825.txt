@@ -1,0 +1,8 @@
+Project Description:
+Ejercicios del curso JS Ext
+
+README:
+Ejercicios y ejemplos del curso de ExtJS impartido por @crysfel
+
+
+http://docs.sencha.com/ext-js/4-0/

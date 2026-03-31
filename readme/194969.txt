@@ -1,0 +1,16 @@
+Starter Template for DokuWiki
+http://www.dokuwiki.org/template:starter
+
+version: 2011-02-20
+author: Anika Henke <anika@selfthinker.org>
+
+
+Project Description:
+2011 design for Dokuwiki default template
+
+README:
+Starter Template for DokuWiki
+http://www.dokuwiki.org/template:starter
+
+version: 2011-02-20
+author: Anika Henke <anika@selfthinker.org>

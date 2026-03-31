@@ -1,0 +1,4 @@
+Project Description:
+Twitch Tv Status plugin for Drupal 7 
+
+README:

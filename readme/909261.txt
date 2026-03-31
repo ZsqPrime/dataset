@@ -1,0 +1,106 @@
+LODStats uses Redland (librdf) to access files adhering to the Resource
+Description Framework (RDF) and compute various configurable statistics
+about them.
+Extending LODStats with custom statistics is easily accomplished.
+
+Installation instructions:
+
+sudo apt-get update
+sudo apt-get install python-pip python-dev librdf0-dev python-librdf
+sudo apt-get install git raptor2-utils
+
+# Install virtualenvwrapper
+
+sudo pip install virtualenvwrapper
+mkdir $HOME/.virtualenvs
+mkdir $HOME/Devel
+
+echo '' >> $HOME/.bashrc
+echo '#python virtualenvwrapper configuration' >> $HOME/.bashrc 
+echo 'export WORKON_HOME=$HOME/.virtualenvs' >> $HOME/.bashrc
+echo 'export PROJECT_HOME=$HOME/Devel' >> $HOME/.bashrc
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> $HOME/.bashrc
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+# End install virtualenvwrapper
+# Alternative:
+# sudo apt-get install virtualenvwrapper
+
+mkvirtualenv --system-site-packages lodstats
+cdvirtualenv
+mkdir src
+cd src/
+git clone git://github.com/AKSW/LODStats.git
+
+cd LODStats/
+python setup.py install
+
+cd ../
+git clone git://github.com/earthquakesan/CSV2RDF-WIKI.git
+cd CSV2RDF-WIKI/
+add2virtualenv ./
+./deploy-for-lodstats.sh
+
+(lodstats) $ lodstats --help
+Usage: lodstats [options] [-m model.{rdf,nt,...}] file/URI
+[...]
+(lodstats) $ lodstats -vp some_rdf_file.nt
+
+
+Project Description:
+RDF statistics
+
+README:
+LODStats uses Redland (librdf) to access files adhering to the Resource
+Description Framework (RDF) and compute various configurable statistics
+about them.
+Extending LODStats with custom statistics is easily accomplished.
+
+Installation instructions:
+
+sudo apt-get update
+sudo apt-get install python-pip python-dev librdf0-dev python-librdf
+sudo apt-get install git raptor2-utils
+
+# Install virtualenvwrapper
+
+sudo pip install virtualenvwrapper
+mkdir $HOME/.virtualenvs
+mkdir $HOME/Devel
+
+echo '' >> $HOME/.bashrc
+echo '#python virtualenvwrapper configuration' >> $HOME/.bashrc 
+echo 'export WORKON_HOME=$HOME/.virtualenvs' >> $HOME/.bashrc
+echo 'export PROJECT_HOME=$HOME/Devel' >> $HOME/.bashrc
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> $HOME/.bashrc
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+# End install virtualenvwrapper
+# Alternative:
+# sudo apt-get install virtualenvwrapper
+
+mkvirtualenv --system-site-packages lodstats
+cdvirtualenv
+mkdir src
+cd src/
+git clone git://github.com/AKSW/LODStats.git
+
+cd LODStats/
+python setup.py install
+
+cd ../
+git clone git://github.com/earthquakesan/CSV2RDF-WIKI.git
+cd CSV2RDF-WIKI/
+add2virtualenv ./
+./deploy-for-lodstats.sh
+
+(lodstats) $ lodstats --help
+Usage: lodstats [options] [-m model.{rdf,nt,...}] file/URI
+[...]
+(lodstats) $ lodstats -vp some_rdf_file.nt

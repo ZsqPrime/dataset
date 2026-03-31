@@ -1,0 +1,76 @@
+Parser Jazdy 180312
+18.03.2012	Patryk Wychowaniec
+
+Plik "czytaj mnie" internetowej aplikacji wyswietlającej rozkład jazdy formatu plików jazdy.net
+
+1. Cel aplikacji
+2. Licencja
+3. Użytkowanie
+4. Informacje dodakowe
+5. Kontakt
+6. Szablon HTML
+
+--------
+1. Cel aplikacji
+
+Aplikacja korzysta z formatu danych rozkładów jazdy pochodzących z serwisu jazdy.net. 
+Z powodu tego, że ww. serwis przestanie niedługo istnieć, postanowiłem stworzyć aplikację PHP, której zadaniem jest zamiana plików tekstowych formatu danych na format HTML.
+
+--------
+2. Licencja
+
+Aplikacja oparta jest na licencji BSD. W zwiątku z tym, trzeba pamiętać, że:
+ - aplikcję można stosować w dowolnym celu, nawet komercyjnym
+ - kod źrodłowy aplikacji można dowolnie zmienić
+ - można zimenić licencję aplikacji
+ - w przypadku użycia kodu aplikacji w innej aplikacji, trzeba uwględnić pierwotnego autora
+ 
+---------
+3. Użytkowanie
+
+Aplikacja korzysta z formatu danych rozkładów jazdy jazdy.net
+	a) umieszczenie rozkładów jazdy:
+		foldery oraz pliki rozkładów należy umieścić w podfolderze "rozklad"
+	b) lista wyświetlanych wyświetlanie linii:
+		linie są automatycznie wyczytywane po folderach w folderze "rozklad"
+	c) ilość kierunków:
+		skrypt automatycznie znajduje ilość kierunków. Niepotrzebna jest modyfikacja plików do obsługi większej ilości
+	d) typy dni:
+		oskrypt automatycznie znajduje ilość typó dni. Niepotrzebna jest modyfikacja plików do obsługi większej ilości
+	e) legenda:
+		w przeciwieństwie do formatu jazdy.net, tutaj jest podział legendy co do kierunku. W zależności od numeru kierunku, plik legendy przyjmuje nazwę "legenda_$kierunkek"
+	f) szablon:
+		nazwa szablonu jest w zmiennej $template_name w pliku config.php
+	g) konfiguracja skryptu:
+		wszystkie dane do konfiguracji znajdują się w pliku config.php
+
+----------
+4. Informacje dodakowe
+
+Do projektu dołączam rozkład jazdy dla Koszalina na stan od dnia 16.01.2012
+
+----------
+5. Kontakt
+	Patryk Wychowaniec
+	email: patryk1303@gmail.com
+	xpmm:  p98@jid.pl
+	gg:    9534554
+
+---------
+6. Szablony HTML
+
+	a) first-template
+		Szablon jest własnej roboty, udostępniony na licencji CC BY 3.0
+		http://creativecommons.org/licenses/by/3.0/
+
+		Wolno:
+
+			kopiować, rozpowszechniać, odtwarzać i wykonywać utwór
+			tworzyć utwory zależne
+			użytkować utwór w sposób komercyjny
+
+		Na następujących warunkach:
+
+			Uznanie autorstwa — Utwór należy oznaczyć w sposób określony przez Twórcę lub Licencjodawcę 
+	b) Spicy
+		http://www.templatemo.com/preview/templatemo_314_spicy

@@ -1,0 +1,8 @@
+Analog lighting control library, more to come soon
+
+
+Project Description:
+An analog light control library for arduino
+
+README:
+Analog lighting control library, more to come soon

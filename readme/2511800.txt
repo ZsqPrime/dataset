@@ -1,0 +1,5 @@
+Project Description:
+Unofficial campaign creator for The Battle for Wesnoth. Written in Python
+
+README:
+This is a program that creates a Wesnoth campaign.

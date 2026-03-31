@@ -1,0 +1,6 @@
+Description:
+Thawab Arabic/Islamic encyclopedia system
+
+README:
+إقرأني أولا
+Read me first

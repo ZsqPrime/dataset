@@ -1,0 +1,6 @@
+
+
+Project Description:
+Extend of EditorManger tools from gxp (create panel rather than buttons)
+
+README:

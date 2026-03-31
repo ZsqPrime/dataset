@@ -1,0 +1,6 @@
+
+
+Project Description:
+Device configuration for SE Zeus (Xperia Play)
+
+README:

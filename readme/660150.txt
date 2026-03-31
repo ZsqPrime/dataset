@@ -1,0 +1,8 @@
+Assignment Repo for Dr. Dionosio's CMSI371 class
+
+
+Project Description:
+CMSI371 Homework
+
+README:
+Assignment Repo for Dr. Dionosio's CMSI371 class

@@ -1,0 +1,34 @@
+use:
+<?=partial("nav/__navigation", array('root'=>$root));?>
+
+$root is a WildfireNavigationItem (Primary / Footer from example below)
+
+The idea is the top level page is the navigation block (multi-lingual)
+  - Primary
+    - Home
+    - News
+    - Contact
+  - Footer
+    - Sitemap
+    
+and similar, this way the built in sort function (for content items) will work nicely
+
+
+Project Description:
+
+
+README:
+use:
+<?=partial("nav/__navigation", array('root'=>$root));?>
+
+$root is a WildfireNavigationItem (Primary / Footer from example below)
+
+The idea is the top level page is the navigation block (multi-lingual)
+  - Primary
+    - Home
+    - News
+    - Contact
+  - Footer
+    - Sitemap
+    
+and similar, this way the built in sort function (for content items) will work nicely

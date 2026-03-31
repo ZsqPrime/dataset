@@ -1,0 +1,17 @@
+Eclipse plugin for formatting PHP code, with a few modifications.
+
+Originally downloaded from http://sourceforge.jp/projects/pdt-tools/releases/?package_id=8764
+Version 0.96.2
+
+
+Project Description:
+Format PHP code automatically in Eclipse PDT.
+
+README:
+Eclipse plugin for formatting PHP code, with a few modifications.
+
+
+
+Originally downloaded from http://sourceforge.jp/projects/pdt-tools/releases/?package_id=8764
+
+Version 0.96.2

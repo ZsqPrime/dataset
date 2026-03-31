@@ -1,0 +1,14 @@
+Settings
+========
+
+Development environment settings (Git, PhpStorm, shell).
+
+
+Project Description:
+Development environment settings (Git, PhpStorm, shell).
+
+README:
+Settings
+========
+
+Development environment settings (Git, PhpStorm, shell).

@@ -1,0 +1,8 @@
+Print a checksum signature for every file in a tar file, as well as one for the whole thing.
+
+
+Project Description:
+None
+
+README:
+Print a checksum signature for every file in a tar file, as well as one for the whole thing.

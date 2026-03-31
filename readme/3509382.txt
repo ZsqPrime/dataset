@@ -1,0 +1,147 @@
+Project Description:
+Software for genetics and genomics
+
+README:
+This software was written by David Quigley in the Balmain Lab at UCSF.
+
+
+**********************
+BUILDING BOOST 
+**********************
+
+Boost source code is available at boost.org
+
+ON OSX
+--------------------------------
+
+IMPORTANT FOR USERS OF OSX 10.9: Build with libc++ explicitly, and build the 64-bit 
+version. To build boost on OSX 10.9, I have used:
+
+sudo ./bootstrap.sh --with-libraries=system,filesystem,regex,thread
+sudo ./b2 link=static runtime-link=static toolset=clang \
+      cxxflags="-stdlib=libc++" linkflags="-stdlib=libc++"
+
+ON WINDOWS
+--------------------------------
+
+It may not be necessary to build boost for Windows, as once again the binary files can be 
+downloaded from boost.org. I am using Visual Studio 2005 (VC8), and because of compiler 
+incompatibilities with the pre-built binaries I found it necessary to build a 32-bit 
+version of boost on Windows. In order to call bootstrap.bat, For reasons I do not 
+understand I had to define two symbols in builtins.c that should have been present 
+somewhere in windows.h:
+
+#ifndef FSCTL_GET_REPARSE_POINT
+#define FSCTL_GET_REPARSE_POINT 0x000900a8
+#endif
+# ifndef IO_REPARSE_TAG_SYMLINK
+# define IO_REPARSE_TAG_SYMLINK (0xA000000CL)
+# endif
+
+After calling bootstrap.bat my call to bjam to build a static, multi-threaded 32-bit 
+version of boost was:
+
+bjam link=static address-model=32 threading=multi runtime-link=static -a
+     --with-regex --with-system --with-filesystem --with-thread --with-date_time install 
+
+You want in this call to link to the mt-s versions of the libraries:
+libboost_thread-vc80-mt-s-1_56.lib 
+libboost_system-vc80-mt-s-1_56.lib 
+libboost_regex-vc80-mt-s-1_56.lib 
+libcarmen.lib
+
+Note that your version of boost (and your build environment) may be different.
+
+I pass the pre-processor definitions 
+    WIN32
+    NDEBUG
+    _CONSOLE
+
+If you're building this way be sure to specify the /MT runtime library flag, not /MD.
+
+
+*************************
+* BUILDING JASPER: OS X *
+*************************
+
+Please see the notes in the jasper README.
+ 
+    
+***********************************
+* The CARMEN software data format *
+***********************************
+
+The CARMEN software suite expects data to be formatted into three tab-delimited 
+text files: 
+
+1) an expression file
+2) a probe attributes file
+3) a sample attributes file
+
+It is STRONGLY recommended that neither attribute names nor sample names
+contain a space. It is recommended that attribute values do not contain a 
+space, simply to make your life easier.
+
+-----------------------------------
+The format of the expression file:
+-----------------------------------
+
+Column one:
+The first row is the word IDENTIFIER.
+Subsequent rows contain one unique identifier (e.g. a microarray probeset identifier). 
+
+Columns two and beyond:
+The first row is the name of a sample. Each sample name must be unique.
+Subsequent rows contain the values that identifier-sample pair.
+Missing values are allowed. Missing values should be coded with NA.
+
+Example:
+
+IDENTIFIER	RU109_1000_tail	RU109_1001_tail	RU109_1002_tail
+10344624	11.106	10.989	10.748
+10344633	9.858	NA	9.467
+10344637	10.453	10.332	10.378
+
+----------------------------------------
+The format of the probe attributes file:
+----------------------------------------
+
+Column one:
+The first row is the word IDENTIFIER.
+Subsequent rows contain one unique identifier (e.g. a microarray probeset identifier). 
+These probe identifiers should match the identifiers in the expression file.
+
+Columns two and beyond:
+The first row is the name of an attribute. Each attribute name must be unique.
+Example attributes: Chromosome, transcription.start.location, is.refseq
+Subsequent rows in each column contain the values for a given identifier-sample pair.
+Missing values are allowed. Missing values should be coded with NA.
+
+Example:
+
+IDENTIFIER	Chromosome	transcription.start	strand	symbol
+10344624	chr1	4807893	+	Lypla1
+10344633	chr1	4858328	+	Tcea1
+10344637	chr1	5083173	+	Atp6v1h
+
+------------------------------------------
+The format of the sample attributes file:
+------------------------------------------
+
+Column one:
+The first row is the word IDENTIFIER.
+Subsequent rows contain one unique sample.
+These sample identifiers should match the identifiers in the expression file.
+
+Columns two and beyond:
+The first row is the name of an attribute. Each attribute name must be unique.
+Example attributes: p53.mutant, tissue.type
+Subsequent rows in each column contain the values for a given identifier-sample pair.
+Missing values are allowed. Missing values should be coded with NA.
+
+Example:
+
+IDENTIFIER	scan.date	sex
+RU109_1000_tail	june.2012	F
+RU109_1001_tail	june.2012	F
+RU109_1002_tail	june.2012	M

@@ -1,0 +1,21 @@
+Motion controlled pong game
+Project course @ Chalmers University Of Technology
+spring semester 2012
+
+Esteemed contributors:
+Johan Sandstr�m 
+Daniel Nicklasson 
+Christian Fransson 
+
+Project Description:
+
+
+README:
+Motion controlled pong game
+Project course @ Chalmers University Of Technology
+spring semester 2012
+
+Esteemed contributors:
+Johan Sandstr�m 
+Daniel Nicklasson 
+Christian Fransson

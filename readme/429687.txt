@@ -1,0 +1,5 @@
+Project Description:
+SBT filetype for Vim
+
+README:
+This vim bundle brings some very basic support for SBT to Vim

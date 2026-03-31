@@ -1,0 +1,8 @@
+LinkedPA, una distribuzione Drupal per la Pubblica Amministrazione pronta per il Linked Open Data.
+
+
+Project Description:
+Distribuzione drupal per la PA
+
+README:
+LinkedPA, una distribuzione Drupal per la Pubblica Amministrazione pronta per il Linked Open Data.

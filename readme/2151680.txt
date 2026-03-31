@@ -1,0 +1,20 @@
+Project Description:
+
+
+README:
+CSci 468 Compiler
+
+Just the scanner for now.
+
+First commit to github... woo.
+
+testing it again.
+
+testing commits with specified username
+
+ () ()
+ (o.O)
+ ().()
+(")_(")
+
+one more test? maybe not. this might be the last.

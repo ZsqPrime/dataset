@@ -1,0 +1,33 @@
+Project Description:
+logging framework, console/file/database outputs with automatic statistics  calculation in different resolutions for graphing
+
+README:
+logging system for nodejs, 
+don't use it in your project :) this was implemented really quickly in 4 am
+
+
+supporting coloured console, file and mongodb transports
+
+sample usage:
+
+var l = new Logger.Logger()
+
+l.outputs.push(new Logger.ConsoleOutput())
+l.outputs.push(new Logger.FileOutput('main.log'))
+l.outputs.push(new Logger.MongoOutput(collection))	
+
+
+
+another feature is automatic log parsing and data aggregation to graphs with different resolutions
+
+var statextractors = []
+
+statsextractors.push( function(item) {
+    if ((item.area == "http") && (item.loglevel == "request")) {
+	return { '$inc' : { httpreq: 1}}
+    }
+})
+
+
+var mongostats = new Logger.MongoStats(collection, statsextractors, 7.5 * 60 * 1000, 60 * 60 * 24 * 1000 )
+l.outputs.push(mongostats)

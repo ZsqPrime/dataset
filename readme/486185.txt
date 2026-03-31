@@ -1,0 +1,12 @@
+hello,pennyliang
+hello,Deep learning
+hello,I come here again,2017-12-14
+
+
+Project Description:
+using c++ code to show the example of machine learning
+
+README:
+hello,pennyliang
+hello,Deep learning
+hello,I come here again,2017-12-14

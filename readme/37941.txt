@@ -1,0 +1,9 @@
+Project Description:
+Go package for interacting with The Google Geocoding API.
+
+README:
+# This package has moved
+
+Its new home is https://github.com/talmai/geocode
+
+Please update your import paths to `"github.com/talmai/geocode"`

@@ -1,0 +1,5 @@
+Project Description:
+perl script for extracting management discussion & analysis from 10-k forms.
+
+README:
+dirty perl and python script to extract MDA(Management's Discussion and Analysis) from 10-K form.

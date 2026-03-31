@@ -1,0 +1,324 @@
+=encoding utf8
+
+=head1 NAME
+
+broom - a disk cleaning utility for developers
+
+=begin html
+
+<a href="https://asciinema.org/a/102852" target="_blank"><img src="http://i.imgur.com/VoqGIzo.png" width="717"/></a>
+
+=end html
+
+=head1 SYNOPSIS
+
+I<broom> [option...] [directory]
+
+=head1 DESCRIPTION
+
+broom recursively looks for projects inside a directory and cleans them
+by removing build artifacts (eg: by invoking "make clean"), optimizing
+version control system files (eg: by invoking "git gc"), etc.
+
+=head1 OPTIONS
+
+=over
+
+=item B<-n, --dry-run>
+
+Only show commands that would be executed instead of actually performing
+them.
+
+=item B<-t> I<TOOLS>B<, --tools=>I<TOOLS>
+
+Comma-separated list of tools to run the cleanup for. The available tools
+are: I<make>, I<rake>, I<python>, I<ant>, I<mvn>, I<gradle>, I<buildr>,
+I<sbt>, I<ninja>, I<scons>, I<waf>, I<rant>, I<git>, I<bundle>, I<vagrant>
+, I<cargo> and I<makepkg>. By default, all tools are used.
+
+=item B<-v, --verbose>
+
+Be more verbose. Pass this option several times to see debug info.
+
+=item B<-s, --stats>
+
+Print disk space gained.
+
+=item B<--noconfirm>
+
+Do not ask for confirmation before performing actions that may result in
+potential data loss (eg: destroying Vagrant boxes).
+
+=item B<-q, --quiet>
+
+Be less verbose. Pass this option several times to remove all output.
+
+=item B<-h, --help>
+
+Show usage information and exit.
+
+=item B<--version>
+
+Show version information and exit.
+
+=back
+
+=head1 EXAMPLES
+
+To perform cleanup in the current working directory:
+
+ broom
+
+To perform cleanup in your projects folder:
+
+ broom ~/projects
+
+To perform cleanup in your projects folder, with all logging on:
+
+ broom -vvv ~/projects
+
+To show what commands would be performed, without running them:
+
+ broom -n ~/projects
+
+
+To perform cleanup only for git and make projects:
+
+ broom -t git,make ~/projects
+
+=head1 FILES
+
+broom allows to define default execution parameters in the F<~/.broomrc>
+file. Here is an example of F<~/.broomrc> file:
+
+ # Use dry run mode by default.
+ DRY_RUN=true
+
+ # Only show warnings and errors.
+ LOG_LEVEL=0
+
+ # Show statistics.
+ STATS=true
+
+ # Run in projects directory.
+ DIRECTORY=~/projects
+
+ # Only look for some specific kind of projects.
+ TOOLS=(make python ant git)
+
+=begin html
+
+=head1 INSTALLING
+
+=head2 Using packages
+
+<table>
+  <tr>
+    <th>System</th>
+    <th>Installation instructions</th>
+  </tr>
+  <tr>
+    <td>Debian / Ubuntu</td>
+    <td><a href="https://software.opensuse.org/download.html?project=home%3Anicoulaj%3Abroom&package=broom">broom repository</a></td>
+  </tr>
+  <tr>
+    <td>Fedora / CentOS / RHEL / Scientific Linux</td>
+    <td><a href="https://software.opensuse.org/download.html?project=home%3Anicoulaj%3Abroom&package=broom">broom repository</a></td>
+  </tr>
+  <tr>
+    <td>OpenSUSE / SLE</td>
+    <td><a href="https://software.opensuse.org/download.html?project=home%3Anicoulaj%3Abroom&package=broom">broom repository</a></td>
+  </tr>
+  <tr>
+    <td>Arch Linux</td>
+    <td><a href="https://aur.archlinux.org/packages/broom">AUR</a></td>
+  </tr>
+</table>
+
+=head2 Building from sources
+
+<pre>
+git clone https://github.com/nicoulaj/broom.git
+cd broom
+make
+sudo make install
+</pre>
+
+=end html
+
+=begin man
+
+=head1 ISSUES
+
+Please report issues at https://github.com/nicoulaj/broom/issues.
+
+=head1 AUTHOR
+
+Julien Nicoulaud <julien.nicoulaud@gmail.com>
+
+=end man
+
+
+Project Description:
+A disk cleaning utility for developers.
+
+README:
+=encoding utf8
+
+=head1 NAME
+
+broom - a disk cleaning utility for developers
+
+=begin html
+
+<a href="https://asciinema.org/a/102852" target="_blank"><img src="http://i.imgur.com/VoqGIzo.png" width="717"/></a>
+
+=end html
+
+=head1 SYNOPSIS
+
+I<broom> [option...] [directory]
+
+=head1 DESCRIPTION
+
+broom recursively looks for projects inside a directory and cleans them
+by removing build artifacts (eg: by invoking "make clean"), optimizing
+version control system files (eg: by invoking "git gc"), etc.
+
+=head1 OPTIONS
+
+=over
+
+=item B<-n, --dry-run>
+
+Only show commands that would be executed instead of actually performing
+them.
+
+=item B<-t> I<TOOLS>B<, --tools=>I<TOOLS>
+
+Comma-separated list of tools to run the cleanup for. The available tools
+are: I<make>, I<rake>, I<python>, I<ant>, I<mvn>, I<gradle>, I<buildr>,
+I<sbt>, I<ninja>, I<scons>, I<waf>, I<rant>, I<git>, I<bundle>, I<vagrant>
+, I<cargo> and I<makepkg>. By default, all tools are used.
+
+=item B<-v, --verbose>
+
+Be more verbose. Pass this option several times to see debug info.
+
+=item B<-s, --stats>
+
+Print disk space gained.
+
+=item B<--noconfirm>
+
+Do not ask for confirmation before performing actions that may result in
+potential data loss (eg: destroying Vagrant boxes).
+
+=item B<-q, --quiet>
+
+Be less verbose. Pass this option several times to remove all output.
+
+=item B<-h, --help>
+
+Show usage information and exit.
+
+=item B<--version>
+
+Show version information and exit.
+
+=back
+
+=head1 EXAMPLES
+
+To perform cleanup in the current working directory:
+
+ broom
+
+To perform cleanup in your projects folder:
+
+ broom ~/projects
+
+To perform cleanup in your projects folder, with all logging on:
+
+ broom -vvv ~/projects
+
+To show what commands would be performed, without running them:
+
+ broom -n ~/projects
+
+
+To perform cleanup only for git and make projects:
+
+ broom -t git,make ~/projects
+
+=head1 FILES
+
+broom allows to define default execution parameters in the F<~/.broomrc>
+file. Here is an example of F<~/.broomrc> file:
+
+ # Use dry run mode by default.
+ DRY_RUN=true
+
+ # Only show warnings and errors.
+ LOG_LEVEL=0
+
+ # Show statistics.
+ STATS=true
+
+ # Run in projects directory.
+ DIRECTORY=~/projects
+
+ # Only look for some specific kind of projects.
+ TOOLS=(make python ant git)
+
+=begin html
+
+=head1 INSTALLING
+
+=head2 Using packages
+
+<table>
+  <tr>
+    <th>System</th>
+    <th>Installation instructions</th>
+  </tr>
+  <tr>
+    <td>Debian / Ubuntu</td>
+    <td><a href="https://software.opensuse.org/download.html?project=home%3Anicoulaj%3Abroom&package=broom">broom repository</a></td>
+  </tr>
+  <tr>
+    <td>Fedora / CentOS / RHEL / Scientific Linux</td>
+    <td><a href="https://software.opensuse.org/download.html?project=home%3Anicoulaj%3Abroom&package=broom">broom repository</a></td>
+  </tr>
+  <tr>
+    <td>OpenSUSE / SLE</td>
+    <td><a href="https://software.opensuse.org/download.html?project=home%3Anicoulaj%3Abroom&package=broom">broom repository</a></td>
+  </tr>
+  <tr>
+    <td>Arch Linux</td>
+    <td><a href="https://aur.archlinux.org/packages/broom">AUR</a></td>
+  </tr>
+</table>
+
+=head2 Building from sources
+
+<pre>
+git clone https://github.com/nicoulaj/broom.git
+cd broom
+make
+sudo make install
+</pre>
+
+=end html
+
+=begin man
+
+=head1 ISSUES
+
+Please report issues at https://github.com/nicoulaj/broom/issues.
+
+=head1 AUTHOR
+
+Julien Nicoulaud <julien.nicoulaud@gmail.com>
+
+=end man

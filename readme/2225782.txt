@@ -1,0 +1,13 @@
+MadridJS Logo Group Poll
+http://poll.madridjs.org
+
+You can find views in /src/main/webapp/WEB-INF/views directory. These views must end with .jsp extension.
+
+Project Description:
+A site to poll a MadridJS Logo Group 
+
+README:
+MadridJS Logo Group Poll
+http://poll.madridjs.org
+
+You can find views in /src/main/webapp/WEB-INF/views directory. These views must end with .jsp extension.

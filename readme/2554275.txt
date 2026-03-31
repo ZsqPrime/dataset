@@ -1,0 +1,9 @@
+Project Description:
+Interpreter for Untyped Arithmetic Expressions
+
+README:
+Authors: Anonymous, Rahul P
+
+Description: Interpreter for Untyped Arithmetic Expressions. 
+
+Objective: Add aditional features to UAE and modify the interpreter to suit the changes.

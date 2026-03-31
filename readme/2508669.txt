@@ -1,0 +1,7 @@
+Wallboard Monitor that connects to multiple Build Servers and collates build statuses
+
+Project Description:
+Wallboard Monitor for Multiple CI Build Server implementations
+
+README:
+Wallboard Monitor that connects to multiple Build Servers and collates build statuses

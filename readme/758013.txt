@@ -1,0 +1,12 @@
+iFBA by YoyoFR
+--------------
+iFBA is a port of Final Burn Alpha to iOS.
+
+
+Project Description:
+FBA port to iOS
+
+README:
+iFBA by YoyoFR
+--------------
+iFBA is a port of Final Burn Alpha to iOS.

@@ -1,0 +1,12 @@
+# BeeSQL - Pythonic SQL Library #
+
+This is deprecated. Please check https://github.com/kasun/BeeSQL2
+
+
+Project Description:
+Pythonic SQL Library
+
+README:
+# BeeSQL - Pythonic SQL Library #
+
+This is deprecated. Please check https://github.com/kasun/BeeSQL2

@@ -1,0 +1,20 @@
+# README
+
+This app is supposed to help government staffs to post their request for job location's exchange. This is actually my first public Rails application.
+
+# STATUS
+
+DEAD
+
+
+Project Description:
+Laman web untuk memudahkan penjawat awam membuat carian bagi pertukaran suka sama suka
+
+README:
+# README
+
+This app is supposed to help government staffs to post their request for job location's exchange. This is actually my first public Rails application.
+
+# STATUS
+
+DEAD

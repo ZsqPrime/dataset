@@ -1,0 +1,8 @@
+Code generator for markyb XmlBuilder.
+
+
+Project Description:
+Generate java code to create a markyb XmlBuilder for input XML
+
+README:
+Code generator for markyb XmlBuilder.

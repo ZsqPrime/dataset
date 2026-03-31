@@ -1,0 +1,6 @@
+Project Description:
+RCOS @ RPI Enstall
+
+README:
+Authentication needs to be added
+A system to tell site what software has been installed already

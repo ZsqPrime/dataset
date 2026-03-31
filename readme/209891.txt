@@ -1,0 +1,7 @@
+Resource picker application
+
+Project Description:
+Picks up resources from the classpath and generates an "enum" for the contents of the files
+
+README:
+Resource picker application

@@ -1,0 +1,7 @@
+Project Description:
+an openFrameworks addon to control the Blackmagic smart videohub SDI router
+
+README:
+open frameworks addon to control the blackmagic smart videohub SDI router.
+Should work with all blackmagic smart video line.
+Tested only with smart videohub.

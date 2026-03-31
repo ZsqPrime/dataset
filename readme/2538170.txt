@@ -1,0 +1,5 @@
+Project Description:
+Sends confirmation emails and executes commands when accepted.
+
+README:
+Call confirmation::send($email, $controller, $action, $arguments (array) ) to process a confirmation through an email.  The specified route is executed when the user clicks the confirm link.

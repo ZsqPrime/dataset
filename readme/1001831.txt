@@ -1,0 +1,14 @@
+
+minnow is a no-sql relational database in ongoing development, currently in alpha.
+
+See the Wiki for some documentation.
+
+
+Project Description:
+no-sql relational db
+
+README:
+
+minnow is a no-sql relational database in ongoing development, currently in alpha.
+
+See the Wiki for some documentation.

@@ -1,0 +1,6 @@
+
+
+Project Description:
+Nonparametric timeseries classification for Twitter trending topic detection (MEng thesis)
+
+README:

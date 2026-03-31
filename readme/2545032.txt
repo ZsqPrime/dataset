@@ -1,0 +1,4 @@
+Project Description:
+Dropbox like syncing tool with git versionning
+
+README:

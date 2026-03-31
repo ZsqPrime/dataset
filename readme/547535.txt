@@ -1,0 +1,8 @@
+png.identify.js is png file viewer in JavaScript.
+
+
+Project Description:
+None
+
+README:
+png.identify.js is png file viewer in JavaScript.

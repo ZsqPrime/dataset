@@ -1,0 +1,14 @@
+Remove Temporarily
+==================
+
+This extension has been discontinued, its source is only being kept for reference purposes. The ability to remove page elements from the Inspector tool is a built-in feature in current Firefox versions. The element's context menu in Inspector contains a "Delete Node" item with this functionality.
+
+
+Project Description:
+DISCONTINUED: Remove Temporarily Firefox extension allowed removing elements from the Inspector tool, this functionality is now built into Firefox.
+
+README:
+Remove Temporarily
+==================
+
+This extension has been discontinued, its source is only being kept for reference purposes. The ability to remove page elements from the Inspector tool is a built-in feature in current Firefox versions. The element's context menu in Inspector contains a "Delete Node" item with this functionality.

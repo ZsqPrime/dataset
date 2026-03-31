@@ -1,0 +1,60 @@
+Project Description:
+weekly
+
+README:
+== Welcome to Rails
+
+== Getting Started
+
+== Installation History
+
+ $ vi Gemfile
+ $ bundle install --deployment
+ ...
+ Your bundle is complete! It was installed into ./vendor/bundle
+ $ bundle exec rails g devise:install
+      create  config/initializers/devise.rb
+      create  config/locales/devise.en.yml
+ ...
+ $ bundle exec rails g devise user
+      invoke  active_record
+      create    db/migrate/20120222113830_devise_create_users.rb
+      create    app/models/user.rb
+      invoke    test_unit
+      create      test/unit/user_test.rb
+      create      test/fixtures/users.yml
+      insert    app/models/user.rb
+       route  devise_for :users
+ $ bundle exec rails g migration add_fields_to_users name:string
+      invoke  active_record
+      create    db/migrate/20120222114155_add_fields_to_users.rb
+ $ bundle exec rails g scaffold todo category:string description:text request_team:string request_user:string user:reference status:string started:datetime due:datetime finished:datetime note:text
+      invoke  active_record
+      create    db/migrate/20120222114550_create_todos.rb
+      create    app/models/todo.rb
+      invoke    test_unit
+      create      test/unit/todo_test.rb
+      create      test/fixtures/todos.yml
+       route  resources :todos
+      invoke  scaffold_controller
+      create    app/controllers/todos_controller.rb
+      invoke    erb
+      create      app/views/todos
+      create      app/views/todos/index.html.erb
+      create      app/views/todos/edit.html.erb
+      create      app/views/todos/show.html.erb
+      create      app/views/todos/new.html.erb
+      create      app/views/todos/_form.html.erb
+      invoke    test_unit
+      create      test/functional/todos_controller_test.rb
+      invoke    helper
+      create      app/helpers/todos_helper.rb
+      invoke      test_unit
+      create        test/unit/helpers/todos_helper_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/todos.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/todos.css.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.css.scss

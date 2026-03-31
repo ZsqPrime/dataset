@@ -1,0 +1,23 @@
+- This application allows the installation of all your Every-day applications automagically.
+
+The applications that it knows about are mostly the ones I use in my every-day working environment. 
+If you would like to use this copy, it's only a simple matter of changing some array's and cases to meet your
+needs. I've written the code and methods in a way that anyone able to read ruby should figure the application
+easily. 
+
+Rubén López
+
+
+
+Project Description:
+This application is used to automate installing the applications I used regularly
+
+README:
+- This application allows the installation of all your Every-day applications automagically.
+
+The applications that it knows about are mostly the ones I use in my every-day working environment. 
+If you would like to use this copy, it's only a simple matter of changing some array's and cases to meet your
+needs. I've written the code and methods in a way that anyone able to read ruby should figure the application
+easily. 
+
+Rubén López

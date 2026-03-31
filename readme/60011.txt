@@ -1,0 +1,12 @@
+# stack.js
+
+A presentation library with intuitive, scroll-based navigation.
+
+
+Project Description:
+A presentation library with intuitive, scroll-based navigation.
+
+README:
+# stack.js
+
+A presentation library with intuitive, scroll-based navigation.

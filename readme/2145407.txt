@@ -1,0 +1,120 @@
+Carnet de route;
+
+s1) Semaine du 23/01 au 27/01:
+- Première rencontre avec notre tuteur, Sébastien Badia,
+- Découverte du grid5000: réalisation des tutorials "starter".
+
+s2) Semaine du 30/01 au 03/02 :
+- Première prise en main de puppet pour Dimitri et Quentin,
+- Installation manuel de puppet sur le grid5000 réussite avec 3nodes,
+- Mise en place d'un script automatique de réservation de machines, installation du puppetmaster et des clients,
+- Création des modules Dns et MySQL.
+
+s3) Semaine du 06/02 au 10/02 :
+- Test d'utilisation de KaVLAN.
+- Création du module NFS pour puppet.
+- Fin du script automatique de reservation des nodes (reserv.sh), ainsi que l'installation et configuration de puppet
+sur le serveur puppet master et sur les puppet clients:
+
+$tree
+        puppet/
+                |-- ressources/
+                                 |-- modules/
+                                                 |--    nfs/
+                                                 |--    bind/
+                                                 |--    mysql/
+                                                 |--    oar/
+                                                 |--    kadeploy/
+                                 |-- fichiers/
+                                                 |--    puppetmaster
+                                                 |--    puppetclient
+                |-- scripts/
+                                 |-- master_config.sh
+                                 |-- clients_config.sh
+                                 |-- depot_dashboard.sh
+        scripts/
+                |-- fichiers/
+                                 |-- list_nodes
+                |-- install.sh
+                |-- reserv.sh
+
+s4) Semaine du 12/02 au 16/02 :
+ - correction de problèmes dans les scripts.
+ - rédaction du rapport de mi-projet.
+
+s5) Semaine du 26/02 au 02/03 :
+ - Ajout du module OAR dans Puppet (installation et configuration).
+ - Fixation du problème de Tunnel SSH avec Taktuk.
+ - Installation par le script de Puppet et du PuppetMaster sur les noeuds.
+
+s6) Semaine du 05/03 au 09/03:
+ - Optimisation des modules DNS et OAR pour Puppet.
+ - Mise en place du DHCP.
+
+s7) Semaine du 12/03 au 18/03:
+ -Creation de la recette puppet pour le dashboard.
+ -Optimisation de la recette concernant kadeploy3.
+ -Optimisation de la recette d'OAR.
+
+
+Project Description:
+
+
+README:
+Carnet de route;
+
+s1) Semaine du 23/01 au 27/01:
+- Première rencontre avec notre tuteur, Sébastien Badia,
+- Découverte du grid5000: réalisation des tutorials "starter".
+
+s2) Semaine du 30/01 au 03/02 :
+- Première prise en main de puppet pour Dimitri et Quentin,
+- Installation manuel de puppet sur le grid5000 réussite avec 3nodes,
+- Mise en place d'un script automatique de réservation de machines, installation du puppetmaster et des clients,
+- Création des modules Dns et MySQL.
+
+s3) Semaine du 06/02 au 10/02 :
+- Test d'utilisation de KaVLAN.
+- Création du module NFS pour puppet.
+- Fin du script automatique de reservation des nodes (reserv.sh), ainsi que l'installation et configuration de puppet
+sur le serveur puppet master et sur les puppet clients:
+
+$tree
+        puppet/
+                |-- ressources/
+                                 |-- modules/
+                                                 |--    nfs/
+                                                 |--    bind/
+                                                 |--    mysql/
+                                                 |--    oar/
+                                                 |--    kadeploy/
+                                 |-- fichiers/
+                                                 |--    puppetmaster
+                                                 |--    puppetclient
+                |-- scripts/
+                                 |-- master_config.sh
+                                 |-- clients_config.sh
+                                 |-- depot_dashboard.sh
+        scripts/
+                |-- fichiers/
+                                 |-- list_nodes
+                |-- install.sh
+                |-- reserv.sh
+
+s4) Semaine du 12/02 au 16/02 :
+ - correction de problèmes dans les scripts.
+ - rédaction du rapport de mi-projet.
+
+s5) Semaine du 26/02 au 02/03 :
+ - Ajout du module OAR dans Puppet (installation et configuration).
+ - Fixation du problème de Tunnel SSH avec Taktuk.
+ - Installation par le script de Puppet et du PuppetMaster sur les noeuds.
+
+s6) Semaine du 05/03 au 09/03:
+ - Optimisation des modules DNS et OAR pour Puppet.
+ - Mise en place du DHCP.
+
+s7) Semaine du 12/03 au 18/03:
+ -Creation de la recette puppet pour le dashboard.
+ -Optimisation de la recette concernant kadeploy3.
+ -Optimisation de la recette d'OAR.

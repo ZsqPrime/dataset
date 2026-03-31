@@ -1,0 +1,8 @@
+Project Description:
+A set of java port of script engine code
+
+README:
+**NOTICE: this project is moved to**
+**https://github.com/weimingtom/myosotis2**
+
+Please see sub-folders.

@@ -1,0 +1,14 @@
+voteit.site README
+
+This package is for internal use on any sites run by the project.
+You can use it as an example of how to do your own customisations.
+
+
+Project Description:
+Our own site specific customisations
+
+README:
+voteit.site README
+
+This package is for internal use on any sites run by the project.
+You can use it as an example of how to do your own customisations.

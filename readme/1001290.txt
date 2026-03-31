@@ -1,0 +1,408 @@
+Ginger
+======
+
+Spicy templating for node and the browser inspired by Twig, Dust and Hogan.js
+
+Build Status:  
+master: [![Build Status](https://secure.travis-ci.org/deoxxa/node-ginger.png?branch=master)](http://travis-ci.org/deoxxa/node-ginger)  
+develop: [![Build Status](https://secure.travis-ci.org/deoxxa/node-ginger.png?branch=develop)](http://travis-ci.org/deoxxa/node-ginger)  
+
+Overview
+--------
+
+```
+npm install ginger
+```
+
+Ginger is designed to be easy to use and extend, very portable and quick.
+Drawing inspiration for its syntax from Twig and jinja2, streaming rendering
+from dust and portability from Hogan.js, it is intended to bring the best
+aspects from existing libraries together in one package.
+
+Ginger compiles a Twig/jinja2 style template language to native JavaScript
+functions, with minimal dependencies. By using a subset of the language, a
+compiled template file can be used without any client side library whatsoever.
+To gain the full feature set, however, only a few extra kilobytes are required.
+
+Features
+--------
+
+1. Simple, expressive syntax
+2. Loops and conditional statements
+3. User defined filters and data sources
+4. Template inheritence
+5. Template inclusion
+6. Safe runtime, no direct variable access in compiled templates
+7. Static file compiler
+8. Asynchronous (soon also streaming) rendering
+9. Optional lazy compilation
+
+Documentation
+-------------
+
+This is lacking right now! There are some test templates in res/*.ginger if you
+want to see all the fun stuff Ginger can currently do, though. Help with this
+point would be greatly appreciated!
+
+Testing
+-------
+
+I'm using [vows](http://vowsjs.org/) for testing. The tests are in the "test"
+directory (funnily enough). As is pretty obvious, there aren't nearly enough
+tests written yet. If you're looking for a way to contribute, tests would be a
+great place to start.
+
+Gari
+----
+
+There is a tool included to compile template files to static .js files named
+"gari". You can find it in the "bin" directory, or in your path if you installed
+Ginger via npm and installed it globally.
+
+gari recursively compiles all the templates in the directory where it is run
+into one stand-alone JavaScript file. The resulting file can be used via a
+CommonJS style require() or by simply including it in a web page.
+
+NOTE: This file is almost completely stand-alone! It does not, however, include
+any custom filter functions you may have defined. It is unfortunately not
+practical to try to resolve them at compilation time.
+
+gari accepts various options:
+
+* n (name) - name of the root context object (default ctx)
+* e (export) - attach the root context object to module.exports (default no)
+* o (output) - write the compiled data to a file instead of stdout
+* b (beautify) - output formatted JavaScript as opposed to minified (default no)
+* i (include-context) - include the Context object in the output (default yes)
+
+Use of gari is as follows:
+
+    $ gari [-b] [-i] [-e] [-n name] [-o file]
+
+If you do not specify the -e option, you will find the context object named as
+specified in the -n argument, or as "ctx" if no name is specified.
+
+Example Template
+----------------
+
+```html
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    {% for person in people %}
+      <tr>
+        <td>{{ person.name|ucwords }}</td>
+        <td>{{ person.age|default("unknown") }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+```
+
+Example Usage
+-------------
+
+```javascript
+    var compiler = new Ginger.Compiler(),
+        root = new Ginger.Context();
+
+    root.on_not_found = function(name, cb) {
+      fs.readFile(__dirname + "/res/templates/" + name + ".ginger", function(err, data) {
+        if (err) {
+          return cb(err);
+        }
+
+        var parsed = Ginger.Parser.parse(data.toString());
+        var compiled = compiler.compile(parsed);
+
+        cb(null, new Function("ctx", "cb", compiled));
+      });
+    };
+
+    var ctx = root.create_child({
+      people: [
+        {name: "jack", gender: "male", age: 15, hobbies: ["fetching water", "going up hills", "falling down"]},
+        {name: "jill", gender: "female", age: 14, hobbies: ["following jack"]},
+        {name: "bowie", gender: "unknown", age: 999},
+        {name: "-"},
+      ],
+    });
+    ctx.add_function("default", function(input, args) { return input || args[0]; });
+    ctx.add_function("ucwords", function(input, args) { return input.replace(/(^|\s)([a-z])/g, function(m, p1, p2) { return p1 + p2.toUpperCase(); }); });
+
+    ctx.render("pages/simple", function(err, data) {
+      if (err) {
+        console.log(err);
+        return;
+      }
+
+      console.log(data);
+    });
+```
+
+Example Compiled JavaScript
+---------------------------
+
+```javascript
+    ctx.add_template("simple", function(ctx, cb) {
+      var ctx_0 = ctx.create_child(), q = ctx_0.create_queue(cb);
+      q.push("<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n")
+      var _tmp_key_1 = "", _tmp_obj_2 = ctx_0.get_value([ "people" ]);
+      for (_tmp_key_1 in _tmp_obj_2) {
+        (function() {
+          var ctx_3 = ctx_0.create_child({
+            person: _tmp_obj_2[_tmp_key_1],
+            key: _tmp_key_1
+          });
+          q.push("\n  <tr>\n    <td>")
+          q.push(ctx_3.call_function("ucwords", ctx_3.get_value([ "person", "name" ]), []))
+          q.push("</td>\n    <td>")
+          q.push(ctx_3.call_function("default", ctx_3.get_value([ "person", "age" ]), [ "unknown" ]))
+          q.push("</td>\n  </tr>\n")
+        })();
+      }
+      q.push("\n</table>\n")
+      q.run()
+    })
+```
+
+Example output
+--------------
+
+```html
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+
+      <tr>
+        <td>Jack</td>
+        <td>15</td>
+      </tr>
+
+      <tr>
+        <td>Jill</td>
+        <td>14</td>
+      </tr>
+
+      <tr>
+        <td>Bowie</td>
+        <td>999</td>
+      </tr>
+
+      <tr>
+        <td>-</td>
+        <td>unknown</td>
+      </tr>
+
+    </table>
+```
+
+
+Project Description:
+Spicy templating for node and the browser inspired by Twig, Dust.JS and Hogan.JS
+
+README:
+Ginger
+======
+
+Spicy templating for node and the browser inspired by Twig, Dust and Hogan.js
+
+Build Status:  
+master: [![Build Status](https://secure.travis-ci.org/deoxxa/node-ginger.png?branch=master)](http://travis-ci.org/deoxxa/node-ginger)  
+develop: [![Build Status](https://secure.travis-ci.org/deoxxa/node-ginger.png?branch=develop)](http://travis-ci.org/deoxxa/node-ginger)  
+
+Overview
+--------
+
+```
+npm install ginger
+```
+
+Ginger is designed to be easy to use and extend, very portable and quick.
+Drawing inspiration for its syntax from Twig and jinja2, streaming rendering
+from dust and portability from Hogan.js, it is intended to bring the best
+aspects from existing libraries together in one package.
+
+Ginger compiles a Twig/jinja2 style template language to native JavaScript
+functions, with minimal dependencies. By using a subset of the language, a
+compiled template file can be used without any client side library whatsoever.
+To gain the full feature set, however, only a few extra kilobytes are required.
+
+Features
+--------
+
+1. Simple, expressive syntax
+2. Loops and conditional statements
+3. User defined filters and data sources
+4. Template inheritence
+5. Template inclusion
+6. Safe runtime, no direct variable access in compiled templates
+7. Static file compiler
+8. Asynchronous (soon also streaming) rendering
+9. Optional lazy compilation
+
+Documentation
+-------------
+
+This is lacking right now! There are some test templates in res/*.ginger if you
+want to see all the fun stuff Ginger can currently do, though. Help with this
+point would be greatly appreciated!
+
+Testing
+-------
+
+I'm using [vows](http://vowsjs.org/) for testing. The tests are in the "test"
+directory (funnily enough). As is pretty obvious, there aren't nearly enough
+tests written yet. If you're looking for a way to contribute, tests would be a
+great place to start.
+
+Gari
+----
+
+There is a tool included to compile template files to static .js files named
+"gari". You can find it in the "bin" directory, or in your path if you installed
+Ginger via npm and installed it globally.
+
+gari recursively compiles all the templates in the directory where it is run
+into one stand-alone JavaScript file. The resulting file can be used via a
+CommonJS style require() or by simply including it in a web page.
+
+NOTE: This file is almost completely stand-alone! It does not, however, include
+any custom filter functions you may have defined. It is unfortunately not
+practical to try to resolve them at compilation time.
+
+gari accepts various options:
+
+* n (name) - name of the root context object (default ctx)
+* e (export) - attach the root context object to module.exports (default no)
+* o (output) - write the compiled data to a file instead of stdout
+* b (beautify) - output formatted JavaScript as opposed to minified (default no)
+* i (include-context) - include the Context object in the output (default yes)
+
+Use of gari is as follows:
+
+    $ gari [-b] [-i] [-e] [-n name] [-o file]
+
+If you do not specify the -e option, you will find the context object named as
+specified in the -n argument, or as "ctx" if no name is specified.
+
+Example Template
+----------------
+
+```html
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    {% for person in people %}
+      <tr>
+        <td>{{ person.name|ucwords }}</td>
+        <td>{{ person.age|default("unknown") }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+```
+
+Example Usage
+-------------
+
+```javascript
+    var compiler = new Ginger.Compiler(),
+        root = new Ginger.Context();
+
+    root.on_not_found = function(name, cb) {
+      fs.readFile(__dirname + "/res/templates/" + name + ".ginger", function(err, data) {
+        if (err) {
+          return cb(err);
+        }
+
+        var parsed = Ginger.Parser.parse(data.toString());
+        var compiled = compiler.compile(parsed);
+
+        cb(null, new Function("ctx", "cb", compiled));
+      });
+    };
+
+    var ctx = root.create_child({
+      people: [
+        {name: "jack", gender: "male", age: 15, hobbies: ["fetching water", "going up hills", "falling down"]},
+        {name: "jill", gender: "female", age: 14, hobbies: ["following jack"]},
+        {name: "bowie", gender: "unknown", age: 999},
+        {name: "-"},
+      ],
+    });
+    ctx.add_function("default", function(input, args) { return input || args[0]; });
+    ctx.add_function("ucwords", function(input, args) { return input.replace(/(^|\s)([a-z])/g, function(m, p1, p2) { return p1 + p2.toUpperCase(); }); });
+
+    ctx.render("pages/simple", function(err, data) {
+      if (err) {
+        console.log(err);
+        return;
+      }
+
+      console.log(data);
+    });
+```
+
+Example Compiled JavaScript
+---------------------------
+
+```javascript
+    ctx.add_template("simple", function(ctx, cb) {
+      var ctx_0 = ctx.create_child(), q = ctx_0.create_queue(cb);
+      q.push("<table>\n  <tr>\n    <th>Name</th>\n    <th>Age</th>\n  </tr>\n")
+      var _tmp_key_1 = "", _tmp_obj_2 = ctx_0.get_value([ "people" ]);
+      for (_tmp_key_1 in _tmp_obj_2) {
+        (function() {
+          var ctx_3 = ctx_0.create_child({
+            person: _tmp_obj_2[_tmp_key_1],
+            key: _tmp_key_1
+          });
+          q.push("\n  <tr>\n    <td>")
+          q.push(ctx_3.call_function("ucwords", ctx_3.get_value([ "person", "name" ]), []))
+          q.push("</td>\n    <td>")
+          q.push(ctx_3.call_function("default", ctx_3.get_value([ "person", "age" ]), [ "unknown" ]))
+          q.push("</td>\n  </tr>\n")
+        })();
+      }
+      q.push("\n</table>\n")
+      q.run()
+    })
+```
+
+Example output
+--------------
+
+```html
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+
+      <tr>
+        <td>Jack</td>
+        <td>15</td>
+      </tr>
+
+      <tr>
+        <td>Jill</td>
+        <td>14</td>
+      </tr>
+
+      <tr>
+        <td>Bowie</td>
+        <td>999</td>
+      </tr>
+
+      <tr>
+        <td>-</td>
+        <td>unknown</td>
+      </tr>
+
+    </table>
+```

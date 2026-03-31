@@ -1,0 +1,5 @@
+Project Description:
+Repository for IIIT Blogroll
+
+README:
+Blogroll is an aggregation of all blogs related to IIIT-H built using SimplePie and Bootstrap.

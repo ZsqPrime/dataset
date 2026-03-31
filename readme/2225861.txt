@@ -1,0 +1,13 @@
+XML->CoreData parser. Was useful when server sent data in XML form and
+we had to save it in a project to iPhone in CoreData form. Uses a special
+serialization format for CoreData object. There is a more useful
+JSON<->CoreData converter available, I recommend googling for it instead.
+
+Project Description:
+Able to read (a limited kind of) XML and populate Core Data objects according to it
+
+README:
+XML->CoreData parser. Was useful when server sent data in XML form and
+we had to save it in a project to iPhone in CoreData form. Uses a special
+serialization format for CoreData object. There is a more useful
+JSON<->CoreData converter available, I recommend googling for it instead.

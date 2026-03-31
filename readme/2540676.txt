@@ -1,0 +1,5 @@
+Project Description:
+CodeCademy Lessons complete answers as of 24/01/2012 update. Please don't use these as a quick cheat, use it for rectifying your mistakes and understanding how you went wrong. Will update when new courses come up.
+
+README:
+All JavaScript work from various places, e.g. CodeCademy etc.

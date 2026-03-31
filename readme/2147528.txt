@@ -1,0 +1,21 @@
+
+License
+=======
+
+Copyright 2010 by Geoloqi.com and contributors.
+
+See LICENSE
+
+
+
+Project Description:
+Please use our iPhone SDK as a reference instead of this repository.
+
+README:
+
+License
+=======
+
+Copyright 2010 by Geoloqi.com and contributors.
+
+See LICENSE

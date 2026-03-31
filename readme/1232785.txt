@@ -1,0 +1,51 @@
+= RPG Notepad
+* git (read-only):   git://github.com/DanielBaird/RPG-Notepad.git
+* website:         http://rpgnotepad.com
+
+== Authors:
+* Robert Pyke
+* Daniel Baird
+
+== Installation
+RPG Notepad is built using the express web application framework (http://expressjs.com). Express is a web development package for NodeJS (http://nodejs.org)
+
+To install RPG Notepad, do the following:
+1. Go to http://www.mongodb.org/downloads and download and install the mongodb distribution for your OS
+2. Start the mongod binary (+mongod+)
+3. Go to http://nodejs.org/#download, and follow the instructions to install nodejs
+4. Download and extract the the zip for this repository https://github.com/DanielBaird/RPG-Notepad/zipball/master
+5. At the command-line, move into the +code/rpgnotepad_express+ folder
+6. Install the dependencies using +npm+ (node package manager) via the following command:
+      npm install -d
+7. Assuming you succesfully installed all the dependencies and started the mongo server, start the application:
+      node app.js
+8. The application should now be running on port 3000 (http://localhost:3000)
+
+
+
+Project Description:
+A hosted notepad for refereeing (or Dungeon Mastering, or whatever you call it) tabletop role playing games.
+
+README:
+= RPG Notepad
+* git (read-only):   git://github.com/DanielBaird/RPG-Notepad.git
+* website:         http://rpgnotepad.com
+
+== Authors:
+* Robert Pyke
+* Daniel Baird
+
+== Installation
+RPG Notepad is built using the express web application framework (http://expressjs.com). Express is a web development package for NodeJS (http://nodejs.org)
+
+To install RPG Notepad, do the following:
+1. Go to http://www.mongodb.org/downloads and download and install the mongodb distribution for your OS
+2. Start the mongod binary (+mongod+)
+3. Go to http://nodejs.org/#download, and follow the instructions to install nodejs
+4. Download and extract the the zip for this repository https://github.com/DanielBaird/RPG-Notepad/zipball/master
+5. At the command-line, move into the +code/rpgnotepad_express+ folder
+6. Install the dependencies using +npm+ (node package manager) via the following command:
+      npm install -d
+7. Assuming you succesfully installed all the dependencies and started the mongo server, start the application:
+      node app.js
+8. The application should now be running on port 3000 (http://localhost:3000)

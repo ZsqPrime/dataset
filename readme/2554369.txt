@@ -1,0 +1,6 @@
+Project Description:
+Playing around with creating a better and faster scdoc parser with flex/bison
+
+README:
+This is just a temporary repo for developing a flex/bison generated parser for scdoc markup,
+to be used by SuperCollider instead of the now existing regexp based hack.

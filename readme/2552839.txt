@@ -1,0 +1,26 @@
+Project Description:
+Various utilities I like to use with git
+
+README:
+
+Some scripts etc which I have written and use to make my git life easier
+
+makegitbundle	- before I started using github (or if I don't want to)
+		  I use git bundle archives locally to backup, move git repos
+		  around. This script makes my life a bit easier.
+mext-header	- Not a script in itself but a file used by the above.
+
+		- I am indebted to people who gave me the starting point for
+		  this script by publishing their tips in blogs etc., particularly
+		  Emanuel Vianna at http://tiny.cc/h003x and Stuart Wells (http://www.stuartwells.net/slides/selfextract.htm) 
+
+git-summary	- prints a short summary about a git repo to stdout
+
+remgit - Based on a script from Christopher Kalima (https://gist.github.com/ckalima), it creates
+	a remote (which can actually be local, just remote from current dir) git repository, inits
+	current dir as a git repo if it isn't already and sets remote as 'origin'.
+
+makegittar - creates a tar archive of current git repo
+	checks for uncommited changes and then will only create archive if '-f' flag is used
+	by default creates tar file in parent dir to repo with name of format:
+	<repo-dir-name>-<branch>-<git-short-hash>-<yyyymmdd>.tgz

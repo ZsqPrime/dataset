@@ -1,0 +1,5 @@
+Project Description:
+This is a geo location based task reminder application for android
+
+README:
+This is an ongoing project, based on geo-location based task reminding. This app is particularly for Android

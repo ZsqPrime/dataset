@@ -1,0 +1,13 @@
+Project Description:
+a game for ITP's Big Games class, Spring 2012
+
+README:
+This project is created for ITP class Big Games, Spring 2012
+
+
+It demonstrates using ExpressJS framework with NodeJS for a multi-page website. The web app uses EJS as a template language. 
+
+- Template files are in the /views folder.
+- Static files are in the /static folder
+
+The files were created from the Heroku tutorial, "Getting Started with Node.js on Heroku/Cedar" http://devcenter.heroku.com/articles/node-js

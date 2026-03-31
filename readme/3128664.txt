@@ -1,0 +1,22 @@
+Project Description:
+Rollup of forks from the original django-registration on bitbucket, found at https://bitbucket.org/ubernostrum/django-registration
+
+README:
+NOTE: This is a rollup of most of the pull requests on bitbucket 
+applied to the latest original django-registration:
+
+https://bitbucket.org/ubernostrum/django-registration 
+
+========================
+Django user registration
+========================
+
+This is a fairly simple user-registration application for Django_,
+designed to make allowing user signups as painless as possible. It
+requires a functional installation of Django 1.1 or newer, but has no
+other dependencies.
+
+For installation instructions, see the file "INSTALL" in this
+directory; for instructions on how to use this application, and on
+what it provides, see the file "quickstart.rst" in the "docs/"
+directory.

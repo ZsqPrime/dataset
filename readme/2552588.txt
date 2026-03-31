@@ -1,0 +1,7 @@
+Project Description:
+mini twitter for training
+
+README:
+== Ruby on Rails Meterial
+
+First commit: After generate rails project

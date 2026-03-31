@@ -1,0 +1,5 @@
+Project Description:
+SeleniumTests
+
+README:
+Este projeto é referente ao estudo do livro Selenium Simplified Ebook

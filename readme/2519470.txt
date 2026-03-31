@@ -1,0 +1,5 @@
+Project Description:
+Simulação de um ambiente biológico virtual sujeito a fatores limitantes.
+
+README:
+Simulação de um ambiente biológico virtual, com duas espécies sujeitas a fatores limitantes...

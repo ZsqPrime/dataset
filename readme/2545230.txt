@@ -1,0 +1,30 @@
+Project Description:
+Management software problems
+
+README:
+h1. Issue Manager
+
+p. Manage problems of developing
+Server: Ruby on Rails 3
+Interface: Ext JS 4
+
+h2. Class Diagram
+
+developed with https://www.lucidchart.com
+
+!https://raw.github.com/flachadriano/issue-manager/master/documentation/issue-diagram.png!
+
+h2. Data Base
+
+developed with https://www.lucidchart.com
+
+!https://raw.github.com/flachadriano/issue-manager/master/documentation/issue-bd.png!
+
+h2. Screens (Prototype)
+
+developed with http://lumzy.com/app/
+
+!https://raw.github.com/flachadriano/issue-manager/master/documentation/screens-portuguese/usuario-cadastrar.jpg!!https://raw.github.com/flachadriano/issue-manager/master/documentation/screens-portuguese/projeto-cadastrar.jpg!
+!https://raw.github.com/flachadriano/issue-manager/master/documentation/screens-portuguese/projeto-permissoes.jpg!!https://raw.github.com/flachadriano/issue-manager/master/documentation/screens-portuguese/listagem.jpg!
+!https://raw.github.com/flachadriano/issue-manager/master/documentation/screens-portuguese/edicao-solicitante.jpg!!https://raw.github.com/flachadriano/issue-manager/master/documentation/screens-portuguese/edicao-desenvolvedor.jpg!
+!https://raw.github.com/flachadriano/issue-manager/master/documentation/screens-portuguese/cadastros.jpg!

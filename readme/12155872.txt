@@ -1,0 +1,8 @@
+Project Description:
+Plugin that utilizes spout to add custom items to your bukkit server
+
+README:
+What it's all about
+--------------------
+This is my first major spout plugin. It aims to add a physical coin to the game
+to be used for purchasing items, and paying other players.

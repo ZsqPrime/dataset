@@ -1,0 +1,6 @@
+
+
+Project Description:
+Set manager for Javascript and Nodejs with Redis-like interface
+
+README:

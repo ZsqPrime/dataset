@@ -1,0 +1,37 @@
+Project Description:
+Python API Building Language
+
+README:
+Python API Building Language
+===========================
+
+Write simple representations of exposed objects with Mako templates and python.
+
+Run tests
+---------
+
+* `python setup.py nosetests`
+
+Install
+-------
+
+* `python setup.py install`
+* Build your .pabl views:
+
+
+    @item account:    
+
+        # default values for everyone
+        first, second, third,
+        fourth;
+        # views restricted to user.in_role('marketplaces')
+        @permissions marketplaces:
+            restricted;
+
+* Associate with your model object (optional):
+
+    class Account(object):
+    
+        __pabl__ = '/views/account.pabl'
+
+* Call `PABL(...).render_to('json', item, user_like_object)` or `PABL(...).render_to('json', (item, 'account.pabl'), user_like_object)`

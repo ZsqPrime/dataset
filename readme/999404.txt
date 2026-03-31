@@ -1,0 +1,24 @@
+Bergen CodingDojo - Wednesday  18.1.2012
+
+Authors : Leffen & Bjørn Olav Thommesen
+
+A start for ruby solution to Conways game of life.
+
+Run :
+ruby gameoflife.rb
+
+
+
+
+Project Description:
+None
+
+README:
+Bergen CodingDojo - Wednesday  18.1.2012
+
+Authors : Leffen & Bjørn Olav Thommesen
+
+A start for ruby solution to Conways game of life.
+
+Run :
+ruby gameoflife.rb

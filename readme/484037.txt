@@ -1,0 +1,68 @@
+* package for GNU-R Statistical Computation Environment
+
+* installation in userspace
+start R console and type:
+> install.packages("sitools")
+
+
+* DONE
+ - add constants
+ - add float2sistring (f2si)
+ - add parameter for unit string
+ - added hint, that it works only for positive values at the moment
+ - fixed space bug
+ - enabled negative values
+
+* Todo
+ - add parameter for seperator again. 
+ - add sistring2float (si2f)
+ - improve Makefile
+ - evaluate hints from http://thread.gmane.org/gmane.comp.lang.r.general/250925/focus=250952
+
+   
+* Thanks to
+ - IRC Channel freenode #R
+ - R Mailinglist 
+ - Uwe Ligges (suggested NAMESPACE)
+ - Rui Barradas (Bugfix)
+ - William Dunlap (Bugfix)
+ - Ben Tupper (initial convert function)
+
+* Please leave me a note, if i missed to mention you here. 
+
+
+Project Description:
+R Package sitools
+
+README:
+* package for GNU-R Statistical Computation Environment
+
+* installation in userspace
+start R console and type:
+> install.packages("sitools")
+
+
+* DONE
+ - add constants
+ - add float2sistring (f2si)
+ - add parameter for unit string
+ - added hint, that it works only for positive values at the moment
+ - fixed space bug
+ - enabled negative values
+
+* Todo
+ - add parameter for seperator again. 
+ - add sistring2float (si2f)
+ - improve Makefile
+ - evaluate hints from http://thread.gmane.org/gmane.comp.lang.r.general/250925/focus=250952
+
+   
+* Thanks to
+ - IRC Channel freenode #R
+ - R Mailinglist 
+ - Uwe Ligges (suggested NAMESPACE)
+ - Rui Barradas (Bugfix)
+ - William Dunlap (Bugfix)
+ - Ben Tupper (initial convert function)
+
+* Please leave me a note, if i missed to mention you here.

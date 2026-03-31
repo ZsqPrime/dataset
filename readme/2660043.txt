@@ -1,0 +1,7 @@
+Project Description:
+Authentication module of Scriptorium
+
+README:
+= Auth
+
+This project rocks and uses MIT-LICENSE.

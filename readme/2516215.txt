@@ -1,0 +1,20 @@
+Germen de herramienta en perl para echar un ojo a bobadas en twitter.
+
+Fool script to check some crap in twitter ;)
+
+More information, ask twitter.com/apoz
+
+
+Project Description:
+TwitterTools
+
+README:
+Germen de herramienta en perl para echar un ojo a bobadas en twitter.
+
+
+
+Fool script to check some crap in twitter ;)
+
+
+
+More information, ask twitter.com/apoz

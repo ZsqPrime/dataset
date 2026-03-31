@@ -1,0 +1,9 @@
+Project Description:
+A rake task script to help you resetting your schema database to a previous state before loading new migrations
+
+README:
+A rake task script to help you resetting your schema database to a previous state before loading the database...
+
+I forgot to mention that it is required to have an schema_base.rb file within the db folder to allow this script to work..
+
+Then run your migrations and Voilà!!!

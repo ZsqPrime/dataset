@@ -1,0 +1,16 @@
+# Tangible Application
+This application is a test application for the tangible API located at https://github.com/lojeuv/TangibleAPI
+
+## Language
+Written in python 3 (http://python.org)
+
+
+Project Description:
+Project hosting various application that make use of the TangibleAPI to work with Sifteo-cubes or Sphero devices
+
+README:
+# Tangible Application
+This application is a test application for the tangible API located at https://github.com/lojeuv/TangibleAPI
+
+## Language
+Written in python 3 (http://python.org)

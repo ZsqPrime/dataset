@@ -1,0 +1,7 @@
+Project Description:
+Virtual Helproom
+
+README:
+Help-Room
+
+This application creates a virtual help room in which a TA or professor can video chat and share documents with students.

@@ -1,0 +1,8 @@
+Use python power for calculate fields of vector layers 
+
+
+Project Description:
+QGIS Plugin
+
+README:
+Use python power for calculate fields of vector layers

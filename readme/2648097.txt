@@ -1,0 +1,7 @@
+Project Description:
+Book scanning and processing application
+
+README:
+# eKniga #
+
+eKniga is an application that assists in and greatly simplifies book scanning and processing.

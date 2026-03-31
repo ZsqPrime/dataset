@@ -1,0 +1,12 @@
+A Russian Roulette game
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Russian roulette game for Erebot
+
+README:
+A Russian Roulette game
+
+Package detailed description here (found in README)

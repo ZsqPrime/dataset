@@ -1,0 +1,35 @@
+Project Description:
+A gem for integrating AWE into rails 3.1+ apps
+
+README:
+= awe-rails
+
+* This gem adds new generator to your rails app
+* These generator will install (or update) AWE for rails.
+* See https://github.com/sambaker/awe-core
+* If you have the assetpipeline enabled, AWE is installed there. Otherwise, it is copied into public/javascripts.
+
+== Installation
+
+In your Gemfile, add this line:
+
+    gem "awe-rails"
+
+Then, run bundle install. To invoke the generator, run:
+
+    rails generate awe:install
+    
+You're done!
+
+== Getting the latest AWE files
+
+Run,
+
+    rails generate awe:update
+
+== Copyright
+
+Copyright (c) 2012 Artefact Group LLC. 
+Licensed under MIT
+
+http://www.artefactgroup.com

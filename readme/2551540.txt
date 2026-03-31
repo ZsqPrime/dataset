@@ -1,0 +1,5 @@
+Project Description:
+custom files for oh-my-zsh
+
+README:
+This repository contains all my private cutsom oh-my-zsh stuff

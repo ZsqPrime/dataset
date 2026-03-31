@@ -1,0 +1,10 @@
+# WordlistManager
+A basic program (written in Visual Basic) for wordlist management. This includes copying, removing duplicates, etc.
+
+
+Project Description:
+A program (written in Visual Basic) for wordlist management. This includes copying, removing duplicates, etc.
+
+README:
+# WordlistManager
+A basic program (written in Visual Basic) for wordlist management. This includes copying, removing duplicates, etc.

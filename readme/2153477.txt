@@ -1,0 +1,6 @@
+Project Description:
+A World of Tanks strategy tool
+
+README:
+Demo
+http://dl.dropbox.com/u/12312520/The-War-Room/index.htm

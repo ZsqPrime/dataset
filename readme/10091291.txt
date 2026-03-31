@@ -1,0 +1,4 @@
+Project Description:
+This is a themeroller-capable grid plugin based largely off of Flexigrid.  It utilizes the same data format as flexigrid does, but works based off of jQuery UI's ThemeRoller CSS as well as their Widget capabilities.
+
+README:

@@ -1,0 +1,26 @@
+Cream-Browser is a lightweight web browser using GTK+, with the same interface as
+Vimperator, and released under the MIT license.
+
+REQUIREMENT:
+     - GTK+-3.0
+     - Lua
+
+AUTHORS:
+     - David Delassus <david.jose.delassus@gmail.com>
+     - Marc Lagrange <rhaamo@gruik.at>
+
+
+Project Description:
+Web browser developped in C with GTK+ (same interface as Vimperator)
+
+README:
+Cream-Browser is a lightweight web browser using GTK+, with the same interface as
+Vimperator, and released under the MIT license.
+
+REQUIREMENT:
+     - GTK+-3.0
+     - Lua
+
+AUTHORS:
+     - David Delassus <david.jose.delassus@gmail.com>
+     - Marc Lagrange <rhaamo@gruik.at>

@@ -1,0 +1,29 @@
+Helsingin yliopisto
+Tietojenkäsittelytieteen laitos
+Ohjelmistotuotantoprojekti kevät 2012
+
+Radioainelääkevaraston hallintasovellus
+
+Riku Heinonen
+Juuso Hyvönen
+Suvi Jentze-Korpi
+Jarno Korkola
+Maria Von Kügelgen
+
+
+
+Project Description:
+Radioainelääkevaraston hallintasovellus
+
+README:
+Helsingin yliopisto
+Tietojenkäsittelytieteen laitos
+Ohjelmistotuotantoprojekti kevät 2012
+
+Radioainelääkevaraston hallintasovellus
+
+Riku Heinonen
+Juuso Hyvönen
+Suvi Jentze-Korpi
+Jarno Korkola
+Maria Von Kügelgen

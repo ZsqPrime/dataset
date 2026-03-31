@@ -1,0 +1,6 @@
+
+
+Project Description:
+Tornado based Asterisk Manager Interface event dispatcher
+
+README:

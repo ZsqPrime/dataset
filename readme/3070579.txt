@@ -1,0 +1,10 @@
+Required packages:
+* php5-intl
+* convert
+* imagemagik
+* php5-suhosin
+* antiword
+* catdoc
+
+Please use db/initdb.sql for database bootstrap.
+

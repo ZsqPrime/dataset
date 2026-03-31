@@ -1,0 +1,9 @@
+Bambino works with Doula to serve data in a local test environment.
+
+
+
+Project Description:
+Reports and manages a node
+
+README:
+Bambino works with Doula to serve data in a local test environment.

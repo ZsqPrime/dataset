@@ -1,0 +1,4 @@
+Project Description:
+Another utility for PWS, which executes at startup and can run things, particularly pull git updates.
+
+README:

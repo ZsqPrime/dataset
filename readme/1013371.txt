@@ -1,0 +1,14 @@
+Before start:
+  sudo apt-get install python-pip
+  sudo pip install pyserial
+  sudo pip install easygui
+
+
+Project Description:
+Configurations for LINUX CNC (EMC2).
+
+README:
+Before start:
+  sudo apt-get install python-pip
+  sudo pip install pyserial
+  sudo pip install easygui

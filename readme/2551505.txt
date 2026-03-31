@@ -1,0 +1,4 @@
+Project Description:
+Client-side JS for node-accounts
+
+README:

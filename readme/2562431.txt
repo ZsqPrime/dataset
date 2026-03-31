@@ -1,0 +1,8 @@
+Project Description:
+Quellcode der Webseite vom infoini
+
+README:
+System requirements
+--------------------
+* django >= 1.2
+* python-textile

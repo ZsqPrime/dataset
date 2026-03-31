@@ -1,0 +1,13 @@
+Project Description:
+Hjemmeside til børnehaven, Børnehuset Grønnebakken
+
+README:
+# Børnehuset Grønnebakken
+
+# Install:
+==============
+bundle
+rails generate figaro:install
+rake db:migrate
+rake db:seed
+==============

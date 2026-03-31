@@ -1,0 +1,9 @@
+Project Description:
+Variant Calling for Ion Torrent
+
+README:
+
+Ion Variant Hunter README
+March 2013
+
+Ion Variant Hunter is legacy code that was used in Torrent Server version 1.5.1 and 2.0 and is no longer supported.

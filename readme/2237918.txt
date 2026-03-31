@@ -1,0 +1,12 @@
+Original LibRPG by Henrique Nakashima and Victor Matheus.
+
+Taken over by Eronarn and moved to GitHub on Feb 17, 2012.
+
+
+Project Description:
+A framework based on Pygame for developing RPGs
+
+README:
+Original LibRPG by Henrique Nakashima and Victor Matheus.
+
+Taken over by Eronarn and moved to GitHub on Feb 17, 2012.

@@ -1,0 +1,16 @@
+Basic PHP class to send SMS messages using the HTTP API @ directsms.com.au
+
+## Basic Usage ##
+
+See example.php for an example of basic usage.
+
+
+Project Description:
+PHP class for the DirectSMS.com.au API
+
+README:
+Basic PHP class to send SMS messages using the HTTP API @ directsms.com.au
+
+## Basic Usage ##
+
+See example.php for an example of basic usage.

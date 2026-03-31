@@ -1,0 +1,10 @@
+## This is the content of the https://marsjug.org/
+Please make a pull request to update it.
+
+
+Project Description:
+MarsJUG website
+
+README:
+## This is the content of the https://marsjug.org/
+Please make a pull request to update it.

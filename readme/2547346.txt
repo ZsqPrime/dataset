@@ -1,0 +1,13 @@
+Project Description:
+A Brainfuck-C Compiler
+
+README:
+This is a free software.(GPL V3)
+It's used to compiler Brainfuck codes into C.
+I think the C compiler CLANG might help this software run faster!!
+You can use it like this:
+
+[X@XX XXX]$make
+ZZZZZZZXXXXXXXYYYYYYY
+[X@XX XXX]$./LexBF <BRAINFUCK.b OUTPUT.c
+[X@XX XXX]$cc OUTPUT.c -o OUTPUT

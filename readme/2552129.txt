@@ -1,0 +1,4 @@
+Project Description:
+accounting of funds in family (qt4)
+
+README:

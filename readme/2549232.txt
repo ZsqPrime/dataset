@@ -1,0 +1,5 @@
+Project Description:
+Share your class schedule with your friends in a very sophisticated manner.
+
+README:
+Andrew Latham and Larry Muhlstein's super-awesome Windows Phone 7 app.

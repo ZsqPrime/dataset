@@ -1,0 +1,5 @@
+Project Description:
+source code derived from a blog post I wrote at http://www.amaxus.com/cms-blog/refactoring-to-clean-code illustrating some refactoring techniques
+
+README:
+See http://www.amaxus.com/cms-blog/refactoring-to-clean-code

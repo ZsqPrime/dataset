@@ -1,0 +1,17 @@
+Project Description:
+A command line python script that takes in a csv via stdin, and spits out a nicely formatted table using the data of the csv to stdout
+
+README:
+# Command-Line CSV viewer #
+author: akhaku
+
+description: A simple command line utility to view csv files as ASCII-style
+tables. 
+
+usage: Takes in the csv via stdin and outputs table to stdout.
+
+Example:
+
+    python csvparse.py < test.csv
+
+version 0.2.0 (alpha)

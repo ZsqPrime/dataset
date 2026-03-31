@@ -1,0 +1,67 @@
+Project Description:
+Kt is a framework that allows you to develop desktop applications in JavaScript.
+
+README:
+Kt
+
+DESCRIPTION
+ Kt is a framework that allows you to develop desktop applications 
+ with JavaScript.
+
+AUTHOR
+ Julien McArdle (www.jmcardle.com)
+ 
+SOFTWARE REQUIREMENTS
+ You must have the Qt development tools installed, as well as the
+ standard UNIX suite of tools (sed, grep, etc.)
+
+THE KT COMPILER
+ Executing the Compiler
+ ======================
+ ./compiler [OPTIONS]
+
+ Options: Paths
+ ==============
+ -k Kt path. This is the file path to the Kt framework, which contains
+    this file and the source code. By default, the compiler assumes that
+    this is the current working directory.
+ 
+ -i Input path. This is where your javascript source code, including
+    your source with the main() function, is located.   
+    
+ -o Output path. This is where your program will be compiled. If this
+    is undefined, the output path is assumed to be ../release.
+    
+ Options: Application Window
+ ===========================
+ -h Window height, in pixels.
+
+ -w Window width, in pixels.
+ 
+ -t Window title.
+ 
+ Options: Miscellaneous
+ ===========================
+ -n No execution. Do not execute the binary after compilation.
+ 
+COMPILATION EXAMPLES
+ ./compiler -i "examples/hello world" -t "Hello World"
+
+ ./compiler -i "examples/hello world" -n
+ 
+ ./compiler -w 1024 -h 768 -o "../calculator-compiled" \
+	-i "examples/calculator" -t "Calculator"
+
+JAVASCRIPT CODE REQUIREMENTS
+ Your source code must include a "main.js" file in which a main()
+ function is defined. This is the first function that will be executed
+ when your application starts.
+
+ The main() function will be called with a single parameter, identifying
+ the identifier of the HTML canvas element used by the software to draw
+ on. To use the included widgets, you will need to pass this identifier
+ to a kCanvas element. Please see the examples for demonstrations.
+
+ Including other source files is achieved by including a line that uses
+ the following pattern in your source code:
+   //#include "relative/path/to/file.js"

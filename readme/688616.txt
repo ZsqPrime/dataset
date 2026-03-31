@@ -1,0 +1,6 @@
+
+
+Project Description:
+precompiled libraries for dhewm 3
+
+README:

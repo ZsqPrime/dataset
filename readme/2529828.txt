@@ -1,0 +1,11 @@
+Project Description:
+A sinatra-powered web framework for mostly static websites
+
+README:
+# Polygon
+
+A web framework powered by sinatra for mostly static websites
+
+## Links
+
+http://github.com/blambeau/polygon

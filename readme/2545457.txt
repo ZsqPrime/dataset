@@ -1,0 +1,9 @@
+Project Description:
+A TCP implementation of JSON RPC for Twisted
+
+README:
+=============
+txjsonrpc-tcp
+=============
+
+``txjsonrpc-tcp`` is an implementation of JSON RPC over TCP for Twisted.

@@ -1,0 +1,9 @@
+Project Description:
+PHP Application Toolkit
+
+README:
+PAT - PHP application toolkit
+
+
+
+Requires PHP 5.4 and above

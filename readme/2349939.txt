@@ -1,0 +1,11 @@
+# Javascript Panic Board
+
+Panic board to display project information, based on backbone.js.
+
+Project Description:
+Backbone.js implementation of a Panic Board
+
+README:
+# Javascript Panic Board
+
+Panic board to display project information, based on backbone.js.

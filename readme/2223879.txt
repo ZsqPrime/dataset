@@ -1,0 +1,16 @@
+Install:
+
+Make a directory in addons/shared_addons/google_weather
+Copy the files into the directory
+Go to PyroCMS' control panel and activate the widget
+
+
+Project Description:
+Google Weather Widget for PyroCMS
+
+README:
+Install:
+
+Make a directory in addons/shared_addons/google_weather
+Copy the files into the directory
+Go to PyroCMS' control panel and activate the widget

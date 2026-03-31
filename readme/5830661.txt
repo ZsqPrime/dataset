@@ -1,0 +1,7 @@
+Project Description:
+GB Emulator for Windows Mobile 6
+
+README:
+GameBoy Emulator for Windows Mobile 6
+
+======

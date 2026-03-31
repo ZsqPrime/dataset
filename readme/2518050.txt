@@ -1,0 +1,8 @@
+Small library to a thread-like interface for swapcontext
+
+
+Project Description:
+
+
+README:
+Small library to a thread-like interface for swapcontext

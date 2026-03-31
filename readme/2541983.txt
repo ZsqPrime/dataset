@@ -1,0 +1,20 @@
+Project Description:
+The Compact Cucumber Formatter showing only what you really need.
+
+README:
+= Cocu
+
+This project rocks and uses MIT-LICENSE.
+
+To install:
+gem install cocu
+OR
+Add the following to your Gemfile: gem 'cocu'
+
+To use the formatter for the default cucumber execution you can use:
+
+rake cucumber:cocu
+
+If you want to use the formatter explicitly add the following to your cucumber call:
+
+--format cocu

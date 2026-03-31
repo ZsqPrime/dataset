@@ -1,0 +1,8 @@
+Project Description:
+a queue service based zeromq over http
+
+README:
+#start devent service
+npm start devent
+#stasrt queuer service
+node queuer-server -p listen-port -h listen-host --redis_port redis-port --redis_host redis-host

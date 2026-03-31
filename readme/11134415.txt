@@ -1,0 +1,18 @@
+Project Description:
+Tweaks for the OTRS Rich Text Editor
+
+README:
+This module for OTRS 3.1 provides some minor tweaks for the Rich Text Editor. A 3.0 version is also available.
+Right now it does the following:
+
+* Add the Table function to the toolbar
+* Add the Full Screen function to the toolbar
+* Restore the context menu for CKEditor
+
+After installing this module you can get the context menu of your browser by using
+Ctrl + Right Click (useful for your Firefox spell checker, for instance).
+
+I would say that some of this configuration can also be moved off to SysConfig at some
+point.
+
+Requests or contributions are welcome!

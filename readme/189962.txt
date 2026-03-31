@@ -1,0 +1,7 @@
+i try show here some simple examples in javascript for beginners.
+
+Project Description:
+None
+
+README:
+i try show here some simple examples in javascript for beginners.

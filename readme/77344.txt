@@ -1,0 +1,7 @@
+password_change(request[,template_name,post_change_redirect,password_change_form])
+
+Project Description:
+None
+
+README:
+password_change(request[,template_name,post_change_redirect,password_change_form])

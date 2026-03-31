@@ -1,0 +1,27 @@
+Project Description:
+World Information Manager - keeps track of writer's continuity information.
+
+README:
+Minette is a World (or Writer's) Information Manager.
+Eventually, you'll be able to use it to keep track of all your canon (continuity) information.
+But right now, it's in the alpha stage, so it doesn't do much useful.
+Suggestions welcome for features, corrections, functions, or anything else that might help to make this project better.
+
+Stage 1: Load and edit person records from XML is essentially done. (12/02/25)
+Stage 2: Save person records to XML...is done.(12/02/21)
+Stage 3: Load, edit, and save place records (XML)
+...info side is essentially done. (12/03/05)
+Stage 4: Load and edit city records (XML) is mostly done (12/03/08)
+Stage 5: Load and edit state records (XML)
+...is essentially done (12/04/11)
+Stage 6: Load and edit organization records (XML)
+
+Stage ?: Load and edit item records (XML)
+Stage ?: Customizable display for different types of persons/places/etc. (interview subjects cf. fictional characters)
+Stage ?: Load person records from SQL
+Stage ?: Save/Update person records to SQL
+Stage ?: Load/Save all other record types (SQL)
+Stage ?: Extensibility within the editor, defining custom rows (only additive?)
+Stage ?: Graceful read-only access to an SQL server
+Stage ?: Program will load XML files in your browser
+Stage ?: Generation of HTML index to all record files so they can be uploaded to a Web server and browsed by fans

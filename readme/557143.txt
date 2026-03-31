@@ -1,0 +1,12 @@
+This module integrates Doctrine 2.2 in Kohana 3.3.
+
+A complete tutorial can be found at http://www.reneterstegen.nl/kohana-doctrine . If you have any question don't hesitate to contact me on rene [at] i-llumination.nl
+
+
+Project Description:
+Integration of Doctrine 2.2 into Kohana 3.3
+
+README:
+This module integrates Doctrine 2.2 in Kohana 3.3.
+
+A complete tutorial can be found at http://www.reneterstegen.nl/kohana-doctrine . If you have any question don't hesitate to contact me on rene [at] i-llumination.nl

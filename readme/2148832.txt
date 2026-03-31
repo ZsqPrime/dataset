@@ -1,0 +1,175 @@
+Flatwhite (http://en.wikipedia.org/wiki/Flat_white)
+
+Node.js REST CMS, built for quick mobile applications.
+
+Requirements
+-------------
+
+  Node.js, 0.6 or higher
+  Connect, 1.8.5
+  nodeunit, 0.6.2
+  
+License
+-------------
+
+Flatwhite is released under the MIT license
+
+Database
+-------------
+
+  MongoDb:
+    
+    MongoDb: http://www.mongodb.org/
+    node-mongodb-native: https://github.com/christkv/node-mongodb-native
+
+  DB Whish list:
+
+    MySQL?
+    PostgreSQL?
+    CouchDB?
+    Redis?
+    
+
+The idea
+-------------
+
+Flatwhite is a very simple CMS, without any GUI, only REST APIs... That's it!
+
+  Version 1
+  Provide basic authentication and basic CMS. A content item has only Title,
+  Summary, Text. A content Item can have one or more Tags/Files.
+
+  Version 2
+  Optional custom fields for content items, related content. More Databases.
+
+  Version x
+  Is it really necessary?
+
+
+Build modules
+-------------
+
+Flatwhite allows you to write all the modules that you like, it's all in the 
+routing:
+
+/:version([0-9]+)/:module([a-z]+)/:item([a-z0-9]+)?/:child([a-z]+)?
+
+The main function checks which module has to be called and loads the module's
+file, for example posting a request to "/1/admin" will load the admin.js
+module. Modules must implement the "execute" method, called by the main
+process.
+
+
+Database modules
+-------------
+
+Flatwhite implements a very simple data abstraction layer. Similar to modules,
+the "driver" has to be saved in the modules/data folder and has to implement
+the "collection" object that expose the operations available on a specific
+collection of items (add, get, remove, update, list, find, etc...)
+
+
+Documentation
+------------- 
+
+Modules documentation files are in the docs folder. For more examples please
+refer to the tests section.
+
+
+Debug
+-------------
+
+Flatwhite uses by default the 8080 port, if you want to use node-inspector
+this is a working command line:
+
+$ node-inspector --web-port=8081  & node --debug flatwhite.js
+
+Project Description:
+Node.js API only CMS for quick mobile applications
+
+README:
+Flatwhite (http://en.wikipedia.org/wiki/Flat_white)
+
+Node.js REST CMS, built for quick mobile applications.
+
+Requirements
+-------------
+
+  Node.js, 0.6 or higher
+  Connect, 1.8.5
+  nodeunit, 0.6.2
+  
+License
+-------------
+
+Flatwhite is released under the MIT license
+
+Database
+-------------
+
+  MongoDb:
+    
+    MongoDb: http://www.mongodb.org/
+    node-mongodb-native: https://github.com/christkv/node-mongodb-native
+
+  DB Whish list:
+
+    MySQL?
+    PostgreSQL?
+    CouchDB?
+    Redis?
+    
+
+The idea
+-------------
+
+Flatwhite is a very simple CMS, without any GUI, only REST APIs... That's it!
+
+  Version 1
+  Provide basic authentication and basic CMS. A content item has only Title,
+  Summary, Text. A content Item can have one or more Tags/Files.
+
+  Version 2
+  Optional custom fields for content items, related content. More Databases.
+
+  Version x
+  Is it really necessary?
+
+
+Build modules
+-------------
+
+Flatwhite allows you to write all the modules that you like, it's all in the 
+routing:
+
+/:version([0-9]+)/:module([a-z]+)/:item([a-z0-9]+)?/:child([a-z]+)?
+
+The main function checks which module has to be called and loads the module's
+file, for example posting a request to "/1/admin" will load the admin.js
+module. Modules must implement the "execute" method, called by the main
+process.
+
+
+Database modules
+-------------
+
+Flatwhite implements a very simple data abstraction layer. Similar to modules,
+the "driver" has to be saved in the modules/data folder and has to implement
+the "collection" object that expose the operations available on a specific
+collection of items (add, get, remove, update, list, find, etc...)
+
+
+Documentation
+------------- 
+
+Modules documentation files are in the docs folder. For more examples please
+refer to the tests section.
+
+
+Debug
+-------------
+
+Flatwhite uses by default the 8080 port, if you want to use node-inspector
+this is a working command line:
+
+$ node-inspector --web-port=8081  & node --debug flatwhite.js

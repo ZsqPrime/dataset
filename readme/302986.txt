@@ -1,0 +1,24 @@
+####### ####### #####   #######
+   #    #     # #    #  #     #
+   #    #     # #     # #     #
+   #    #     # #     # #     #
+   #    #     # #     # #     #
+   #    #     # #    #  #     #
+   #    ####### #####   #######
+
+Join us on irc in #todo @ efnet.
+
+
+Project Description:
+Lightweight todo cli application for *nix
+
+README:
+####### ####### #####   #######
+   #    #     # #    #  #     #
+   #    #     # #     # #     #
+   #    #     # #     # #     #
+   #    #     # #     # #     #
+   #    #     # #    #  #     #
+   #    ####### #####   #######
+
+Join us on irc in #todo @ efnet.

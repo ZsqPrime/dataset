@@ -1,0 +1,11 @@
+Project Description:
+
+
+README:
+This was a web application I made while in college - its terrible name is evidence that there is some truth to naming things being one of the two hard problems in computer science.
+
+The application basically uses the same idea that Tinder and a thousand other copy cat dating apps use today (though this was made a couple years before those existed), users are only notified when there's mutual interest.  The idea was to launch for users of an existing community (colleges) and you could search through and mark individual users you were interested in.  There wasn't a swipe left/right mechanic and you could keep track of everyone you had marked in case you wanted to 'un cheq' them later.
+
+It's ancient at this point, but maybe somebody will find it interesting.  Micahel Hartl's Rails Tutorial was critical in learning how to get this to work.
+
+https://www.railstutorial.org/book

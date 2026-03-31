@@ -1,0 +1,7 @@
+This is a simple lightweight ASCII to Binary and Binary to ASCII converter. I have a wrapped jar for windows users and a jar for the rest.
+
+Project Description:
+A lightweight ASCII <-> Binary Converter
+
+README:
+This is a simple lightweight ASCII to Binary and Binary to ASCII converter. I have a wrapped jar for windows users and a jar for the rest.

@@ -1,0 +1,6 @@
+Project Description:
+Depot application from Agile Web Development with Rails book
+
+README:
+== Agile Web Development with Rails
+Application from the book

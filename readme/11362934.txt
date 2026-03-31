@@ -1,0 +1,5 @@
+Project Description:
+Implementation of the Neuroevolution of Augmenting Topologies Algorithm
+
+README:
+This is my Haskell implementation of the Dr. Kenneth Stanley's Neuroevolution of Augmenting Topologies algorithm.

@@ -1,0 +1,8 @@
+Project Description:
+Java library allowing to hash a file starting from binary
+
+README:
+File hasher
+=========
+
+This simple library is useful to hash a file, starting from its binary.

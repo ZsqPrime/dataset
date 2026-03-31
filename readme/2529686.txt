@@ -1,0 +1,12 @@
+Project Description:
+
+
+README:
+/******************** BEGIN  **************/
+
+@name : ListaViaggio
+@author : Morelli Gabriele
+@Description : una applicazione che ti aiuta quando deve fare le valigie
+
+
+/******************** END *****************/

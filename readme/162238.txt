@@ -1,0 +1,11 @@
+= EcmCmsNavigation
+
+This project rocks and uses MIT-LICENSE.
+
+Project Description:
+ECM CMS Navigation
+
+README:
+= EcmCmsNavigation
+
+This project rocks and uses MIT-LICENSE.

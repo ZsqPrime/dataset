@@ -1,0 +1,18 @@
+Project Description:
+Kozea's Gentoo Overlay
+
+README:
+This is a Gentoo overlay for stuff we use or make at Kozea.
+
+To use use it, create the file /etc/portage/repos.conf/kozea.conf
+    [kozea]
+    location = /var/lib/portage/repos/kozea
+    sync-type = git
+    sync-uri = https://github.com/Kozea/Overlay.git
+    auto-sync = yes
+
+Then synchronize the repositories and add the kozea overlay
+    emaint sync -r kozea
+
+See the Gentoo documentation for details:
+    http://www.gentoo.org/proj/en/overlays/userguide.xml

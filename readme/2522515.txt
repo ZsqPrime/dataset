@@ -1,0 +1,4 @@
+Project Description:
+Full Rhino Javascript http server. It aims to be install on android systems using SL4A.
+
+README:

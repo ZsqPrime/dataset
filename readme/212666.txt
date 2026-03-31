@@ -1,0 +1,86 @@
+# What is ean3?
+
+ean3 is wrapped around a ruby plugin EAN(Expedia Affiliate Network) API.
+The API document, please refer to the following url.
+
+http://developer.ean.com/docs/read/hotels/Version_3
+
+# How to use
+
+## console
+
+    gem install ean3
+
+## Gemfile
+
+    require 'ean3'
+
+## controller
+
+    options = {
+        :apikey => 'XXXXXXXXX',
+        :secret => 'XXXXXXXXX',
+        :cid => 'XXXXXXXX',
+        :minorRev => 12,
+        :locale => "ja_JP",
+        :currencyCode => "JPY",
+        :debug => true
+    }
+    @client = Ean3::Client.new(options)
+    @response = @client.getList({
+        :arrivalDate => "03/10/2012",
+        :departureDate => "03/13/2012"
+        :city => "tokyo"
+    })
+
+# Sample Project
+
+https://github.com/toshipon/ean3_sample
+
+Copyright (c) 2012 Toshiaki Takahashi, released under the MIT license
+
+
+Project Description:
+ean3 is wrapped around a ruby plugin EAN ( Expedia Affiliate Network ) API. The API document, please refer to the following url.
+
+README:
+# What is ean3?
+
+ean3 is wrapped around a ruby plugin EAN(Expedia Affiliate Network) API.
+The API document, please refer to the following url.
+
+http://developer.ean.com/docs/read/hotels/Version_3
+
+# How to use
+
+## console
+
+    gem install ean3
+
+## Gemfile
+
+    require 'ean3'
+
+## controller
+
+    options = {
+        :apikey => 'XXXXXXXXX',
+        :secret => 'XXXXXXXXX',
+        :cid => 'XXXXXXXX',
+        :minorRev => 12,
+        :locale => "ja_JP",
+        :currencyCode => "JPY",
+        :debug => true
+    }
+    @client = Ean3::Client.new(options)
+    @response = @client.getList({
+        :arrivalDate => "03/10/2012",
+        :departureDate => "03/13/2012"
+        :city => "tokyo"
+    })
+
+# Sample Project
+
+https://github.com/toshipon/ean3_sample
+
+Copyright (c) 2012 Toshiaki Takahashi, released under the MIT license

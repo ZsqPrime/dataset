@@ -1,0 +1,10 @@
+Xitrum Guide Book and presentations about Xitrum:
+https://github.com/xitrum-framework/xitrum
+
+
+Project Description:
+Doc for Xitrum
+
+README:
+Xitrum Guide Book and presentations about Xitrum:
+https://github.com/xitrum-framework/xitrum

@@ -1,0 +1,12 @@
+An arduino sketch which interfaces with RFXcom meter sensors (Pulse and reflective) and logs use to an SD card.
+
+Uses a sparkfun SD card shield and a RTC module. Pulls about 92 mA with an UNO board.
+
+
+Project Description:
+Uses an RFXcom pulsesensor or reflectivesensor device and logs gas readings to an SD card
+
+README:
+An arduino sketch which interfaces with RFXcom meter sensors (Pulse and reflective) and logs use to an SD card.
+
+Uses a sparkfun SD card shield and a RTC module. Pulls about 92 mA with an UNO board.

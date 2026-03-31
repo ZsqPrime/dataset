@@ -1,0 +1,4 @@
+Project Description:
+Praca magisterska z bioinformatyki - inteligentna adnotacja funkcjonalna
+
+README:

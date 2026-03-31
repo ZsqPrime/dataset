@@ -1,0 +1,7 @@
+Project Description:
+Spring MVC / Spring WebFlow / JSP Starter Web-App
+
+README:
+Spring Framework project startup
+
+[Spring MVC, Spring WebFlow, Hibernate, Apache Tiles, HSQLDB database (file)]

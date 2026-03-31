@@ -1,0 +1,12 @@
+Project Description:
+Python tools for manipulating Spring S3O meshes.
+
+README:
+These are some basic tools for manipulating S3O files in Python.
+Scripts and modules have been tested with Python 2.7 and Python 3, but
+should be compatible with Python >=2.6.
+More will be added later.
+
+s3o.py          - S3O parsing and serialization module
+s3o-optimize.py	- strips redundant data, reindexes and performs vertex
+                  cache optimization on S3O meshes

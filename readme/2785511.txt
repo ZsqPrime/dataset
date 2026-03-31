@@ -1,0 +1,5 @@
+Project Description:
+Melia is a desktop environment written entirely in python, targeted at mobile and small-screened devices
+
+README:
+You must apply the included patch to pyclutter for any of this to work. pyClutter initializes clutter internally, preventing us from enabling transparency.

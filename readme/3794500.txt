@@ -1,0 +1,5 @@
+Project Description:
+Puppet AutoSSH Management 
+
+README:
+WIP: Cleaning up from http://git.cmaisonneuve.qc.ca/?p=puppet/module-autossh;a=summary

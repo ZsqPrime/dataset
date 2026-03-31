@@ -1,0 +1,5 @@
+Project Description:
+stock market strategy developing and evaluating  tool
+
+README:
+JTotus - study project

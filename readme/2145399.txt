@@ -1,0 +1,9 @@
+FRP for dynamic reconfiguration
+
+
+
+Project Description:
+Dynamic reconfigurable linker for OCaml
+
+README:
+FRP for dynamic reconfiguration

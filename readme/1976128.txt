@@ -1,0 +1,13 @@
+An adaptation of RDFLib BerkeleyDB Store’s key-value approach,
+using Kyoto Cabinet as a back-end.
+
+Based on an original contribution by Drew Perttula.
+
+Project Description:
+RDFLib Store backed by Kyoto Cabinet (Python2.6+)
+
+README:
+An adaptation of RDFLib BerkeleyDB Store’s key-value approach,
+using Kyoto Cabinet as a back-end.
+
+Based on an original contribution by Drew Perttula.

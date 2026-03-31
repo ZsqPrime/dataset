@@ -1,0 +1,63 @@
+===============================================================================
+Python Client Library for the geekli.st API
+===============================================================================
+
+This repository contains the Python Client Library for geekli.st. Please consult
+http://geekli.st for more information regarding GeekList. Complete API
+documentation is available at http://hackers.geekli.st
+
+REQUIREMENTS
+
+	see requirements.txt
+
+INSTALLATION
+
+Latest version
+	1 - Clone repository : https://github.com/juliengrenier/python-geeklist
+	2 - Run python setup.py install
+
+GEEKLIST-CLI :
+	1 - Run python geeklist/cli.py
+	2 - Enter verifier in the prompt
+	3 - type help to see the available commands
+
+EXAMPLES
+	To run the example :
+
+	1 - Create a file call access.py
+	2 - Insert the following code consumer_info = {'key':YOUR_KEY, 'secret':YOUR_SECRET} into the file
+	3 - Run python ./geeklist_examples.py
+
+Project Description:
+GeekList python API client
+
+README:
+===============================================================================
+Python Client Library for the geekli.st API
+===============================================================================
+
+This repository contains the Python Client Library for geekli.st. Please consult
+http://geekli.st for more information regarding GeekList. Complete API
+documentation is available at http://hackers.geekli.st
+
+REQUIREMENTS
+
+	see requirements.txt
+
+INSTALLATION
+
+Latest version
+	1 - Clone repository : https://github.com/juliengrenier/python-geeklist
+	2 - Run python setup.py install
+
+GEEKLIST-CLI :
+	1 - Run python geeklist/cli.py
+	2 - Enter verifier in the prompt
+	3 - type help to see the available commands
+
+EXAMPLES
+	To run the example :
+
+	1 - Create a file call access.py
+	2 - Insert the following code consumer_info = {'key':YOUR_KEY, 'secret':YOUR_SECRET} into the file
+	3 - Run python ./geeklist_examples.py

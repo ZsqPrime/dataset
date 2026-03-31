@@ -1,0 +1,263 @@
+= Beautiful Scaffold
+
+Beautiful Scaffold is a gem which propose generators for a complete scaffold with paginate, sort and filter.
+Fully customizable.
+
+Note : Avoid to change Beautiful-Scaffold version in your project (incompatibility between generated code).
+Note 2 : Be careful to have a clean git repository for your project because Beautiful-Scaffold change many files.
+It will be easier to revert changes.
+
+Info : https://github.com/rivsc/Beautiful-Scaffold
+Demo : http://beautiful-scaffold.rivsc.ovh/ (Soon disabled : heroku stops its free plan)
+
+== Install
+
+Add this in the Gemfile of your rails app or engine :
+    gem 'beautiful_scaffold'
+
+=== Next
+
+And run
+
+    bundle install
+
+== Usage
+
+=== Scaffold
+
+    # model : underscore and singular
+    # mountable_engine : underscore
+    # namespace : underscore
+    rails generate beautiful_scaffold model attr:type attr:type... [--namespace=name] [--donttouchgem=yes] [--mountable_engine=name]
+
+Types available:
+* integer
+* float
+* text
+* string
+* price
+* color
+* wysiwyg
+
+(See below #label-Barcodes)
+
+# Example : products
+
+    rails g beautiful_scaffold product name:string price:price tva:float description:wysiwyg visible:boolean && rake db:migrate
+
+# Example : admin products
+
+    rails g beautiful_scaffold product name:string price:price tva:float description:wysiwyg overview_description:wysiwyg visible:boolean --namespace=admin && rake db:migrate
+
+# Example (for an engine) :
+    # You need to add beautiful-scaffold to the gemfile of the engine (not the gemspec !).
+
+    rails g beautiful_scaffold user code:string --mountable-engine=faq
+    rails g beautiful_scaffold question title:string description:wysiwyg user:references resolved:boolean --mountable-engine=faq
+    rails g beautiful_scaffold answer description:wysiwyg user:references up:integer down:integer --mountable-engine=faq
+    rails g beautiful_migration AddPositionToFaqAnswers position:integer --mountable-engine=faq
+    rails g beautiful_jointable answer tag --mountable-engine=faq
+
+=== Migration (Use Add[Field]To[ModelPluralize] syntax)
+
+    rails g beautiful_migration AddFieldToModels field:type
+
+=== Locale (i18n) (Example)
+
+Run `rake db:migrate` before `rails g beautiful_locale` (to get lastest attribute translation)
+
+    rails g beautiful_locale all
+    rails g beautiful_locale en
+    rails g beautiful_locale fr
+    rails g beautiful_locale de
+
+=== Join Table (has_and_belongs_to_many relation)
+
+    rails g beautiful_jointable model1 model2
+
+=== Install et preconfigure Sorcery (authentification) (this generator doesn't work on engine)
+
+    # If it is not done yet
+    rails g beautiful_scaffold user email:string
+    rails g beautiful_sorcery
+
+=== Install et preconfigure Cancancan (authorization) (this generator doesn't work on engine)
+
+    # If it is not done yet
+    rails g beautiful_scaffold user email:string
+    # If it is not done yet
+    rails g beautiful_sorcery
+    rails g beautiful_cancancan
+
+=== Storage (ActiveStorage)
+
+   rails g beautiful_storage model attachment_field
+
+=== In views
+
+==== Barcodes
+
+Set code like this :
+
+    <span class="barcode" data-barcode="1234567890128" data-type-barcode="ean13"></span>
+
+data-type-barcode can be :
+
+    codabar
+    code11 (code 11)
+    code39 (code 39)
+    code93 (code 93)
+    code128 (code 128)
+    ean8 (ean 8)
+    ean13 (ean 13)
+    std25 (standard 2 of 5 - industrial 2 of 5)
+    int25 (interleaved 2 of 5)
+    msi
+    datamatrix (ASCII + extended)
+
+==== Driverjs (overlay instructions)
+
+Example : when you click on the #bs-help tag presentation tour display on screen !
+
+If you want to add 'slide' :
+
+For add instruction to DOM element, add this to your markup :
+
+id="myunique-id-in-the-page" data-present-title="Title for the slide" data-present-description="Short description" data-present-order="1"
+
+And Beautiful-Scaffold does the job !
+
+
+
+Project Description:
+Rails 3 generator for a complete and beautiful scaffold.
+
+README:
+= Beautiful Scaffold
+
+Beautiful Scaffold is a gem which propose generators for a complete scaffold with paginate, sort and filter.
+Fully customizable.
+
+Note : Avoid to change Beautiful-Scaffold version in your project (incompatibility between generated code).
+Note 2 : Be careful to have a clean git repository for your project because Beautiful-Scaffold change many files.
+It will be easier to revert changes.
+
+Info : https://github.com/rivsc/Beautiful-Scaffold
+Demo : http://beautiful-scaffold.rivsc.ovh/ (Soon disabled : heroku stops its free plan)
+
+== Install
+
+Add this in the Gemfile of your rails app or engine :
+    gem 'beautiful_scaffold'
+
+=== Next
+
+And run
+
+    bundle install
+
+== Usage
+
+=== Scaffold
+
+    # model : underscore and singular
+    # mountable_engine : underscore
+    # namespace : underscore
+    rails generate beautiful_scaffold model attr:type attr:type... [--namespace=name] [--donttouchgem=yes] [--mountable_engine=name]
+
+Types available:
+* integer
+* float
+* text
+* string
+* price
+* color
+* wysiwyg
+
+(See below #label-Barcodes)
+
+# Example : products
+
+    rails g beautiful_scaffold product name:string price:price tva:float description:wysiwyg visible:boolean && rake db:migrate
+
+# Example : admin products
+
+    rails g beautiful_scaffold product name:string price:price tva:float description:wysiwyg overview_description:wysiwyg visible:boolean --namespace=admin && rake db:migrate
+
+# Example (for an engine) :
+    # You need to add beautiful-scaffold to the gemfile of the engine (not the gemspec !).
+
+    rails g beautiful_scaffold user code:string --mountable-engine=faq
+    rails g beautiful_scaffold question title:string description:wysiwyg user:references resolved:boolean --mountable-engine=faq
+    rails g beautiful_scaffold answer description:wysiwyg user:references up:integer down:integer --mountable-engine=faq
+    rails g beautiful_migration AddPositionToFaqAnswers position:integer --mountable-engine=faq
+    rails g beautiful_jointable answer tag --mountable-engine=faq
+
+=== Migration (Use Add[Field]To[ModelPluralize] syntax)
+
+    rails g beautiful_migration AddFieldToModels field:type
+
+=== Locale (i18n) (Example)
+
+Run `rake db:migrate` before `rails g beautiful_locale` (to get lastest attribute translation)
+
+    rails g beautiful_locale all
+    rails g beautiful_locale en
+    rails g beautiful_locale fr
+    rails g beautiful_locale de
+
+=== Join Table (has_and_belongs_to_many relation)
+
+    rails g beautiful_jointable model1 model2
+
+=== Install et preconfigure Sorcery (authentification) (this generator doesn't work on engine)
+
+    # If it is not done yet
+    rails g beautiful_scaffold user email:string
+    rails g beautiful_sorcery
+
+=== Install et preconfigure Cancancan (authorization) (this generator doesn't work on engine)
+
+    # If it is not done yet
+    rails g beautiful_scaffold user email:string
+    # If it is not done yet
+    rails g beautiful_sorcery
+    rails g beautiful_cancancan
+
+=== Storage (ActiveStorage)
+
+   rails g beautiful_storage model attachment_field
+
+=== In views
+
+==== Barcodes
+
+Set code like this :
+
+    <span class="barcode" data-barcode="1234567890128" data-type-barcode="ean13"></span>
+
+data-type-barcode can be :
+
+    codabar
+    code11 (code 11)
+    code39 (code 39)
+    code93 (code 93)
+    code128 (code 128)
+    ean8 (ean 8)
+    ean13 (ean 13)
+    std25 (standard 2 of 5 - industrial 2 of 5)
+    int25 (interleaved 2 of 5)
+    msi
+    datamatrix (ASCII + extended)
+
+==== Driverjs (overlay instructions)
+
+Example : when you click on the #bs-help tag presentation tour display on screen !
+
+If you want to add 'slide' :
+
+For add instruction to DOM element, add this to your markup :
+
+id="myunique-id-in-the-page" data-present-title="Title for the slide" data-present-description="Short description" data-present-order="1"
+
+And Beautiful-Scaffold does the job !

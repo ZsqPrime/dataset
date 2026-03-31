@@ -1,0 +1,20 @@
+For documentation, see wiki https://github.com/thussain/PresentationModel-using-YUI3/wiki/User-Interface-Architecture-for-Developer-Productivity
+
+Install instructions:
+$ npm install
+$ node filesys.js
+$ node server.js
+In your browser: http://localhost:3000/
+
+
+Project Description:
+PresentationModel using YUI3 Application Framework
+
+README:
+For documentation, see wiki https://github.com/thussain/PresentationModel-using-YUI3/wiki/User-Interface-Architecture-for-Developer-Productivity
+
+Install instructions:
+$ npm install
+$ node filesys.js
+$ node server.js
+In your browser: http://localhost:3000/

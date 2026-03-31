@@ -1,0 +1,5 @@
+Project Description:
+Puppet manifests and modules
+
+README:
+Source: "Pro Puppet" by James Turnbull and Jeffrey McCune

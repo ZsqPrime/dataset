@@ -1,0 +1,7 @@
+Project Description:
+JavaScript-based BUGswarm connector.
+
+README:
+# BUGswarm: Web Connector
+
+Be sure to regenerate `index.html` from `index.jade` when making changes.

@@ -1,0 +1,28 @@
+Project Description:
+List of countries as a django application, taken from ISO 3166
+
+README:
+# Incuna Countries
+
+Add countries support to your application
+
+## Installation
+
+Install Countries with your favourite package manager:
+
+    pip install incuna-countries
+
+Add `countries` to your `INSTALLED_APPS` setting:
+
+    INSTALLED_APPS = (
+        # other apps
+        'countries',
+    )
+
+You can now ForeignKey the ```Country``` object from your models.
+
+### Fixtures
+
+Load the default list of countries into your database with loaddata:
+   
+    python manage.py loaddata default_countries

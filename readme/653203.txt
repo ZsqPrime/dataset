@@ -1,0 +1,5 @@
+Project Description:
+A sample project to serve as a starting point for Android projects
+
+README:
+About Android Boilerplate

@@ -1,0 +1,11 @@
+Project Description:
+Kernel driver for the CAT3636 high efficiency 1x/1.5x fractional charge pump with programmable dimming current in six LED channels
+
+README:
+cat3626.c : kernel driver test on 2.6.32-rc8
+cat3626.bb : bit-bake recipe for OE used to compile the above
+Makefile : for the above
+
+See it working here:
+
+http://www.electronics.diycinema.co.uk/embedded/mini2440/cat3626-rgb-led-driver-qt-embedded-4-6-on-the-mini2440/

@@ -1,0 +1,314 @@
+Neo4jD can be downloaded from "Nuget":http://nuget.org/packages/Neo4jD
+
+*Persist Static typed Entities to Neo4j using Neo4jD*
+
+At the core Neo4jD uses Node and Relationship to persist data to Neo4j graph database. If you want to see how the core is working then visit "here":https://github.com/sonyarouje/Neo4jD/wiki. You might notice that, the Node and Relationship is not static typed objects. Most of us work with Static typed entities and want to persist the same. To deal with static typed entities I added a layer on top of Neo4jD core called NodeMapper.
+
+*Node Mapper*
+Below are the features of NodeMapper 
+* Map the entity to Node object and persist in Neo4j. 
+* Handles the relation between entities, if an entity has a sub entity then NodeMapper will create a relationship between them.
+* Persist the object graph using the Model created, will cover later in the page.
+* Inject interceptor for Lazy loading of related entities.
+* And more
+
+*How to Persist entities using NodeMapper*
+To persist the entities, first we need to draw the object graph of the Entity we need to persist. Let's have a look at an eg.
+
+<pre><code>
+    public class Order
+    {
+        public Order()
+        {
+            _orderItems = new List<OrderItem>();
+        }
+
+        [EntityId]
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        IList<OrderItem> _orderItems;
+        public virtual IList<OrderItem> OrderItems 
+        { 
+            get { return _orderItems; }
+            private set { _orderItems = value; }
+        }
+        public void AddOrderItem(OrderItem item)
+        {
+            this._orderItems.Add(item);
+        }
+    }
+
+    public class OrderItem
+    {
+        public OrderItem()
+        {
+        }
+        public OrderItem(int id, Product product)
+        {
+            this.Id = id;
+            this.Product = product;
+        }
+        [EntityId]
+        public int Id { get; set; }
+        public virtual Product Product { get; set; }
+    }
+
+    public class Product
+    {
+        public Product()
+        {
+
+        }
+        public Product(int id, string productName)
+        {
+            this.Id = id;
+            this.ProductName = productName;
+        }
+        [EntityId]
+        public int Id { get; set; }
+        public string ProductName { get; set; }
+    }
+</code></pre>
+
+You can notice some rules in defining entities.
+* The unique Id field is decorated with EntityId attribute. It's mandatory to identify the Id field of the entity.
+* Properties that needs Lazy loading should be virtual.
+* Mandatory to have a default parameter less constructor.
+
+Now let's define the object graph. This configuration helps NodeMapper to persist the entire Graph. It's very similar to how we do in Entity Framwork Code first approach.
+<pre><code>
+    public class OrderConfiguration:EntityConfiguration<Order>
+    {
+        public OrderConfiguration()
+        {
+            this.RelatedTo<OrderItem>(o => o.OrderItems);
+        }
+    }
+    public class OrderItemConfiguration:EntityConfiguration<OrderItem>
+    {
+        public OrderItemConfiguration()
+        {
+            this.RelatedTo<Product>(oi => oi.Product);
+        }
+    }
+    public class ProductConfiguration:EntityConfiguration<Product>
+    {
+        public ProductConfiguration()
+        {
+            this.Leaf();
+        }
+    }
+</code></pre>
+As you can see the ProductConfiguration there is no related entity so we marked it as Leaf.
+
+Let's see how to persist an order
+<pre><code>
+        [SetUp]
+        public void Initialize()
+        {
+            GraphEnvironment.SetBaseUri("http://localhost:7474/");
+            ModelBuilder.Add(new OrderConfiguration());
+            ModelBuilder.Add(new OrderItemConfiguration());
+            ModelBuilder.Add(new ProductConfiguration());
+
+            //Add the assemblies to the builder. We should pass Assembly path and Assmebly Name.
+            ModelBuilder.AddAssembly((new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).AbsolutePath);
+        }
+        [TestCase]
+        public void SaveObjectGraph()
+        {
+            Order order = new Order();
+            order.Id = 0;
+            order.Name = "Sony";
+            order.AddOrderItem(new OrderItem(0, new Product(0, "Rice")));
+            order.AddOrderItem(new OrderItem(0, new Product(0, "Sugar")));
+            NodeMapper nodeMapper = new NodeMapper();
+            nodeMapper.Save<Order>(order);
+            Assert.AreEqual(1, order.Id);
+        }
+</code></pre>
+In the Initialize method of NUnit Test we added EntityConfiguration to ModelBuilder. NodeMapper uses the ModelBuilder to understand the Object graph and uses reflection to traverse through the object graph and persist it.
+
+*Lazy Loading*
+Neo4jD uses Lazy loading to load the related entities, it uses Castle DynamicProxy to intercept property calls and inject lazy loading functionality. To perform lazy loading the property should be virtual,  you can see the OrderItems in Order entity. 
+
+*Retrieve saved Entity*
+<pre><code>
+        [TestCase]
+        public void GetOrder()
+        {
+            NodeMapper nodeMapper = new NodeMapper();
+            Order order = nodeMapper.Get<Order>(14);
+            Assert.AreEqual(14, order.Id);
+            foreach (OrderItem item in order.OrderItems)
+            {
+                Console.WriteLine(item.Id.ToString());
+                Product prod = item.Product;
+                if (prod != null)
+                    Console.WriteLine(prod.ProductName);
+            }
+            Assert.AreEqual(2, order.OrderItems.Count);
+        }
+</code></pre>
+
+
+
+
+Project Description:
+Neo4j Client for .NET
+
+README:
+Neo4jD can be downloaded from "Nuget":http://nuget.org/packages/Neo4jD
+
+*Persist Static typed Entities to Neo4j using Neo4jD*
+
+At the core Neo4jD uses Node and Relationship to persist data to Neo4j graph database. If you want to see how the core is working then visit "here":https://github.com/sonyarouje/Neo4jD/wiki. You might notice that, the Node and Relationship is not static typed objects. Most of us work with Static typed entities and want to persist the same. To deal with static typed entities I added a layer on top of Neo4jD core called NodeMapper.
+
+*Node Mapper*
+Below are the features of NodeMapper 
+* Map the entity to Node object and persist in Neo4j. 
+* Handles the relation between entities, if an entity has a sub entity then NodeMapper will create a relationship between them.
+* Persist the object graph using the Model created, will cover later in the page.
+* Inject interceptor for Lazy loading of related entities.
+* And more
+
+*How to Persist entities using NodeMapper*
+To persist the entities, first we need to draw the object graph of the Entity we need to persist. Let's have a look at an eg.
+
+<pre><code>
+    public class Order
+    {
+        public Order()
+        {
+            _orderItems = new List<OrderItem>();
+        }
+
+        [EntityId]
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        IList<OrderItem> _orderItems;
+        public virtual IList<OrderItem> OrderItems 
+        { 
+            get { return _orderItems; }
+            private set { _orderItems = value; }
+        }
+        public void AddOrderItem(OrderItem item)
+        {
+            this._orderItems.Add(item);
+        }
+    }
+
+    public class OrderItem
+    {
+        public OrderItem()
+        {
+        }
+        public OrderItem(int id, Product product)
+        {
+            this.Id = id;
+            this.Product = product;
+        }
+        [EntityId]
+        public int Id { get; set; }
+        public virtual Product Product { get; set; }
+    }
+
+    public class Product
+    {
+        public Product()
+        {
+
+        }
+        public Product(int id, string productName)
+        {
+            this.Id = id;
+            this.ProductName = productName;
+        }
+        [EntityId]
+        public int Id { get; set; }
+        public string ProductName { get; set; }
+    }
+</code></pre>
+
+You can notice some rules in defining entities.
+* The unique Id field is decorated with EntityId attribute. It's mandatory to identify the Id field of the entity.
+* Properties that needs Lazy loading should be virtual.
+* Mandatory to have a default parameter less constructor.
+
+Now let's define the object graph. This configuration helps NodeMapper to persist the entire Graph. It's very similar to how we do in Entity Framwork Code first approach.
+<pre><code>
+    public class OrderConfiguration:EntityConfiguration<Order>
+    {
+        public OrderConfiguration()
+        {
+            this.RelatedTo<OrderItem>(o => o.OrderItems);
+        }
+    }
+    public class OrderItemConfiguration:EntityConfiguration<OrderItem>
+    {
+        public OrderItemConfiguration()
+        {
+            this.RelatedTo<Product>(oi => oi.Product);
+        }
+    }
+    public class ProductConfiguration:EntityConfiguration<Product>
+    {
+        public ProductConfiguration()
+        {
+            this.Leaf();
+        }
+    }
+</code></pre>
+As you can see the ProductConfiguration there is no related entity so we marked it as Leaf.
+
+Let's see how to persist an order
+<pre><code>
+        [SetUp]
+        public void Initialize()
+        {
+            GraphEnvironment.SetBaseUri("http://localhost:7474/");
+            ModelBuilder.Add(new OrderConfiguration());
+            ModelBuilder.Add(new OrderItemConfiguration());
+            ModelBuilder.Add(new ProductConfiguration());
+
+            //Add the assemblies to the builder. We should pass Assembly path and Assmebly Name.
+            ModelBuilder.AddAssembly((new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase)).AbsolutePath);
+        }
+        [TestCase]
+        public void SaveObjectGraph()
+        {
+            Order order = new Order();
+            order.Id = 0;
+            order.Name = "Sony";
+            order.AddOrderItem(new OrderItem(0, new Product(0, "Rice")));
+            order.AddOrderItem(new OrderItem(0, new Product(0, "Sugar")));
+            NodeMapper nodeMapper = new NodeMapper();
+            nodeMapper.Save<Order>(order);
+            Assert.AreEqual(1, order.Id);
+        }
+</code></pre>
+In the Initialize method of NUnit Test we added EntityConfiguration to ModelBuilder. NodeMapper uses the ModelBuilder to understand the Object graph and uses reflection to traverse through the object graph and persist it.
+
+*Lazy Loading*
+Neo4jD uses Lazy loading to load the related entities, it uses Castle DynamicProxy to intercept property calls and inject lazy loading functionality. To perform lazy loading the property should be virtual,  you can see the OrderItems in Order entity. 
+
+*Retrieve saved Entity*
+<pre><code>
+        [TestCase]
+        public void GetOrder()
+        {
+            NodeMapper nodeMapper = new NodeMapper();
+            Order order = nodeMapper.Get<Order>(14);
+            Assert.AreEqual(14, order.Id);
+            foreach (OrderItem item in order.OrderItems)
+            {
+                Console.WriteLine(item.Id.ToString());
+                Product prod = item.Product;
+                if (prod != null)
+                    Console.WriteLine(prod.ProductName);
+            }
+            Assert.AreEqual(2, order.OrderItems.Count);
+        }
+</code></pre>

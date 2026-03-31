@@ -1,0 +1,4 @@
+Project Description:
+Javascript function for validatiion, filtering and casting of JSON objects. 
+
+README:

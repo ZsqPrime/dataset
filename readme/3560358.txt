@@ -1,0 +1,5 @@
+Project Description:
+Use the Arduino Uno microcontroller to control a single traffic light.  
+
+README:
+http://www.futurlec.com/Relays/SSR3A5V.shtml

@@ -1,0 +1,168 @@
+[> Milkymist(tm) System-on-Chip
+-------------------------------
+
+This is the complete core source code and documentation for the opensource
+system-on-chip used in the Milkymist(tm) One video synthesizer.
+
+For more information see http://m-labs.hk
+
+
+[> Directory Structure
+ /cores/         Cores library, with Verilog sources, test benches and documentation.
+ /boards/        Top-level design files, constraint files and glue logic.
+ /software/      Basic software for the SoC: libraries + BIOS.
+ /softusb-input/ AVR firmware to implement input device support on the softusb core.
+ /doc/           System documentation.
+ /tools/         Small tools for developers.
+
+
+[> Building tools
+You will need:
+ - GNU Make,
+ - Bourne Again Shell (bash),
+ - Xilinx ISE for synthesizing the FPGA bitstream (WebPack is enough),
+ - LatticeMico32 toolchain for building the SoC software,
+ - AVR toolchain for building the USB firmware,
+ - xxd,
+ - native Clang/LLVM toolchain,
+ - libGD.
+
+
+[> Development
+For Verilog simulations, the scripts (usually Makefiles) shipped with the test benches
+take care of running the simulator.
+
+Depending on the IP core, one or more of these free simulators are supported:
+ - Icarus Verilog (http://www.icarus.com/eda/verilog/)
+ - GPL Cver (http://www.pragmatic-c.com/gpl-cver/)
+ - Verilator (http://www.veripool.org/wiki/verilator)
+
+For firmware development, a serial console program compatible with automatic firmware
+loading over the serial line (SFL boot) is provided in the /tools/ directory.
+
+
+[> Credits
+Most of the work is (C) Copyright 2007-2012 Sebastien Bourdeauducq.
+For this work:
+ - The gateware design is licensed under GNU GPLv3.
+   See the LICENSE.GPL file for more information.
+ - The software (software/*) is licensed under GNU GPLv3, except the SDRAM
+   initialization runtime (libHPDMC) which is under GNU LGPLv3.
+   See LICENSE.GPL and LICENSE.LGPL.
+ - The documentation is licensed under FDL.
+   See LICENSE.FDL.
+
+Milkymist is a trademark of Sebastien Bourdeauducq.
+
+The SoC design uses:
+ - the Mico32 soft-processor by Lattice Semiconductor. See the LICENSE.LATTICE file.
+ - a modified version of wb_conbus by Johny Chi and Rudolf Usselmann. See LICENSE.LGPL.
+
+The directory organization and build scripts were inspired by soc-lm32 by the German
+hackerspace Das Labor. Some of the UART and timer code also comes from there.
+
+The software and software library include the SoftFloat IEC/IEEE Floating-point
+Arithmetic Package, Release 2, written by John R. Hauser.
+See source files headers for license.
+
+Special thanks to the people who did significant things which made this project possible:
+ - Wolfgang Spraul and Adam Wang for the manufacturing,
+ - Werner Almesberger for USB, MIDI and many other improvements, 
+ - Michael Walle for QEMU, UrJTAG and OCD,
+ - Joachim Steiger for the case design,
+ - Yanjun Luo for the JTAG daughterboard design,
+ - Yann Sionneau for his work on RTEMS,
+ - Lattice Semiconductor for the Mico32 processor,
+ - Shawn Tan for the AEMB processor (used earlier),
+ - Stephen Williams for Icarus Verilog,
+ - Pragmatic C Software for GPL Cver,
+ - Wilson Snyder for Verilator,
+ - Henry from Xilinx,
+ - Das Labor for providing neat build scripts for SoCs (soc-lm32).
+
+
+Project Description:
+The world's leading open source SoC with graphics acceleration
+
+README:
+[> Milkymist(tm) System-on-Chip
+-------------------------------
+
+This is the complete core source code and documentation for the opensource
+system-on-chip used in the Milkymist(tm) One video synthesizer.
+
+For more information see http://m-labs.hk
+
+
+[> Directory Structure
+ /cores/         Cores library, with Verilog sources, test benches and documentation.
+ /boards/        Top-level design files, constraint files and glue logic.
+ /software/      Basic software for the SoC: libraries + BIOS.
+ /softusb-input/ AVR firmware to implement input device support on the softusb core.
+ /doc/           System documentation.
+ /tools/         Small tools for developers.
+
+
+[> Building tools
+You will need:
+ - GNU Make,
+ - Bourne Again Shell (bash),
+ - Xilinx ISE for synthesizing the FPGA bitstream (WebPack is enough),
+ - LatticeMico32 toolchain for building the SoC software,
+ - AVR toolchain for building the USB firmware,
+ - xxd,
+ - native Clang/LLVM toolchain,
+ - libGD.
+
+
+[> Development
+For Verilog simulations, the scripts (usually Makefiles) shipped with the test benches
+take care of running the simulator.
+
+Depending on the IP core, one or more of these free simulators are supported:
+ - Icarus Verilog (http://www.icarus.com/eda/verilog/)
+ - GPL Cver (http://www.pragmatic-c.com/gpl-cver/)
+ - Verilator (http://www.veripool.org/wiki/verilator)
+
+For firmware development, a serial console program compatible with automatic firmware
+loading over the serial line (SFL boot) is provided in the /tools/ directory.
+
+
+[> Credits
+Most of the work is (C) Copyright 2007-2012 Sebastien Bourdeauducq.
+For this work:
+ - The gateware design is licensed under GNU GPLv3.
+   See the LICENSE.GPL file for more information.
+ - The software (software/*) is licensed under GNU GPLv3, except the SDRAM
+   initialization runtime (libHPDMC) which is under GNU LGPLv3.
+   See LICENSE.GPL and LICENSE.LGPL.
+ - The documentation is licensed under FDL.
+   See LICENSE.FDL.
+
+Milkymist is a trademark of Sebastien Bourdeauducq.
+
+The SoC design uses:
+ - the Mico32 soft-processor by Lattice Semiconductor. See the LICENSE.LATTICE file.
+ - a modified version of wb_conbus by Johny Chi and Rudolf Usselmann. See LICENSE.LGPL.
+
+The directory organization and build scripts were inspired by soc-lm32 by the German
+hackerspace Das Labor. Some of the UART and timer code also comes from there.
+
+The software and software library include the SoftFloat IEC/IEEE Floating-point
+Arithmetic Package, Release 2, written by John R. Hauser.
+See source files headers for license.
+
+Special thanks to the people who did significant things which made this project possible:
+ - Wolfgang Spraul and Adam Wang for the manufacturing,
+ - Werner Almesberger for USB, MIDI and many other improvements, 
+ - Michael Walle for QEMU, UrJTAG and OCD,
+ - Joachim Steiger for the case design,
+ - Yanjun Luo for the JTAG daughterboard design,
+ - Yann Sionneau for his work on RTEMS,
+ - Lattice Semiconductor for the Mico32 processor,
+ - Shawn Tan for the AEMB processor (used earlier),
+ - Stephen Williams for Icarus Verilog,
+ - Pragmatic C Software for GPL Cver,
+ - Wilson Snyder for Verilator,
+ - Henry from Xilinx,
+ - Das Labor for providing neat build scripts for SoCs (soc-lm32).

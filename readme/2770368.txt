@@ -1,0 +1,6 @@
+Project Description:
+GConf editor
+
+README:
+GConfik is a GConf editor, you can see and modify the values stored on 
+your system.

@@ -1,0 +1,43 @@
+Project Description:
+Idaho Cost and Budget Management
+
+README:
+CS481 Senior Design - Fall Semester 2011 and Spring Semester 2012
+
+
+
+The purpose of ICBM is to create an intuitive and stable web-based Time, Accounting, and Reporting System for the Idaho Department of Health and Welfare. 
+
+
+
+Team:
+
+	First Semester:
+
+		Scott Beddall
+
+		Brett Hitchcock
+
+		Chaylo Laurino
+
+		Alex Nilson
+
+	Second Semester:
+
+		Zeke Long
+
+		Nathan Mazur
+
+
+
+Advisor:
+
+	Greg Donohoe
+
+	
+
+Idaho Department of Health and Welfare Sponsors:
+
+	Don Moreaux
+
+	Marj Sanderson

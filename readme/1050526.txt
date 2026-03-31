@@ -1,0 +1,22 @@
+1.1 NomAddress.com
+NomAddress.com is a Ruby on Rails based web application. The purpose of NomAddress.com is to create a site that will automatically update the addresses for our users’ other subscriptions and website accounts. Moving is a busy, hectic time for people; and it is hard enough remembering all the places that will need your new address, let alone actually going through the tedious hassle of manually updating them yourself. That is why we allow users to register their subscriptions with us, and if they need to update their address then they can easily do it through our website. We will handle the dirty work of propagating the changes to all the user’s subscriptions.
+
+1.2 The Team
+We are a group of eight undergraduate computer science and computer engineering students at University of Illinois at Urbana-Champaign. We developed NomAddress.com as our senior project for the software engineering course, taught by Danny Dig. Most of us are graduating seniors and will be starting full-time positions in the near future.
+Our team consists of:
+• Justin Martin – lupusdei108@gmail.com
+• Chen Wang – wang213@illinois.edu
+• Feng Shan – shan16@illinois.edu
+• Siyi Gu – siyigu1@illinois.edu
+• Siddhant Gahlot – gahlot1@illinois.edu
+• Ron Searl – searl1@illinois.edu
+• Chae Eun Lee – celee2@illinois.edu
+• Austine Lakayil – lakayil1@illinois.edu
+
+1.3 Getting Started
+To install rails on Windows, you can go to railsinstaller.org and download a rails kit. This comes with everything you need in order to get started. Just follow the 3 steps shown on the website.
+
+Once you have rails installed, you will need to open up the ruby on rails console that came with the installation kit. Run the command ‘bundle install’. This will install any ruby gems required to run NomAddress.com. Next run the command ‘rake db:migrate’. This command will create the database structure for the website. At this point, you should be able to run NomAddress.com using the command ‘rails s’. This will start the local development server, and you can browse to http://localhost:3000 to view NomAddress.com.
+
+
+For more information about NomAddress.com please read the final documentation notes.

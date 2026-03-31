@@ -1,0 +1,5 @@
+Project Description:
+jQuery plugin for searching text on page or pages. 
+
+README:
+test

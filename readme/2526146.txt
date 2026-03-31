@@ -1,0 +1,7 @@
+Project Description:
+For fun MMA betting
+
+README:
+This is a HTML5/CSS3 project that uses C# webservice to communicate with the MySQL database.
+
+The objective of the site is a for fun betting site on the outcome of various mma bouts.  Will use external sites for betting odds.

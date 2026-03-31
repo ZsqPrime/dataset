@@ -1,0 +1,33 @@
+Project Description:
+Email yourself status updates from TaskWarrior
+
+README:
+== ABOUT ==
+TaskMailer is a small ruby application designed to email you status updates 
+based on your TaskWarrior to-do lists.  
+
+TaskWarrior is a "command-line todo list manager."  It's a great application 
+for organizing and prioritizing tasks. Learn more about it by visiting 
+http://taskwarrior.org
+
+== PREREQUISITES ==
+TaskMailer requires (obviously) TaskWarrior to be installed and running on your
+system.  Please visit http://taskwarrior.org for information on how to set up 
+and configure an instance of TaskWarrior.
+
+In order to send out emails, TaskMailer requires Pony.  gem install pony or
+visit https://github.com/benprew/pony for more information.
+
+Finally, TaskMailer uses Psych to read YAML configuration files.
+gem install psych will install Psych, though it may require the libyaml-dev 
+library to be installed on your system.
+
+== SETUP ==
+Edit config/smtp.yaml to contain the SMTP information of your the mail server
+you will be using to send out email.
+
+Edit config/jobs.yaml with the email address, subject, line, and TaskWarrior
+projets you wish to send out.  You can add multiple jobs to the list!
+
+Invoke taskwarrior.rb to send out your emails.  Make it a cron job for extra
+points!

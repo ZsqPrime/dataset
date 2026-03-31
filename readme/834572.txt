@@ -1,0 +1,8 @@
+Instructions for using the recipe:
+
+
+Project Description:
+Sublime Text 2 recipe for adding buildout eggs to sublime-code-intel extra paths
+
+README:
+Instructions for using the recipe:

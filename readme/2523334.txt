@@ -1,0 +1,7 @@
+Project Description:
+None
+
+README:
+# README
+Simple program that lights an RGB Led with various colors using the [RGB-LED-Helper](https://github.com/edobez/RGB-LED-Helper) library.
+It includes an algorithm for searching colors that are significantly different from the preceding one.

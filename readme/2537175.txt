@@ -1,0 +1,7 @@
+Project Description:
+Image popup plugin written with Mootools that supports Ambilight effect
+
+README:
+# Darkbox with Mootools
+
+To view demo just clone the repo and open demo.html

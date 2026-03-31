@@ -1,0 +1,8 @@
+Project Description:
+Bayessian Classifier in Ruby
+
+README:
+Naive Bayesian Classyfier in Ruby
+===
+
+http://www.statsoft.com/textbook/naive-bayes-classifier/

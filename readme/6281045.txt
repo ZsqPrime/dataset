@@ -1,0 +1,5 @@
+Project Description:
+Seed Framework is a multiplatform C++ 2D game development framework that aims mainly at recompile only portability between a wide range of platforms and consoles.
+
+README:
+This repository is only for keeping history and is not being maintained anymore. For most recent code, check the new Seed Framework here: https://github.com/fungos/seed

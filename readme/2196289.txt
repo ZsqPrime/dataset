@@ -1,0 +1,60 @@
+DependsTester
+
+DependencyTester is a console application that will profile an application with dependency walker. The goal is to verify that all dll's that are used are the ones that are bundled with the application.
+
+DependencyTester checks for four types of errors:
+	1.  Mixture of CPUType.
+	2. Missing DLL.
+	3. Failure to load.
+	4. Invalid load path.
+
+With dependency walker it is very easy to verify the first 3 but not the 4th. 
+DependencyTester on the other hand considers any DLL that isn't located in a Windows system folder or with the executable to be invalid. For example this helps spot an issue when an application depends on Qt but hasn't properly installed the Qt dll's. The program runs because it loads a different programs installed Qt dll's that are in the users PATH enviorment variable.
+
+Requires:
+  Dependency Walker - www.dependencywalker.com
+
+Example:
+  dependsTester.exe dependsTest.exe appTest.exe --appArg1 4 --randomArg2 12
+
+Argument Info:
+  First Argument: Path to dependency walker
+  Second Argument: Path to application to profile
+  --envPath: Extra paths to add to the enviornment.
+  All other arguments are passed through as arguments to the application to test
+
+Developer Info:
+  DependencyTester currently only supports Python 2.7
+
+
+Project Description:
+Profiles an application with dependency walker and returns any missing dlls.
+
+README:
+DependsTester
+
+DependencyTester is a console application that will profile an application with dependency walker. The goal is to verify that all dll's that are used are the ones that are bundled with the application.
+
+DependencyTester checks for four types of errors:
+	1.  Mixture of CPUType.
+	2. Missing DLL.
+	3. Failure to load.
+	4. Invalid load path.
+
+With dependency walker it is very easy to verify the first 3 but not the 4th. 
+DependencyTester on the other hand considers any DLL that isn't located in a Windows system folder or with the executable to be invalid. For example this helps spot an issue when an application depends on Qt but hasn't properly installed the Qt dll's. The program runs because it loads a different programs installed Qt dll's that are in the users PATH enviorment variable.
+
+Requires:
+  Dependency Walker - www.dependencywalker.com
+
+Example:
+  dependsTester.exe dependsTest.exe appTest.exe --appArg1 4 --randomArg2 12
+
+Argument Info:
+  First Argument: Path to dependency walker
+  Second Argument: Path to application to profile
+  --envPath: Extra paths to add to the enviornment.
+  All other arguments are passed through as arguments to the application to test
+
+Developer Info:
+  DependencyTester currently only supports Python 2.7

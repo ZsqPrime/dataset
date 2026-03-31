@@ -1,0 +1,6 @@
+Project Description:
+Homework # 5
+
+README:
+Homework#5
+Creating static pages and using Autotest.

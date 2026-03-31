@@ -1,0 +1,164 @@
+This is a Marvell Kirkwood machine layer for openembedded-core.
+
+Provides two machine configurations but should be easy to
+extend to other Kirkwood platforms (these are currently
+identical anyway):
+
+ * Netgear Stora (MS2110): Tested inc SATA, USB, RTC.
+ * Sheevaplug: Not yet tested.
+
+Linux kernel is currently 2.6.35-rc1 pulled from Marvell
+orion git repository. Patches are applied to add support
+for the Netgear MS2110 (NetStora) machine.
+	
+Netgear Stora patches are from Bryan McGuire's repository:
+ http://gitorious.org/openstora/orion-netgear_ms2110.
+
+Angstrom instructions:
+
+ * Add this layer to the "sources" folder and add to 
+   bblayers.conf
+ * Optionally add Git repo to sources/layers.txt if
+   you wish to update automatically from Git.
+ * Run "./oebb.sh config <machine>" where machine is
+   "netstora" or "sheevaplug".
+ * Build an image (e.g. "bitbake console-image").
+ * Kernel and rootfs are created in deploy folder.
+
+Boot via TFTP (kernel) and NFS (rootfs):
+
+ * Save u-boot variables (arcNumber valid for NetStora):
+   * setenv mainlineLinux yes
+   * setenv arcNumber 2743
+   * saveenv
+ * Set bootargs for NFS mount:
+   * Set up NFS server exporting a folder containing rootfs
+   * Unpack Angstrom-xxx.tar.gz from deploy/images folder
+     into rootfs location (must be done as root).
+   * setenv bootargs console=ttyS0,115200 root=/dev/nfs rw 
+     nfsroot=$(serverip):/nfs/mount/path
+	 ip=$(ipaddr):$(serverip):::DB88FXX81:eth0:none
+ * Boot kernel via TFTP:
+   * Place uImage-<machine>.bin from deploy/images folder
+     (e.g. uImage-netstora.bin) into TFTP root.
+   * tftpboot 0x800000 uImage-netstora.bin
+   * bootm 0x800000
+
+Boot kernel and rootfs from flash (applies to NetStora):
+
+ * Save u-boot variables (arcNumber valid for NetStora):
+   * setenv mainlineLinux yes
+   * setenv arcNumber 2743
+   * saveenva
+ * Build an image/rootfs with the mtd-utils package.
+ * Boot the kernel/rootfs via TFTP/NFS as described above.
+ * Copy the kernel and rootfs .ubi image to TFTP server root.
+ * From a serial/SSH terminal:
+   * TFTP the kernel and flash to /dev/mtd1:
+     * cd /tmp
+     * tftp -g -r uImage-netstora.bin 10.4.50.5
+	 * flash_eraseall /dev/mtd1
+	 * nandwrite -p /dev/mtd1 /tmp/uImage-netstora.bin
+   * TFTP the .ubi image and flash to /dev/mtd2:
+     * cd /tmp
+     * tftp -g -r rootfs.ubi 10.4.50.5
+	 * ubiformat /dev/mtd2 -y -f /tmp/rootfs.ubi
+	 * ubiattach /dev/ubi_ctrl -m 2
+	 * mkdir /mnt/ubifs
+	 * mount -t ubifs ubi0 /mnt/ubifs
+	 * Check that the rootfs has mounted successfully in /mnt/ubifs.
+ * Configure uBoot to boot from flash:
+   * setenv bootargs_root ubi.mtd=2,0 root=ubi0 rootfstype=ubifs
+   * setenv bootargs_ip ip=10.4.50.165:10.4.50.4:::DB88FXX81:eth0:none
+   * setenv bootcmd 'nand read.e 0x800000 0x100000 0x300000; setenv bootargs $(console) $(bootargs_root) $(bootargs_ip); bootm 0x800000'
+   * saveenv
+   * Reboot and check it runs, or run immediately using 'run bootcmd'.
+
+Send pull requests via https://github.com/kelvinlawson/meta-kirkwood
+
+Layer maintainer: Kelvin Lawson <kelvinl@users.sf.net>
+
+
+Project Description:
+OpenEmbedded Core Meta-layer for Marvell Kirkwood devices (Sheevaplug, NetStora etc)
+
+README:
+This is a Marvell Kirkwood machine layer for openembedded-core.
+
+Provides two machine configurations but should be easy to
+extend to other Kirkwood platforms (these are currently
+identical anyway):
+
+ * Netgear Stora (MS2110): Tested inc SATA, USB, RTC.
+ * Sheevaplug: Not yet tested.
+
+Linux kernel is currently 2.6.35-rc1 pulled from Marvell
+orion git repository. Patches are applied to add support
+for the Netgear MS2110 (NetStora) machine.
+	
+Netgear Stora patches are from Bryan McGuire's repository:
+ http://gitorious.org/openstora/orion-netgear_ms2110.
+
+Angstrom instructions:
+
+ * Add this layer to the "sources" folder and add to 
+   bblayers.conf
+ * Optionally add Git repo to sources/layers.txt if
+   you wish to update automatically from Git.
+ * Run "./oebb.sh config <machine>" where machine is
+   "netstora" or "sheevaplug".
+ * Build an image (e.g. "bitbake console-image").
+ * Kernel and rootfs are created in deploy folder.
+
+Boot via TFTP (kernel) and NFS (rootfs):
+
+ * Save u-boot variables (arcNumber valid for NetStora):
+   * setenv mainlineLinux yes
+   * setenv arcNumber 2743
+   * saveenv
+ * Set bootargs for NFS mount:
+   * Set up NFS server exporting a folder containing rootfs
+   * Unpack Angstrom-xxx.tar.gz from deploy/images folder
+     into rootfs location (must be done as root).
+   * setenv bootargs console=ttyS0,115200 root=/dev/nfs rw 
+     nfsroot=$(serverip):/nfs/mount/path
+	 ip=$(ipaddr):$(serverip):::DB88FXX81:eth0:none
+ * Boot kernel via TFTP:
+   * Place uImage-<machine>.bin from deploy/images folder
+     (e.g. uImage-netstora.bin) into TFTP root.
+   * tftpboot 0x800000 uImage-netstora.bin
+   * bootm 0x800000
+
+Boot kernel and rootfs from flash (applies to NetStora):
+
+ * Save u-boot variables (arcNumber valid for NetStora):
+   * setenv mainlineLinux yes
+   * setenv arcNumber 2743
+   * saveenva
+ * Build an image/rootfs with the mtd-utils package.
+ * Boot the kernel/rootfs via TFTP/NFS as described above.
+ * Copy the kernel and rootfs .ubi image to TFTP server root.
+ * From a serial/SSH terminal:
+   * TFTP the kernel and flash to /dev/mtd1:
+     * cd /tmp
+     * tftp -g -r uImage-netstora.bin 10.4.50.5
+	 * flash_eraseall /dev/mtd1
+	 * nandwrite -p /dev/mtd1 /tmp/uImage-netstora.bin
+   * TFTP the .ubi image and flash to /dev/mtd2:
+     * cd /tmp
+     * tftp -g -r rootfs.ubi 10.4.50.5
+	 * ubiformat /dev/mtd2 -y -f /tmp/rootfs.ubi
+	 * ubiattach /dev/ubi_ctrl -m 2
+	 * mkdir /mnt/ubifs
+	 * mount -t ubifs ubi0 /mnt/ubifs
+	 * Check that the rootfs has mounted successfully in /mnt/ubifs.
+ * Configure uBoot to boot from flash:
+   * setenv bootargs_root ubi.mtd=2,0 root=ubi0 rootfstype=ubifs
+   * setenv bootargs_ip ip=10.4.50.165:10.4.50.4:::DB88FXX81:eth0:none
+   * setenv bootcmd 'nand read.e 0x800000 0x100000 0x300000; setenv bootargs $(console) $(bootargs_root) $(bootargs_ip); bootm 0x800000'
+   * saveenv
+   * Reboot and check it runs, or run immediately using 'run bootcmd'.
+
+Send pull requests via https://github.com/kelvinlawson/meta-kirkwood
+
+Layer maintainer: Kelvin Lawson <kelvinl@users.sf.net>

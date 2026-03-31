@@ -1,0 +1,8 @@
+QuickMultiAttributeEdit version for QGIS 2.0
+
+
+Project Description:
+QGIS plugin to edit and assing same column value in the attribute table for the selected elements
+
+README:
+QuickMultiAttributeEdit version for QGIS 2.0

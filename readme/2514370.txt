@@ -1,0 +1,13 @@
+Data structures and algorithms.
+
+TODO:
+Implement flags, labels (flags with names), iterators and cascading walk functions.
+
+Project Description:
+Data structures and algorithms
+
+README:
+Data structures and algorithms.
+
+TODO:
+Implement flags, labels (flags with names), iterators and cascading walk functions.

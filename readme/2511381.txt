@@ -1,0 +1,15 @@
+# Imagine Church: Setup application
+
+This is the setup application for
+[*Imagine Church*] (http://imaginechurch.tv/)
+by [Jonathan Whitney].
+
+Project Description:
+Imagine Church Setup App
+
+README:
+# Imagine Church: Setup application
+
+This is the setup application for
+[*Imagine Church*] (http://imaginechurch.tv/)
+by [Jonathan Whitney].

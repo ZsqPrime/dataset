@@ -1,0 +1,22 @@
+Polls/contests/quizes for Ella CMS
+==================================
+
+Implements often used public voting mechanisms for internet news sites:
+    * Polls
+    * Contests
+    * Quizes
+    * Surveys (simplified polls)
+
+
+Project Description:
+Polls/contests/quizes for Ella CMS
+
+README:
+Polls/contests/quizes for Ella CMS
+==================================
+
+Implements often used public voting mechanisms for internet news sites:
+    * Polls
+    * Contests
+    * Quizes
+    * Surveys (simplified polls)

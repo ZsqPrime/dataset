@@ -1,0 +1,7 @@
+Project Description:
+takes a list of links and fits into a fixed size horizontal space, using a dropdown for those that don't fit
+
+README:
+Given a list of element sizes, this will lay them out horizontally, throwing the ones that don't fit into an overflow dropdown at the end.
+
+This is something I threw together as a prototype for work.

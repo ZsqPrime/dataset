@@ -1,0 +1,27 @@
+Prerequisites:
+  ASE (https://wiki.fysik.dtu.dk/ase/)
+  LAMMPS 1Jul11 or later, with MEAM package
+
+Setup:
+1) Export LAMMPS_COMMAND variable, following
+    https://wiki.fysik.dtu.dk/ase/ase/calculators/lammps.html
+2) Overwrite two files in ASE:
+    ase/calculators/lammps.py
+    ase/lattice/surface.py
+   by two files included here:
+     ASE_modif/lammps.py
+     ASE_modif/surface.py
+
+Execution:
+  Change directory to any example subdirectory and execute the "command.sh" script therein:
+    cd elastic_const/examples/meam_alloy_jel/
+    ./command.sh
+  Expected results are in the results/ subdirectory. For the elastic constants, all are obtained by
+    elastic_const/elast.py
+  script.
+
+References:
+  B. Jelinek, S. Groh, M. F. Horstemeyer, J. Houze, S. G. Kim, G. J. Wagner, A. Moitra, and M. I. Baskes:
+    Modified embedded atom method potential for Al, Si, Mg, Cu, and Fe alloys
+  http://dx.doi.org/10.1088/1742-6596/402/1/012006
+  http://dx.doi.org/10.1103/PhysRevB.85.245102

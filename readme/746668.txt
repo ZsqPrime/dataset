@@ -1,0 +1,27 @@
+Project Description:
+patzermob
+
+README:
+patzermob is (trying) to be a coop chess match played by two teams of chess players.  
+Each player gets to vote on the next move.
+
+This is an on-going experiment wherein I'm trying out new stuff, currently using node.js, a couple node modules, socket.io, jquery.
+
+ToDo:
+*Replace the countdown timer with "HURRY" when close to the end of the round (to mask the time sync problem).
+*redirect patzermob.com to www.patzermob.com.
+*Fix the problem with showing the castle moves even when it is not a valid move.
+*Move the rook on a castle pending move.
+*iPhone Support
+Clean up the node server code.
+Clean up the client js code, maybe make it a module (whatever that is).
+Maybe use knockout or backbone to bind game data to the display.
+Animate the move.
+Make board.js a module.
+Use require/cujo to load modules.
+Refactor the backend to support multiple games. (So when it hits big we can scale.)
+Add Unit Test
+Get rid of the case sensitivity with the chess board.
+Add admin shutdown function--save the game to disk and read the restore the game on start-up.
+Add join game dialog with nickname.
+Show the captured pieces.

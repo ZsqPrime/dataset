@@ -1,0 +1,39 @@
+Here is the new repo for our project, Reddit in Motion.
+
+Starting off with just a playbook version, but once it's finished it should be relatively simple to port to android.
+
+Features Include:
+- Displays main Reddit feeds, including 'new', 'top' etc.
+- Browse through comments.
+- Allows browsing of subreddits.
+- Search reddit.
+- Login with your account
+- Upvote and Downvote posts
+- Subreddits change to reflect user's favorites
+
+
+TODO:
+- Add comment support
+- Enhance webview experience
+
+Project Description:
+A Reddit Application for the Blackberry Playbook, and hopefully later Android.
+
+README:
+Here is the new repo for our project, Reddit in Motion.
+
+Starting off with just a playbook version, but once it's finished it should be relatively simple to port to android.
+
+Features Include:
+- Displays main Reddit feeds, including 'new', 'top' etc.
+- Browse through comments.
+- Allows browsing of subreddits.
+- Search reddit.
+- Login with your account
+- Upvote and Downvote posts
+- Subreddits change to reflect user's favorites
+
+
+TODO:
+- Add comment support
+- Enhance webview experience

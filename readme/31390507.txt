@@ -1,0 +1,10 @@
+Project Description:
+A set of arduino sketches and python script to automatize a Drosophila insectarium
+
+README:
+README
+======
+
+
+ArduFly is a collection of Arduino Sketches and python script to automatize
+the flyroom

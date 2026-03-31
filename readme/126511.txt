@@ -1,0 +1,154 @@
+
+Components of the WTSI genotype analysis pipeline.
+
+This pipeline is designed to process large volumes of raw genotyping
+data into genotype calls. The platform supported is Illumina Infinium
+genotyping microarrays, supplemented with Sequenom genotyping.
+
+Change log is located in: doc/CHANGELOG.md
+
+To install, set the $INSTALL_ROOT environment variable to the path of the
+desired installation directory, and run src/bash/install.sh. This installs
+the Perl and Ruby components of the pipeline. It recursively installs
+non-core Perl dependencies from CPAN, and requires approximately 120 MB of
+disk space.
+
+The gender check used as a QC metric is also available as a standalone
+application; see below.
+
+Requirements:
+
+
+Pipeline:
+
+ Ruby 1.8.7
+ Percolate              https://github.com/wtsi-npg/Percolate
+ Simtools               https://github.com/wtsi-npg/simtools
+ Plinktools             https://github.com/wtsi-npg/plinktools
+ Bcftools               https://github.com/samtools/bcftools
+
+
+Install script:
+ cpanm >= 1.7042        http://search.cpan.org/~miyagawa/Menlo-1.9003/script/cpanm-menlo
+
+
+QC scripts:
+
+ Simtools >= 2.2	https://github.com/wtsi-npg/simtools
+ R >= 2.11.1
+ R mixtools library	http://cran.r-project.org/web/packages/mixtools/index.html
+
+
+Pipeline metadata management:
+
+ Perl >= v5.8.8 
+ DBIx::Class            http://search.cpan.org/~arodland/DBIx-Class/
+ SQLite                 http://sqlite.org/
+
+
+Pipeline components:
+
+ Illuminus              https://github.com/wtsi-npg/Illuminus
+ Gftools                https://github.com/wtsi-npg/Gftools
+ genotype-call          https://github.com/wtsi-npg/genotype-call
+
+
+Environment variables:
+
+ PATH       Should include path to <install_dir>/bin and to simtools
+ PERL5LIB   Should include path to <install_dir>/src/perl/lib/
+ R_LIBS     Should include path to mixtools library installation
+
+
+
+### Gendermix: standalone gender check ###
+
+The 'Gendermix' gender check method can be installed as a standalone 
+application.  See doc/standalone_sexcheck_howto.org for more information.
+
+The standalone check omits much of the pipeline code; it does not require 
+Ruby, Percolate, DBIx::Class, SQLite, Illuminus, or genotype-call.  
+Other requirements are still in effect.  Gendermix needs the Gftools package 
+for I/O of Plink data, as well as R and the mixtools library.  Environment 
+variables should be set as described above.
+
+
+
+
+Project Description:
+Components of the WTSI genotype analysis pipeline.
+
+README:
+
+Components of the WTSI genotype analysis pipeline.
+
+This pipeline is designed to process large volumes of raw genotyping
+data into genotype calls. The platform supported is Illumina Infinium
+genotyping microarrays, supplemented with Sequenom genotyping.
+
+Change log is located in: doc/CHANGELOG.md
+
+To install, set the $INSTALL_ROOT environment variable to the path of the
+desired installation directory, and run src/bash/install.sh. This installs
+the Perl and Ruby components of the pipeline. It recursively installs
+non-core Perl dependencies from CPAN, and requires approximately 120 MB of
+disk space.
+
+The gender check used as a QC metric is also available as a standalone
+application; see below.
+
+Requirements:
+
+
+Pipeline:
+
+ Ruby 1.8.7
+ Percolate              https://github.com/wtsi-npg/Percolate
+ Simtools               https://github.com/wtsi-npg/simtools
+ Plinktools             https://github.com/wtsi-npg/plinktools
+ Bcftools               https://github.com/samtools/bcftools
+
+
+Install script:
+ cpanm >= 1.7042        http://search.cpan.org/~miyagawa/Menlo-1.9003/script/cpanm-menlo
+
+
+QC scripts:
+
+ Simtools >= 2.2	https://github.com/wtsi-npg/simtools
+ R >= 2.11.1
+ R mixtools library	http://cran.r-project.org/web/packages/mixtools/index.html
+
+
+Pipeline metadata management:
+
+ Perl >= v5.8.8 
+ DBIx::Class            http://search.cpan.org/~arodland/DBIx-Class/
+ SQLite                 http://sqlite.org/
+
+
+Pipeline components:
+
+ Illuminus              https://github.com/wtsi-npg/Illuminus
+ Gftools                https://github.com/wtsi-npg/Gftools
+ genotype-call          https://github.com/wtsi-npg/genotype-call
+
+
+Environment variables:
+
+ PATH       Should include path to <install_dir>/bin and to simtools
+ PERL5LIB   Should include path to <install_dir>/src/perl/lib/
+ R_LIBS     Should include path to mixtools library installation
+
+
+
+### Gendermix: standalone gender check ###
+
+The 'Gendermix' gender check method can be installed as a standalone 
+application.  See doc/standalone_sexcheck_howto.org for more information.
+
+The standalone check omits much of the pipeline code; it does not require 
+Ruby, Percolate, DBIx::Class, SQLite, Illuminus, or genotype-call.  
+Other requirements are still in effect.  Gendermix needs the Gftools package 
+for I/O of Plink data, as well as R and the mixtools library.  Environment 
+variables should be set as described above.

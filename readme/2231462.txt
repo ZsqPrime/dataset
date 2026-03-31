@@ -1,0 +1,7 @@
+hello world
+
+Project Description:
+Repository of XBMC plug-ins
+
+README:
+hello world

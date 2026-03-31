@@ -1,0 +1,8 @@
+Project Description:
+Experimental Operating System POSIX-oriented
+
+README:
+Urix - Core of Cthulhu Operating System
+
+Developed by:
+	Paulo Urio <paulourio gmail.org>

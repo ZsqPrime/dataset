@@ -1,0 +1,6 @@
+Project Description:
+Permissions-ified gamemodes.
+
+README:
+See the BukkitDev page for more info! http://dev.bukkit.org/server-mods/instamode/
+Added ability to translate in-game messages.

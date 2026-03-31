@@ -1,0 +1,7 @@
+Project Description:
+Display trollfaces in your posts
+
+README:
+Display trollfaces in your posts.
+
+http://scratchbook.ch/2012/02/16/wordpress-trolls/

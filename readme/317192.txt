@@ -1,0 +1,8 @@
+moved to https://framagit.org/rgenoud/xmonad-configuration
+
+
+Project Description:
+xmonad config files
+
+README:
+moved to https://framagit.org/rgenoud/xmonad-configuration

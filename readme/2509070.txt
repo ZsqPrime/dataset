@@ -1,0 +1,6 @@
+
+
+Project Description:
+a tiny jquery plugin for creating noise on specific elements
+
+README:

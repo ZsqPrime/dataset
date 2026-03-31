@@ -1,0 +1,28 @@
+Dotfiles
+========
+
+* NIXOS config
+* Vim config
+* GNU Screen config
+* etc
+
+Install
+=======
+See, then run ./install
+
+
+Project Description:
+various NixOS configs
+
+README:
+Dotfiles
+========
+
+* NIXOS config
+* Vim config
+* GNU Screen config
+* etc
+
+Install
+=======
+See, then run ./install

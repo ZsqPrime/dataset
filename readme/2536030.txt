@@ -1,0 +1,5 @@
+Project Description:
+Demonstrates Windsor IoC Container
+
+README:
+﻿A simple example using Windsor in a console app

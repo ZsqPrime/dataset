@@ -1,0 +1,16 @@
+The purpose of this project is to provide raw code for talking about
+how to think in functional programming style in Java.
+
+The branches in this project represent a progression through various 
+stages of functional thinking.
+
+
+Project Description:
+Code for the talk "Functional Programming in Java"
+
+README:
+The purpose of this project is to provide raw code for talking about
+how to think in functional programming style in Java.
+
+The branches in this project represent a progression through various 
+stages of functional thinking.

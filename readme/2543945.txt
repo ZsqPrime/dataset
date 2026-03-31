@@ -1,0 +1,9 @@
+Project Description:
+Finger protocol implementation in node
+
+README:
+# finger.js
+
+## Description
+
+Finger.js is a server for the finger protocol.

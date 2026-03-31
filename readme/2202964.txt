@@ -1,0 +1,8 @@
+Image annotation library built on top of OpenLayers.
+
+
+Project Description:
+Image annotation library built using OpenLayers.
+
+README:
+Image annotation library built on top of OpenLayers.

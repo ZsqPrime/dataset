@@ -1,0 +1,10 @@
+Project Description:
+A string reverser application based on Sinatra
+
+README:
+Sinatra reverser
+----------------
+
+A simple string reverser application based on Sinatra.
+
+Made for RubyLearning course "Programming for the Web with Ruby".

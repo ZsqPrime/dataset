@@ -1,0 +1,6 @@
+
+
+Project Description:
+Bootstrap for seotoaster 2 plugins - start to develop your new seotoaster 2 plugins fast and easy! 
+
+README:

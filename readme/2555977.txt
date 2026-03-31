@@ -1,0 +1,4 @@
+Project Description:
+Various vhdl projects intended to be implemented on a Altera-DE0 developent board.
+
+README:

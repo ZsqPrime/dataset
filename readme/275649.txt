@@ -1,0 +1,22 @@
+#Pokémans
+The adventures of dud
+##About the project
+ * A school project
+ * Based on Pokémon
+
+##About us
+ * Three students from GTG
+
+
+Project Description:
+java-projekt
+
+README:
+#Pokémans
+The adventures of dud
+##About the project
+ * A school project
+ * Based on Pokémon
+
+##About us
+ * Three students from GTG

@@ -1,0 +1,4 @@
+Project Description:
+oobProfile is an application that allows you to change profiles automatically based on location on Nokia smartphones
+
+README:

@@ -1,0 +1,38 @@
+Project Description:
+
+
+README:
+Base Camp
+
+It is server setting scripts at OxygenComputing Inc.
+
+
+== Debian
+
+* install rbenv 
+$ bash < <(curl "https://raw.github.com/eunchul/basecamp/master/debian/setup_rbenv.sh")
+
+$ gem install rails
+$ gem install passenger
+...
+
+
+== CentOS
+
+$ sudo bash < <(curl "http://deploy.bzpalm.net/setup_development_env_centos.sh")
+$ bash < <(curl "http://deploy.bzpalm.net/install_rvm_stable_centos.sh")
+
+$ gem install rails
+$ gem install passenger
+$ cd $GEM_HOME/gems/passenger-(version)
+$ rake nginx
+
+
+== Nginx compile
+
+* download nginx stable version
+* compile nginx at /usr/local/nginx-(version)
+
+$ rvmsudo bash < <(curl "http://deploy.bzpalm.net/setup_nginx_conf_centos.sh")
+
+Done.

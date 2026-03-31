@@ -1,0 +1,4 @@
+Project Description:
+manifest for ice cream sandwich build for dream/sapphire
+
+README:

@@ -1,0 +1,9 @@
+Font-end developer: AlexanderTorres
+Back-end developer: juandazapata
+
+Project Description:
+simulacion de perfil en flash
+
+README:
+Font-end developer: AlexanderTorres
+Back-end developer: juandazapata

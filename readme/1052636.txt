@@ -1,0 +1,16 @@
+A task management tool, by Nutz+Jetty+MongoDB
+
+依赖 
+    apache-commons-email-1.2
+    java-mail-1.4.4
+
+
+Project Description:
+A task management tool
+
+README:
+A task management tool, by Nutz+Jetty+MongoDB
+
+依赖 
+    apache-commons-email-1.2
+    java-mail-1.4.4

@@ -1,0 +1,5 @@
+Project Description:
+random scripts i use
+
+README:
+assortment of *nix utilities

@@ -1,0 +1,9 @@
+Project Description:
+proyecto de HMI
+
+README:
+
+Léetelo
+=======
+
+Proyecto para la asignatura de HMI.

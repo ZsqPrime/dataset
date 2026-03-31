@@ -1,0 +1,12 @@
+This is the second implementation of a IRC bot made to monitor activity on the
+wiki of a gaming community. More details will be added when this version is in
+an operational state.
+
+
+Project Description:
+An IRC bot intended for monitoring wiki activity
+
+README:
+This is the second implementation of a IRC bot made to monitor activity on the
+wiki of a gaming community. More details will be added when this version is in
+an operational state.

@@ -1,0 +1,5 @@
+Project Description:
+get jiggy with twentyeleven and Jigoshop
+
+README:
+Begining theme framework based on twentyeleven. Using Jigoshop ecommerce and nivo-slider.

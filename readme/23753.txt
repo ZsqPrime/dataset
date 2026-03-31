@@ -1,0 +1,9 @@
+Project Description:
+This is based on guarddog 2.6.0 from http://www.simonzone.com/software/guarddog/.  The goal of this project will be bring the code up to current package versions. 
+
+README:
+This is a fork of Guarddog (http://www.simonzone.com/software/guarddog/)
+v2.6.0. with the intention of bringing the code up to current package
+versions and dropping support for ipchains and non 2.6 kernels.  
+
+This development is likely to take a while...

@@ -1,0 +1,4 @@
+Project Description:
+A versatile JavaScript-only BitCoin Client which stores its wallet in the user's Google Account
+
+README:

@@ -1,0 +1,4 @@
+Project Description:
+little projects by igordsm. When something gets bigger and potentially useful it'll get it's own repo.
+
+README:

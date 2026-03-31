@@ -1,0 +1,4 @@
+Project Description:
+Send an email to a list of recipients if the content of a Flickr album has changed
+
+README:

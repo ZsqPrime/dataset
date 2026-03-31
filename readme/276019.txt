@@ -1,0 +1,8 @@
+This repository is obsolete. This tutorial has been moved to the official Symfony documentation: see http://symfony.com/doc/current/create_framework/index.html
+
+
+Project Description:
+[OBSOLETE] Create your own framework on top of Symfony
+
+README:
+This repository is obsolete. This tutorial has been moved to the official Symfony documentation: see http://symfony.com/doc/current/create_framework/index.html

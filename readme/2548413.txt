@@ -1,0 +1,11 @@
+Project Description:
+Coursework for Northwestern's EECS 337: Semantic Information Processing
+
+README:
+Coursework for EECS 337, Larry Birnbaum's natural language processing course.
+
+Team members:
+Ted Stein
+Christina Burghard
+Juraj Culak
+Cathy Deng

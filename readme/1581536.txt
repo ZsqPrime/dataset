@@ -1,0 +1,11 @@
+Project Description:
+Project Management App
+
+README:
+## README
+
+ProMan is a project management tool. It supports:
+
+- People
+- Projects
+- Tasks

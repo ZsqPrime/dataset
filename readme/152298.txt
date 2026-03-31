@@ -1,0 +1,29 @@
+V1190B_client is an example program that connects to V1190B_server and interpret receied data.
+Example program connects to 127.0.0.1:1055 that port should be forwarded to BIVME2 controller port where V1190B_server is binded.
+This may be done with help of the following command:
+ssh -N -f -L 1055:192.168.1.2:1055 camac3
+Here:
+ - camac3 - a host that is connected to the same network as BIVME2 controller
+ - 192.168.1.2 - BIVME2 address in that network.
+
+
+Similar functionality may be obtained in your program by linking with libV1190B_client.a. See include/V1190BClient.h for more. 
+
+
+
+
+
+Project Description:
+A client side of the library that reads V1190B Caen TDC over TCP with VME-side server.
+
+README:
+V1190B_client is an example program that connects to V1190B_server and interpret receied data.
+Example program connects to 127.0.0.1:1055 that port should be forwarded to BIVME2 controller port where V1190B_server is binded.
+This may be done with help of the following command:
+ssh -N -f -L 1055:192.168.1.2:1055 camac3
+Here:
+ - camac3 - a host that is connected to the same network as BIVME2 controller
+ - 192.168.1.2 - BIVME2 address in that network.
+
+
+Similar functionality may be obtained in your program by linking with libV1190B_client.a. See include/V1190BClient.h for more.

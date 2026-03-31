@@ -1,0 +1,8 @@
+Project Description:
+Idle Fusion Homepage
+
+README:
+IDLE FUSION
+============
+
+Source for http://idlefusion.com

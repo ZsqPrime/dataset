@@ -1,0 +1,15 @@
+For complete documentation please visit http://www.egrappler.com/multi-level-hierarchical-jquery-menu-jqsimplemenu/
+
+or 
+
+Github plugin wiki page https://github.com/mshahbazsaleem/jQSimpleMenu/wiki/Multi-Level-Hierarchical-jQuery-Menu:-jQSimpleMenu
+
+Project Description:
+Multi Level Hierarchical jQuery Menu: jQSimpleMenu
+
+README:
+For complete documentation please visit http://www.egrappler.com/multi-level-hierarchical-jquery-menu-jqsimplemenu/
+
+or 
+
+Github plugin wiki page https://github.com/mshahbazsaleem/jQSimpleMenu/wiki/Multi-Level-Hierarchical-jQuery-Menu:-jQSimpleMenu

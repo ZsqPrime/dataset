@@ -1,0 +1,14 @@
+Project Description:
+Pong Klon für Android, eigene "Game Engine"
+
+README:
+Piaski
+Pong clon for android jeah
+
+Developer:
+Thomas Echerer
+Matthäus Baur
+
+Platform:
+Java
+Android 2.3 +

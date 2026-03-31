@@ -1,0 +1,17 @@
+tshs
+----
+There's nothing fancy here.  When I find that I keep writing the same trivial
+little functions in multiple different projects, those functions will wind up
+here.
+
+
+
+Project Description:
+Library of commonly-used helper functions for Haskell
+
+README:
+tshs
+----
+There's nothing fancy here.  When I find that I keep writing the same trivial
+little functions in multiple different projects, those functions will wind up
+here.

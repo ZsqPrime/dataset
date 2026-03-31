@@ -1,0 +1,27 @@
+Project Description:
+Utility to safely deserialize Gilt's Public json based API 
+
+README:
+h1. THE README
+
+
+
+This is a project designed to simplify the way java developers interact with the Gilt API.
+
+
+
+With this project a developer should be easily able to deserialize a response from the api into pojo's with a few lines of code.  
+
+
+
+Many Java platforms have their own API for making http requests.  In my case it was the difference between Android and Google App Engine.  I choose to remove this component and let you maintain the finite control over the requests while this package deals with mapping the response data into business objects.
+
+
+
+Any questions, comments or requests to help: william.vanderhoef@gmail.com
+
+
+
+Thanks,
+
+*Will Vanderhoef*

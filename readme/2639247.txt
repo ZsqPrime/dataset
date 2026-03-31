@@ -1,0 +1,13 @@
+Project Description:
+greasemonky script to customize 2012 new twitter ui
+
+README:
+HOMEPAGE
+========
+
+https://github.com/seenxu/twitter-ui
+
+COMPATIBILITY
+=============
+
+Tested only on Linux with Firefox 10

@@ -1,0 +1,11 @@
+Project Description:
+Arduino Sketch to show the current time by multiplexing 4 NIXIE tubes
+
+README:
+This Arduino Sketch controls a NIXIE clock with 4 tubes. 
+I used a plain ATMega168 microcontroller instead of an Arduino board for obvious reasons.
+Here is a picture of the circuit board: https://github.com/fiendie/NixieClock/raw/master/images/circuit.jpg
+
+I am using a DS1307 RTC chip to keep track of the time. 
+
+The schematics can be found here: https://github.com/fiendie/NixieClock/tree/master/schematics

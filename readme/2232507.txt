@@ -1,0 +1,36 @@
+
+O projeto Med Alert consiste em uma aplicação de alertas para auxiliar no controle de tratamentos envolvendo medicação.
+Basicamente, o usuário seleciona em que momentos deseja ser alertado, qual seria o medicamento desejado e uma nota (se desejado). Assim, quando chegar o momento definido, o usuário será alertado que deve aplicar o remédio definido.
+A princípio, a aplicação será voltada para três plastaformas: Android, iPhone e J2ME.
+Os links para os repositórios e seus respectivos responsáveis encontram-se abaixo:
+
+Android
+	https://github.com/hstefan/MedAlert
+	Hugo Stefan Kaus Puhlmann <puhlmann@inf.ufsm.br>
+iPhone
+	https://github.com/brunodea/MedAlert
+	Bruno Romero de Azevedo <brunodea@inf.ufsm.br>
+J2ME
+	https://github.com/trugillo/MedAlert
+	Thiago Lopes Trugilo Silveira <thiago@inf.ufsm.br>
+    
+
+Project Description:
+Medicine alert android application.
+
+README:
+
+O projeto Med Alert consiste em uma aplicação de alertas para auxiliar no controle de tratamentos envolvendo medicação.
+Basicamente, o usuário seleciona em que momentos deseja ser alertado, qual seria o medicamento desejado e uma nota (se desejado). Assim, quando chegar o momento definido, o usuário será alertado que deve aplicar o remédio definido.
+A princípio, a aplicação será voltada para três plastaformas: Android, iPhone e J2ME.
+Os links para os repositórios e seus respectivos responsáveis encontram-se abaixo:
+
+Android
+	https://github.com/hstefan/MedAlert
+	Hugo Stefan Kaus Puhlmann <puhlmann@inf.ufsm.br>
+iPhone
+	https://github.com/brunodea/MedAlert
+	Bruno Romero de Azevedo <brunodea@inf.ufsm.br>
+J2ME
+	https://github.com/trugillo/MedAlert
+	Thiago Lopes Trugilo Silveira <thiago@inf.ufsm.br>

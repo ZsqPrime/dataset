@@ -1,0 +1,9 @@
+Project Description:
+Opens youtube URLs in ProTube app instead of YouTube app.
+
+README:
+Open in ProTube by Jonas Gessner
+
+Available to download from Cydia
+
+MIT Licensed

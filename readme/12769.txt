@@ -1,0 +1,27 @@
+Project Description:
+Emacs initialization files
+
+README:
+* .emacs.d
+
+tnoda's Emacs initialization files
+
+
+** Environment
+
++ Emacs 24.5
++ Mac OS X 10.10
++ Ubuntu 14.04
+
+
+** Installation
+
+#+BEGIN_EXAMPLE
+$ git clone https://github.com/tnoda/.emacs.d.git
+
+#+END_EXAMPLE
+
+
+** License
+
+http://tnoda.mit-license.org/2015

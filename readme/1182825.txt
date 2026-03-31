@@ -1,0 +1,63 @@
+Structure:
+
+    class UserProfile < ActiveRecord::Base
+
+      belongs_to :home_country, :class_name => 'Country'
+      belongs_to :current_university, :class_name => 'University'
+
+      acts_as_aan do
+        association :current_university do
+          [:name]
+        end
+        association :home_country do
+          [:name, { :iso_3166_a2 => :country_code}]
+        end
+      end
+
+      validates :home_country, :presence => true
+      validates :current_university, :presence => true
+    end
+
+Usage:
+
+    u = UserProfile.new
+    u.home_country_name = 'Netherlands'
+    u.current_university_name = 'University Of Amsterdam'
+    u.save # => true
+
+    u.home_country # => #<Country id: 12, name: "Netherlands"
+    u.home_country_name # => "Netherlands"
+
+Project Description:
+association_as_name
+
+README:
+Structure:
+
+    class UserProfile < ActiveRecord::Base
+
+      belongs_to :home_country, :class_name => 'Country'
+      belongs_to :current_university, :class_name => 'University'
+
+      acts_as_aan do
+        association :current_university do
+          [:name]
+        end
+        association :home_country do
+          [:name, { :iso_3166_a2 => :country_code}]
+        end
+      end
+
+      validates :home_country, :presence => true
+      validates :current_university, :presence => true
+    end
+
+Usage:
+
+    u = UserProfile.new
+    u.home_country_name = 'Netherlands'
+    u.current_university_name = 'University Of Amsterdam'
+    u.save # => true
+
+    u.home_country # => #<Country id: 12, name: "Netherlands"
+    u.home_country_name # => "Netherlands"

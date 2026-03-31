@@ -1,0 +1,43 @@
+Project Description:
+Project to gather 'easifix' tickets all around fedorahosted (for projects interested)
+
+README:
+fedora-gather-easyfix
+=====================
+
+
+The idea of this program is to gather tickets from different project
+which are marked as 'easyfix' (or any other keyword for that matter).
+
+The script retrieve the list of participating project from:
+https://fedoraproject.org/wiki/User:Pingou/easyfix (this should change
+at some point) and generates a HTML page in the directory where it's
+run.
+It should probably be integrated within a cron job to be made
+accessible.
+
+In order for a trac to be added there are some requirements:
+- Enable the XMLRPC plugin via the plugin page of the trac admin
+  interface
+  You will need to enable:
+   - all the    tracrpc.ticket.*
+   - the entry  tracrpc.xml_rpc.*
+   - the entry  tracrpc.web_ui.*
+- Add XML_RPC to the anonymous user in the permission page of the
+  admin interface (for this you will need to activate the entry 
+  tracrpc.api.* temporarily)
+
+
+Join fedora-gather-easyfix
+===========================
+To join the project:
+- Enable XML RPC on your trac instance of fedorahosted (see above where and how)
+- Add your information on https://fedoraproject.org/wiki/User:Pingou/easyfix 
+
+
+
+Dependencies:
+-------------
+ - python
+ - python-jinja2
+ - python-fedora

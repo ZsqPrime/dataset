@@ -1,0 +1,22 @@
+epub
+====
+
+epub module for python, still work in progress
+
+License
+====
+GNU General Public License
+
+
+Project Description:
+epub module for python, still work in progress
+
+README:
+epub
+====
+
+epub module for python, still work in progress
+
+License
+====
+GNU General Public License

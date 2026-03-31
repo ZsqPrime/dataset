@@ -1,0 +1,71 @@
+= RWX 
+{<img src="https://travis-ci.org/Hanmac/rwx.svg" alt="Build Status" />}[https://travis-ci.org/Hanmac/rwx]
+{<img src="https://codeclimate.com/github/Hanmac/rwx/badges/gpa.svg" />}[https://codeclimate.com/github/Hanmac/rwx]
+
+trunk
+
+{<img src="https://gemnasium.com/Hanmac/rwx.svg" alt="Dependency Status" />}[https://gemnasium.com/Hanmac/rwx]
+
+gem
+
+{<img src="https://badge.fury.io/rb/rwx.svg" alt="Gem Version" />}[http://badge.fury.io/rb/rwx]
+{<img src="https://www.versioneye.com/user/projects/5445187d1fea5f08a6000094//badge.svg?style=flat" alt="Dependency Status" />}[https://www.versioneye.com/user/projects/5445187d1fea5f08a6000094/]
+{<img src="https://www.versioneye.com/ruby/rwx/0.0.1.1.dev/badge.svg" alt="Dependency Status" />}[https://www.versioneye.com/ruby/rwx/0.0.1.1.dev]
+{<img src="https://www.versioneye.com/ruby/rwx/reference_badge.svg?style=flat" alt="Reference Status" />}[https://www.versioneye.com/ruby/rwx/references]
+
+== Description
+rwx is a ruby extension that was created after wxRuby died.
+
+=== Install instructions
+
+For Debian Bullseye, you need to install packages ruby, ruby-dev, rubygems, wx-common, libwxgtk3.0-gtk3-dev, libwxbase3.0-dev, libgtk-3-dev, libwxgtk-media3.0-gtk3-dev and dependencies.
+
+You also need gcc and g++.
+
+If compilers error occur, you probably need to install other libraries!
+
+Test the compilation:
+
+- go to the rwx directory and type "rake", see whether it goes well
+- if all goes well then type sudo gem build rwx.gemspec
+
+This will install rwx to your computer's gem repository.
+
+
+
+Project Description:
+wxWidgets binding for ruby
+
+README:
+= RWX 
+{<img src="https://travis-ci.org/Hanmac/rwx.svg" alt="Build Status" />}[https://travis-ci.org/Hanmac/rwx]
+{<img src="https://codeclimate.com/github/Hanmac/rwx/badges/gpa.svg" />}[https://codeclimate.com/github/Hanmac/rwx]
+
+trunk
+
+{<img src="https://gemnasium.com/Hanmac/rwx.svg" alt="Dependency Status" />}[https://gemnasium.com/Hanmac/rwx]
+
+gem
+
+{<img src="https://badge.fury.io/rb/rwx.svg" alt="Gem Version" />}[http://badge.fury.io/rb/rwx]
+{<img src="https://www.versioneye.com/user/projects/5445187d1fea5f08a6000094//badge.svg?style=flat" alt="Dependency Status" />}[https://www.versioneye.com/user/projects/5445187d1fea5f08a6000094/]
+{<img src="https://www.versioneye.com/ruby/rwx/0.0.1.1.dev/badge.svg" alt="Dependency Status" />}[https://www.versioneye.com/ruby/rwx/0.0.1.1.dev]
+{<img src="https://www.versioneye.com/ruby/rwx/reference_badge.svg?style=flat" alt="Reference Status" />}[https://www.versioneye.com/ruby/rwx/references]
+
+== Description
+rwx is a ruby extension that was created after wxRuby died.
+
+=== Install instructions
+
+For Debian Bullseye, you need to install packages ruby, ruby-dev, rubygems, wx-common, libwxgtk3.0-gtk3-dev, libwxbase3.0-dev, libgtk-3-dev, libwxgtk-media3.0-gtk3-dev and dependencies.
+
+You also need gcc and g++.
+
+If compilers error occur, you probably need to install other libraries!
+
+Test the compilation:
+
+- go to the rwx directory and type "rake", see whether it goes well
+- if all goes well then type sudo gem build rwx.gemspec
+
+This will install rwx to your computer's gem repository.

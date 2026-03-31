@@ -1,0 +1,37 @@
+Project Description:
+A tiny session manager for X.
+
+README:
+jsession 0.3.1-next by Joseph Lansdowne.
+
+A tiny session manager for X.
+
+http://ikn.org.uk/tool/jsession
+
+    LICENSE
+
+Distributed under the terms of the BSD 3-Clause license; if this was not
+included, you can find it here:
+    https://opensource.org/licenses/BSD-3-Clause
+
+    INSTALLATION
+
+Run `make install'.  The usual `DESTDIR', etc. arguments to `make' are
+supported.
+
+    DEPENDENCIES
+
+Bash: http://www.gnu.org/software/bash
+GNU grep or equivalent
+DBus: http://www.freedesktop.org/wiki/Software/dbus
+pm-utils: http://pm-utils.freedesktop.org/wiki/
+    optional: suspend support (not required if using systemd)
+run-parts (debianutils): http://packages.qa.debian.org/d/debianutils.html
+    optional: run executables as root on login
+sed: https://www.gnu.org/software/sed/manual/sed.html
+    at build-time only
+
+    USAGE
+
+See `jsession --help' and `jsession-quit --help' for details.  Start the daemon
+(as root) using the systemd service, or just execute `jsessiond'.

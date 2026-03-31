@@ -1,0 +1,80 @@
+Project Description:
+Picross and minesweeper clones for linux
+
+README:
+PICMI
+
+
+Project Information
+-------------------
+
+Picmi was inspired by Tux Picross which was originally started in 2004
+by Tobias Hellgren ( see http://www.thanius.com/picross/ ).
+
+Picmi includes
+
+* a picross clone ( http://en.wikipedia.org/wiki/Picross )
+* and a minesweeper clone ( http://en.wikipedia.org/wiki/Minesweeper_(computer_game) )
+
+Currently it is being developed by Jakob Gruber.
+
+Picross is a number logic game in which cells in a grid have to be colored or left 
+blank according to numbers given at the side of the grid to reveal a hidden picture. 
+
+Minesweeper is a classic puzzle game. The object of the game is to clear an
+abstract minefield without detonating a mine.
+
+
+Features
+-------------------
+
+* basic picross gameplay
+* no hints mode: do not automatically prevent incorrect tile hits - the player must solve the 
+  puzzle correctly without hints. there is no penalty time in this mode.
+* randomly generated puzzles with arbitraty size and difficulty
+* display which streaks are solved by greying out numbers
+* drag locking: during a drag, movement is locked either to the row or 
+  column to prevent undesired movement
+* drag operation locking: during a right mouse button drag, either all 
+  affected tiles are cleared OR marked, not both
+
+* basic minesweeper gameplay
+* guaranteed solvable boards (logic only, no guessing)
+
+* statistics / highscore tracking
+
+
+Controls
+-------------------
+
+The ingame help provides information about game controls.
+
+
+License
+-------------------
+
+Picmi is licensed under the terms of the GNU General Public License version 2, or
+(at your option) any later version.
+
+
+Contact / More Information
+-------------------
+
+Github: http://github.com/schuay/picmi
+
+Archlinux forum thread: http://bbs.archlinux.org/viewtopic.php?id=92600
+Ubuntu forum thread: http://ubuntuforums.org/showthread.php?t=1433859
+
+Email: jakob.gruber@gmail.com
+
+
+Sources
+-------------------
+
+Font: ttf-liberation ( https://fedorahosted.org/liberation-fonts/ )
+Default picross background: Air by Nuno Pinheiro (included in the KDE wallpapers collection)
+Mine icon: Human O2 Iconset ( http://schollidesign.deviantart.com/art/Human-O2-Iconset-105344123 )
+Minesweeper board generation with help from Simon Tatham's Mines generator:
+                              (http://www.chiark.greenend.org.uk/~sgtatham/puzzles/)
+
+Enjoy!

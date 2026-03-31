@@ -1,0 +1,33 @@
+== Kick a Pubby
+
+Use this app to let members of your Steam group log in and kick non-members off of your TF2 server.  The related SourceMod plugin is located in lib/
+
+This app relies on the following variables:
+
+    ENV["STEAM_WEB_API_KEY"]
+    ENV["RCON_ADDRESS"]
+    ENV["RCON_PASSWORD"]
+    ENV["GROUP_NAME"]
+
+== Licenses
+
+Do whatever you want with this code.  I have no idea who created the background image but it wasn't me.  If you are the creator of this image please let me know and I'll credit you in this README.  Don't try to sell that image.  You can try to sell this code if you want, but I don't think anyone will pay you for it.
+
+Project Description:
+None
+
+README:
+== Kick a Pubby
+
+Use this app to let members of your Steam group log in and kick non-members off of your TF2 server.  The related SourceMod plugin is located in lib/
+
+This app relies on the following variables:
+
+    ENV["STEAM_WEB_API_KEY"]
+    ENV["RCON_ADDRESS"]
+    ENV["RCON_PASSWORD"]
+    ENV["GROUP_NAME"]
+
+== Licenses
+
+Do whatever you want with this code.  I have no idea who created the background image but it wasn't me.  If you are the creator of this image please let me know and I'll credit you in this README.  Don't try to sell that image.  You can try to sell this code if you want, but I don't think anyone will pay you for it.

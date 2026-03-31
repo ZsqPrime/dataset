@@ -1,0 +1,7 @@
+Project Description:
+Messing around with Facebook API
+
+README:
+Messing around with Facebook API.
+
+See the INSTALL file.

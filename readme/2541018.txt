@@ -1,0 +1,14 @@
+Project Description:
+A wrapper to loc-aid.com SOAP API
+
+README:
+A simple wrapper class to the loc-aid.com API
+
+
+- example.php - sample code
+
+- locaid.class.php - Main wrapper class and some utility/debug functions
+
+- locaid_api_registration.class.php - Device Registration API
+
+- locaid_api_getxy.class.php - GetXY API

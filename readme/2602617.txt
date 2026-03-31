@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Grails plugin provides script to deploy project on remote server using rsync, it is FAST.

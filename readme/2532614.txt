@@ -1,0 +1,6 @@
+Project Description:
+A web console to manage Novell SuSE POS
+
+README:
+== To be Done
+Check the SPECS.rdoc

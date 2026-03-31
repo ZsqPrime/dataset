@@ -1,0 +1,13 @@
+A small Class to create a pool of serial keys.
+
+TODO:
+- File Export?
+
+Project Description:
+
+
+README:
+A small Class to create a pool of serial keys.
+
+TODO:
+- File Export?

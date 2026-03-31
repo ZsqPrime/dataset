@@ -1,0 +1,62 @@
+# Raggity
+At the moment, there are very few options for locally hosting and
+serving git repositories. Many businesses don't want to host their
+private repositories on a service like GitHub, and the cost for a
+small business is prohibitive. The goal of Raggity is to fill this
+gap; offering a powerful web interface to gitolite that can be hosted
+within your own network.
+
+Raggity is a Sinatra app for browsing git repositores. It is similar
+in nature to cgit, but with GitHub like features.
+
+Raggity is heavily influenced by [GitHub](http://github.com),
+[Gitolite](https://github.com/sitaramc/gitolite) and
+[cgit](http://hjemli.net/git/cgit/).
+
+## Installation
+**TODO**
+
+## Authors
+[Eric Holmes](mailto:eric@ejholmes.net)
+
+## License
+Raggity is licensed under the [GPL V2](http://www.gnu.org/licenses/gpl-2.0.html).
+
+## Contributing
+Contributions are highly encouraged. If you want to contribute code,
+please fork the repository and create a branch for your feature, then
+send me a pull request.
+
+
+Project Description:
+Raggity is a locally hosted sinatra application for serving and browsing git repositories.
+
+README:
+# Raggity
+At the moment, there are very few options for locally hosting and
+serving git repositories. Many businesses don't want to host their
+private repositories on a service like GitHub, and the cost for a
+small business is prohibitive. The goal of Raggity is to fill this
+gap; offering a powerful web interface to gitolite that can be hosted
+within your own network.
+
+Raggity is a Sinatra app for browsing git repositores. It is similar
+in nature to cgit, but with GitHub like features.
+
+Raggity is heavily influenced by [GitHub](http://github.com),
+[Gitolite](https://github.com/sitaramc/gitolite) and
+[cgit](http://hjemli.net/git/cgit/).
+
+## Installation
+**TODO**
+
+## Authors
+[Eric Holmes](mailto:eric@ejholmes.net)
+
+## License
+Raggity is licensed under the [GPL V2](http://www.gnu.org/licenses/gpl-2.0.html).
+
+## Contributing
+Contributions are highly encouraged. If you want to contribute code,
+please fork the repository and create a branch for your feature, then
+send me a pull request.

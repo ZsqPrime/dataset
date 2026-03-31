@@ -1,0 +1,12 @@
+Project Description:
+Star wars intro in HTML5 & CSS 3D
+
+README:
+Star Wars effect
+================
+
+Idea: bitrut
+
+Coding: jaszczur
+
+Joda image: http://goo.gl/OuWGo

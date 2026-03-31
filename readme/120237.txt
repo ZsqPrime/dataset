@@ -1,0 +1,20 @@
+# Copyright (c) 2012 wakemecn(wakemecn@gmail.com)   All rights reserved.
+# Copyright (c) Luke Welling                        All rights reserved.
+# Copyright (c) Laura Thomason                      All rights reserved. 
+#
+A php site like http://backflip.com
+Modify from --- PHP and Mysql Web Development
+Fee copy.
+
+
+Project Description:
+A php site like http://backflip.com
+
+README:
+# Copyright (c) 2012 wakemecn(wakemecn@gmail.com)   All rights reserved.
+# Copyright (c) Luke Welling                        All rights reserved.
+# Copyright (c) Laura Thomason                      All rights reserved. 
+#
+A php site like http://backflip.com
+Modify from --- PHP and Mysql Web Development
+Fee copy.

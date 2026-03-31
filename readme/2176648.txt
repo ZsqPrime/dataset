@@ -1,0 +1,11 @@
+= Feed
+
+This project rocks and uses MIT-LICENSE.
+
+Project Description:
+Newsfeed module for Scriptorium
+
+README:
+= Feed
+
+This project rocks and uses MIT-LICENSE.

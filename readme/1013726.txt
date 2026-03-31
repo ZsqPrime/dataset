@@ -1,0 +1,52 @@
+ /~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~\
+                                                                                )
+  EnDe - Encoder, Decoder, Converter, Calculator                               (
+                                                                                )
+ >_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_<
+(
+ )      Get a Copy:
+(              git clone git@github.com:OWASP/EnDe.git
+ )             git clone http://github.com/OWASP/EnDe.git
+(
+ )      After creating the clone, generate some more files:
+(              make gen.all
+ )
+(      Start the tool by opening  index.html or EnDe.html  in your browser
+ )      (Mozilla- or WebKit-based browsers are prefered).
+(
+ )      vi-users may have more fun after:
+(              make tags
+ )
+(
+ )      Enjoy
+(
+ \_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_/
+
+
+Project Description:
+Encoder, Decoder, Converter, Calculator, TU WAS DU WILLST .. for various codings used in the wild wide web
+
+README:
+ /~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~\
+                                                                                )
+  EnDe - Encoder, Decoder, Converter, Calculator                               (
+                                                                                )
+ >_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_<
+(
+ )      Get a Copy:
+(              git clone git@github.com:OWASP/EnDe.git
+ )             git clone http://github.com/OWASP/EnDe.git
+(
+ )      After creating the clone, generate some more files:
+(              make gen.all
+ )
+(      Start the tool by opening  index.html or EnDe.html  in your browser
+ )      (Mozilla- or WebKit-based browsers are prefered).
+(
+ )      vi-users may have more fun after:
+(              make tags
+ )
+(
+ )      Enjoy
+(
+ \_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_-~-_/

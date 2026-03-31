@@ -1,0 +1,5 @@
+Project Description:
+build monitor for jenkins/hudson
+
+README:
+js build monitor for jenkins

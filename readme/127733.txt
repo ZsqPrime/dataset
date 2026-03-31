@@ -1,0 +1,9 @@
+This is a Mediawiki extension which could make any wiki runnning on Mediaiwiki software behave like a Conference Management System.
+/model - contains all the model objects (with functions to load them from the database or to create them from the information that comes from client)
+
+Project Description:
+A Mediawiki extension 
+
+README:
+This is a Mediawiki extension which could make any wiki runnning on Mediaiwiki software behave like a Conference Management System.
+/model - contains all the model objects (with functions to load them from the database or to create them from the information that comes from client)

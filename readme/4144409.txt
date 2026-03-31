@@ -1,0 +1,5 @@
+Project Description:
+Google Code jam tasks solving
+
+README:
+Practicing in Google Code Jam problems solving

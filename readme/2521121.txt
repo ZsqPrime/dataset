@@ -1,0 +1,67 @@
+Project Description:
+le célèbre jeu du slime volleyball
+
+README:
+============================
+======== Le Serveur ========
+============================
+connexion tcp
+
+1) paquet client -> serveur
+
+{actions}
+[int16] keysP1
+[int16] keysP2
+Valeurs pour les touches : gauche 0x1, droite = 0x2, saut = 0x4, nejouepas = 0x8
+
+
+2) paquet serveur -> client
+
+{initialisation} à la connexion
+[uint8] 1
+[double64] largeur du jeu
+[double64] hauteur du jeu
+[double64] hauteur du filet
+[double64] player speed px/s
+
+
+{positions et vitesse} tout les ~50ms
+[uint8] 2
+[float32] positions balle x
+[float32]                 y
+[float32]           joueur 1
+[float32]                             
+[float32]           joueur 2
+[float32]
+[float32] vitesses balle
+[float32]    
+[float32]          joueur 1
+[float32]                 
+[float32]                 
+[float32]          joueur 2
+[int16] score joueur 1
+[int16] score joueur 2
+
+Le serveur joue le jeu en boucle, avec ou sans clients.
+
+Le serveur accepte tout les clients qui veulent s'y connecter, si un client
+désside d'incarner les deux joueur en même temps il lui suffit d'envoyer les
+paquets pour chaqu'un des deux joueurs.
+
+Le serveur envoie en continue à tout les clients le minimum d'informations 
+nessesaires pour dessiner le jeu, par consequent c'est à lui de faire la totalité
+des calculs de cinématique.
+
+===========================
+======== Le Client ========
+===========================
+Il doit offrir un interface simple pour jouer à 1 ou 2 joueur.
+Si l'on souhaite jouer à 1 joueur, il faut pouvoir choisir quel joueur jouer (1 ou 2).
+
+Le client affiche le jeu en cours sur le serveur, un client doit pouvoir servir d'observateur 
+(recoit les paquet mais n'en envoie pas).
+
+
+
+
+Idée : http://oneslime.net/

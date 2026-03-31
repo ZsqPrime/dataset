@@ -1,0 +1,10 @@
+Project Description:
+strategical game
+
+README:
+How to download source code:
+========
+git clone git@github.com:RavJan/Insects-Attack.git
+cd Insects-Attack
+git submodule init
+git submodule update

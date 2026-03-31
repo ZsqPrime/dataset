@@ -1,0 +1,8 @@
+more info on http://workshop.rs/2012/01/jquery-snow-falling-plugin/
+
+
+Project Description:
+jQuery Snow Falling plugin
+
+README:
+more info on http://workshop.rs/2012/01/jquery-snow-falling-plugin/

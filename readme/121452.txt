@@ -1,0 +1,458 @@
+<body bgcolor=white><pre>
+<b>Requirements</b>
+
+- For any functionality at all
+  - Unix.  Ubuntu works
+  - Apache
+  - MySQL
+  - PHP, including PEAR
+  - php-mysql
+  - php-gd for handling graphics directly from PHP scripts
+  - php-zip
+  - Spreadsheet_Excel_Writer and OLE.  Can be installed with:
+    % sudo pear install OLE-1.0.0RC3
+    % sudo pear install Spreadsheet_Excel_Writer-0.9.4
+    % sudo pear install Mail
+  - R, version at least 3.0 
+    - additional packages: rrBLUP, rpart, lme4, pheatmap, agricolae, lsmeans
+  - Website security - ModSecurity
+- For some functions
+  - JBrowse
+  - libzip
+  - for ViroBLAST
+    - DBD::CSV, XML::DOM and BioPerl. Can be installed with these commands:
+      % sudo cpan DBD::CSV
+      % sudo cpan XML::DOM
+      % sudo cpan BioPerl
+    - sudo apt-get install libgd-gd2-perl
+    - sudo apt-get install libcurl4-openssl-dev
+    - sudo apt-get install r-base-dev
+    - NCBI BLAST+, ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+      Edit viroblast/viroblast.ini to use the path to these executables.
+    - BLAST databases of the markers:
+      - Edit curator_data/format-fasta.php to specify species
+	e.g. viroblast/db/nucleotide/oat-markers
+	e.g. viroblast/db/nucleotide/oat-index.csv
+      - Create a symbolic link to the BLAST databases in the viroblast directory
+	e.g. cd viroblast/db
+	e.g. ln -s ../../gbs_files/blast/ nucleotide
+
+<b>Instructions for Ubuntu 16.04</b>
+sudo apt-get install apache2
+sudo apt-get install mysql-server
+sudo apt-get install php libapache2-mod-php
+sudo apt-get install php-pear
+sudo apt-get install php-mail
+sudo apt-get install php7.0-mysql
+sudo apt-get install php7.0-gd
+sudo apt-get install php7.0-zip
+sudo apt-get install php7.0-xml
+sudo apt-get install r-base
+sudo apt-get install r-base-dev
+sudo apt-get install libcurl4-openssl-dev
+sudo R
+>install.packages("rrBLUP")
+>install.packages("rpart")
+>install.packages("lme4")
+>install.packages("pheatmap")
+>install.packages("agricolae")
+>install.packages("lsmeans")
+>install.packages("STPGA")
+>install.packages("weatherData")
+>install.packages("geosphere")
+>install.packages("rwunderground")
+sudo cpan DBD::CSV
+sudo cpan XML::DOM
+sudo cpan BioPerl
+sudo mysql -u root
+mysql> create database T3wheat
+mysql> use T3wheat;
+mysql> source T3wheat_schema.sql
+mysql> source T3wheat_skeleton.sql
+cd /var/www/html
+sudo mkdir wheat
+sudo chown <username> wheat
+git clone https://github.com/TriticeaeToolbox/T3.git wheat
+sudo apt-get install libapache2-modsecurity
+cd /etc/modsecurity
+sudo mv modsecurity.conf-recommended modsecurity.conf
+cd /etc/apache2
+sudo mkdir modsecurity-crs
+sudo git clone https://github.com/SpiderLabs/owasp-modsecurity-crs modsecurity-crs
+cd /etc/apache2/modsecurity-crs
+sudo mv crs-setup.conf.example crs-setup.conf
+
+
+<b></b>
+
+<b>Setting up the MySQL databases</b>
+
+Load the schema and some initializing data from the .sql files in this
+docs/ directory:
+mysql> create database T3wheat;
+mysql> use T3wheat;
+mysql> source T3wheat_schema.sql;
+mysql> source T3wheat_skeleton.sql;
+
+The skeleton file T3wheat_skeleton.sql loads some initializing data in
+several housekeeping tables.  You will want to modify some of these
+values for your installation, especially in table 'settings'.
+
+Grant read-permission (only) to a user such as "publicuser".
+mysql> grant select on T3wheat.* to publicuser@localhost identified by '&lt;password>';
+mysql> grant execute on T3wheat.* to publicuser@localhost;
+mysql> grant update, insert, delete on T3wheat.session_variables to publicuser@localhost;
+
+To help prevent table T3wheat.users from being read by hackers, revoke
+the SELECT permission on that table by running the script publicuser.php
+in this docs/ directory.  If you add more tables to the database later,
+you will have to grant SELECT on them individually.
+
+Grant write permission to another user such as "curator":
+mysql> grant all on T3wheat.* to curator@localhost identified by '&lt;password>';
+
+If you have more than one instance of T3 on the same host machine, add
+an entry to table 'settings' with name = "database", value = "&lt;unique
+name>". The code checks this entry to prevent transfer of session
+variables (cookies) between instances.  This is important because the
+session variables include the user's login status and privileges, which
+otherwise can be transferred simply by opening a new tab in the browser.
+
+If using GBrowse, create the GBrowse database "gtht" and grant
+permissions:
+mysql> create database gtht;
+mysql> grant select on gtht.* to publicuser@localhost;
+
+<b>Database connection scripts</b>
+
+For security, the password information to connect to the MySQL database
+is not stored within the T3 source code repository or even within the
+Apache directory.  For example ours is in
+/data/tht_data/mysql_connections/.  The file permissions need only allow
+read access for the Apache user, e.g.  www-data:
+
+-r-------- 1 www-data www-data 196 2011-01-31 11:56 T3wheat_readonly.inc
+-r-------- 1 www-data www-data 141 2011-01-31 11:56 T3wheat_writeaccess.inc
+
+Create these files with the contents shown below, and edit your files
+includes/bootstrap.inc  and includes/bootstrap_curator.inc to point to the
+correct pathname for your system.
+
+T3wheat_readonly.inc:
+&lt;?php
+  $db_config = array('db_name' => 'T3wheat',
+                     'db_user' => 'publicuser',
+                     'db_pass' => '&lt;password>',
+                     'db_host' => 'localhost');
+?>
+
+T3wheat_writeaccess.inc:
+&lt;?php
+  $db_config = array('db_name' => 'T3wheat',
+                     'db_user' => 'curator',
+                     'db_pass' => '&lt;password>',
+                     'db_host' => 'localhost');
+?>
+
+<b>command line scripts</b>
+
+Some pages use "materialized view" tables of allele data rather than the
+source table 'alleles' itself. These tables are normally updated after 
+importing new data. If database data is deleted then the materialized view
+tables can be updated using scripts in the scripts\ directory.
+
+For GBS import files with over 100K markers it is necessary to use command line
+scripts to format and import the data. The scripts for doing these imports are
+located in the scripts/ directory.
+
+<b>Directories for uploaded and output files</b>
+
+Uploaded data files are stored in the curator_data/uploads/ directory,
+which must be writable by the Apache user, e.g. www-data.  
+
+% cd curator_data
+% mkdir uploads
+% sudo chown www-data uploads
+
+Likewise, certain raw data files that are not parsed into the database
+are archived in the "raw/" directory, so this must be writable by the
+Apache user too.  In the Git distribution, "raw/" is a symbolic link to
+a directory outside the repository, with the writable permission.
+
+All output and temporary files are stored in directory /tmp/tht/, where
+write-access for the scripts isn't a problem and they're all in one
+place to be purged daily or hourly with a cron() job.  In order for this
+to work there must be a symbolic link from somewhere in the webserver's
+documents directory to /tmp/tht.  For example if your T3 repositories
+are in a subdirectory "t3" of the webserver's top directory
+"/www/htdocs", this would make the link:
+
+% cd /www/htdocs/t3; mkdir tmp; ln -s /tmp/tht tmp/tht
+
+<b>ViroBLAST</b>
+
+The built-in BLAST interface, ViroBLAST, is not included in the GitHub
+repository but is <a href="http://c4c.uwc4c.com/express_license_technologies/viroblast">available</a> for academic and nonprofit 
+use at no charge.  It should be installed in directory 'viroblast/' at the
+top level of the T3 distribution.
+
+If you have installed ViroBLAST, the sequences of the markers will be
+maintained in a BLAST database in the directory 'viroblast/db/nucleotide/'.
+This directory must be writable by Apache user.
+
+<b>PHP configuration</b>
+
+Some helpful modifications for the php.ini file, such as 
+/etc/php/7.0/apache2/php.ini or /etc/php5/apache2/php.ini:
+
+max_input_time = 600
+memory_limit = 512M
+post_max_size = 100M
+upload_max_filesize = 100M
+max_input_vars = 10000
+error_log = /var/log/php-scripts.log
+
+For logging from PHP, set the owner of the log file to the Apache user,
+e.g. www-data
+# touch /var/log/php-scripts.log
+# chown www-data /var/log/php-scripts.log
+
+Then restart the Apache server to read the new php.ini configuration.
+
+<b>JBrowse</b>
+
+See installation instructions at http://jbrowse.org/code/JBrowse-1.12.1/docs/tutorial.
+The installation should be in the DocumentRoot of Apache. As and example, if the installed version is JBrowse-1.12.1 use the following command
+sudo ln -s JBrowse-1.12.1/ jbrowse
+
+
+Project Description:
+The Triticeae Toolbox (T3).  Web interface to a MySQL database of crop genotype and phenotype data from the Triticeae Coordinated Agricultural Project (T-CAP).  Installation instructions are in docs/INSTALL.html
+
+README:
+<body bgcolor=white><pre>
+<b>Requirements</b>
+
+- For any functionality at all
+  - Unix.  Ubuntu works
+  - Apache
+  - MySQL
+  - PHP, including PEAR
+  - php-mysql
+  - php-gd for handling graphics directly from PHP scripts
+  - php-zip
+  - Spreadsheet_Excel_Writer and OLE.  Can be installed with:
+    % sudo pear install OLE-1.0.0RC3
+    % sudo pear install Spreadsheet_Excel_Writer-0.9.4
+    % sudo pear install Mail
+  - R, version at least 3.0 
+    - additional packages: rrBLUP, rpart, lme4, pheatmap, agricolae, lsmeans
+  - Website security - ModSecurity
+- For some functions
+  - JBrowse
+  - libzip
+  - for ViroBLAST
+    - DBD::CSV, XML::DOM and BioPerl. Can be installed with these commands:
+      % sudo cpan DBD::CSV
+      % sudo cpan XML::DOM
+      % sudo cpan BioPerl
+    - sudo apt-get install libgd-gd2-perl
+    - sudo apt-get install libcurl4-openssl-dev
+    - sudo apt-get install r-base-dev
+    - NCBI BLAST+, ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+      Edit viroblast/viroblast.ini to use the path to these executables.
+    - BLAST databases of the markers:
+      - Edit curator_data/format-fasta.php to specify species
+	e.g. viroblast/db/nucleotide/oat-markers
+	e.g. viroblast/db/nucleotide/oat-index.csv
+      - Create a symbolic link to the BLAST databases in the viroblast directory
+	e.g. cd viroblast/db
+	e.g. ln -s ../../gbs_files/blast/ nucleotide
+
+<b>Instructions for Ubuntu 16.04</b>
+sudo apt-get install apache2
+sudo apt-get install mysql-server
+sudo apt-get install php libapache2-mod-php
+sudo apt-get install php-pear
+sudo apt-get install php-mail
+sudo apt-get install php7.0-mysql
+sudo apt-get install php7.0-gd
+sudo apt-get install php7.0-zip
+sudo apt-get install php7.0-xml
+sudo apt-get install r-base
+sudo apt-get install r-base-dev
+sudo apt-get install libcurl4-openssl-dev
+sudo R
+>install.packages("rrBLUP")
+>install.packages("rpart")
+>install.packages("lme4")
+>install.packages("pheatmap")
+>install.packages("agricolae")
+>install.packages("lsmeans")
+>install.packages("STPGA")
+>install.packages("weatherData")
+>install.packages("geosphere")
+>install.packages("rwunderground")
+sudo cpan DBD::CSV
+sudo cpan XML::DOM
+sudo cpan BioPerl
+sudo mysql -u root
+mysql> create database T3wheat
+mysql> use T3wheat;
+mysql> source T3wheat_schema.sql
+mysql> source T3wheat_skeleton.sql
+cd /var/www/html
+sudo mkdir wheat
+sudo chown <username> wheat
+git clone https://github.com/TriticeaeToolbox/T3.git wheat
+sudo apt-get install libapache2-modsecurity
+cd /etc/modsecurity
+sudo mv modsecurity.conf-recommended modsecurity.conf
+cd /etc/apache2
+sudo mkdir modsecurity-crs
+sudo git clone https://github.com/SpiderLabs/owasp-modsecurity-crs modsecurity-crs
+cd /etc/apache2/modsecurity-crs
+sudo mv crs-setup.conf.example crs-setup.conf
+
+
+<b></b>
+
+<b>Setting up the MySQL databases</b>
+
+Load the schema and some initializing data from the .sql files in this
+docs/ directory:
+mysql> create database T3wheat;
+mysql> use T3wheat;
+mysql> source T3wheat_schema.sql;
+mysql> source T3wheat_skeleton.sql;
+
+The skeleton file T3wheat_skeleton.sql loads some initializing data in
+several housekeeping tables.  You will want to modify some of these
+values for your installation, especially in table 'settings'.
+
+Grant read-permission (only) to a user such as "publicuser".
+mysql> grant select on T3wheat.* to publicuser@localhost identified by '&lt;password>';
+mysql> grant execute on T3wheat.* to publicuser@localhost;
+mysql> grant update, insert, delete on T3wheat.session_variables to publicuser@localhost;
+
+To help prevent table T3wheat.users from being read by hackers, revoke
+the SELECT permission on that table by running the script publicuser.php
+in this docs/ directory.  If you add more tables to the database later,
+you will have to grant SELECT on them individually.
+
+Grant write permission to another user such as "curator":
+mysql> grant all on T3wheat.* to curator@localhost identified by '&lt;password>';
+
+If you have more than one instance of T3 on the same host machine, add
+an entry to table 'settings' with name = "database", value = "&lt;unique
+name>". The code checks this entry to prevent transfer of session
+variables (cookies) between instances.  This is important because the
+session variables include the user's login status and privileges, which
+otherwise can be transferred simply by opening a new tab in the browser.
+
+If using GBrowse, create the GBrowse database "gtht" and grant
+permissions:
+mysql> create database gtht;
+mysql> grant select on gtht.* to publicuser@localhost;
+
+<b>Database connection scripts</b>
+
+For security, the password information to connect to the MySQL database
+is not stored within the T3 source code repository or even within the
+Apache directory.  For example ours is in
+/data/tht_data/mysql_connections/.  The file permissions need only allow
+read access for the Apache user, e.g.  www-data:
+
+-r-------- 1 www-data www-data 196 2011-01-31 11:56 T3wheat_readonly.inc
+-r-------- 1 www-data www-data 141 2011-01-31 11:56 T3wheat_writeaccess.inc
+
+Create these files with the contents shown below, and edit your files
+includes/bootstrap.inc  and includes/bootstrap_curator.inc to point to the
+correct pathname for your system.
+
+T3wheat_readonly.inc:
+&lt;?php
+  $db_config = array('db_name' => 'T3wheat',
+                     'db_user' => 'publicuser',
+                     'db_pass' => '&lt;password>',
+                     'db_host' => 'localhost');
+?>
+
+T3wheat_writeaccess.inc:
+&lt;?php
+  $db_config = array('db_name' => 'T3wheat',
+                     'db_user' => 'curator',
+                     'db_pass' => '&lt;password>',
+                     'db_host' => 'localhost');
+?>
+
+<b>command line scripts</b>
+
+Some pages use "materialized view" tables of allele data rather than the
+source table 'alleles' itself. These tables are normally updated after 
+importing new data. If database data is deleted then the materialized view
+tables can be updated using scripts in the scripts\ directory.
+
+For GBS import files with over 100K markers it is necessary to use command line
+scripts to format and import the data. The scripts for doing these imports are
+located in the scripts/ directory.
+
+<b>Directories for uploaded and output files</b>
+
+Uploaded data files are stored in the curator_data/uploads/ directory,
+which must be writable by the Apache user, e.g. www-data.  
+
+% cd curator_data
+% mkdir uploads
+% sudo chown www-data uploads
+
+Likewise, certain raw data files that are not parsed into the database
+are archived in the "raw/" directory, so this must be writable by the
+Apache user too.  In the Git distribution, "raw/" is a symbolic link to
+a directory outside the repository, with the writable permission.
+
+All output and temporary files are stored in directory /tmp/tht/, where
+write-access for the scripts isn't a problem and they're all in one
+place to be purged daily or hourly with a cron() job.  In order for this
+to work there must be a symbolic link from somewhere in the webserver's
+documents directory to /tmp/tht.  For example if your T3 repositories
+are in a subdirectory "t3" of the webserver's top directory
+"/www/htdocs", this would make the link:
+
+% cd /www/htdocs/t3; mkdir tmp; ln -s /tmp/tht tmp/tht
+
+<b>ViroBLAST</b>
+
+The built-in BLAST interface, ViroBLAST, is not included in the GitHub
+repository but is <a href="http://c4c.uwc4c.com/express_license_technologies/viroblast">available</a> for academic and nonprofit 
+use at no charge.  It should be installed in directory 'viroblast/' at the
+top level of the T3 distribution.
+
+If you have installed ViroBLAST, the sequences of the markers will be
+maintained in a BLAST database in the directory 'viroblast/db/nucleotide/'.
+This directory must be writable by Apache user.
+
+<b>PHP configuration</b>
+
+Some helpful modifications for the php.ini file, such as 
+/etc/php/7.0/apache2/php.ini or /etc/php5/apache2/php.ini:
+
+max_input_time = 600
+memory_limit = 512M
+post_max_size = 100M
+upload_max_filesize = 100M
+max_input_vars = 10000
+error_log = /var/log/php-scripts.log
+
+For logging from PHP, set the owner of the log file to the Apache user,
+e.g. www-data
+# touch /var/log/php-scripts.log
+# chown www-data /var/log/php-scripts.log
+
+Then restart the Apache server to read the new php.ini configuration.
+
+<b>JBrowse</b>
+
+See installation instructions at http://jbrowse.org/code/JBrowse-1.12.1/docs/tutorial.
+The installation should be in the DocumentRoot of Apache. As and example, if the installed version is JBrowse-1.12.1 use the following command
+sudo ln -s JBrowse-1.12.1/ jbrowse

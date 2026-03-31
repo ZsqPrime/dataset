@@ -1,0 +1,10 @@
+Solutions to L-99: Ninety-Nine Lisp Problems in Erlang
+from http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html
+
+
+Project Description:
+None
+
+README:
+Solutions to L-99: Ninety-Nine Lisp Problems in Erlang
+from http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html

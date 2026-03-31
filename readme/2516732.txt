@@ -1,0 +1,8 @@
+Software refactoring processes captured with Little-JIL language
+
+
+Project Description:
+Software refactoring processes captured in Little-JIL language
+
+README:
+Software refactoring processes captured with Little-JIL language

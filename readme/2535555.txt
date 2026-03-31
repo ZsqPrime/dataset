@@ -1,0 +1,47 @@
+Project Description:
+Kickstart is a work-in-progress chrome extension that replaces the default new-tab page with something more multifunctional.
+
+README:
+KICKSTART
+
+
+
+
+
+MUST HAVE
+
+- Settings dialog for individual widgets (show/hide/remove (remove = gmail/rss only), change title, max unread mails, max rss articles, etc)
+
+
+
+SHOULD HAVE
+
+- Settings dialog for individual bookmarks (show/hide, change title/url)
+
+- Help pop-up
+
+
+
+COULD HAVE
+
+
+
+
+
+WANT TO HAVE
+
+
+
+
+
+TODO
+
+- Use "max-items" for RSS feeds
+
+
+
+
+
+BUGS
+
+- No known bugs

@@ -1,0 +1,12 @@
+Project Description:
+Completo  Control de Clientes Basico.
+
+README:
+Modulo Control de Clientes en Php
+Usando, mysql,css, ajax, jquery, javascript.
+
+
+
+
+Contacto: tfcjuanz@gmail.com
+www.portafolioz.esmipc.com

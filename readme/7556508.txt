@@ -1,0 +1,18 @@
+Project Description:
+PHP Mysql
+
+README:
+This project for squirrelmail , Address group plugin use Mysql.
+Please change index.html to index.php.
+grean edit1.
+grean edit2.
+grean edit3.
+grean edit4.
+GREAN EDIT5.
+GREAN EDIT6.
+GREAN EDIT7.
+GREAN EDIT8.
+GREAN EDIT9.
+GREAN EDIT10.
+GREAN EDIT11.
+GREAN EDIT12.

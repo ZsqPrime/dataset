@@ -1,0 +1,68 @@
+Project Description:
+National flag font
+
+README:
+=============================================================================
+Vexilla Nationum  -  National flag font
+=============================================================================
+
+
+DESCRIPTION
+
+    This font intends to include figures of the world's national flags.
+
+
+SPECIFICATION
+
+    Fonts are monochrome, and cannot deal with colors.  Therefore this font
+uses Petra Sancta's system for colors which should be distinguished.
+
+    Code points from U+1F1E6 to U+1F1FF are intended to represent national
+flags with biliteral country code.  ISO 3166-1 alpha-2 is used for the
+country code; for example JP for Japan, IT for Italy, RU for Russia.
+    Exceptionally, SU is the code for no-longer-existent Soviet Union.  AQ is
+officially assigned for Antarctica, but it is territory of no country and
+no official flags exist.
+
+    For systems without glyph composition, you may use the code point in the
+Private Use Area.  U+ECC1 is assigned for AA (user-assignable code), U+ECC2
+for AB (unassigned), &c. to U+ECDA which is for AZ (Azerbaijan).  For BA
+(Bosnia and Herzegovina), assigned in U+ECE1, similarly BZ (Belize) at U+ECFA,
+ZZ (user-assignable code) at U+EFFA.
+
+
+COLOR REPRESENTATION
+
+    Petra Sancta's system in heraldic tincture is explained below.
+
+  Metals:
++---------+                            +---------+
+|:::::::::|   Gold (Yellow)            |         |   Silver (White)
+|:::::::::|   Or                       |         |   Argent
++---------+                            +---------+
+
+  Colors:
++---------+                            +---------+
+|---------|   Blue                     |||||||||||   Red
+|---------|   Azure                    |||||||||||   Gules
++---------+                            +---------+
++---------+                            +---------+
+|/////////|   Purple                   |\\\\\\\\\|   Green
+|/////////|   Purpure                  |\\\\\\\\\|   Vert
++---------+                            +---------+
++---------+
+|+++++++++|   Black
+|+++++++++|   Sable
++---------+
+
+  Stains:
++---------+                            +---------+
+|\|\|\|\|\|   Tawny (Orange)           |XXXXXXXXX|   Brown (Murrey)
+|\|\|\|\|\|   Tenné                    |XXXXXXXXX|
++---------+                            +---------+
+
+  Other tinctures:
++---------+
+|- - - - -|   Sky blue
+| - - - - |   Bleu-Celeste
++---------+   (Not in Petra Sancta's system)

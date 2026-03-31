@@ -1,0 +1,5 @@
+Project Description:
+Baseline for nodekc projects
+
+README:
+This is the baseline for NodeKC web projects.

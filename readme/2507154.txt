@@ -1,0 +1,8 @@
+Initialize git repo for POGDDL.
+
+
+Project Description:
+Partially Observable Game Domain Description Language
+
+README:
+Initialize git repo for POGDDL.

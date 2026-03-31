@@ -1,0 +1,12 @@
+This is an Scientific Initiation project held by Matheus Boy, undergraduate at Campinas State University, Campinas, São Paulo, Brazil, and Professor Rodolfo Azevedo, teacher at Campinas State University.
+
+The file acpm is a platform manager for simulators of several computer architectures.
+
+
+Project Description:
+None
+
+README:
+This is an Scientific Initiation project held by Matheus Boy, undergraduate at Campinas State University, Campinas, São Paulo, Brazil, and Professor Rodolfo Azevedo, teacher at Campinas State University.
+
+The file acpm is a platform manager for simulators of several computer architectures.

@@ -1,0 +1,43 @@
+Dependencies
+============
+
+ * telemeta
+ * teleforma
+ * telecaster-server
+ * deefuzzer
+
+
+LICENCE
+=======
+
+CeCILL v2
+
+Author
+=======
+
+Guillaume Pellerin <yomguy@parisson.com>
+
+
+
+Project Description:
+Audio and video live recording and streaming module for the e-learning system TeleForma (Python, Django, Javascript)
+
+README:
+Dependencies
+============
+
+ * telemeta
+ * teleforma
+ * telecaster-server
+ * deefuzzer
+
+
+LICENCE
+=======
+
+CeCILL v2
+
+Author
+=======
+
+Guillaume Pellerin <yomguy@parisson.com>

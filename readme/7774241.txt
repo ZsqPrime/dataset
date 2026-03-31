@@ -1,0 +1,5 @@
+Project Description:
+activity feed plugin for cakephp http://namelessnotion.lighthouseapp.com/projects/24083-activity-feed-plugin-cakephp/overview
+
+README:
+Very experimental, not working yet.

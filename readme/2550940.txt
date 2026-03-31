@@ -1,0 +1,7 @@
+Project Description:
+A Rails-powered application that helps create beautiful online resumes for free
+
+README:
+Killer Resume Builder
+
+Create beautiful online resumes for free @ http://krb.heroku.com/

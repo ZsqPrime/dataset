@@ -1,0 +1,14 @@
+Rails-BR
+========
+
+Coisas relacionadas à lista http://groups.google.com/group/rails-br/
+
+
+Project Description:
+Coisas da Rails-BR
+
+README:
+Rails-BR
+========
+
+Coisas relacionadas à lista http://groups.google.com/group/rails-br/

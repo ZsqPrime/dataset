@@ -1,0 +1,152 @@
+== Info
+
+Status: http://stillmaintained.com/phoet/karotz.png
+Build: http://travis-ci.org/phoet/karotz.png
+Dependencies: http://gemnasium.com/phoet/karotz.png
+
+This gem is still in early development.
+
+== Docs
+
+Supported methods:
+
+* ears
+* led
+* tts (text to speech)
+* multimedia
+* asr (automated speach recognition)
+* webcam
+* config
+
+Have a look at the whole api: http://dev.karotz.com/api
+
+Read the HOW-TO: http://www.dzone.com/links/karotz_ruby_love.html
+
+== Installation
+
+  gem install karotz
+
+via Bundler:
+
+  # Gemfile
+  gem "karotz"
+  
+  bundle install
+
+== Examples
+
+  require 'karotz'
+  Karotz::Configuration.configure do |config|
+    config.install_id = ENV['KAROTZ_INSTALL_ID']
+    config.api_key    = ENV['KAROTZ_API_KEY']
+    config.secret     = ENV['KAROTZ_SECRET']
+    config.proxy      = ENV['KAROTZ_PROXY']
+  end
+  
+  # bare
+  interactive_id = Karotz::Client.start
+  Karotz::Client.ears interactive_id
+  [...]
+  Karotz::Client.stop(interactive_id)
+  
+  # using a session
+  Karotz::Client.session do |karotz|
+    karotz.ears
+    [...]
+  end
+  
+  # using a client
+  karotz = Karotz::Client.create
+  karotz.ears
+  [...]
+  karotz.stop
+
+== Changes
+
+See CHANGELOG file.
+
+== License
+
+"THE BEER-WARE LICENSE" (Revision 42):
+ps@nofail.de[mailto:ps@nofail.de] wrote this file. As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return Peter Schröder
+
+
+Project Description:
+ruby bindings for the karotz rest api
+
+README:
+== Info
+
+Status: http://stillmaintained.com/phoet/karotz.png
+Build: http://travis-ci.org/phoet/karotz.png
+Dependencies: http://gemnasium.com/phoet/karotz.png
+
+This gem is still in early development.
+
+== Docs
+
+Supported methods:
+
+* ears
+* led
+* tts (text to speech)
+* multimedia
+* asr (automated speach recognition)
+* webcam
+* config
+
+Have a look at the whole api: http://dev.karotz.com/api
+
+Read the HOW-TO: http://www.dzone.com/links/karotz_ruby_love.html
+
+== Installation
+
+  gem install karotz
+
+via Bundler:
+
+  # Gemfile
+  gem "karotz"
+  
+  bundle install
+
+== Examples
+
+  require 'karotz'
+  Karotz::Configuration.configure do |config|
+    config.install_id = ENV['KAROTZ_INSTALL_ID']
+    config.api_key    = ENV['KAROTZ_API_KEY']
+    config.secret     = ENV['KAROTZ_SECRET']
+    config.proxy      = ENV['KAROTZ_PROXY']
+  end
+  
+  # bare
+  interactive_id = Karotz::Client.start
+  Karotz::Client.ears interactive_id
+  [...]
+  Karotz::Client.stop(interactive_id)
+  
+  # using a session
+  Karotz::Client.session do |karotz|
+    karotz.ears
+    [...]
+  end
+  
+  # using a client
+  karotz = Karotz::Client.create
+  karotz.ears
+  [...]
+  karotz.stop
+
+== Changes
+
+See CHANGELOG file.
+
+== License
+
+"THE BEER-WARE LICENSE" (Revision 42):
+ps@nofail.de[mailto:ps@nofail.de] wrote this file. As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return Peter Schröder

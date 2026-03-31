@@ -1,0 +1,11 @@
+Project Description:
+Frink is a reddit client designed for Tablets
+
+README:
+Frink! is a Reddit client designed for tablets.  It is Open Source and Commercial.  
+
+Frink! is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.  All of the source is freely available, assuming you are using it for a non-commercial application, and share your code.  For commercial licensing or any other uses, please contact me at http://jbeckwith.com.
+
+I am currently maintaining a few different lines of development for Frink!  This version is a complete re-write of the original.  This version is written using PhoneGap and HTML5, while the previous version was written in as3 and mxml, using Adobe Flex 4.5.  
+
+For more information, please visit Frink! at http://frinkapp.com.

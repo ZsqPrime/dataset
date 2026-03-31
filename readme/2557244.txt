@@ -1,0 +1,60 @@
+Project Description:
+This a Ruby gem that provides SWT-based federation
+
+README:
+= SWT Federation for Ruby
+
+{<img src="https://secure.travis-ci.org/nicopaez/SWT-Federation.png?branch=master" alt="Build Status" />}[http://travis-ci.org/nicopaez/SWT-Federation]
+
+This library provides SWT-based federation for Ruby applications (ruby 1.9)
+
+The entry point of this library is the TokenHandler class. Before using it you have to set some class instance 
+variables that hold configuration information. You can do this, int he config.ru file as shown below.
+
+  # config.ru
+  require './application.rb'
+  require 'swt_federation'
+
+  SwtFederation::TokenHandler.realm = 'yourrealmhere'
+  SwtFederation::TokenHandler.issuer = 'https://yourservicenamespacehere.accesscontrol.windows.net/'
+  SwtFederation::TokenHandler.token_key = 'yourkeyhere'
+  SwtFederation::TokenHandler.token_type = 'http://schemas.xmlsoap.org/ws/2009/11/swt-token-profile-1.0'
+
+  run Sinatra::Application
+
+Below you can find an example of how to use it with Sinatra.
+
+  # application.rb
+  before do
+
+    next if request.path_info == '/swt' 
+    if(session['user']==nil)
+      redirect ("<your_identity_provider_url>")
+    end
+  end
+
+  post '/swt' do
+    response = TokenHandler.new(params[:wresult])
+    if (response.is_valid?)
+      session['user'] = response.claims['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress']
+      target_url = params[:wctx]
+      if (target_url != nil)   
+        redirect(target_url)
+      else
+        redirect('/home') 
+      end
+    else
+      status(403)
+      halt('access denied')
+    end
+  end
+
+  get '/'
+    user = session['user']
+    "Hello #{user}!"
+  end
+
+This is the second drop, I have added some tests and now there is a good coverage rate but there are many things to improve(check coding conventions, add more features, deeper Rack integration, etc). 
+If you want to use it and have any doubt, just contact me.
+
+Hope you find it useful!

@@ -1,0 +1,8 @@
+Project Description:
+A django application for gathering web statistics
+
+README:
+django-webstats
+===============================================================================
+A django based tool for monitoring website visitor activity.
+It works by including a small piece of html that requests a 1 pixel transparent image into each website page to be monitored.

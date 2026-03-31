@@ -1,0 +1,12 @@
+# Do Not Use
+
+## Development of this project has been moved to [https://github.com/usercycle/usercycle-api-ruby](https://github.com/usercycle/usercycle-api-ruby)
+
+
+Project Description:
+Ruby wrapper for the USERCycle REST API
+
+README:
+# Do Not Use
+
+## Development of this project has been moved to [https://github.com/usercycle/usercycle-api-ruby](https://github.com/usercycle/usercycle-api-ruby)

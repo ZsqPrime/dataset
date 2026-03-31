@@ -1,0 +1,7 @@
+Project Description:
+Experimental script to build puppy packages from source.
+
+README:
+ppkg
+------------
+Reads a PUPPYPKG file and compiles a puppy package from it.

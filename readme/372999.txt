@@ -1,0 +1,14 @@
+#Daida Beanstalk Strategy
+##About
+See the primary daida project [README](https://github.com/ngmoco/daida.js/blob/master/README.md).
+Daida.js: https://github.com/ngmoco/daida.js
+
+
+Project Description:
+A beanstalkd persistence and worker plugin for the daida scheduler library.
+
+README:
+#Daida Beanstalk Strategy
+##About
+See the primary daida project [README](https://github.com/ngmoco/daida.js/blob/master/README.md).
+Daida.js: https://github.com/ngmoco/daida.js

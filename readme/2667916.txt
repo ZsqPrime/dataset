@@ -1,0 +1,4 @@
+Project Description:
+JavaScript based Facebook style popup plugin.
+
+README:

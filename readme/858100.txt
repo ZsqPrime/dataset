@@ -1,0 +1,11 @@
+== FilmFest
+
+Rails 3.2 application with mounted Refinery.
+
+Project Description:
+website for filmfest
+
+README:
+== FilmFest
+
+Rails 3.2 application with mounted Refinery.

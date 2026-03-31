@@ -1,0 +1,23 @@
+# Chicago Lobbyists
+
+## Running
+
+    $ gem install bundler
+    $ bundle install
+    $ rackup
+
+Surf to http://localhost:9292
+
+Project Description:
+An open data, open government, and open source project intended to improve the transparency of interactions between the City of Chicago, lobbyists and their clients.
+
+README:
+# Chicago Lobbyists
+
+## Running
+
+    $ gem install bundler
+    $ bundle install
+    $ rackup
+
+Surf to http://localhost:9292

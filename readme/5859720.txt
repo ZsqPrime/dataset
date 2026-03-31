@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+A simple game I'm making as a progamming exercise.
+
+Made using Haskell and gloss.

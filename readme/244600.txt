@@ -1,0 +1,8 @@
+Creative coding exercises started during Evan's residency at Ravensbourne http://rave.ac.uk
+
+
+Project Description:
+Creative coding experiments
+
+README:
+Creative coding exercises started during Evan's residency at Ravensbourne http://rave.ac.uk

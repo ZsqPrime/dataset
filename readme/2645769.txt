@@ -1,0 +1,7 @@
+Project Description:
+Checks Erebot's lag from time to time
+
+README:
+Checks server lag, eventually disconnecting the bot
+
+Package detailed description here (found in README)

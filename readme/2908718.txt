@@ -1,0 +1,4 @@
+Project Description:
+Support your own Affiliate program in WordPress with affiliate IDs transmitted to PayPal via buy-now/add-to-cart buttons.
+
+README:

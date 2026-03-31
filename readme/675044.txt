@@ -1,0 +1,5 @@
+Project Description:
+Execute multiple HTTP requests in parallel using PHP Streams
+
+README:
+Note: This project is a work in progress and incomplete. Check back later!

@@ -1,0 +1,7 @@
+Project Description:
+Objective gametype script for Warsow
+
+README:
+# Warsow Objective
+
+Gametype script allowing mapscripts to specify objectives.

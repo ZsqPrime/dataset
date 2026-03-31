@@ -1,0 +1,12 @@
+# RoR tutorial: sample application
+
+This is the sample application for [*Ruby on Rails Tutorial*](http://railstutorial.org/)
+
+
+Project Description:
+Rails 3.2 application following Ruby on Rails Tutorial, 2nd Edition by Michael Hartl
+
+README:
+# RoR tutorial: sample application
+
+This is the sample application for [*Ruby on Rails Tutorial*](http://railstutorial.org/)

@@ -1,0 +1,8 @@
+Project Description:
+TradutorGalego iOS
+
+README:
+tradutorgalego-ios
+==================
+
+TradutorGalego iOS

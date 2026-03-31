@@ -1,0 +1,4 @@
+Project Description:
+Haskell functions to get VCS revision of current directory
+
+README:

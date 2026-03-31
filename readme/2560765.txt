@@ -1,0 +1,21 @@
+Project Description:
+
+
+README:
+Kody Pocztowe - wyszukiwarka kodów pocztowych dla BlackBerry Playbook
+
+Baza kodów pochodzi ze strony - http://piotr.eldora.pl/bazy-danych-kody-pocztowe-imiona-panstwa
+Ikonki:
+- http://findicons.com/icon/51327/e_mail
+- http://www.iconfinder.com/icondetails/65596/48/map_icon
+
+Kod w dużej mierze bazuje na aplikacji PersonalKanban - (c) Joel Hooks
+
+Wersje:
+0.0.4 - domyślny niebieski theme
+0.0.3 - wersja z wyszukiwanie kodów na bazie podanego adresu (miejscowość, ulica)
+0.0.2 - wersja z wyszukiwarka danych szczegolowych dla podanego kodu pocztowego
+0.0.1 - szkielet
+
+TODO:
+- dodac otwieranie miejscowosci/ulicy w Google Maps

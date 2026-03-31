@@ -1,0 +1,7 @@
+Project Description:
+Testowa aplikacja dla Ruby on Rails
+
+README:
+# Ruby on Rails Tutorial: Testowa aplikacja
+
+Pierwsza aplikacja służąca nauce Ruby on Rails :)

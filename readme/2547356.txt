@@ -1,0 +1,63 @@
+Project Description:
+Dashboard for Assembla Spaces
+
+README:
+h2. Deprecated
+
+This project is deprecated and (probably) incompatible with the latest Assembla API/SDK.
+
+h1. Assembler
+
+A unified dashboard for Assembla Spaces on an Ajax-PHP framework (Evocatio).
+
+This dashboard will pull from all Spaces that the user defined in the settings has access too.
+
+h3. Nick Breslin, Etiquette Studio
+
+E-Mail: "nickbreslin@gmail.com":mailto:nickbreslin@gmail.com
+Twitter: "@EtiquetteStudio":http://twitter.com/#!/EtiquetteStudio
+Web Site: "etiquettestudio.com":http://www.etiquettestudio.com
+
+h2. Setup
+
+h3. Settings File
+
+Copy /config/settings.txt to /config/settings.ini. This settings file is ignored by git and will not be committed back into the project.
+
+Enter your Assembla username and password to be used when querying Assembla for results.
+<pre>assembla.username = ASSEMBLA_USERNAME
+assembla.password = ASSEMBLA_PASSWORD
+</pre>
+
+If you have APC installed, you can modify the cache expiry for apc. It's default is 600 seconds (10 minutes).
+<pre>apc.expiry = 600
+</pre>
+
+
+h3. Log File
+
+If logging is turned on, you'll need an access.log and error.log in the /logs/ directory. This can be changed in /lib/core/log.php
+
+h2. License
+
+* Source under "MIT license":http://copyfree.org/licenses/mit/license.txt.
+* cupcake.ico (favicon), credited to "Patrizio ;archesan":http://www.favicon.cc/?action=icon_list&user_id=9258 from favicon.cc under Creative Commons license.
+* Third-party resources (jQuery, Bootstrap) include details for their own licenses.
+
+h2. Releases & Changelog
+
+h3. v0.3 - Links Release
+
+* Ticket icon now links to the related ticket on Assembla.
+
+h3. v0.2 - APC Release
+
+* Optional APC Caching (if installed) of curl calls to Assembla.
+
+h3. v0.1 - Alpha Release
+
+* Initial public release.
+* Search by Status (All, Open, Closed)
+* Search by Timeframe (All Time, This Week, Next Week)
+* Group By (User, Project, Both)
+* Loads search result async.

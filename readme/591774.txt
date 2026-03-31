@@ -1,0 +1,9 @@
+Tools, white paper, presentations, and other documentation related to research into Apple's iOS Mobile Device Management system.
+
+
+
+Project Description:
+Intrepidus Group's iOS MDM tools
+
+README:
+Tools, white paper, presentations, and other documentation related to research into Apple's iOS Mobile Device Management system.

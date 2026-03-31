@@ -1,0 +1,12 @@
+Project Description:
+jQuery plugin that pops a tooltip, including an arrow, containing buttons (ok/cancel)
+
+README:
+# jQuery DialogTooltip
+
+## Author
+Sébastien Lavoie (sebastien@lavoie.sl)
+
+## Description
+
+Coming soon

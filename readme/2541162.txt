@@ -1,0 +1,79 @@
+Project Description:
+this should eventually be a module tracker let alone a networked multi-user one
+
+README:
+ManyTracker
+by Ben "GreaseMonkey" Russell and contributors, 2012.
+Public domain.
+
+SOME KEYS. NOTE: this doesn't autostart now!
+
+F5 = play from start
+F6 = play pattern (looped)
+Shift-F6 = play from order
+F7 = play from row
+F8 = STOP <-- very, very important!
+
+ok so current status:
+
+it works fairly well as a player, considering i haven't been working on it for very long.
+
+it has:
+- instruments!
+- filters!
+- buggy ping-pong loops!
+- buggy NNAs!
+- surround sound!
+- IT v1 instruments!
+- backwards compatibility with old IT versions!
+- no attempt at modplug compatibility! yes, that's ACTUALLY A FEATURE!
+- close adherence to the ITTECH.TXT flowchart!
+- amiga slides!
+- PROPER IT-STYLE NON-AMIGA SLIDES oh yes take that modplug you sack of crap
+- fadeout! P.S. I HATE YOU XM AND I WANT YOU TO DIE FOREVER
+- stereo samples!
+- IT214 compressed samples!
+- *IT215* compressed samples!
+- ***STEREO*** compressed samples! (not extensively tested)
+- at least a half-assed attempt at implementing the Cvt flags properly!
+  - take that, everything that isn't IT! (how embarassing, would be so useful for zipping stuff up D:)
+- PERFECT* Ixx IMPLEMENTATION! (* i might be wrong - it passes the Storlek tests though)
+- correct instrument envelope looping! (none of this XM-y bollocks)
+- voleffects!
+- mod loader! probably still has bugs.
+- s3m loader! ditto about the bugs.
+- xm loader! DEFINITELY has bugs (it IS XM, after all)
+- sample VIBRATO wow who uses that (umm... oddly enough i kinda do)
+- pan / vol swing
+- PITCH PAN SEPARATION WOW
+- sample sustain loops!
+- decent s3m pattern filtering! finally, a player that plays SATELL.s3m correctly!
+
+and finally:
+- *PLENTY* of bugs!
+
+it doesn't quite have:
+- MMCMP decompression
+- all the effects
+- IT v1 volume envelopes (uses the points instead of the curve... but it sounds fine!)
+- out of range SDx (passes just as well as modplug does: it doesn't latch the new instrument)
+
+it lacks:
+- any form of input that isn't alt-f4, that X, or ctrl-c
+- any form of networking
+- a file saver
+- all the panes that aren't the pattern pane
+- embedded MIDI loading / timestamp crap
+- duplicate check bollocks
+
+some TODOs:
+- work out how voleffect memory works in IT <= (2.14-2.14p2).
+  - it's slightly different from how Storlek test #25 expects it.
+- work out more wrt how Hx works.
+  - mostly thinking of how it works wrt fine/unfine vibrato.
+
+so uh yeah, this is where it's at (or more likely where it WAS at, and I haven't updated this yet).
+--Ben "GreaseMonkey" Russell, 2012.
+
+to make a jar:
+jar -cf manytracker.jar -m META-INF/MANIFEST.MF */*.class data/*.bmp >/dev/null

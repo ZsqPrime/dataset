@@ -1,0 +1,11 @@
+Project Description:
+a semantic moviemanager for KDE using imdb api
+
+README:
+MovieManager - A semantic movie management software for KDE written in Qt (C++) using IMDB api (http://www.imdbapi.com)
+
+AUTHORS:
+SANDEEP RAJU P
+   sandeep080@gmail.com
+SADAN SOHAN M
+   sadansohanm@gmail.com

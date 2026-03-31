@@ -1,0 +1,5 @@
+Project Description:
+OpenCV utility for more effective programming
+
+README:
+cvut -- OpenCV utility toolkit for more effective programming

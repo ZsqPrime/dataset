@@ -1,0 +1,24 @@
+whoWillWin README
+// Master Branch
+// Test for the Hook
+// TEST 2 for hook
+// TEST 3 for hook
+// TEST 4 for hook
+// TEST 5 for hook
+// TEST 6 for hook
+// TEST 7 for hook
+
+
+Project Description:
+Tool that can predict the scores of Bundesliga matches. The tool is based on Pyramid a Python Web-Framework
+
+README:
+whoWillWin README
+// Master Branch
+// Test for the Hook
+// TEST 2 for hook
+// TEST 3 for hook
+// TEST 4 for hook
+// TEST 5 for hook
+// TEST 6 for hook
+// TEST 7 for hook

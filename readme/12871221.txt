@@ -1,0 +1,139 @@
+* Todo:
+
+
+** `snap' cares about tarbal !
+gbp:info: Orig tarball 'gauche_0.9.4.orig.tar.gz' not found at '../tarballs/'
+-> only matter of #tarball-dir = ../tarballs/ in ~/.gbp.conf
+
+
+* Relevant Variables (for your env)
+M Build system:
+
+REPREPRO_BASE_DIR
+MBS_TARGETS
+MBS_SNAP_TARGETS
+MBS_DISTRO
+
+
+
+* Background:
+
+git-dch passes (not a simple mapping) only *some* params to
+debchange/dch.
+dch(1) employs a heuristics to do stuff.
+
+So it's difficult to build on a low-level tool, which does heuristics
+for itself.
+
+So, that Perl code should be treated as a library, git-dch should
+build on top of that (again in Perl, I'm sorry).
+
+
+
+* Features
+
+*** snap
+
+** When making a package (source or preparing for compilation)
+I want to generate all the "autoconf" generated files.
+So that I don't have to store configure .... install.sh
+and similar files in Git.
+
+** debian/control ....support for generation from the *.in file.
+
+** making a Snapshot package does NOT make a commit.
+So the debian/changelog is not submitted, but still changed.
+
+git-buildpackage does not do that out-of-box. a pre-build hook is
+necessary.
+
+
+*** release
+
+** I want an option to switch to git-builder.  todo!
+** I want to dictate the Distro name on command line.  how?
+
+
+
+* History
+** First I had my PPA on lauchpad
+
+** git-buildpackage ... I had a recipe, and pasted on Zsh command line.
+
+** Then I automated this: I had a function zload-file which pushed on
+the "stack" the commands (builtin print -z $line), so they would
+auto-magically appear in sequence, when you press Enter.
+
+I made a wrapper mygit-buildpackage which invoked some hooks, when
+necessary.
+
+
+** Then, upgrading to yet another ubuntu release,
+I made Perl tools for debian/{control,changelog} parsing, so that I
+could somehow rebuild all my packages for that distro. ... still in progress
+
+** Then I wanted to build inside ...  pbuilder -> git-builder (cow-worker)
+
+** Then I noticed how to make "snapshot" package.
+** At the same time I installed mini-dinstall, and after 2 weeks reprepro.
+
+*** release 1.0
+
+
+** soon mygit-buildpackage, which was just to invoke the prototype hooks,
+will not be needed:  snap is enough?
+
+
+
+* push into
+by default:
+** snap:  REPREPRO_BASE_DIR  _or_ MBS_SNAP_TARGETS
+** release                        MBS_TARGETS
+
+
+* misc
+DEBUILD_DPKG_BUILDPACKAGE_OPTS
+DEBUILD_DPKG_BUILDPACKAGE_OPTS="--source-option="""
+
+
+* do I sign UNRELEASED repo?
+I should not. And I configure in  SignWith:
+~/reprepro/conf/distributions
+
+
+* dch piece by piece versions.
+dunno!
+
+
+
+* Building for x32 !
+** how to build ... inside container?
+#    $TAGOPTIONS \
+# todo:
+# --git-builder /usr/bin/git-pbuilder
+
+
+dpkg-buildpackage -rfakeroot -us -uc -ui -nc -b -b
+~/bin/enter-build-32 -r -- -E "GBP_TMP_DIR=$GBP_TMP_DIR" --chdir $GBP_TMP_DIR
+
+~/bin/enter-build-32 -r  -- --chdir /run/tmp/libx11-1.6.7-1  dpkg-buildpackage -rfakeroot -us -uc -ui -nc -b -b
+
+# todo:
+
+debuild --rootcmd=fakeroot --no-tgz-check -e MAKEFLAGS -b -- build   binary-arch; debsign
+dpkg-genchanges -B
+
+
+debuild  (reads ~/.devscripts) --preserve-envvar
+-> dpkg-buildpackage ....  hooks?
+   -> debian/rules build-target
+
+DEBUILD_DPKG_BUILDPACKAGE_OPTS
+
+
+
+File "pool/main/libx/libx11/libx11-doc_1.6.7-1-maruska_all.deb" is already registered with different checksums!
+md5 expected: 345e8ad985066e873c67e0f72f12645a, got: 94f9200ed3d8e0b1129159ffca162e79
+sha1 expected: 51ba57da35b7eaa7b5eff43d94cef2bd9ed39d90, got: 51065427418eb8cd724b4a23c8c56c7a60a702b7
+sha256 expected: 0e21a1c961355756ff44375aa6c6e8afc03b96d69d738b3e77b858059d338595, got: f0851755380369f15b4e5a1fde592aacfbaa60e8ec40d             eb04f6322d442bb17b1
+size expected: 2217388, got: 2211812

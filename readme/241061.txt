@@ -1,0 +1,8 @@
+An implementation of the evercraft kata from George Walters and Guy Royse
+
+
+Project Description:
+Guy Royse and George Walter's Evercraft Kata implemented in Java
+
+README:
+An implementation of the evercraft kata from George Walters and Guy Royse

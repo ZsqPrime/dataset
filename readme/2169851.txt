@@ -1,0 +1,56 @@
+Sticky Notes - an HTML5 experiment.
+** Targeted for Chrome and Safari **
+It works surprisingly well in IE9, although it's not supported or recommended.
+
+This is a project I made to help me learn JavaScript. I wrote as many functions as I thought were reasonable to avoid using heavy JQuery.
+
+Update (1/30/2012):
+    Complete engine rewrite
+    Better delete handling (drag note to trash icon)
+    Added color picker
+    Added title to note
+    Removed 'sortable' option
+    Added Facebook OpenGraph metadata
+
+    Todo:
+        GTasks integration
+        Star/favorite notes
+        Due notifications
+        Fix calendar styling
+        Make notes resizable
+        Fix persistent sidebar tooltips
+
+Note: the file "htaccess" should be named ".htaccess" if deploying.
+
+~radium-v
+
+
+Project Description:
+This is really old. Don't bother with it.
+
+README:
+Sticky Notes - an HTML5 experiment.
+** Targeted for Chrome and Safari **
+It works surprisingly well in IE9, although it's not supported or recommended.
+
+This is a project I made to help me learn JavaScript. I wrote as many functions as I thought were reasonable to avoid using heavy JQuery.
+
+Update (1/30/2012):
+    Complete engine rewrite
+    Better delete handling (drag note to trash icon)
+    Added color picker
+    Added title to note
+    Removed 'sortable' option
+    Added Facebook OpenGraph metadata
+
+    Todo:
+        GTasks integration
+        Star/favorite notes
+        Due notifications
+        Fix calendar styling
+        Make notes resizable
+        Fix persistent sidebar tooltips
+
+Note: the file "htaccess" should be named ".htaccess" if deploying.
+
+~radium-v

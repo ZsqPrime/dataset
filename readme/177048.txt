@@ -1,0 +1,6 @@
+
+
+Project Description:
+Grails Activiti Plugin - Enabled Activiti BPM Suite support for Grails
+
+README:

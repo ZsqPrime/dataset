@@ -1,0 +1,7 @@
+Project Description:
+Fett is an Open Source Job Board application developed using Ruby on Rails
+
+README:
+Fett is a job board application
+
+More coming soon!

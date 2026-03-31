@@ -1,0 +1,12 @@
+##Ruby on Windows
+
+Code for the Ruby on Windows precompiler
+
+
+Project Description:
+Code for the Ruby on Windows Pre-compiler, Codemash 2012
+
+README:
+##Ruby on Windows
+
+Code for the Ruby on Windows precompiler

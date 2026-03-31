@@ -1,0 +1,6 @@
+
+
+Project Description:
+Smart grid made easy - realtime data on your home energy consumption to your phone and email
+
+README:

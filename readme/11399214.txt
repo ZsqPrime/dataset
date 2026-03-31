@@ -1,0 +1,11 @@
+Project Description:
+Create virtual hosts using Apache on Linux-based system
+
+README:
+Virtual Host Config
+
+Create virtual hosts using Apache on Linux-based system
+
+How to use:
+
+Example: $ sudo ./vhc.sh /var/www/ localhost.project directoryproject webroot

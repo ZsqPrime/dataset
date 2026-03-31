@@ -1,0 +1,6 @@
+Project Description:
+Lightweight MVC content management framework.
+
+README:
+Still much stuff to do here.
+Have a look at http://www.diegocaponera.com/projects/mw meanwhile please.

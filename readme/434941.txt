@@ -1,0 +1,7 @@
+Project Description:
+Convert a sam mapping file and gff3 annotation file to find transcriptomic level in microbial transciptomic data sets
+
+README:
+sam2fpkg.pl
+
+take gene expression levels from metatranscriptomic data

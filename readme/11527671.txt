@@ -1,0 +1,7 @@
+Project Description:
+Moodle app for Android
+
+README:
+Moodle app for Android phones.
+Made January 2012.
+Android Market: https://market.android.com/details?id=com.ivoid.droodlelite

@@ -1,0 +1,10 @@
+Project Description:
+
+
+README:
+This is a python script that automates the punch in/out in TimeTrex.
+Requirements:
+python 3.x
+
+for windows users:
+please rename the 'punch' file to 'punch.py'

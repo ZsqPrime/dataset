@@ -1,0 +1,5 @@
+Project Description:
+A php/html based code for minimal "wall" or message board functionality. No database, messages stored in a text file. Sample site linked below.
+
+README:
+A php/html file with code that creates a page where text can be posted to a public "wall". The data is stored in a text file and read from that file with each page load.

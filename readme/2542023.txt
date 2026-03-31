@@ -1,0 +1,4 @@
+Project Description:
+A Greasemonkey script to see only the article - hide the sidebar and the header and reveal them using the keyboard shortcut Ctrl+Alt+Z.
+
+README:

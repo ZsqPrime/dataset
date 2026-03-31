@@ -1,0 +1,57 @@
+================================================================
+Nuxeo Journalist Wordpress theme - Designed by tsoulcie
+is a child theme of
+The Journalist 1.9 - Designed by Lucian E. Marin | http://lucianmarin.com/
+[Theme built for WordPress 2.3 and 2.5] 
+[Licensed under GPL]
+[May 3rd 2008]
+
+How to install
+-----------------
+
+As this is a child theme of The Journalist, make sure you have already installed The Journalist.
+
+Open up your FTP program and login to your server. Navigate to your WordPress folder and upload the entire folder (journalistnuxeo) to your wp-content/themes folder.
+
+Extra
+-----------------
+
++Browser support
+
+Tested with the following browsers:
+Firefox 1/8
+Opera 8/9
+Safari 2/4
+Internet Explorer 6/7
+
+
+
+Project Description:
+Nuxeo's child Theme for Journalist 
+
+README:
+================================================================
+Nuxeo Journalist Wordpress theme - Designed by tsoulcie
+is a child theme of
+The Journalist 1.9 - Designed by Lucian E. Marin | http://lucianmarin.com/
+[Theme built for WordPress 2.3 and 2.5] 
+[Licensed under GPL]
+[May 3rd 2008]
+
+How to install
+-----------------
+
+As this is a child theme of The Journalist, make sure you have already installed The Journalist.
+
+Open up your FTP program and login to your server. Navigate to your WordPress folder and upload the entire folder (journalistnuxeo) to your wp-content/themes folder.
+
+Extra
+-----------------
+
++Browser support
+
+Tested with the following browsers:
+Firefox 1/8
+Opera 8/9
+Safari 2/4
+Internet Explorer 6/7

@@ -1,0 +1,4 @@
+Project Description:
+Helper to generate dummy data of different types (it's easy to add your own). Friendly towards async data loading.
+
+README:

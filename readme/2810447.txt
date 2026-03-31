@@ -1,0 +1,13 @@
+Project Description:
+tools for wii and function identification to help hacking wii games and better RE stuff
+
+README:
+tools for playing with your wii
+=============================
+
+
+compile stuff with ./compile.pl <blah.cpp>
+	-OR-
+use Makefile for example apps
+
+PythonTools folder currently has sel_parser.py

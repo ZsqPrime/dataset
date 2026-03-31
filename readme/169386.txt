@@ -1,0 +1,11 @@
+# Upstream moved
+
+https://github.com/fedora-jboss-as/jboss-as-rpm
+
+Project Description:
+Private repo for JBoss AS7 RPM work
+
+README:
+# Upstream moved
+
+https://github.com/fedora-jboss-as/jboss-as-rpm

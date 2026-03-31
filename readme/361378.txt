@@ -1,0 +1,21 @@
+Corona SDK "GameCenter Tapper" Sample Code (version 1.0)
+========================================================
+
+Download: http://www.anscamobile.com/corona
+
+Requires Corona SDK Build 2012.725 or later.
+Copyright (C) 2011 ANSCA Inc. All Rights Reserved.
+
+
+
+Project Description:
+Corona SDK SampleCode for GameCenter Integration.
+
+README:
+Corona SDK "GameCenter Tapper" Sample Code (version 1.0)
+========================================================
+
+Download: http://www.anscamobile.com/corona
+
+Requires Corona SDK Build 2012.725 or later.
+Copyright (C) 2011 ANSCA Inc. All Rights Reserved.

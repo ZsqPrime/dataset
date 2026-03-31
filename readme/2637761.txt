@@ -1,0 +1,6 @@
+Project Description:
+Contains useful matlab scripts
+
+README:
+THis repo will contain useful scripts for MATLAB. 
+Currently added script it routh table generator.

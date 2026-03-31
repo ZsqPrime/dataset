@@ -1,0 +1,28 @@
+Simply put in the path to your TerrariaServer.exe in the box provided below the send button.
+If the path has any spaces in it you should surround the entire path in quotes.
+
+Example:
+"C:\Program Files (x86)\Steam\steamapps\common\terraria\TerrariaServer.exe"
+
+Known Issues:
+The text shown on the input line is not shown until text is sent.
+
+Project Description:
+Terraria Server Wrapper
+
+README:
+Simply put in the path to your TerrariaServer.exe in the box provided below the send button.
+
+If the path has any spaces in it you should surround the entire path in quotes.
+
+
+
+Example:
+
+"C:\Program Files (x86)\Steam\steamapps\common\terraria\TerrariaServer.exe"
+
+
+
+Known Issues:
+
+The text shown on the input line is not shown until text is sent.

@@ -1,0 +1,5 @@
+Project Description:
+The SMC website.
+
+README:
+Readme? No, read you!

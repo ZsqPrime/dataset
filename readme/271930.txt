@@ -1,0 +1,16 @@
+This is the documentation module of FusionInventory.
+
+= BUILD =
+To generate the documentation, run:
+ make
+
+
+Project Description:
+None
+
+README:
+This is the documentation module of FusionInventory.
+
+= BUILD =
+To generate the documentation, run:
+ make

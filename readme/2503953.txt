@@ -1,0 +1,38 @@
+This is just a repo for the files used to package python-cairo for use with
+qtile. Packages are availible via:
+
+    sudo apt-add-repository ppa:tycho-s/ppa
+    sudo apt-get update
+    sudo apt-get install python-cairo
+
+To build the package:
+
+    cd /tmp
+    wget https://launchpad.net/~tycho-s/+archive/ppa/+files/pycairo_1.10.2.orig.tar.gz
+    # warning, tarbomb!
+    mkdir pycairo-1.10.2 && cd pycairo-1.10.2 && tar -xf pycairo_1.10.2.orig.tar.gz
+    # copy the debian/ directory to where the tarball was extracted
+    debuild -S -sd
+    dput ppa:tycho-s/ppa *.changes
+
+
+Project Description:
+Utilities for packaging pycairo for use with qtile
+
+README:
+This is just a repo for the files used to package python-cairo for use with
+qtile. Packages are availible via:
+
+    sudo apt-add-repository ppa:tycho-s/ppa
+    sudo apt-get update
+    sudo apt-get install python-cairo
+
+To build the package:
+
+    cd /tmp
+    wget https://launchpad.net/~tycho-s/+archive/ppa/+files/pycairo_1.10.2.orig.tar.gz
+    # warning, tarbomb!
+    mkdir pycairo-1.10.2 && cd pycairo-1.10.2 && tar -xf pycairo_1.10.2.orig.tar.gz
+    # copy the debian/ directory to where the tarball was extracted
+    debuild -S -sd
+    dput ppa:tycho-s/ppa *.changes

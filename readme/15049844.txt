@@ -1,0 +1,4 @@
+Project Description:
+A Gnome Shell extension for moving notification area
+
+README:

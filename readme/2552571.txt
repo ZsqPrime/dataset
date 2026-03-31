@@ -1,0 +1,8 @@
+Project Description:
+Sidebuy API Examples
+
+README:
+These exmaples are provided by Sidebuy API Team. 
+If you have any other code snippest or plugins. Please add here.
+
+For any questions, please email: reza@sidebuy.com

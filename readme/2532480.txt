@@ -1,0 +1,164 @@
+Project Description:
+
+
+README:
+ScanBatch is a program for running large batches of simulations using 
+BioNetGen (http://bionetgen.org). 
+
+It is loosely based (in particular, the method of generating modified BNGL 
+files) on the scan_var.pl program that comes with BNG, but promises to be 
+a great deal more helpful for automated data generation. It currently 
+supports ranges of concentrations across arbitrary numbers of models, 
+species, concentrations, and runs per concentration.
+
+See the example config file 'sb.conf' for an example of how to set up a 
+batch run.
+
+The program logic is in lib/ScanBatch.pm and the command line program is sb.pl.
+
+=== INSTALLATION ===
+
+To install, download ScanBatch from github at:
+https://github.com/danielpacker/CMACS2012/
+
+You can do a git clone, or download the files directly.
+
+=== RUNNING ===
+
+perl sb.pl [config-file-path]
+
+[config-file-path] is optional. By default sb.pl looks for a config file 
+called sb.conf in your working directory.
+
+There are several important environment variables you can set to change where 
+files are sought or saved:
+
+SB_MODEL_DIR='path-to-model-files'
+SB_DATA_DIR='path-to-where-data-is-saved' 
+BNGPATH='path-to-bionetgen-dir'
+
+Here's an example of setting all of these and running sb.pl in one line:
+SB_MODEL_DIR='models' SB_DATA_DIR='/tmp/sb_data' BNGPATH='../rulebender/BioNetGen-2.1.7/' perl sb.pl
+
+This command uses /tmp for the data files, ./models for the model files, and 
+the BNG that comes with my copy of rulebender.
+
+=== CONFIG FILE ===
+
+FORMAT:
+
+  [model_file.bngl]
+  option=value
+  ... more options ...
+  SPECIES: START, END, STEPS, RUNS
+  ... more species ...
+... more models ...
+
+When the distribution is even, the parameters for each species are as specified above.
+
+When the distribution is exponential, the paramters for each species are:
+
+ SPECIES: COEFF, BASE, MAX_EXP, RUNS
+
+So that the function to generate the range is:
+
+  f(x) = (COEFF * (BASE ^ x)) where x is 0 through MAX_EXP
+
+
+OPTIONS:
+
+  dist - Distribution of concentrations. 'exp' or 'even'. Default is 'even'.
+
+  t_end - Time of simulations in seconds. Default is 500.
+
+  n_steps - Steps in simulations. Default is 250.
+
+  do_eq - Perform an equilibration simulation. 1 or 0. Default is 1.
+
+  do_sparse - Do a sparse simulation? 1 or 0. Default is 0.
+
+  steady - Attempt to reach steady state? 1 or 0. Default is 1.
+
+  eq_t_end - Time of equilibration simulation. Default is 1e4.
+
+  eq_n_steps - Steps in simulation for equilibration. Default is 1e5.
+
+  eq_stead - Attempt to reach steady state in equilibration? 1 or 0. Default is 1.
+
+  eq_do_sparse - Do a sparse simulation for equilibration? 1 or 0. Default is 1. 
+
+EXMAPLES:
+
+  [mymodel.bngl]
+  do_eq=0
+  Ligand(l,l): 0, 10, 11, 100
+  MyOtherParam: 0, 5, 50
+
+
+=== DATA FILES ===
+
+ScanBatch saves files in the directory you specify via SB_DATA_DIR or 
+in ./sb_data by default. The data is organized like this:
+
+sb_data/
+	scanbatch.log
+	model_name/
+		species_name1/
+			[CONCENTRATION]/
+				00001.gdat
+				00002.gdat
+				...
+			[CONCENTRATION]/
+				00001.gdat
+				00002.gdat
+				...
+		species_name2/
+		...
+	model_name2/
+	...
+
+There are as many models, species, concentrations, and runs as specified 
+in the config file. The log file contains the output of BNG2.pl (bionetgen). 
+[CONCENTRATION] refers to a directory with a numerical name.
+
+A typical data file path might look like this:
+/tmp/sb_data/toy-jim/L(r)/3.33333333333333/00064.gdat
+
+This file is in a data directory of '/tmp/sb_data', for a model 'toy-jim.bngl', 
+setting the concentration of species L(r) to 3.33333333333333 on the 64th run.
+
+In addition to all of the gdat files (and cdat files), other files may be 
+created, as specified in your model file.
+
+=== TODO ===
+
+* Allow config to specify if a given entry is for a paramters or a 
+  concentration corresponding to setParamter() or setConcentration()
+* Allow config to specify a range from start_val to end_val or
+  to specify a series (perhaps start_val can be a list?)
+* Add generation of time-series data by skimming the generated gdat
+  files for a given target (column) and threshhold value specified
+  in the model config. Perhaps:
+  [model.bngl]
+  threshhold=123
+  target_column=2
+* Don't overwrite network?
+* Save data files in a timestamped directory so we can avoid overwriting old data
+* Add module for generation of R histograms from time series data in data files
+  - See above about time-series data
+* Expand parameter options to per-entry options (so that ranges can be either even or exponential per entry, for example)
+* Combinatorial species, so that you can combine use multiple range sof multiple species simultaneously
+* Testing framework for models -- configure test conditions in terms of expected concentrations given certain initial conditions and then automatically check that test conditions pass or fail
+
+* DONE: Allow config to specify a range with a custom exponential function
+  (specify base and exponent. ex. X^(Yi) where i is the iteration
+* IGNORE: Remove double quotes around 2nd arg for setConcenration() - prob not necessary.
+* DONE Save equil run data in appropriate subdirs (currently hard coded to 'equil')
+* DONE: Remove any simulate/set commands at end of original model (make optional) like:
+  [model.bngl]
+  remove_commands=1
+
+
+=== More documentation to follow... ===
+
+Author: Daniel Packer <dp@danielpacker.org>

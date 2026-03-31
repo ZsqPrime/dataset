@@ -1,0 +1,12 @@
+# iridium framework 
+
+**DEPRECATED:** please use ee-* packages instead
+
+
+Project Description:
+the iridium framework
+
+README:
+# iridium framework 
+
+**DEPRECATED:** please use ee-* packages instead

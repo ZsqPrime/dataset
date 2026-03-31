@@ -1,0 +1,16 @@
+Project Description:
+Quiz application
+
+README:
+== Leaderboard / Quiz App
+
+This is an application / prototype where Administrators can write questions for their salesteam to answer. The salesteam is ranked according to the number of answers they answer correctly. Badges and ranks can be assigned based on performance.
+
+The purpose of this is for Administrators to gauge how well their salesteam understands a product.
+
+
+Features:
+- Administrators can create a multiple-choice (4 questions) quiz
+- Sales professionals can take the quiz
+- Both admins and sales professionals can compare their results in a leaderboard-fashion
+- Basic comments work (on the Dashboard)

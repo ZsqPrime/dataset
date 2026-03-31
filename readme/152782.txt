@@ -1,0 +1,10 @@
+# MetaBuilder
+## An explorative project on Ruby/JRuby Metaprogramming Features
+
+
+Project Description:
+A Ruby MetaProgramming Excercise
+
+README:
+# MetaBuilder
+## An explorative project on Ruby/JRuby Metaprogramming Features

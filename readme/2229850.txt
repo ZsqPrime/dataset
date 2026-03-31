@@ -1,0 +1,8 @@
+Pipelined Biplex FFT Block found in CASPER library using MyHDL Package.
+
+
+Project Description:
+Development of DSP blocks found in CASPER library using MyHDL package and Python
+
+README:
+Pipelined Biplex FFT Block found in CASPER library using MyHDL Package.

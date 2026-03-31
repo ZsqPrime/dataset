@@ -1,0 +1,23 @@
+Did I say you shoudn't use this?
+Well, now there you have the disclaimer.
+
+###Don't use this code. 
+
+It's broken badly. If you use and lose data, I can't help you.
+
+--
+Mugunth
+
+Project Description:
+Sync your Documents directory with iCloud in a single line of code. #NOT
+
+README:
+Did I say you shoudn't use this?
+Well, now there you have the disclaimer.
+
+###Don't use this code. 
+
+It's broken badly. If you use and lose data, I can't help you.
+
+--
+Mugunth

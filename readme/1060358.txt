@@ -1,0 +1,60 @@
+Open data server 
+================
+
+HaSadna: http://yeda.us
+
+
+Provides a frontend for accessing public data, either as API or as more complex web pages, with user/permission support etc.
+
+
+
+Getting started
+===============
+
+- Install mongodb
+- Install pymongo
+
+$ python run.py
+
+- Use the sadna-data project to load data from standard files into the DB 
+
+- Go to "http://api.yeda.us/data/gov/knesset/mks"
+- Go to "http://api.yeda.us/data/gov/knesset/mks?o=html"
+- Go to "http://api.yeda.us/data/gov/knesset/mks?o=csv"
+- Go to "http://api.yeda.us/data/gov/knesset/mks?lang=en"
+- Go to "http://api.yeda.us/data/gov/knesset/mks/atias_ariel"
+- Go to "http://api.yeda.us/data/gov/knesset/mks/atias_ariel?o=html"
+- Go to "http://api.yeda.us/data/gov/knesset/mks/atias_ariel?o=html&lang=en"
+
+
+Project Description:
+Server for accessing public data
+
+README:
+Open data server 
+================
+
+HaSadna: http://yeda.us
+
+
+Provides a frontend for accessing public data, either as API or as more complex web pages, with user/permission support etc.
+
+
+
+Getting started
+===============
+
+- Install mongodb
+- Install pymongo
+
+$ python run.py
+
+- Use the sadna-data project to load data from standard files into the DB 
+
+- Go to "http://api.yeda.us/data/gov/knesset/mks"
+- Go to "http://api.yeda.us/data/gov/knesset/mks?o=html"
+- Go to "http://api.yeda.us/data/gov/knesset/mks?o=csv"
+- Go to "http://api.yeda.us/data/gov/knesset/mks?lang=en"
+- Go to "http://api.yeda.us/data/gov/knesset/mks/atias_ariel"
+- Go to "http://api.yeda.us/data/gov/knesset/mks/atias_ariel?o=html"
+- Go to "http://api.yeda.us/data/gov/knesset/mks/atias_ariel?o=html&lang=en"

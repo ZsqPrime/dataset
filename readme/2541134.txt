@@ -1,0 +1,4 @@
+Project Description:
+Sistema em desenvolvimento para ser uma ferramenta administrativa para empresas no ramo da construção civil.
+
+README:

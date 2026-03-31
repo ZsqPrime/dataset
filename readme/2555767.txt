@@ -1,0 +1,5 @@
+Project Description:
+Vehicle Detector using feature detector (SURF) in ROS (for "follow me" application)
+
+README:
+This software is a pre-alpha version and isn't supposed that it will work on your computer. :)

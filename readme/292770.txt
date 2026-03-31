@@ -1,0 +1,8 @@
+**This gem is now maintained at https://github.com/polleverywhere/markdown-rails**
+
+
+Project Description:
+Markdown as a static templating language for Rails views and partials
+
+README:
+**This gem is now maintained at https://github.com/polleverywhere/markdown-rails**

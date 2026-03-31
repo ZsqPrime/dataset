@@ -1,0 +1,644 @@
+* Software defined radio using Jack audio connection kit.
+  *Keyer* is a kit for building software defined radios,
+  a sort of SDR breadboard for software.
+** Tools ::  It's built around a core set of tools.
+*** Jack :: the jack audio construction kit
+   Jack is used as a low-latency sample and event bus.
+   IQ and audio samples are routed as Jack audio, and
+   events are routed as MIDI.  The components of *keyer*
+   which do signal processing are implemented as Jack
+   plugins which run inside Jack's realtime thread.
+*** Tcl :: the tool command language
+   Tcl is a scripting language with simple syntax, reference
+   counted memory management, a simple threading model, and
+   lots of libraries.  It is the principal language used in
+   *keyer*, used to glue components together, relay buffers
+   from place to place, and generally smooth rough edges.
+*** Tk :: the UI toolkit based on tcl
+   The Tk toolkit was created to produce a single line
+   hello world program for X windows.  It is used to produce
+   the user interface components of *keyer*.
+*** Snit :: a pure Tcl object and widget system
+   Snit types and widgets are used to extend Tcl and Tk with
+   suitable components.  This provides a Tk widget like wrapper
+   for code so that the Tk abstraction of object with options and
+   methods can be used more generally.
+*** C/C++ :: are used as the base implementation languages
+    Tcl and Tk are written in C, Jack has a C and a C++ implementation,
+    *keyer* uses C and C++ to implement Tcl plugins, Jack plugins, and
+    DSP computations.
+** Internally developed novelties
+*** Dialbook :: a snit widget to implement a one knob radio
+   I find complicated user interfaces tedious to use but even more
+   tedious to build.  The dialbook hides the user interface behind
+   one knob, turn the knob to alter the currently displayed option,
+   push the knob to enter option selection mode, turn the knob to
+   scroll through the available options, push the knob to go back
+   to option select an option for alteration.
+*** Dspmath :: a library of efficient digital signal processing code
+   Running in a real time thread requires code with minimal overhead.
+   The modules in the dspmath library are written to compile to inlined
+   code as much as possible.  You #include a module to use it, define and
+   and init as many instances of the module data structure as are required.
+   to be used.
+*** Sdrtcl :: a framework for DSP in Jack as loadable Tcl packages
+    The basic Tcl loadable Jack processing DSP modules are built using
+    a common framework.
+* Prerequisites
+  I've written these instructions as I use them on a laptop running
+  Ubuntu 19.10.  I've tested on liveusb installations of Ubuntu, Lubuntu,
+  UbuntuStudio, and Debian so far and incorporated all my discoveries into
+  this discussion.  Most of it is generic enough to work on other current
+  Linux systems with minor translations of package management tools and
+  package names. It's also generic enough to port to MacOS or Windows.
+  But I don't run other Linux systems, MacOS, or Windows so asking me
+  to help you make it work may be a lost cause.
+
+  I will be assuming that you have installed the keyer sources in your
+  home directory, abbreviated as "~".  So I will refer to the keyer source
+  directory as "~/keyer" in all that follows.   At the moment it depends
+  on being there and parts of the package won't work correctly if installed
+  elsewhere.
+** Required repository
+   Ubuntu recently disabled the "universe" repository so its packages are only
+   available after you reenable with the following:
+   #+BEGIN_EXAMPLE
+   sudo apt-add-repository universe
+   #+END_EXAMPLE
+   The command does nothing if not needed, but if it is needed then a
+   lot of these packages will be mysteriously unavailable.
+** Required packages
+   Using your preferred Debian/Ubuntu package manager, you want to install
+   the following packages:
+   | build-essential    |
+   | git                |
+   | jackd2             |
+   | tk8.6-dev          |
+   | tcllib             |
+   | tklib              |
+   | tcl-udp            |
+   | tcl-thread         |
+   | libasound2-dev     |
+   | libfftw3-dev       |
+   | libjack-jackd2-dev |
+   | libusb-1.0-0-dev   |
+   | graphviz           |
+   | tkcon              |
+
+   These are not all the required packages.  Several other packages
+   will be dragged in because they're required by the packages
+   listed.
+
+   The "apt" command to install these packages is
+   #+BEGIN_EXAMPLE
+   sudo apt install build-essential git-core jackd2 tk8.6-dev tcllib tklib tcl-udp tcl-thread libasound2-dev libfftw3-dev libjack-jackd2-dev libusb-1.0-0-dev graphviz tkcon
+   #+END_EXAMPLE
+
+   Run this apt command in a terminal emulator.  There will be a test part way
+   through when apt asks if you want to install jack with realtime privileges.
+   The correct answer is <yes> but the default answer is <no>.
+
+   If apt tells you that jackd2, tcllib, tklib, tcl-udp, and tcl-thread are
+   not available, go back to the section labeled "Required Repository".
+** Required system administration
+   The installation of jackd2 should have installed a file named "/etc/security/limits.d/audio.conf".
+   You need to make yourself into one of the users that benefits from that file.
+   #+BEGIN_EXAMPLE
+   sudo addgroup $USER audio
+   #+END_EXAMPLE
+   will add $USER, which should be you, to the audio group so that you may run
+   jack at realtime priority and lock down shared memory.
+** Required reboot
+   The modifications that enable realtime and shared memory used to take effect
+   after the next login.  It now appears that they take effect after a reboot.
+   #+BEGIN_EXAMPLE
+   sudo /sbin/reboot
+   #+END_EXAMPLE
+   The symptoms that they have not been enabled are complaints from Jack that it could
+   not lock down memory and could not acquire realtime privileges.  These complaints
+   will appear in the *Messages...* panel of qjackctl. There will also be problems
+   getting MIDI devices imported as Jack ports in the 
+** Getting the source
+   The sources are archived at https://github.com/recri/keyer.
+   Assuming that you installed the git packages and want the
+   sources to be in ~/keyer,
+   #+BEGIN_EXAMPLE
+   cd ~ && git clone https://github.com/recri/keyer
+   #+END_EXAMPLE
+   will create a new directory named "keyer" in your home directory.
+   The sources will be up to date as of the time that you clone the 
+   repository.
+
+   Running:
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && git pull origin master
+   #+END_EXAMPLE
+   will refresh your sources to the most recent at any time.  It's
+   prudent to run: 
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make all-clean
+   #+END_EXAMPLE
+   before or after refreshing the sources because the list of things
+   to be built and cleaned up is changing all the time.
+
+   If things get messed up (and you have no local changes to preserve)
+   you can always:
+   #+BEGIN_EXAMPLE
+   cd ~ && rm -fr keyer && git clone https://github.com/recri/keyer
+   #+END_EXAMPLE
+   to start over again from a clean copy.
+** Building
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make
+   #+END_EXAMPLE
+   will compile everything needed to run.  If you have problems,
+   please go back to the list of required packages and make sure you
+   didn't miss one.
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make clean
+   #+END_EXAMPLE
+   will remove intermediate files not required to run.
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make all-clean
+   #+END_EXAMPLE
+   should remove all built files.  This is often necessary because I've
+   failed to identify all dependencies to keep the Makefile's readable.
+** Installing
+   I don't do any install. I usually run the scripts from ~/keyer
+   manually prefixing bin/ to get the commands I want to run.
+   The commands in ~/keyer/bin depend on their path name to find
+   the libraries in ~/keyer/lib/..., so if you do install to another
+   directory, then you should make symbolic links to ~/keyer/bin/.
+
+   You can run this command to link ~/keyer/bin/keyer into ~/.local/bin
+   #+BEGIN_EXAMPLE
+   mkdir -p ~/.local/bin && ln -s ~/keyer/bin/keyer ~/.local/bin
+   #+END_EXAMPLE
+** MidiKey hardware interface
+   The MidiKey software for the Teensy 2, LC, 3.x, and 4.x processors
+   makes your straight key or paddle into a MIDI device, which allows
+   the keying events to be processed with the lowest latency possible.
+   See the ReadMe.org file in [[https://github.com/recri/keyer/embedded][embedded]] directory for more details.
+* Usage
+  Using *keyer* requires using Jack, so the first step is to get Jack started.
+  There are many ways to get Jack started, and doing it from the command line
+  is probably the right way to go in the long run, but for now I suggest the
+  application qjackctl.
+** Starting jack, first time
+   Launch qjackctl,
+   open the *Setup...* dialog,
+   navigate to the Settings panel,
+   "(default)" should be the Preset Name,
+   navigate to the Parameters sub-panel,
+   select alsa as the Driver,
+   check the Realtime box,
+   choose the (default) audio Interface,
+   choose 48000 as the Sample Rate,
+   and select the raw MIDI Driver.
+   Save the Preset, Cancel the dialog, and press the Start button.
+   If the status display shows Started and 48000 Hz, then you're done.
+*** Cannot get realtime, cannot allocate memory
+    Jack needs to run a realtime thread to compute samples in a timely fashion, and it
+    needs to be able to allocate and lock shared memory to allow multiple processes to
+    share in the sample computation.  This can be a bit tedious to set up, so please
+    follow carefully and get it over with the first time.
+
+    If there is no file named /etc/security/limits.d/audio.conf, then jackd was
+    installed without realtime permissions.  Run this command to reinstall the
+    realtime permissions.
+    #+BEGIN_EXAMPLE
+    sudo dpkg-reconfigure -p high jackd
+    #+END_EXAMPLE
+
+    If your user name is not listed as a member of the audio group in /etc/group,
+    then this command should add you:
+    #+BEGIN_EXAMPLE
+    sudo addgroup $USER audio
+    #+END_EXAMPLE
+
+    Then try rebooting:
+    #+BEGIN_EXAMPLE
+    sudo /sbin/reboot
+    #+END_EXAMPLE
+
+    Then try doing it all again more carefully?
+*** Other messages ending with failure
+    Go back to the *Setup...* dialog and try some different audio Interfaces.
+** Starting jack, with a patchbay
+   Qjackctl has two panels that deal with the connections between jack ports and clients.
+
+   The *Connect...* panel shows the current clients and connections in Jack.  These
+   are segregated into separate panels for Audio, MIDI, and Alsa, each listing the
+   clients with output ports on the left and with input ports on the right.  
+
+   The *Patchbay...* panel shows lists of potential clients and connections in Jack.
+   These are all combined in a single panel.  If a patchbay is activated, then if the
+   clients named in the patchbay appear in Jack, then the specified connections between
+   the clients will be made.
+*** Use the *Patchbay...* to specify connections that you always want to work.    
+    If you click the *Load...* button and navigate to ~/keyer/patch you'll find a collection
+    of patchbay presets that I have saved. Load the one named key+kbd+out.xml and activate it.
+** Starting jack, subsequent times
+   Once you've set up a qjackctl default preset that works, you can start jack by:
+   #+BEGIN_EXAMPLE
+   qjackctl --start &
+   #+END_EXAMPLE
+   If you've saved a named qjackctl preset named [label] that works, you can start jack with:
+   #+BEGIN_EXAMPLE
+   qjackctl --start --preset=[label] &
+   #+END_EXAMPLE
+   Once you've found a patchpanel preset that works and saved it to [path], you can start jack
+   with that patchpanel active with:
+   #+BEGIN_EXAMPLE
+   qjackctl --start --active-patchbay=[path] &
+   #+END_EXAMPLE
+   That last trick appears to only load the patchbay, you will still need to activate
+   it on the *Patchbay...* panel.
+** Starting a basic *keyer* app
+  Assuming you've cloned https://github.com/recri/keyer into ~/keyer,
+  installed the prerequisites,
+  run make to build the keyer binaries,
+  and started Jack with the key+kbd+out patchpanel activated), then you can run:
+#+BEGIN_EXAMPLE
+$ ~/keyer/bin/keyer cas key kbd out -tree 1
+#+END_EXAMPLE
+** MidiKey - Teesyduino application
+   The necessary steps should be listed in the comment at the head of
+   embedded/MidiKey/MidiKey.ino.
+
+   Don't forget to install the /etc/udev/rules.d rules file for the
+   Teensy.
+* More details, too much information
+  I threw a bunch of stuff out of this README so it would be less
+  of a mess.  They're all in the Notes directory of the project, and
+  if you navigate there in the github web interface then github will
+  open files and mark them down for you.  This README and all the
+  files in the Notes directory are written in org-mode using emacs, an
+  outline mode.  The github markdown processor does a good job of
+  converting them to web pages, but some things get lost or mangled in
+  the translation, like internal links.
+* Credits
+  This code is derived from many sources.
+
+  The largest debt is to the dttsp sources, Copyright (C) 2004, 2005,
+  2006, 2007, 2008 by Frank Brickle, AB2KT and Bob McGwier, N4HY.
+  Many of the modules here are directly or indirectly derived from
+  their code.
+
+  I've learned a lot from reading documentation, example applications,
+  header files, and library code for [[http://www.alsa-project.org/][ALSA]] and [[http://jackaudio.org/][Jack]].
+
+  Perry Cook's [[https://ccrma.stanford.edu/software/stk/][Synthesis Toolkit]] provided one worked example of how to
+  make adjustments to DSP components on the fly.
+
+  Faust, http://faust.grame.fr/, is a really neat idea, dsp computations
+  described as an algebra on infinite streams of samples.  It also
+  provided an example of how not to make adjustments to DSP components
+  on the fly.
+
+  More recently I've been learning a lot by reading
+  [[https://james.ahlstrom.name/quisk/][Quisk]] by James Ahlstrom, N2ADR,
+  [[https://github.com/g0orx/wdsp][wdsp]] by Warren Pratt, NR0V,
+  and [[https://github.com/g0orx/linhpsdr][linhpsdr]] by John Melton, G0ORX/N6LYT.
+* Licensing
+  Copyright (C) 2011-2014 by Roger E Critchlow Jr, Santa Fe, NM, USA.
+  Copyright (C) 2018 by Roger E Critchlow Jr, Charlestown, MA, USA.
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+   
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+
+
+Project Description:
+iambic/ascii morse code keyer using Jack audio connection kit
+
+README:
+* Software defined radio using Jack audio connection kit.
+  *Keyer* is a kit for building software defined radios,
+  a sort of SDR breadboard for software.
+** Tools ::  It's built around a core set of tools.
+*** Jack :: the jack audio construction kit
+   Jack is used as a low-latency sample and event bus.
+   IQ and audio samples are routed as Jack audio, and
+   events are routed as MIDI.  The components of *keyer*
+   which do signal processing are implemented as Jack
+   plugins which run inside Jack's realtime thread.
+*** Tcl :: the tool command language
+   Tcl is a scripting language with simple syntax, reference
+   counted memory management, a simple threading model, and
+   lots of libraries.  It is the principal language used in
+   *keyer*, used to glue components together, relay buffers
+   from place to place, and generally smooth rough edges.
+*** Tk :: the UI toolkit based on tcl
+   The Tk toolkit was created to produce a single line
+   hello world program for X windows.  It is used to produce
+   the user interface components of *keyer*.
+*** Snit :: a pure Tcl object and widget system
+   Snit types and widgets are used to extend Tcl and Tk with
+   suitable components.  This provides a Tk widget like wrapper
+   for code so that the Tk abstraction of object with options and
+   methods can be used more generally.
+*** C/C++ :: are used as the base implementation languages
+    Tcl and Tk are written in C, Jack has a C and a C++ implementation,
+    *keyer* uses C and C++ to implement Tcl plugins, Jack plugins, and
+    DSP computations.
+** Internally developed novelties
+*** Dialbook :: a snit widget to implement a one knob radio
+   I find complicated user interfaces tedious to use but even more
+   tedious to build.  The dialbook hides the user interface behind
+   one knob, turn the knob to alter the currently displayed option,
+   push the knob to enter option selection mode, turn the knob to
+   scroll through the available options, push the knob to go back
+   to option select an option for alteration.
+*** Dspmath :: a library of efficient digital signal processing code
+   Running in a real time thread requires code with minimal overhead.
+   The modules in the dspmath library are written to compile to inlined
+   code as much as possible.  You #include a module to use it, define and
+   and init as many instances of the module data structure as are required.
+   to be used.
+*** Sdrtcl :: a framework for DSP in Jack as loadable Tcl packages
+    The basic Tcl loadable Jack processing DSP modules are built using
+    a common framework.
+* Prerequisites
+  I've written these instructions as I use them on a laptop running
+  Ubuntu 19.10.  I've tested on liveusb installations of Ubuntu, Lubuntu,
+  UbuntuStudio, and Debian so far and incorporated all my discoveries into
+  this discussion.  Most of it is generic enough to work on other current
+  Linux systems with minor translations of package management tools and
+  package names. It's also generic enough to port to MacOS or Windows.
+  But I don't run other Linux systems, MacOS, or Windows so asking me
+  to help you make it work may be a lost cause.
+
+  I will be assuming that you have installed the keyer sources in your
+  home directory, abbreviated as "~".  So I will refer to the keyer source
+  directory as "~/keyer" in all that follows.   At the moment it depends
+  on being there and parts of the package won't work correctly if installed
+  elsewhere.
+** Required repository
+   Ubuntu recently disabled the "universe" repository so its packages are only
+   available after you reenable with the following:
+   #+BEGIN_EXAMPLE
+   sudo apt-add-repository universe
+   #+END_EXAMPLE
+   The command does nothing if not needed, but if it is needed then a
+   lot of these packages will be mysteriously unavailable.
+** Required packages
+   Using your preferred Debian/Ubuntu package manager, you want to install
+   the following packages:
+   | build-essential    |
+   | git                |
+   | jackd2             |
+   | tk8.6-dev          |
+   | tcllib             |
+   | tklib              |
+   | tcl-udp            |
+   | tcl-thread         |
+   | libasound2-dev     |
+   | libfftw3-dev       |
+   | libjack-jackd2-dev |
+   | libusb-1.0-0-dev   |
+   | graphviz           |
+   | tkcon              |
+
+   These are not all the required packages.  Several other packages
+   will be dragged in because they're required by the packages
+   listed.
+
+   The "apt" command to install these packages is
+   #+BEGIN_EXAMPLE
+   sudo apt install build-essential git-core jackd2 tk8.6-dev tcllib tklib tcl-udp tcl-thread libasound2-dev libfftw3-dev libjack-jackd2-dev libusb-1.0-0-dev graphviz tkcon
+   #+END_EXAMPLE
+
+   Run this apt command in a terminal emulator.  There will be a test part way
+   through when apt asks if you want to install jack with realtime privileges.
+   The correct answer is <yes> but the default answer is <no>.
+
+   If apt tells you that jackd2, tcllib, tklib, tcl-udp, and tcl-thread are
+   not available, go back to the section labeled "Required Repository".
+** Required system administration
+   The installation of jackd2 should have installed a file named "/etc/security/limits.d/audio.conf".
+   You need to make yourself into one of the users that benefits from that file.
+   #+BEGIN_EXAMPLE
+   sudo addgroup $USER audio
+   #+END_EXAMPLE
+   will add $USER, which should be you, to the audio group so that you may run
+   jack at realtime priority and lock down shared memory.
+** Required reboot
+   The modifications that enable realtime and shared memory used to take effect
+   after the next login.  It now appears that they take effect after a reboot.
+   #+BEGIN_EXAMPLE
+   sudo /sbin/reboot
+   #+END_EXAMPLE
+   The symptoms that they have not been enabled are complaints from Jack that it could
+   not lock down memory and could not acquire realtime privileges.  These complaints
+   will appear in the *Messages...* panel of qjackctl. There will also be problems
+   getting MIDI devices imported as Jack ports in the 
+** Getting the source
+   The sources are archived at https://github.com/recri/keyer.
+   Assuming that you installed the git packages and want the
+   sources to be in ~/keyer,
+   #+BEGIN_EXAMPLE
+   cd ~ && git clone https://github.com/recri/keyer
+   #+END_EXAMPLE
+   will create a new directory named "keyer" in your home directory.
+   The sources will be up to date as of the time that you clone the 
+   repository.
+
+   Running:
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && git pull origin master
+   #+END_EXAMPLE
+   will refresh your sources to the most recent at any time.  It's
+   prudent to run: 
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make all-clean
+   #+END_EXAMPLE
+   before or after refreshing the sources because the list of things
+   to be built and cleaned up is changing all the time.
+
+   If things get messed up (and you have no local changes to preserve)
+   you can always:
+   #+BEGIN_EXAMPLE
+   cd ~ && rm -fr keyer && git clone https://github.com/recri/keyer
+   #+END_EXAMPLE
+   to start over again from a clean copy.
+** Building
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make
+   #+END_EXAMPLE
+   will compile everything needed to run.  If you have problems,
+   please go back to the list of required packages and make sure you
+   didn't miss one.
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make clean
+   #+END_EXAMPLE
+   will remove intermediate files not required to run.
+   #+BEGIN_EXAMPLE
+   cd ~/keyer && make all-clean
+   #+END_EXAMPLE
+   should remove all built files.  This is often necessary because I've
+   failed to identify all dependencies to keep the Makefile's readable.
+** Installing
+   I don't do any install. I usually run the scripts from ~/keyer
+   manually prefixing bin/ to get the commands I want to run.
+   The commands in ~/keyer/bin depend on their path name to find
+   the libraries in ~/keyer/lib/..., so if you do install to another
+   directory, then you should make symbolic links to ~/keyer/bin/.
+
+   You can run this command to link ~/keyer/bin/keyer into ~/.local/bin
+   #+BEGIN_EXAMPLE
+   mkdir -p ~/.local/bin && ln -s ~/keyer/bin/keyer ~/.local/bin
+   #+END_EXAMPLE
+** MidiKey hardware interface
+   The MidiKey software for the Teensy 2, LC, 3.x, and 4.x processors
+   makes your straight key or paddle into a MIDI device, which allows
+   the keying events to be processed with the lowest latency possible.
+   See the ReadMe.org file in [[https://github.com/recri/keyer/embedded][embedded]] directory for more details.
+* Usage
+  Using *keyer* requires using Jack, so the first step is to get Jack started.
+  There are many ways to get Jack started, and doing it from the command line
+  is probably the right way to go in the long run, but for now I suggest the
+  application qjackctl.
+** Starting jack, first time
+   Launch qjackctl,
+   open the *Setup...* dialog,
+   navigate to the Settings panel,
+   "(default)" should be the Preset Name,
+   navigate to the Parameters sub-panel,
+   select alsa as the Driver,
+   check the Realtime box,
+   choose the (default) audio Interface,
+   choose 48000 as the Sample Rate,
+   and select the raw MIDI Driver.
+   Save the Preset, Cancel the dialog, and press the Start button.
+   If the status display shows Started and 48000 Hz, then you're done.
+*** Cannot get realtime, cannot allocate memory
+    Jack needs to run a realtime thread to compute samples in a timely fashion, and it
+    needs to be able to allocate and lock shared memory to allow multiple processes to
+    share in the sample computation.  This can be a bit tedious to set up, so please
+    follow carefully and get it over with the first time.
+
+    If there is no file named /etc/security/limits.d/audio.conf, then jackd was
+    installed without realtime permissions.  Run this command to reinstall the
+    realtime permissions.
+    #+BEGIN_EXAMPLE
+    sudo dpkg-reconfigure -p high jackd
+    #+END_EXAMPLE
+
+    If your user name is not listed as a member of the audio group in /etc/group,
+    then this command should add you:
+    #+BEGIN_EXAMPLE
+    sudo addgroup $USER audio
+    #+END_EXAMPLE
+
+    Then try rebooting:
+    #+BEGIN_EXAMPLE
+    sudo /sbin/reboot
+    #+END_EXAMPLE
+
+    Then try doing it all again more carefully?
+*** Other messages ending with failure
+    Go back to the *Setup...* dialog and try some different audio Interfaces.
+** Starting jack, with a patchbay
+   Qjackctl has two panels that deal with the connections between jack ports and clients.
+
+   The *Connect...* panel shows the current clients and connections in Jack.  These
+   are segregated into separate panels for Audio, MIDI, and Alsa, each listing the
+   clients with output ports on the left and with input ports on the right.  
+
+   The *Patchbay...* panel shows lists of potential clients and connections in Jack.
+   These are all combined in a single panel.  If a patchbay is activated, then if the
+   clients named in the patchbay appear in Jack, then the specified connections between
+   the clients will be made.
+*** Use the *Patchbay...* to specify connections that you always want to work.    
+    If you click the *Load...* button and navigate to ~/keyer/patch you'll find a collection
+    of patchbay presets that I have saved. Load the one named key+kbd+out.xml and activate it.
+** Starting jack, subsequent times
+   Once you've set up a qjackctl default preset that works, you can start jack by:
+   #+BEGIN_EXAMPLE
+   qjackctl --start &
+   #+END_EXAMPLE
+   If you've saved a named qjackctl preset named [label] that works, you can start jack with:
+   #+BEGIN_EXAMPLE
+   qjackctl --start --preset=[label] &
+   #+END_EXAMPLE
+   Once you've found a patchpanel preset that works and saved it to [path], you can start jack
+   with that patchpanel active with:
+   #+BEGIN_EXAMPLE
+   qjackctl --start --active-patchbay=[path] &
+   #+END_EXAMPLE
+   That last trick appears to only load the patchbay, you will still need to activate
+   it on the *Patchbay...* panel.
+** Starting a basic *keyer* app
+  Assuming you've cloned https://github.com/recri/keyer into ~/keyer,
+  installed the prerequisites,
+  run make to build the keyer binaries,
+  and started Jack with the key+kbd+out patchpanel activated), then you can run:
+#+BEGIN_EXAMPLE
+$ ~/keyer/bin/keyer cas key kbd out -tree 1
+#+END_EXAMPLE
+** MidiKey - Teesyduino application
+   The necessary steps should be listed in the comment at the head of
+   embedded/MidiKey/MidiKey.ino.
+
+   Don't forget to install the /etc/udev/rules.d rules file for the
+   Teensy.
+* More details, too much information
+  I threw a bunch of stuff out of this README so it would be less
+  of a mess.  They're all in the Notes directory of the project, and
+  if you navigate there in the github web interface then github will
+  open files and mark them down for you.  This README and all the
+  files in the Notes directory are written in org-mode using emacs, an
+  outline mode.  The github markdown processor does a good job of
+  converting them to web pages, but some things get lost or mangled in
+  the translation, like internal links.
+* Credits
+  This code is derived from many sources.
+
+  The largest debt is to the dttsp sources, Copyright (C) 2004, 2005,
+  2006, 2007, 2008 by Frank Brickle, AB2KT and Bob McGwier, N4HY.
+  Many of the modules here are directly or indirectly derived from
+  their code.
+
+  I've learned a lot from reading documentation, example applications,
+  header files, and library code for [[http://www.alsa-project.org/][ALSA]] and [[http://jackaudio.org/][Jack]].
+
+  Perry Cook's [[https://ccrma.stanford.edu/software/stk/][Synthesis Toolkit]] provided one worked example of how to
+  make adjustments to DSP components on the fly.
+
+  Faust, http://faust.grame.fr/, is a really neat idea, dsp computations
+  described as an algebra on infinite streams of samples.  It also
+  provided an example of how not to make adjustments to DSP components
+  on the fly.
+
+  More recently I've been learning a lot by reading
+  [[https://james.ahlstrom.name/quisk/][Quisk]] by James Ahlstrom, N2ADR,
+  [[https://github.com/g0orx/wdsp][wdsp]] by Warren Pratt, NR0V,
+  and [[https://github.com/g0orx/linhpsdr][linhpsdr]] by John Melton, G0ORX/N6LYT.
+* Licensing
+  Copyright (C) 2011-2014 by Roger E Critchlow Jr, Santa Fe, NM, USA.
+  Copyright (C) 2018 by Roger E Critchlow Jr, Charlestown, MA, USA.
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+   
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA

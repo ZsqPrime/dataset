@@ -1,0 +1,7 @@
+Project Description:
+html5 solitaire
+
+README:
+A simple game of solitair ( klondike  ) implemented in HTML5 using the raphael svg library.
+
+Not finished yet!

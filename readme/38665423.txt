@@ -1,0 +1,6 @@
+Description:
+Computational Kernels for Inexpensive Flow Diagnostics Calculations
+
+README:
+# opm-flowdiagnostics
+Computational Kernels for Inexpensive Flow Diagnostics Calculations

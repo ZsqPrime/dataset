@@ -1,0 +1,153 @@
+Project Description:
+OAuth2 server for Rails 3 with Mongoid
+
+README:
+= Vidibus::Oauth2Server
+
+Allows OAuth2 authentication for Rails applications based on http://tools.ietf.org/html/draft-ietf-oauth2-v2-00.
+
+This gem is part of the open source SOA framework {Vidibus}[http://vidibus.org].
+
+It is far from being complete and stable! But this will change soon.
+
+
+== Installation
+
+Add the dependency to the Gemfile of your application:
+
+  gem "vidibus-oauth2_server"
+
+Then call bundle install on your console.
+
+To get your own OAuth2 server working, some small adjustments will have to be made to your Rails application:
+
+
+=== Client model
+
+Each remote application that requests authentication has to be authorized to do this. Usually, such an application will have to provide an API key that will be validated against a local repository. For OAuth2 this API key is called "client_id".
+
+Additionally, each client application has to provide a password to make a valid Oauth2 request, the "client_secret".
+
+This gem will validate an incoming OAuth2 request against client_id and client_secret parameters. Thus your client model has to provide both attributes, although they don't have to be named like this.
+
+You'll also have to provide a #domain method on your OAuth client model that returns the domain name of the client, e.g. vidibus.org. This method is used to validate the redirect_url parameter.
+
+Before issuing a token, the Oauth2Controller will ensure that the given client_secret is valid. In order to perform this validation, a method #valid_oauth2_secret? must be given on your client model.
+
+If you use the {Vidibus::Service}[https://github.com/vidibus/vidibus-service] gem, you'll get this method on the service model:
+
+  # Returns true if given client_secret matches signature.
+  def valid_oauth2_secret?(client_secret)
+    client_secret == Vidibus::Secure.sign(uuid, secret)
+  end
+
+
+=== User model
+
+Your user model has to provide an unique UUID in compact format. If you use Mongoid, you may include the UUID generator provided by the {Vidibus::Uuid}[https://github.com/vidibus/vidibus-uuid] gem:
+
+  class User
+    include Mongoid::Document
+    include Vidibus::Uuid::Mongoid
+    ...
+  end
+
+If you have an ActiveRecord model, implement something like this:
+
+  require "uuid"
+  class User < ActiveRecord::Base
+    before_create :generate_uuid
+    ...
+    protected
+
+    def generate_uuid
+      self.uuid ||= UUID.new.generate(:compact)
+    end
+  end
+
+And don't forget the migration:
+
+  require "uuid"
+  class AddUuidToUsers < ActiveRecord::Migration
+    def self.up
+      add_column :users, :uuid, :string, :null => false
+      add_index :users, :uuid
+      User.all.each do |user|
+        uuid = UUID.new.generate(:compact)
+        user.update_attribute(:uuid, uuid)
+      end
+    end
+
+    def self.down
+      remove_column :users, :uuid
+    end
+  end
+
+
+=== Routes
+
+Two routes will be added to your Rails application. If you use a catch-all route, you will have to define these routes manually:
+
+  get "oauth/authorize" => "oauth2#authorize"
+  post "oauth/access_token" => "oauth2#access_token"
+
+
+=== ApplicationController
+
+In the ApplicationController of your OAuth server application you'll have to define two methods in order to perform OAuth authentication.
+
+The first method performs the sign-in of the current user. If you use Devise for authentication with a "User" model, that method already exists and works. This is an example that works with Authlogic:
+
+  # Calls authentication method.
+  def authenticate_user!
+    logged_in? or login_required
+  end
+
+The second method returns a service client with given id. This is an example taken from the {Vidibus::Service}[https://github.com/vidibus/vidibus-service] gem:
+
+  # Returns service matching given client_id.
+  # This method is called from Vidibus' Oauth2Server gem.
+  #
+  # In this example from Vidibus the given client_id
+  # comprises the requesting service's uuid and realm,
+  # concatenated by -.
+  #
+  # Adjust this method to your needs.
+  #
+  def oauth2_client(client_id)
+    Service(*client_id.split("-"))
+  end
+
+
+=== Oauth2::UsersController
+
+This gem will also provide an action to obtain data of the user currently logged in. The following route will be added:
+
+  get "/oauth/user" => "oauth2/users#show"
+
+You may overwrite the Oauth2::UsersController class to adjust it to your needs. However, if you want to use the default controller, you'll need a User model that responds to <t>:uuid</t>.
+
+The default #show method of this controller delivers a JSON of attributes returned by User#oauth_attribute. If no such method exist, the response will include name, email and UUID of the current user.
+
+== And the client side?
+
+Well, this is just the server side of the story. To implement OAuth2 on your client applications, there are many solutions available. The basic tools are provided by the excellent {OAuth2}[https://github.com/intridea/oauth2] gem. For a sophisticated example, check out {OmniAuth}[https://github.com/intridea/omniauth].
+
+In a typical Vidibus service-oriented environment, clients are equipped with the {Vidibus::User}[https://github.com/vidibus/vidibus-user] gem.
+
+
+== TODO
+
+* Write specs!
+* Implement token expiry
+* Apply changes made in http://tools.ietf.org/html/draft-ietf-oauth2-v2-10?
+
+
+== Copyright
+
+Copyright (c) 2010 Andre Pankratz. See LICENSE for details.
+
+
+== Thank you
+
+The development of this gem was sponsored by Käuferportal: http://www.kaeuferportal.de

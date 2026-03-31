@@ -1,0 +1,8 @@
+This repository contains all files for my personal site and blog. The Jekyll theme, articles, images and all other content are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US).
+
+
+Project Description:
+
+
+README:
+This repository contains all files for my personal site and blog. The Jekyll theme, articles, images and all other content are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US).

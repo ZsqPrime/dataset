@@ -1,0 +1,7 @@
+# Dominion
+
+Project Description:
+Implementation of the card game Dominion + AI
+
+README:
+# Dominion

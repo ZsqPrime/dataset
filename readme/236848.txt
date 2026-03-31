@@ -1,0 +1,16 @@
+Java bindings to communicate with the namecheap API
+
+Please submit bugs to the issue tracker.
+
+Patches welcome!
+
+
+Project Description:
+java bindings to namecheap api
+
+README:
+Java bindings to communicate with the namecheap API
+
+Please submit bugs to the issue tracker.
+
+Patches welcome!

@@ -1,0 +1,87 @@
+The Blob bzw. Slimi; Software Engineering Projekt Nr. 4, Semester 4, Prof. Dr. Eckhard Kruse
+
+TODO:	-Tufan malt die Grafiken
+		-Chris merged das vorhande Partikelsystem
+		-alle anderen rasten aus
+		
+Gitusernames: Tufan: sarnic
+
+Umgang mit Git:
+
+Einrichtung:
+Git Installieren und Anweisungen folgen.
+Mir bescheid sagen wie ihr hei�t, damit ich euch als Collaborators hinzuf�gen kann!
+
+0. Erstellen eines neuen Git Projekts: (hier nicht mehr nötig)
+git bash => cd zielordner
+git clone Ziel //(e.g. git@github.com:hagenduk/The-Blob.git)
+Inhalt zuf�gen in explorer
+git add * // bei versteckten dateien mit . nochmal einzeln hinzuf�gen
+pr�fen mit git status
+git commit -m "Nachricht"
+
+1. Einbinden
+gitconsole => cd zielordner
+git clone Ziel (e.g. git@github.com:hagenduk/The-Blob.git)
+in eclipse �ber import �ber existing project 
+
+3. bei eigener �nderung
+�nderung vornehmen, speichern
+git status
+git add *
+git pull
+git commit -m "Nachricht"
+git push
+
+4. Infos:
+git status 			// ruft status der Dateien ab
+git add <dateien> 		//* f�r alle au�er versteckten, f�gt Dateien hinzu
+git commit -m "Nachricht" 	// �bernimmt �nderungen mit Nachricht
+git push 			//�bermittelt �nderungen
+git pull 				//ruft �nderungen ab
+
+Project Description:
+Software Engineering
+
+README:
+The Blob bzw. Slimi; Software Engineering Projekt Nr. 4, Semester 4, Prof. Dr. Eckhard Kruse
+
+TODO:	-Tufan malt die Grafiken
+		-Chris merged das vorhande Partikelsystem
+		-alle anderen rasten aus
+		
+Gitusernames: Tufan: sarnic
+
+Umgang mit Git:
+
+Einrichtung:
+Git Installieren und Anweisungen folgen.
+Mir bescheid sagen wie ihr hei�t, damit ich euch als Collaborators hinzuf�gen kann!
+
+0. Erstellen eines neuen Git Projekts: (hier nicht mehr nötig)
+git bash => cd zielordner
+git clone Ziel //(e.g. git@github.com:hagenduk/The-Blob.git)
+Inhalt zuf�gen in explorer
+git add * // bei versteckten dateien mit . nochmal einzeln hinzuf�gen
+pr�fen mit git status
+git commit -m "Nachricht"
+
+1. Einbinden
+gitconsole => cd zielordner
+git clone Ziel (e.g. git@github.com:hagenduk/The-Blob.git)
+in eclipse �ber import �ber existing project 
+
+3. bei eigener �nderung
+�nderung vornehmen, speichern
+git status
+git add *
+git pull
+git commit -m "Nachricht"
+git push
+
+4. Infos:
+git status 			// ruft status der Dateien ab
+git add <dateien> 		//* f�r alle au�er versteckten, f�gt Dateien hinzu
+git commit -m "Nachricht" 	// �bernimmt �nderungen mit Nachricht
+git push 			//�bermittelt �nderungen
+git pull 				//ruft �nderungen ab

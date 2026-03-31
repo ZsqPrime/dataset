@@ -1,0 +1,11 @@
+# DapperDinner
+
+A [Dapper](http://code.google.com/p/dapper-dot-net/) implementation of [NerdDinner](http://nerddinner.com/).
+
+Project Description:
+A dapper implementation of NerdDinner
+
+README:
+# DapperDinner
+
+A [Dapper](http://code.google.com/p/dapper-dot-net/) implementation of [NerdDinner](http://nerddinner.com/).

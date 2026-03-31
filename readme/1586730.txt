@@ -1,0 +1,57 @@
+NAME
+    AnyEvent::RW - Faster non-blocking I/O on handles via AnyEvent
+
+SYNOPSIS
+        package Sample;
+        use AnyEvent::RW;
+
+        ...
+
+DESCRIPTION
+        ...
+
+METHODS
+    ...()
+        ...
+
+AUTHOR
+    Mons Anderson <mons@cpan.org>
+
+COPYRIGHT & LICENSE
+    Copyright 2012 Mons Anderson, all rights reserved.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of either: the GNU General Public License as published
+    by the Free Software Foundation; or the Artistic License.
+
+
+
+Project Description:
+Faster non-blocking I/O on handles via AnyEvent
+
+README:
+NAME
+    AnyEvent::RW - Faster non-blocking I/O on handles via AnyEvent
+
+SYNOPSIS
+        package Sample;
+        use AnyEvent::RW;
+
+        ...
+
+DESCRIPTION
+        ...
+
+METHODS
+    ...()
+        ...
+
+AUTHOR
+    Mons Anderson <mons@cpan.org>
+
+COPYRIGHT & LICENSE
+    Copyright 2012 Mons Anderson, all rights reserved.
+
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of either: the GNU General Public License as published
+    by the Free Software Foundation; or the Artistic License.

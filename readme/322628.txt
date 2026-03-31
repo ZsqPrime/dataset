@@ -1,0 +1,8 @@
+This is a collection of some of my personal AppArmor policies.
+
+
+Project Description:
+Various AppArmor Policies
+
+README:
+This is a collection of some of my personal AppArmor policies.

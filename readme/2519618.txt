@@ -1,0 +1,7 @@
+Project Description:
+Extensions to Windows Azure Toolkit for Social Gaming
+
+README:
+# Windows Azure Toolkit for Social Gaming Extensions
+
+Experimental work, extending the [Windows Azure Toolkit for Social Gaming](http://watgames.codeplex.com/).

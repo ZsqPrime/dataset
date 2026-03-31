@@ -1,0 +1,5 @@
+Project Description:
+Sample application that demonstrates the use of WebPacks to share types between Web APIs and their consumers
+
+README:
+Sample application demonstrating the user of WebPacks.

@@ -1,0 +1,6 @@
+
+
+Project Description:
+It's a Security Filter which can protect you against XSS and Bruteforce attach. It can be used for any J2EE project
+
+README:

@@ -1,0 +1,32 @@
+This is a CMS that aims to make it easy to set up content management for relatively simple websites created in HTML
+
+Here is how it works:
+1. Create your html website
+2. Add comment tags around div's you want a user to be able to edit
+   <!--START EDITABLE REGION-->
+   <div>editable content</div>
+   <!--END EDITABLE REGION-->
+3. Place entire website (HTML, images, js, etc) in the templates directory
+4. Add proper info to php/sqlStrings.php and setup/settings.php
+5. Go to setup/setup.php in your web browser
+6. All divs marked as editable will now be in a mysql database and php will be generated which allows the content to be viewed and edited
+7. Generated php will be located in the website root as specified in setup/settings.php
+
+
+Project Description:
+easily set your clients up with an easy to use, custom CMS
+
+README:
+This is a CMS that aims to make it easy to set up content management for relatively simple websites created in HTML
+
+Here is how it works:
+1. Create your html website
+2. Add comment tags around div's you want a user to be able to edit
+   <!--START EDITABLE REGION-->
+   <div>editable content</div>
+   <!--END EDITABLE REGION-->
+3. Place entire website (HTML, images, js, etc) in the templates directory
+4. Add proper info to php/sqlStrings.php and setup/settings.php
+5. Go to setup/setup.php in your web browser
+6. All divs marked as editable will now be in a mysql database and php will be generated which allows the content to be viewed and edited
+7. Generated php will be located in the website root as specified in setup/settings.php

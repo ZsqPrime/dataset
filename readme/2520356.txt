@@ -1,0 +1,5 @@
+Project Description:
+Python Class for Gamma-ray Bursts
+
+README:
+Python class for gamma-ray burst usage

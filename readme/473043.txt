@@ -1,0 +1,16 @@
+Supposed demo project thingy.
+
+Now with 100% more OpenTK and C#!
+
+YARR, remember to use branches!
+
+
+Project Description:
+Trying to play with WebGL to create something like a demo, a newbie demo.
+
+README:
+Supposed demo project thingy.
+
+Now with 100% more OpenTK and C#!
+
+YARR, remember to use branches!

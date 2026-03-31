@@ -1,0 +1,7 @@
+Project Description:
+Presenter for ZikMe Windows' Business Layer
+
+README:
+On va tenter de mettre un Projet complet
+
+C pas gagné ...

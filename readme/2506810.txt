@@ -1,0 +1,16 @@
+== Overview ==
+
+This is a simple party registration component for Midgard MVC.
+
+More to come...
+
+
+Project Description:
+Party component
+
+README:
+== Overview ==
+
+This is a simple party registration component for Midgard MVC.
+
+More to come...

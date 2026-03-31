@@ -1,0 +1,5 @@
+Project Description:
+vkontakte oauth 2 api tests
+
+README:
+vk oauth 2 api test

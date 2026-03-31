@@ -1,0 +1,24 @@
+Thinkpad Daemon
+
+thinkd is a power management daemon with specific support for Lenovo and IBM thinkpads.
+
+Features:
+	- ACPI
+	- power mode managing by ini configuration files
+	- comes with several IPC features such as named pipes, unix sockets and even inet sockets
+	- remote power management (hurr)
+
+
+Project Description:
+Daemon that manages power for thinkpad laptops
+
+README:
+Thinkpad Daemon
+
+thinkd is a power management daemon with specific support for Lenovo and IBM thinkpads.
+
+Features:
+	- ACPI
+	- power mode managing by ini configuration files
+	- comes with several IPC features such as named pipes, unix sockets and even inet sockets
+	- remote power management (hurr)

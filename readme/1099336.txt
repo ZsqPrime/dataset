@@ -1,0 +1,56 @@
+= DESCRIPTION:
+
+Cookbook to install Librato Silverline: http://www.librato.com.
+
+= REQUIREMENTS:
+
+ * apt cookbook version >= 1.1.1
+
+= INSTALLATION
+
+= ATTRIBUTES:
+
+node[:silverline][:api_token]
+
+node[:silverline][:email_address]
+
+node[:silverline][:server_id_cmd]
+
+node[:silverline][:template_id]
+
+node[:silverline][:component]
+
+= USAGE:
+
+Just include the default recipe.
+
+
+Project Description:
+Chef cookbook for installing/configuring Librato Silverline
+
+README:
+= DESCRIPTION:
+
+Cookbook to install Librato Silverline: http://www.librato.com.
+
+= REQUIREMENTS:
+
+ * apt cookbook version >= 1.1.1
+
+= INSTALLATION
+
+= ATTRIBUTES:
+
+node[:silverline][:api_token]
+
+node[:silverline][:email_address]
+
+node[:silverline][:server_id_cmd]
+
+node[:silverline][:template_id]
+
+node[:silverline][:component]
+
+= USAGE:
+
+Just include the default recipe.

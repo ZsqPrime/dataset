@@ -1,0 +1,72 @@
+envytools - Tools for people envious of nvidia's blob driver.
+
+The canonical repo is at: http://github.com/pathscale/envytools/
+
+
+= Contents =
+
+Subdirectories:
+
+ - hwdocs: plain-text documentation of the GPUs
+ - envydis: Disassembler and for various ISAs found on nvidia GPUs
+ - ed2: Upcoming rewrite of envydis, with lots of new features planned
+ - rnn: Tools and libraries for the rules-ng-ng XML register database format
+ - rnndb: rnn database of nvidia MMIO registers, FIFO methods, and memory
+   structures.
+ - nvbios: Tools to decode the card description structures found in nvidia
+   VBIOS
+ - nva: Tools to directly access the GPU registers
+ - envytest: Tests REd parts of the card to make sure they meet expectations
+ - envyrm: Helper kernel module for envytest
+
+= Building, installing =
+
+You'll need: cmake, libxml2, libxml2-dev, libpciaccess-dev, flex, bison
+
+To build, use
+
+ $ cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr/local .
+ $ make
+
+To install, use
+
+ $ make install
+
+
+Project Description:
+None
+
+README:
+envytools - Tools for people envious of nvidia's blob driver.
+
+The canonical repo is at: http://github.com/pathscale/envytools/
+
+
+= Contents =
+
+Subdirectories:
+
+ - hwdocs: plain-text documentation of the GPUs
+ - envydis: Disassembler and for various ISAs found on nvidia GPUs
+ - ed2: Upcoming rewrite of envydis, with lots of new features planned
+ - rnn: Tools and libraries for the rules-ng-ng XML register database format
+ - rnndb: rnn database of nvidia MMIO registers, FIFO methods, and memory
+   structures.
+ - nvbios: Tools to decode the card description structures found in nvidia
+   VBIOS
+ - nva: Tools to directly access the GPU registers
+ - envytest: Tests REd parts of the card to make sure they meet expectations
+ - envyrm: Helper kernel module for envytest
+
+= Building, installing =
+
+You'll need: cmake, libxml2, libxml2-dev, libpciaccess-dev, flex, bison
+
+To build, use
+
+ $ cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr/local .
+ $ make
+
+To install, use
+
+ $ make install

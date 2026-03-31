@@ -1,0 +1,14 @@
+MessagePack
+===========
+
+An alternative msgpack.org implementation for Ruby and C++
+
+
+Project Description:
+An alternative msgpack.org implementation for Ruby and C++ / msgpack.org[Ruby/C++]
+
+README:
+MessagePack
+===========
+
+An alternative msgpack.org implementation for Ruby and C++

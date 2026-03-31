@@ -1,0 +1,4 @@
+Project Description:
+Tests with the android camera and some opencv stuff
+
+README:

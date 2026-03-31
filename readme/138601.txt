@@ -1,0 +1,25 @@
+GeaRings Project
+
+Directories Set up
+
+iOS/
+
+
+
+
+Android/
+
+Project Description:
+None
+
+README:
+GeaRings Project
+
+Directories Set up
+
+iOS/
+
+
+
+
+Android/

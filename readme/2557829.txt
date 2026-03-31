@@ -1,0 +1,5 @@
+Project Description:
+Equations over Unary Deterministic Finite Automata
+
+README:
+4th semester, project for the "Programming Languages" course.

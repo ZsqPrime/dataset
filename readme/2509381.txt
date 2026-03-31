@@ -1,0 +1,12 @@
+## BY Marc 'Bomba' Schulte ... nerdstube.de ##
+# This little Game helps me to learn C++#
+# This is only Learncode!
+
+
+Project Description:
+A little Hangman-Game to learn C++
+
+README:
+## BY Marc 'Bomba' Schulte ... nerdstube.de ##
+# This little Game helps me to learn C++#
+# This is only Learncode!

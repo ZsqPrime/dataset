@@ -1,0 +1,10 @@
+README
+======
+
+
+Project Description:
+Couple of utility scripts to manage wallpapers on linux
+
+README:
+README
+======

@@ -1,0 +1,203 @@
+= RedXML
+
+RedXml library is a project focusing on creating a basis for new XML native database. It is based on {Redis}[http://redis.io/]
+key-value database as it's underlying storage. RedXml uses own mapping of XML files into Redis and creates new
+abstraction layer to easily work with those documents. Currently XML:DB API is supported with some proprietary methods
+to enable faster work with document. API provides methods to work with environments, collections and documents. XPath/XQuery languages are beying implemented as a
+main way to query stored XML files.
+
+Important: Project is still under development
+
+= INSTALLATION
+
+It is now possible to use gem to install this project including all dependencies. RedXML gem is not
+yet published so it is needed to download gem file here on github and than just use:
+
+gem install redxml-0.1.1.gem
+
+To use this project correctly, it is needed to download and start Redis database instance. It is strongly
+recommended to use official redis binaries:
+{Redis download page}[http://redis.io/download]
+Redis doesn't have official binaries for Windows, but we have found pretty stable and verified binaries here:
+{redis windows binaries}[https://github.com/dmajkic/redis/downloads]
+Use them only if speed is not an issue or to just test the library, you should avoid them in real-life application.
+(Storing and retrieve times can be 20x times slower).
+
+If you didn't install project as a gem, than it is needed to install following prerequisities:
+
+* Nokogiri >= 1.5.2 using "gem install nokogiri", {Nokogiri installation guide}[http://nokogiri.org/tutorials/installing_nokogiri.html]
+* Redis >= 2.2.2 using "gem install redis"
+* Hiredis >= 0.4.5 using "gem install hiredis"
+
+= PROPOSED FUNCIONALITY
+
+== Short-term
+
+* Completion of proprietary API for managing XML documents (basic operations)
+* Implementation of XML:DB API
+* Implementation of XPath/XQuery language with XQuery Update Facility (subset - most useful queries)
+
+== Mid-term
+
+* Locking
+
+== Long-term
+
+* Transactions
+* Indexing
+
+= USED LIBRARIES
+
+Project uses some libraries, which are not part of the library itself. If you used gem to install, those
+libraries were automatically installed, otherwise you have to install them by hand, see Installation.
+Following libraries are being used
+* {Redis-rb}[https://github.com/redis/redis-rb] - Client for Redis database
+* {Nokogiri}[http://nokogiri.org/] - Library for working with XML files
+* {Hiredis}[https://github.com/antirez/hiredis] - driver for redis-rb client to speed up communication with Redis
+
+= EXAMPLES
+
+After you have successfully integrate our library into your project and your Redis instance is
+running, you can work with Redis like with native XML database. Examples are based on
+our implementation of {XMLDB:API}[http://xmldb-org.sourceforge.net/xapi/api/index.html] with a little bit of proprietary code 
+to make it more smooth. Examples can be found in examples folder.
+
+
+= Licence
+
+Copyright (c) 2013, CTU in Prague
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met: 
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer. 
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution. 
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The views and conclusions contained in the software and documentation are those
+of the authors and should not be interpreted as representing official policies, 
+either expressed or implied, of the FreeBSD Project.
+
+= AUTHORS
+
+* Ing. Pavel Strnad, Ph.D. - Leader of the project, CTU in Prague, Faculty of Electrical Engineering, Department of Computer Science, Author of the basic idea
+* Bc. Pavel Jíra - Programming core functions (mapping, database interface, API)
+* Bc. Martin Kostolný - Programming XPath/XQuery
+
+Project Description:
+Proof of concept for Xml2Redis project
+
+README:
+= RedXML
+
+RedXml library is a project focusing on creating a basis for new XML native database. It is based on {Redis}[http://redis.io/]
+key-value database as it's underlying storage. RedXml uses own mapping of XML files into Redis and creates new
+abstraction layer to easily work with those documents. Currently XML:DB API is supported with some proprietary methods
+to enable faster work with document. API provides methods to work with environments, collections and documents. XPath/XQuery languages are beying implemented as a
+main way to query stored XML files.
+
+Important: Project is still under development
+
+= INSTALLATION
+
+It is now possible to use gem to install this project including all dependencies. RedXML gem is not
+yet published so it is needed to download gem file here on github and than just use:
+
+gem install redxml-0.1.1.gem
+
+To use this project correctly, it is needed to download and start Redis database instance. It is strongly
+recommended to use official redis binaries:
+{Redis download page}[http://redis.io/download]
+Redis doesn't have official binaries for Windows, but we have found pretty stable and verified binaries here:
+{redis windows binaries}[https://github.com/dmajkic/redis/downloads]
+Use them only if speed is not an issue or to just test the library, you should avoid them in real-life application.
+(Storing and retrieve times can be 20x times slower).
+
+If you didn't install project as a gem, than it is needed to install following prerequisities:
+
+* Nokogiri >= 1.5.2 using "gem install nokogiri", {Nokogiri installation guide}[http://nokogiri.org/tutorials/installing_nokogiri.html]
+* Redis >= 2.2.2 using "gem install redis"
+* Hiredis >= 0.4.5 using "gem install hiredis"
+
+= PROPOSED FUNCIONALITY
+
+== Short-term
+
+* Completion of proprietary API for managing XML documents (basic operations)
+* Implementation of XML:DB API
+* Implementation of XPath/XQuery language with XQuery Update Facility (subset - most useful queries)
+
+== Mid-term
+
+* Locking
+
+== Long-term
+
+* Transactions
+* Indexing
+
+= USED LIBRARIES
+
+Project uses some libraries, which are not part of the library itself. If you used gem to install, those
+libraries were automatically installed, otherwise you have to install them by hand, see Installation.
+Following libraries are being used
+* {Redis-rb}[https://github.com/redis/redis-rb] - Client for Redis database
+* {Nokogiri}[http://nokogiri.org/] - Library for working with XML files
+* {Hiredis}[https://github.com/antirez/hiredis] - driver for redis-rb client to speed up communication with Redis
+
+= EXAMPLES
+
+After you have successfully integrate our library into your project and your Redis instance is
+running, you can work with Redis like with native XML database. Examples are based on
+our implementation of {XMLDB:API}[http://xmldb-org.sourceforge.net/xapi/api/index.html] with a little bit of proprietary code 
+to make it more smooth. Examples can be found in examples folder.
+
+
+= Licence
+
+Copyright (c) 2013, CTU in Prague
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met: 
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer. 
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution. 
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The views and conclusions contained in the software and documentation are those
+of the authors and should not be interpreted as representing official policies, 
+either expressed or implied, of the FreeBSD Project.
+
+= AUTHORS
+
+* Ing. Pavel Strnad, Ph.D. - Leader of the project, CTU in Prague, Faculty of Electrical Engineering, Department of Computer Science, Author of the basic idea
+* Bc. Pavel Jíra - Programming core functions (mapping, database interface, API)
+* Bc. Martin Kostolný - Programming XPath/XQuery

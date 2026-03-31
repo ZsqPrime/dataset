@@ -1,0 +1,5 @@
+Project Description:
+An on going proof-of-concept (POC) for using DocBook 5 with jDocBook.  Additionally looks at using JBoss PressGang xslt and styles directly to help identify shortcomings
+
+README:
+This file was created by IntelliJ IDEA 10.5.1 for binding GitHub repository

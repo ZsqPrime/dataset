@@ -1,0 +1,153 @@
+Project Description:
+Voice recognition to control the OS
+
+README:
+kiku (pronounced key cue) is a simple GPL speech recognition software.
+
+A binary package (Debian) is available here:
+http://www.workinprogress.ca/kiku/download/
+
+Videos of kiku in action:
+http://www.workinprogress.ca/kiku/video/
+
+------------------------------------------------------------------------
+COMPILATION:
+It's doable, but i wouldn't say it's easy.
+Follow those steps (adjust paths):
+
+Dependencies:
+apt-get install build-essential git-core subversion cvs libgtk2.0-dev flex libxtst-dev libasound2-dev codelite liblo-dev libnotify-dev libxosd-dev libgconf2-dev libpulse-dev
+
+1) Fetch kiku
+mkdir -p ~/src && cd ~/src
+git clone https://github.com/patricksebastien/kiku.git 
+
+
+2) Download & Install wxWidgets
+https://github.com/wxWidgets/wxWidgets/archive/WX_2_9_0_BRANCH.zip
+
+PATCH
+open src/unix/utilsunx.cpp:
+	//data->exitcode = DoWaitForChild(data->pid, WNOHANG);
+	data->exitcode = DoWaitForChild(data->pid);
+
+include/wx/textentry.h
+	bool AutoComplete(const wxArrayString& choices, int minimumkey = 1)
+			{ return DoAutoCompleteStrings(choices, minimumkey); }   
+	virtual bool DoAutoCompleteStrings(const wxArrayString& WXUNUSED(choices), int WXUNUSED(minimumkey))
+			{ return false; }
+        
+src/gtk/textentry.cpp
+	bool wxTextEntry::DoAutoCompleteStrings(const wxArrayString& choices, int minimumkey)
+	{
+		GtkEntry * const entry = GTK_ENTRY(GetEditable());
+		wxCHECK_MSG(entry, false, "auto completion doesn't work with this control");
+	 
+		GtkListStore * const store = gtk_list_store_new(1, G_TYPE_STRING);
+		GtkTreeIter iter;
+	 
+		for ( wxArrayString::const_iterator i = choices.begin();
+			  i != choices.end();
+			  ++i )
+		{
+			gtk_list_store_append(store, &iter);
+			gtk_list_store_set(store, &iter,
+							   0, (const gchar *)i->utf8_str(),
+							   -1);
+		}
+	 
+		GtkEntryCompletion * const completion = gtk_entry_completion_new();
+		gtk_entry_completion_set_model(completion, GTK_TREE_MODEL(store));
+		gtk_entry_completion_set_text_column(completion, 0);
+		gtk_entry_completion_set_minimum_key_length(completion, minimumkey);
+		gtk_entry_set_completion(entry, completion);
+		g_object_unref(completion);
+		return true;
+	}
+	
+include/wx/gtk/textentry.h
+	virtual bool DoAutoCompleteStrings(const wxArrayString& choices, int minimumkey = 1);
+
+src/common/arrstr.cpp - line ~253
+	if( m_pItems[ui].Find(str) != wxNOT_FOUND )
+	
+./configure --prefix=/home/you/src/wx291svnrelease --enable-unicode --disable-shared --without-gnomeprint --without-gtkprint
+make -j3
+make install
+
+
+3) Download & Install xdotool
+http://www.semicomplete.com/projects/xdotool/
+
+make static
+mkdir staticlib
+cp *.o staticlib
+cd staticlib
+ar rcs libxdo.a *.o
+cp libxdo.a ~/src/kiku/kiku
+
+TEST
+./xdotool.static key Shift+Ctrl+n
+or any keyboard shortcut that is supposed to do something
+if nothing happen, you might need to patch xdotool:
+http://groups.google.com/group/xdotool-users/browse_thread/thread/95d36fd1da9b7c14
+
+
+4) Download & Install Julius
+cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/julius co julius4
+./configure --prefix=/home/you/src/juliuscvs --with-mictype=alsa --enable-setup=standard --enable-factor2 --enable-wpair --enable-wpair-nlimit --without-sndfile --disable-pthread
+make -j3 && make install
+
+
+5) Download & Install libpd
+git clone git://gitorious.org/pdlib/libpd.git
+make libs/libpd.so
+mkdir staticlib
+cp libpd_wrapper/*.o staticlib/
+cp pure-data/src/*.o staticlib/
+ar rcs libpd.a *.o
+cp libpd.a ~/kiku/common
+cp ./libpd_wrapper/z_libpd.h ~/kiku/common
+cp ./pure-data/src/m_pd.h ~/kiku/common
+
+
+6) Compile kiku
+open project in CodeLite (IDE)
+right click on kiku - Settings... - change Compiler & Linker settings (path)
+Go to Build - Build and run project - report errors on http://www.workinprogress.ca/kiku/forum/
+
+
+7) Compile plugins
+edit Makefile in ~/src/kiku/plugin/pulseaudio (path)
+make
+
+edit Makefile in ~/src/kiku/plugin/pulseaudiomon (path)
+make
+
+
+8) Binary package
+~/src/kiku/kiku/make_deb.sh -u
+install debian package
+
+If you don't want a package:
+sudo mkdir -p /usr/lib/kiku
+cp ~/src/kiku/plugin/pulseaudio/adin_pulseaudiolibpd.jpi /usr/lib/kiku
+cp ~/src/kiku/plugin/pulseaudiomon/adin_pulseaudiolibpdmon.jpi /usr/lib/kiku
+cp ~/src/kiku/plugin/patch/filter/kiku.pd /usr/lib/kiku
+i386:
+cp ~/src/kiku/plugin/patch/filter/i386/*.pd_linux /usr/lib/kiku
+amd64:
+cp ~/src/kiku/plugin/patch/filter/amd64/*.pd_linux /usr/lib/kiku
+
+LAUNCH kiku:
+~/src/kiku/kiku/Release/kiku
+
+
+------------------------------------------------------------------------
+LINKS
+http://julius.sourceforge.jp/en_index.php
+http://www.wxwidgets.org/
+http://www.codelite.org/
+http://gitorious.org/pdlib/pages/Libpd
+http://www.semicomplete.com/projects/xdotool/
+http://www.voxforge.org/

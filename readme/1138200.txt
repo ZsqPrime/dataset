@@ -1,0 +1,74 @@
+algorytm kruskala znajdowania minimalnego drzewa rozpinajacego
+
+zad.
+dana jest struktura nieskierowanego grafu wazonego:
+
+unsigned int n; // liczba wierzcholkow
+
+struct vertex {
+    unsigned int label; // nazwa wierzcholka
+    unsigned int parent; // nazwa rodzica
+    unsigned int rank; // ranga wierzcholka
+} *V; // tablica wierzcholkow rezerwowana dynamicznie
+
+struct edge {
+    unsigned int u,v; // para etykiet wierzcholkow
+    float weight; // waga krawedzi
+} *E; // tablica krawedzi rezerwowana dynamicznie
+
+Uwaga: program powinien weryfikowac podana liste krawedzi (sprawdzac czy krawedzie nie powtarzaja sie - uwzgledniac
+tez odwrotna kolejnosc podawania wierzcholkow).
+
+Kruskal(G) {
+    struct edge *A;
+    1. niech A bedzie zbiorem pustym;
+    2. dla wszystkich wierzcholkow veV wykonaj Make-Set(v);
+    3. Posortuj zbior krawedzi w E niemalejaco wzgledem wag
+    4. dla wsyzstkich kolejnych krawedzi(u,v) w E wykonaj:
+    if (Find-Set(u) != Find-Set(v)) {
+        dopisz(u,v) do zbioru A;
+        union(u,v);
+    }
+} // A - wynik dzialania algorytmu
+
+Uwaga: nalezy zmodyfikowac funkcje z poprzednich zajec tak, zeby uwzglednialy dowolne etykietowanie wierzcholkow grafu 
+
+
+Project Description:
+None
+
+README:
+algorytm kruskala znajdowania minimalnego drzewa rozpinajacego
+
+zad.
+dana jest struktura nieskierowanego grafu wazonego:
+
+unsigned int n; // liczba wierzcholkow
+
+struct vertex {
+    unsigned int label; // nazwa wierzcholka
+    unsigned int parent; // nazwa rodzica
+    unsigned int rank; // ranga wierzcholka
+} *V; // tablica wierzcholkow rezerwowana dynamicznie
+
+struct edge {
+    unsigned int u,v; // para etykiet wierzcholkow
+    float weight; // waga krawedzi
+} *E; // tablica krawedzi rezerwowana dynamicznie
+
+Uwaga: program powinien weryfikowac podana liste krawedzi (sprawdzac czy krawedzie nie powtarzaja sie - uwzgledniac
+tez odwrotna kolejnosc podawania wierzcholkow).
+
+Kruskal(G) {
+    struct edge *A;
+    1. niech A bedzie zbiorem pustym;
+    2. dla wszystkich wierzcholkow veV wykonaj Make-Set(v);
+    3. Posortuj zbior krawedzi w E niemalejaco wzgledem wag
+    4. dla wsyzstkich kolejnych krawedzi(u,v) w E wykonaj:
+    if (Find-Set(u) != Find-Set(v)) {
+        dopisz(u,v) do zbioru A;
+        union(u,v);
+    }
+} // A - wynik dzialania algorytmu
+
+Uwaga: nalezy zmodyfikowac funkcje z poprzednich zajec tak, zeby uwzglednialy dowolne etykietowanie wierzcholkow grafu

@@ -1,0 +1,84 @@
+CakePhp 2.x Plugin for easy implementation of the Auth Component
+
+Steps:
+1. Import Authentication/Config/Schema/users.sql file to cake db
+
+2. Add the following line to your app/Config/bootstrap.php
+    CakePlugin::load('Authentication', array('routes' => true));
+    *** note: for some reason loadAll doesn't work with this plugin,
+        it never loads the routes correctly
+
+3. Before enabling the component, navigate to:
+    /admin/users/add
+    And add a default user you can login to the site with.
+
+4. Enable Auth component by adding it to AppController like so:
+    public $components = array(
+        ...
+        'Auth' => array(
+            'loginAction' => array(
+                'controller' => 'Users',
+                'action' => 'login',
+                'plugin' => 'Authentication',
+                'admin' => false,
+            ),
+            'userModel' => 'Authentication.User',
+            'authenticate' => array('Form'),
+        ),
+        ...
+    );
+
+3. Add this line to your layout where you want to display Auth messages:
+    <?php echo $this->Session->flash('auth'); ?>
+
+*** If you'd like to use Controller level authorization, checkout the branch
+	"ControllerAuthorize"
+
+Helpful links:
+http://book.cakephp.org/2.0/en/core-libraries/components/authentication.html
+http://book.cakephp.org/2.0/en/plugins.html
+
+
+Project Description:
+CakePhp 2.x Project for EZ use of Auth component
+
+README:
+CakePhp 2.x Plugin for easy implementation of the Auth Component
+
+Steps:
+1. Import Authentication/Config/Schema/users.sql file to cake db
+
+2. Add the following line to your app/Config/bootstrap.php
+    CakePlugin::load('Authentication', array('routes' => true));
+    *** note: for some reason loadAll doesn't work with this plugin,
+        it never loads the routes correctly
+
+3. Before enabling the component, navigate to:
+    /admin/users/add
+    And add a default user you can login to the site with.
+
+4. Enable Auth component by adding it to AppController like so:
+    public $components = array(
+        ...
+        'Auth' => array(
+            'loginAction' => array(
+                'controller' => 'Users',
+                'action' => 'login',
+                'plugin' => 'Authentication',
+                'admin' => false,
+            ),
+            'userModel' => 'Authentication.User',
+            'authenticate' => array('Form'),
+        ),
+        ...
+    );
+
+3. Add this line to your layout where you want to display Auth messages:
+    <?php echo $this->Session->flash('auth'); ?>
+
+*** If you'd like to use Controller level authorization, checkout the branch
+	"ControllerAuthorize"
+
+Helpful links:
+http://book.cakephp.org/2.0/en/core-libraries/components/authentication.html
+http://book.cakephp.org/2.0/en/plugins.html

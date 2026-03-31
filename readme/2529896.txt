@@ -1,0 +1,51 @@
+Project Description:
+Software for Little Magic Boxes :-)
+
+README:
+Software for Little Magic Boxes (stay tuned).
+
+Home https://github.com/networkimprov/elembe
+
+--- Summary ---
+
+A personal-area network (i.e. WiFi Direct or Bluetooth) browser-based app with desktop integration.
+
+--- Requirements ---
+
+Linux
+
+Node.js http://github.com/ry/node
+
+Node modules:
+  node-inotify https://github.com/c4milo/node-inotify
+  node-sqlite https://github.com/networkimprov/node-sqlite
+  uuidjs https://github.com/weaver/uuidjs
+  gm https://github.com/aheckmann/gm
+  socket.io-node https://github.com/LearnBoost/Socket.IO-node
+  websocket.MQ client https://github.com/networkimprov/websocket.MQ
+
+Libraries & Tools:
+  SQLite http://sqlite.org/
+  libuuid 
+  Graphicsmagick http://graphicsmagick.org/
+  Xdelta3 http://xdelta.org/
+  Socket.IO (in elembe/socket.io/) https://github.com/LearnBoost/Socket.IO
+
+Samba file server http://samba.org/
+  configure a share [sqltest] path = elembe/sqltest/
+
+On Clients:
+
+Firefox (currently) http://mozilla.org/
+
+AppLaunch Firefox extension https://addons.mozilla.org/en-US/firefox/addon/240637/
+
+--- Startup ---
+
+$ node elembe.js autogen # first time only
+$ node elembe.js
+Point Firefox to http://yourhost:8000/
+
+--- License ---
+
+http://www.gnu.org/licenses/agpl-3.0.html

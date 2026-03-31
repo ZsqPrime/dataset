@@ -1,0 +1,7 @@
+This repository collects my solutions of the problems in Project Euler written in Common Lisp. I can not solve every problems, yet. The file proXX.lisp is corresponding to the problem XX in Porject Euler.
+
+Project Description:
+The solutions written in Common Lisp for problems on Project Euler
+
+README:
+This repository collects my solutions of the problems in Project Euler written in Common Lisp. I can not solve every problems, yet. The file proXX.lisp is corresponding to the problem XX in Porject Euler.

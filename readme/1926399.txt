@@ -1,0 +1,16 @@
+Demo: http://fb-friends-commenters.herokuapp.com
+
+Find Comment Stats for Your Friends
+
+This app is a simple exercise in using the Facebook Open Graph. For each of your friends, it simply displays their top commenters, ranked by number of posts (most to least).
+
+
+Project Description:
+See your Facebook friends' top commenters
+
+README:
+Demo: http://fb-friends-commenters.herokuapp.com
+
+Find Comment Stats for Your Friends
+
+This app is a simple exercise in using the Facebook Open Graph. For each of your friends, it simply displays their top commenters, ranked by number of posts (most to least).

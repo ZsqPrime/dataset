@@ -1,0 +1,44 @@
+Project Description:
+An automation editor, which uses (or will use) JACK MIDI output and JACK Transport to sync to the beat. 
+
+README:
+
+					AutoMate
+
+The idea behind this project is that there are a lot of seperate
+programs out there for linux audio use, and for each one to implement
+an automation editor & recorder would be pointless. So i took the liberty
+to try an pen one myself. I hope its useful to some of you.
+
+The user interface should be very self explanatory, there's an automation
+line, and that "read" by the playhead (the red line), and the value is
+then sent out via Jack MIDI. Simple huh?
+
+All feedback / bugs / feature requests to: harryhaaren@gmail.com
+
+Cheers, -Harry van Haaren
+
+
+
+
+
+
+
+
+/*	Program AutoMate: A musical automation tool
+	Author: Harry van Haaren
+	E-mail: harryhaaren@gmail.com
+	Copyright (C) 2010 Harry van Haaren
+
+	AutoMate is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	AutoMate is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with AutoMate.  If not, see <http://www.gnu.org/licenses/>. */

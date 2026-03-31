@@ -1,0 +1,23 @@
+MODIS Cloud Mask Product MOD35_L2
+
+Data Manipulation and Processing using
+Python, NumPy, MatPlotLib, and PyHDF
+
+For inquiries, e-mail to
+Erwin Villejo
+erwinvillejo@gmail.com
+
+
+
+Project Description:
+None
+
+README:
+MODIS Cloud Mask Product MOD35_L2
+
+Data Manipulation and Processing using
+Python, NumPy, MatPlotLib, and PyHDF
+
+For inquiries, e-mail to
+Erwin Villejo
+erwinvillejo@gmail.com

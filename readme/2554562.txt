@@ -1,0 +1,13 @@
+Project Description:
+Website monitor that will notify you when it is down or back up via various methods
+
+README:
+##Monty##
+###Website monitor###
+
+Will notify you via these methods
+
+ - Email
+ - IM
+ - Event Log
+ - Log to database

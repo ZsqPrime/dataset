@@ -1,0 +1,11 @@
+PLEASE SEE:
+
+* https://github.com/futuregrid/virtual-cluster/blob/master/doc/source/intro.rst
+
+Project Description:
+Creating virtual clusters with SLURM and OpenStack
+
+README:
+PLEASE SEE:
+
+* https://github.com/futuregrid/virtual-cluster/blob/master/doc/source/intro.rst

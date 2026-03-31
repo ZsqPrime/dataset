@@ -1,0 +1,6 @@
+
+
+Project Description:
+A mash up of PivotalTracker and git that makes a one to one story to branch mapping a lot of fun.
+
+README:

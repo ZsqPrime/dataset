@@ -1,0 +1,25 @@
+Project Description:
+command-line application to send messages to Twitter
+
+README:
+twitter.pl
+
+Application to send tweets to Twitter via the command line
+
+Usage:
+    twitter.pl This is a tweet
+    echo This is another tweet, using \"quotes\" | twitter.pl
+
+Changelog:
+    2012-02-02 - initial commit to Github
+    2012-02-04 - started differential save
+    2012-02-15 - Added support for minified URLs and configuration
+                 saved in ~/.twitter.cnf
+    2013-06-11 - Added Unicode support. Thanks to http://blog.zois.co.uk/2012/07/twitter-perl-and-utf-8/
+    2013-06-11 - Switched to 1.1 API.
+
+Copyright 2013, David Jacoby
+
+Twitter.pl, like Perl, may be copied only under the terms of either the
+Artistic License or the GNU General Public License, which may be found
+in the Perl 5 source kit.

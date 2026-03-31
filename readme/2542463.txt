@@ -1,0 +1,7 @@
+Project Description:
+iOS version of Qix
+
+README:
+# Baboom
+
+iOS version of Qix inspired by Bally III for Amiga

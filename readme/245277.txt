@@ -1,0 +1,48 @@
+Reasoning Engine for Probabilistic Event Logic (REPEL)
+--------------------------
+
+This is a work in progress.  Please do not distribute yet!
+
+Software required
+-----------------
+* CMake
+* Boost libraries
+
+To build
+--------
+me@myhost:~/git/pel$ mkdir build; cd build
+me@myhost:~/git/pel/build$ cmake ../
+[ stuff happens ]
+me@myhost:~/git/pel/build$ make
+
+Eclipse instructions
+--------------------
+See this page for setting up a UNIX Makefile project within eclipse:
+http://www.cmake.org/Wiki/CMake:Eclipse_UNIX_Tutorial
+
+
+Project Description:
+Probabilistic Event Logic
+
+README:
+Reasoning Engine for Probabilistic Event Logic (REPEL)
+--------------------------
+
+This is a work in progress.  Please do not distribute yet!
+
+Software required
+-----------------
+* CMake
+* Boost libraries
+
+To build
+--------
+me@myhost:~/git/pel$ mkdir build; cd build
+me@myhost:~/git/pel/build$ cmake ../
+[ stuff happens ]
+me@myhost:~/git/pel/build$ make
+
+Eclipse instructions
+--------------------
+See this page for setting up a UNIX Makefile project within eclipse:
+http://www.cmake.org/Wiki/CMake:Eclipse_UNIX_Tutorial

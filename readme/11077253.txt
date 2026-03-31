@@ -1,0 +1,6 @@
+Project Description:
+Tijs Verkoyen's Mollom class, versioned here.
+
+README:
+See documentation:
+http://mollom.crsolutions.be/docs

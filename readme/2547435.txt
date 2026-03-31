@@ -1,0 +1,4 @@
+Project Description:
+JMS za pomocą Spring 3 oraz ActiveMQ
+
+README:

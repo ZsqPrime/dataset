@@ -1,0 +1,35 @@
+Project Description:
+Twitter bot based on libturpial that reads RSS feeds and tweet them on configured accounts
+
+README:
+TwitRSS
+=======
+
+Twitter bot based on libturpial that reads RSS feeds and tweet newer posts on 
+configured accounts
+
+TwitRSS has been released under GPL v3 license. Check the COPYING file for more 
+details or visit http://www.gnu.org/licenses/gpl-3.0.html
+
+Dependencies
+------------
+
+ * python >= 2.5
+ * libturpial
+ * python-feedparser
+ * python-sqlite3
+
+Configuration
+-------------
+
+1.- List RSS
+
+$ python twitrss.py -l
+
+2.- Add RSS
+
+$ python twitrss.py -a <rss_url>
+
+3.- Remove RSS
+
+$ python twitrss.py -r <rss_id>

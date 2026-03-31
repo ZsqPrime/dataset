@@ -1,0 +1,8 @@
+A skeleton package of Django App
+
+
+Project Description:
+A skeleton package of Django App
+
+README:
+A skeleton package of Django App

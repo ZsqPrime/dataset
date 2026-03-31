@@ -1,0 +1,24 @@
+Project Description:
+Real-time graphing of live Arduino data using Javascript 
+
+README:
+This project is allows for two-way communication between a browser
+and an ARDUINO (www.arduino.cc) microcontroller.  
+
+After trying several methods of communicating with the Arduino this version uses an Ethernet shield and code prepared by Sam Fentress at Concord Consortium (https://github.com/sfentress/ArduinoEthernetCom). 
+
+To get this working you will need 
+- An Arduino (we used Uno in our tests)
+- Arduino Ethernet Shield
+- Ethernet cables
+- Computer with Ethernet port
+
+
+To get this working on your computer 
+1. download and install the files into a folder. 
+2. Download Sam's Arduino code that enables the communication (https://gist.github.com/2126328)
+3. Open the Arduino IDE and upload the script in step 2 into the arduino
+4. Plug in an ethernet cable into the Arduino ethernet shield. 
+5. The code should work. You can test it out on working website of this project: http://code.caneruguz.com/arduinographer
+
+The graphing is done by Flot (http://code.google.com/p/flot/).

@@ -1,0 +1,12 @@
+Project Description:
+
+
+README:
+install python 2.7: http://python.org/getit/
+install pandoc: http://johnmacfarlane.net/pandoc/installing.html
+
+On Linux & Mac OS, type: make
+
+On Windows: someone please write a batch file based on the Makefile in this directory
+
+Then... open a browser on: http://localhost:6543

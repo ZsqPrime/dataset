@@ -1,0 +1,5 @@
+Project Description:
+Experimental Proof of Concept Branches
+
+README:
+This is the project root for any number of subdirectories (subprojects) that will each contain proof-of-concept work for the Propertyware Mason group.

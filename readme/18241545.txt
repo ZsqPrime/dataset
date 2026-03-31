@@ -1,0 +1,4 @@
+Project Description:
+Web Application using Java Servlet 3.0 and Spring 3.1 without XML configurations - annonation only
+
+README:

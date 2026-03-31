@@ -1,0 +1,7 @@
+Project Description:
+hand history converter
+
+README:
+Script to translate MIT Pokerbots hand format to FullTilt
+
+******

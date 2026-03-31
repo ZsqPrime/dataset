@@ -1,0 +1,6 @@
+Project Description:
+Legacy edition of autonetkit. Please see https://github.com/sk2/autonetkit for latest version
+
+README:
+AutoNetkit Version 2 (Legacy Edition).
+This version has been replaced with AutoNetkit version 3, available at https://github.com/sk2/autonetkit

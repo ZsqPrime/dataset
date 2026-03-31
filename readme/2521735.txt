@@ -1,0 +1,4 @@
+Project Description:
+Execute an MVCS, Command and Background Processes injection mapping via external descriptors (XML or VO) - Based on: SwiftSuspenders, Signal, and Robotlegs
+
+README:

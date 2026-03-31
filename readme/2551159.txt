@@ -1,0 +1,5 @@
+Project Description:
+An AppEngine site to script Burning Wheel rpg conflicts (Fight! and Duel of Wits)
+
+README:
+A tool to script Burning Wheel conflicts online

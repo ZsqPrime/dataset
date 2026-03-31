@@ -1,0 +1,20 @@
+== MKM3 blog engine
+
+This project contains the source code for the travel blog located at link:http://www.mkm.tc . The blog runs on heroku using S3 for image storage and link:https://github.com/jnicklas/carrierwave for photo processing.
+
+link:https://github.com/plataformatec/devise is used for authentication, and to add yourself as admin user simply edit the <tt>app/models/users.rb</tt> model and enable the <tt>:registerable</tt> module. See the devise documentation for more information.
+
+The S3 credentials are fetched from system properties. See <tt>config/initializers/carrierwave.rb</tt> for more details.
+
+
+Project Description:
+None
+
+README:
+== MKM3 blog engine
+
+This project contains the source code for the travel blog located at link:http://www.mkm.tc . The blog runs on heroku using S3 for image storage and link:https://github.com/jnicklas/carrierwave for photo processing.
+
+link:https://github.com/plataformatec/devise is used for authentication, and to add yourself as admin user simply edit the <tt>app/models/users.rb</tt> model and enable the <tt>:registerable</tt> module. See the devise documentation for more information.
+
+The S3 credentials are fetched from system properties. See <tt>config/initializers/carrierwave.rb</tt> for more details.

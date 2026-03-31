@@ -1,0 +1,12 @@
+Handling date and time is so hard in iOS world.
+To make life easier, I make this extension by combining some libaries from github, stackoverflow and fix some bugs. 
+Let me know if there is any bug. And thanks for: https://github.com/enormego and https://github.com/eria 
+
+
+Project Description:
+most functional NSDate category in github
+
+README:
+Handling date and time is so hard in iOS world.
+To make life easier, I make this extension by combining some libaries from github, stackoverflow and fix some bugs. 
+Let me know if there is any bug. And thanks for: https://github.com/enormego and https://github.com/eria

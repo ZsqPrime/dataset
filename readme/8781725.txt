@@ -1,0 +1,8 @@
+Project Description:
+2D games in LUA
+
+README:
+The goal of the project is to create simple 2D games using lua.
+
+We interface LUA with a c++ librairy which implements the basic 2D 
+function to be able to render basic shapes.

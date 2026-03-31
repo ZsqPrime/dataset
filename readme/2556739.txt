@@ -1,0 +1,4 @@
+Project Description:
+Well-protected messenger bulit in Java for text and video-streaming conference.
+
+README:

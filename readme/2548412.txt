@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Simple IntelliJ Idea plugin that copies current file name to clipboard

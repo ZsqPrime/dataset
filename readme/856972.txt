@@ -1,0 +1,8 @@
+chat.  With brubeck.  Yay!
+
+
+Project Description:
+Brubeck server for the SpotiChat Spotify App
+
+README:
+chat.  With brubeck.  Yay!

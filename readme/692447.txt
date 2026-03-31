@@ -1,0 +1,382 @@
+Process Term Storage (PTS)
+**************************
+
+Copyright (C) 2012, Dmitry Kolesnikov
+
+   This file is free documentation; unlimited permissions are give to copy, 
+distribute and modify the documentation. 
+
+
+   This library is free software; you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License, version 3.0
+as published by the Free Software Foundation.
+
+
+Introduction
+============
+
+   The library provides hashtable-like interface to manage processes
+namespace, and read/write access the process state.
+
+
+Compile and build
+=================
+
+   The library source code is available at git repository
+
+   git clone https://github.com/fogfish/pts.git
+   
+   Briefly, the shell command `make' should configure and build, the library.
+   
+Use-cases
+=========
+
+   The library assumes existence of two type of processes `actors': 
+   
+   * data owner is an Erlang/OTP process that holds chunk of data and 
+   manages its life-cycle.   
+   
+   * data consumer is process that leases data for transient operation
+
+   The contract between those actors are namespace and key, the namespace
+defines a data domain and key identifies a process that holds data. In other
+words, pts is like ets but each entry is kept is dedicated `data owner' process; the library defines 
+
+   * an unified `data consumers' interface for data discovery and I/O
+   
+   * an unified asynchronous protocol for `data owners'
+
+Interface
+=========
+
+   Briefly, the sequence of operations for `data consume' is following; see the
+src/pts.erl file for detailed interface specification and/or example cache
+application.
+
+   %% create a new table and define a factory function
+   ok = pts:new(mytable, [{factory, fun my_entry_sup:create/1}]),
+   
+   %% put a value into process bound to mykey, if such process do not exists
+   %% the factory function is called to spawn a new process
+   ok = pts:put(mytable, mykey, "my value"),
+   
+   %%
+   %% read value from process
+   {ok, Value} = pts:get(mytable, mykey),
+   
+   %% clean up
+   pts:drop(mytable).
+   
+
+Protocol
+========
+   
+   Each `data owner' process has to be complient with asynchronous protocol
+See reference implementation at src/pts_cache.erl: 
+   
+   1. Factory
+      The factory function shall take two parameters Namespace and Key 
+
+   2. Put
+      handle_info({put, Tx, Key, Val}, ...) ->
+         gen_server:reply(Tx, ok),
+         {noreply, ...}
+
+   3. Get
+      handle_info({get, Tx, Key}, ...) ->
+         gen_server:reply(Tx, {ok, Val}),
+         {noreply, ...}
+
+   4. Remove data
+      handle_info({remove, Tx, Key}, ...) ->
+         gen_server:reply(Tx, ok),
+         {stop, normal, ...}
+   
+   
+Performance
+===========
+
+   The performance is estimated for storage containing 10000 key/value pairs.
+The key is md5 hash, the value is 1KB data block. 
+
+   Hardware reference platform: MacMini, Lion Server, 2 GHz Intel Core i7, 8GB 1333 MHZ DDR3, erlang R15B
+   
+put by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            1799.712
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    5556.4
+Latency (ms):           0.180
+IO tput (MB):           5.511 (9.918 written, 0.000 read)
+
+
+get by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            140.799
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    71023.4
+Latency (ms):           0.014
+IO tput (MB):           70.443 (9.918 written, 0.000 read)
+
+
+get by 100 process 100000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            1171.940
+Completed:              100000
+Failed:                 0 (0.00%)
+TPS:                    85328.6
+Latency (ms):           0.012
+IO tput (MB):           84.631 (99.182 written, 0.000 read)
+
+
+get by 1000 process 1000000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            12538.887
+Completed:              1000000
+Failed:                 0 (0.00%)
+TPS:                    79751.9
+Latency (ms):           0.013
+IO tput (MB):           79.100 (991.821 written, 0.000 read)
+
+
+   pts is compared to ets with exactly same dataset
+
+put by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            1691.288
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    5912.7
+Latency (ms):           0.169
+IO tput (MB):           5.864 (9.918 written, 0.000 read)
+
+
+get by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            10.630
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    940769.2
+Latency (ms):           0.001
+IO tput (MB):           933.075 (9.918 written, 0.000 read)
+
+
+get by 100 process 100000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            45.566
+Completed:              100000
+Failed:                 0 (0.00%)
+TPS:                    2194641.9
+Latency (ms):           0.000
+IO tput (MB):           2176.693 (99.182 written, 0.000 read)
+
+
+get by 1000 process 1000000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            216.048
+Completed:              1000000
+Failed:                 0 (0.00%)
+TPS:                    4628605.0
+Latency (ms):           0.000
+IO tput (MB):           4590.749 (991.821 written, 0.000 read)
+
+   
+
+
+
+
+
+
+
+
+
+
+Project Description:
+The library provides hashtable-like interface to manipulate data distributed  across Erlang processes.
+
+README:
+Process Term Storage (PTS)
+**************************
+
+Copyright (C) 2012, Dmitry Kolesnikov
+
+   This file is free documentation; unlimited permissions are give to copy, 
+distribute and modify the documentation. 
+
+
+   This library is free software; you can redistribute it and/or modify
+it under the terms of the GNU Lesser General Public License, version 3.0
+as published by the Free Software Foundation.
+
+
+Introduction
+============
+
+   The library provides hashtable-like interface to manage processes
+namespace, and read/write access the process state.
+
+
+Compile and build
+=================
+
+   The library source code is available at git repository
+
+   git clone https://github.com/fogfish/pts.git
+   
+   Briefly, the shell command `make' should configure and build, the library.
+   
+Use-cases
+=========
+
+   The library assumes existence of two type of processes `actors': 
+   
+   * data owner is an Erlang/OTP process that holds chunk of data and 
+   manages its life-cycle.   
+   
+   * data consumer is process that leases data for transient operation
+
+   The contract between those actors are namespace and key, the namespace
+defines a data domain and key identifies a process that holds data. In other
+words, pts is like ets but each entry is kept is dedicated `data owner' process; the library defines 
+
+   * an unified `data consumers' interface for data discovery and I/O
+   
+   * an unified asynchronous protocol for `data owners'
+
+Interface
+=========
+
+   Briefly, the sequence of operations for `data consume' is following; see the
+src/pts.erl file for detailed interface specification and/or example cache
+application.
+
+   %% create a new table and define a factory function
+   ok = pts:new(mytable, [{factory, fun my_entry_sup:create/1}]),
+   
+   %% put a value into process bound to mykey, if such process do not exists
+   %% the factory function is called to spawn a new process
+   ok = pts:put(mytable, mykey, "my value"),
+   
+   %%
+   %% read value from process
+   {ok, Value} = pts:get(mytable, mykey),
+   
+   %% clean up
+   pts:drop(mytable).
+   
+
+Protocol
+========
+   
+   Each `data owner' process has to be complient with asynchronous protocol
+See reference implementation at src/pts_cache.erl: 
+   
+   1. Factory
+      The factory function shall take two parameters Namespace and Key 
+
+   2. Put
+      handle_info({put, Tx, Key, Val}, ...) ->
+         gen_server:reply(Tx, ok),
+         {noreply, ...}
+
+   3. Get
+      handle_info({get, Tx, Key}, ...) ->
+         gen_server:reply(Tx, {ok, Val}),
+         {noreply, ...}
+
+   4. Remove data
+      handle_info({remove, Tx, Key}, ...) ->
+         gen_server:reply(Tx, ok),
+         {stop, normal, ...}
+   
+   
+Performance
+===========
+
+   The performance is estimated for storage containing 10000 key/value pairs.
+The key is md5 hash, the value is 1KB data block. 
+
+   Hardware reference platform: MacMini, Lion Server, 2 GHz Intel Core i7, 8GB 1333 MHZ DDR3, erlang R15B
+   
+put by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            1799.712
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    5556.4
+Latency (ms):           0.180
+IO tput (MB):           5.511 (9.918 written, 0.000 read)
+
+
+get by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            140.799
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    71023.4
+Latency (ms):           0.014
+IO tput (MB):           70.443 (9.918 written, 0.000 read)
+
+
+get by 100 process 100000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            1171.940
+Completed:              100000
+Failed:                 0 (0.00%)
+TPS:                    85328.6
+Latency (ms):           0.012
+IO tput (MB):           84.631 (99.182 written, 0.000 read)
+
+
+get by 1000 process 1000000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            12538.887
+Completed:              1000000
+Failed:                 0 (0.00%)
+TPS:                    79751.9
+Latency (ms):           0.013
+IO tput (MB):           79.100 (991.821 written, 0.000 read)
+
+
+   pts is compared to ets with exactly same dataset
+
+put by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            1691.288
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    5912.7
+Latency (ms):           0.169
+IO tput (MB):           5.864 (9.918 written, 0.000 read)
+
+
+get by 10 process 10000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            10.630
+Completed:              10000
+Failed:                 0 (0.00%)
+TPS:                    940769.2
+Latency (ms):           0.001
+IO tput (MB):           933.075 (9.918 written, 0.000 read)
+
+
+get by 100 process 100000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            45.566
+Completed:              100000
+Failed:                 0 (0.00%)
+TPS:                    2194641.9
+Latency (ms):           0.000
+IO tput (MB):           2176.693 (99.182 written, 0.000 read)
+
+
+get by 1000 process 1000000 times
+-------------------------------------------------------------------------------
+Wclock (ms):            216.048
+Completed:              1000000
+Failed:                 0 (0.00%)
+TPS:                    4628605.0
+Latency (ms):           0.000
+IO tput (MB):           4590.749 (991.821 written, 0.000 read)

@@ -1,0 +1,9 @@
+Project Description:
+
+
+README:
+#Ruby on Rails application
+
+
+
+This is the application for pokrovvet

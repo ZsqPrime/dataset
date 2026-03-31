@@ -1,0 +1,12 @@
+Replaces text in the previous sentence (à la sed)
+
+Package detailed description here (found in README)
+
+
+Project Description:
+Sed-like search-and-replace expressions for Erebot
+
+README:
+Replaces text in the previous sentence (à la sed)
+
+Package detailed description here (found in README)

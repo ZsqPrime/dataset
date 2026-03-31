@@ -1,0 +1,16 @@
+hadoop-configurator
+===================
+
+This project has moved to
+[kijiproject/hadoop-configurator](http://github.com/kijiproject/hadoop-configurator).
+
+
+Project Description:
+None
+
+README:
+hadoop-configurator
+===================
+
+This project has moved to
+[kijiproject/hadoop-configurator](http://github.com/kijiproject/hadoop-configurator).

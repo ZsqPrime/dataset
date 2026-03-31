@@ -1,0 +1,8 @@
+PHP & Ajax Chat
+
+
+Project Description:
+None
+
+README:
+PHP & Ajax Chat

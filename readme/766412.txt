@@ -1,0 +1,28 @@
+Project Template
+
+primeiro passo:
+
+git clone url-do-projeto
+git submodule init
+git submodule update
+
+segundo passo:
+
+edite o build.xml, adicione o nome do projeto no atributo [project name="NomeDoProjeto"]
+
+
+Project Description:
+template project for cakephp 2.1
+
+README:
+Project Template
+
+primeiro passo:
+
+git clone url-do-projeto
+git submodule init
+git submodule update
+
+segundo passo:
+
+edite o build.xml, adicione o nome do projeto no atributo [project name="NomeDoProjeto"]

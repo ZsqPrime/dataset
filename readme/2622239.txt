@@ -1,0 +1,17 @@
+Project Description:
+
+
+README:
+Clone the repo ussing:
+
+git clone git@github.com:javiervc90/sports.git
+
+Run:
+
+rake db:migrate
+
+run:
+
+rails s
+
+Done!!!

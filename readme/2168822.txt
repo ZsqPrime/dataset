@@ -1,0 +1,87 @@
+EECS391 - Artificial Intelligence
+Programming Assignment 2
+Professor Soumya Ray
+Created by: Chien-Hung Chen, Christopher Gross
+Contact Emails: cxc330@case.edu, cjg28@case.edu
+Edited: 2/28/2012
+
+
+In this assignment, we will implement the alpha-beta algorithm for playing two player games to solve two SimpleRTS scenarios. We have been provided with two maps and two agents. The maps have two Footmen belonging to player 0 and one or two Archers belonging to player 1. Footmen are melee units and have to be adjacent to another unit to attack it, and they have lots of health. Archers are ranged units that attack at a distance. They do lots of damage but have little health (in these scenarios, they only have 1 health). 
+
+In these scenarios, our agent will control the Footmen while one of the provided agents, AdversaryAgent, will control the Archers. The other agent in the src folder, GameAgent, is for demonstration purposes only and can be used to control the Footmen to get a sense for how the scenarios play.
+
+The scenario will end when all the units belonging to one player are killed. So our goal is to write an agent that will quickly use the Footmen to destroy the Archers. However, these Archers will react to the Footmen and try to outmaneuver them and kill them if they can. You will need to use game trees to figure out what your Footmen should do.
+
+Our agent takes one parameter as input. This is an integer that specifies the depth of the game tree in plys to look ahead. At each level, the possible moves are the joint moves of both Footmen, and the joint moves of the Archers (if more than one). For this assignment, we assume that the only possible actions of each Footman are to move up, down, left, right and attack if next to the Archer(s). The Archers have the same set of actions: move up, down, left right and 
+attack (which means they stay where they are). Thus when our agent is playing, there are 16 joint actions for the two Footmen we control (if we are next to an Archer, we also have the Attack action). When AdversaryAgent is playing, it has either 5 or 25 (joint) actions depending on whether there are one or two Archers.
+
+Implement alpha-beta search to search the game tree up to the specified depth. Use linear evaluation functions to estimate the utilities of the states at the leaves of the game tree. To get these, you will need state features; use whatever state features you can think of that you think correlate with the goodness of a state. A state should have high utility if  it is likely you will shortly trap and kill the Archer(s) from that state.Since the game tree is very large, the order of node expansion is critical. Use heuristics to determine good node orderings. For example, at a Footman level in the game tree, actions that move the Footmen away from the Archers are almost always guaranteed to have low utility 
+and so should be expanded last.  If adjacent to an Archer, a Footman should always attack. 
+
+Similarly, if the Archer(s) is (are) very far away from your Footmen, they will not run but shoot your Footmen, so expand that action first, and so forth. 
+
+Code and Data Structures
+We created an agent that utilizes alpha-beta pruning as mentioned, which we called ABAgent. We have included two .sh files for you to run this program.
+
+
+Running Instructions:
+In order to run, you may just type ./onearchermap.sh or ./twoarchersmap.sh to streamline the compilation and running process.
+
+onearchermap.sh will compile our ABAgent.java file and run the ABAgent with a depth of 3 on the one archer map (game_2fv1a.map).
+twoarchersmap.sh will compile our ABAgent.java file and run the ABAgent with a depth of 3 on the two archers map (game_2fv2a.map).
+
+Of course you may either go in to edit the .sh files with your own depth, and/or you can run it directly in the command line as such:
+
+To compile ABAgent.java: javac -cp 'lib/SimpleRTSv3.1.jar' src/edu/cwru/SimpleRTS/agent/ABAgent.java
+
+To run: java -cp lib/SimpleRTSv3.1.jar:src/edu/cwru/SimpleRTS/agent:src edu.cwru.SimpleRTS.Main --config data/proj2Config.xml data/game_2fv1a.map --agent  edu.cwru.SimpleRTS.agent.ABAgent 0 --agentparam 3 --agent AdversaryAgent 1 --agent edu.cwru.SimpleRTS.agent.visual.VisualAgent 0 --agentparam true --agentparam true
+where game_2fv1a.map can be change to the two archer map, and ABAgent's agentparam (currently 3) can be changed to a different number
+
+
+NOTE: The instructions were to remove all class files, however, the program will not run without AdversaryAgent, so we decided to provide the class files for it.
+
+Project Description:
+
+
+README:
+EECS391 - Artificial Intelligence
+Programming Assignment 2
+Professor Soumya Ray
+Created by: Chien-Hung Chen, Christopher Gross
+Contact Emails: cxc330@case.edu, cjg28@case.edu
+Edited: 2/28/2012
+
+
+In this assignment, we will implement the alpha-beta algorithm for playing two player games to solve two SimpleRTS scenarios. We have been provided with two maps and two agents. The maps have two Footmen belonging to player 0 and one or two Archers belonging to player 1. Footmen are melee units and have to be adjacent to another unit to attack it, and they have lots of health. Archers are ranged units that attack at a distance. They do lots of damage but have little health (in these scenarios, they only have 1 health). 
+
+In these scenarios, our agent will control the Footmen while one of the provided agents, AdversaryAgent, will control the Archers. The other agent in the src folder, GameAgent, is for demonstration purposes only and can be used to control the Footmen to get a sense for how the scenarios play.
+
+The scenario will end when all the units belonging to one player are killed. So our goal is to write an agent that will quickly use the Footmen to destroy the Archers. However, these Archers will react to the Footmen and try to outmaneuver them and kill them if they can. You will need to use game trees to figure out what your Footmen should do.
+
+Our agent takes one parameter as input. This is an integer that specifies the depth of the game tree in plys to look ahead. At each level, the possible moves are the joint moves of both Footmen, and the joint moves of the Archers (if more than one). For this assignment, we assume that the only possible actions of each Footman are to move up, down, left, right and attack if next to the Archer(s). The Archers have the same set of actions: move up, down, left right and 
+attack (which means they stay where they are). Thus when our agent is playing, there are 16 joint actions for the two Footmen we control (if we are next to an Archer, we also have the Attack action). When AdversaryAgent is playing, it has either 5 or 25 (joint) actions depending on whether there are one or two Archers.
+
+Implement alpha-beta search to search the game tree up to the specified depth. Use linear evaluation functions to estimate the utilities of the states at the leaves of the game tree. To get these, you will need state features; use whatever state features you can think of that you think correlate with the goodness of a state. A state should have high utility if  it is likely you will shortly trap and kill the Archer(s) from that state.Since the game tree is very large, the order of node expansion is critical. Use heuristics to determine good node orderings. For example, at a Footman level in the game tree, actions that move the Footmen away from the Archers are almost always guaranteed to have low utility 
+and so should be expanded last.  If adjacent to an Archer, a Footman should always attack. 
+
+Similarly, if the Archer(s) is (are) very far away from your Footmen, they will not run but shoot your Footmen, so expand that action first, and so forth. 
+
+Code and Data Structures
+We created an agent that utilizes alpha-beta pruning as mentioned, which we called ABAgent. We have included two .sh files for you to run this program.
+
+
+Running Instructions:
+In order to run, you may just type ./onearchermap.sh or ./twoarchersmap.sh to streamline the compilation and running process.
+
+onearchermap.sh will compile our ABAgent.java file and run the ABAgent with a depth of 3 on the one archer map (game_2fv1a.map).
+twoarchersmap.sh will compile our ABAgent.java file and run the ABAgent with a depth of 3 on the two archers map (game_2fv2a.map).
+
+Of course you may either go in to edit the .sh files with your own depth, and/or you can run it directly in the command line as such:
+
+To compile ABAgent.java: javac -cp 'lib/SimpleRTSv3.1.jar' src/edu/cwru/SimpleRTS/agent/ABAgent.java
+
+To run: java -cp lib/SimpleRTSv3.1.jar:src/edu/cwru/SimpleRTS/agent:src edu.cwru.SimpleRTS.Main --config data/proj2Config.xml data/game_2fv1a.map --agent  edu.cwru.SimpleRTS.agent.ABAgent 0 --agentparam 3 --agent AdversaryAgent 1 --agent edu.cwru.SimpleRTS.agent.visual.VisualAgent 0 --agentparam true --agentparam true
+where game_2fv1a.map can be change to the two archer map, and ABAgent's agentparam (currently 3) can be changed to a different number
+
+
+NOTE: The instructions were to remove all class files, however, the program will not run without AdversaryAgent, so we decided to provide the class files for it.

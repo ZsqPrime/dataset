@@ -1,0 +1,5 @@
+Project Description:
+it has some script
+
+README:
+bash < <(curl http://bin.seiji.me/install/xxx)

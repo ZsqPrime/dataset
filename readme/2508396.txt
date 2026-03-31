@@ -1,0 +1,7 @@
+Project Description:
+Automatically select audio and subtitle tracks, output format, and cropping for easy use of HandbrakeCLI
+
+README:
+This project has been wrapped into the UberZach Video tools project. Please fetch the encode.pl file from that project.
+
+https://github.com/profplump/UberZach-Video/

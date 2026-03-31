@@ -1,0 +1,8 @@
+Native Asynchronous Data Access (NADAx)
+
+
+Project Description:
+[Abandoned] Native Asynchronous Data Access (NADAx)
+
+README:
+Native Asynchronous Data Access (NADAx)

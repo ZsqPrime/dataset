@@ -1,0 +1,77 @@
+h1. Thymeleaf module
+
+h2. Description
+
+p. A Play framework **1.x** module to use "Thymeleaf 2.0":http://www.thymeleaf.org/ as a template engine.
+
+h2. Version History:
+
+h3. 2013/02/07 v1.5:
+
+# Updated to thymeleaf v2.0.15
+# Fixed the bug that enum classes were not loaded and could not be accessed from OGNL
+# ModuleTemplateResolver can be configured with key "thymeleaf.modules"
+
+h3. 2012/08/14 v1.4:
+
+# Updated to thymeleaf v2.0.11
+# Refactored internal ExpressionEvaluator due to thymeleaf API update 
+
+h3. 2012/06/24 v1.3:
+
+# Updated to thymeleaf v2.0.8
+# Fixed ClassNotFoundException for static application class in template
+ 
+h3. 2012/04/18 v1.2:
+
+# Added SessionAdapter 
+
+h3. 2012/04/04 v1.1:
+
+# Updated dependency to thymeleaf 2.0.5
+# Added Error processor (pl:error) 
+# Added optional template resolver class that loads template files from module
+# Added optional PlayMessageResolver
+
+h3. 2012/03/09 v1.0: First release.
+
+Project Description:
+a Play framework module to use Thymeleaf as a template engine
+
+README:
+h1. Thymeleaf module
+
+h2. Description
+
+p. A Play framework **1.x** module to use "Thymeleaf 2.0":http://www.thymeleaf.org/ as a template engine.
+
+h2. Version History:
+
+h3. 2013/02/07 v1.5:
+
+# Updated to thymeleaf v2.0.15
+# Fixed the bug that enum classes were not loaded and could not be accessed from OGNL
+# ModuleTemplateResolver can be configured with key "thymeleaf.modules"
+
+h3. 2012/08/14 v1.4:
+
+# Updated to thymeleaf v2.0.11
+# Refactored internal ExpressionEvaluator due to thymeleaf API update 
+
+h3. 2012/06/24 v1.3:
+
+# Updated to thymeleaf v2.0.8
+# Fixed ClassNotFoundException for static application class in template
+ 
+h3. 2012/04/18 v1.2:
+
+# Added SessionAdapter 
+
+h3. 2012/04/04 v1.1:
+
+# Updated dependency to thymeleaf 2.0.5
+# Added Error processor (pl:error) 
+# Added optional template resolver class that loads template files from module
+# Added optional PlayMessageResolver
+
+h3. 2012/03/09 v1.0: First release.

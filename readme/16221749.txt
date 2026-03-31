@@ -1,0 +1,4 @@
+Project Description:
+Two-player chess game written in Python, using the cs1graphics library.
+
+README:

@@ -1,0 +1,5 @@
+Project Description:
+Automation of the VLT telescope instrument HAWK-I in RRM mode
+
+README:
+Scripts for scheduling of astronomical targets

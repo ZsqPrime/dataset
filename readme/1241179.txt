@@ -1,0 +1,8 @@
+Word Segmentation for Chinese language.
+
+
+Project Description:
+A statistical-based Chinese word segmentation, wrote in C#.
+
+README:
+Word Segmentation for Chinese language.

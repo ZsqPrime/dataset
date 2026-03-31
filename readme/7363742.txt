@@ -1,0 +1,7 @@
+Project Description:
+Incredibly ugly visualization of a standup comedian influence graph
+
+README:
+Standup Comedy Genome Project
+
+Visualizing influence network between standup comedians via Wikipedia.

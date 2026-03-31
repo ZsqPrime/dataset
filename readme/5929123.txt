@@ -1,0 +1,6 @@
+Project Description:
+sleepless
+
+README:
+
+Sleepless Inc.'s commonly used Javascript enhancement code

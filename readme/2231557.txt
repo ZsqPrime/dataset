@@ -1,0 +1,7 @@
+Клиентская часть проекта Наблюдатель 2.0 для телефонов Android
+
+Project Description:
+Warcher Android
+
+README:
+Клиентская часть проекта Наблюдатель 2.0 для телефонов Android

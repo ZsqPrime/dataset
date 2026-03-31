@@ -1,0 +1,51 @@
+Project Description:
+Filename Edit
+
+README:
+fned(1) -- filename edit
+========================
+
+## SYNOPSIS
+
+`fned` [`-r`|`--recursive`] [`-v`|`--verbose`]
+[`-s` <separator>|`--separator`=<separator>] <filenames>
+
+## DESCRIPTION
+
+`fned` allows you to rename files or directories by editing their name
+in your favorite <EDITOR>.  `fned` accepts the list of files to be
+renamed as arguments.  The editor is started with a line number and the
+filename on each line.  The line number must be preserved in order for
+`fned` to recognize the file as valid.  Lines starting with
+`#` are comments.
+
+`fned` chooses the editor by checking if the <VISUAL> or <EDITOR>
+environment variables are set and uses its value or falls back to `vim` as
+default.
+
+## OPTIONS
+
+  * `-r`, `--recursive`:
+    If a directory is specified on the command line the directory and
+    every file and directory recursively within the directory are
+    available for editing.
+
+  * `-v`, `--verbose`:
+    Verbose output.
+
+  * `-s` <separator>, `--separator`=<separator>:
+    Use <separator> to separate the line number and the name of the file
+    or directory.  A single space is used by default.
+
+## AUTHOR
+
+Matthias Lederhofer <matled@gmx.net>
+
+## REPORTING BUGS
+
+Please report your bugs on <https://github.com/matled/fned/issues>.
+Patches welcome.
+
+## SEE ALSO
+
+mv(1), rename(1)

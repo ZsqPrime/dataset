@@ -1,0 +1,5 @@
+Project Description:
+Calculate income tax, national insurance, student loan and see how much (little?) goes in your pocket
+
+README:
+An app to calculate income tax, national insurance, student loan and net income.

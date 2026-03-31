@@ -1,0 +1,11 @@
+Project Description:
+Magnetic field of current loops
+
+README:
+Magnetic field simulator.
+
+Debian Jessie 8 with Boost, OpenMP, ParaView
+
+1/ make
+2/ export PYTHONPATH=/usr/lib/paraview
+3/ ./glue.py

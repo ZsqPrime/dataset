@@ -1,0 +1,11 @@
+# Dotfiles and maybe some funny scripts?
+
+Goal is to have .emacs be the only file needed for a hanktard setup
+
+Project Description:
+settings for funny apps that i wanna save
+
+README:
+# Dotfiles and maybe some funny scripts?
+
+Goal is to have .emacs be the only file needed for a hanktard setup

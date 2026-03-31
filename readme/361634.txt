@@ -1,0 +1,8 @@
+Toolkit for manipulating word lattices built on top of openfst
+
+
+Project Description:
+Toolkit for manipulating word lattices built on top of openfst
+
+README:
+Toolkit for manipulating word lattices built on top of openfst

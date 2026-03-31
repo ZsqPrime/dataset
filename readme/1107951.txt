@@ -1,0 +1,14 @@
+EE34M Labs
+Spring 2012 Semester
+Zachary Lalanne
+Thomas Brezinski
+
+
+Project Description:
+Solutions to EE345M Labs
+
+README:
+EE34M Labs
+Spring 2012 Semester
+Zachary Lalanne
+Thomas Brezinski

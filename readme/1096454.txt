@@ -1,0 +1,138 @@
+= Version Server =
+
+== Description ==
+
+'''Version Server''' is a servlet written in python using web.py.
+The purpose of the servlet is to provide auto-incremented build numbers for projects being built on Jenkins
+or other environments. It has a simple REST interface.
+You can also tell the server to store the identity of the changeset from which you are building.
+
+== The Interface ==
+
+All functions are accessible as simple HTTP GET requests:
+
+* /generate?project=''projectName''&v=''verMajor''.''verMinor''.''verThirdNumber''&vcid=''changesetId''&buildTweaks=''specialDefines''
+** generates the build number for given project and first three version numbers and returns it and nothing else in the response
+** the ''vcid'' parameter is optional
+** the ''buildTweaks'' is optional and can contain special parameters which were used to modify the build, such as CMake defines
+* /addproject?project=''projectName''
+** adds a project to the database and returns its id and nothing else in the response
+* /delproject?project=''projectName''
+** deletes a project from the database
+* /list
+** lists all projects along with max version number
+* /list?project=''projectName''
+** lists build for given project including UTC timestamp of the build and vc changeset id if it has been stored
+
+== Database ==
+
+The server uses a MySql database named ''versionserver''.
+The schema is described by DDL statements in the ''db/create.sql'' script.
+
+=== Project table ===
+The '''Project''' table contains list of all known projects. Each project has an integer primary identifier
+and an unique name.
+
+=== LastBuild table ===
+The '''LastBuild''' table contains last build number for project id and triplet of major, minor and release number.
+This table allows easy build number generation using one simple UPSERT operation, which is easier
+than having a table with all the build numbers and just inserting into it.
+
+=== BuildInfo table ===
+The '''BuildInfo''' table contains additional information about a particular build. The build number is first generated
+using UPSERT operation on the '''LastBuild''' table and then used as part of project id, full version tuple
+to insert an entry into the '''BuildInfo''' table.
+
+
+
+Project Description:
+A servlet providing auto-incremented build numbers for projects being built on Jenkins or other environments.
+
+README:
+= Version Server =
+
+
+
+== Description ==
+
+
+
+'''Version Server''' is a servlet written in python using web.py.
+
+The purpose of the servlet is to provide auto-incremented build numbers for projects being built on Jenkins
+
+or other environments. It has a simple REST interface.
+
+You can also tell the server to store the identity of the changeset from which you are building.
+
+
+
+== The Interface ==
+
+
+
+All functions are accessible as simple HTTP GET requests:
+
+
+
+* /generate?project=''projectName''&v=''verMajor''.''verMinor''.''verThirdNumber''&vcid=''changesetId''&buildTweaks=''specialDefines''
+
+** generates the build number for given project and first three version numbers and returns it and nothing else in the response
+
+** the ''vcid'' parameter is optional
+
+** the ''buildTweaks'' is optional and can contain special parameters which were used to modify the build, such as CMake defines
+
+* /addproject?project=''projectName''
+
+** adds a project to the database and returns its id and nothing else in the response
+
+* /delproject?project=''projectName''
+
+** deletes a project from the database
+
+* /list
+
+** lists all projects along with max version number
+
+* /list?project=''projectName''
+
+** lists build for given project including UTC timestamp of the build and vc changeset id if it has been stored
+
+
+
+== Database ==
+
+
+
+The server uses a MySql database named ''versionserver''.
+
+The schema is described by DDL statements in the ''db/create.sql'' script.
+
+
+
+=== Project table ===
+
+The '''Project''' table contains list of all known projects. Each project has an integer primary identifier
+
+and an unique name.
+
+
+
+=== LastBuild table ===
+
+The '''LastBuild''' table contains last build number for project id and triplet of major, minor and release number.
+
+This table allows easy build number generation using one simple UPSERT operation, which is easier
+
+than having a table with all the build numbers and just inserting into it.
+
+
+
+=== BuildInfo table ===
+
+The '''BuildInfo''' table contains additional information about a particular build. The build number is first generated
+
+using UPSERT operation on the '''LastBuild''' table and then used as part of project id, full version tuple
+
+to insert an entry into the '''BuildInfo''' table.

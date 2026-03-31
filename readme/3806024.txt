@@ -1,0 +1,5 @@
+Project Description:
+Code for a demonstration of Ruby on Rails, jQuery Mobile, Phongap
+
+README:
+An blog application combining Ruby on Rails, jQuery Mobile, and PhoneGap.

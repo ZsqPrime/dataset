@@ -1,0 +1,10 @@
+code-site is a very simple Django webapp meant to host my homework for school. 
+You're welcome to use this code if you need to host your own code on the Web.
+
+
+Project Description:
+None
+
+README:
+code-site is a very simple Django webapp meant to host my homework for school. 
+You're welcome to use this code if you need to host your own code on the Web.

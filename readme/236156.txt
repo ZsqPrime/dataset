@@ -1,0 +1,13 @@
+
+This is a language binding of IronPython for MonoDevelop,
+slightly based on its Python binding.
+
+
+
+Project Description:
+IronPython binding for MonoDevelop
+
+README:
+
+This is a language binding of IronPython for MonoDevelop,
+slightly based on its Python binding.

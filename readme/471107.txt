@@ -1,0 +1,15 @@
+Сниппет авторизации на сайт при помощи Loginza
+
+
+Домашняя страница: http://bezumkin.ru/modx/loginza
+Исходный код: https://github.com/bezumkin/miniShop
+
+Project Description:
+Loginza implementation for MODX Revolution
+
+README:
+Сниппет авторизации на сайт при помощи Loginza
+
+
+Домашняя страница: http://bezumkin.ru/modx/loginza
+Исходный код: https://github.com/bezumkin/miniShop

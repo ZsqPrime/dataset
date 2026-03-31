@@ -1,0 +1,16 @@
+== Luume Project Management
+
+This is a simple prototype of a project management solution that I wrote when I was
+first getting started with Ruby on Rails. It isn't complete and it shows the hand
+of a rails' beginner but I posted it nonetheless.
+
+
+Project Description:
+None
+
+README:
+== Luume Project Management
+
+This is a simple prototype of a project management solution that I wrote when I was
+first getting started with Ruby on Rails. It isn't complete and it shows the hand
+of a rails' beginner but I posted it nonetheless.

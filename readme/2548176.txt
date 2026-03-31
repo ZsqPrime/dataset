@@ -1,0 +1,8 @@
+Project Description:
+Annotation of floorplans into undirected graphs saved as XML files.
+
+README:
+Annotation of floorplans into undirected graphs saved as XML files.
+Added here mainly to force myself to clean the code.
+
+To be used with /libfloorplan

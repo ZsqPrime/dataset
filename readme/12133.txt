@@ -1,0 +1,7 @@
+Project Description:
+Deprecated! See http://github.com/getkirby
+
+README:
+# Kirby 1
+
+**Deprecated. See http://github.com/getkirby**

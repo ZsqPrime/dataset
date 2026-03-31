@@ -1,0 +1,4 @@
+Project Description:
+Multi plateforme (Web - iPad - Microsoft Surface) application for wedding planner.
+
+README:

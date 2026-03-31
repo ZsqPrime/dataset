@@ -1,0 +1,13 @@
+Project Description:
+fern algorithm for partitioning real-number spaces
+
+README:
+Claude contains the Fern algorithm for adative number discretization. I've written nD discretization with nonconsecutive binning. 
+
+I compiled this software with gcc 4.7, gtest 1.5 and boost.python 1.48. The C++ end of things is a header-only library. Compilation is required to test the C++ code and to expose the library to python. The compile flags I used indicate python 2.7, but there's no reason you can't change this to python 3.x. To build, simply type "make" in the Claude directory. To test, type "./test_claude" in the Claude/demo directory. To import to python, type "import fernpy" in the Claude/demo directory, or find some other way of putting fernpy.so where python can find it. 
+
+Claude is free and licensed under the GNU-GPLv3. 
+
+Issues:
+
+-Bins aren't consecutive right now, and I may want to change that to make a Fern look more like a traditaional number system. But bin order only really has meaning in the 1D case, since the proper ordering of bins for ND discretization may be very nonlinear. Also, enforcing the order of bins during crossover would be pretty much impossible.

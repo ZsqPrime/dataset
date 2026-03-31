@@ -1,0 +1,9 @@
+Project Description:
+Lightweight Python Bing Search API wrapper - No longer supported
+
+README:
+No longer supported
+
+You can get a newer version at:
+
+https://github.com/xthepoet/pyBingSearchAPI

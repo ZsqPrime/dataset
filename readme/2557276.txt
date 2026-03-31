@@ -1,0 +1,22 @@
+Project Description:
+A Haskell webserver / webframework / application server
+
+README:
+Useless
+=======
+
+Useless is a Haskell Application Server. 
+It allows you to build, run and manage applications that are written in Haskell.
+It currently only delivers HTTP/1.0 sites and is not quite standard compliance to HTTP, but current web clients should be able to process responses from Useless applications.
+
+---
+
+To compile and install Useless use:
+
+$ cabal install
+
+---
+
+To build a web application, just import Useless.
+Example:
+see examples/ for examples

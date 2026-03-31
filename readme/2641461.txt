@@ -1,0 +1,5 @@
+Project Description:
+Project for university Java course.
+
+README:
+Hello world!

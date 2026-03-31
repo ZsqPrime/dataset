@@ -1,0 +1,5 @@
+Project Description:
+Python Companion to MoogStokes
+
+README:
+This is CounterPoint, the Python Companion to MoogStokes

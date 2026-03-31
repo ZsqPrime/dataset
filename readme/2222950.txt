@@ -1,0 +1,6 @@
+
+
+Project Description:
+programming patterns on Python, at least for now.
+
+README:

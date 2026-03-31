@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+README
+
+This is the Kittredge Numismatic Foundation (kittredgecollection.org) version of Numishare's (http://code.google.com/p/numishare/) public cocoon frontend.

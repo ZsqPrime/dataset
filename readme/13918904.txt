@@ -1,0 +1,11 @@
+Project Description:
+SmokeStack puppet support modules
+
+README:
+OpenStack Support Modules
+=========================
+
+A collection of modules that support the stackforge/puppet-* modules
+for OpenStack.
+
+* Tested on Fedora 18 via SmokeStack

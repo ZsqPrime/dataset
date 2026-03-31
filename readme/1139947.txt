@@ -1,0 +1,15 @@
+Project Description:
+A Node app that does stuff with Reddit
+
+README:
+# Node Reddit
+
+To use:
+
+```bash
+$ node app.js
+```
+
+Have fun!
+
+[Kamranicus](http://kamranicus.com)

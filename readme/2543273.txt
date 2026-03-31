@@ -1,0 +1,48 @@
+Project Description:
+
+
+README:
+Project is on the org frony-web-backend.
+------------------------------------------------------------------------
+First,you should install
+mysql 5+
+python 2.7.2
+mysqldb-python latest release
+django latest release 1.3.1
+
+Second,follow the tutorial
+(https://docs.djangoproject.com/en/1.3/intro/tutorial01/)
+When you finish the tutorial until the section "The development server",
+Congratulations on your first Django-powered page.
+
+From now on,we will really start our cp_daileez project!
+To be continue?
+------------------------------------------------------------------------
+Today,I have been edit the settings.py,change the following keys in 
+the DATABASES 'default' item to match our databases connection settings.
+
+After this, I have been run the following command:
+python manage.py syncdb
+Some tables has been created in our databases automatically.
+| auth_group                 |
+| auth_group_permissions     |
+| auth_message               |
+| auth_permission            |
+| auth_user                  |
+| auth_user_groups           |
+| auth_user_user_permissions |
+| django_content_type        |
+| django_session             |
+| django_site                |
+The default applications are included for the common case, but not everybody needs them. 
+If you don't need any or all of them, feel free to comment-out or delete the appropriate 
+line(s) from INSTALLED_APPS before running syncdb. 
+The syncdb command will only create tables for apps in INSTALLED_APPS.
+------------------------------------------------------------------------
+Our environment -- a "project" -- is set up, we are set to start doing work.
+I have created the app daileez.
+Edit the settings.py file again, and change the INSTALLED_APPS setting to include the string 'daileez'.
+Edit the daileez/models.py,and create class IconType,Icons.
+Run the command 'Python manage.py sql daileez' to see CREATE TABLE SQL statements for the app.
+Run the command 'Python manage.py syncdb' to update our database daileez.
+------------------------------------------------------------------------

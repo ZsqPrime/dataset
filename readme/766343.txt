@@ -1,0 +1,5 @@
+Project Description:
+EDK IP cores used in Trenz Electronic Reference Designs.
+
+README:
+IP Cores used in TE reference projects

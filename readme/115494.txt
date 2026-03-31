@@ -1,0 +1,336 @@
+                             Tmispell
+
+  Pauli Virtanen <pauli.virtanen@hut.fi>	(original Tmispell)
+  Harri Pitkänen <hatapitk@iki.fi>		(modifications for Voikko)
+
+
+NOTE! Tmispell is no longer actively maintained! Enchant provides similar
+ispell-compatible wrapper for multiple spell checker backends. It is
+recommended to use that if possible, or contribute to its development.
+
+   --------------------------------------------------------------------------
+
+What Tmispell is?
+
+   Tmispell is an Ispell compatible front-end for spell-checking
+   modules. To do the actual spell-checking for Finnish language it uses
+   the spell-checking system Voikko[1].
+   
+   To put this another way: Tmispell is a transparent wrapper around
+   Ispell. Many programs (e.g. mail clients and document processors) use
+   Ispell for spell-checking. Since Tmispell imitates Ispell, these
+   programs use automatically Tmispell (and therefore Voikko) without
+   any changes needed. Additionally Tmispell can launch the real Ispell
+   if there is no module for the selected language.
+
+Usage
+
+   Currently Tmispell has an interactive text-mode user interface that
+   can be used for spell-checking text. It can be started by typing
+
+ tmispell -dsuomi file.txt
+
+   When a misspelled word is encountered, you will be asked what to do.
+   The usage of the interface should fairly obvious, but you can get
+   help about keys by pressing '?'.
+
+   If you would like to use the filters, put one of the options '-t',
+   '-n' and '-h' (TeX, nroff and Sgml, respectively) in front of the
+   file name to spell-check. For more information about options, see the
+   ispell(1) manual page.
+
+Installation
+
+   These instructions tell how to build and install Tmispell from
+   scratch. There are also prebuilt packages for Linux distributions for
+   Linux distributions. Likely you want to use them instead of doing
+   installation the hard way.
+
+    1. Download and install libvoikko[1] (version 1.5 or later) and its
+       dependencies.
+
+    2. Compile and install Tmispell:
+
+           ./configure
+           make
+           make install
+
+
+       The "make install" just copies the tmispell executable and manual
+       page to suitable places.
+
+    3. Create the configuration file and place it to the place where
+       Tmispell looks for it. There is also an example configuration
+       file tmispell.conf.example, which should be used as a template.
+       (See "The configuration file format" below.) Check that the path
+       names in spell-checker entries point to correct places.
+
+    4. To make other programs use Tmispell instead of Ispell, first move
+       aside the original Ispell executable, and then create a link from
+       "tmispell" to "ispell". For example:
+
+             mv /usr/bin/ispell /usr/bin/ispell.real
+             ln -s /usr/local/bin/tmispell /usr/bin/ispell
+
+
+       Remember to change the "ispell=..." line in configuration file to
+       point to the real Ispell executable.
+
+       Other programs must also know that a Finnish spell-checking is
+       possible, so run the following command to create fake dictionary
+       files:
+
+             touch /usr/lib/ispell/suomi.{hash,aff}
+
+
+       Note that the path might also be "/usr/share/ispell" or something
+       similar, depending on your system.
+
+    5. To check that Tmispell works properly, type the following
+       command:
+
+             ispell -dsuomi -a
+
+
+       If you had specified a dictionary with identifier "suomi" in the
+       configuration file, then you should see a line similar to this:
+
+ @(#) International Ispell Version 3.1.20 compatible tmispell-voikko 0.4.3
+
+       Now you can type words to spell-check. For more information about
+       this command mode, refer to the ispell(1) manual.
+
+Program specific information
+
+     o Emacs (both Ispell and Flyspell modes)
+
+       Note that you might have to add something like the following to
+       your ~/.emacs configuration file, since Ispell support in Emacs
+       does not know about Finnish dictionary by default:
+
+ (setq ispell-local-dictionary-alist
+       (append ispell-local-dictionary-alist
+        '(("suomi"
+           "[%.0-9A-Za-z\247\300-\326\330-\366\370-\377-]"
+           "[^.%0-9A-Za-z\247\300-\326\330-\366\370-\377-]"
+           "[':]" nil nil nil utf-8))))
+
+       You should change utf-8 to iso-8859-1 or iso-8859-15 if you do
+       not use the UTF-8 encoding. Depending on your configuration, the
+       ispell-local-dictionary-alist could also be
+       ispell-dictionary-alist. You can change the active dictionary
+       with the command "M-x ispell-change-dictionary". If you like to
+       have Finnish as the default dictionary, add also:
+
+ (setq ispell-dictionary "suomi")
+
+       If you still encounter problems (e.g. with TeX files), try turning the
+       multi byte character support of Emacs off.
+
+     o Pspell (Sylpheed, Balsa and many more)
+
+       Although Pspell is being replaced by Aspell, some programs still
+       use it. To use Tmispell with it, you need to have pspell-ispell
+       module for Pspell installed, and a file
+       /usr/share/pspell/fi-ispell.pwli with the following line in it:
+
+ /usr/lib/ispell/suomi.hash utf-8
+
+     o Other programs (most KDE applications, LyX, ...)
+
+       When the fake dictionary files (see Installation) exist, Finnish
+       should appear in the dictionary list in these programs.
+
+Known issues
+
+  Missing features
+
+     o Implement entity encoding and decoding in SGML filter. To do this
+       reasonably, some changes are likely required in filter
+       architecture.
+
+     o There is no support for applications using Aspell. We should ask
+       the maintainers of such applications to start using Enchant
+       instead.
+
+  Other things to do
+
+     o Think about Ispell extended characters (whatever they are).
+
+References
+
+   1. http://voikko.puimula.org/
+
+
+vim: tw=72
+
+
+Project Description:
+Ispell wrapper for libvoikko
+
+README:
+                             Tmispell
+
+  Pauli Virtanen <pauli.virtanen@hut.fi>	(original Tmispell)
+  Harri Pitkänen <hatapitk@iki.fi>		(modifications for Voikko)
+
+
+NOTE! Tmispell is no longer actively maintained! Enchant provides similar
+ispell-compatible wrapper for multiple spell checker backends. It is
+recommended to use that if possible, or contribute to its development.
+
+   --------------------------------------------------------------------------
+
+What Tmispell is?
+
+   Tmispell is an Ispell compatible front-end for spell-checking
+   modules. To do the actual spell-checking for Finnish language it uses
+   the spell-checking system Voikko[1].
+   
+   To put this another way: Tmispell is a transparent wrapper around
+   Ispell. Many programs (e.g. mail clients and document processors) use
+   Ispell for spell-checking. Since Tmispell imitates Ispell, these
+   programs use automatically Tmispell (and therefore Voikko) without
+   any changes needed. Additionally Tmispell can launch the real Ispell
+   if there is no module for the selected language.
+
+Usage
+
+   Currently Tmispell has an interactive text-mode user interface that
+   can be used for spell-checking text. It can be started by typing
+
+ tmispell -dsuomi file.txt
+
+   When a misspelled word is encountered, you will be asked what to do.
+   The usage of the interface should fairly obvious, but you can get
+   help about keys by pressing '?'.
+
+   If you would like to use the filters, put one of the options '-t',
+   '-n' and '-h' (TeX, nroff and Sgml, respectively) in front of the
+   file name to spell-check. For more information about options, see the
+   ispell(1) manual page.
+
+Installation
+
+   These instructions tell how to build and install Tmispell from
+   scratch. There are also prebuilt packages for Linux distributions for
+   Linux distributions. Likely you want to use them instead of doing
+   installation the hard way.
+
+    1. Download and install libvoikko[1] (version 1.5 or later) and its
+       dependencies.
+
+    2. Compile and install Tmispell:
+
+           ./configure
+           make
+           make install
+
+
+       The "make install" just copies the tmispell executable and manual
+       page to suitable places.
+
+    3. Create the configuration file and place it to the place where
+       Tmispell looks for it. There is also an example configuration
+       file tmispell.conf.example, which should be used as a template.
+       (See "The configuration file format" below.) Check that the path
+       names in spell-checker entries point to correct places.
+
+    4. To make other programs use Tmispell instead of Ispell, first move
+       aside the original Ispell executable, and then create a link from
+       "tmispell" to "ispell". For example:
+
+             mv /usr/bin/ispell /usr/bin/ispell.real
+             ln -s /usr/local/bin/tmispell /usr/bin/ispell
+
+
+       Remember to change the "ispell=..." line in configuration file to
+       point to the real Ispell executable.
+
+       Other programs must also know that a Finnish spell-checking is
+       possible, so run the following command to create fake dictionary
+       files:
+
+             touch /usr/lib/ispell/suomi.{hash,aff}
+
+
+       Note that the path might also be "/usr/share/ispell" or something
+       similar, depending on your system.
+
+    5. To check that Tmispell works properly, type the following
+       command:
+
+             ispell -dsuomi -a
+
+
+       If you had specified a dictionary with identifier "suomi" in the
+       configuration file, then you should see a line similar to this:
+
+ @(#) International Ispell Version 3.1.20 compatible tmispell-voikko 0.4.3
+
+       Now you can type words to spell-check. For more information about
+       this command mode, refer to the ispell(1) manual.
+
+Program specific information
+
+     o Emacs (both Ispell and Flyspell modes)
+
+       Note that you might have to add something like the following to
+       your ~/.emacs configuration file, since Ispell support in Emacs
+       does not know about Finnish dictionary by default:
+
+ (setq ispell-local-dictionary-alist
+       (append ispell-local-dictionary-alist
+        '(("suomi"
+           "[%.0-9A-Za-z\247\300-\326\330-\366\370-\377-]"
+           "[^.%0-9A-Za-z\247\300-\326\330-\366\370-\377-]"
+           "[':]" nil nil nil utf-8))))
+
+       You should change utf-8 to iso-8859-1 or iso-8859-15 if you do
+       not use the UTF-8 encoding. Depending on your configuration, the
+       ispell-local-dictionary-alist could also be
+       ispell-dictionary-alist. You can change the active dictionary
+       with the command "M-x ispell-change-dictionary". If you like to
+       have Finnish as the default dictionary, add also:
+
+ (setq ispell-dictionary "suomi")
+
+       If you still encounter problems (e.g. with TeX files), try turning the
+       multi byte character support of Emacs off.
+
+     o Pspell (Sylpheed, Balsa and many more)
+
+       Although Pspell is being replaced by Aspell, some programs still
+       use it. To use Tmispell with it, you need to have pspell-ispell
+       module for Pspell installed, and a file
+       /usr/share/pspell/fi-ispell.pwli with the following line in it:
+
+ /usr/lib/ispell/suomi.hash utf-8
+
+     o Other programs (most KDE applications, LyX, ...)
+
+       When the fake dictionary files (see Installation) exist, Finnish
+       should appear in the dictionary list in these programs.
+
+Known issues
+
+  Missing features
+
+     o Implement entity encoding and decoding in SGML filter. To do this
+       reasonably, some changes are likely required in filter
+       architecture.
+
+     o There is no support for applications using Aspell. We should ask
+       the maintainers of such applications to start using Enchant
+       instead.
+
+  Other things to do
+
+     o Think about Ispell extended characters (whatever they are).
+
+References
+
+   1. http://voikko.puimula.org/
+
+
+vim: tw=72

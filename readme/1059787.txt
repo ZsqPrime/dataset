@@ -1,0 +1,15 @@
+The PGConf NYC codebase, v2
+
+TODO:
+  * probably a bit more refactoring
+  * make it easier to update navigation
+
+Project Description:
+conference page for pgconf nyc - a bit better than the previous version but still a WIP
+
+README:
+The PGConf NYC codebase, v2
+
+TODO:
+  * probably a bit more refactoring
+  * make it easier to update navigation

@@ -1,0 +1,7 @@
+Project Description:
+Batch XHTML 1.0 Strict to HTML5 conversion (browser-based and Dreamweaver extension)
+
+README:
+# Moved
+
+This repository has been moved to https://codeberg.org/chimo/x2h

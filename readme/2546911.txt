@@ -1,0 +1,4 @@
+Project Description:
+Application Android de la ligue Dek Hockey Haut-Richelieu
+
+README:

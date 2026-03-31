@@ -1,0 +1,15 @@
+This is the lousymedia.com website.
+
+$ script/bootstrap
+$ script/server
+
+
+
+Project Description:
+The lousymedia.com website.
+
+README:
+This is the lousymedia.com website.
+
+$ script/bootstrap
+$ script/server

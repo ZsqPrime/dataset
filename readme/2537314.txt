@@ -1,0 +1,30 @@
+Project Description:
+Extra slots for Apostrophe CMS
+
+README:
+sbApostropheExtraSlotsPlugin
+
+Extra Slots for Apostrophe CMS
+- sbCampaignMonitorSubscribeSlot - A slot to allow automatic subscriptions to Campaign monitor lists
+- sbFAQSlot - A slot to create a collapsible set of FAQs 
+- sbJQueryCountdownTimeSlot - A slot to show an animated countdown to a fixed date time.
+- sbJQueryUITabbedContentSlot - A slot to create jQuery UI tabbed content
+- sbVideoWithImageSlot - A Video slot with an attached image. Use case: A video in a blog the image will be used on blog index and slots.
+
+MicroData Slots:
+- sbMicrodataPostalAddressSlot - a slot to create contact details using HTML5 Microdata.
+
+Instructions: http://www.superrb.com/open-source/sb-apostrophe-extra-slots-plugin
+
+LICENCE
+-------
+http://www.superrb.com/open-source/mit-licence
+
+##################################################
+
+Made by Superrb
+
+A full service digital agency based on Hayling Island, UK. Superrb specialise in
+brand building through design, e-commerce and functional content managed websites.
+
+http://www.superrb.com

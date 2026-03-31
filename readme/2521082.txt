@@ -1,0 +1,4 @@
+Project Description:
+This is a media center to replace XBMC. This use Mplayer and Node.js
+
+README:

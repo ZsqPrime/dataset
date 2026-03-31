@@ -1,0 +1,4 @@
+Project Description:
+Arduino Shield to break out connectors found on the original comm controller
+
+README:

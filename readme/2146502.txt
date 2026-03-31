@@ -1,0 +1,26 @@
+The logos are stored in the directory 100x100/. Smaller versions of the logos
+are created automatically from the files in 100x100/. 
+
+The original/ catalog is used to store the originals for the logos for
+future reference. This catalog is not used in the update process.
+
+The logos are used on tv.swedb.se and tvsajten.com.
+
+Original author: Mattias Holmlund 2007-04-12
+Current maintainer: Gustav Axelsson 2010-02-01
+
+
+Project Description:
+Channel logos used at tv.swedb.se and epgwidget.googlecode.com
+
+README:
+The logos are stored in the directory 100x100/. Smaller versions of the logos
+are created automatically from the files in 100x100/. 
+
+The original/ catalog is used to store the originals for the logos for
+future reference. This catalog is not used in the update process.
+
+The logos are used on tv.swedb.se and tvsajten.com.
+
+Original author: Mattias Holmlund 2007-04-12
+Current maintainer: Gustav Axelsson 2010-02-01

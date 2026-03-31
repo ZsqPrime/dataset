@@ -1,0 +1,15 @@
+NQLINQ (Not Quite LINQ)
+====
+
+Lightweight DAO, based on .NET's LINQ-to-SQL. Currently only Oracle (XE et al), and PostgreSQL are supported OOB, 
+though it should work now with some others.
+
+Project Description:
+LINQ-like access to databases (Oracle XE support OOB)
+
+README:
+NQLINQ (Not Quite LINQ)
+====
+
+Lightweight DAO, based on .NET's LINQ-to-SQL. Currently only Oracle (XE et al), and PostgreSQL are supported OOB, 
+though it should work now with some others.

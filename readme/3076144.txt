@@ -1,0 +1,93 @@
+Project Description:
+Ruby (and rails) gem to create, update, and graph rrd graphs
+
+README:
+h2. What is it?
+
+I couldn't find anything up to date that worked on rails that was paranoid about escaping and protecting the shell so I wrote my own.
+
+I'm actively using this on projects at work.
+
+h2. Notes
+
+You can call 'live' RRD graphs (ie when a page loads, have an Ajax.Updater load another page that actually graphs the RRd you want)
+This works fine under my tests with graphing about 7 RRD's at the same time.
+
+h2. Installing rails_rrdtool
+<pre>gem install RailsRRDTool</pre>
+
+h2. Creating a RRD
+
+
+RRD.create(path,params)
+
+example usage:
+<pre>
+ RRD.create('/test.rrd', {:step => 300, :heartbeat => 600, :ds => [  {:name => "test", :type => "GAUGE"},
+ {:name => "josh", :type => "GAUGE"} ]  , :xff => ".5",
+ :rra => [ {:type => "max", :steps => 20, :rows => 1} ] })
+</pre>
+
+first value is a path to the rrd db, the 2nd param is a hash of keys and values
+
+:ds is an array containing hashes for each DataSource (DS) type in the db
+
+:xff is the x files factor (see RRD website for more info on this), range is acceptable between 0 and 1
+
+:rra is a array containing hashes with RRA types and corresponding values
+
+h2. Updating a RRD
+
+RRD.update(path,params)
+
+example usage:
+<pre>
+
+ RD.update('/test/path.rrd', ["123", "456", 1234])
+
+</pre>
+
+RRD.update('/test/path.rrd', ["123", "456a", 1234])
+
+first param is path to rrd db
+
+2nd param will return data string of 123:456:1234 (each value is sanitized, only numeric values accepted)
+
+to be passed as the data values to be passed to the db
+
+h2. Graphing a RRD
+
+example usage:
+<pre>
+
+ RRD.graph('/test/path.rrd','/test/path.png', {:ago => Time.now.to_i-(60*60*12),
+ :width => 500, :height => 200, :image_type => "PNG", :title => "Memory 12hr test",
+ :defs => [ {:key => "free", :type => "AVERAGE", :rpn => "AREA", :color => "C32227",
+ :title => "Free Memory" }, {:key => "used", :type => "AVERAGE", :rpn => "AREA", :color => "932D0C",
+ :title => "Used Memory" } ] , :base => 1024, :vlabel => "gb", :lowerlimit => 0})
+
+</pre>
+
+first param is path to rrd
+
+second param is path to store graphed image
+
+third is hash of params
+
+variables for DEF's are taken care of programatically
+_*Required params*_
+:ago is when to start from, a Time object ( Time.now )
+:width, :height
+:image_type
+:title
+    :defs => array of hashes
+        * [:defs][:key] => The DB data key
+        * [:defs][:type] => RRA Type
+        * [:defs][:rpn] => RPN Type
+        * [:defs][:color] => Hex Color: (accepts: 001122 but not #001122)
+        * [:defs][:title] => Title for this DEF
+_*Optional params*_
+:base
+:vlabel
+:lowerlimit
+:upperlimit

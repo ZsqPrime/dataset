@@ -1,0 +1,9 @@
+*** Emotiv Experimenter ***
+Hi Mike!
+
+Project Description:
+A C# library for interacting and running experiments with the Emotiv headset
+
+README:
+*** Emotiv Experimenter ***
+Hi Mike!

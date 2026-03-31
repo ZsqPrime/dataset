@@ -1,0 +1,8 @@
+Project Description:
+It's a trap!
+
+README:
+John Wang's Blog
+==================
+
+This is the Jekyll source for John Wang's blog.

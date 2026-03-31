@@ -1,0 +1,11 @@
+# Dungeonator
+
+See the [Dungeonator Wiki](https://github.com/Timberjaw/Dungeonator/wiki) for more information.
+
+Project Description:
+Dungeonator world generator for Bukkit
+
+README:
+# Dungeonator
+
+See the [Dungeonator Wiki](https://github.com/Timberjaw/Dungeonator/wiki) for more information.

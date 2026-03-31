@@ -1,0 +1,7 @@
+Project Description:
+projects from DanO's computational camera class, ITP - NYU - Spring 2012.
+
+README:
+##Computational Cameras
+>Dan O'Sullivan's class - ITP Spring 2012 - NYU
+____________________________

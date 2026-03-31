@@ -1,0 +1,4 @@
+Project Description:
+Pattern Recognition Lab 1
+
+README:

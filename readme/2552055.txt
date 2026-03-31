@@ -1,0 +1,5 @@
+Project Description:
+Mostly code based on examples from Mining the Social Web, but also other experiments
+
+README:
+This Readme file is just blank... not really.... and just for now... Wait for a proper readme file to read..

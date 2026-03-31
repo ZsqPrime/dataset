@@ -1,0 +1,13 @@
+Demos
+-----
+
+A demo for the library is avaible at [s4wny.github.com/2D-Canvas/demo.html](http://s4wny.github.com/2D-Canvas/demo.html)
+
+Project Description:
+A canvas game framework. //Dead project
+
+README:
+Demos
+-----
+
+A demo for the library is avaible at [s4wny.github.com/2D-Canvas/demo.html](http://s4wny.github.com/2D-Canvas/demo.html)

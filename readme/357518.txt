@@ -1,0 +1,12 @@
+
+See http://seebk.github.io/GIMP-Lensfun/ for detailed install 
+instructions and documentation.
+
+
+Project Description:
+GIMP plugin for correcting lens distortion using the lensfun library and database
+
+README:
+
+See http://seebk.github.io/GIMP-Lensfun/ for detailed install 
+instructions and documentation.

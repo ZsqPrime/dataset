@@ -1,0 +1,19 @@
+STHorizontalPicker
+==================
+
+Screenshot
+----------
+
+![STHorizontalPicker](https://github.com/stackthread/STHorizontalPicker/raw/master/screenshot.png "STHorizontalPicker")
+
+Project Description:
+An open source iOS value picker component optimized for use in UITableViewCells
+
+README:
+STHorizontalPicker
+==================
+
+Screenshot
+----------
+
+![STHorizontalPicker](https://github.com/stackthread/STHorizontalPicker/raw/master/screenshot.png "STHorizontalPicker")

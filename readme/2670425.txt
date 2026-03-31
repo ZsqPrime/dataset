@@ -1,0 +1,5 @@
+Project Description:
+A set of pages and functionality to handle user registration, login, logout, password reset profile value form etc..
+
+README:
+This is an application providing login, register and other related services.

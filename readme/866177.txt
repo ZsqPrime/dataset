@@ -1,0 +1,36 @@
+This is a version of the s3c2440camera linux driver that is being ported to the mini2440.
+
+It is not working. 
+It compiles! (i fixed all of the compile errors on the 3.1.x kernel).
+I think its some issue with the timing registers.
+it started working! yaay!
+
+and in the meantime, i got distracted with stuff like how to pay for food and stuff..
+
+so i'l get back to this later, when i have time to indulge my hobby.
+you can always help if you want.
+
+cto@workshopinda.com
+wingston.workshopindia.com
+www.workshopindia.com
+
+
+Project Description:
+A driver for the OV9560 camera module that was ported to the mini2440's 3.1 kernel BSP.
+
+README:
+This is a version of the s3c2440camera linux driver that is being ported to the mini2440.
+
+It is not working. 
+It compiles! (i fixed all of the compile errors on the 3.1.x kernel).
+I think its some issue with the timing registers.
+it started working! yaay!
+
+and in the meantime, i got distracted with stuff like how to pay for food and stuff..
+
+so i'l get back to this later, when i have time to indulge my hobby.
+you can always help if you want.
+
+cto@workshopinda.com
+wingston.workshopindia.com
+www.workshopindia.com

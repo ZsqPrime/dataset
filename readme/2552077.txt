@@ -1,0 +1,40 @@
+Project Description:
+
+
+README:
+Nathanaël Martel
+http://nat.fam-martel.eu
+
+*** Licence ***
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation version 3 of the License.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+ 
+*** Install ***
+
+git clone git://github.com/simplementNat/CheckUp.git
+
+cp config/databases.yml.sample config/databases.yml
+vi config/databases.yml
+
+cp config/app.yml.sample config/app.yml
+vi config/app.yml
+
+mkdir cache
+mkdir log
+./symfony project:permissions
+./symfony doctrine:build --all
+
+crontab -e
+
+Check the HTTP code every minutes 
+*       *       *       *       *       /path/symfony checkup --application="frontend" > /dev/null
+Check network info every hours
+12       *       *       *       *       /path/symfony checknetwork --application="frontend" > /dev/null
+Check content info every hours
+42       *       *       *       *       /path/symfony checkcontent --application="frontend" > /dev/null
+Remove log montly
+0       0       2       *       *       /path/symfony log:clear > /dev/null

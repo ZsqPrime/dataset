@@ -1,0 +1,19 @@
+Copyright (c) 2012 Taylor Raack <traack@raack.info>.
+
+This file is part of Valaclipse.
+
+Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.  This file is offered as-is, without any warranty.
+
+Valaclipse!
+
+Project Description:
+An Eclipse plugin which provides an environment for writing and building Vala programs
+
+README:
+Copyright (c) 2012 Taylor Raack <traack@raack.info>.
+
+This file is part of Valaclipse.
+
+Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved.  This file is offered as-is, without any warranty.
+
+Valaclipse!

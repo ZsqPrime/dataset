@@ -1,0 +1,8 @@
+EASY is an Evolutionary Algorithm System.
+
+
+Project Description:
+EASY is an Evolutionary Algorithm System
+
+README:
+EASY is an Evolutionary Algorithm System.

@@ -1,0 +1,4 @@
+Project Description:
+Dynamic load balancing for parallel vertex cover 
+
+README:

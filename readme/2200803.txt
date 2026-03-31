@@ -1,0 +1,48 @@
+Archive::Zip::Streaming::Write
+
+A module to support streaming output to a zip file (from some code data
+source), this is useful when outputting large zip files which are not
+intended to be written to the local disc. For more information, please
+see the POD documentation in the module itself.
+
+Archive::Zip::Streaming::Read
+
+A module to support streaming data from a zip file (to code). This
+can be useful when streaming zip data from an external source, eg.
+file uploads. For more information, please see the POD documentation
+in the module.
+
+
+BUILDING A TARBALL
+
+To make a tar of this module do:
+
+git archive --format tar -o Archive-Zip-Streaming-0.1.1.tar \
+  --prefix Archive-Zip-Streaming-0.1.1/ HEAD
+
+
+Project Description:
+Support for streaming out zip (including zip64) archives
+
+README:
+Archive::Zip::Streaming::Write
+
+A module to support streaming output to a zip file (from some code data
+source), this is useful when outputting large zip files which are not
+intended to be written to the local disc. For more information, please
+see the POD documentation in the module itself.
+
+Archive::Zip::Streaming::Read
+
+A module to support streaming data from a zip file (to code). This
+can be useful when streaming zip data from an external source, eg.
+file uploads. For more information, please see the POD documentation
+in the module.
+
+
+BUILDING A TARBALL
+
+To make a tar of this module do:
+
+git archive --format tar -o Archive-Zip-Streaming-0.1.1.tar \
+  --prefix Archive-Zip-Streaming-0.1.1/ HEAD

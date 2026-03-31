@@ -1,0 +1,6 @@
+
+
+Project Description:
+Allows for synced votes across multiple Servers, rewarding for voiting and punishing for not.
+
+README:

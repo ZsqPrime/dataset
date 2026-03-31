@@ -1,0 +1,4 @@
+Project Description:
+lglib's string part's C implementation
+
+README:

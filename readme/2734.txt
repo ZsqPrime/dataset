@@ -1,0 +1,6 @@
+Project Description:
+Work in progress 2d collision library for go.
+
+README:
+Work in progress 2d collision library for go.
+Based on go compiler version weekly.2011-12-22 11071.

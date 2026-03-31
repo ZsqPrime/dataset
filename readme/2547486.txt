@@ -1,0 +1,9 @@
+Project Description:
+Some niffty vim functions I use
+
+README:
+Vim-Functions
+
+=============
+
+Some niffty vim functions that I find handy

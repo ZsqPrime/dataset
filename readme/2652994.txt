@@ -1,0 +1,61 @@
+Project Description:
+Plugin for Respawning Ore for CraftBukkit
+
+README:
+Puplished under GNU General Public License
+
+
+
+For any damage that may arise from my plugin, I am not responsible.
+
+
+
+INSTALL:
+
+1. Put the Plugin into your Plugin Folder
+
+2. Start the Server
+
+3. Change the Config under Plugins/oreRespawn
+
+4. Restart your Server
+
+
+
+Permission nodes:
+
+- orerespawn [General command /ores]
+
+- orerespawn.maxdistance [/ores maxdistance <world> <ore> <number>]- Sets the Maxdistance
+
+- orerespawn.respawn [/ores spawnnow] - Respawns all Quied Ore
+
+- orerespawn.world [/ores world <wolrdname> <enable/disable>] - Sets the plugin for World en or disabled. After this Restart is needed.
+
+- orerespawn.log.show [/ores log show] - Shows the Ore Mined since last Log Clearing
+
+- orerespawn.log.clear [/ores log clear] - Clears the Ore log
+
+- orerespawn.region.list [/ores region list] - Lists all Regions
+
+- orerespawn.region.create [/ores region create <name>] - Creates new Region, needs Selection with WorldEdit
+
+- orerespawn.region.delete [/ores region delete <name>] - Deletes a Region
+
+
+
+Functions:
+
+- respawn ore in a Defined Range
+
+- blacklisting with SQLLite db
+
+- respawning delay in seconds
+
+- Slash Commands
+
+- Permission Support
+
+- per world and per ore config
+
+- region support (needs WorldEdit)

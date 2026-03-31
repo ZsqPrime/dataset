@@ -1,0 +1,5 @@
+Project Description:
+An encapsulated VM set-up hosting a Peekable server
+
+README:
+This is where magic happens.

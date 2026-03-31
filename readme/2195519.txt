@@ -1,0 +1,8 @@
+This project gathers all my experiments in creating utilities to write C++ code in a functional way
+
+
+Project Description:
+Utilities to use C++ 11 in a functional way
+
+README:
+This project gathers all my experiments in creating utilities to write C++ code in a functional way

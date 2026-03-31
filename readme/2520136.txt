@@ -1,0 +1,21 @@
+Project Description:
+Task scheduling and management for commercial cleaning. This was a prototype for a client that abandoned the project. If you're in the commercial property space and would like to pursue this codebase, let me know. I have 5+ years in the commercial cleanin
+
+README:
+For OS X dev:
+1.) Install testing suite if you'd like
+		> bundle install # this will install the test gems (RSpec)
+		> rails generate rspec:install
+	Install autotesting if you'd like:
+		> gem install autotest -v 4.4.6
+		> gem install autotest-rails-pure -v 4.1.2
+		> gem install autotest-fsevent -v 0.2.4 # (make sure dev tools/xcode is installed!)
+		> gem install autotest-growl -v 0.2.16
+	Create the autotest file:
+		> mate .autotest
+	and add the following to '.autotest' file:
+		> require 'autotest/growl'
+		> require 'autotest/fsevent'
+	Remove the spec folders:
+		> git rm -r spec/views
+2.)

@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Implementation of a montage creation algorithm based on the average grayscale value of pixels.

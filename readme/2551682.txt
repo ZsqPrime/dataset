@@ -1,0 +1,5 @@
+Project Description:
+Drupal module for viewing PDF on site without Flash
+
+README:
+Docviewer - display pdf on site

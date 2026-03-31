@@ -1,0 +1,5 @@
+Project Description:
+A library of miscellaneous scripts parsing various web services
+
+README:
+A bunch of python scripts I use to parse various informatio from web. Most of those are used in conky.

@@ -1,0 +1,139 @@
+For our new high performance distributed calculator, we have formulated the 
+following protocol:
+
+- Client → Server (handshake):
+    - “START_TRANSACTION [SECURED|SEPARATE|SCRAP]”
+      The client is asking the server to start a transaction, with one of 
+      the three modes:
+      - SECURED:
+        Encrypt any data on the server side
+      - SEPARATE:
+        Save this transaction’s details in a separate file
+      - SCRAP:
+        Scrap any info that have been saved during the transaction
+    - START_TRANSACTION and the desired mode are always one space separated
+    - An example: “START_TRANSACTION SCRAP”
+- Server → Client (handshake):
+    - “[SECURED|SEPARATE|SCRAP]”
+      The server sends back the mode that the client asked
+    - An example: “SEPARATE”
+- Client → Server (Operator and arguments):
+    Next the client sends to the server the operator that needs to be 
+    applied and the arguments.
+    The operator is one of: “[PLUS|MINUS|TIMES|DIVIDE]”
+    The arguments are always 2 positive numbers, between 0-65535 (including 
+    0 and 65535).
+    The operator and the numbers are each exactly one space separated
+    - An example: “PLUS 4325 983”
+- Server → Client (Operator and arguments):
+  The server makes the needed calculations, and returns an answer to the 
+  client.
+    - The answer is always prefixed by the string “RESULT”, with the 
+      actual result following
+    - The result is always a round number between 0-65535 (including), 
+      OR the string “ERROR” is the result couldn’t have been calculated 
+      (division by zero for example) or is bigger than 65535/smaller than 0
+    - The string RESULT and the actual result are always exactly one space 
+      separated
+- Client → Server (Teardown):
+    - The client sends the string “OK CLOSE” to the server
+- Server → Client (Teardown):
+    - The server sends the string “CLOSED” to the client and concludes the 
+      transaction.
+- Each and every request/response MUST have a suffix “ VON_NEUMANN” (note 
+  the space before the 'V')
+
+  
+Your job: 
+
+Write a verification plugin!
+============================
+
+Your plugin will have a lifecycle: INIT -> VERIFY -> CLOSE.
+The server will:
+1. Call an INIT function once, to create and initialize the plugin instance.
+2. Call a VERIFY function zero or more times, to process lines/packets of the
+   protocol detailed above.
+3. Finally, invoke a CLOSE function in order to clean up and shutdown the plugin
+   instance.
+
+Each stage in the lifecycle will be represented by a function, as detailed 
+below.
+
+1. init():
+  Your plugin will have an init() function that will be called by the server. 
+  The init() signature is:
+
+  /* 
+   * Prototype of the function that will initialize the private data before 
+   * starting the verification process
+   */
+  typedef void *(*verification_plugin_init_t)();
+
+  The init() function will be called once in order to create the calculator 
+  backend, and is expected to return a pointer 'priv_data', which will be 
+  returned on every call to the 'verify' and 'close' functions.
+
+2. verify_packet():
+  For the verification stage, the plugin will contain a function for verifying
+  a packet (as detailed above). The Server promises to call this function
+  with complete lines/packets. Of course, packets are all null-terminated 
+  strings. The packet data may NOT be changed by this function.
+  The function will return a value of the type 'verification_result_t'.
+
+  typedef enum {
+      /* Packet has been verified */
+      verification_result_ok = 0,
+
+      /* There’s a space issue somewhere */
+      verification_result_space = 1,
+
+      /* A number is smaller than 0 or bigger than 65535 */
+      verification_result_overflow = 2,
+
+      /* A packet’s suffix missing or corrupted */
+      verification_result_bad_suffix = 3,
+		
+      /* ... Any more ? ... */
+		
+      verification_result_max
+		
+  } verification_result_t;
+
+  typedef verification_result_t (*verification_plugin_verify_packet_t)(char *packet, void *priv_data);
+
+Upon faulty packet, the entire flow is terminated and the next packet arriving
+to the verification plugin would be of a new flow.
+
+3. close():
+
+  For the shutdown stage, a function with the following signature will be 
+  declared:
+
+  typedef void (*verification_plugin_close_t)(void *priv_data);
+
+  This function must perform all cleanup operations.
+
+plugin module:
+==============
+
+The module may only export a single global variable - 'my_plugin' - 
+referencing the plugin structure, of the type:
+
+  typedef struct verification_plugin_t {
+      char                                *plugin_name;
+      verification_plugin_init_t          init;
+      verification_plugin_verify_packet_t verify;
+      verification_plugin_close_t         close;
+  } verification_plugin_t;
+
+
+----------------------------
+
+You goals:
+- 100% accuracy. The test run will terminate if the verification process 
+  return an incorrect result (i.e. false positive/negative).
+- The code must run under 1 second on the designated input, on the test machine.
+- The verification process MUST NOT change the content of any non-private input
+- Clean code will make the interviewer very happy.
+

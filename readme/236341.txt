@@ -1,0 +1,6 @@
+
+
+Project Description:
+Resources for the 'Surviving CS at Purdue' Talk
+
+README:

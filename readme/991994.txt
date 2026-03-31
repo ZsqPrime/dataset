@@ -1,0 +1,6 @@
+
+
+Project Description:
+A dependency loader built on top of $.Deferred() backbone. An alternative take on RequireJS.
+
+README:

@@ -1,0 +1,5 @@
+
+Tui - SHA1SUM database
+======================
+
+Author: Mark Fiers <mark.fiers.42@gmail.com>

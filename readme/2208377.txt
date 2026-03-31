@@ -1,0 +1,8 @@
+github centralization for vim
+
+
+Project Description:
+Github centralization and autosync for vim configs
+
+README:
+github centralization for vim

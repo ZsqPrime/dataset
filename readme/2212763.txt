@@ -1,0 +1,72 @@
+** jsnSock **
+
+jsnSock is a high-level TCP network sockets library done in c++11 syntax.
+As the C++11 standard is relatively new, an up-to-date compiler package
+is necessary to build this project.  An up-to-date list of C++11 capable
+compiler packages can be found at the following url:
+
+http://wiki.apache.org/stdcxx/C%2B%2B0xCompilerSupport
+
+The Makefiles expect g++ (>=4.7) to exist, but if clang++ is preferred, it is
+supported:  (http://clang.llvm.org/get_started.html)
+
+# pushd path/to/jsnSock
+
+# export CLANG_PATH=/path/to/clang++
+# make
+# sudo make install
+
+# pushd examples
+# make
+
+
+Backstory:
+
+This project is a teaching tool in-the-making.
+C++11 syntax is signficantly different to that of C++03 -- enough
+to merit a "from scratch" approach to teaching as opposed to a
+"here are the differences" approach: http://http://en.wikipedia.org/wiki/C%2B%2B11
+
+This source also serves as an introduction to basic TCP sockets on UNIX platforms.
+Updates to this project will come in the form of project 'forks' so as to preserve
+the learning path.  The next update will add UDP support and address issues where
+the kernel "decides" to not completely send a data stream (resulting in packet fragmentation).
+
+
+Project Description:
+High-Level Network Sockets Library in c++11 syntax
+
+README:
+** jsnSock **
+
+jsnSock is a high-level TCP network sockets library done in c++11 syntax.
+As the C++11 standard is relatively new, an up-to-date compiler package
+is necessary to build this project.  An up-to-date list of C++11 capable
+compiler packages can be found at the following url:
+
+http://wiki.apache.org/stdcxx/C%2B%2B0xCompilerSupport
+
+The Makefiles expect g++ (>=4.7) to exist, but if clang++ is preferred, it is
+supported:  (http://clang.llvm.org/get_started.html)
+
+# pushd path/to/jsnSock
+
+# export CLANG_PATH=/path/to/clang++
+# make
+# sudo make install
+
+# pushd examples
+# make
+
+
+Backstory:
+
+This project is a teaching tool in-the-making.
+C++11 syntax is signficantly different to that of C++03 -- enough
+to merit a "from scratch" approach to teaching as opposed to a
+"here are the differences" approach: http://http://en.wikipedia.org/wiki/C%2B%2B11
+
+This source also serves as an introduction to basic TCP sockets on UNIX platforms.
+Updates to this project will come in the form of project 'forks' so as to preserve
+the learning path.  The next update will add UDP support and address issues where
+the kernel "decides" to not completely send a data stream (resulting in packet fragmentation).

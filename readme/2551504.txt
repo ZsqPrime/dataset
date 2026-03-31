@@ -1,0 +1,5 @@
+Project Description:
+Um simples manipulador de legendas srt para linha de comando
+
+README:
+# srtool.github.io

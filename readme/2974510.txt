@@ -1,0 +1,27 @@
+Project Description:
+Implementation of Termination Analyser from ESOP 2007 (Ranking Abstractions)
+
+README:
+ESOP 08 Termination Analysis Tool
+--------------------------------------------
+
+Source of the tool is in termination-tool: the tool uses CIL.
+
+The tool requires Rankfinder and Simplify and Z3:
+
+Rankfinder: http://www7.in.tum.de/~rybal/rankfinder/
+
+Simplify: http://www.kindsoftware.com/products/opensource/Simplify/
+
+Z3: http://research.microsoft.com/projects/z3
+
+
+Install Cil via Opam - opam install cil
+
+Steps to run the analyser:
+
+1. First change the location of rankfinder and Simplify binaries in termination-tool/config.ml
+
+2. Run make - this should build analyser.native
+
+3. Run the tool via analyser.native <C files to analyse>

@@ -1,0 +1,9 @@
+Code for my presentation at Greece Javascript Meetup Jan 2012.
+http://greecejs.org/greecejs-meetup-11-2012
+
+Project Description:
+Examples for processingjs presentation
+
+README:
+Code for my presentation at Greece Javascript Meetup Jan 2012.
+http://greecejs.org/greecejs-meetup-11-2012

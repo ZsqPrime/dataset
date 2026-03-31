@@ -1,0 +1,84 @@
+today's 2012.2.16
+we have version0.2~
+all new design~new architecture~~
+in this version, more snakes are enabled 
+in next version, we will separate AI strategy
+good good study day day up~~
+
+today's 2012.2.16 night
+fix many bugs...
+seems run well...
+maybe we need a net version,people can play vs others 
+
+today's 2012.2.17 night
+scorer's done~ 
+considering it is too miscellaneously to buy a server to run nodejs...
+so,we can't play with other people online
+but~we can controll one snake vs many AIs
+
+this is the 0.3 version ~
+next version 0.4 is on the way
+
+today's 2012.2.25
+we start 0.4 version~
+in this version, we will focus on animation&frame controll,maybe some of spirit
+
+today's 2012.3.10
+It's long time I haven't wrote readme
+but I have never stoped
+in these days,I wrote version 0.4,and it works well
+my framework turns into RPG & ACTION framework
+many thing has done,such as
+world,sprite,attack effect,framecontroll(ticker),eventManager,imageLoader
+wow,so many~
+version 0.4 is a big version,this version number will last much longer...
+
+today's 2012.3.16
+These days I have many new ideas, and this version already has a big change,so I decided to end this version, and start v0.5
+In version 0.5,there's new designed frame frequency independency ticker and import phisical model to simulate the real world, more about collide detection, I want a accurate and effcient collide detection algorithm
+In version 0.4 I found whether I use clip function or not,the canvas render efficiency doesn't change much, so I will don't care so much on region render.maybe oneday canvas can use opengl to render 2d.
+
+
+Project Description:
+None
+
+README:
+today's 2012.2.16
+we have version0.2~
+all new design~new architecture~~
+in this version, more snakes are enabled 
+in next version, we will separate AI strategy
+good good study day day up~~
+
+today's 2012.2.16 night
+fix many bugs...
+seems run well...
+maybe we need a net version,people can play vs others 
+
+today's 2012.2.17 night
+scorer's done~ 
+considering it is too miscellaneously to buy a server to run nodejs...
+so,we can't play with other people online
+but~we can controll one snake vs many AIs
+
+this is the 0.3 version ~
+next version 0.4 is on the way
+
+today's 2012.2.25
+we start 0.4 version~
+in this version, we will focus on animation&frame controll,maybe some of spirit
+
+today's 2012.3.10
+It's long time I haven't wrote readme
+but I have never stoped
+in these days,I wrote version 0.4,and it works well
+my framework turns into RPG & ACTION framework
+many thing has done,such as
+world,sprite,attack effect,framecontroll(ticker),eventManager,imageLoader
+wow,so many~
+version 0.4 is a big version,this version number will last much longer...
+
+today's 2012.3.16
+These days I have many new ideas, and this version already has a big change,so I decided to end this version, and start v0.5
+In version 0.5,there's new designed frame frequency independency ticker and import phisical model to simulate the real world, more about collide detection, I want a accurate and effcient collide detection algorithm
+In version 0.4 I found whether I use clip function or not,the canvas render efficiency doesn't change much, so I will don't care so much on region render.maybe oneday canvas can use opengl to render 2d.

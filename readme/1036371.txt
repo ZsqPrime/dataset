@@ -1,0 +1,14 @@
+# Websocket clients for MtGox
+
+This repository contains websocket clients in various languages for MtGox.
+
+
+
+
+Project Description:
+Websocket client software for socket.io
+
+README:
+# Websocket clients for MtGox
+
+This repository contains websocket clients in various languages for MtGox.

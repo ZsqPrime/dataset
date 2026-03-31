@@ -1,0 +1,16 @@
+Abelhas 1.0 - Particle Swarm Optimization in Lua
+
+    See doc/index.html for the documentation.
+
+
+
+
+
+
+Project Description:
+A particle swarm optimization library for Lua
+
+README:
+Abelhas 1.0 - Particle Swarm Optimization in Lua
+
+    See doc/index.html for the documentation.

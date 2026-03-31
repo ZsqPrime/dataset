@@ -1,0 +1,5 @@
+Description:
+This is a language detection library implemented in plain Java. (aliases: language identification, language guessing)
+
+README:
+README not available

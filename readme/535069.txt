@@ -1,0 +1,7 @@
+basic model and template for implementing Omniture in a Django project
+
+Project Description:
+Implementation of Omniture for Django
+
+README:
+basic model and template for implementing Omniture in a Django project

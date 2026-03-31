@@ -1,0 +1,8 @@
+Please remember to comment EVERY commit. More information will be added to this file, as needed.
+
+
+Project Description:
+Samsung Epic 4G Device Specific Files
+
+README:
+Please remember to comment EVERY commit. More information will be added to this file, as needed.

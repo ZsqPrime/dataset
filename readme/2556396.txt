@@ -1,0 +1,11 @@
+Project Description:
+
+
+README:
+My PhD thesis project: for data collection
+
+Hosted on Amazon Web Service
+
+Modified from local 
+
+Modified from AWS

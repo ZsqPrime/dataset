@@ -1,0 +1,5 @@
+unite.vim に boost-library を出力してオンラインドキュメントを開く unite-source です。
+
+下記のプラグインが必要です。
+https://github.com/Shougo/unite.vim
+

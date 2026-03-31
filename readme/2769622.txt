@@ -1,0 +1,8 @@
+Project Description:
+The files for toscawidgets.org
+
+README:
+tw2-htdocs
+==========
+
+This is the source for http://toscawidgets.org.

@@ -1,0 +1,9 @@
+Authentication:
+manages users and sessions
+
+Project Description:
+Authentication Module for Phoenix Engine
+
+README:
+Authentication:
+manages users and sessions

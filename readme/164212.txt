@@ -1,0 +1,6 @@
+
+
+Project Description:
+PHP based local webpage to swiftly retrieve information concerning the (currently slackware) system
+
+README:

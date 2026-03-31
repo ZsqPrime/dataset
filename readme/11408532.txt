@@ -1,0 +1,8 @@
+Project Description:
+jQuery Gift Aid Calculator
+
+README:
+jQuery UK Gift Aid Calculator
+
+1. Load the plugin.
+2. Call it on a <div>.

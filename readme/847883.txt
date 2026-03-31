@@ -1,0 +1,224 @@
+h1. rah_replace
+
+"Download":https://github.com/gocom/rah_replace/releases | "Packagist":https://packagist.org/packages/rah/rah_replace | "Issues":https://github.com/gocom/rah_replace/issues
+
+"Textpattern CMS":https://textpattern.com template tag that returns contained content with all searched occurrences replaced with given replacements, in the same manner as PHP's "str_replace":https://secure.php.net/manual/en/function.str-replace.php function.
+
+h2. Install
+
+Using "Composer":https://getcomposer.org:
+
+bc. $ composer require rah/rah_replace
+
+Or "download":https://github.com/gocom/rah_replace/releases an installer package.
+
+h2. Basics
+
+The plugin, rah_replace, introduces a new container tag to Textpattern's arsenal. The tag returns wrapped content with all found occurrences replaced with given replacements. A tag supports multiple searched occurrences and replacements.
+
+bc. <rah::replace from="value1, value2, ..." to="value1, value2, ...">
+    Searched content
+</rah::replace>
+
+h2. Attributes
+
+bc. <rah::replace>
+    ...contained statement...
+</rah::replace>
+
+The tag is a container and attributes for it follow.
+
+*from*
+Strings that will be searched and replaced with @to@ attribute's values. Separate multiple values with a comma (or @delimiter@ if changed).
+Default: @from=""@ Example: @"dog,cat,house"@
+
+*to*
+Replacements that will be used to replace @from@ attribute's values. Comma (or @delimiter@) separated if multiple.
+Default: @to=""@ Example: @"ship,home,hat"@
+
+*delimiter*
+Sets the delimiter used in @from@ and @to@ to separate multiple values. Default is a comma.
+Default: @delimiter=","@ Example: @"|"@
+
+h2. Examples
+
+h3. Replaces a _dog_ with a _cat_
+
+bc. <rah::replace from="dog" to="cat">
+    My favorite animal is a dog.
+</rah::replace>
+
+Returns: @My favorite animal is a cat.@
+
+h3. Replace multiple needles with different replacements
+
+bc. <rah::replace from="house,dog,Mike" to="boat,friend,wife">
+    I live in a house with my dog and Mike.
+</rah::replace>
+
+Returns: @I live in a boat with my friend and wife.@
+
+h3. Replace multiple needles with a one replacement
+
+bc. <rah::replace from="Mike,dad" to="I">
+    I remember when dad and Mike did go to fishing.
+</rah::replace>
+
+Returns: @I remember when I and I did go to fishing.@
+
+h3. Using a different delimiter
+
+p. By default any comma is treated as a delimiter and can not be used as actual value. To use a comma (@,@) as a needle or a replacement, you would have to change the delimiter to something else. Like for instance to a vertical bar:
+
+bc. <rah::replace from=".|," to="!" delimiter="|">
+    A, B, C.
+</rah::replace>
+
+Returns: @A! B! C!@
+
+h2. Changelog
+
+h3. Version 0.5.0 - 2019/04/06
+
+* Register the tag for Textpattern >= 4.7.0 compatibility.
+* Now requires Textpattern >= 4.7.0.
+
+h3. Version 0.4.2 - 2013/05/07
+
+* The Composer package uses "textpattern/installer":https://packagist.org/packages/textpattern/installer and "textpattern/lock":https://packagist.org/packages/textpattern/installer.
+
+h3. Version 0.4.1 - 2013/04/25
+
+* Minor clean up.
+* Released as a "Composer package":https://packagist.org/packages/rah/rah_replace.
+
+h3. Version 0.4 - 2012/07/12
+
+* Performance optimization.
+
+h3. Version 0.3 - 2011/04/22
+
+* Performance optimization.
+
+h3. Version 0.2 - 2009/04/16
+
+* Added a new attribute: @delimiter@.
+
+h3. Version 0.1 - 2009/04/16
+
+* Initial release.
+
+
+Project Description:
+Brings search and replace functionality to Textpattern
+
+README:
+h1. rah_replace
+
+"Download":https://github.com/gocom/rah_replace/releases | "Packagist":https://packagist.org/packages/rah/rah_replace | "Issues":https://github.com/gocom/rah_replace/issues
+
+"Textpattern CMS":https://textpattern.com template tag that returns contained content with all searched occurrences replaced with given replacements, in the same manner as PHP's "str_replace":https://secure.php.net/manual/en/function.str-replace.php function.
+
+h2. Install
+
+Using "Composer":https://getcomposer.org:
+
+bc. $ composer require rah/rah_replace
+
+Or "download":https://github.com/gocom/rah_replace/releases an installer package.
+
+h2. Basics
+
+The plugin, rah_replace, introduces a new container tag to Textpattern's arsenal. The tag returns wrapped content with all found occurrences replaced with given replacements. A tag supports multiple searched occurrences and replacements.
+
+bc. <rah::replace from="value1, value2, ..." to="value1, value2, ...">
+    Searched content
+</rah::replace>
+
+h2. Attributes
+
+bc. <rah::replace>
+    ...contained statement...
+</rah::replace>
+
+The tag is a container and attributes for it follow.
+
+*from*
+Strings that will be searched and replaced with @to@ attribute's values. Separate multiple values with a comma (or @delimiter@ if changed).
+Default: @from=""@ Example: @"dog,cat,house"@
+
+*to*
+Replacements that will be used to replace @from@ attribute's values. Comma (or @delimiter@) separated if multiple.
+Default: @to=""@ Example: @"ship,home,hat"@
+
+*delimiter*
+Sets the delimiter used in @from@ and @to@ to separate multiple values. Default is a comma.
+Default: @delimiter=","@ Example: @"|"@
+
+h2. Examples
+
+h3. Replaces a _dog_ with a _cat_
+
+bc. <rah::replace from="dog" to="cat">
+    My favorite animal is a dog.
+</rah::replace>
+
+Returns: @My favorite animal is a cat.@
+
+h3. Replace multiple needles with different replacements
+
+bc. <rah::replace from="house,dog,Mike" to="boat,friend,wife">
+    I live in a house with my dog and Mike.
+</rah::replace>
+
+Returns: @I live in a boat with my friend and wife.@
+
+h3. Replace multiple needles with a one replacement
+
+bc. <rah::replace from="Mike,dad" to="I">
+    I remember when dad and Mike did go to fishing.
+</rah::replace>
+
+Returns: @I remember when I and I did go to fishing.@
+
+h3. Using a different delimiter
+
+p. By default any comma is treated as a delimiter and can not be used as actual value. To use a comma (@,@) as a needle or a replacement, you would have to change the delimiter to something else. Like for instance to a vertical bar:
+
+bc. <rah::replace from=".|," to="!" delimiter="|">
+    A, B, C.
+</rah::replace>
+
+Returns: @A! B! C!@
+
+h2. Changelog
+
+h3. Version 0.5.0 - 2019/04/06
+
+* Register the tag for Textpattern >= 4.7.0 compatibility.
+* Now requires Textpattern >= 4.7.0.
+
+h3. Version 0.4.2 - 2013/05/07
+
+* The Composer package uses "textpattern/installer":https://packagist.org/packages/textpattern/installer and "textpattern/lock":https://packagist.org/packages/textpattern/installer.
+
+h3. Version 0.4.1 - 2013/04/25
+
+* Minor clean up.
+* Released as a "Composer package":https://packagist.org/packages/rah/rah_replace.
+
+h3. Version 0.4 - 2012/07/12
+
+* Performance optimization.
+
+h3. Version 0.3 - 2011/04/22
+
+* Performance optimization.
+
+h3. Version 0.2 - 2009/04/16
+
+* Added a new attribute: @delimiter@.
+
+h3. Version 0.1 - 2009/04/16
+
+* Initial release.

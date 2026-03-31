@@ -1,0 +1,4 @@
+Project Description:
+Android app that detects in which screen configuration bucket the current device falls (e.g. normal / mdpi)
+
+README:

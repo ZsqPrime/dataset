@@ -1,0 +1,13 @@
+Project Description:
+Project Euler problembs and solutions
+
+README:
+Yuri Arapov <yuridichesky@gmail.com>
+
+Project Euler problems and solutions
+
+http://projecteuler.net/
+
+login: yuridichesky
+
+Languages: Python, Scheme, Common Lisp

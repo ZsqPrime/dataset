@@ -1,0 +1,7 @@
+# [![Build Status](https://secure.travis-ci.org/nergal/kohana-libs.png)](https://secure.travis-ci.org/nergal/kohana-libs/) Библиотеки и части других фреймворков
+
+Project Description:
+Некоторые библиотеки и куски фреймворков, адаптированные для Kohana 3.2
+
+README:
+# [![Build Status](https://secure.travis-ci.org/nergal/kohana-libs.png)](https://secure.travis-ci.org/nergal/kohana-libs/) Библиотеки и части других фреймворков

@@ -1,0 +1,4 @@
+Project Description:
+This PHP app tests AppFog's deployed add-ons. The app show examples on how to use add-ons.
+
+README:

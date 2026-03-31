@@ -1,0 +1,5 @@
+Project Description:
+Adds the ability to pick group members to the standard Elgg userpicker
+
+README:
+First version for review.

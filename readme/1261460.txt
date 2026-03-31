@@ -1,0 +1,87 @@
+# VMware has ended active development of this project, this repository will no longer be updated.
+
+
+= Spring Roo Wrapping
+Spring Roo OSGi-compliant bundles development
+:page-layout: base
+:toc-placement: manual
+:Author:    DISID Corporation S.L.
+:Email:     <springroo@disid.com>
+
+== Spring Roo wrapping repository
+
+This Git repository contains various script files that enable easy
+production of OSGi-compliant bundles using a technique known as
+"wrapping". These are generally used by Spring Roo and its add-ons.
+
+The goals of the JAR wrappers are:
+
+* Turn a non-OSGi JAR into an OSGi-enabled JAR.
+* Patch libraries by replacing or adding artifacts inside the JAR.
+
+The output JAR is then usable in Roo or other OSGi containers
+
+== Prerequisites
+
+In order to complete these instructions, you must have rights to
+deploy files to http://repo.spring.io/spring-roo/.
+
+All wrapped JARs are deployed under the following directory:
+
+   /org/springframework/roo/wrapping
+
+To perform wrapping you need:
+
+* A proper installation of Java 6 or above
+* Maven 3.0.1+ properly installed and working with your Java 5+
+* Internet access so that Maven can download required dependencies
+* Upload privileges to the above location
+* GPG setup (see main Spring Roo readme.txt for instructions)
+ 
+If you want to host an OSGi-compliant JAR that
+does not need wrapping at http://repo.spring.io/spring-roo/,
+be sure to create an .ASC file of the JAR and _pom.xml_ using 
+`gpg --ab <filename>` and upload the ASC files as well.
+
+== GIT Policies
+
+The same Git policies apply to this repository as the normal Roo
+repository.
+
+== Naming conventions
+
+By being `pkgArtifactId` and `pkgVersion` the `artifactId` and the `version` of
+the "input" non-OSGi JAR, the wrappings must follow the naming conventions
+below:
+
+* The `groupId` must be _org.springframework.roo.wrapping_
+* The `artifactId` must be `groupId`.`pkgArtifactId`
+* The `version` must be `pkgVersion`.`wrapper.version`
+
+NOTE: `wrapper.version` is a three-digit string that identifies the version of
+each wrapper in order to know the latest release of that wrapper.
+
+== Releasing
+
+The wrapping repository is separated from the normal Roo repository at
+Maven Central so that each project in the wrapping repository can be released 
+as part of its own release cycle. The wrapping projects are NOT released
+during the normal Roo release cycle and the Roo CI server does NOT
+perform any wrapping module releases.
+
+As such, it is expected that developers wishing to make wrapped JAR
+available will manually produce/edit the relevant subdirectory of the
+wrapping JAR and then connect to https://repo.spring.io/ to deploy the JAR
+manually.
+
+IMPORTANT: Before releasing, ensure you increment the final three-digit 
+suffix for the version number displayed in the _pom.xml_. This ensures 
+everyone is on the latest release you have made.
+
+== Help
+
+If you have general questions on Roo's wrapping approach, please use
+the Stackoverflow. You can access it at
+http://stackoverflow.com/questions/tagged/spring-roo. Thanks for your
+interest in Spring Roo!
+

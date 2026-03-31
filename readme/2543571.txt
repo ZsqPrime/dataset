@@ -1,0 +1,5 @@
+Project Description:
+Lock free hash structure for golang
+
+README:
+golfhash is a lock free hash structure for golang.

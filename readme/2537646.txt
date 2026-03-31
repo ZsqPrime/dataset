@@ -1,0 +1,5 @@
+Project Description:
+Web portal for RiverSala futsal team. ASP.Net MVC 3, SQL Server 2008, jQuery, ajax, C#
+
+README:
+Proyecto RiverSala.

@@ -1,0 +1,137 @@
+------------------------------------------------------------------------------
+fx2lafw
+------------------------------------------------------------------------------
+
+fx2lafw is a free/libre/open-source firmware for logic analyzers based on
+the Cypress EZ-USB FX2(LP) chip.
+
+It is licensed under the terms of the GNU GPL (version 2 or later), and uses
+additional helper code (fx2lib), licensed under the GNU LGPL (version 2.1
+or later).
+
+
+Requirements
+------------
+
+ - In order to build fx2lafw you need the 'sdcc' compiler.
+   On Debian you can install it via:
+
+     $ apt-get install sdcc
+
+ - You need libsigrok >= 0.1.1 in order to make use of fx2lafw. Earlier
+   versions didn't have support for FX2 devices using this firmware.
+
+
+Building
+--------
+
+  $ git clone git://sigrok.git.sourceforge.net/gitroot/sigrok/fx2lafw
+  $ cd fx2lafw
+  $ make
+
+
+Installation
+------------
+
+  $ sudo make install
+
+The generated *.fw files are installed into /usr/local/share/sigrok-firmware.
+
+You can override the install location like this:
+
+  $ sudo make install DESTDIR=/usr/share/sigrok-firmware
+
+
+fx2lib
+------
+
+The fx2lafw code uses a (slightly modified) "fx2lib" helper library.
+
+It was imported into fx2lafw from
+
+  git://github.com/ubixum/fx2lib.git
+
+as of Feb 12, 2012 (git hash "416c104cbd").
+
+The following files/directories were removed, as they're not needed
+for our purposes: CHANGELOG, COPYING*, docs/, examples/, fw/, and utils/.
+
+
+Website
+-------
+
+See the fx2lafw website for further information:
+
+  http://sigrok.org/wiki/Fx2lafw
+
+
+
+Project Description:
+fx2lafw is a free/libre/open-source firmware for logic analyzers based on the Cypress EZ-USB FX2(LP) chip.
+
+README:
+------------------------------------------------------------------------------
+fx2lafw
+------------------------------------------------------------------------------
+
+fx2lafw is a free/libre/open-source firmware for logic analyzers based on
+the Cypress EZ-USB FX2(LP) chip.
+
+It is licensed under the terms of the GNU GPL (version 2 or later), and uses
+additional helper code (fx2lib), licensed under the GNU LGPL (version 2.1
+or later).
+
+
+Requirements
+------------
+
+ - In order to build fx2lafw you need the 'sdcc' compiler.
+   On Debian you can install it via:
+
+     $ apt-get install sdcc
+
+ - You need libsigrok >= 0.1.1 in order to make use of fx2lafw. Earlier
+   versions didn't have support for FX2 devices using this firmware.
+
+
+Building
+--------
+
+  $ git clone git://sigrok.git.sourceforge.net/gitroot/sigrok/fx2lafw
+  $ cd fx2lafw
+  $ make
+
+
+Installation
+------------
+
+  $ sudo make install
+
+The generated *.fw files are installed into /usr/local/share/sigrok-firmware.
+
+You can override the install location like this:
+
+  $ sudo make install DESTDIR=/usr/share/sigrok-firmware
+
+
+fx2lib
+------
+
+The fx2lafw code uses a (slightly modified) "fx2lib" helper library.
+
+It was imported into fx2lafw from
+
+  git://github.com/ubixum/fx2lib.git
+
+as of Feb 12, 2012 (git hash "416c104cbd").
+
+The following files/directories were removed, as they're not needed
+for our purposes: CHANGELOG, COPYING*, docs/, examples/, fw/, and utils/.
+
+
+Website
+-------
+
+See the fx2lafw website for further information:
+
+  http://sigrok.org/wiki/Fx2lafw

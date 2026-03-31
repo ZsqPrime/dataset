@@ -1,0 +1,5 @@
+Project Description:
+Web interface for document OCR
+
+README:
+Web interface for OCR

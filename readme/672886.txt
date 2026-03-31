@@ -1,0 +1,39 @@
+Pelita appengine viewer
+=======================
+
+You can see it in action on: http://pelitaapp.appspot.com
+
+Read on in my blog: ...
+
+Install
+-------
+
+1. Install Google App Engine SDK.
+2. Create PiCloud account.
+3. Create picloud_conf.py file (you can see an example in
+picloud_conf_example.py)
+4. Deploy using SDK (on linux: python appcfg.py update
+/path/to/this/directory)
+
+
+
+Project Description:
+HTML5/HTML viewer for AI game peilta
+
+README:
+Pelita appengine viewer
+=======================
+
+You can see it in action on: http://pelitaapp.appspot.com
+
+Read on in my blog: ...
+
+Install
+-------
+
+1. Install Google App Engine SDK.
+2. Create PiCloud account.
+3. Create picloud_conf.py file (you can see an example in
+picloud_conf_example.py)
+4. Deploy using SDK (on linux: python appcfg.py update
+/path/to/this/directory)

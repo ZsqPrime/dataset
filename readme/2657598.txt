@@ -1,0 +1,4 @@
+Project Description:
+Arduino controlled LCD display via python
+
+README:

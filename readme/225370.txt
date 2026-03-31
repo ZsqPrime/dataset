@@ -1,0 +1,190 @@
+h1. rah_backup
+
+"Packagist":https://packagist.org/packages/rah/rah_backup | "Twitter":http://twitter.com/gocom | "Donate":http://rahforum.biz/donate/rah_backup
+
+Rah_backup keeps your important site safe from disastrous events. Rah_backup is an admin-side backup utility plugin for "Textpattern CMS":http://www.textpattern.com. Backs up both your files and databases with single click of button, and restores as easily. To support its features the plugin packs a clean, user-friendly interface that feels like it was part of Textpattern itself.
+
+h2. Install
+
+Using "Composer":http://getcomposer.org:
+
+bc. $ composer require rah/rah_backup:*
+
+h2. Requirements
+
+Rah_backups' minimum requirements:
+
+* Textpattern 4.5.0 or newer.
+* PHP 5.3.6 or newer.
+
+h2. Modules
+
+Rah_backup has set of modules that extend the plugin's functionality:
+
+* "rah_backup_clearlogs":https://github.com/gocom/rah_backup_clearlogs
+* "rah_backup_optimize":https://github.com/gocom/rah_backup_optimize
+* "rah_backup_sftp":https://github.com/gocom/rah_backup_sftp
+
+h2. Preferences
+
+Rah_backup offers number of preferences that can be used to configure the plugin. All settings can be found from "Advanced Preferences":http://textpattern.net/wiki/index.php?title=Advanced_Preferences, organized under *Backups* section. Preferences allow defining paths to used command line application and set up backed up directories among other things. Following settings will be present.
+
+h3. Path to a directory used to store backups
+
+The path should point to an existing, empty directory that is both readable and writeable by PHP. The path will be relative to Textpattern's installation directory (e.g. @./textpattern@). A backup directory path might look something like this:
+
+bc. ../../backups
+
+h3. Directories to backup (comma-separated)
+
+Sets which directories are backed up and included in created TAR archives. Separate multiple paths with commas (@,@). As with backup directory, all paths are relative to the Textpattern installation directory. On a single site setup, following would back up the directory containing Textpattern (i.e. @textpattern@ directory and @index.php@ file):
+
+bc. ../
+
+h3. Files excluded from backups (comma-separated)
+
+Sets files that are excluded from the filesystem backup. This setting can be useful for keeping sensitive files secure incase a backup is lost or leaks due to compromised backup server or a cloud file hosting account. Values used in the setting are searched from backed up files' paths. Any file that path contains any of the values, will be excluded from the backup. Multiple files can be separated with a comma (@,@).
+
+On a single site installation the following rule would exclude Textpattern's @config.php@ from the backup:
+
+bc. config.php
+
+h3. Ignore database tables (comma-separated)
+
+Sets database tables that will not be included in database backups. Separate multiple tables with commas (@,@). Note that since the tables are not included in backups, they won't be restored, created or populated either with the backup when restoring. Ignored tables need to be managed otherwise, and re-created manually.
+
+This setting can be used to exclude sensitive information or temporary data from a frequently taken backups. Following would exclude Textpattern's user accounts table containing email address and password hashes and visitor logs from backups:
+
+bc. txp_users, txp_log
+
+h3. Number of backup files to keep
+
+Sets the number of backup files to keep, accepting an integer equal or greater than @1@. Files that go over limit are removed each a new set of backups is created. Set zero @0@ for unlimited.
+
+h2. Restoring
+
+The backups can be restored with any old archive utility and database import tool, either via some GUI utility or command line. The plugin itself doesn't offer restoring trough it admin-side panel for security reasons. On a normal, well-setup server you shouldn't be able to restore your site through public-facing HTTP process due to permissions, and even if you could, would you really want to protect that action with just your Textpattern login. Now, if you can wipe your files through HTTP initiated PHP, you should look into your filesystem permissions as there might be a misconfiguration.
+
+The other issue is that the one writing would be the same one that is getting restored. If that restoring process fails, it's over. The restoration should be done as a smart offsite migration where the backup is deployed, tested and brought back online.
+
+h3. Importing databases
+
+The database dumps are like any other SQL dump and can be restored with any database import tool, including phpMyAdmin or the MySQL CLI:
+
+bc. $ cd /path/to/backups/directory
+$ gzip -d database.sql.gz > database.sql
+$ mysql -u username -p database < database.sql
+
+The first line changes current working directory, the following uncompresses the gzipped file and last imports the uncompressed SQL file to the specified database using the specified MySQL user.
+
+h3. Restoring filesystem TAR tapes
+
+The site's files are backed up to a gzipped TAR archives. These archives can be extracted with any decent archive utility or from command line:
+
+bc. $ cd /path/to/backups/directory
+$ tar -xzvf filestem.tar.gz
+
+h2. Changelog
+
+h3. Version 0.1.0 - 2014/04/01
+
+* Initial release.
+* French translation by "Patrick Lefevre":https://twitter.com/lowel.
+
+
+Project Description:
+Takes backups from Textpattern CMS installations
+
+README:
+h1. rah_backup
+
+"Packagist":https://packagist.org/packages/rah/rah_backup | "Twitter":http://twitter.com/gocom | "Donate":http://rahforum.biz/donate/rah_backup
+
+Rah_backup keeps your important site safe from disastrous events. Rah_backup is an admin-side backup utility plugin for "Textpattern CMS":http://www.textpattern.com. Backs up both your files and databases with single click of button, and restores as easily. To support its features the plugin packs a clean, user-friendly interface that feels like it was part of Textpattern itself.
+
+h2. Install
+
+Using "Composer":http://getcomposer.org:
+
+bc. $ composer require rah/rah_backup:*
+
+h2. Requirements
+
+Rah_backups' minimum requirements:
+
+* Textpattern 4.5.0 or newer.
+* PHP 5.3.6 or newer.
+
+h2. Modules
+
+Rah_backup has set of modules that extend the plugin's functionality:
+
+* "rah_backup_clearlogs":https://github.com/gocom/rah_backup_clearlogs
+* "rah_backup_optimize":https://github.com/gocom/rah_backup_optimize
+* "rah_backup_sftp":https://github.com/gocom/rah_backup_sftp
+
+h2. Preferences
+
+Rah_backup offers number of preferences that can be used to configure the plugin. All settings can be found from "Advanced Preferences":http://textpattern.net/wiki/index.php?title=Advanced_Preferences, organized under *Backups* section. Preferences allow defining paths to used command line application and set up backed up directories among other things. Following settings will be present.
+
+h3. Path to a directory used to store backups
+
+The path should point to an existing, empty directory that is both readable and writeable by PHP. The path will be relative to Textpattern's installation directory (e.g. @./textpattern@). A backup directory path might look something like this:
+
+bc. ../../backups
+
+h3. Directories to backup (comma-separated)
+
+Sets which directories are backed up and included in created TAR archives. Separate multiple paths with commas (@,@). As with backup directory, all paths are relative to the Textpattern installation directory. On a single site setup, following would back up the directory containing Textpattern (i.e. @textpattern@ directory and @index.php@ file):
+
+bc. ../
+
+h3. Files excluded from backups (comma-separated)
+
+Sets files that are excluded from the filesystem backup. This setting can be useful for keeping sensitive files secure incase a backup is lost or leaks due to compromised backup server or a cloud file hosting account. Values used in the setting are searched from backed up files' paths. Any file that path contains any of the values, will be excluded from the backup. Multiple files can be separated with a comma (@,@).
+
+On a single site installation the following rule would exclude Textpattern's @config.php@ from the backup:
+
+bc. config.php
+
+h3. Ignore database tables (comma-separated)
+
+Sets database tables that will not be included in database backups. Separate multiple tables with commas (@,@). Note that since the tables are not included in backups, they won't be restored, created or populated either with the backup when restoring. Ignored tables need to be managed otherwise, and re-created manually.
+
+This setting can be used to exclude sensitive information or temporary data from a frequently taken backups. Following would exclude Textpattern's user accounts table containing email address and password hashes and visitor logs from backups:
+
+bc. txp_users, txp_log
+
+h3. Number of backup files to keep
+
+Sets the number of backup files to keep, accepting an integer equal or greater than @1@. Files that go over limit are removed each a new set of backups is created. Set zero @0@ for unlimited.
+
+h2. Restoring
+
+The backups can be restored with any old archive utility and database import tool, either via some GUI utility or command line. The plugin itself doesn't offer restoring trough it admin-side panel for security reasons. On a normal, well-setup server you shouldn't be able to restore your site through public-facing HTTP process due to permissions, and even if you could, would you really want to protect that action with just your Textpattern login. Now, if you can wipe your files through HTTP initiated PHP, you should look into your filesystem permissions as there might be a misconfiguration.
+
+The other issue is that the one writing would be the same one that is getting restored. If that restoring process fails, it's over. The restoration should be done as a smart offsite migration where the backup is deployed, tested and brought back online.
+
+h3. Importing databases
+
+The database dumps are like any other SQL dump and can be restored with any database import tool, including phpMyAdmin or the MySQL CLI:
+
+bc. $ cd /path/to/backups/directory
+$ gzip -d database.sql.gz > database.sql
+$ mysql -u username -p database < database.sql
+
+The first line changes current working directory, the following uncompresses the gzipped file and last imports the uncompressed SQL file to the specified database using the specified MySQL user.
+
+h3. Restoring filesystem TAR tapes
+
+The site's files are backed up to a gzipped TAR archives. These archives can be extracted with any decent archive utility or from command line:
+
+bc. $ cd /path/to/backups/directory
+$ tar -xzvf filestem.tar.gz
+
+h2. Changelog
+
+h3. Version 0.1.0 - 2014/04/01
+
+* Initial release.
+* French translation by "Patrick Lefevre":https://twitter.com/lowel.

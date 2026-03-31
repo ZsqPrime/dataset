@@ -1,0 +1,5 @@
+Project Description:
+Yet another implementation of OAuth aiming to cover both OAuth 1.0a and 2, from Client to Server.
+
+README:
+This file was created by IntelliJ IDEA 11.0.2 for binding GitHub repository

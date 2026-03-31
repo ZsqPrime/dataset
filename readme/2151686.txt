@@ -1,0 +1,10 @@
+This is a plugin for War in minecraft.
+More info will be added soon!
+
+Project Description:
+Wars in Minecraft
+
+README:
+This is a plugin for War in minecraft.
+
+More info will be added soon!

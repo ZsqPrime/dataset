@@ -1,0 +1,31 @@
+Modizer
+=======
+
+iOS modules, chip tunes, midi & vgm player.
+
+Support iOS 12+
+
+## Building
+
+Requires recent Xcode
+
+To be updated. 
+
+
+
+Project Description:
+iOS chiptune/module player
+
+README:
+Modizer
+=======
+
+iOS modules, chip tunes, midi & vgm player.
+
+Support iOS 12+
+
+## Building
+
+Requires recent Xcode
+
+To be updated.

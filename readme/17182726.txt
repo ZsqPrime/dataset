@@ -1,0 +1,5 @@
+Project Description:
+HelloScan module for Joomla Virtuemart
+
+README:
+HelloScan component for Joomla and Virtuemart. More info on http://helloscan.mobi

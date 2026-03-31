@@ -1,0 +1,6 @@
+Project Description:
+Ruby gem client for Elastic Search as SaaS
+
+README:
+About Khoj
+===========

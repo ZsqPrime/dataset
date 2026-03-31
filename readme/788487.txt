@@ -1,0 +1,16 @@
+As the name says, this is a zsh completion for curl. it is fairly basic, but
+all the options are there.
+
+To install, simply put into some directory in your $fpath, and rm ~/.zcompdump
+to clear zsh's completion cache.
+
+
+Project Description:
+ZSH Completion script for curl 
+
+README:
+As the name says, this is a zsh completion for curl. it is fairly basic, but
+all the options are there.
+
+To install, simply put into some directory in your $fpath, and rm ~/.zcompdump
+to clear zsh's completion cache.

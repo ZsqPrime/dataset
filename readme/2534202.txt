@@ -1,0 +1,8 @@
+Project Description:
+add network coding to some modules in nc (thesis)
+
+README:
+UDPApp with Network Coding capabilities for 2 node configuration:
+
+- simple butterfly network
+- simple AP - nodes

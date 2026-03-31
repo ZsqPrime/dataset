@@ -1,0 +1,4 @@
+Project Description:
+An interactive installation for Dewar's Whisky at TED 2012, an interactive visualisation of Twitter based around certain keywords, with a novel Kinect interface for controlling the installation.
+
+README:

@@ -1,0 +1,9 @@
+Project Description:
+the library for eclipse project using arduino Mega2560
+
+README:
+The following project create the needed Ardino Mega2560 library for the eclipse project.
+
+
+Eclipse setting:
+Import the eclipseCompileSetting.xml configuration file and adapt the directories.

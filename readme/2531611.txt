@@ -1,0 +1,41 @@
+Project Description:
+Ruby wrapper for startmobile sms service
+
+README:
+= StartmobileSms
+
+The easy way to send and check a single sms with startmobile.com.ua provider.
+
+== Install
+  
+  gem 'startmobile_sms'
+
+== Configure
+
+  StartmobileSms.setup do |config|
+    config.login = 'login'
+    config.password = 'password'
+    config.out_number = 'out_number'
+  end
+  
+== Usage
+  
+  # Send single sms (out_number is optional)
+  sms_id = StartmobileSms.send(:phone => '30971234567', :text => 'Hello!', :out_number => 'service_name')
+  
+  # Check sms delivery status
+  StartmobileSms.check(sms_id)
+  
+  # Or use instance object
+  sms = StartmobileSms::Message.new(:phone => '30971234567', :text => 'Hello!')
+
+  sms.phone # 30971234567
+  sms.text # Hello!
+  sms.send # send sms to server
+  sms.id # response id
+  
+  sms.status # check sms status (Accepted, Enroute, Delivered, Expired, Deleted, Undeliverable, Rejected, Unknown)
+
+== Wiki
+
+{Startmobile service API}[https://github.com/superp/startmobile_sms/wiki/Startmobile-service-API]

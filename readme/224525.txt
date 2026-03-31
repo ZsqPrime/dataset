@@ -1,0 +1,12 @@
+SKB: A sokoban-like javascript game
+
+Built using the CraftyJS game engine - http://craftyjs.com
+
+
+Project Description:
+A Sokaban-inspired javascript game
+
+README:
+SKB: A sokoban-like javascript game
+
+Built using the CraftyJS game engine - http://craftyjs.com

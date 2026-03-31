@@ -1,0 +1,5 @@
+Project Description:
+FireFox and Chrome extensions
+
+README:
+Extensions and Plugins for FireFox and Chrome, possibly GreaseMonkey as well.

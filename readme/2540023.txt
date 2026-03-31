@@ -1,0 +1,5 @@
+Project Description:
+Rolling a dice on 7 LEDs with sound
+
+README:
+Displaying a dice roll on 7 LEDs

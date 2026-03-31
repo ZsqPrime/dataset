@@ -1,0 +1,5 @@
+Project Description:
+Continuation of bMiner.
+
+README:
+bMiner v1.0 continuation from ThatBox

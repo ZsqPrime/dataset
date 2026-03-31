@@ -1,0 +1,14 @@
+FIRST Team 1923 - 2012 Robot Software
+-------------------------------------
+
+FIRST Team 1923's source code for their 2012 FIRST ReboundRumble robot.
+
+
+Project Description:
+Team 1923's software for the FIRST Robotics Competition for 2012.
+
+README:
+FIRST Team 1923 - 2012 Robot Software
+-------------------------------------
+
+FIRST Team 1923's source code for their 2012 FIRST ReboundRumble robot.

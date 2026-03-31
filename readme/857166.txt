@@ -1,0 +1,8 @@
+README
+
+
+Project Description:
+A bash script which makes it easier to use custom installed tools (mono, node, ruby, git, gcc)
+
+README:
+README

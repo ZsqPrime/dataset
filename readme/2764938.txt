@@ -1,0 +1,97 @@
+Project Description:
+Pure Ruby HTTP parser and friends
+
+README:
+= HTTPTools {<img src=https://secure.travis-ci.org/matsadler/http_tools.png>}[http://travis-ci.org/matsadler/http_tools]
+
+HTTPTools is a collection of lower level utilities to aid working with HTTP,
+including a fast-as-possible pure Ruby HTTP parser.
+
+* rdoc[http://sourcetagsandcodes.com/http_tools/doc/]
+* source[https://github.com/matsadler/http_tools]
+
+== Platform Support
+
+Written purely in Ruby, with no dependencies outside of the standard library, it
+should run across all Ruby implementations compatible with 1.8 or later, and
+install in environments without a compiler available.
+
+Tests are currently run on travis-ci[http://travis-ci.org/matsadler/http_tools]
+against Ruby 1.8.7, 1.9.2, 1.9.3, JRuby, Rubinius, and Ruby
+Enterprise Edition. Additionally tests are run against 1.8.6 and MacRuby
+
+Performance tuning is mainly aimed at Ruby 1.9, with Ruby 1.8 and JRuby taken in
+to consideration. JRuby is generally fastest.
+
+== HTTPTools::Parser
+
+HTTPTools::Parser is a HTTP request & response parser with an evented API.
+Despite being just Ruby, every effort has been made to ensure it is as fast as
+possible.
+
+=== Example
+
+  parser = HTTPTools::Parser.new
+  parser.on(:header) do
+    puts parser.status_code.to_s + " " + parser.message
+    puts parser.header.inspect
+  end
+  parser.on(:finish) {print parser.body}
+  
+  parser << "HTTP/1.1 200 OK\r\n"
+  parser << "Content-Length: 20\r\n\r\n"
+  parser << "<h1>Hello world</h1>"
+
+Prints:
+  200 OK
+  {"Content-Length" => "20"}
+  <h1>Hello world</h1>
+
+== HTTPTools::Encoding
+
+HTTPTools::Encoding provides methods to deal with several HTTP related encodings
+including url, www-form, and chunked transfer encoding. It can be used as a
+mixin or class methods on HTTPTools::Encoding.
+
+=== Example
+
+  HTTPTools::Encoding.www_form_encode({"query" => "fish", "lang" => "en"})
+  #=> "query=fish&lang=en"
+  
+  include HTTPTools::Encoding
+  www_form_decode("lang=en&query=fish")
+  #=> {"lang" => "en", "query" => "fish"}
+
+== HTTPTools::Builder
+
+HTTPTools::Builder is a provides a simple interface to build HTTP requests &
+responses. It can be used as a mixin or class methods on HTTPTools::Builder.
+
+=== Example
+
+  Builder.request(:get, "example.com")
+  #=> "GET / HTTP/1.1\r\nHost: example.com\r\n\r\n"
+
+== Licence
+
+(The MIT License)
+
+Copyright (c) 2012, 2011 Matthew Sadler
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

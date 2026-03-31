@@ -1,0 +1,8 @@
+This is a collection of essays and hopefully amusing personal anecdotes, version controlled in git.  Probably should be called "I'm with stoopid", considering how many times I get hurt in these anecdotes.
+
+
+Project Description:
+git-controlled essays by mattknox
+
+README:
+This is a collection of essays and hopefully amusing personal anecdotes, version controlled in git.  Probably should be called "I'm with stoopid", considering how many times I get hurt in these anecdotes.

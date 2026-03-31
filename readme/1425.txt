@@ -1,0 +1,40 @@
+Project Description:
+Masques is a distributed social network.
+
+README:
+h2. Masques
+
+Enjoy social networking. Keep your privacy.
+
+You want to share personal information with your friends, not the world. Why are you using a public website?
+
+Masques is designed to provide an alternative to posting your personal information on a website with an always changing, yet always confusing, privacy policy.
+
+Masques runs on your computer. All of your media stays on your computer, not some corporation's server. When you want to share, your files and messages are sent directly from your computer to your friend's computer, securely and privately. Masques uses I2P, or the "invisible internet," to transfer your information directly to your friends without ever sending anything to a centralized server.
+
+Best of all, the "privacy policy" is more than just a policy: your privacy is protected with math, not legal documents, which are often changed or simply violated. Because of the many layers of encryption, and because we publish our source code for the world to see, you know you can trust Masques to protect privacy. Not even the Masques developers can invade the privacy of your social network.
+
+With Masques, you can be sure your personal information, and entire social network, is safe from digital thieves, data mining companies, and intrusive government surveillance.
+
+You can learn more about Masques on our website: "Find Masques":http://findmasques.org/
+
+We also have a general Google group: "Masques Social Network":https://groups.google.com/forum/?hl=en#!forum/masques-social-network
+
+And, a development Google group: "Masques Social Network Development":https://groups.google.com/forum/#!forum/masques-social-network-development
+
+h3. License
+
+Copyright (C) 2012 Matthew Courtney
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see "http://www.gnu.org/licenses/":http://www.gnu.org/licenses/.

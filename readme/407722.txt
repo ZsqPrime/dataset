@@ -1,0 +1,7 @@
+ITK Libgraphics
+
+Project Description:
+BevProg2 és Prog1-2 grafikus lib
+
+README:
+ITK Libgraphics

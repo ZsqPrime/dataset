@@ -1,0 +1,11 @@
+Project Description:
+Ohjelmoinnin harjoitustyö
+
+README:
+Kansiossa Jarmon ohjemoinninharjoitustyö. 
+
+docs -kansiosta löydät kaiken sovelluksen lisänä tuotetun dokumentaation.
+
+Ohjelman testaamiseen voit vaikka käyttää docs/malliSanalista.txt tiedostoa.
+
+-Jarmo

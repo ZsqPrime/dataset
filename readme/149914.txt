@@ -1,0 +1,10 @@
+a bundle of pear code with a few extras
+\n
+
+
+Project Description:
+This is a group of pear packages (updated occasionally) which includes HTML_FlexyFramework and a few other extra goodies
+
+README:
+a bundle of pear code with a few extras
+\n

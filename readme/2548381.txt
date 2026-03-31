@@ -1,0 +1,8 @@
+Project Description:
+macruby experiments
+
+README:
+README
+======
+
+some fumbling with [macruby](http://www.macruby.org)...

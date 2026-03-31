@@ -1,0 +1,102 @@
+Informatică, Universitatea din Craiova
+======================================
+
+
+Anul 1
+------
+1asd	- Algoritmi și structuri de date
+1ac	- Arhitectura calculatoarelor
+1cs	- Calcul științific
+1fai	- Fundamentele algebrice ale informaticii
+1pp	- Programare procedurală (C)
+
+1ag	- Algoritmica grafurilor
+1gcgc	- Geometrie computațională și grafică pe calculator
+1lc	- Logică computațională (Prolog)
+1poo	- Programare orientată obiect (C++)
+1so	- Sisteme de operare
+
+
+Anul 2
+------
+2bd	- Baze de date
+2ia	- Inteligență artificială
+2ps	- Probabilități și statistică
+2rc	- Rețele de calculatoare
+2is	- Inginerie software
+2si	- Securitatea informației
+
+2cn	- Calcul numeric
+2pnp	- Programare non-procedurală (Lisp)
+2sgbd	- Sisteme de gestiune a bazelor de date
+2tap	- Tehnici avansate de programare (Java)
+2mcsde	- Metode computaționale în studiul dinamicii economice
+
+
+Anul 3
+------
+3alc	- Automate, Limbaje și Compilatoare
+3bc	- Baze de Cunoștințe
+3bi	- Metode Computaționale în Business Intelligence
+3cnpd	- Elemente de Calcul Numeric Paralel și Distribuit
+3tw	- Tehnologii Web și Programare Client-Server
+
+3ag	- Algoritmi Genetici
+3mps	- Managementul Proiectelor Software
+3mpia	- Medii de programare în Inteligență Artificială
+3pasi	- Proiectarea și Administrarea Sistemelor Informatice
+3sd	- Sisteme Dinamice
+
+
+Project Description:
+Informatică, Universitatea din Craiova
+
+README:
+Informatică, Universitatea din Craiova
+======================================
+
+
+Anul 1
+------
+1asd	- Algoritmi și structuri de date
+1ac	- Arhitectura calculatoarelor
+1cs	- Calcul științific
+1fai	- Fundamentele algebrice ale informaticii
+1pp	- Programare procedurală (C)
+
+1ag	- Algoritmica grafurilor
+1gcgc	- Geometrie computațională și grafică pe calculator
+1lc	- Logică computațională (Prolog)
+1poo	- Programare orientată obiect (C++)
+1so	- Sisteme de operare
+
+
+Anul 2
+------
+2bd	- Baze de date
+2ia	- Inteligență artificială
+2ps	- Probabilități și statistică
+2rc	- Rețele de calculatoare
+2is	- Inginerie software
+2si	- Securitatea informației
+
+2cn	- Calcul numeric
+2pnp	- Programare non-procedurală (Lisp)
+2sgbd	- Sisteme de gestiune a bazelor de date
+2tap	- Tehnici avansate de programare (Java)
+2mcsde	- Metode computaționale în studiul dinamicii economice
+
+
+Anul 3
+------
+3alc	- Automate, Limbaje și Compilatoare
+3bc	- Baze de Cunoștințe
+3bi	- Metode Computaționale în Business Intelligence
+3cnpd	- Elemente de Calcul Numeric Paralel și Distribuit
+3tw	- Tehnologii Web și Programare Client-Server
+
+3ag	- Algoritmi Genetici
+3mps	- Managementul Proiectelor Software
+3mpia	- Medii de programare în Inteligență Artificială
+3pasi	- Proiectarea și Administrarea Sistemelor Informatice
+3sd	- Sisteme Dinamice

@@ -1,0 +1,16 @@
+=====================================================
+ Bayesian Galaxy (and whatever) Properties Estimator
+=====================================================
+
+William Schoenell <wschoenell@iaa.es>
+
+
+Project Description:
+Bayesian Galaxy (and whatever) Properties Estimator
+
+README:
+=====================================================
+ Bayesian Galaxy (and whatever) Properties Estimator
+=====================================================
+
+William Schoenell <wschoenell@iaa.es>

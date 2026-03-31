@@ -1,0 +1,5 @@
+Project Description:
+AWS Ruby samples
+
+README:
+Experiments in Ruby with AWS

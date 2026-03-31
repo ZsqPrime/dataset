@@ -1,0 +1,5 @@
+Project Description:
+This is repository of higly customizable chat.
+
+README:
+Network chat implementation.

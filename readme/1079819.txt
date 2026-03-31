@@ -1,0 +1,43 @@
+Writing a music app and want to add a tap tempo feature? just drop the files in your project, create an instance of the controller and add its view to your view!
+To get the current computed BPM just check the currentBpm property. Also available is the tempo marking of the current BPM and a class method to get the tempo marking for a certain BPM value. 
+
+There are two ways to init the controller:
+- With the desired frame (will create a standard UIButton)
+- With the desired frame and an image for the button
+
+The controller can ignores stray taps, responds well to quick change of pace (fourths to eights) and resets on a certain timeout.
+Check out the sample metronome app for an example of usage, feel free to use the metronome and the blue button as you wish.
+
+OWTapTempoViewController is available under the MIT license:
+
+Copyright (c) 2009 OdedW
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Project Description:
+A ready-made view controller that supplies tap tempo functionality and helps find a certain BPM, for all of your music app needs.
+
+README:
+Writing a music app and want to add a tap tempo feature? just drop the files in your project, create an instance of the controller and add its view to your view!
+To get the current computed BPM just check the currentBpm property. Also available is the tempo marking of the current BPM and a class method to get the tempo marking for a certain BPM value. 
+
+There are two ways to init the controller:
+- With the desired frame (will create a standard UIButton)
+- With the desired frame and an image for the button
+
+The controller can ignores stray taps, responds well to quick change of pace (fourths to eights) and resets on a certain timeout.
+Check out the sample metronome app for an example of usage, feel free to use the metronome and the blue button as you wish.
+
+OWTapTempoViewController is available under the MIT license:
+
+Copyright (c) 2009 OdedW
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

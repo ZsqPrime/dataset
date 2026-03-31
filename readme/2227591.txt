@@ -1,0 +1,6 @@
+
+
+Project Description:
+-Experiemental- IRC bot [capable of writing, retrieving data to and from a local and remote database.]
+
+README:

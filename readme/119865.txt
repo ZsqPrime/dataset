@@ -1,0 +1,120 @@
+h1. rah_flat
+
+"Download":https://github.com/gocom/rah_flat/releases | "Packagist":https://packagist.org/packages/rah/rah_flat | "Issues":https://github.com/gocom/rah_flat/issues
+
+This "Textpattern CMS":https://textpattern.com plugin imports flat "frontend themes":https://docs.textpattern.com/themes/front-end-themes automatically to the database while the site is set in debugging or testing mode.
+
+*Warning: this plugin will permanently remove or overwrite your current templates when installed.*
+
+h2. Install
+
+Using "Composer":https://getcomposer.org:
+
+bc. $ composer require rah/rah_flat
+
+Or "download":https://github.com/gocom/rah_flat/releases an installer.
+
+h2. Requirements
+
+* Textpattern 4.7.0 or newer.
+* PHP 5.6.0 or newer.
+
+h2. Changelog
+
+h3. Version 0.4.3 - 2019/10/13
+
+* Re-publish.
+
+h3. Version 0.4.2 - 2019/10/13
+
+* Re-publish and add download links to the README.
+
+h3. Version 0.4.1 - 2019/10/13
+
+* Correct version number in manifest file.
+
+h3. Version 0.4.0 - 2019/03/24
+
+* Use core Textpattern >= 4.7.0 frontend theme functionality.
+* Now requires Textpattern 4.7.0 or newer.
+
+h3. Version 0.3.0 - 2014/03/28
+
+* Added: Drop access to a admin-side panel only if the specific content-type is active and has a directory set up.
+* Added: Invokable @rah_flat.import@ callback event.
+* Added: Sections and preferences get their names from the filename.
+* Added: Preferences are always just updated, no strands are created.
+* Added: Preference fields that are not specified in a file are kept as-is in the database.
+* Added: French translation by "Patrick Lefevre":https://github.com/cara-tm.
+* Changed: Renamed confusing @Rah_Flat_Import_Template@ interface to @Rah_Flat_Import_ImportInterface@.
+
+h3. Version 0.2.0 - 2014/03/19
+
+* Reworked.
+
+h3. Version 0.1.0 - 2013/05/07
+
+* Initial release.
+
+
+Project Description:
+Edit Textpattern's database contents and page templates as flat files
+
+README:
+h1. rah_flat
+
+"Download":https://github.com/gocom/rah_flat/releases | "Packagist":https://packagist.org/packages/rah/rah_flat | "Issues":https://github.com/gocom/rah_flat/issues
+
+This "Textpattern CMS":https://textpattern.com plugin imports flat "frontend themes":https://docs.textpattern.com/themes/front-end-themes automatically to the database while the site is set in debugging or testing mode.
+
+*Warning: this plugin will permanently remove or overwrite your current templates when installed.*
+
+h2. Install
+
+Using "Composer":https://getcomposer.org:
+
+bc. $ composer require rah/rah_flat
+
+Or "download":https://github.com/gocom/rah_flat/releases an installer.
+
+h2. Requirements
+
+* Textpattern 4.7.0 or newer.
+* PHP 5.6.0 or newer.
+
+h2. Changelog
+
+h3. Version 0.4.3 - 2019/10/13
+
+* Re-publish.
+
+h3. Version 0.4.2 - 2019/10/13
+
+* Re-publish and add download links to the README.
+
+h3. Version 0.4.1 - 2019/10/13
+
+* Correct version number in manifest file.
+
+h3. Version 0.4.0 - 2019/03/24
+
+* Use core Textpattern >= 4.7.0 frontend theme functionality.
+* Now requires Textpattern 4.7.0 or newer.
+
+h3. Version 0.3.0 - 2014/03/28
+
+* Added: Drop access to a admin-side panel only if the specific content-type is active and has a directory set up.
+* Added: Invokable @rah_flat.import@ callback event.
+* Added: Sections and preferences get their names from the filename.
+* Added: Preferences are always just updated, no strands are created.
+* Added: Preference fields that are not specified in a file are kept as-is in the database.
+* Added: French translation by "Patrick Lefevre":https://github.com/cara-tm.
+* Changed: Renamed confusing @Rah_Flat_Import_Template@ interface to @Rah_Flat_Import_ImportInterface@.
+
+h3. Version 0.2.0 - 2014/03/19
+
+* Reworked.
+
+h3. Version 0.1.0 - 2013/05/07
+
+* Initial release.

@@ -1,0 +1,12 @@
+/*!  Not viable until file management becomes more accessible in html 5 */
+
+A simple HTML5 soundboard that's sorta done-ish.
+
+
+Project Description:
+None
+
+README:
+/*!  Not viable until file management becomes more accessible in html 5 */
+
+A simple HTML5 soundboard that's sorta done-ish.

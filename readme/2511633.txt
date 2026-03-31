@@ -1,0 +1,9 @@
+A simple piano keyboard for Qt4 based platforms.
+
+
+
+Project Description:
+Piano keyboard for Qt4 based platforms
+
+README:
+A simple piano keyboard for Qt4 based platforms.

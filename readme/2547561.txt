@@ -1,0 +1,9 @@
+Project Description:
+CreeperMess plugin for Bukkit
+
+README:
+CreeperMess plugin for Bukkit by Zomis
+
+zomis2k@hotmail.com
+
+Released under GNU GPL.

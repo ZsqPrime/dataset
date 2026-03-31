@@ -1,0 +1,8 @@
+This is a place holder, please fill in real text when you add stuff.
+
+
+Project Description:
+All the stuff related to the miui porting device Samsung i9100
+
+README:
+This is a place holder, please fill in real text when you add stuff.

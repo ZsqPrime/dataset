@@ -1,0 +1,56 @@
+Project Description:
+proc_for_case_equality - Ruby gem for using procs in case comparisons
+
+README:
+= ProcForCaseEquality.new { puts 'procs in case statements are cool!' }
+
+== Features
+
+Simple yet powerful: it lets you use procs for case comparisons (see the example below).
+
+== How
+
++case+ statements call the <tt>===</tt> method, so I wrote a +ProcForCaseEquality+ class
+that inherits from +Proc+ and overrides <tt>===</tt>, letting the case statement call the proc
+passing the value of the case as argument.
+
+The source code is so simple that I can put it in full here:
+
+    class ProcForCaseEquality < Proc
+      def ===(*params)
+        self.call *params
+      end
+    end
+
+5 LOCs :P
+
+== Installation
+
+<tt>gem install proc_for_case_equality</tt>
+
+== Usage / Examples
+
+    require 'proc_for_case_equality' # OR:
+    require 'proc_for_case_equality/pfce' # if you want PFCE constant to point to ProcForCaseEquality
+
+    # Define some procs
+    all_multiples_of_3 = ProcForCaseEquality.new { |numbers| numbers.all? { |number| number.modulo(3).zero? } }
+    any_multiple_of_3  = PFCE.new { |numbers| numbers.any? { |number| number.modulo(3).zero? } } # PFCE is provided by 'proc_for_case_equality/pfce'
+
+    # Here we come
+    case [1, 2, 3]
+    when all_multiples_of_3 
+      puts 'all numbers are multiples of 3'
+    when any_multiple_of_3
+      puts 'at least one number is multiple of 3'
+    else
+      puts 'no multiples of 3'
+    end
+
+== Inspired by
+
+{This article}[http://www.aimred.com/news/developers/2008/08/14/unlocking_the_power_of_case_equality_proc/]
+
+== License
+
+MIT (see {LICENSE}[https://github.com/ProGNOMmers/proc_for_case_equality/blob/master/LICENSE])

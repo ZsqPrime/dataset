@@ -1,0 +1,38 @@
+Project Description:
+Everquest II - Log Parser Project 2012 by Tingle Driftwood
+
+README:
+Project: Phoenix (Tingles Log Analyzer)
+
+Programming Environment:	Eclipse (Java)
+Release Change Log:		README (GitHub)
+
+Programmer:			M. Weigert
+
+**************************************************************
+************************* Change Log *************************
+**************************************************************
+
+18.01.2012 MW - Project start.
+18.01.2012 MW - Create GitHub repository.
+21.01.2012 MW - Reorganized project and start a new cleaned
+                GitHub repository.
+22.01.2012 MW - Project is now able to extract character names
+                out of the log file names.
+22.01.2012 MW - Project now load a log file in a hash map for
+                further processing.
+22.01.2012 MW - Created a few manual test classes to check 
+                functionality of the different classes.
+22.01.2012 MW - Added first few GUIs to project.
+22.01.2012 MW - Changed Name from Tingles Log Parser to
+                Tingles Log Analyzer.
+25.01.2012 MW - Added time stamp extraction functionality.
+27.01.2012 MW - Added extract level up.
+03.02.2012 MW - Added XYGrid (displays a grid in a JPanel)
+                Added GetMinMaxLevel (extracts min & max 
+                Level from LevelHistory)
+                Added LevelHistoryPanel (displays the level
+                as a graph)
+                A few bug fixes to different classes.
+07.02.2012 MW - Minor changes in GUI handling.
+                Added Valentine quest tracker classes (Basis)

@@ -1,0 +1,152 @@
+Script 2 Script is a programming language translator.
+It aim to translate any high level language into any language. (named ori -> goal)
+
+The first POC is to translate Python -> Javascript (in a way similar to Pyjamas)
+
+The basic idea is to translate the ori into a simplier language first.
+(Like the GCC compiler which have a GIMPLE ast tree)
+It goes like this ori -> SIMPLE -> goal
+
+Status :
+ - SIMPLE is not yet fully defined. It lacks a lot about libraries
+ - The syntax of Python is well advanced into SIMPLE.
+
+
+What simple sould have :
+ - function and class
+ - variable declaration each time (as an object of more precise)
+ - classes are not changeable at runtime (or are they ?)
+ - It have no hyheritance, all should be done by hand
+ - No private or protected function/variable
+ - method and function are the same, method should return null
+ - Exception (try/a single catch/finally)
+ - if/while/class/fct are expression (everything return something)
+ - Content is simplified (if had always an else, while/for/foreach => do while)
+ - Class functions are not attached to the current object
+ - lambda functions
+ - new Object() is a special expression (not like python)
+
+
+The way it will work, all the ori code should be loaded once, then translated.
+The optimisation part can't be done if only part of the language is loaded at a time.
+
+
+
+
+
+Python => AST => SIMPLE => AST => Javascript
+
+
+Python stuff that need adaptation :
+ - Yield
+ - Long data type
+ - Function
+ - Import
+ - Getter/setters
+ - __call__
+ - operators
+ - dir
+ - getattr/setattr
+
+Make a configuration
+[input]
+  ast2simple
+  astParsing
+  source2ast
+[optimisation]
+  simpleParsing
+  optimisation
+[output]
+  simple2ast
+  astParsing
+  ast2source
+
+Make a library by module, so it can be adapted for each languages
+
+Code :
+ - Init, Commun
+ - Library
+ - Source by module
+   - Modules = [expressions]
+     - expression have the source line information
+
+#__EOF__
+
+
+Project Description:
+Aim to translate a script in a langage into another langage
+
+README:
+Script 2 Script is a programming language translator.
+It aim to translate any high level language into any language. (named ori -> goal)
+
+The first POC is to translate Python -> Javascript (in a way similar to Pyjamas)
+
+The basic idea is to translate the ori into a simplier language first.
+(Like the GCC compiler which have a GIMPLE ast tree)
+It goes like this ori -> SIMPLE -> goal
+
+Status :
+ - SIMPLE is not yet fully defined. It lacks a lot about libraries
+ - The syntax of Python is well advanced into SIMPLE.
+
+
+What simple sould have :
+ - function and class
+ - variable declaration each time (as an object of more precise)
+ - classes are not changeable at runtime (or are they ?)
+ - It have no hyheritance, all should be done by hand
+ - No private or protected function/variable
+ - method and function are the same, method should return null
+ - Exception (try/a single catch/finally)
+ - if/while/class/fct are expression (everything return something)
+ - Content is simplified (if had always an else, while/for/foreach => do while)
+ - Class functions are not attached to the current object
+ - lambda functions
+ - new Object() is a special expression (not like python)
+
+
+The way it will work, all the ori code should be loaded once, then translated.
+The optimisation part can't be done if only part of the language is loaded at a time.
+
+
+
+
+
+Python => AST => SIMPLE => AST => Javascript
+
+
+Python stuff that need adaptation :
+ - Yield
+ - Long data type
+ - Function
+ - Import
+ - Getter/setters
+ - __call__
+ - operators
+ - dir
+ - getattr/setattr
+
+Make a configuration
+[input]
+  ast2simple
+  astParsing
+  source2ast
+[optimisation]
+  simpleParsing
+  optimisation
+[output]
+  simple2ast
+  astParsing
+  ast2source
+
+Make a library by module, so it can be adapted for each languages
+
+Code :
+ - Init, Commun
+ - Library
+ - Source by module
+   - Modules = [expressions]
+     - expression have the source line information
+
+#__EOF__

@@ -1,0 +1,17 @@
+== Crowdstarter is a crowdfunding platform
+
+Features
+  * email login with facebook connections
+  * wepay payment processing
+
+
+
+Project Description:
+Crowd-sourced funding platform
+
+README:
+== Crowdstarter is a crowdfunding platform
+
+Features
+  * email login with facebook connections
+  * wepay payment processing

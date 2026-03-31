@@ -1,0 +1,5 @@
+Project Description:
+LayerManager for OpenCPN
+
+README:
+This is a backup only

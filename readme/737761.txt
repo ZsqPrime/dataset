@@ -1,0 +1,41 @@
+= Redmine Android Client Plugin
+
+Plugin to support activities for {Redmine for Android}[https://market.android.com/details?id=com.wvr.redmineclient&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS53dnIucmVkbWluZWNsaWVudCJd]
+
+== Versions Support
+
+Plugin supports Redmine 1.0.x - 1.3.x
+
+Tested on:
+ - 1.0.5
+ - 1.1.3
+ - 1.2.3
+ - 1.3.0
+
+== Install
+
+1. Copy plugin to <Redmine install path>/vendor/plugins/redmine_android_client/
+2. Restart redmine
+
+Project Description:
+Android: Redmine plugin (to support custom activities feed)
+
+README:
+= Redmine Android Client Plugin
+
+Plugin to support activities for {Redmine for Android}[https://market.android.com/details?id=com.wvr.redmineclient&feature=search_result#?t=W251bGwsMSwxLDEsImNvbS53dnIucmVkbWluZWNsaWVudCJd]
+
+== Versions Support
+
+Plugin supports Redmine 1.0.x - 1.3.x
+
+Tested on:
+ - 1.0.5
+ - 1.1.3
+ - 1.2.3
+ - 1.3.0
+
+== Install
+
+1. Copy plugin to <Redmine install path>/vendor/plugins/redmine_android_client/
+2. Restart redmine

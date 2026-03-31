@@ -1,0 +1,229 @@
+Project Description:
+IPv6 testing tool
+
+README:
+=head1 synfrag
+
+A network scanning tool for sending fragmented IPv4 and IPv6 packets.
+
+=head1 Synopsis
+
+Some network devices are unable to filter specially crafted IPv6 packets.
+synfrag can be used to generate some of these packets in order to allow
+administrators to test their firewall configurations.
+
+=head1 Description
+
+synfrag is a network scanning and penetration testing tool used to craft and
+send fragmented and unfragmented IPv4 and IPv6 packets. It currently supports
+sending both TCP SYN, ICMP echo (ping), and ICMP6 echo packets. Various
+fragmentation configurations are also available. synfrag tries its best to
+read any replies sent by targeted hosts to determine if they are willing
+or able to respond.
+
+The purpose of synfrag is to test host and network responses to fragmented
+requests. Many current routers implement access control lists (ACLs) in
+a manner that is unable to properly detect traffic inside fragmented IP
+packets, leading to situations where hosts are believed to be isolated from
+internet traffic by these ACLs. In some cases, specially crafted packets can
+bypass these router ACLs by taking advantage of their inability to properly
+process fragmented packets, exposing hosts to the internet unprotected.
+
+Some operating systems implement a security mechanism that ignores fragmented
+TCP SYN packets, preventing connections from being established under
+the assumption that these packets are abnormal and specially designed to
+circumvent network protections. However, many of these operating systems
+do not implement the same protections for all protocols, allowing some
+fragmented traffic through while blocking others.
+
+The author advises network administrators to run all of the tests provided by
+this tool against their network to determine if their firewall is functioning
+as expected.
+
+=head1 Notes
+
+synfrag is currently under development and is missing some useful features.
+Namely, synfrag does not resolve hostnames nor discover the next-hop layer
+2 address, and requires the user to specify these parameters. The included
+Perl script "sf" can be used as a wrapper to run synfrag with the correct
+arguments.
+
+Additionally, synfrag does not attempt to prevent the host operating system
+from interpreting any replies received from scanned hosts, meaning that after
+a scan the operating system may send a TCP RST packet to the scanned host,
+misinterpreting its reply as meant for the operating system. This can be
+worked around via firewall rules.
+
+=head1 Examples
+
+=head2 v4-tcp
+
+The following example uses synfrag to probe TCP port 22 via unfragmented
+IPv4. Note that the dstmac parameter is set to that of the router between
+the srcip's network and the dstip's network:
+
+ %sudo ./synfrag \
+  --srcip 10.72.122.120 \
+  --dstip 10.72.107.254 \
+  --interface eth1 \
+  --dstmac 00:00:0C:07:AC:01 \
+  --dstport 22 \
+  --test v4-tcp
+ Starting test "v4-tcp". Opening interface "eth1".
+ 
+ Ethernet Frame, ethertype 0x0800 (ETHERTYPE_IP)
+  Src MAC 00:1A:4B:C6:F5:2E
+  Dest MAC 00:00:0C:07:AC:01
+ 
+ IPv4 Packet:
+  Src IP: 10.72.122.120
+  Dst IP: 10.72.107.254
+  Protocol: 6 (IPPROTO_TCP)
+  Frag Offset: 0 (0 bytes)
+  Flags: 0 (None)
+  Iphl: 5 (20 bytes)
+ 
+ TCP Packet:
+  Src Port: 44128
+  Dst Port: 22
+  Seq Num: 637685203
+  Ack Num: 0
+  Flags: 2 (SYN)
+ 
+ Packet transmission successful, waiting for reply...
+ 
+ IPv4 Packet:
+  Src IP: 10.72.107.254
+  Dst IP: 10.72.122.120
+  Protocol: 6 (IPPROTO_TCP)
+  Frag Offset: 0 (0 bytes)
+  Flags: 2 (DF)
+  Iphl: 5 (20 bytes)
+ 
+ TCP Packet:
+  Src Port: 22
+  Dst Port: 44128
+  Seq Num: 392222197
+  Ack Num: 637685204
+  Flags: 18 (SYN, ACK)
+ 
+ Test was successful.
+
+=head2 v4-frag-optioned-tcp
+
+In this example, synfrag will send a fragmented IPv4 TCP SYN packet to the
+target host, with the initial fragment padded out to 68 bytes. Most hosts will
+drop fragmented IPv4 TCP SYN packets, which is the case here. Note the target
+responds with an ICMP fragment reassembly time exceeded message, though synfrag
+will only see the reply if we increase the default timeout to 60 seconds.
+
+ sudo ./synfrag \
+  --srcip 10.72.122.120 \
+  --dstip 10.72.107.254 \
+  --interface eth1 \
+  --dstmac 00:00:0C:07:AC:01 \
+  --dstport 22 \
+  --test v4-frag-optioned-tcp \
+  --timeout 60
+ Starting test "v4-frag-optioned-tcp". Opening interface "eth1".
+ 
+ Ethernet Frame, ethertype 0x0800 (ETHERTYPE_IP)
+  Src MAC 00:1A:4B:C6:F5:2E
+  Dest MAC 00:00:0C:07:AC:01
+ 
+ IPv4 Packet:
+  Src IP: 10.72.122.120
+  Dst IP: 10.72.107.254
+  Protocol: 6 (IPPROTO_TCP)
+  Frag Offset: 0 (0 bytes)
+  Flags: 1 (MF)
+  Iphl: 13 (52 bytes)
+ 
+ TCP Packet:
+  Src Port: 44128
+  Dst Port: 22
+  Seq Num: 956140482
+  Ack Num: 2409889792
+  Flags: 2 (SYN)
+ 
+ IPv4 Packet:
+  Src IP: 10.72.122.120
+  Dst IP: 10.72.107.254
+  Protocol: 6 (IPPROTO_TCP)
+  Frag Offset: 1 (8 bytes)
+  Flags: 0 (None)
+  Iphl: 5 (20 bytes)
+ 
+ Packet transmission successful, waiting for reply...
+ 
+ IPv4 Packet:
+  Src IP: 10.72.107.254
+  Dst IP: 10.72.122.120
+  Protocol: 1 (IPPROTO_ICMP)
+  Frag Offset: 0 (0 bytes)
+  Flags: 0 (None)
+  Iphl: 5 (20 bytes)
+ 
+ ICMP Packet:
+  Type: 11 (Time Exceeded)
+  Code: 1 (Fragment Reassembly Time Exceeded)
+ 
+ Test failed.
+
+=head1 License
+
+synfrag is released under the BSD license. synfrag includes BSD licensed code
+from libnet, and links against libpcap, also licensed under the BSD license.
+
+=head1 Copyright
+
+Copyright 2012-2013, Yahoo! Inc.  All rights reserved.
+
+=head1 Author
+
+John Eaglesham
+
+=head1 Source Code
+
+Source code for stable versions of synfrag are available on Yahoo's github
+account, located at:
+
+https://github.com/yahoo/synfrag/
+
+The current development branch is availble from the author's github tree,
+located at:
+
+https://github.com/je9000/synfrag/
+
+=head1 Changes
+
+=head2 1.3 - 20140107
+
+Build and run on OSX.
+
+=head2 1.2 - 20130816
+
+Add more test types.
+
+Add "--replay" option.
+
+Add ability to transmit on a TAP device, to work around IPv6 pcap/bpf issues on
+FreeBSD.
+
+Prettier output.
+
+=head2 1.1 - 20120215
+
+Initial release as open source, thanks Yahoo!
+
+Converted documentation to POD, added examples.
+
+Fixed extra free() after timeout.
+
+Print pretty flag names.
+
+Allow users to specify a timeout period.
+
+=head2 1.0 - 20120209
+
+Internal release.

@@ -1,0 +1,146 @@
+Project Description:
+Mini-framework to develop OpenGL scenes in Python
+
+README:
+Description
+================================================================================
+
+OnlyGL is a mini-framework to quick develop OpenGL scenes in Python. It requires
+pyopengl.
+
+The main class of OnlyGL is Scene in only.gl.scene package. You can create your
+own scene creating a class that inherits from Scene. You must define the
+following methods:
+ * ``init_model`` - Initialize your model
+ * ``draw`` - Draw your model
+
+Feautres:
+ * Pick objects from scene
+ * Get world coordinates from window clicks
+ * Disable/Enable lighting
+ * Use of camera to get perspective
+
+Other customizable features:
+ * Modify the perspective (overriding ``def perspective(self)`` method)
+ * Adding mouse motion (overriding
+   ``def motionfunc(self, button, state, x, y)``)
+ * Extend or override mouse callback (overriding
+   ``def mousefunc(self, button, state, x, y)``)
+ * Extend or override keyboard callback (overriding
+   ``def keyboardfunc(self, *args)``)
+
+
+
+
+Very simple example
+================================================================================
+
+from only.gl import colors
+from only.gl.scene import Scene
+
+
+class MyScene(Scene):
+
+    def init_model(self):
+        self.x = 0.0
+        self.y = -0.5
+        self.z = 0.0
+        self.color = colors.GREEN
+
+    def draw(self):
+        # Draw the floor
+        glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, self.color)
+        glTranslatef(self.x, self.y, self.z)
+        self.draw_box(200.0, 0.5, 200.0)
+        # And your model
+
+    def draw_box(self, a, b, m):
+        x = float(a) / 2.0
+        z = float(m) / 2.0
+        y = float(b)
+
+        glShadeModel(GL_FLAT)
+
+        glBegin(GL_QUAD_STRIP)
+
+        glNormal3f(0.0, 0.0, -1.0)
+        glVertex3f(x, 0, -z)
+        glVertex3f(-x, 0, -z)
+        glVertex3f(x, y, -z)
+        glVertex3f(-x, y, -z)
+
+        glNormal3f(0.0, 1.0, 0.0)
+        glVertex3f(x, y, z)
+        glVertex3f(-x, y, z)
+
+        glNormal3f(0.0, 0.0, 1.0)
+        glVertex3f(x, 0, z)
+        glVertex3f(-x, 0, z)
+
+        glNormal3f(0.0, -1.0, 0.0)
+        glVertex3f(x, 0, -z)
+        glVertex3f(-x, 0, -z)
+
+        glEnd()
+
+        glBegin(GL_QUADS)
+        glNormal3f(1.0, 0.0, 0.0)
+        glVertex3f(x, 0, -z)
+        glVertex3f(x, y, -z)
+        glVertex3f(x, y, z)
+        glVertex3f(x, 0, z)
+        glEnd()
+
+        glBegin(GL_QUADS)
+        glNormal3f(-1.0, 0.0, 0.0)
+        glVertex3f(-x, 0, -z)
+        glVertex3f(-x, 0, z)
+        glVertex3f(-x, y, z)
+        glVertex3f(-x, y, -z)
+        glEnd()
+
+
+def main():
+    glutInit(sys.argv)
+
+    scene = MyScene()
+
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH)
+    glutInitWindowSize(scene.viewport.width, scene.viewport.height)
+    glutInitWindowPosition(0, 0)
+    glutCreateWindow("My first Scene with OnlyGL")
+
+    scene.init()
+
+    glutDisplayFunc(scene.displayfunc)
+    glutReshapeFunc(scene.reshapefunc)
+    glutKeyboardFunc(scene.keyboardfunc)
+    glutMouseFunc(scene.mousefunc)
+
+    glutMainLoop()
+
+print "Hit ESC key to quit."
+main()
+
+
+
+
+Models and collisions
+================================================================================
+
+To facilitate model development, OnlyGL provides a Model class. This class is
+allocated in only.gl.models package. This Model class offers minimal information
+about the model. A Model stores its (x,y,z) coordinates, its color and its name
+(OpenGL name, for pick functions). Furthermore, a Model offers a selection
+mechanism for remark the object in the scene.
+
+Model class is an abstract class and it must not use directly. You can use
+``model`` method to define what object is rendered.
+
+A BoxModel is provided too. This is a subclass of Model, the simplest object
+that it can be rendered.
+
+OnlyGL provides a very simple collision detection system. Each model defines a
+``collision`` method who indicates if a collision exists. Furthermore, this
+method receives a ``xzy`` optional parameter. If xyz is True, it references a 3D
+collision. In other case, only 2D collision is considered.

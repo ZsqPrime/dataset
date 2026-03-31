@@ -1,0 +1,16 @@
+1,
+current folder is at cm7\device\coolpad\D530
+2, 
+ChangeSource folder is at cm7\
+
+
+
+
+Project Description:
+coolpad_d530_cm7
+
+README:
+1,
+current folder is at cm7\device\coolpad\D530
+2, 
+ChangeSource folder is at cm7\

@@ -1,0 +1,8 @@
+THIS CRATE IS DEPRECATED, please use https://github.com/servo/rust-bindgen.
+
+
+Project Description:
+binding generator for rust language
+
+README:
+THIS CRATE IS DEPRECATED, please use https://github.com/servo/rust-bindgen.

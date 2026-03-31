@@ -1,0 +1,11 @@
+Analysis for silviscan data for two ten-year-old clonal trials. Data set Master.Data.csv is not publicly available.
+
+The first version of the R code only deals with setting up the data set properly, cleaning, descriptive stats and very basic linear mixed models.
+
+Project Description:
+None
+
+README:
+Analysis for silviscan data for two ten-year-old clonal trials. Data set Master.Data.csv is not publicly available.
+
+The first version of the R code only deals with setting up the data set properly, cleaning, descriptive stats and very basic linear mixed models.

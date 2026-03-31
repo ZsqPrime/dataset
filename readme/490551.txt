@@ -1,0 +1,8 @@
+* ##stolensun## is a HTML5 canvas animation written in Javascript using EaselJS (http://easeljs.com) and TweenJS (http://www.tweenjs.com) libraries. The animation can be found at http://konstantin.pics/post/112117365665/stolen-sun.
+
+
+Project Description:
+
+
+README:
+* ##stolensun## is a HTML5 canvas animation written in Javascript using EaselJS (http://easeljs.com) and TweenJS (http://www.tweenjs.com) libraries. The animation can be found at http://konstantin.pics/post/112117365665/stolen-sun.

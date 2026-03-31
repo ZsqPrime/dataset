@@ -1,0 +1,5 @@
+Project Description:
+Project Euler solutions
+
+README:
+solutions to problems of the project Euler. Solved mainly in python.

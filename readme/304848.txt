@@ -1,0 +1,94 @@
+The Hutchinson Drought Index
+
+The Hutchinson Drought Index (or Drought Severity Index) is a climatic drought index 
+that was designed to reflect agricultural droughts using only rainfall data.
+
+This project includes an R package in the master branch and the documentation on the gh-pages branch.
+
+The index was invented by Professor Mike Hutchinson at the ANU in 1992 and 
+this project includes R codes written by Ivan Hanigan to describe the calculations 
+and also to download data to play with.
+
+Casual readers will probably want to go straight to Hutchinson's original report
+https://github.com/ivanhanigan/HutchinsonDroughtIndex/blob/master/inst/doc/HutchinsonDroughtIndex-original.pdf
+
+Readers wishing to reproduce the data analysis can do so by running the 'go.r' script
+(see the Specification.txt file for explanations of the structure of the code).
+
+Copyright is the GNU General Public License version 2 WITHOUT ANY WARRANTY,
+Ivan C Hanigan <ivan.hanigan@gmail.com> and Michael F Hutchinson.
+
+Please cite the original 1992 paper as well as this web repository as:
+1. Smith, D. I, Hutchinson, M. F, & McArthur, R. J. (1992) Climatic and
+   Agricultural Drought: Payments and Policy. (Centre for Resource and Environmental
+   Studies, Australian National University, Canberra, Australia).  
+   http://fennerschool-research.anu.edu.au/spatio-temporal/publications/cres_paper1992.pdf
+
+2. Hanigan, IC. 2012. The Hutchinson Drought Index Algorithm [Computer Software]. 
+   https://github.com/ivanhanigan/HutchinsonDroughtIndex
+
+Financial support was provided by Professor Tony McMichael's 
+"Australia Fellowship" from the the National Health and Medical Research Council, via the 
+National Centre for Epidemiology and Population Health, Australian National University.  
+
+The citations for the datasets used in this demonstration are:
+1. Bureau of Meteorology High Quality Monthly precipitation data 
+   downloaded on 2012-01-09 
+   from ftp://ftp.bom.gov.au/anon/home/ncc/www/change/HQmonthlyR/HQ_monthly_prcp_txt.tar
+   
+2. Australian Bureau of Statistics Statistical Divisions 2006 
+   downloaded on 2012-01-09 
+   from http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1259.0.30.0022006?OpenDocument
+
+Ivan Hanigan
+2012-02-24
+
+
+Project Description:
+The Hutchinson Drought Index reflects agricultural droughts using only rainfall data 
+
+README:
+The Hutchinson Drought Index
+
+The Hutchinson Drought Index (or Drought Severity Index) is a climatic drought index 
+that was designed to reflect agricultural droughts using only rainfall data.
+
+This project includes an R package in the master branch and the documentation on the gh-pages branch.
+
+The index was invented by Professor Mike Hutchinson at the ANU in 1992 and 
+this project includes R codes written by Ivan Hanigan to describe the calculations 
+and also to download data to play with.
+
+Casual readers will probably want to go straight to Hutchinson's original report
+https://github.com/ivanhanigan/HutchinsonDroughtIndex/blob/master/inst/doc/HutchinsonDroughtIndex-original.pdf
+
+Readers wishing to reproduce the data analysis can do so by running the 'go.r' script
+(see the Specification.txt file for explanations of the structure of the code).
+
+Copyright is the GNU General Public License version 2 WITHOUT ANY WARRANTY,
+Ivan C Hanigan <ivan.hanigan@gmail.com> and Michael F Hutchinson.
+
+Please cite the original 1992 paper as well as this web repository as:
+1. Smith, D. I, Hutchinson, M. F, & McArthur, R. J. (1992) Climatic and
+   Agricultural Drought: Payments and Policy. (Centre for Resource and Environmental
+   Studies, Australian National University, Canberra, Australia).  
+   http://fennerschool-research.anu.edu.au/spatio-temporal/publications/cres_paper1992.pdf
+
+2. Hanigan, IC. 2012. The Hutchinson Drought Index Algorithm [Computer Software]. 
+   https://github.com/ivanhanigan/HutchinsonDroughtIndex
+
+Financial support was provided by Professor Tony McMichael's 
+"Australia Fellowship" from the the National Health and Medical Research Council, via the 
+National Centre for Epidemiology and Population Health, Australian National University.  
+
+The citations for the datasets used in this demonstration are:
+1. Bureau of Meteorology High Quality Monthly precipitation data 
+   downloaded on 2012-01-09 
+   from ftp://ftp.bom.gov.au/anon/home/ncc/www/change/HQmonthlyR/HQ_monthly_prcp_txt.tar
+   
+2. Australian Bureau of Statistics Statistical Divisions 2006 
+   downloaded on 2012-01-09 
+   from http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1259.0.30.0022006?OpenDocument
+
+Ivan Hanigan
+2012-02-24

@@ -1,0 +1,8 @@
+Moved here: https://github.com/cloudera/hdfs-nfs-proxy
+
+
+Project Description:
+HDFS NFS Proxy - MOVED to this location https://github.com/cloudera/hdfs-nfs-proxy
+
+README:
+Moved here: https://github.com/cloudera/hdfs-nfs-proxy

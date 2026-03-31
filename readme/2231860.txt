@@ -1,0 +1,37 @@
+PHP Library for ge.tt API
+
+It's early version, which handles the following:
+* Authentication process.
+* Sending & Processing results of Requests.
+* Most of errors that happen while Authenticating or Requests.
+
+Contributions are welcome!
+
+
+See test.php how it works.
+
+Project Description:
+PHP Library for ge.tt API
+
+README:
+PHP Library for ge.tt API
+
+
+
+It's early version, which handles the following:
+
+* Authentication process.
+
+* Sending & Processing results of Requests.
+
+* Most of errors that happen while Authenticating or Requests.
+
+
+
+Contributions are welcome!
+
+
+
+
+
+See test.php how it works.

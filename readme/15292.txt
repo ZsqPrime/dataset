@@ -1,0 +1,5 @@
+Project Description:
+Pimps scalaz and jodatime, and provides specs2 matchers for Validation and IO
+
+README:
+Stuff I need in most scala projects

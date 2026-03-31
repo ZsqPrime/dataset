@@ -1,0 +1,5 @@
+Project Description:
+Java app to log placement activities
+
+README:
+Simple java app for placement logs

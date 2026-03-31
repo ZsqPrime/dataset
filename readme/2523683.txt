@@ -1,0 +1,8 @@
+Project Description:
+Sunshade.me
+
+README:
+Remember your umbrella!
+---------
+
+Sunshade is a Rails application that checks daily weather forecasts and emails its users a reminder to carry an umbrella if there is rain in their city's forecast.

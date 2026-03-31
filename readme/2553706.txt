@@ -1,0 +1,5 @@
+Project Description:
+An eclipse plugin for compressing javascript and CSS files
+
+README:
+Web site: http://jscompressor.oncereply.me

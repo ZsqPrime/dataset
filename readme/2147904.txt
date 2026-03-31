@@ -1,0 +1,12 @@
+# Swagger Sample App
+
+## This project is deprecated.  Please see [swagger-core](https://github.com/wordnik/swagger-core/blob/master/samples/scala-jaxrs/README.md) for an updated example.
+
+
+Project Description:
+A fully-functioning, stand-alone Swagger server written in scala which demonstrates how to enable Swagger in your API.
+
+README:
+# Swagger Sample App
+
+## This project is deprecated.  Please see [swagger-core](https://github.com/wordnik/swagger-core/blob/master/samples/scala-jaxrs/README.md) for an updated example.

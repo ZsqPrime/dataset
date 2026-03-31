@@ -1,0 +1,7 @@
+This file was created by IntelliJ IDEA 10.0.3 for binding GitHub repository
+
+Project Description:
+An application to view CSV files on the console.
+
+README:
+This file was created by IntelliJ IDEA 10.0.3 for binding GitHub repository

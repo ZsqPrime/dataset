@@ -1,0 +1,5 @@
+Project Description:
+Repositorio para el proyecto 1 de ICC2 - Travelling salesman problem (TSP)
+
+README:
+Test 1.0 desde eclipse con EGit 2

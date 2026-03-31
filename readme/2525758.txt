@@ -1,0 +1,12 @@
+Project Description:
+A no-nonsense SQLite server
+
+README:
+alfred - A no-nonsense SQLite server.
+
+ > make             # Read the Makefile for more compilation options.
+ > ./alfred -h      # Read the comments in main.c for implementation details.
+
+E.g.
+ > ./alfred mydatabase.db &
+ > telnet localhost 3876

@@ -1,0 +1,32 @@
+# mahout-in-action
+
+Clojure Examples from Mahout in Action
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 Roman Scherer
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
+
+Project Description:
+Clojure Examples from Mahout in Action
+
+README:
+# mahout-in-action
+
+Clojure Examples from Mahout in Action
+
+## Usage
+
+FIXME: write
+
+## License
+
+Copyright (C) 2012 Roman Scherer
+
+Distributed under the Eclipse Public License, the same as Clojure.

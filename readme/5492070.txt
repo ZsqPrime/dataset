@@ -1,0 +1,30 @@
+Project Description:
+Bassoon Fingering Finder
+
+README:
+== BFF (Bassoon Fingering Finder)
+
+== Description
+Ever wanted to know the best bassoon fingering to use for a passage of music but don't want to look through pages upon pages of 
+fingerings? Well then, Bassoon Fingering Finder is for you! Bassoon Fingering Finder is a web application for looking up bassoon fingerings 
+for a note or series of notes. Bassoon Fingering Finder is currently in development by a Senior Design Team from the University of Idaho. 
+Questions or suggestions? Send us an email at bassoonfingeringfinder@gmail.com!
+
+== Links
+Team Webpage: link:http://mindworks.shoutwiki.com/wiki/Bassoon_Fingering_Finder_%28BFF%29
+
+== Contact Address
+bassoonfingeringfinder@gmail.com
+
+== Sponsor
+Dr. Susan Hess
+
+== Advisor
+Dr. Paul Oman
+
+== Developers
+* Ryan Sacksteder
+* Pierce Trey
+* Jacob Flynn
+* Max Stillwell
+* Sasha Solomon

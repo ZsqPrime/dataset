@@ -1,0 +1,7 @@
+Project has moved here: https://github.com/bitstadium/HockeySDK-Windows
+
+Project Description:
+SDK to use HockeyApp in Windows Phone apps.
+
+README:
+Project has moved here: https://github.com/bitstadium/HockeySDK-Windows

@@ -1,0 +1,9 @@
+Project Description:
+Forum Online Time Cheater
+
+README:
+FOTC is a php-based simple and extensible forum online time cheater. Unlike those auto-refresh plugins, FOTC works on your server.
+
+Need cron and cURL supported on server
+
+May Madoka be with you.

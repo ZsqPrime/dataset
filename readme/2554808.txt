@@ -1,0 +1,4 @@
+Project Description:
+some Python scripts for constrained pseudo-Boolean optimization
+
+README:

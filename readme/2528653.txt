@@ -1,0 +1,18 @@
+Project Description:
+
+
+README:
+choir_sample.py 
+
+WARNING: changed syntax from first versions
+
+USAGE: choir_sample.py number_of_copies outfile infile1 [infile2 [infile3 ...[infileN]...]]
+
+This script uses ecasound to try and achieve the effect of many people hitting
+a drum. 
+
+It takes N samples (for example, 3 kind of different snares), and on each performs the folowing operations number_of_copies times:
+-adds a randomized quantity of silence at the beginning
+-makes a randomized gain attenuation
+
+Finally it mixes all down to the outfile and normalizes.

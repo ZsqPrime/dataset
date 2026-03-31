@@ -1,0 +1,5 @@
+Project Description:
+Removes username char limit in Multisite Setup; introduces new limit to min 2 chars instead of 4.
+
+README:
+Removes username char limit in Multisite Setup; introduces new limit to min 2 chars instead of 4.

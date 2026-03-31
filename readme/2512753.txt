@@ -1,0 +1,6 @@
+
+
+Project Description:
+assorted programs for the MSP430 microcontroller platform
+
+README:

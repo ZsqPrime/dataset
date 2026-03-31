@@ -1,0 +1,6 @@
+
+
+Project Description:
+IRCd designed for the game Earth2Me
+
+README:

@@ -1,0 +1,16 @@
+Hidden Markov Model
+======
+Just a simple Java class for HMM's.  
+
+Nothing too horribly fancy.
+
+
+Project Description:
+Hidden Markov Model
+
+README:
+Hidden Markov Model
+======
+Just a simple Java class for HMM's.  
+
+Nothing too horribly fancy.

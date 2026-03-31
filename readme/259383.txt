@@ -1,0 +1,18 @@
+* Emacs Club Page
+
+** admin
+   Emacs Club administrative documents
+** content
+   Content for the emacs club website
+
+
+Project Description:
+Lectures, Labs, Code, and Records for the Emacs Club @ Penn
+
+README:
+* Emacs Club Page
+
+** admin
+   Emacs Club administrative documents
+** content
+   Content for the emacs club website

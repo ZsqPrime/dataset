@@ -1,0 +1,8 @@
+Android component of the Rhus project
+
+
+Project Description:
+Android application for the Rhus project
+
+README:
+Android component of the Rhus project

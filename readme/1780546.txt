@@ -1,0 +1,8 @@
+predicting stock prices using tweets sentiment analysis
+
+
+Project Description:
+twt-stock
+
+README:
+predicting stock prices using tweets sentiment analysis

@@ -1,0 +1,16 @@
+Project Description:
+Android Taschenrechner für meine GFS
+
+README:
+=================================================
+=================================================
+Das hier ist meine App, die ich in Informatik in
+meiner GFS als Beispielprojekt benutzen werde.
+
+=================================================
+
+Diese App ist keinesfalls einsatzfähig oder
+ähnliches, sondern dient nur zu
+Demonstrationszwecken. ;)
+=================================================
+=================================================

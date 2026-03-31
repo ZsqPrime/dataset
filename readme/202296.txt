@@ -1,0 +1,8 @@
+Style manager for the fluxbox window manager
+
+
+Project Description:
+Old style manager for Fluxbox
+
+README:
+Style manager for the fluxbox window manager

@@ -1,0 +1,3 @@
+== jCMS - juntaDados Content Managament System - A Simple Blog Tool
+
+Experimental Tool made with Ruby on Rails for a Simple Content Managament System (Blog)

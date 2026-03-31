@@ -1,0 +1,5 @@
+Project Description:
+
+
+README:
+Django app that accepts entries for every workout you do. The section to determine a winner uses a wheel of fortune type wheel written in html, with sound effects!

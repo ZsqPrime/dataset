@@ -1,0 +1,11 @@
+Project Description:
+
+
+README:
+SoftDrinkLover is a simple rails application used to keep track of the sotdrink at a workplace
+Of course something like a spreadsheet at google docs would be easier, but I'm playing with rspec and cucumber
+
+
+
+Generated the app from this recipe
+https://gist.github.com/989132

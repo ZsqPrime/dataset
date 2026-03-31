@@ -1,0 +1,8 @@
+a collection of files for my dwm setup
+
+
+Project Description:
+None
+
+README:
+a collection of files for my dwm setup

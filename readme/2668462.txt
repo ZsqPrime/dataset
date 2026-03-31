@@ -1,0 +1,10 @@
+Project Description:
+Blacklight app for the Presence repository at the University of Kentucky
+
+README:
+== Presence
+
+Presence is a digital repository in development at the 
+University of Kentucky.  This is a demo Blacklight app
+handling the search and retrieval of information about
+files submitted to the repository.

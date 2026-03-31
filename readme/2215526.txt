@@ -1,0 +1,6 @@
+
+
+Project Description:
+Serial Protocol (packet/frame based) library for Arduino intercommunication
+
+README:

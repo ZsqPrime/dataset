@@ -1,0 +1,6 @@
+Project Description:
+JavaScript Validation Library
+
+README:
+A JavaScript Validation Library
+==========

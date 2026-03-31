@@ -1,0 +1,16 @@
+Install Script for Kids Ruby
+To use simply clone, go to the directory, and enter:
+<dir>$ ./install.sh
+
+- The install script is dependent on bash & aptitude
+
+
+Project Description:
+Install scripts for kids ruby
+
+README:
+Install Script for Kids Ruby
+To use simply clone, go to the directory, and enter:
+<dir>$ ./install.sh
+
+- The install script is dependent on bash & aptitude

@@ -1,0 +1,17 @@
+Project Description:
+This repo is outdated. A newer version / workflow exists at https://github.com/proximitybbdo/joints
+
+README:
+# Backbone example
+With:
+
+* Backbone
+* Underscore
+* ICanHaz + Mustache
+* Require.js
+
+(based on the Proximinade 'framework')
+
+## Notice
+Backbone and Underscore are adapted for Require.js use.
+I converted ICanHaz with r.js for Require.js use as well.

@@ -1,0 +1,19 @@
+Trying to create a rest api automtically as a wsgi middleware, on the base of a gae model class
+
+run make nose for test
+include restify.py in your project and add for gae class member
+RestifyMiddleware(get_application(), Member, 'member')
+
+this is of course not safe, you are exposing your model classes as is for the whole world to abuse.
+
+Project Description:
+Automatically create a rest api for gae db.model objects
+
+README:
+Trying to create a rest api automtically as a wsgi middleware, on the base of a gae model class
+
+run make nose for test
+include restify.py in your project and add for gae class member
+RestifyMiddleware(get_application(), Member, 'member')
+
+this is of course not safe, you are exposing your model classes as is for the whole world to abuse.

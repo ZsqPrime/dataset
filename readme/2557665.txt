@@ -1,0 +1,4 @@
+Project Description:
+Yet another JavaScript slideshow... 
+
+README:

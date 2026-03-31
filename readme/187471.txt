@@ -1,0 +1,144 @@
+openstm32hw README
+
+The aim is to provide Open Source hardware designs for STM32.
+
+This repository grew from a discussion thread on LeafLabs Maple forum:
+http://forums.leaflabs.com/topic.php?id=1303
+
+It was initially triggered by ala42 who had released a first cut at libmaple for STM32F4:
+http://forums.leaflabs.com/topic.php?id=1268&page=2#post-7828
+
+and siy's hardware design:
+http://forums.leaflabs.com/topic.php?id=1303&page=2&replies=46#post-7882
+
+
+Subdirs:
+
+	MM4 - Leaf Labs Maple Mini clone for 64 pin F1/L1/F4 processors
+		in 0.8" width and 2 layers.
+
+	Mini64 - STM32 development board for OpenSTM32
+		 Features:
+		 - Small (52x38.4mm) breadboard compatible design.
+		 - Support for STM32F103/F2xx/F4xx in 64-pin packages.
+		 - Uses Eagle 5.1
+
+	Mini48 - Reworked version of Maple Mini suitable for DIY PCB production
+		and on-board RTC crystal. Uses Eagle 5.1
+
+	Mini48U - Ultimate version of Mini48. Still suitable for DIY PCB production
+		but smaller parts (0402) and optimized layout allowed make it in the
+		format of original Maple Mini with 0.6" pin header rows pitch.
+		Uses Eagle 5.1
+
+	Mini48SE - This version is very similar to Maple Mini, but it does not 
+		preserve its pinout. It also heavily utilizes second side to 
+		achieve maximal possible density. As a consequence this version 
+		is probably smallest STM32F103Cxx board - it has 0.5" pitch 
+		and size is only 50.5x15mm. At the same time board uses no 
+		extremely small components - all resistors and capacitors 
+		are 0603 (one even 0805), LED - 1206, LDO - 1117.
+		Uses Eagle 6.3.0
+		The design is tested.
+
+	Mini64SE - Different approach to boards based on MCU in LQFP64 package. 
+		It has DIP48 format with 0.8" pitch. The design follows same 
+		approach as Mini48SE and utilizes both sides. Separate 
+		versions of design for F1 and F2/F4 series are provided. 
+		Version for F2/F4 uses different ESD protection and lacks 
+		external disconnect cirquitry. These changes are necessary 
+		to enable F2/F4 chips work properly in all supported USB modes
+		(Device/OTG) and with different powering (self powering and 
+		bus powering).
+		Uses Eagle 6.3.0 
+		Design for F1 is tested, design for F4 still is not yet tested.
+
+	Orone-mini - series of boards intended to be more easily 'DIY-able'
+		than LeafLabs Maple-mini, and incorporate several improvements.
+		The first boards, Orone-mini-S8x have pins 0.2" wider 
+		than Maple-mini. They are otherwise software and pin-compatible 
+		with Maple-mini (exception is 'av+' which is intended to 
+		improve the power supply capability). 
+                Not yet tested.
+
+	PiXe-2: 'Stamp' format, 64pin STM32F103 MCU. Eagle 5.1
+                Features: 
+		- Dual-in-line 0.1" grid
+		- 0805 or larger parts -> easier assembly
+		- Internal Maple pins available & re-configurable
+		- modest 10mil track/space rules DIY-able
+
+
+Project Description:
+Open Source Hardware for STM32, complementing openstm32
+
+README:
+openstm32hw README
+
+The aim is to provide Open Source hardware designs for STM32.
+
+This repository grew from a discussion thread on LeafLabs Maple forum:
+http://forums.leaflabs.com/topic.php?id=1303
+
+It was initially triggered by ala42 who had released a first cut at libmaple for STM32F4:
+http://forums.leaflabs.com/topic.php?id=1268&page=2#post-7828
+
+and siy's hardware design:
+http://forums.leaflabs.com/topic.php?id=1303&page=2&replies=46#post-7882
+
+
+Subdirs:
+
+	MM4 - Leaf Labs Maple Mini clone for 64 pin F1/L1/F4 processors
+		in 0.8" width and 2 layers.
+
+	Mini64 - STM32 development board for OpenSTM32
+		 Features:
+		 - Small (52x38.4mm) breadboard compatible design.
+		 - Support for STM32F103/F2xx/F4xx in 64-pin packages.
+		 - Uses Eagle 5.1
+
+	Mini48 - Reworked version of Maple Mini suitable for DIY PCB production
+		and on-board RTC crystal. Uses Eagle 5.1
+
+	Mini48U - Ultimate version of Mini48. Still suitable for DIY PCB production
+		but smaller parts (0402) and optimized layout allowed make it in the
+		format of original Maple Mini with 0.6" pin header rows pitch.
+		Uses Eagle 5.1
+
+	Mini48SE - This version is very similar to Maple Mini, but it does not 
+		preserve its pinout. It also heavily utilizes second side to 
+		achieve maximal possible density. As a consequence this version 
+		is probably smallest STM32F103Cxx board - it has 0.5" pitch 
+		and size is only 50.5x15mm. At the same time board uses no 
+		extremely small components - all resistors and capacitors 
+		are 0603 (one even 0805), LED - 1206, LDO - 1117.
+		Uses Eagle 6.3.0
+		The design is tested.
+
+	Mini64SE - Different approach to boards based on MCU in LQFP64 package. 
+		It has DIP48 format with 0.8" pitch. The design follows same 
+		approach as Mini48SE and utilizes both sides. Separate 
+		versions of design for F1 and F2/F4 series are provided. 
+		Version for F2/F4 uses different ESD protection and lacks 
+		external disconnect cirquitry. These changes are necessary 
+		to enable F2/F4 chips work properly in all supported USB modes
+		(Device/OTG) and with different powering (self powering and 
+		bus powering).
+		Uses Eagle 6.3.0 
+		Design for F1 is tested, design for F4 still is not yet tested.
+
+	Orone-mini - series of boards intended to be more easily 'DIY-able'
+		than LeafLabs Maple-mini, and incorporate several improvements.
+		The first boards, Orone-mini-S8x have pins 0.2" wider 
+		than Maple-mini. They are otherwise software and pin-compatible 
+		with Maple-mini (exception is 'av+' which is intended to 
+		improve the power supply capability). 
+                Not yet tested.
+
+	PiXe-2: 'Stamp' format, 64pin STM32F103 MCU. Eagle 5.1
+                Features: 
+		- Dual-in-line 0.1" grid
+		- 0805 or larger parts -> easier assembly
+		- Internal Maple pins available & re-configurable
+		- modest 10mil track/space rules DIY-able

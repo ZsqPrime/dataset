@@ -1,0 +1,14 @@
+camel-twitter
+=============
+
+Twitter component for Apache Camel
+
+
+Project Description:
+Twitter component for Apache Camel
+
+README:
+camel-twitter
+=============
+
+Twitter component for Apache Camel

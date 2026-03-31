@@ -1,0 +1,34 @@
+Project Description:
+Hides classes on the classpath using java agent.
+
+README:
+This is a Java agent that throws ClassNotFoundException for classes on the classpath but matching the path-hole agent filter.
+
+Usage java -javaagent:path-hole.jar -Dpath_hole.filter=com.foo.Bar,com.baz.*Test
+
+The filter is a comma seperated list of fully qualified java names with optional wildcard character that matches everything
+
+You can allow a type of ClassLoaders to load the classes even if the pattern matches. Use
+
+-Dpath_hole.unfiltered.cls=com.mycompany.MyClassLoader,com.mycompany.MyClassLoader2
+
+To build the project use maven
+
+from the root of project run
+
+mvn clean package
+
+The use as dependency of project use
+
+<repositories>
+    <repository>
+        <id>path-hole</id>
+        <url>https://raw.github.com/avrecko/path-hole/master/repository</url>
+    </repository>
+</repositories>
+
+<dependency>
+   <groupId>com.typesafe</groupId>
+   <artifactId>path-hole</artifactId>
+   <version>1.0</version>
+</dependency>

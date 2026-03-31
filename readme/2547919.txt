@@ -1,0 +1,15 @@
+Project Description:
+For the Pason Battleship programming competition being held on Feb 4, 2012.
+
+README:
+To Compile:
+===========
+1. In the folder with all source files, run:
+	g++ *.cpp
+
+
+To Run:
+===========
+1. Execute ./a.out [server] [port] [user] [pass] [SEQ|RAND]
+
+where SEQ is a sequential search algorithm and RAND is a random search algorithm.

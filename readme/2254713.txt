@@ -1,0 +1,7 @@
+This is a php class that interacts with couchdb that doesn't bother with any kind of catching of errors. 
+
+Project Description:
+Easy PHP Couchdb interface
+
+README:
+This is a php class that interacts with couchdb that doesn't bother with any kind of catching of errors.

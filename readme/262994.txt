@@ -1,0 +1,7 @@
+This is the source control repository for the Slech project.
+
+Project Description:
+Shared Learning of Technology: This project is a shared technical learning project.  It will have social features and many other features to make shared learning and information available for consumption.
+
+README:
+This is the source control repository for the Slech project.

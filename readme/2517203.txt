@@ -1,0 +1,14 @@
+ocaml-fdinfo is under the MIT license.
+
+It's a small library written in O'Caml to get the current offset and flags of files opened by another process. 
+It's really easy to use. Please checkout fdinfo_example.ml for an example.
+
+
+Project Description:
+A library to get infos such as the offset and flags on files opened by another processus
+
+README:
+ocaml-fdinfo is under the MIT license.
+
+It's a small library written in O'Caml to get the current offset and flags of files opened by another process. 
+It's really easy to use. Please checkout fdinfo_example.ml for an example.

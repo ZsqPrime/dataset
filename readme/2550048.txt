@@ -1,0 +1,4 @@
+Project Description:
+Chrome extension to helps G+ users to manage their games
+
+README:

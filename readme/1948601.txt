@@ -1,0 +1,11 @@
+Evaldraw scripts require Ken Silverman's / Robert Rodgers' evaldraw to run
+
+evaldraw can be found here: http://advsys.net/ken/download.htm
+
+Project Description:
+require evaldraw.exe to run
+
+README:
+Evaldraw scripts require Ken Silverman's / Robert Rodgers' evaldraw to run
+
+evaldraw can be found here: http://advsys.net/ken/download.htm

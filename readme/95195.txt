@@ -1,0 +1,325 @@
+Overview
+--------
+
+Libwaveform attempts to provide versatile easy-to-use interactive display
+of audio waveforms for Gtk+-2 and X11 applications. Suitable for anything from simple
+display, up to a full digital audio workstation.
+
+![Screenshot](screenshot.webp "Screenshot")
+
+Efficiency:
+
+* audio and peak data is handled in blocks to get reasonable performance with large files.
+* opengl hardware features are used where available.
+* multi-level caching.
+* the view can be changed (size, position, magnification) at little cost.
+* in many cases drawing can be done repeatedly with virtually no cpu load.
+
+Multi-level caching is provided:
+
+* peak files are saved to disk roughly following freedeskop.org standards. (Ardour session peak files are also supported.)
+* peak files are cached in ram at multiple resolutions.
+* audio is cached in ram for use at high resolutions.
+* peak data is stored as OpenGL textures for use with shader programs.
+* rendered and filtered images are stored as OpenGL FBO's.
+
+Magnification and translation transitions are animated.
+
+There are 4 main ways of using libwaveform:
+
+1. the WaveformView Gtk widget
+2. with OpenGL using the WaveformActor interface
+3. rendering to a GdkPixbuf
+4. rendering to an Alphabuf
+
+Requirements:
+
+- GLX
+- Libsndfile and/or FFmpeg (Libsndfile is recommended if you are using wav or flac files)
+- Gtk2/SDL (optional)
+
+
+Status
+------
+
+Main functionality is in place and well tested, but some areas are subject to improvement. There
+are no known serious bugs so please report any you find. Feedback is wanted on
+API, documentation, and visuals.
+
+An API review needs to be undertaken before a release is made.
+
+Adding support for other platfroms is relatively easy to do but there is currently no demand.
+Gtk-4 support is the next objective, followed by Wayland. Sadly, it will be necessary to drop
+support for systems that dont support OpenGL 3 in the near future.
+
+GPU Testing:
+The GPU requirements are not heavy, and no issues have been reported. Most development
+is done on Intel HD graphics.
+
+If you are able to help testing, please start with running test/view_plus_test.
+To compile the test programs you need to run configure with '--enable-test'.
+
+
+WaveformView
+------------
+
+The easiest way to use libwaveform is via the WaveformView Gtk widget.
+
+The widget will show the complete audio file and can be panned and zoomed
+down to sample level.
+
+To use the widget:
+```c
+	WaveformView* waveform = waveform_view_new(NULL);
+	waveform_view_load_file(waveform, "myfile.wav");
+```
+(then pack and show the widget as normal)	
+
+For a demonstration of usage, see: [view_test.c](test/view_plus.c)
+
+
+WaveformActor
+-------------
+
+The WaveformActor interface can be used to show a waveform on an
+existing OpenGL context. It is designed for use in editors
+and audio production tools.
+
+WaveformActor's share a common WfContext object to allow multiple
+waveforms to be positioned and scaled togeter.
+The context has the following directly settable properties:
+```c
+uint32_t sample_rate
+float    bpm
+float    samples_per_pixel
+int64_t  start_time
+float    v_gain
+```
+
+For a demonstration of usage, see: [test/actor.c](test/actor.c)
+
+Support for different peak formats is provided by 'loaders'. As
+well as the default peak file loader, an Ardour session loader is
+provided:
+```c
+	waveform_set_peak_loader(wf_load_ardour_peak);
+```
+or you can specify your own loader.
+
+
+GdkPixbuf
+---------
+
+Libwaveform provides the functions waveform_peak_to_pixbuf() and waveform_peak_to_pixbuf_async().
+
+GdkPixbuf is useful as an intermediate step to producing PNG output.
+
+See [test/pixbuf.c](test/pixbuf.c)
+
+
+AlphaBuf
+--------
+
+Alphabufs are useful in low level OpenGl applications.
+They do not use much texture memory but are not as efficient
+as using shaders.
+
+eg to create a texture for use with Clutter:
+```c
+	Waveform* waveform = waveform_load_new("myfile.wav");
+	AlphaBuf* a = waveform_alphabuf_new(waveform, -1, FALSE);
+	texture = cogl_texture_new_from_data(a->width, a->height, COGL_TEXTURE_NONE, COGL_PIXEL_FORMAT_A_8, COGL_PIXEL_FORMAT_ANY, a->width, a->buf);
+```
+
+The above creates a texture for the whole file.
+This is not appropriate for large files.
+
+It is planned to add better support for Clutter in the near future.
+
+
+Peak file cache
+---------------
+
+A cache of peak files is stored in XDG_CACHE_HOME (default ~/.cache/).
+Files are removed if older than 30 days.
+They are stored with standard WAV headers and contain alternating 16bit integer values for plus and minus peak values.
+One pair of values (for each channel) is stored for every 256 frames of the original audio file.
+
+
+Zoom levels
+-----------
+
+There are five distinct drawing modes depending on the zoom level.
+Each mode has 16 times the resolution of the previous.
+
+- Very Low res.
+- Low res uses a 256 pixel texture per 256^3 audio frames.
+- Std res uses a 256 pixel texture per 256^2 audio frames.
+- Hi res draws individual lines, one per 16 audio frames.
+- V Hi res draws at full resolution, ie using all audio frames.
+
+
+
+Project Description:
+Libwaveform aims to provide efficient, versatile and easy-to-use display of audio waveforms for Gtk+-2 applications.
+
+README:
+Overview
+--------
+
+Libwaveform attempts to provide versatile easy-to-use interactive display
+of audio waveforms for Gtk+-2 and X11 applications. Suitable for anything from simple
+display, up to a full digital audio workstation.
+
+![Screenshot](screenshot.webp "Screenshot")
+
+Efficiency:
+
+* audio and peak data is handled in blocks to get reasonable performance with large files.
+* opengl hardware features are used where available.
+* multi-level caching.
+* the view can be changed (size, position, magnification) at little cost.
+* in many cases drawing can be done repeatedly with virtually no cpu load.
+
+Multi-level caching is provided:
+
+* peak files are saved to disk roughly following freedeskop.org standards. (Ardour session peak files are also supported.)
+* peak files are cached in ram at multiple resolutions.
+* audio is cached in ram for use at high resolutions.
+* peak data is stored as OpenGL textures for use with shader programs.
+* rendered and filtered images are stored as OpenGL FBO's.
+
+Magnification and translation transitions are animated.
+
+There are 4 main ways of using libwaveform:
+
+1. the WaveformView Gtk widget
+2. with OpenGL using the WaveformActor interface
+3. rendering to a GdkPixbuf
+4. rendering to an Alphabuf
+
+Requirements:
+
+- GLX
+- Libsndfile and/or FFmpeg (Libsndfile is recommended if you are using wav or flac files)
+- Gtk2/SDL (optional)
+
+
+Status
+------
+
+Main functionality is in place and well tested, but some areas are subject to improvement. There
+are no known serious bugs so please report any you find. Feedback is wanted on
+API, documentation, and visuals.
+
+An API review needs to be undertaken before a release is made.
+
+Adding support for other platfroms is relatively easy to do but there is currently no demand.
+Gtk-4 support is the next objective, followed by Wayland. Sadly, it will be necessary to drop
+support for systems that dont support OpenGL 3 in the near future.
+
+GPU Testing:
+The GPU requirements are not heavy, and no issues have been reported. Most development
+is done on Intel HD graphics.
+
+If you are able to help testing, please start with running test/view_plus_test.
+To compile the test programs you need to run configure with '--enable-test'.
+
+
+WaveformView
+------------
+
+The easiest way to use libwaveform is via the WaveformView Gtk widget.
+
+The widget will show the complete audio file and can be panned and zoomed
+down to sample level.
+
+To use the widget:
+```c
+	WaveformView* waveform = waveform_view_new(NULL);
+	waveform_view_load_file(waveform, "myfile.wav");
+```
+(then pack and show the widget as normal)	
+
+For a demonstration of usage, see: [view_test.c](test/view_plus.c)
+
+
+WaveformActor
+-------------
+
+The WaveformActor interface can be used to show a waveform on an
+existing OpenGL context. It is designed for use in editors
+and audio production tools.
+
+WaveformActor's share a common WfContext object to allow multiple
+waveforms to be positioned and scaled togeter.
+The context has the following directly settable properties:
+```c
+uint32_t sample_rate
+float    bpm
+float    samples_per_pixel
+int64_t  start_time
+float    v_gain
+```
+
+For a demonstration of usage, see: [test/actor.c](test/actor.c)
+
+Support for different peak formats is provided by 'loaders'. As
+well as the default peak file loader, an Ardour session loader is
+provided:
+```c
+	waveform_set_peak_loader(wf_load_ardour_peak);
+```
+or you can specify your own loader.
+
+
+GdkPixbuf
+---------
+
+Libwaveform provides the functions waveform_peak_to_pixbuf() and waveform_peak_to_pixbuf_async().
+
+GdkPixbuf is useful as an intermediate step to producing PNG output.
+
+See [test/pixbuf.c](test/pixbuf.c)
+
+
+AlphaBuf
+--------
+
+Alphabufs are useful in low level OpenGl applications.
+They do not use much texture memory but are not as efficient
+as using shaders.
+
+eg to create a texture for use with Clutter:
+```c
+	Waveform* waveform = waveform_load_new("myfile.wav");
+	AlphaBuf* a = waveform_alphabuf_new(waveform, -1, FALSE);
+	texture = cogl_texture_new_from_data(a->width, a->height, COGL_TEXTURE_NONE, COGL_PIXEL_FORMAT_A_8, COGL_PIXEL_FORMAT_ANY, a->width, a->buf);
+```
+
+The above creates a texture for the whole file.
+This is not appropriate for large files.
+
+It is planned to add better support for Clutter in the near future.
+
+
+Peak file cache
+---------------
+
+A cache of peak files is stored in XDG_CACHE_HOME (default ~/.cache/).
+Files are removed if older than 30 days.
+They are stored with standard WAV headers and contain alternating 16bit integer values for plus and minus peak values.
+One pair of values (for each channel) is stored for every 256 frames of the original audio file.
+
+
+Zoom levels
+-----------
+
+There are five distinct drawing modes depending on the zoom level.
+Each mode has 16 times the resolution of the previous.
+
+- Very Low res.
+- Low res uses a 256 pixel texture per 256^3 audio frames.
+- Std res uses a 256 pixel texture per 256^2 audio frames.
+- Hi res draws individual lines, one per 16 audio frames.
+- V Hi res draws at full resolution, ie using all audio frames.

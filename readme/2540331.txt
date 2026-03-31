@@ -1,0 +1,7 @@
+Project Description:
+Use a Kinect to auto-zoom the screen
+
+README:
+The Kinect UI is an ECE496 student project at the University of Toronto.
+
+Unless expressed otherwise, all code is licensed under the 2-clause BSD license.

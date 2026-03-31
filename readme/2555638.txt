@@ -1,0 +1,18 @@
+Project Description:
+An implementation in C of the Sobel Edge Detection operator for images
+
+README:
+An implementation in C of the Sobel edge detection operator on image files.  Written for my CprE 584 class.
+
+Start with this link:
+http://en.wikipedia.org/wiki/Sobel_operator
+
+Software model
+1)Duplicate folder structure and list which files need to be modified
+
+.c file
+.cpp software sim file
+makefile
+.s assembly file
+
+Hardware implementation

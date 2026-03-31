@@ -1,0 +1,7 @@
+Project Description:
+Django app to poll urls and check their contents
+
+README:
+Django Plugin/App that will regularly check urls and alerting you if criteria isn't met.
+
+Handy for verifying that production urls always contain expected data.

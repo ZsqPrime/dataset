@@ -1,0 +1,4 @@
+Project Description:
+create models for uniprot sequences from SUPERFAMILY allignments
+
+README:

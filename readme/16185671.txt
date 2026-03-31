@@ -1,0 +1,7 @@
+Project Description:
+Wireless AT Library
+
+README:
+libwat
+
+http://wiki.sangoma.com/libwat

@@ -1,0 +1,17 @@
+this is for j2se
+
+note:±àÂë¸ñÊ½ÊÇ  GBK
+
+
+note: the charset is gbk
+
+Project Description:
+this is a website for hiphop
+
+README:
+this is for j2se
+
+note:±àÂë¸ñÊ½ÊÇ  GBK
+
+
+note: the charset is gbk

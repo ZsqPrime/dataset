@@ -1,0 +1,4 @@
+Project Description:
+Aplicación para Android que cronometra el tiempo y señaliza cada kilómetro recorrido
+
+README:

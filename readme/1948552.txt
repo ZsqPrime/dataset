@@ -1,0 +1,50 @@
+= SsoAuth
+
+== Usage
+
+Gemfile
+
+  gem 'sso-auth'
+
+Run
+  bin/rails g sso:auth:install
+
+Layout
+
+  <body>
+    <%= render :partial => "sso-auth/shared/user_box" %>
+    ...
+    <%= yield %>
+  </body>
+
+== License
+
+This project rocks and uses MIT-LICENSE.
+
+
+Project Description:
+
+
+README:
+= SsoAuth
+
+== Usage
+
+Gemfile
+
+  gem 'sso-auth'
+
+Run
+  bin/rails g sso:auth:install
+
+Layout
+
+  <body>
+    <%= render :partial => "sso-auth/shared/user_box" %>
+    ...
+    <%= yield %>
+  </body>
+
+== License
+
+This project rocks and uses MIT-LICENSE.

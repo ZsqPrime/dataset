@@ -1,0 +1,9 @@
+Project Description:
+Slicer Front End for 3d Printers
+
+README:
+This is still in a proof-of-concept phase.
+
+License is GPL2
+
+Requires pygame, python 2.5 or higher, and wxPython (python-wxgtk)

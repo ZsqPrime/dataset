@@ -1,0 +1,6 @@
+Project Description:
+tFPDF is a version of FPDF, which supports UTF-8 and font-subsetting.
+
+README:
+
+Abandoned! See [docnet/tFPDF](https://github.com/DocnetUK/tfpdf)

@@ -1,0 +1,14 @@
+Aplicativo baseado no aplicativo do blog Espaço Liberdade [1]. Obrigado aos autores pela disponibilidade do código!
+
+
+[1] http://espacoliberdade.blog.br/blog/aplicativo-para-android/
+
+
+Project Description:
+Aplicativo da Revista Espírito Livre para Android
+
+README:
+Aplicativo baseado no aplicativo do blog Espaço Liberdade [1]. Obrigado aos autores pela disponibilidade do código!
+
+
+[1] http://espacoliberdade.blog.br/blog/aplicativo-para-android/

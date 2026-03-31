@@ -1,0 +1,43 @@
+Spring 2012 Scientometrics Projects: Project 1
+
+to use the script: in linux/unix
+[python DatafileConversion.py datafilename]
+
+[usage of makeVecFile.py:
+It needs a template file list.txt to track all of subjects. 
+python MakeVecFile.py  data.txt]
+
+[area-article.py : Feb-26  Read the pck files. generate vec files]
+
+[productiveResearcher.py: March 2nd, Read author pck file, generate vec files.]
+
+
+
+Changchen He
+Seung Hyun   
+
+///
+
+Project Description:
+student projects
+
+README:
+Spring 2012 Scientometrics Projects: Project 1
+
+to use the script: in linux/unix
+[python DatafileConversion.py datafilename]
+
+[usage of makeVecFile.py:
+It needs a template file list.txt to track all of subjects. 
+python MakeVecFile.py  data.txt]
+
+[area-article.py : Feb-26  Read the pck files. generate vec files]
+
+[productiveResearcher.py: March 2nd, Read author pck file, generate vec files.]
+
+
+
+Changchen He
+Seung Hyun   
+
+///

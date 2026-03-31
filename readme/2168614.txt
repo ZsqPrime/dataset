@@ -1,0 +1,10 @@
+An attempt to discover why creating software for learning and teaching first-order logic is impossible.
+
+
+
+
+Project Description:
+logic software for teaching logic
+
+README:
+An attempt to discover why creating software for learning and teaching first-order logic is impossible.

@@ -1,0 +1,7 @@
+Project Description:
+XNA/Monogame development toolset. New maintainer: https://github.com/PumpkinPaul/Gearset
+
+README:
+# Gearset
+
+New maintainer: https://github.com/PumpkinPaul/Gearset

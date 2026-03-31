@@ -1,0 +1,4 @@
+Project Description:
+A device to periodically log location and take camera stills. Each image will be geotagged within the EXIF data. The data will be logged to SD card. A desktop application will export the data to Google Earth.
+
+README:

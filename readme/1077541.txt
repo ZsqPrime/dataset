@@ -1,0 +1,15 @@
+File for 2012 Lab 6, Physic 308L at U. New Mexico
+Steven J. Koch stevekochscience@gmail.com
+Anthony L. Salvagno anthonysalvagno@gmail.com
+
+Credits: John Panitz and National Instruments "Contemporary Electronics"
+
+Project Description:
+None
+
+README:
+File for 2012 Lab 6, Physic 308L at U. New Mexico
+Steven J. Koch stevekochscience@gmail.com
+Anthony L. Salvagno anthonysalvagno@gmail.com
+
+Credits: John Panitz and National Instruments "Contemporary Electronics"

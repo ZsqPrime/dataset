@@ -1,0 +1,38 @@
+Project Description:
+
+
+README:
+These are applescripts for Plex (http://plexapp.com/) which you can use as "Speakable Items".
+
+Demo: https://www.youtube.com/watch?v=UF-fKfgkHfw
+
+Requires OS X Lion.
+
+If you haven't played with the speech recognition yet, here is how you get started:
+Open System preferences > speech
+- switch "speakable items" on.
+- choose microphone (I have mine on internal (I'm on a mbp))
+- I have chosen to let it "Listen continuously with keyword"
+- keyword is "optional before each command"
+- keyword: Choose what you want here. For example "Computer". My keyword is "Mac".
+
+So... what commands can you say? take a look in the folder ~/Library/Speech/Speakable Items/
+All files in there are commands. If you say one of the names of the files, the speech recognition will open that file.
+
+To add your own commands, you just need to add a file with your desired command as filename. 
+What I do is create an apple script to do a specific thing and save it as a Script using applescript editor.
+
+
+How to setup the scripts:
+1. First you need to download and install the scripting addon XMLTools2 as the scripts depend on it.
+http://www.latenightsw.com/freeware/XMLTools2/
+
+2. Go to http://IPADRESS:32400/library/sections, where IPADRESS is the (local) ip adress to the computer running plex media server (pms). If you are running pms on the same computer as you are running the plex client, just type  "localhost". When you've accessed the xml-page, check out what key-value the tv show section has. If the key is 2, you don't have to change anything. If it's another value, you need to change the 5th row in "Play TV Show.scpt".
+
+3. If you are running the server and the client on the same computer, you can skip this step. Otherwise, edit the hosts on row 4 and 5  in "Play TV Show.scpt" (replace "localhost" with the right ip adress).
+- pms is server on which you have the tv-shows.
+- plexClient is the client where you want it to play.
+
+4. add the files to the folder ~/Library/Speech/Speakable Items/
+
+Done!

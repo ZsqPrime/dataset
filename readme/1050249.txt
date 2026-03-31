@@ -1,0 +1,743 @@
+########################################################################
+#                   UnrealIRCD Service Framework
+########################################################################
+
+# Index
+########################################################################
+
+1. Description
+2. Download
+3. Installation
+4. Configuration
+5. Commands
+6. Modules
+7. Credits
+
+# 1. Description
+########################################################################
+
+UnrealIRCD Service Framework is a framework who provide an easy way to
+develop a service which link to an Unreal 3.2 network.
+With a little configuration it can link an connect a bot on many chans
+but he do nothing until it is completed by modules.
+
+# 2. Download
+########################################################################
+    a. Latest stable version
+    ------------------------
+There is no stable version for the moment
+
+    b. Latest live version
+    ----------------------
+Download live archive from
+  https://github.com/dlgg/UnrealIRCD-Service-Framework/tarball/master
+or you can use git :
+  git clone git://github.com/dlgg/UnrealIRCD-Service-Framework.git
+
+
+# 3. Installation 
+########################################################################
+- Extract it
+- Rename folder
+- Modify config.tcl
+- Run it
+
+You can add a crontab :
+* * * * * /path/to/framework.sh start
+
+# 4. Configuration
+########################################################################
+You will find below a list of variable which are safe to be changed.
+Please avoid to modify other variable unless you know what you do or if
+the developpers ask you to do it.
+
+    a. General options
+    ------------------
+debug             0 for no debug / 1 (default) for debug informations
+                  in log.
+
+    b. General options
+    ------------------
+::irc::lang       Available for the moment : en fr.
+::irc::pid        File where the pid should be wrote.
+
+    c. Service configuration
+    ------------------------
+::irc::ip         IP address of your IRC hub for the connection of the
+                  UnrealIRCD Framework Service.
+::irc::port       Port of your irchub. This need to be a serverport.
+::irc::password   Password specified un unrealircd.conf for the link.
+::irc::numeric    Unique identifier on the network of the service.
+::irc::servername Full DNS address of the service on the network.
+::irc::netname    Name of your IRC Network. Please be careful, this is
+                  case-sensitive and need to be the same on all the IRC
+                  servers.
+::irc::hub        Full DNS address of the hub where you connect the
+                  UnrealIRCD Framework Service.
+::irc::svcname    Name to use for the UnrealIRCD Framework. Tipically
+                  the name of your project.
+::irc::uversion   Version of unreal protocol to use.
+                  2310 : Unreal 3.2.9
+                  2309 : Unreal 3.2.6 3.2.7 3.2.8
+                  2308 : Unreal 3.2.5
+                  2307 : Unreal 3.2.4
+                  2306 : Unreal 3.2.3
+                  2305 : Unreal 3.2.2
+                  2304 : Unreal 3.2.1
+                  2303 : Unreal 3.2beta 3.2
+                  2302 : Unreal 3.1.1 to 3.1.4
+                  2301 : Unreal 3.1
+                  2300 : Unreal 3.0 
+::irc::ssl        Use SSL (1) or not (0). Please be sure to add ssl
+                  option in Unreal link block and connect to a SSL
+                  enabled port.
+::irc::token      Use TOKEN for raw to send and receive from network.
+                  Useless if service is on the same physical host of
+                  the hub where it is connected.
+
+    d. Master Bot Controller
+    ------------------------
+::irc::nick         Nickname of the main bot
+::irc::username     Username of the main bot
+::irc::hostname     Hostname of the main bot
+::irc::realname     GECOS of the main bot
+::irc::adminchan    Logchan for the services
+::irc::chanlist     Lists of all chans where the main bot needs to be.
+                    Don't add the modules chans. The bot will join it
+                    automatically.
+                    The masters bots addons will be active on all chans
+                    by default unless they are coded for filtering the
+                    chans.
+::irc::root         Name(s) of the main administrator(s) of the service.
+::irc::cmdchar      Character to use for prefixing the command. For not
+                    confusing with other bots or hiding the commands.
+
+    e. Modules
+    ----------
+::irc::toload       Lists of modules to load. This is the name of files
+                    under the modules directory whitout the extension.
+
+    f. Partyline configuration
+    --------------------------
+::pl::ip            IP to listen for the partyline. By default listen on
+                    all IP of the system (bind on 0.0.0.0)
+::pl::port          Port to listen for the partyline. By default 45000
+::pl::pass          Port to use for authentification on partyline. It is
+                    the same for all admins for the moment until admins
+                    code is done.
+::pl::myip          Primary IP of the partyline. It is used to permit
+                    partyline access via a dcc
+
+    g. Unreal link block
+    --------------------
+link tcl.hebeo.fr
+{
+        username        *;
+        hostname        *;
+        bind-ip         192.168.42.1;
+        port            7029;
+        hub             *;
+        password-connect "tclpur";
+        password-receive "tclpur";
+        class           servers;
+};
+
+You also need to add the servername of UnrealIRCD Framework Service to
+ulines block.
+
+ulines
+{
+  services.hebeo.fr;
+  tcl.hebeo.fr;
+};
+
+
+# 5. Commands
+########################################################################
+    a. IRC Commands
+    ---------------
+These commands needs to be preceded by the cmdchar defined in the config
+
+dcc           Make the service send a DCC CHAT invitation
+tok           Test command for the tokens
+ssl           Print SSL Information if SSL is enabled
+raw           Send a RAW to IRC network
+source        Source a file if it exist
+rehash        Reload the service
+die           Kill the service
+
+
+    b. Partylines Commands
+    ----------------------
+.pass         Authentify to the service
+.who          Print list of users on partyline
+.ssl          Print SSL Information if SSL is enabled
+.close        Close your partyline or a given partyline
+.raw          Send a RAW to IRC network
+.source       Source a file if it exist
+.rehash       Reload the service
+.die          Kill the service
+
+
+# 6. Modules
+########################################################################
+    a. Variables to use
+    -------------------
+You'll find below the variables that are not explain in the config part.
+
+::irc::botlist            Keep list of virtual users declared on the
+                          framework.
+::irc::userlist           Keep list of all users on the network.
+::irc::chanlist           Keep list of all chans.
+::irc::users($chan)       Keep list of users on a chan. 
+::irc::users($servername) Keep list of users on a server.
+::irc::regusers           Keep list of registered users.
+::irc::srvname2num($servername)
+::irc::srvname2num($numeric) Keep a map between servernames and numeric
+                             in decimal format.
+::tools::ub64chars        Base64 map for unreal numeric NICK and SJOIN
+::tools::ub64charsnickip  Base64 map for unreal NICKIP
+
+
+    b. Specific Tools TCL proc
+    --------------------------
+All procs are in namespace ::tools so you need to prefix each of
+followings procs by ::tools:: or import it in your namespace.
+
+charfilter $arg
+    Strip $arg for escaping dangerous characters
+
+stripmirc $arg
+   Strip $arg for removing mirc text modifier codes
+
+test $string1 $string2
+   Test if $string1 and $string2 are equals
+
+testcs $string1 $string2
+   Test if $string1 and $string2 are case-sensitive equals
+
+unixtime
+   Return the current timestamp in EPOCH format
+
+lremove $list $element
+   Return $list without $element
+
+llreplace $list $oldelement $newelement
+   Return $list with $oldelement replaced by $newelement
+
+nodouble $list
+   Return $list without any duplicated elements
+
+duration
+   Return a time in seconds in "xx days xx hours xx minutes xx seconds"
+
+rand $multiplier
+   Return a random integer from 0 to $multiplier
+
+dec2base/base2dec $num $baselist
+   Transform from/to base $num using $baselist as map
+
+is_user $nick
+    Return TRUE if the given nick is an user connected
+
+is_reg $nick
+    Return TRUE if the given nick is authentified to a nickserv
+    (umode +r)
+
+is_root $nick
+    Return TRUE if the given nick is a root of the service
+
+is_admin $nick
+    Return TRUE if the given nick is an admin or a root of the service
+
+is_admin_only $nick
+    Return TRUE if the given nick is an admin of the service
+
+is_oper $nick
+    Return TRUE if the given nick is an oper of the service
+
+is_oper_only $nick
+    Return TRUE if the given nick is an oper, an admin or a root of the
+    service
+
+is_chan $string
+    Return TRUE if the given $string start with a #
+
+
+    c. Specific IRC TCL proc
+    ------------------------
+All procs are in namespace ::irc so you need to prefix each of
+followings procs by ::irc:: or import it in your namespace.
+
+rehash
+    Rehash the service
+
+send $raw
+    Send a raw message by service
+
+bot_init $nick $username $hostname $gecos
+    Connect a virtual bot with given nick, username, hostname and gecos
+
+join_chan $bot $chan
+    Make a virtual bot join a chan and get +ao chanmodes
+
+
+    d. Hooks for developping modules
+    --------------------------------
+For register a hook use the proc ::irc::hook_register followed by the
+signal you want to hook and the full name of your proc.
+Hooks are done in front of events so before updating variables. Thinks
+of this when you use ::irc:: variables.
+
+Below you'll found a list of hooks with the parameters sent to the 
+called proc.
+
+sync
+    List of procs to call during netsync. This is the best place to use
+    for making your module bot to connect and join chans
+
+init
+    List of procs to call after netsync completion.
+
+join $nick $chan
+    List of procs to call when $nick join a chan. This is a global hook
+    who match on all chans of network
+
+join-$chan $nick
+    List of procs to call when $nick join the given $chan.
+
+part $nick $chan $reason
+    List of procs to call when $nick left a chan. This is a global hook
+    who match on all chans of network
+
+part-$chan $nick $reason
+    List of procs to call when $nick part the given $chan.
+
+kick $kicker $chan $nick $reason
+    List of procs to call when $nick is kicked by $kicker from $chan
+    for $reason.
+    This is a global hook who match on all chans of network
+
+kick-$chan $kicker $nick $reason
+    List of procs to call when $nick is kicked by $kicker from the
+    given $chan for $reason.
+
+quit $nick $reason
+    List of procs to call when $nick quit with the reason $reason.
+
+kill $nick $reason
+    List of procs to call when $nick is kill with the reason $reason.
+
+nick $oldnick $nick
+    List of procs to call when an user change nick from $oldnick to
+    $nick
+
+command-$name $nick $text
+    Bind a "/msg $masterbot $name" command.
+
+privmsgchan $nick $chan $text
+    List of procs to call when a PRIVMSG is send to a $chan where a bot
+    is.
+    $text is send escaped for security
+
+privmsg-#$chan $nick $text
+    List of procs to call when a PRIVMSG is send to a given $chan.
+    $text is send escaped for security
+
+privmsg-$bot $nick $text
+    List of procs to call when a PRIVMSG is send to a given $bot.
+    $text is send escaped for security
+    
+
+    e. Specific IRC TCL proc
+    ------------------------
+All procs below are in namespace ::pl so you need to prefix each of
+following procs by ::pl:: or import it in your namespace.
+
+send $sock $raw
+    Send a raw message to a pl sock
+
+    f. Production modules
+    ---------------------
+This is a list of tested and ready for productions modules :
+    limit
+    youtube
+
+# 7. Credits
+########################################################################
+TODO
+
+
+
+Project Description:
+a framework to create easily UnrealIRCD Services
+
+README:
+########################################################################
+#                   UnrealIRCD Service Framework
+########################################################################
+
+# Index
+########################################################################
+
+1. Description
+2. Download
+3. Installation
+4. Configuration
+5. Commands
+6. Modules
+7. Credits
+
+# 1. Description
+########################################################################
+
+UnrealIRCD Service Framework is a framework who provide an easy way to
+develop a service which link to an Unreal 3.2 network.
+With a little configuration it can link an connect a bot on many chans
+but he do nothing until it is completed by modules.
+
+# 2. Download
+########################################################################
+    a. Latest stable version
+    ------------------------
+There is no stable version for the moment
+
+    b. Latest live version
+    ----------------------
+Download live archive from
+  https://github.com/dlgg/UnrealIRCD-Service-Framework/tarball/master
+or you can use git :
+  git clone git://github.com/dlgg/UnrealIRCD-Service-Framework.git
+
+
+# 3. Installation 
+########################################################################
+- Extract it
+- Rename folder
+- Modify config.tcl
+- Run it
+
+You can add a crontab :
+* * * * * /path/to/framework.sh start
+
+# 4. Configuration
+########################################################################
+You will find below a list of variable which are safe to be changed.
+Please avoid to modify other variable unless you know what you do or if
+the developpers ask you to do it.
+
+    a. General options
+    ------------------
+debug             0 for no debug / 1 (default) for debug informations
+                  in log.
+
+    b. General options
+    ------------------
+::irc::lang       Available for the moment : en fr.
+::irc::pid        File where the pid should be wrote.
+
+    c. Service configuration
+    ------------------------
+::irc::ip         IP address of your IRC hub for the connection of the
+                  UnrealIRCD Framework Service.
+::irc::port       Port of your irchub. This need to be a serverport.
+::irc::password   Password specified un unrealircd.conf for the link.
+::irc::numeric    Unique identifier on the network of the service.
+::irc::servername Full DNS address of the service on the network.
+::irc::netname    Name of your IRC Network. Please be careful, this is
+                  case-sensitive and need to be the same on all the IRC
+                  servers.
+::irc::hub        Full DNS address of the hub where you connect the
+                  UnrealIRCD Framework Service.
+::irc::svcname    Name to use for the UnrealIRCD Framework. Tipically
+                  the name of your project.
+::irc::uversion   Version of unreal protocol to use.
+                  2310 : Unreal 3.2.9
+                  2309 : Unreal 3.2.6 3.2.7 3.2.8
+                  2308 : Unreal 3.2.5
+                  2307 : Unreal 3.2.4
+                  2306 : Unreal 3.2.3
+                  2305 : Unreal 3.2.2
+                  2304 : Unreal 3.2.1
+                  2303 : Unreal 3.2beta 3.2
+                  2302 : Unreal 3.1.1 to 3.1.4
+                  2301 : Unreal 3.1
+                  2300 : Unreal 3.0 
+::irc::ssl        Use SSL (1) or not (0). Please be sure to add ssl
+                  option in Unreal link block and connect to a SSL
+                  enabled port.
+::irc::token      Use TOKEN for raw to send and receive from network.
+                  Useless if service is on the same physical host of
+                  the hub where it is connected.
+
+    d. Master Bot Controller
+    ------------------------
+::irc::nick         Nickname of the main bot
+::irc::username     Username of the main bot
+::irc::hostname     Hostname of the main bot
+::irc::realname     GECOS of the main bot
+::irc::adminchan    Logchan for the services
+::irc::chanlist     Lists of all chans where the main bot needs to be.
+                    Don't add the modules chans. The bot will join it
+                    automatically.
+                    The masters bots addons will be active on all chans
+                    by default unless they are coded for filtering the
+                    chans.
+::irc::root         Name(s) of the main administrator(s) of the service.
+::irc::cmdchar      Character to use for prefixing the command. For not
+                    confusing with other bots or hiding the commands.
+
+    e. Modules
+    ----------
+::irc::toload       Lists of modules to load. This is the name of files
+                    under the modules directory whitout the extension.
+
+    f. Partyline configuration
+    --------------------------
+::pl::ip            IP to listen for the partyline. By default listen on
+                    all IP of the system (bind on 0.0.0.0)
+::pl::port          Port to listen for the partyline. By default 45000
+::pl::pass          Port to use for authentification on partyline. It is
+                    the same for all admins for the moment until admins
+                    code is done.
+::pl::myip          Primary IP of the partyline. It is used to permit
+                    partyline access via a dcc
+
+    g. Unreal link block
+    --------------------
+link tcl.hebeo.fr
+{
+        username        *;
+        hostname        *;
+        bind-ip         192.168.42.1;
+        port            7029;
+        hub             *;
+        password-connect "tclpur";
+        password-receive "tclpur";
+        class           servers;
+};
+
+You also need to add the servername of UnrealIRCD Framework Service to
+ulines block.
+
+ulines
+{
+  services.hebeo.fr;
+  tcl.hebeo.fr;
+};
+
+
+# 5. Commands
+########################################################################
+    a. IRC Commands
+    ---------------
+These commands needs to be preceded by the cmdchar defined in the config
+
+dcc           Make the service send a DCC CHAT invitation
+tok           Test command for the tokens
+ssl           Print SSL Information if SSL is enabled
+raw           Send a RAW to IRC network
+source        Source a file if it exist
+rehash        Reload the service
+die           Kill the service
+
+
+    b. Partylines Commands
+    ----------------------
+.pass         Authentify to the service
+.who          Print list of users on partyline
+.ssl          Print SSL Information if SSL is enabled
+.close        Close your partyline or a given partyline
+.raw          Send a RAW to IRC network
+.source       Source a file if it exist
+.rehash       Reload the service
+.die          Kill the service
+
+
+# 6. Modules
+########################################################################
+    a. Variables to use
+    -------------------
+You'll find below the variables that are not explain in the config part.
+
+::irc::botlist            Keep list of virtual users declared on the
+                          framework.
+::irc::userlist           Keep list of all users on the network.
+::irc::chanlist           Keep list of all chans.
+::irc::users($chan)       Keep list of users on a chan. 
+::irc::users($servername) Keep list of users on a server.
+::irc::regusers           Keep list of registered users.
+::irc::srvname2num($servername)
+::irc::srvname2num($numeric) Keep a map between servernames and numeric
+                             in decimal format.
+::tools::ub64chars        Base64 map for unreal numeric NICK and SJOIN
+::tools::ub64charsnickip  Base64 map for unreal NICKIP
+
+
+    b. Specific Tools TCL proc
+    --------------------------
+All procs are in namespace ::tools so you need to prefix each of
+followings procs by ::tools:: or import it in your namespace.
+
+charfilter $arg
+    Strip $arg for escaping dangerous characters
+
+stripmirc $arg
+   Strip $arg for removing mirc text modifier codes
+
+test $string1 $string2
+   Test if $string1 and $string2 are equals
+
+testcs $string1 $string2
+   Test if $string1 and $string2 are case-sensitive equals
+
+unixtime
+   Return the current timestamp in EPOCH format
+
+lremove $list $element
+   Return $list without $element
+
+llreplace $list $oldelement $newelement
+   Return $list with $oldelement replaced by $newelement
+
+nodouble $list
+   Return $list without any duplicated elements
+
+duration
+   Return a time in seconds in "xx days xx hours xx minutes xx seconds"
+
+rand $multiplier
+   Return a random integer from 0 to $multiplier
+
+dec2base/base2dec $num $baselist
+   Transform from/to base $num using $baselist as map
+
+is_user $nick
+    Return TRUE if the given nick is an user connected
+
+is_reg $nick
+    Return TRUE if the given nick is authentified to a nickserv
+    (umode +r)
+
+is_root $nick
+    Return TRUE if the given nick is a root of the service
+
+is_admin $nick
+    Return TRUE if the given nick is an admin or a root of the service
+
+is_admin_only $nick
+    Return TRUE if the given nick is an admin of the service
+
+is_oper $nick
+    Return TRUE if the given nick is an oper of the service
+
+is_oper_only $nick
+    Return TRUE if the given nick is an oper, an admin or a root of the
+    service
+
+is_chan $string
+    Return TRUE if the given $string start with a #
+
+
+    c. Specific IRC TCL proc
+    ------------------------
+All procs are in namespace ::irc so you need to prefix each of
+followings procs by ::irc:: or import it in your namespace.
+
+rehash
+    Rehash the service
+
+send $raw
+    Send a raw message by service
+
+bot_init $nick $username $hostname $gecos
+    Connect a virtual bot with given nick, username, hostname and gecos
+
+join_chan $bot $chan
+    Make a virtual bot join a chan and get +ao chanmodes
+
+
+    d. Hooks for developping modules
+    --------------------------------
+For register a hook use the proc ::irc::hook_register followed by the
+signal you want to hook and the full name of your proc.
+Hooks are done in front of events so before updating variables. Thinks
+of this when you use ::irc:: variables.
+
+Below you'll found a list of hooks with the parameters sent to the 
+called proc.
+
+sync
+    List of procs to call during netsync. This is the best place to use
+    for making your module bot to connect and join chans
+
+init
+    List of procs to call after netsync completion.
+
+join $nick $chan
+    List of procs to call when $nick join a chan. This is a global hook
+    who match on all chans of network
+
+join-$chan $nick
+    List of procs to call when $nick join the given $chan.
+
+part $nick $chan $reason
+    List of procs to call when $nick left a chan. This is a global hook
+    who match on all chans of network
+
+part-$chan $nick $reason
+    List of procs to call when $nick part the given $chan.
+
+kick $kicker $chan $nick $reason
+    List of procs to call when $nick is kicked by $kicker from $chan
+    for $reason.
+    This is a global hook who match on all chans of network
+
+kick-$chan $kicker $nick $reason
+    List of procs to call when $nick is kicked by $kicker from the
+    given $chan for $reason.
+
+quit $nick $reason
+    List of procs to call when $nick quit with the reason $reason.
+
+kill $nick $reason
+    List of procs to call when $nick is kill with the reason $reason.
+
+nick $oldnick $nick
+    List of procs to call when an user change nick from $oldnick to
+    $nick
+
+command-$name $nick $text
+    Bind a "/msg $masterbot $name" command.
+
+privmsgchan $nick $chan $text
+    List of procs to call when a PRIVMSG is send to a $chan where a bot
+    is.
+    $text is send escaped for security
+
+privmsg-#$chan $nick $text
+    List of procs to call when a PRIVMSG is send to a given $chan.
+    $text is send escaped for security
+
+privmsg-$bot $nick $text
+    List of procs to call when a PRIVMSG is send to a given $bot.
+    $text is send escaped for security
+    
+
+    e. Specific IRC TCL proc
+    ------------------------
+All procs below are in namespace ::pl so you need to prefix each of
+following procs by ::pl:: or import it in your namespace.
+
+send $sock $raw
+    Send a raw message to a pl sock
+
+    f. Production modules
+    ---------------------
+This is a list of tested and ready for productions modules :
+    limit
+    youtube
+
+# 7. Credits
+########################################################################
+TODO

@@ -1,0 +1,8 @@
+Folio is an EPUB book editor written in MacRuby.
+
+
+Project Description:
+Folio is an ePub editor written in MacRuby.
+
+README:
+Folio is an EPUB book editor written in MacRuby.

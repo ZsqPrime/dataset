@@ -1,0 +1,72 @@
+-----------------------------------------------------------
+dcicpp
+Dynamic Control of Infeasibility
+
+Universidade Estadual de Campinas - UNICAMP
+Abel Soares Siqueira - abel.s.siqueira@gmail.com
+
+This project was financed by Fapesp from 2009 to 2013.
+-----------------------------------------------------------
+
+Installation
+-----------------------------------------------------------
+  Instructions in the file INSTALL
+
+Overview
+-----------------------------------------------------------
+  This library extends the DCI library in Fortran[1] that sol-
+ves nonlinear programming problems with equality cons-
+traints. This version is in C++ and solves the problem with
+general form
+
+  min f(x)
+  s.t c_E(x) = 0
+      c_L <= c_I(x) <= c_U
+      b_L <= x <= b_U
+
+which is the form used by the CUTEr library[2]. Our version
+uses the base_matrices library[3], which is a wrapper for
+CHOLMOD[4]. The method is explained in [5].
+
+License
+-----------------------------------------------------------
+  Licensed by the GNU Public License v.3 - See COPYING
+
+
+Project Description:
+
+
+README:
+-----------------------------------------------------------
+dcicpp
+Dynamic Control of Infeasibility
+
+Universidade Estadual de Campinas - UNICAMP
+Abel Soares Siqueira - abel.s.siqueira@gmail.com
+
+This project was financed by Fapesp from 2009 to 2013.
+-----------------------------------------------------------
+
+Installation
+-----------------------------------------------------------
+  Instructions in the file INSTALL
+
+Overview
+-----------------------------------------------------------
+  This library extends the DCI library in Fortran[1] that sol-
+ves nonlinear programming problems with equality cons-
+traints. This version is in C++ and solves the problem with
+general form
+
+  min f(x)
+  s.t c_E(x) = 0
+      c_L <= c_I(x) <= c_U
+      b_L <= x <= b_U
+
+which is the form used by the CUTEr library[2]. Our version
+uses the base_matrices library[3], which is a wrapper for
+CHOLMOD[4]. The method is explained in [5].
+
+License
+-----------------------------------------------------------
+  Licensed by the GNU Public License v.3 - See COPYING

@@ -1,0 +1,5 @@
+Project Description:
+This is a pomodoro app to help you manage your time. See 'gh-pages' branch for the source code!
+
+README:
+# [App url](http://mintypt.github.com/pomodoro/)

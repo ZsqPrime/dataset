@@ -1,0 +1,14 @@
+jsonutil-module
+===============
+
+This module has been archived, and is no longer used as part of the iPlant Discovery Environment.
+
+
+Project Description:
+GWT module of utilities for handling JSON data.
+
+README:
+jsonutil-module
+===============
+
+This module has been archived, and is no longer used as part of the iPlant Discovery Environment.

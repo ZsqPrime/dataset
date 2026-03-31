@@ -1,0 +1,7 @@
+Project Description:
+DES algorithm in C
+
+README:
+A basic implementation of the DES algorithm in C
+
+Needed to create a version with no external libraries and no structs.

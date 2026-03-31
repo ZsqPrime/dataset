@@ -1,0 +1,6 @@
+
+
+Project Description:
+solves integral equations from dielectric continuum theory
+
+README:

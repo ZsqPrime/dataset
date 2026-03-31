@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+Simple Android GPS test application
+Written for AS-Taxi

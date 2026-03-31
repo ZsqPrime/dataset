@@ -1,0 +1,8 @@
+Various facts to use within Facter and Puppet will be stored here.
+
+
+Project Description:
+Various facts to use within Facter and Puppet
+
+README:
+Various facts to use within Facter and Puppet will be stored here.

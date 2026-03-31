@@ -1,0 +1,10 @@
+Project Description:
+Java ripoff
+
+README:
+Bescrewed for Java!!!
+Another game ripoff in Swing Java
+
+1/23/2012
+
+Persistence Added.  Please import mysql sql playerstat off bescrewed directory.  JDBC is added in the Player class.

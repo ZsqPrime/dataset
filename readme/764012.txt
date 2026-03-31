@@ -1,0 +1,7 @@
+Lightweight 2D viewport tool under development.  Sample use cases will be uploaded soon.
+
+Project Description:
+A lightweight 2D Camera->Viewport engine for Flash
+
+README:
+Lightweight 2D viewport tool under development.  Sample use cases will be uploaded soon.

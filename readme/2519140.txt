@@ -1,0 +1,8 @@
+Project Description:
+Rails Metal App to show the game scores of the typespeed game
+
+README:
+TYPE SPEED LAN SCORES
+=====================
+
+Shows in a web page the game scores of several typespeeds games spread across a LAN.

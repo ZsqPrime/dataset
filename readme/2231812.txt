@@ -1,0 +1,19 @@
+==============================================================
+            ORDR - An order management system
+==============================================================
+
+Ordr is a management system for the Chair of Chemistry &
+Physics of Interfac. It will replace the analog (paper sheet)
+version.
+
+Project Description:
+A order management system
+
+README:
+==============================================================
+            ORDR - An order management system
+==============================================================
+
+Ordr is a management system for the Chair of Chemistry &
+Physics of Interfac. It will replace the analog (paper sheet)
+version.

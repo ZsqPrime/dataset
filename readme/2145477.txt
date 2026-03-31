@@ -1,0 +1,66 @@
+# mmaze
+
+Originally destined to be code for a maze-solving robot, this has evolved into
+a collection of code for working with embedded arm processors.
+
+## Organization
+
+ - arch
+ - chip -> arch
+ - generic
+ - application
+
+## Config notes
+
+ - board provides chip
+ - chip provides arch
+ - app might provide board, but shouldn't need to (ideally, we'd allow all
+   boards that meet certain requriments to be used).
+
+ - generic code uses config from all sources (board, chip, arch, app)
+
+
+## Debugging
+
+### Redbear BLE nano CMSIS-DAP
+
+ - serial device (/dev/ttyACM0)
+ - openocd cmsis-dap
+	- `sudo openocd -f interface/cmsis-dap.cfg -f target/nrf51.cfg`
+	- `gdb -ex 'target extended-remote localhost:3333'`
+
+
+Project Description:
+Bare-metal library-free interfacing with ARM Cortex variants
+
+README:
+# mmaze
+
+Originally destined to be code for a maze-solving robot, this has evolved into
+a collection of code for working with embedded arm processors.
+
+## Organization
+
+ - arch
+ - chip -> arch
+ - generic
+ - application
+
+## Config notes
+
+ - board provides chip
+ - chip provides arch
+ - app might provide board, but shouldn't need to (ideally, we'd allow all
+   boards that meet certain requriments to be used).
+
+ - generic code uses config from all sources (board, chip, arch, app)
+
+
+## Debugging
+
+### Redbear BLE nano CMSIS-DAP
+
+ - serial device (/dev/ttyACM0)
+ - openocd cmsis-dap
+	- `sudo openocd -f interface/cmsis-dap.cfg -f target/nrf51.cfg`
+	- `gdb -ex 'target extended-remote localhost:3333'`

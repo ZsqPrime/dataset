@@ -1,0 +1,7 @@
+A test project uses mongodb by mongo_maper
+
+Project Description:
+use the mongodb
+
+README:
+A test project uses mongodb by mongo_maper

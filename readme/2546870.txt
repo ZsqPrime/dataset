@@ -1,0 +1,8 @@
+Project Description:
+MooTools Class for pure css speech bubble tooltips, showing content from inline elements, images or HTML from AJAX requests.
+
+README:
+infoBubble
+==========
+
+coming soon

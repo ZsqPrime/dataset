@@ -1,0 +1,6 @@
+
+
+Project Description:
+Color picker for jQuery
+
+README:

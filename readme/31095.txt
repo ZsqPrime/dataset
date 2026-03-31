@@ -1,0 +1,7 @@
+Project Description:
+Drupal COD codebase for drupalcampcharlotte.com. DrupalCamp Charlotte is coming to Charlotte, NC June 10th, 2012.
+
+README:
+## DrupalCamp Charlotte
+
+Code base for the drupalcampcharlotte.com website.

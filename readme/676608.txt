@@ -1,0 +1,10 @@
+Rename "config-example.js" to "config.js".
+Modify "config.js" to suit your needs.
+
+
+Project Description:
+A very low-level RDF/SPARQL interface (focusing on triples only), intended to help developers get a graph started, in order to focus on more important tasks like creating APIs based on the graph contents.
+
+README:
+Rename "config-example.js" to "config.js".
+Modify "config.js" to suit your needs.

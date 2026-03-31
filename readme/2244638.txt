@@ -1,0 +1,28 @@
+# txspdy
+
+A work in progress.
+
+## Dependencies 
+
+Twisted
+
+## Running tests
+
+    trial txspdy
+
+
+Project Description:
+A SDPY implementation for Twisted Python
+
+README:
+# txspdy
+
+A work in progress.
+
+## Dependencies 
+
+Twisted
+
+## Running tests
+
+    trial txspdy

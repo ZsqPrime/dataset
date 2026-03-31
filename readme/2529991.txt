@@ -1,0 +1,9 @@
+Project Description:
+Ad-free flashlight for Android.
+
+README:
+Simple flashlight app for Android without annoying ads, something you can start
+with a single touch from your home screen.
+
+Icon from http://simiographics.daportfolio.com/ under a "Free for non
+commercial use" license.

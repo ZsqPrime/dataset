@@ -1,0 +1,175 @@
+Restool v3.1
+v3.1.2 [9/26/2012]
+-Added more documentation.
+-Started work on tool to fix internet settings.
+	+IPConfig/renew /release /flushdns
+	+Restart Cisco NAC service.
+
+v3.1.1 [9/2/2012]
+-Uninstall Removal Tools should now work without any issue on 64-bit machines.
+	+May fail on 32-bit machines, haven't tested that and I have no desire to
+	 set up a virtual machine right now.
+-Removed a lot of commented out code, including Fsecure.
+-Added some more documentation boxes, as always though, more need to be added.
+
+v3.1 [9/1/2012]
+-Installs Malwarebytes correctly (tested many scenarios, hopefully it will be flawless now.)
+-More documentation boxes, still need to add more.
+-Added global variables for commonly accessed paths, such as the ResTech folder.
+-Uninstall Removal Tools button is now functional.
+	+It needs to uninstall one program at a time, currently it tries to do them all at once.
+	 Sometimes this works, othertimes it results in a HUGE mess.
+	+This WILL not remove programs that were already installed, if the download file does not
+	 exist in the ResTech folder, the program will not be removed.
+-Spybot Automation Fixed
+	+This will now install/run using a batch file. It works on my computer, needs testing at
+	 ResTech still. It SHOULD work though.
+-Fsecure only exists in comments now, it WILL be fully removed whenever 3.2 is released.
+
+TODO's
+-Clean up the code more.
+-Break up the fileStarter method into several smaller ones for added flexibility.
+-Work on the Uninstall Removal Tools button more.
+	 
+Restool v3.0
+
+v3.0.2 Changes [8/29/2012]
+-Installs Malwarebytes even if the user account has a space in it.
+-Added documentation boxes, still need to add more.
+
+v3.0.2 Changes [8/18/2012]
+- Detects the correct OS architecture now.
+- Installs correct version of MSE now.
+- Displays the OS information in the lower right corner of screen.
+
+v3.0.2 Changes [8/17/2012]
+- Malwarebytes Automation Fixed
+- "Fix It Button" added.
+	+ In the future this will automate multiple scans overnight.
+- ResTech folder created to store install files on users computer.
+	+ This will make clean up easier.
+	+ Currently ONLY Malwarebytes gets stored here. The rest will be added with the next push.
+	+ This will also be used to store uninstall scripts, so we can implement an uninstall all scans button.
+- Easter egg added, the title bar now displays funny quotes and some helpful hints for the newbies.
+
+v3.0.1 Changes [3/1/2012]
+
+ - Bitdefender URL updated
+ - AVG now always downloads from Test server, after detecting architecture
+ - More exception catching
+	+ Norton Removal Tool + Script - ok
+	+ Kaspersky Removal Tool - ok (Evan mystery script needs to be checked)
+	+ McAfee Removal tool - ok
+	+ AVG Removal Tool - ok
+	+ TrendMicro Removal Tool - ok
+
+
+v3.0.1 Changes [2/24/2012]
+
+ - Converted to VB 2010 Project
+ - Now using Enviormental Variables with path names
+ - Able to use 2 servers
+	+ (Restech) default server, manually updated
+	+ (Test) test server, apps checked for updates daily
+ - Server Status text added
+ - Eset will now go past the Start button in Vista and XP so it is fully automated. Issue was with The Script and eset.exe not getting administrator permissions.
+ - Catching exceptions when it can't download and when program has issues installing/running script
+	+ Combofix ok
+	+ Spybot Fresh install - ok, Uninstall and Installed - wip
+	+ Eset ok
+	+ Trend Micro Housecall appears to be a lost cause. _IEAttach function cannot detect the window. No solutions for problem online
+	+ SUPER AntiSpyware install - ok, Installed - wip
+
+
+TODO's
+ - Catch Exceptions when Downloads fail 
+
+Project Description:
+Restool is used for automating Spyware/Virus removal and other PC maintenance functions
+
+README:
+Restool v3.1
+v3.1.2 [9/26/2012]
+-Added more documentation.
+-Started work on tool to fix internet settings.
+	+IPConfig/renew /release /flushdns
+	+Restart Cisco NAC service.
+
+v3.1.1 [9/2/2012]
+-Uninstall Removal Tools should now work without any issue on 64-bit machines.
+	+May fail on 32-bit machines, haven't tested that and I have no desire to
+	 set up a virtual machine right now.
+-Removed a lot of commented out code, including Fsecure.
+-Added some more documentation boxes, as always though, more need to be added.
+
+v3.1 [9/1/2012]
+-Installs Malwarebytes correctly (tested many scenarios, hopefully it will be flawless now.)
+-More documentation boxes, still need to add more.
+-Added global variables for commonly accessed paths, such as the ResTech folder.
+-Uninstall Removal Tools button is now functional.
+	+It needs to uninstall one program at a time, currently it tries to do them all at once.
+	 Sometimes this works, othertimes it results in a HUGE mess.
+	+This WILL not remove programs that were already installed, if the download file does not
+	 exist in the ResTech folder, the program will not be removed.
+-Spybot Automation Fixed
+	+This will now install/run using a batch file. It works on my computer, needs testing at
+	 ResTech still. It SHOULD work though.
+-Fsecure only exists in comments now, it WILL be fully removed whenever 3.2 is released.
+
+TODO's
+-Clean up the code more.
+-Break up the fileStarter method into several smaller ones for added flexibility.
+-Work on the Uninstall Removal Tools button more.
+	 
+Restool v3.0
+
+v3.0.2 Changes [8/29/2012]
+-Installs Malwarebytes even if the user account has a space in it.
+-Added documentation boxes, still need to add more.
+
+v3.0.2 Changes [8/18/2012]
+- Detects the correct OS architecture now.
+- Installs correct version of MSE now.
+- Displays the OS information in the lower right corner of screen.
+
+v3.0.2 Changes [8/17/2012]
+- Malwarebytes Automation Fixed
+- "Fix It Button" added.
+	+ In the future this will automate multiple scans overnight.
+- ResTech folder created to store install files on users computer.
+	+ This will make clean up easier.
+	+ Currently ONLY Malwarebytes gets stored here. The rest will be added with the next push.
+	+ This will also be used to store uninstall scripts, so we can implement an uninstall all scans button.
+- Easter egg added, the title bar now displays funny quotes and some helpful hints for the newbies.
+
+v3.0.1 Changes [3/1/2012]
+
+ - Bitdefender URL updated
+ - AVG now always downloads from Test server, after detecting architecture
+ - More exception catching
+	+ Norton Removal Tool + Script - ok
+	+ Kaspersky Removal Tool - ok (Evan mystery script needs to be checked)
+	+ McAfee Removal tool - ok
+	+ AVG Removal Tool - ok
+	+ TrendMicro Removal Tool - ok
+
+
+v3.0.1 Changes [2/24/2012]
+
+ - Converted to VB 2010 Project
+ - Now using Enviormental Variables with path names
+ - Able to use 2 servers
+	+ (Restech) default server, manually updated
+	+ (Test) test server, apps checked for updates daily
+ - Server Status text added
+ - Eset will now go past the Start button in Vista and XP so it is fully automated. Issue was with The Script and eset.exe not getting administrator permissions.
+ - Catching exceptions when it can't download and when program has issues installing/running script
+	+ Combofix ok
+	+ Spybot Fresh install - ok, Uninstall and Installed - wip
+	+ Eset ok
+	+ Trend Micro Housecall appears to be a lost cause. _IEAttach function cannot detect the window. No solutions for problem online
+	+ SUPER AntiSpyware install - ok, Installed - wip
+
+
+TODO's
+ - Catch Exceptions when Downloads fail

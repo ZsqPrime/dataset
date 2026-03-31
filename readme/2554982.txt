@@ -1,0 +1,4 @@
+Project Description:
+Code for the mobile web application, memento. Built using Phonegap and JQtouch
+
+README:

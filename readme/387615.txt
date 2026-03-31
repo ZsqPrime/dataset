@@ -1,0 +1,12 @@
+Just some helpful phantomjs tools.
+
+1.2012-02-19	add taobao.comment,taobao.jie
+
+
+Project Description:
+some helpful tool using phantom
+
+README:
+Just some helpful phantomjs tools.
+
+1.2012-02-19	add taobao.comment,taobao.jie

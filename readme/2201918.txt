@@ -1,0 +1,7 @@
+This file was created by JetBrains PhpStorm 3.0 for binding GitHub repository
+
+Project Description:
+Zend_Mail protocol and transport extensions for doing Mail merge with Port25's PowerMTA
+
+README:
+This file was created by JetBrains PhpStorm 3.0 for binding GitHub repository

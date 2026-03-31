@@ -1,0 +1,37 @@
+Bit.ly-sharp
+===============
+
+Usage
+===============
+
+Shorten
+
+var api = new Bitly.Api("User name","Apikey");
+var shortUtl = api.Shorten("http://www.xamarin.com");
+
+
+Shorten
+
+var api = new Bitly.Api("User name","Apikey");
+var longUrl = api.Expand("http://bit.ly/mx4C2l");
+
+Project Description:
+Bit.ly rest api
+
+README:
+Bit.ly-sharp
+===============
+
+Usage
+===============
+
+Shorten
+
+var api = new Bitly.Api("User name","Apikey");
+var shortUtl = api.Shorten("http://www.xamarin.com");
+
+
+Shorten
+
+var api = new Bitly.Api("User name","Apikey");
+var longUrl = api.Expand("http://bit.ly/mx4C2l");

@@ -1,0 +1,5 @@
+Project Description:
+Long Backgammon game
+
+README:
+Long Backgammon game. Runs under the Cheetah engine.

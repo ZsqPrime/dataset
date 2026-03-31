@@ -1,0 +1,8 @@
+A game about sheeps
+
+
+Project Description:
+Platform game with a swarm of sheeps in C++ SDL
+
+README:
+A game about sheeps

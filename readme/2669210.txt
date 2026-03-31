@@ -1,0 +1,5 @@
+Project Description:
+configs of unix-like systems
+
+README:
+~/Library/Application\ Support/Google/Chrome/Default/User\ StyleSheets/Custom.css

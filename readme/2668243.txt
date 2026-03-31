@@ -1,0 +1,21 @@
+Project Description:
+A set of functions to handle alphanumeric displays compatible with HD44780 driver.
+
+README:
+
+A set of functions to handle alphanumeric displays compatible with
+HD44780 driver.
+
+This set is released under the GNU General Public License (GPL) version 3, see
+the file 'COPYING' for more information.
+
+The source code is tested by me on ATMEL microcontroller ATMega8, 2x16 character
+LCD display only in 4bit mode, but 8bit mode is simpler and there should not be
+major bugs. List of available function is placed in 'API' file. There is no
+support for 4x40 LCD display yet.
+
+How to use library:
+1 - compile library
+    make lib TARGET_MCU=xxx F_CPU=xxx OPT=x
+2 - add header file "lcd/lcd.h" to includes.
+3 - edit lcd/config.h.

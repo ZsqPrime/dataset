@@ -1,0 +1,5 @@
+Project Description:
+hopefully a starting point for new projects using cmake
+
+README:
+Simple application framework to use as a starting point for future projects.

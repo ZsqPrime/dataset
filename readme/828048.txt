@@ -1,0 +1,7 @@
+Project Description:
+This is Ivan Hanigan's Academic Website
+
+README:
+This is my open notebook - selected content, delayed (ONS-SCD)
+
+All contents are open access under the CC-BY 4.0 International Licence

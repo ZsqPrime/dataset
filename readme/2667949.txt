@@ -1,0 +1,6 @@
+Project Description:
+online expense system
+
+README:
+online expense system
+written by Rails3

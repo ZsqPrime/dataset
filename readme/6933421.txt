@@ -1,0 +1,34 @@
+Project Description:
+
+
+README:
+FRONTENIS
+
+Personal web for frontenis games with my Pikutara friends :-)
+
+"!http://api.coderwall.com/suzzlo/endorse.png!":http://coderwall/suzzlo
+
+
+CHANGELOG
+
+v0.0.7
+	- Interface makeup
+
+v0.0.6
+	- Added simple graph for user statistics
+	- Corrected last activity for just last month games
+
+v0.0.5
+	- Added ranking for users
+
+v0.0.4
+	- Added Activity criteria
+
+v0.0.3
+	- Added some design
+
+v0.0.2
+	- Added scaffold for Users and Games
+
+v0.0.1
+	- Static version

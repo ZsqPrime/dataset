@@ -1,0 +1,9 @@
+The project is the preliminary version of the CASSANDRA platform.
+
+
+
+Project Description:
+Preliminary platform modeling
+
+README:
+The project is the preliminary version of the CASSANDRA platform.

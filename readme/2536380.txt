@@ -1,0 +1,7 @@
+Project Description:
+OBS/MINT Issues
+
+README:
+* Very adhoc script to dump bugs as xml from bugzilla xmlrpc using pybugz
+* Very adhoc script to import bugs from xml into github using python-github2
+* Bugs that were worth exporting.

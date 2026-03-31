@@ -1,0 +1,4 @@
+Project Description:
+jQueryMobile app to access Xebia blog
+
+README:

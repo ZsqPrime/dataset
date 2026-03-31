@@ -1,0 +1,7 @@
+Project Description:
+
+
+README:
+== Welcome to Lux Taxonomy
+
+This application uses Route workflow to manage the taxonomy management pfrocess at Lux research

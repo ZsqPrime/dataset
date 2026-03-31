@@ -1,0 +1,22 @@
+Project Description:
+This is a plugin for Redmine that sends version email on update.
+
+README:
+= Redmine Version Email Plugin
+
+This is a plugin for Redmine that sends version email on update version's name,
+effective_date and status.
+
+== Plugin installation
+
+1. Copy this plugin directory into the './plugins/' in your Redmine.
+
+   No need to migrate database.
+
+2. Restart Redmine.
+
+3. Login as administrator to your Redmine and Click to go
+   
+   Administration > Settings > Email notifications
+   
+   Check the checkbox 'Version added', 'Version updated'.

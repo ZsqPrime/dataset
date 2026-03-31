@@ -1,0 +1,4 @@
+Project Description:
+create Interpro annotations from the SUPERFAMILY annotations of UniProt sequences
+
+README:

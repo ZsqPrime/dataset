@@ -1,0 +1,9 @@
+WPJQM is a WordPress theme built from scratch to display mostly CMS focused sites. It's not really built for blog sites, as there are a lot of queries for pages. 
+
+
+
+Project Description:
+Wordpress theme for mobile devices using jQuery Mobile. This theme is best suited for CMS implementations.
+
+README:
+WPJQM is a WordPress theme built from scratch to display mostly CMS focused sites. It's not really built for blog sites, as there are a lot of queries for pages.

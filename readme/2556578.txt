@@ -1,0 +1,6 @@
+Project Description:
+
+
+README:
+This is simple application for managing tasks. It's main idea similar jira or bugzilla but havn't got theirs functionality and 
+ofcouse it's console application. Just enjoy and be happy.

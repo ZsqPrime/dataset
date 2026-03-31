@@ -1,0 +1,74 @@
+Treetop Parsing Expression Grammar (PEG) Comand Line Compiler
+Usage: tt [options] grammar_file[.treetop|.tt] ...
+
+Examples:
+  tt foo.tt               # 1 grammar -> 1 parser source
+  tt foo bar.treetop      # 2 grammars -> 2 separate parsers
+  tt -o alt_name.rb foo   # alternately named output file
+
+
+<<<<<<< HEAD
+PARAMETERS
+  --when=when, -w (0 ~> when=2012-01-31) 
+      iso8601 date work was performed 
+  --after=after, -a (0 ~> after=1969-12-31) 
+      limit data shown to entries *after* this iso8601 date 
+  --before=before, -b (0 ~> before=2038-01-18) 
+      limit data shown to entries *before* this iso8601 date 
+  --noop, -n 
+      perform all operations on a tmp database 
+  --help, -h 
+=======
+NOTE: while treetop grammar files *must* have one of the following
+filename extensions, the extension name is not required when calling
+the compiler with grammar file names.
+>>>>>>> 495fe8e49cdbdebd1ee37aee3ce71fab88d50db3
+
+  Valid extensions: .treetop, .tt
+
+
+Options:
+    -o, --output FILENAME            Write parser source to FILENAME
+    -f, --force                      Overwrite existing output file(s)
+    -v, --version                    Show Treetop version
+    -h, --help                       Show this help message
+
+
+Project Description:
+tracking teh hours from the cli
+
+README:
+Treetop Parsing Expression Grammar (PEG) Comand Line Compiler
+Usage: tt [options] grammar_file[.treetop|.tt] ...
+
+Examples:
+  tt foo.tt               # 1 grammar -> 1 parser source
+  tt foo bar.treetop      # 2 grammars -> 2 separate parsers
+  tt -o alt_name.rb foo   # alternately named output file
+
+
+<<<<<<< HEAD
+PARAMETERS
+  --when=when, -w (0 ~> when=2012-01-31) 
+      iso8601 date work was performed 
+  --after=after, -a (0 ~> after=1969-12-31) 
+      limit data shown to entries *after* this iso8601 date 
+  --before=before, -b (0 ~> before=2038-01-18) 
+      limit data shown to entries *before* this iso8601 date 
+  --noop, -n 
+      perform all operations on a tmp database 
+  --help, -h 
+=======
+NOTE: while treetop grammar files *must* have one of the following
+filename extensions, the extension name is not required when calling
+the compiler with grammar file names.
+>>>>>>> 495fe8e49cdbdebd1ee37aee3ce71fab88d50db3
+
+  Valid extensions: .treetop, .tt
+
+
+Options:
+    -o, --output FILENAME            Write parser source to FILENAME
+    -f, --force                      Overwrite existing output file(s)
+    -v, --version                    Show Treetop version
+    -h, --help                       Show this help message

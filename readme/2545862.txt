@@ -1,0 +1,5 @@
+Project Description:
+use python to split sort fatsq
+
+README:
+the splitMeBioPython should be renamed SortCleanedReads.py, how to do this ? git mv SplitMeBioPython.py SortCleanedReads.py

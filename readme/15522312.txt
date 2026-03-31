@@ -1,0 +1,5 @@
+Project Description:
+Custom CMS for Digital Schoolhouse
+
+README:
+Digital Schoolhouse's Website / CMS

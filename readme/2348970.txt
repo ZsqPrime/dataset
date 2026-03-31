@@ -1,0 +1,30 @@
+Project Description:
+Spaceship game written in love
+
+README:
+Love-space (working title)
+Planned result: A top-down spaceship RTS with crafting elements and a high level of ship customisation.
+
+Currently implemented:
+*Camera controlled by cursor keys for movement and NUM+, NUM-, NUM_ENTER for zoom.
+*2 ships belonging to opposing teams. Ships on the same team do not collide with each other.
+*Take manual control of a ship by selecting it and pressing 'm', can move it with WASD and fire bullets with space
+*When a ship is manually-controlled, the camera follows it. Can be disabled by setting ui.followmanualship to false.
+*All ships can be selected by click or lasoo drag
+*Ships can be given orders by right-clicking. On empty space to give move order, on a ship to make it follow
+*1 draggable panel with buttons to spawn more ships.
+*All ships have a sensor radius at which they are aware of other ships.
+*Rudimentary AI in ships allows them to fire at hostile ships.
+*Primitive turrets that attach to ships with joints.
+*Turrets automatically fire at ships within the parent ship's sensor range.
+
+TO RUN:
+*LINUX:
+1. Install love2d (available at love2d.org, or "sudo apt-get install love")
+2. Download the game folder
+2. In terminal, navigate to the folder and run "love ."
+
+*WINDOWS:
+1. Install love2d (available at love2d.org)
+2. Download the game folder
+3. Run the folder with love by dragging the folder onto the love icon.

@@ -1,0 +1,14 @@
+Freedom
+=========
+
+I want this shit forever man.
+
+
+Project Description:
+Mind-blowing issue tracker powered by Ruby on Rails.
+
+README:
+Freedom
+=========
+
+I want this shit forever man.

@@ -1,0 +1,5 @@
+Project Description:
+some sample code of algorithms
+
+README:
+learn from coding

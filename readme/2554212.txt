@@ -1,0 +1,102 @@
+Project Description:
+Recopilación de ejercicios y ejemplos del lenguaje Python
+
+README:
+##
+### PYTHONEANDO
+##
+### Recopilación de ejercicios y ejemplos del lenguaje Python
+##
+### Autor: Héctor Costa Guzmán
+### Año: 2012
+### Web: www.hcosta.info
+##
+##
+#########  Capítulos
+##
+### Capítulo 1: Introducción, tipos, operadores y colecciones
+##
+### 001 Hola Mundo
+### 002 Tipos de datos
+### 003 Operadores simples
+### 004 Cadenas de texto
+### 005 Tipos y operadores booleanos
+### 006 Colecciones 1: Listas
+### 007 Colecciones 2: Tuplas
+### 008 Colecciones 3: Diccionarios
+##
+### Capítulo 2: Bloques condicionales, bucles y funciones
+##
+### 009 Condicionales
+### 010 Bucles
+### 011 Funciones
+### 011b Función recursiva del Hombre Bucle
+##
+### Capítulo 3: Programación Orientada a Objetos
+##
+### 012 Introducción a las clases
+### 013 Herencia de clases
+### 014 Encapsulación de métodos y atributos
+### 015 Métodos especiales de clase
+### 016 Métodos ya implementados en cadenas y colecciones
+##
+### Capítulo 4: Programación funcional
+##
+### 017 Introducción
+### 018 Iteraciones de orden superior
+### 019 Funciones Lambda
+### 020 Comprensión de listas
+### 021 Expresiones generadoras
+### 022 Funciones decoradoras
+##
+### Capítulo 5: Opciones avanzadas
+##
+### 023 Excepciones
+### 024 Módulos
+### 025 Paquetes
+### 026 Entradas y salidas
+### 027 Trabajar con ficheros
+##
+### Capítulo 6: Opciones avanzadas 2
+##
+### 028 Expresiones regulares
+### 029 Sockets
+### 030 Peticiones a webs
+### 031 Aplicaciones multihilo
+##
+### Capítulo 7: Persistencia
+##
+### 032 Serialización de objetos
+### 033 Bases de datos
+##
+### Capítulo 8: Documentación
+##
+### 034 Docstrings
+### 035 Pydoc
+##
+### Capítulo 9: Pruebas
+##
+### 036 Doctest
+### 037 Doctest anidado
+### 038 Unittest / PyUnit
+### 039 Pruebas en contexto
+##
+### Capítulo 10: Distribución
+##
+### 040 Distutils
+### 041 Ejecutables .exe
+##
+##
+#########  Anexos
+##
+### Interfaces gráficas con wxPython
+##
+### 042 Hola Mundo
+### 043 Editor simple
+### 044 Barra de menú
+### 045 Capturar eventos
+### 046 Calibradores
+### 047 Posicionamiento absoluto de cotroles
+### 048 Posicionamiento en red de cotroles
+### 049 Bloc de notas
+##

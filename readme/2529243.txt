@@ -1,0 +1,9 @@
+Project Description:
+Geany theme inspired by eclipse sunburst theme
+
+README:
+inspired by eclipse sunburst theme http://www.eclipsecolorthemes.org/?view=theme&id=383
+
+INSTALL
+=======
+copy the filetypes files to /usr/share/geany

@@ -1,0 +1,4 @@
+Project Description:
+in-progress work for data crunching, African Health OER Network (begun @ A2DataDive Feb. 10-12)
+
+README:

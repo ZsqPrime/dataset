@@ -1,0 +1,32 @@
+Project Description:
+Application to crack imageboard tripcodes on parallel to massively parallel architectures.
+
+README:
+Compile with
+$ cd src/
+$ make target-architecture
+
+Run with
+$ mpiexec -n processes ./tripslicer target-list.txt [wordlists...]
+
+The files with targets should have one tripcode per line.
+
+This program is only fit to execute on homogeneous parallel systems, as the
+keyspace is statically divided into as-equal-as-possible sized chunks.
+
+Currently the program only checks tripcodes that consists of alpha-numerical
+characters, to change this change the CHARSET macro in tripslicer.c and
+recompile.
+
+No communication happen between the processes, every process writes cracked
+tripcodes to their stdout, in the future it would be preferable to have a
+system that was capable of communicating cracked tripcodes between the
+processes efficiently. This however requires non-regular all-to-all
+communcation and is probably non-trivial to implement in an efficient manner.
+
+Sample output looks like this,
+74 65 61 00 00 00 00 00 => WokonZwxw2 (tea)
+
+At the beginning are the eight bytes that is used as the key for the tripcode,
+then an arrow, then tripcode itself and then inside of parenthesis is the key
+interpreted as a C string.

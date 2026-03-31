@@ -1,0 +1,49 @@
+Project Description:
+2d shooter written in processing, java, jython
+
+README:
+Entwinement Copyright (c) 2011 Jett LaRue, whackashoe@gmail.com
+
+You must include this header in the source code.
+You must provide the source code with all distributions at no charge or cost.
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+###############################################################################
+
+
+Website: entwinement.co.nr
+
+Written in java/processing(processing.org)/jython
+
+
+Features:
+		2d shooter action
+		customizable weapons
+		create vehicles with xml files
+		jython scripting engine
+		
+		
+
+Controls:
+		wasd movement
+		lmb shoot
+		rmb use attachment
+		x pickup item, enter/exit vehicle
+		f throw weapon
+		tab opens chat window
+		
+To Download:
+ Instructions @ entwinement.co.nr
+
+
+Woah- you made it, wasn't that hard was it?

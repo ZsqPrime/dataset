@@ -1,0 +1,12 @@
+Game of Life 
+===========
+
+
+
+
+Project Description:
+John Conway's game
+
+README:
+Game of Life 
+===========

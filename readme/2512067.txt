@@ -1,0 +1,12 @@
+Journala
+
+Inspired by Ledger. It reads and creates the same format as Ledger.
+
+
+Project Description:
+
+
+README:
+Journala
+
+Inspired by Ledger. It reads and creates the same format as Ledger.

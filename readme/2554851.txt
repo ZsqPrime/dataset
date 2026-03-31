@@ -1,0 +1,8 @@
+Project Description:
+Bogosort demonstration for Python
+
+README:
+Just a simple demonstration of a bogosort algorithm <http://en.wikipedia.org/wiki/Bogosort>
+
+Input the items in a list as arguments.
+Example: ./bogosort.py <item1> [item2] [item3] [item4] ...

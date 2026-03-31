@@ -1,0 +1,40 @@
+TODO: Enter a name
+==================
+
+About
+-----
+
+TODO: Enter a description
+
+Usage
+-----
+
+TODO: Enter usage information
+
+Installation
+------------
+
+TODO: Enter installation information
+
+
+Project Description:
+Minimal template for developing packages for Python
+
+README:
+TODO: Enter a name
+==================
+
+About
+-----
+
+TODO: Enter a description
+
+Usage
+-----
+
+TODO: Enter usage information
+
+Installation
+------------
+
+TODO: Enter installation information

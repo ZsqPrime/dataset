@@ -1,0 +1,46 @@
+Iglu Servlet Environment provides a complete Java Servlet and JSP environment,
+using the Jetty wrapper from Iglu Http.
+
+You may use it as the starting point for development and deployment of lightweight Java enterprise
+applications in a Unix-like environment.
+
+The Iglu Project explores simple and robust solutions for enterprise applications.
+Iglu is developed and maintained by Jeroen Meetsma, partner at IJsberg.
+E-mail: info@ijsberg.nl
+
+
+GETTING STARTED
+
+You'll need a Java SDK 1.6 or higher to build the project.
+
+1. Download sources from GitHub.
+2. Build project with Maven, or create a build configuration of your own.
+3. Examine and try provided samples of a server setup.
+
+N.B. The Maven build provided will also create a working distribution of a standalone server.
+
+
+Project Description:
+None
+
+README:
+Iglu Servlet Environment provides a complete Java Servlet and JSP environment,
+using the Jetty wrapper from Iglu Http.
+
+You may use it as the starting point for development and deployment of lightweight Java enterprise
+applications in a Unix-like environment.
+
+The Iglu Project explores simple and robust solutions for enterprise applications.
+Iglu is developed and maintained by Jeroen Meetsma, partner at IJsberg.
+E-mail: info@ijsberg.nl
+
+
+GETTING STARTED
+
+You'll need a Java SDK 1.6 or higher to build the project.
+
+1. Download sources from GitHub.
+2. Build project with Maven, or create a build configuration of your own.
+3. Examine and try provided samples of a server setup.
+
+N.B. The Maven build provided will also create a working distribution of a standalone server.

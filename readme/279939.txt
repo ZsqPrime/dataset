@@ -1,0 +1,430 @@
+# django-seo-cascade
+
+This project addresses the following issues:
+
+1. **Sitemap generation.** Sitemap generation often involves a lot of boilerplate configuration. We would like to automate as much of this as possible.
+Also, clients need to be able to control the sitemap, and they cannot be expected to edit Django's sitemap classes directly.
+2. **Meta tag configuration.** Meta tags don't always conform to the Django template blocks paradigm. "block.super" helps, but sometimes it's better to update only one tag without replacing every item in the block. A better solution would be a series of cascading values, like CSS overrides for tags. Clients will also need to be able to edit the meta tags on a per-page basis.
+
+### Project goals:
+
+1. Give developers precise, efficient method of adding meta content via Django templates.
+2. Give site admins control of meta-data on a per-page basis.
+3. Automatically handle sitemap generation.
+4. Give site admins control of the sitemap on a per-model and per-page basis.
+
+
+## Installation
+
+from the command line:
+
+<!-- language: lang-sh -->
+pip install django-seo-cascade
+
+Add django-seo to middleware:
+
+<!-- language: lang-python -->
+    MIDDLEWARE_CLASSES = (
+    		...
+        'seo_cascade.middleware.SEOMiddleware',
+    )
+
+## Use
+
+### Example Template Setup:
+
+**base.html**
+<!-- language: lang-html -->
+    {% load meta %}
+
+    <html>
+
+    <head>
+    {% meta %}
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin." />
+    	<meta name="author" content="Kafka" />
+    {% endmeta %}
+    </head>
+
+    <body>
+    {% block content %}
+    {% endblock %}
+    </body>
+
+    </html>
+
+
+*results in:*
+<!-- language: lang-html -->
+    <html>
+
+    <head>
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin." />
+    	<meta name="author" content="Kafka" />
+    </head>
+
+    <body>
+    </body>
+
+    </html>
+
+
+---
+**extended.html**
+<!-- language: lang-html -->
+    {% extends "base.html" %}
+
+    {% meta %}
+    	<meta name="description" content="He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections." />
+    {% endmeta %}
+
+
+*results in:*
+<!-- language: lang-html -->
+    <html>
+
+    <head>
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections." />
+    	<meta name="author" content="Kafka" />
+    </head>
+
+    <body>
+    </body>
+
+    </html>
+
+
+
+---
+**extended_again.html**
+
+    {% extends "extended.html" %}
+
+    {% meta %}
+    	<meta name="description" content="The bedding was hardly able to cover it and seemed ready to slide off any moment." />
+    	<meta property="og:image" content="http://1.bp.blogspot.com/-Ut_juBQ8mjE/Ta3cKwVW4QI/AAAAAAAAASY/J8ZXDQRWVNs/s1600/franz-kafkas-metamorphosis3.jpeg"
+    {% endmeta %}
+
+
+
+*results in:*
+<!-- language: lang-html -->
+    <html>
+
+    <head>
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="The bedding was hardly able to cover it and seemed ready to slide off any moment." />
+    	<meta name="author" content="Kafka" />
+    	<meta property="og:image" content="http://1.bp.blogspot.com/-Ut_juBQ8mjE/Ta3cKwVW4QI/AAAAAAAAASY/J8ZXDQRWVNs/s1600/franz-kafkas-metamorphosis3.jpeg"
+    </head>
+
+    <body>
+    </body>
+
+    </html>
+
+---
+
+### Admin Overrides
+
+#### Seo_cascade > Seo page overrides
+
+**path**: the absolute path, relative to the domain, for which you want to override the meta content. Also supports regular expressions.
+
+> *example*:
+> "/blog/posts/23/" matches http://example.com/blog/posts/23/
+
+
+> "/blog/posts/[\d]+/" matches all numbered posts under http://example.com/blog/posts/
+
+**title**: generates a title tag for the specified path(s)
+
+> *example*:
+> "Example Blog" becomes
+
+<!-- language: lang-html -->
+    <title>Example Blog</title>
+
+**description**: generates a description tags for the specified path(s)
+
+> *example*:
+> "'What's happened to me?' he thought. It wasn't a dream." becomes
+
+<!-- language: lang-html -->
+    <meta property="description" content="'What's happened to me?' he thought. It wasn't a dream.">
+    <meta property="og:description" content="'What's happened to me?' he thought. It wasn't a dream.">
+
+**image**: serves uploaded image from the media directory, generates image tags for the specified path(s)
+
+> *example*
+> uploading this image, http://1.bp.blogspot.com/-Ut_juBQ8mjE/Ta3cKwVW4QI/AAAAAAAAASY/J8ZXDQRWVNs/s1600/franz-kafkas-metamorphosis3.jpeg, results in
+
+<!-- language: lang-html -->
+    <meta property="og:image" content="http://example.com/uploads/meta/franz-kafkas-metamorphosis3.jpeg">
+    <meta property="og:image:width" content="410">
+    <meta property="og:image:height" content="424">
+
+**Omit from sitemap**: exclude this entry from the sitemap.
+
+**Meta override HTML**: HTML meta tags that take highest precedence.
+
+#### Seo_cascade > Seo model defaults
+
+**model**: A Django model class.
+
+**Omit from sitemap**: exclude all detail views of this model from the sitemap.
+
+**Change Frequency**: the interval at which search engines should check for updates.
+
+### Sitemap
+
+The sitemap generator automatically creates sitemap entries for each model with a "get_absolute_url" method. From the admin, sitemap settings (priority, changefreq) can be set for each model, or the model can be omitted from the sitemap completely.
+
+
+The sitemap is updated each time a model is saved that hasn't been omitted from the sitemap.
+
+### Precedence
+Meta tag settings take the following precedence:
+
+1. Admin path overrides.
+
+    1. "Meta HTML" fields
+    2. "title", "description", and "image" fields
+
+2. Template {% meta %} blocks.
+
+### Side effects
+
+The following entry will be automatically appended to the django url conf:
+
+<!-- language: lang-python -->
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps})
+
+### See also:
+
+django-seo
+https://github.com/willhardy/django-seo
+
+### Notes:
+This project is still in beta. Please file issues and pull-requests via https://github.com/thisismess/django-seo-cascade.
+
+
+Project Description:
+django-seo-cascade is a Django app that provides automatic sitemap generation, cascading meta tag blocks, and overrides via the Django admin.
+
+README:
+# django-seo-cascade
+
+This project addresses the following issues:
+
+1. **Sitemap generation.** Sitemap generation often involves a lot of boilerplate configuration. We would like to automate as much of this as possible.
+Also, clients need to be able to control the sitemap, and they cannot be expected to edit Django's sitemap classes directly.
+2. **Meta tag configuration.** Meta tags don't always conform to the Django template blocks paradigm. "block.super" helps, but sometimes it's better to update only one tag without replacing every item in the block. A better solution would be a series of cascading values, like CSS overrides for tags. Clients will also need to be able to edit the meta tags on a per-page basis.
+
+### Project goals:
+
+1. Give developers precise, efficient method of adding meta content via Django templates.
+2. Give site admins control of meta-data on a per-page basis.
+3. Automatically handle sitemap generation.
+4. Give site admins control of the sitemap on a per-model and per-page basis.
+
+
+## Installation
+
+from the command line:
+
+<!-- language: lang-sh -->
+pip install django-seo-cascade
+
+Add django-seo to middleware:
+
+<!-- language: lang-python -->
+    MIDDLEWARE_CLASSES = (
+    		...
+        'seo_cascade.middleware.SEOMiddleware',
+    )
+
+## Use
+
+### Example Template Setup:
+
+**base.html**
+<!-- language: lang-html -->
+    {% load meta %}
+
+    <html>
+
+    <head>
+    {% meta %}
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin." />
+    	<meta name="author" content="Kafka" />
+    {% endmeta %}
+    </head>
+
+    <body>
+    {% block content %}
+    {% endblock %}
+    </body>
+
+    </html>
+
+
+*results in:*
+<!-- language: lang-html -->
+    <html>
+
+    <head>
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin." />
+    	<meta name="author" content="Kafka" />
+    </head>
+
+    <body>
+    </body>
+
+    </html>
+
+
+---
+**extended.html**
+<!-- language: lang-html -->
+    {% extends "base.html" %}
+
+    {% meta %}
+    	<meta name="description" content="He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections." />
+    {% endmeta %}
+
+
+*results in:*
+<!-- language: lang-html -->
+    <html>
+
+    <head>
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections." />
+    	<meta name="author" content="Kafka" />
+    </head>
+
+    <body>
+    </body>
+
+    </html>
+
+
+
+---
+**extended_again.html**
+
+    {% extends "extended.html" %}
+
+    {% meta %}
+    	<meta name="description" content="The bedding was hardly able to cover it and seemed ready to slide off any moment." />
+    	<meta property="og:image" content="http://1.bp.blogspot.com/-Ut_juBQ8mjE/Ta3cKwVW4QI/AAAAAAAAASY/J8ZXDQRWVNs/s1600/franz-kafkas-metamorphosis3.jpeg"
+    {% endmeta %}
+
+
+
+*results in:*
+<!-- language: lang-html -->
+    <html>
+
+    <head>
+    	<title>The Metamorphosis</title>
+    	<meta name="description" content="The bedding was hardly able to cover it and seemed ready to slide off any moment." />
+    	<meta name="author" content="Kafka" />
+    	<meta property="og:image" content="http://1.bp.blogspot.com/-Ut_juBQ8mjE/Ta3cKwVW4QI/AAAAAAAAASY/J8ZXDQRWVNs/s1600/franz-kafkas-metamorphosis3.jpeg"
+    </head>
+
+    <body>
+    </body>
+
+    </html>
+
+---
+
+### Admin Overrides
+
+#### Seo_cascade > Seo page overrides
+
+**path**: the absolute path, relative to the domain, for which you want to override the meta content. Also supports regular expressions.
+
+> *example*:
+> "/blog/posts/23/" matches http://example.com/blog/posts/23/
+
+
+> "/blog/posts/[\d]+/" matches all numbered posts under http://example.com/blog/posts/
+
+**title**: generates a title tag for the specified path(s)
+
+> *example*:
+> "Example Blog" becomes
+
+<!-- language: lang-html -->
+    <title>Example Blog</title>
+
+**description**: generates a description tags for the specified path(s)
+
+> *example*:
+> "'What's happened to me?' he thought. It wasn't a dream." becomes
+
+<!-- language: lang-html -->
+    <meta property="description" content="'What's happened to me?' he thought. It wasn't a dream.">
+    <meta property="og:description" content="'What's happened to me?' he thought. It wasn't a dream.">
+
+**image**: serves uploaded image from the media directory, generates image tags for the specified path(s)
+
+> *example*
+> uploading this image, http://1.bp.blogspot.com/-Ut_juBQ8mjE/Ta3cKwVW4QI/AAAAAAAAASY/J8ZXDQRWVNs/s1600/franz-kafkas-metamorphosis3.jpeg, results in
+
+<!-- language: lang-html -->
+    <meta property="og:image" content="http://example.com/uploads/meta/franz-kafkas-metamorphosis3.jpeg">
+    <meta property="og:image:width" content="410">
+    <meta property="og:image:height" content="424">
+
+**Omit from sitemap**: exclude this entry from the sitemap.
+
+**Meta override HTML**: HTML meta tags that take highest precedence.
+
+#### Seo_cascade > Seo model defaults
+
+**model**: A Django model class.
+
+**Omit from sitemap**: exclude all detail views of this model from the sitemap.
+
+**Change Frequency**: the interval at which search engines should check for updates.
+
+### Sitemap
+
+The sitemap generator automatically creates sitemap entries for each model with a "get_absolute_url" method. From the admin, sitemap settings (priority, changefreq) can be set for each model, or the model can be omitted from the sitemap completely.
+
+
+The sitemap is updated each time a model is saved that hasn't been omitted from the sitemap.
+
+### Precedence
+Meta tag settings take the following precedence:
+
+1. Admin path overrides.
+
+    1. "Meta HTML" fields
+    2. "title", "description", and "image" fields
+
+2. Template {% meta %} blocks.
+
+### Side effects
+
+The following entry will be automatically appended to the django url conf:
+
+<!-- language: lang-python -->
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps})
+
+### See also:
+
+django-seo
+https://github.com/willhardy/django-seo
+
+### Notes:
+This project is still in beta. Please file issues and pull-requests via https://github.com/thisismess/django-seo-cascade.

@@ -1,0 +1,7 @@
+Project Description:
+Automated grading DSL for teachers
+
+README:
+README
+Please look at the github wiki on the developer setup. 
+https://github.com/krmckelv/mags/wiki/Developer-Setup

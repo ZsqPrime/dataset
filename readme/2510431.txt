@@ -1,0 +1,15 @@
+Abandon this project, use google protobuf
+
+tool to genereate binary prototol for different language
+
+also can be use for filetype.
+
+Project Description:
+tool to generate protocol for different languages
+
+README:
+Abandon this project, use google protobuf
+
+tool to genereate binary prototol for different language
+
+also can be use for filetype.

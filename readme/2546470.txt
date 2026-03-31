@@ -1,0 +1,15 @@
+Project Description:
+SSMS Data Scripter Add-in
+
+README:
+SSMS Data Scripter Add-in
+http://ssmsaddins.codeplex.com/
+
+Patches applied.
+
+Download for SQL Server 2008
+http://dl.dropbox.com/u/6142956/apps/SqlScripter.7z
+
+
+Download for SQL Server 2008 R2
+http://dl.dropbox.com/u/6142956/apps/SqlScripterR2.7z

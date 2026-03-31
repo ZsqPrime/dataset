@@ -1,0 +1,47 @@
+mategrid - Grid Mate
+
+    Fork of compiz-plugin-grid for Mate Desktop Environment. 
+This plugin enables Win7 Aerosnap like desktop grid in MATE and
+does not replace with standart grid plugin. In some systems 
+standart grid plugin is not functionable because of conlficts 
+with Gnome Shell.
+
+Installation
+    First, you need to install development libraries needed for
+compiz plugind development. Then, you can compile and install plugin
+using these commands:
+
+$ cd mategrid;mkdir bin; cd bin
+$ cmake ..
+$ make
+$ sudo make install
+
+Saturday, January 14 2012 - alimg
+
+	
+
+
+
+Project Description:
+
+
+README:
+mategrid - Grid Mate
+
+    Fork of compiz-plugin-grid for Mate Desktop Environment. 
+This plugin enables Win7 Aerosnap like desktop grid in MATE and
+does not replace with standart grid plugin. In some systems 
+standart grid plugin is not functionable because of conlficts 
+with Gnome Shell.
+
+Installation
+    First, you need to install development libraries needed for
+compiz plugind development. Then, you can compile and install plugin
+using these commands:
+
+$ cd mategrid;mkdir bin; cd bin
+$ cmake ..
+$ make
+$ sudo make install
+
+Saturday, January 14 2012 - alimg

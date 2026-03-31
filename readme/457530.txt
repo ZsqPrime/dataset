@@ -1,0 +1,8 @@
+Elastic Search OMG is a set of utilities for object mapping with Elastic Search.
+
+
+Project Description:
+Elastic Search Object Mapping Goodies
+
+README:
+Elastic Search OMG is a set of utilities for object mapping with Elastic Search.

@@ -1,0 +1,14 @@
+# Site em Ruby on Rails
+### primeira proposta
+
+#### Mais sobre o desenvolvedor https://about.me/losangelo
+
+
+Project Description:
+modelo para grafica
+
+README:
+# Site em Ruby on Rails
+### primeira proposta
+
+#### Mais sobre o desenvolvedor https://about.me/losangelo
